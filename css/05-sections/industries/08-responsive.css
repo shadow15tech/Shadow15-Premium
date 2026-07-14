@@ -1,0 +1,370 @@
+/*==========================================================
+
+                08 RESPONSIVE
+
+==========================================================*/
+
+@media (max-width:1400px){
+
+.industries .container{
+
+    width:min(1180px,94%);
+
+}
+
+.engine-wrapper{
+
+    width:460px;
+
+    height:460px;
+
+}
+
+}
+
+
+@media (max-width:1200px){
+
+.industries{
+
+    padding:150px 0;
+
+}
+
+.industries-top,
+
+.industries-bottom{
+
+    gap:26px;
+
+}
+
+.industry-card{
+
+    min-height:390px;
+
+    padding:32px;
+
+}
+
+.engine-wrapper{
+
+    width:400px;
+
+    height:400px;
+
+}
+
+.industries-cta-container{
+
+    padding:56px;
+
+}
+
+}
+
+
+
+
+
+@media (max-width:992px){
+
+.industries{
+
+    padding:120px 0;
+
+}
+
+.industries-header{
+
+    margin-bottom:80px;
+
+}
+
+.industries-header h2{
+
+    font-size:3.4rem;
+
+}
+
+.industries-top,
+
+.industries-bottom{
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:24px;
+
+}
+
+
+.industries-top .industry-card,
+
+.industries-bottom .industry-card{
+
+    transform:none !important;
+
+}
+
+.industries-engine{
+
+    margin:70px 0;
+
+}
+
+.engine-wrapper{
+
+    width:340px;
+
+    height:340px;
+
+}
+
+.industries-cta-container{
+
+    grid-template-columns:1fr;
+
+    gap:50px;
+
+}
+
+.industries-cta-action{
+
+    width:100%;
+
+}
+
+}
+
+
+@media (max-width:768px){
+
+.industries{
+
+    padding:100px 0;
+
+}
+
+.industries-header{
+
+    margin-bottom:70px;
+
+}
+
+.industries-header h2{
+
+    font-size:2.5rem;
+
+}
+
+.industries-header p{
+
+    font-size:.95rem;
+
+}
+
+
+.industries-top,
+
+.industries-bottom{
+
+    grid-template-columns:1fr;
+
+    gap:22px;
+
+}
+
+.industry-card{
+
+    max-width:100%;
+
+    min-height:auto;
+
+    padding:28px;
+
+}
+
+.industry-content h3{
+
+    font-size:1.7rem;
+
+}
+
+.industry-icon{
+
+    width:64px;
+
+    height:64px;
+
+}
+
+.industry-icon i{
+
+    font-size:1.5rem;
+
+}
+
+.engine-wrapper{
+
+    width:280px;
+
+    height:280px;
+
+}
+
+.engine-core{
+
+    width:135px;
+
+    height:135px;
+
+}
+
+
+.ring-1{
+
+    width:180px;
+
+    height:180px;
+
+}
+
+.ring-2{
+
+    width:240px;
+
+    height:240px;
+
+}
+
+.ring-3{
+
+    width:300px;
+
+    height:300px;
+
+}
+
+.engine-label{
+
+    display:none;
+
+}
+
+.engine-metric{
+
+    display:none;
+
+}
+
+.connection{
+
+    display:none;
+
+}
+
+.network-line{
+
+    display:none;
+
+}
+
+.industries-cta{
+
+    margin-top:90px;
+
+}
+
+.industries-cta-container{
+
+    padding:36px 26px;
+
+}
+
+.industries-cta-content h2{
+
+    font-size:2.2rem;
+
+}
+
+.industries-stats{
+
+    grid-template-columns:1fr;
+
+    gap:20px;
+
+}
+
+}
+
+@media (max-width:480px){
+
+.industries{
+
+    padding:80px 0;
+
+}
+
+.industries-header h2{
+
+    font-size:2rem;
+
+    letter-spacing:-1px;
+
+}
+
+.industries-badge{
+
+    padding:10px 16px;
+
+}
+
+.industry-card{
+
+    padding:24px;
+
+    border-radius:24px;
+
+}
+
+.engine-wrapper{
+
+    width:240px;
+
+    height:240px;
+
+}
+
+.engine-core{
+
+    width:110px;
+
+    height:110px;
+
+}
+
+.engine-logo{
+
+    width:42px;
+
+    height:42px;
+
+}
+
+.engine-logo i{
+
+    font-size:1.2rem;
+
+}
+
+.industries-main-btn,
+
+.industries-secondary-btn{
+
+    height:56px;
+
+    font-size:.95rem;
+
+}
+
+}

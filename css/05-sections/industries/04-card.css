@@ -1,0 +1,762 @@
+/*==========================================================
+
+                SHADOW15
+
+            INDUSTRIES V3
+
+                04 CARD
+
+                PART 01
+
+==========================================================*/
+
+
+/*=========================================
+CARD
+=========================================*/
+
+.industry-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-start;
+
+    width:100%;
+
+    max-width:390px;
+
+    min-height:420px;
+
+    padding:38px;
+
+    border-radius:32px;
+
+    background:
+
+        linear-gradient(
+
+            180deg,
+
+            rgba(255,255,255,.06),
+
+            rgba(255,255,255,.025)
+
+        );
+
+    border:
+
+        1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(30px);
+
+    -webkit-backdrop-filter:blur(30px);
+
+    box-shadow:
+
+        0 20px 60px rgba(0,0,0,.18);
+
+    transition:
+
+        transform .6s cubic-bezier(.22,1,.36,1),
+
+        border-color .35s,
+
+        box-shadow .45s;
+
+}
+
+
+
+/*=========================================
+CARD GLOW
+=========================================*/
+
+.industry-card-glow{
+
+    position:absolute;
+
+    width:280px;
+
+    height:280px;
+
+    right:-120px;
+
+    top:-120px;
+
+    border-radius:50%;
+
+    opacity:0;
+
+    transition:.45s;
+
+    filter:blur(70px);
+
+}
+
+
+
+/*=========================================
+TOP BORDER
+=========================================*/
+
+.industry-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:1px;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            transparent,
+
+            rgba(255,255,255,.55),
+
+            transparent
+
+        );
+
+}
+
+
+/*=========================================
+BOTTOM SHADOW
+=========================================*/
+
+.industry-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:30px;
+
+    right:30px;
+
+    bottom:0;
+
+    height:1px;
+
+    background:
+
+        rgba(255,255,255,.05);
+
+}
+
+
+
+/*=========================================
+NUMBER
+=========================================*/
+
+.industry-number{
+
+    position:absolute;
+
+    top:28px;
+
+    right:30px;
+
+    font-family:"Sora",sans-serif;
+
+    font-size:.9rem;
+
+    font-weight:700;
+
+    letter-spacing:.18em;
+
+    color:
+
+        rgba(255,255,255,.12);
+
+}
+
+
+
+/*=========================================
+ICON
+=========================================*/
+
+.industry-icon{
+
+    width:76px;
+
+    height:76px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:34px;
+
+    border-radius:24px;
+
+    background:
+
+        rgba(255,255,255,.05);
+
+    border:
+
+        1px solid rgba(255,255,255,.08);
+
+    transition:.4s;
+
+}
+
+
+.industry-icon i{
+
+    font-size:1.9rem;
+
+    color:#FFFFFF;
+
+    transition:.4s;
+
+}
+
+
+/*==========================================================
+
+                CONTENT
+
+                PART 02
+
+==========================================================*/
+
+
+/*=========================================
+CONTENT
+=========================================*/
+
+.industry-content{
+
+    margin-bottom:28px;
+
+}
+
+
+/*=========================================
+TITLE
+=========================================*/
+
+.industry-content h3{
+
+    margin:0;
+
+    color:#FFFFFF;
+
+    font-family:"Sora",sans-serif;
+
+    font-size:2rem;
+
+    font-weight:700;
+
+    line-height:1.2;
+
+    transition:.35s;
+
+}
+
+
+/*=========================================
+DESCRIPTION
+=========================================*/
+
+.industry-content p{
+
+    margin-top:14px;
+
+    color:#9CB2C8;
+
+    font-size:1rem;
+
+    line-height:1.85;
+
+}
+
+
+/*==========================================================
+
+                FEATURES
+
+==========================================================*/
+
+
+.industry-features{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+    margin-top:8px;
+
+}
+
+
+/*=========================================
+ITEM
+=========================================*/
+
+.industry-features li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    color:#D7E5F4;
+
+    font-size:.95rem;
+
+    transition:.35s;
+
+}
+
+
+/*=========================================
+CHECK ICON
+=========================================*/
+
+.industry-features i{
+
+    width:22px;
+
+    height:22px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:
+
+        rgba(0,231,212,.12);
+
+    color:#00E7D4;
+
+    font-size:.72rem;
+
+    flex-shrink:0;
+
+    box-shadow:
+
+        0 0 18px rgba(0,231,212,.15);
+
+}
+
+
+/*==========================================================
+
+                CTA
+
+==========================================================*/
+
+
+.industry-link{
+
+    margin-top:auto;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:#FFFFFF;
+
+    font-weight:700;
+
+    font-size:.95rem;
+
+    transition:.35s;
+
+}
+
+
+.industry-link i{
+
+    background:none;
+
+    width:auto;
+
+    height:auto;
+
+    color:inherit;
+
+    box-shadow:none;
+
+    font-size:.9rem;
+
+    transition:.35s;
+
+}
+
+
+/*=========================================
+BOTTOM SPACING
+=========================================*/
+
+.industry-card{
+
+    row-gap:0;
+
+}
+
+.industry-link{
+
+    padding-top:36px;
+
+}
+
+
+/*==========================================================
+
+            INDUSTRY COLOR THEMES
+
+                PART 03
+
+==========================================================*/
+
+
+/*=========================================
+HEALTHCARE
+=========================================*/
+
+.healthcare .industry-card-glow{
+
+    background:radial-gradient(circle,
+    rgba(0,231,212,.35),
+    transparent 72%);
+
+}
+
+
+/*=========================================
+HOSPITALITY
+=========================================*/
+
+.hospitality .industry-card-glow{
+
+    background:radial-gradient(circle,
+    rgba(78,212,255,.35),
+    transparent 72%);
+
+}
+
+
+/*=========================================
+EDUCATION
+=========================================*/
+
+.education .industry-card-glow{
+
+    background:radial-gradient(circle,
+    rgba(168,85,247,.35),
+    transparent 72%);
+
+}
+
+
+/*=========================================
+REAL ESTATE
+=========================================*/
+
+.real-estate .industry-card-glow{
+
+    background:radial-gradient(circle,
+    rgba(16,185,129,.35),
+    transparent 72%);
+
+}
+
+
+/*=========================================
+ECOMMERCE
+=========================================*/
+
+.ecommerce .industry-card-glow{
+
+    background:radial-gradient(circle,
+    rgba(245,158,11,.35),
+    transparent 72%);
+
+}
+
+
+/*=========================================
+TRAVEL
+=========================================*/
+
+.travel .industry-card-glow{
+
+    background:radial-gradient(circle,
+    rgba(56,189,248,.35),
+    transparent 72%);
+
+}
+
+
+/*==========================================================
+
+                HOVER
+
+==========================================================*/
+
+
+.industry-card:hover{
+
+    transform:
+
+        translateY(-16px)
+
+        scale(1.02);
+
+    border-color:
+
+        rgba(255,255,255,.16);
+
+    box-shadow:
+
+        0 30px 80px rgba(0,0,0,.35);
+
+}
+
+
+.industry-card:hover .industry-card-glow{
+
+    opacity:1;
+
+    transform:scale(1.2);
+
+}
+
+
+/*=========================================
+ICON
+=========================================*/
+
+.industry-card:hover .industry-icon{
+
+    transform:
+
+        rotate(-8deg)
+
+        scale(1.08);
+
+}
+
+
+.healthcare:hover .industry-icon{
+
+    border-color:#00E7D4;
+
+}
+
+.hospitality:hover .industry-icon{
+
+    border-color:#4ED4FF;
+
+}
+
+.education:hover .industry-icon{
+
+    border-color:#A855F7;
+
+}
+
+.real-estate:hover .industry-icon{
+
+    border-color:#10B981;
+
+}
+
+.ecommerce:hover .industry-icon{
+
+    border-color:#F59E0B;
+
+}
+
+.travel:hover .industry-icon{
+
+    border-color:#38BDF8;
+
+}
+
+
+/*=========================================
+TITLE
+=========================================*/
+
+.healthcare:hover h3{
+
+    color:#00E7D4;
+
+}
+
+.hospitality:hover h3{
+
+    color:#4ED4FF;
+
+}
+
+.education:hover h3{
+
+    color:#A855F7;
+
+}
+
+.real-estate:hover h3{
+
+    color:#10B981;
+
+}
+
+.ecommerce:hover h3{
+
+    color:#F59E0B;
+
+}
+
+.travel:hover h3{
+
+    color:#38BDF8;
+
+}
+
+
+/*=========================================
+FEATURES
+=========================================*/
+
+.industry-card:hover .industry-features li{
+
+    transform:translateX(8px);
+
+}
+
+
+.industry-card:hover .industry-features li:nth-child(1){
+
+    transition-delay:.05s;
+
+}
+
+.industry-card:hover .industry-features li:nth-child(2){
+
+    transition-delay:.10s;
+
+}
+
+.industry-card:hover .industry-features li:nth-child(3){
+
+    transition-delay:.15s;
+
+}
+
+.industry-card:hover .industry-features li:nth-child(4){
+
+    transition-delay:.20s;
+
+}
+
+
+/*=========================================
+CTA
+=========================================*/
+
+.industry-card:hover .industry-link{
+
+    color:#FFFFFF;
+
+}
+
+
+.industry-card:hover .industry-link i{
+
+    transform:translateX(8px);
+
+}
+
+
+/*=========================================
+SHINE EFFECT
+=========================================*/
+
+.industry-card{
+
+    isolation:isolate;
+
+}
+
+
+.industry-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-120%;
+
+    left:-80%;
+
+    width:70%;
+
+    height:300%;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            transparent,
+
+            rgba(255,255,255,.20),
+
+            transparent
+
+        );
+
+    transform:rotate(28deg);
+
+    opacity:0;
+
+    transition:1s;
+
+}
+
+
+.industry-card:hover::before{
+
+    left:170%;
+
+    opacity:1;
+
+}
+
+

@@ -1,0 +1,1963 @@
+/*==========================================================
+
+                SHADOW15 NAVBAR
+
+                VERSION 3.0
+
+==========================================================*/
+
+
+/*======================================
+ROOT
+======================================*/
+
+.s15-navbar{
+
+    position:fixed;
+
+    top:20px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:min(1400px,calc(100% - 32px));
+
+    height:84px;
+
+    z-index:9999;
+
+    transition:
+
+        transform .45s ease,
+
+        height .45s ease,
+
+        top .45s ease,
+
+        background .45s ease;
+
+}
+
+
+/*======================================
+CONTAINER
+======================================*/
+
+.s15-navbar-container{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    width:100%;
+
+    height:100%;
+
+    padding:0 32px;
+
+    border-radius:22px;
+
+    overflow:visible;
+
+}
+
+
+/*======================================
+OPTICAL GLASS
+======================================*/
+
+.s15-navbar-container{
+
+    background:
+
+    linear-gradient(
+
+        180deg,
+
+        rgba(255,255,255,.09),
+
+        rgba(255,255,255,.03)
+
+    );
+
+    backdrop-filter:blur(28px);
+
+    -webkit-backdrop-filter:blur(28px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+
+/*======================================
+TOP REFLECTION
+======================================*/
+
+.s15-navbar-container::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:1px;
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.30),
+
+        transparent
+
+    );
+
+}
+
+
+/*======================================
+INNER SHADOW
+======================================*/
+
+.s15-navbar-container::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:inherit;
+
+    pointer-events:none;
+
+    box-shadow:
+
+        inset 0 1px 0 rgba(255,255,255,.08),
+
+        inset 0 -1px 0 rgba(255,255,255,.03),
+
+        0 25px 80px rgba(0,0,0,.35);
+
+}
+
+
+/*======================================
+LAYOUT
+======================================*/
+
+.s15-brand{
+
+    flex:0 0 auto;
+
+    text-decoration:none;
+
+}
+
+.s15-nav{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex:0 1 auto;
+
+    margin:0 auto;
+}
+
+.s15-navbar-right{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:flex-end;
+
+    gap:5px;
+
+    flex-shrink:0;
+
+    min-width:max-content;
+
+}
+
+
+/*======================================
+MENU BUTTON
+======================================*/
+
+.s15-menu-toggle{
+
+    display:none;
+
+}
+
+
+/*======================================
+HOVER LIFT
+======================================*/
+
+.s15-navbar:hover{
+
+    transform:
+
+    translateX(-50%)
+
+    translateY(-2px);
+
+}
+
+/*==========================================================
+
+                BRAND IDENTITY
+
+==========================================================*/
+
+
+/*======================================
+BRAND
+======================================*/
+
+.s15-brand{
+
+    display:flex;
+
+    align-items:center;
+
+    position:relative;
+
+    z-index:5;
+
+}
+
+
+/*======================================
+TEXT WRAPPER
+======================================*/
+
+.s15-brand-text{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    gap:6px;
+
+}
+
+
+/*======================================
+LOGO
+======================================*/
+
+.s15-logo{
+
+    margin:0;
+
+    padding:0;
+
+    font-family:"Sora",sans-serif;
+
+    font-size:1.75rem;
+
+    font-weight:700;
+
+    line-height:1;
+
+    letter-spacing:-1px;
+
+    color:#F8FAFC;
+
+    cursor:pointer;
+
+}
+
+
+/*======================================
+SHADOW
+======================================*/
+
+.s15-logo{
+
+    transition:.45s;
+
+}
+
+
+/*======================================
+15
+======================================*/
+
+.s15-logo span{
+
+    display:inline-block;
+
+    margin-left:2px;
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        #00E7D4,
+
+        #5BDCF3,
+
+        #A9D79C,
+
+        #F2DF5A
+
+    );
+
+    background-size:250%;
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    animation:
+
+    logoGradient 8s linear infinite;
+
+}
+
+
+/*======================================
+TAGLINE
+======================================*/
+
+.s15-tagline{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    margin:0;
+
+    padding:0;
+
+    font-size:.67rem;
+
+    font-weight:600;
+
+    letter-spacing:.22em;
+
+    text-transform:uppercase;
+
+}
+
+
+/*======================================
+TAG WORD
+======================================*/
+
+.s15-tagline span{
+
+    color:#8EA5BD;
+
+}
+
+
+/*======================================
+DOT
+======================================*/
+
+.tag-dot{
+
+    width:5px;
+
+    height:5px;
+
+    border-radius:50%;
+
+    background:#00E7D4;
+
+    box-shadow:
+
+        0 0 10px rgba(0,231,212,.8);
+
+}
+
+
+/*======================================
+HOVER
+======================================*/
+
+.s15-brand:hover .s15-logo{
+
+    transform:translateY(-1px);
+
+    text-shadow:
+
+        0 0 18px rgba(255,255,255,.18);
+
+}
+
+
+.s15-brand:hover .tag-dot{
+
+    transform:scale(1.35);
+
+}
+
+
+/*======================================
+ANIMATION
+======================================*/
+
+@keyframes logoGradient{
+
+    from{
+
+        background-position:0%;
+
+    }
+
+    to{
+
+        background-position:250%;
+
+    }
+
+}/*==========================================================
+
+                NAVIGATION
+
+==========================================================*/
+
+
+/*======================================
+NAV
+======================================*/
+
+.s15-nav{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    height:100%;
+
+}
+
+.s15-nav ul{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:34px;
+
+    margin:0;
+
+    padding:0;
+
+    list-style:none;
+
+}
+
+
+/*======================================
+LINK
+======================================*/
+
+.s15-nav-link{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    height:72px;
+
+    color:#D7E3EF;
+
+    text-decoration:none;
+
+    font-family:"Manrope",sans-serif;
+
+    font-size:.84rem;
+
+    font-weight:600;
+
+    letter-spacing:.14em;
+
+    text-transform:uppercase;
+
+    transition:
+
+        color .35s ease,
+
+        transform .35s ease;
+
+}
+
+
+/*======================================
+ACTIVE DOT
+======================================*/
+
+.s15-nav-link::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:18px;
+
+    left:50%;
+
+    transform:
+
+        translateX(-50%)
+
+        scale(0);
+
+    width:6px;
+
+    height:6px;
+
+    border-radius:50%;
+
+    background:#00E7D4;
+
+    box-shadow:
+
+        0 0 12px rgba(0,231,212,.8);
+
+    transition:.35s;
+
+}
+
+
+/*======================================
+UNDERLINE
+======================================*/
+
+.s15-nav-link::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:18px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:0;
+
+    height:2px;
+
+    border-radius:20px;
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        #00E7D4,
+
+        #59D7E6,
+
+        #F2DF5A
+
+    );
+
+    transition:
+
+        width .4s ease;
+
+}
+
+
+/*======================================
+HOVER
+======================================*/
+
+.s15-nav-link:hover{
+
+    color:#FFFFFF;
+
+    transform:translateY(-2px);
+
+}
+
+.s15-nav-link:hover::after{
+
+    width:24px;
+
+}
+
+.s15-nav-link:hover::before{
+
+    transform:
+
+        translateX(-50%)
+
+        scale(1);
+
+}
+
+
+/*======================================
+ACTIVE
+======================================*/
+
+.s15-nav-link.active{
+
+    color:#FFFFFF;
+
+}
+
+.s15-nav-link.active::after{
+
+    width:28px;
+
+}
+
+.s15-nav-link.active::before{
+
+    transform:
+
+        translateX(-50%)
+
+        scale(1);
+
+}
+
+
+/*======================================
+FOCUS
+======================================*/
+
+.s15-nav-link:focus-visible{
+
+    outline:none;
+
+    color:#FFFFFF;
+
+}
+
+
+/*==========================================================
+
+                STATUS BADGE
+
+==========================================================*/
+
+
+/*======================================
+STATUS
+======================================*/
+
+.s15-status{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    height:44px;
+
+    padding:0 18px;
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+    cursor:default;
+
+    transition:
+
+        transform .35s ease,
+
+        border-color .35s ease,
+
+        background .35s ease;
+
+}
+
+
+/*======================================
+GLASS
+======================================*/
+
+.s15-glass{
+
+    background:rgba(91, 201, 201, 0.55);
+
+    border:1px solid rgba(97, 47, 161, 0.08);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+}
+
+
+/*======================================
+STATUS TEXT
+======================================*/
+
+.status-text{
+
+    color:#C6D3E0;
+
+    font-family:"Manrope",sans-serif;
+
+    font-size:.74rem;
+
+    font-weight:600;
+
+    letter-spacing:.08em;
+
+    white-space:nowrap;
+
+}
+
+
+/*======================================
+STATUS DOT
+======================================*/
+
+.status-dot{
+
+    position:relative;
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:#00E7D4;
+
+    flex-shrink:0;
+
+    box-shadow:
+
+        0 0 12px rgba(0,231,212,.9);
+
+}
+
+
+/*======================================
+PULSE
+======================================*/
+
+.status-dot::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-5px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(0,231,212,.55);
+
+    animation:s15Pulse 2s infinite;
+
+}
+
+
+/*======================================
+HOVER
+======================================*/
+
+.s15-status:hover{
+
+    transform:translateY(-2px);
+
+    border-color:rgba(0,231,212,.25);
+
+    background:rgba(255,255,255,.07);
+
+}
+
+
+.s15-status:hover .status-dot{
+
+    box-shadow:
+
+        0 0 18px rgba(0,231,212,1);
+
+}
+
+
+/*======================================
+LIGHT SWEEP
+======================================*/
+
+.s15-status::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-140%;
+
+    width:60%;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.18),
+
+        transparent
+
+    );
+
+    transition:left .8s ease;
+
+}
+
+
+.s15-status:hover::before{
+
+    left:140%;
+
+}
+
+
+/*======================================
+PULSE ANIMATION
+======================================*/
+
+@keyframes s15Pulse{
+
+    0%{
+
+        transform:scale(.6);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:scale(2.6);
+
+        opacity:0;
+
+    }
+
+}
+
+
+
+
+/*==========================================================
+
+                CTA BUTTON
+
+==========================================================*/
+
+
+/*======================================
+BASE BUTTON
+======================================*/
+
+.s15-btn{
+
+    position:relative;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    overflow:hidden;
+
+    text-decoration:none;
+
+    cursor:pointer;
+
+}
+
+
+/*======================================
+PRIMARY BUTTON
+======================================*/
+
+.s15-btn-primary{
+
+    height:52px;
+
+    padding:0 24px;
+
+    border-radius:999px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        #00E7D4 0%,
+
+        #59D7E6 35%,
+
+        #A9D79C 70%,
+
+        #F2DF5A 100%
+
+    );
+
+    background-size:250%;
+
+    animation:s15Gradient 10s linear infinite;
+
+    box-shadow:
+
+        0 12px 35px rgba(0,231,212,.22);
+
+}
+
+
+/*======================================
+TEXT
+======================================*/
+
+.s15-btn-primary span{
+
+    position:relative;
+
+    z-index:2;
+
+    color:#06111D;
+
+    font-family:"Sora",sans-serif;
+
+    font-size:.86rem;
+
+    font-weight:700;
+
+    letter-spacing:.03em;
+
+}
+
+
+/*======================================
+ICON
+======================================*/
+
+.s15-btn-primary i{
+
+    position:relative;
+
+    z-index:2;
+
+    color:#06111D;
+
+    font-size:.82rem;
+
+    transition:
+
+        transform .35s ease;
+
+}
+
+
+/*======================================
+LIGHT EFFECT
+======================================*/
+
+.s15-btn-primary::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-120%;
+
+    top:0;
+
+    width:60%;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.45),
+
+        transparent
+
+    );
+
+    transform:skewX(-25deg);
+
+    transition:left .9s ease;
+
+}
+
+
+/*======================================
+INNER GLOW
+======================================*/
+
+.s15-btn-primary::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:2px;
+
+    border-radius:999px;
+
+    background:
+
+    linear-gradient(
+
+        180deg,
+
+        rgba(255,255,255,.20),
+
+        transparent
+
+    );
+
+    pointer-events:none;
+
+}
+
+
+/*======================================
+HOVER
+======================================*/
+
+.s15-btn-primary:hover{
+
+    transform:
+
+        translateY(-3px)
+
+        scale(1.02);
+
+    box-shadow:
+
+        0 18px 45px rgba(0,231,212,.35);
+
+}
+
+
+.s15-btn-primary:hover::before{
+
+    left:150%;
+
+}
+
+
+.s15-btn-primary:hover i{
+
+    transform:
+
+        translateX(4px)
+
+        translateY(-2px);
+
+}
+
+
+/*======================================
+ACTIVE
+======================================*/
+
+.s15-btn-primary:active{
+
+    transform:
+
+        translateY(1px)
+
+        scale(.98);
+
+}
+
+
+/*======================================
+ANIMATION
+======================================*/
+
+@keyframes s15Gradient{
+
+    0%{
+
+        background-position:0%;
+
+    }
+
+    100%{
+
+        background-position:250%;
+
+    }
+
+}
+
+
+/*==========================================================
+
+            OPTICAL GLASS ENGINE
+
+==========================================================*/
+
+
+/*======================================
+PREMIUM GLASS SURFACE
+======================================*/
+
+.s15-navbar-container{
+
+    isolation:isolate;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.08),
+            rgba(255,255,255,.02)
+        ),
+
+        rgba(8,18,32,.58);
+
+}
+
+
+/*======================================
+TOP HIGHLIGHT
+======================================*/
+
+.s15-navbar-container::before{
+
+    height:2px;
+
+    opacity:.9;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            transparent 0%,
+
+            rgba(255,255,255,.45) 25%,
+
+            rgba(255,255,255,.18) 50%,
+
+            rgba(255,255,255,.45) 75%,
+
+            transparent 100%
+
+        );
+
+}
+
+
+/*======================================
+OUTER SHADOW
+======================================*/
+
+.s15-navbar{
+
+    filter:
+
+        drop-shadow(0 18px 60px rgba(66, 154, 212, 0.32));
+
+}
+
+
+/*======================================
+SOFT INNER GLOW
+======================================*/
+
+.s15-navbar-container{
+
+    box-shadow:
+
+        inset 0 1px 0 rgba(255,255,255,.08),
+
+        inset 0 -1px 0 rgba(255,255,255,.02),
+
+        0 12px 45px rgba(0,0,0,.30);
+
+}
+
+
+/*======================================
+SIDE LIGHT
+======================================*/
+
+.s15-navbar-container .glass-light{
+
+    position:absolute;
+
+    top:-60%;
+
+    left:-15%;
+
+    width:240px;
+
+    height:240px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(0,231,212,.12),
+
+            transparent 70%
+
+        );
+
+    pointer-events:none;
+
+    filter:blur(40px);
+
+}
+
+
+/*======================================
+BOTTOM REFLECTION
+======================================*/
+
+.s15-navbar-container .glass-bottom{
+
+    position:absolute;
+
+    left:0;
+
+    bottom:0;
+
+    width:100%;
+
+    height:1px;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            transparent,
+
+            rgba(255,255,255,.08),
+
+            transparent
+
+        );
+
+    pointer-events:none;
+
+}
+
+
+/*======================================
+HOVER DEPTH
+======================================*/
+
+.s15-navbar:hover .s15-navbar-container{
+
+    transform:translateY(-1px);
+
+    box-shadow:
+
+        inset 0 1px 0 rgba(255,255,255,.12),
+
+        inset 0 -1px 0 rgba(255,255,255,.04),
+
+        0 18px 70px rgba(0,0,0,.40);
+
+}
+
+
+/*======================================
+SMOOTH TRANSITION
+======================================*/
+
+.s15-navbar,
+
+.s15-navbar-container{
+
+    transition:
+
+        background .45s ease,
+
+        box-shadow .45s ease,
+
+        transform .45s ease,
+
+        border-color .45s ease;
+
+}
+
+
+/*==========================================================
+
+                SCROLL STATE
+
+==========================================================*/
+
+
+/*======================================
+SCROLLED NAVBAR
+======================================*/
+
+.s15-navbar.scrolled{
+
+    top:8px;
+
+    height:66px;
+
+}
+
+
+/*======================================
+CONTAINER
+======================================*/
+
+.s15-navbar.scrolled .s15-navbar-container{
+
+    background:
+
+        linear-gradient(
+
+            180deg,
+
+            rgba(255,255,255,.12),
+
+            rgba(255,255,255,.03)
+
+        ),
+
+        rgba(5,11,20,.82);
+
+    border-color:
+
+        rgba(255,255,255,.10);
+
+    backdrop-filter:blur(40px);
+
+    -webkit-backdrop-filter:blur(40px);
+
+}
+
+
+/*======================================
+BRAND
+======================================*/
+
+.s15-navbar.scrolled .s15-logo{
+
+    font-size:1.90rem;
+
+}
+
+.s15-navbar.scrolled .s15-tagline{
+
+    opacity:.95;
+
+}
+
+
+/*======================================
+NAVIGATION
+======================================*/
+
+.s15-navbar.scrolled .s15-nav-link{
+
+    height:66px;
+
+}
+
+
+/*======================================
+STATUS
+======================================*/
+
+.s15-navbar.scrolled .s15-status{
+
+    height:40px;
+
+}
+
+
+/*======================================
+BUTTON
+======================================*/
+
+.s15-navbar.scrolled .s15-btn-primary{
+
+    height:58px;
+
+}
+
+
+
+
+
+/*======================================
+DEPTH
+======================================*/
+
+.s15-navbar.scrolled{
+
+    filter:
+
+        drop-shadow(
+
+            0 24px 70px
+
+            rgba(98, 49, 212, 0.45)
+
+        );
+
+}
+
+
+/*======================================
+TRANSITION
+======================================*/
+
+.s15-navbar,
+
+.s15-logo,
+
+.s15-tagline,
+
+.s15-nav-link,
+
+.s15-status,
+
+.s15-btn-primary{
+
+    transition:
+
+        all .45s cubic-bezier(.22,1,.36,1);
+
+}
+
+
+
+/*==========================================================
+
+                RESPONSIVE NAVIGATION
+
+==========================================================*/
+
+
+/*======================================
+LAPTOP
+======================================*/
+
+@media (max-width:1200px){
+
+    .s15-navbar{
+
+        width:calc(100% - 24px);
+
+    }
+
+    .s15-nav ul{
+
+        gap:22px;
+
+    }
+
+    .s15-nav-link{
+
+        font-size:.78rem;
+
+        letter-spacing:.12em;
+
+    }
+
+    .s15-status{
+
+        display:none;
+
+    }
+
+}
+
+
+/*======================================
+TABLET
+======================================*/
+
+@media (max-width:991px){
+
+    .s15-navbar{
+
+        width:calc(100% - 18px);
+
+        height:70px;
+
+    }
+
+    .s15-navbar-container{
+
+        padding:0 20px;
+
+    }
+
+    .s15-nav{
+
+        position:fixed;
+
+        top:0;
+
+        right:-100%;
+
+        width:360px;
+
+        max-width:100%;
+
+        height:100vh;
+
+        background:
+
+        rgba(6,14,24,.92);
+
+        backdrop-filter:blur(35px);
+
+        -webkit-backdrop-filter:blur(35px);
+
+        border-left:1px solid rgba(255,255,255,.08);
+
+        display:flex;
+
+        justify-content:center;
+
+        align-items:center;
+
+        transition:right .45s cubic-bezier(.22,1,.36,1);
+
+        z-index:9998;
+
+    }
+
+    .s15-nav.active{
+
+        right:0;
+
+    }
+
+    .s15-nav ul{
+
+        flex-direction:column;
+
+        gap:34px;
+
+    }
+
+    .s15-nav-link{
+
+        height:auto;
+
+        font-size:1rem;
+
+        letter-spacing:.18em;
+
+    }
+
+    .s15-navbar-right{
+
+        display:none;
+
+    }
+
+    .s15-menu-toggle{
+
+        display:flex;
+
+        flex-direction:column;
+
+        justify-content:center;
+
+        align-items:center;
+
+        gap:7px;
+
+        width:52px;
+
+        height:52px;
+
+        border:none;
+
+        border-radius:50%;
+
+        background:rgba(255,255,255,.05);
+
+        backdrop-filter:blur(20px);
+
+        -webkit-backdrop-filter:blur(20px);
+
+        border:1px solid rgba(255,255,255,.08);
+
+        cursor:pointer;
+
+        transition:.35s;
+
+        z-index:10000;
+
+    }
+
+    .s15-menu-toggle span{
+
+        width:22px;
+
+        height:2px;
+
+        border-radius:50px;
+
+        background:#F8FAFC;
+
+        transition:.35s;
+
+    }
+
+}
+
+
+/*======================================
+MENU ACTIVE
+======================================*/
+
+.s15-menu-toggle.active span:nth-child(1){
+
+    transform:
+
+        rotate(45deg)
+
+        translateY(6px);
+
+}
+
+.s15-menu-toggle.active span:nth-child(2){
+
+    transform:
+
+        rotate(-45deg)
+
+        translateY(-6px);
+
+}
+
+
+/*======================================
+MOBILE
+======================================*/
+
+@media (max-width:576px){
+
+    .s15-navbar{
+
+        top:10px;
+
+        width:calc(100% - 12px);
+
+    }
+
+    .s15-navbar-container{
+
+        padding:0 16px;
+
+        border-radius:18px;
+
+    }
+
+    .s15-logo{
+
+        font-size:1.45rem;
+
+    }
+
+    .s15-tagline{
+
+        font-size:.58rem;
+
+        letter-spacing:.18em;
+
+    }
+
+    .s15-nav{
+
+        width:100%;
+
+    }
+
+}
+
+
+/*==========================================================
+
+            MICRO INTERACTIONS
+
+            VERSION 1.0
+
+==========================================================*/
+
+
+/*======================================
+SMOOTH RENDERING
+======================================*/
+
+.s15-navbar *{
+
+    -webkit-font-smoothing:antialiased;
+
+    -moz-osx-font-smoothing:grayscale;
+
+}
+
+
+/*======================================
+NAVBAR TRANSITIONS
+======================================*/
+
+.s15-navbar,
+
+.s15-navbar *{
+
+    transition:
+
+        color .35s ease,
+
+        background .35s ease,
+
+        border-color .35s ease,
+
+        transform .35s ease,
+
+        opacity .35s ease,
+
+        box-shadow .35s ease;
+
+}
+
+
+/*======================================
+NAV LINK SHIMMER
+======================================*/
+
+.s15-nav-link{
+
+    overflow:hidden;
+
+}
+
+.s15-nav-link::selection{
+
+    background:transparent;
+
+}
+
+.s15-nav-link:hover{
+
+    letter-spacing:.16em;
+
+}
+
+
+/*======================================
+CTA GLOW
+======================================*/
+
+.s15-btn-primary{
+
+    position:relative;
+
+}
+
+.s15-btn-primary::before{
+
+    filter:blur(2px);
+
+}
+
+.s15-btn-primary:hover{
+
+    box-shadow:
+
+        0 0 0 1px rgba(255,255,255,.08),
+
+        0 12px 30px rgba(0,231,212,.30),
+
+        0 22px 60px rgba(0,231,212,.22);
+
+}
+
+
+/*======================================
+STATUS BADGE
+======================================*/
+
+.s15-status{
+
+    will-change:transform;
+
+}
+
+.s15-status:hover{
+
+    transform:
+
+        translateY(-2px)
+
+        scale(1.02);
+
+}
+
+
+/*======================================
+LOGO
+======================================*/
+
+.s15-logo{
+
+    user-select:none;
+
+}
+
+.s15-logo span{
+
+    filter:
+
+        drop-shadow(
+
+            0 0 12px
+
+            rgba(0,231,212,.25)
+
+        );
+
+}
+
+
+/*======================================
+GLASS HOVER
+======================================*/
+
+.s15-navbar:hover .glass-light{
+
+    opacity:1;
+
+}
+
+.glass-light{
+
+    opacity:.75;
+
+    transition:
+
+        opacity .45s ease;
+
+}
+
+
+/*======================================
+BORDER ENHANCEMENT
+======================================*/
+
+.s15-navbar-container{
+
+    position:relative;
+
+}
+
+.s15-navbar-container:hover{
+
+    border-color:
+
+        rgba(255,255,255,.14);
+
+}
+
+
+/*======================================
+BUTTON PRESS
+======================================*/
+
+.s15-btn:active{
+
+    transition:none;
+
+}
+
+
+/*======================================
+REDUCED MOTION
+======================================*/
+
+@media (prefers-reduced-motion:reduce){
+
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+        scroll-behavior:auto !important;
+
+    }
+
+}

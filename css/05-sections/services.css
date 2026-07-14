@@ -1,0 +1,1172 @@
+/*==========================================================
+
+                SERVICES SECTION
+
+                PART 01
+
+==========================================================*/
+
+
+/*======================================
+SECTION
+======================================*/
+
+.services{
+
+    position:relative;
+
+    padding:150px 0;
+
+    overflow:hidden;
+
+    background:#07111F;
+
+}
+
+
+/*======================================
+BACKGROUND
+======================================*/
+
+.services-bg{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+}
+
+
+/*======================================
+GRID
+======================================*/
+
+.services-grid{
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+        linear-gradient(
+
+            rgba(255,255,255,.025) 1px,
+
+            transparent 1px
+
+        ),
+
+        linear-gradient(
+
+            90deg,
+
+            rgba(255,255,255,.025) 1px,
+
+            transparent 1px
+
+        );
+
+    background-size:70px 70px;
+
+    mask-image:
+
+        radial-gradient(
+
+            circle,
+
+            #000 45%,
+
+            transparent 100%
+
+        );
+
+}
+
+
+/*======================================
+GLOW
+======================================*/
+
+.services-glow{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(120px);
+
+}
+
+.glow-left{
+
+    width:600px;
+
+    height:600px;
+
+    top:-180px;
+
+    left:-220px;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(0,231,212,.18),
+
+            transparent 72%
+
+        );
+
+}
+
+.glow-right{
+
+    width:750px;
+
+    height:750px;
+
+    right:-260px;
+
+    bottom:-320px;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(90,215,230,.12),
+
+            transparent 72%
+
+        );
+
+}
+
+
+/*======================================
+CONTAINER
+======================================*/
+
+.services .container{
+
+    position:relative;
+
+    width:min(1400px,92%);
+
+    margin:auto;
+
+    z-index:2;
+
+}
+
+
+/*======================================
+HEADING
+======================================*/
+
+.services-heading{
+
+    max-width:860px;
+
+    margin:0 auto 90px;
+
+    text-align:center;
+
+}
+
+
+/*======================================
+GRID LAYOUT
+======================================*/
+
+.services-grid-box{
+
+    display:grid;
+
+    grid-template-columns:
+
+        repeat(12,1fr);
+
+    grid-auto-rows:220px;
+
+    gap:26px;
+
+}
+
+
+/*======================================
+LARGE
+======================================*/
+
+.service-large{
+
+    grid-column:span 6;
+
+    grid-row:span 2;
+
+}
+
+
+/*======================================
+MEDIUM
+======================================*/
+
+.services-grid-box .service-card:nth-child(2){
+
+    grid-column:span 3;
+
+}
+
+.services-grid-box .service-card:nth-child(3){
+
+    grid-column:span 3;
+
+}
+
+
+/*======================================
+WIDE
+======================================*/
+
+.service-wide{
+
+    grid-column:span 6;
+
+}
+
+
+/*======================================
+SMALL
+======================================*/
+
+.services-grid-box .service-card:nth-child(5){
+
+    grid-column:span 3;
+
+}
+
+.services-grid-box .service-card:nth-child(6){
+
+    grid-column:span 3;
+
+}
+
+
+
+/*==========================================================
+
+                SERVICES HEADING
+
+                PART 02
+
+==========================================================*/
+
+
+/*======================================
+SECTION HEADING
+======================================*/
+
+.services-heading{
+
+    position:relative;
+
+    max-width:900px;
+
+    margin:0 auto 100px;
+
+    text-align:center;
+
+}
+
+
+/*======================================
+TAG
+======================================*/
+
+.services-tag{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:12px 24px;
+
+    margin-bottom:28px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    -webkit-backdrop-filter:blur(20px);
+
+    color:#DCE7F2;
+
+    font-size:.88rem;
+
+    font-weight:600;
+
+    letter-spacing:.08em;
+
+}
+
+
+/*======================================
+DOT
+======================================*/
+
+.services-tag .tag-dot{
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:#00E7D4;
+
+    box-shadow:
+
+        0 0 18px rgba(0,231,212,.9);
+
+    animation:servicePulse 2.5s infinite;
+
+}
+
+
+/*======================================
+TITLE
+======================================*/
+
+.services-heading h2{
+
+    margin:0;
+
+    color:#F8FAFC;
+
+    font-family:"Sora",sans-serif;
+
+    font-size:clamp(3rem,5vw,4.6rem);
+
+    font-weight:700;
+
+    line-height:1.12;
+
+    letter-spacing:-2px;
+
+}
+
+
+/*======================================
+GRADIENT
+======================================*/
+
+.services-heading h2 span{
+
+    display:block;
+
+    margin-top:10px;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            #00E7D4,
+
+            #57D8F3,
+
+            #9FD89B,
+
+            #F2DF5A
+
+        );
+
+    background-size:250%;
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    animation:
+
+        serviceGradient 10s linear infinite;
+
+}
+
+
+/*======================================
+DESCRIPTION
+======================================*/
+
+.services-heading p{
+
+    max-width:760px;
+
+    margin:34px auto 0;
+
+    color:#9DB1C5;
+
+    font-size:1.08rem;
+
+    line-height:1.9;
+
+}
+
+
+/*======================================
+DIVIDER
+======================================*/
+
+.services-heading::after{
+
+    content:"";
+
+    display:block;
+
+    width:140px;
+
+    height:2px;
+
+    margin:45px auto 0;
+
+    border-radius:50px;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            transparent,
+
+            #00E7D4,
+
+            transparent
+
+        );
+
+}
+
+
+/*======================================
+ANIMATION
+======================================*/
+
+@keyframes serviceGradient{
+
+    from{
+
+        background-position:0%;
+
+    }
+
+    to{
+
+        background-position:250%;
+
+    }
+
+}
+
+@keyframes servicePulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.4);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+/*==========================================================
+
+                SERVICES CARDS
+
+                PART 03
+
+==========================================================*/
+
+
+/*======================================
+CARD
+======================================*/
+
+.service-card{
+
+    position:relative;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-end;
+
+    overflow:hidden;
+
+    padding:36px;
+
+    border-radius:30px;
+
+    background:
+
+    linear-gradient(
+
+        180deg,
+
+        rgba(255,255,255,.06),
+
+        rgba(255,255,255,.025)
+
+    );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(24px);
+
+    -webkit-backdrop-filter:blur(24px);
+
+    transition:
+
+        transform .5s cubic-bezier(.22,1,.36,1),
+
+        border-color .4s,
+
+        box-shadow .5s;
+
+}
+
+
+/*======================================
+TOP LIGHT
+======================================*/
+
+.service-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:1px;
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.45),
+
+        transparent
+
+    );
+
+}
+
+
+/*======================================
+CYAN GLOW
+======================================*/
+
+.service-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:320px;
+
+    height:320px;
+
+    top:-180px;
+
+    right:-140px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(
+
+        circle,
+
+        rgba(0,231,212,.18),
+
+        transparent 72%
+
+    );
+
+    opacity:0;
+
+    transition:.45s;
+
+}
+
+
+/*======================================
+NUMBER
+======================================*/
+
+.service-number{
+
+    position:absolute;
+
+    top:28px;
+
+    right:30px;
+
+    font-family:"Sora",sans-serif;
+
+    font-size:1rem;
+
+    font-weight:700;
+
+    color:rgba(255,255,255,.14);
+
+    letter-spacing:.12em;
+
+}
+
+
+/*======================================
+TITLE
+======================================*/
+
+.service-card h3{
+
+    margin:0 0 18px;
+
+    color:#FFFFFF;
+
+    font-family:"Sora",sans-serif;
+
+    font-size:2rem;
+
+    font-weight:700;
+
+    line-height:1.2;
+
+    transition:.35s;
+
+}
+
+
+/*======================================
+DESCRIPTION
+======================================*/
+
+.service-card p{
+
+    margin:0;
+
+    max-width:90%;
+
+    color:#9FB3C7;
+
+    font-size:1rem;
+
+    line-height:1.8;
+
+}
+
+
+/*======================================
+LARGE CARD
+======================================*/
+
+.service-large h3{
+
+    font-size:2.8rem;
+
+}
+
+.service-large p{
+
+    max-width:75%;
+
+}
+
+
+/*======================================
+WIDE CARD
+======================================*/
+
+.service-wide h3{
+
+    font-size:2.2rem;
+
+}
+
+
+/*======================================
+HOVER
+======================================*/
+
+.service-card:hover{
+
+    transform:
+
+        translateY(-14px)
+
+        scale(1.015);
+
+    border-color:
+
+        rgba(0,231,212,.25);
+
+    box-shadow:
+
+        0 30px 70px rgba(0,0,0,.35);
+
+}
+
+
+.service-card:hover::after{
+
+    opacity:1;
+
+}
+
+
+.service-card:hover h3{
+
+    color:#00E7D4;
+
+}
+
+
+/*======================================
+CURSOR
+======================================*/
+
+.service-card{
+
+    cursor:pointer;
+
+}
+
+/*==========================================================
+
+                SERVICE DETAILS
+
+                PART 04
+
+==========================================================*/
+
+
+/*======================================
+ICON
+======================================*/
+
+.service-icon{
+
+    position:absolute;
+
+    top:34px;
+
+    left:34px;
+
+    width:72px;
+
+    height:72px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:22px;
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            rgba(0,231,212,.16),
+
+            rgba(255,255,255,.05)
+
+        );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    -webkit-backdrop-filter:blur(20px);
+
+    transition:.45s;
+
+}
+
+
+.service-icon i{
+
+    font-size:1.8rem;
+
+    color:#F8FAFC;
+
+    transition:.45s;
+
+}
+
+
+/*======================================
+CTA
+======================================*/
+
+.service-link{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-top:28px;
+
+    color:#DDE8F3;
+
+    text-decoration:none;
+
+    font-size:.92rem;
+
+    font-weight:700;
+
+    letter-spacing:.04em;
+
+    transition:.35s;
+
+}
+
+
+.service-link i{
+
+    transition:.35s;
+
+}
+
+
+/*======================================
+BOTTOM LINE
+======================================*/
+
+.service-card .bottom-line{
+
+    position:absolute;
+
+    left:0;
+
+    bottom:0;
+
+    width:0;
+
+    height:3px;
+
+    border-radius:50px;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            #00E7D4,
+
+            #57D8F3,
+
+            #A9D79C,
+
+            #F2DF5A
+
+        );
+
+    transition:.45s;
+
+}
+
+
+/*======================================
+LIGHT SWEEP
+======================================*/
+
+.service-card .shine{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+}
+
+
+.service-card .shine::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-140%;
+
+    top:0;
+
+    width:60%;
+
+    height:100%;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            transparent,
+
+            rgba(255,255,255,.18),
+
+            transparent
+
+        );
+
+    transform:skewX(-24deg);
+
+    transition:left .9s ease;
+
+}
+
+
+/*======================================
+HOVER
+======================================*/
+
+.service-card:hover .shine::before{
+
+    left:150%;
+
+}
+
+
+.service-card:hover .bottom-line{
+
+    width:100%;
+
+}
+
+
+.service-card:hover .service-icon{
+
+    transform:
+
+        rotate(-8deg)
+
+        scale(1.08);
+
+    border-color:
+
+        rgba(0,231,212,.35);
+
+}
+
+
+.service-card:hover .service-icon i{
+
+    color:#00E7D4;
+
+}
+
+
+.service-card:hover .service-link{
+
+    color:#00E7D4;
+
+}
+
+
+.service-card:hover .service-link i{
+
+    transform:translateX(6px);
+
+}
+
+
+/*==========================================================
+
+                RESPONSIVE
+
+                PART 05
+
+==========================================================*/
+
+
+/*======================================
+LAPTOP
+======================================*/
+
+@media(max-width:1200px){
+
+    .services-grid-box{
+
+        grid-template-columns:repeat(2,1fr);
+
+        grid-auto-rows:300px;
+
+    }
+
+    .service-large,
+
+    .service-wide{
+
+        grid-column:span 2;
+
+        grid-row:span 1;
+
+    }
+
+}
+
+
+/*======================================
+TABLET
+======================================*/
+
+@media(max-width:991px){
+
+    .services{
+
+        padding:110px 0;
+
+    }
+
+    .services-grid-box{
+
+        grid-template-columns:1fr;
+
+        grid-auto-rows:auto;
+
+    }
+
+    .service-card,
+
+    .service-large,
+
+    .service-wide{
+
+        grid-column:auto;
+
+        grid-row:auto;
+
+        min-height:320px;
+
+    }
+
+}
+
+
+/*======================================
+MOBILE
+======================================*/
+
+@media(max-width:576px){
+
+    .services-heading h2{
+
+        font-size:2.2rem;
+
+    }
+
+    .services-heading p{
+
+        font-size:.96rem;
+
+    }
+
+    .service-card{
+
+        padding:28px;
+
+        border-radius:24px;
+
+    }
+
+    .service-icon{
+
+        width:58px;
+
+        height:58px;
+
+        border-radius:18px;
+
+    }
+
+    .service-icon i{
+
+        font-size:1.35rem;
+
+    }
+
+    .service-number{
+
+        font-size:.82rem;
+
+    }
+
+    .service-card h3{
+
+        font-size:1.55rem;
+
+    }
+
+    .service-large h3{
+
+        font-size:2rem;
+
+    }
+
+    .service-card p{
+
+        max-width:100%;
+
+        font-size:.92rem;
+
+    }
+
+}

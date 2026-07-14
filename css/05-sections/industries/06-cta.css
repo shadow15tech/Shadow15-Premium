@@ -1,0 +1,397 @@
+/*==========================================================
+
+                SHADOW15
+
+            INDUSTRIES V3
+
+                CTA
+
+==========================================================*/
+
+
+/*=========================================
+CTA
+=========================================*/
+
+.industries-cta{
+
+    position:relative;
+
+    margin-top:140px;
+
+}
+
+
+/*=========================================
+CONTAINER
+=========================================*/
+
+.industries-cta-container{
+
+    position:relative;
+
+    overflow:hidden;
+
+    display:grid;
+
+    grid-template-columns:1.3fr .8fr;
+
+    gap:70px;
+
+    align-items:center;
+
+    padding:70px;
+
+    border-radius:36px;
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            rgba(255,255,255,.06),
+
+            rgba(255,255,255,.025)
+
+        );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(30px);
+
+    -webkit-backdrop-filter:blur(30px);
+
+}
+
+
+/*=========================================
+BACKGROUND GLOW
+=========================================*/
+
+.industries-cta-glow{
+
+    position:absolute;
+
+    width:520px;
+
+    height:520px;
+
+    right:-180px;
+
+    top:-160px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(0,231,212,.22),
+
+            transparent 72%
+
+        );
+
+    filter:blur(100px);
+
+}
+
+
+/*=========================================
+BADGE
+=========================================*/
+
+.cta-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    padding:12px 20px;
+
+    border-radius:999px;
+
+    background:rgba(0,231,212,.10);
+
+    border:1px solid rgba(0,231,212,.18);
+
+    color:#00E7D4;
+
+    font-size:.82rem;
+
+    font-weight:700;
+
+    letter-spacing:.14em;
+
+}
+
+
+/*=========================================
+TITLE
+=========================================*/
+
+.industries-cta-content h2{
+
+    margin:28px 0 0;
+
+    color:#FFFFFF;
+
+    font-family:"Sora",sans-serif;
+
+    font-size:clamp(2.8rem,4vw,4rem);
+
+    line-height:1.1;
+
+}
+
+
+.industries-cta-content h2 span{
+
+    display:block;
+
+    margin-top:12px;
+
+    color:#00E7D4;
+
+}
+
+
+/*=========================================
+DESCRIPTION
+=========================================*/
+
+.industries-cta-content p{
+
+    margin:30px 0 0;
+
+    max-width:620px;
+
+    color:#9CB2C8;
+
+    line-height:1.9;
+
+    font-size:1rem;
+
+}
+
+
+/*=========================================
+FEATURES
+=========================================*/
+
+.cta-features{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
+    margin-top:36px;
+
+}
+
+
+.cta-feature{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:#D7E5F4;
+
+    font-size:.92rem;
+
+}
+
+
+.cta-feature i{
+
+    color:#00E7D4;
+
+}
+
+
+/*=========================================
+PRIMARY BUTTON
+=========================================*/
+
+.industries-main-btn{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    width:100%;
+
+    height:64px;
+
+    border-radius:18px;
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            #00E7D4,
+
+            #4ED4FF
+
+        );
+
+    color:#07111F;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+
+.industries-main-btn:hover{
+
+    transform:translateY(-4px);
+
+}
+
+
+/*=========================================
+SECONDARY
+=========================================*/
+
+.industries-secondary-btn{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-top:18px;
+
+    height:58px;
+
+    border-radius:18px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    background:rgba(255,255,255,.04);
+
+    color:#FFFFFF;
+
+    transition:.35s;
+
+}
+
+
+.industries-secondary-btn:hover{
+
+    border-color:#00E7D4;
+
+}
+
+
+/*=========================================
+STATS
+=========================================*/
+
+.industries-stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+    margin-top:40px;
+
+}
+
+
+.industry-stat{
+
+    text-align:center;
+
+}
+
+
+.industry-stat h3{
+
+    margin:0;
+
+    color:#00E7D4;
+
+    font-family:"Sora",sans-serif;
+
+    font-size:2rem;
+
+}
+
+
+.industry-stat span{
+
+    display:block;
+
+    margin-top:8px;
+
+    color:#9CB2C8;
+
+    font-size:.82rem;
+
+}
+
+
+/*=========================================
+CTA PANEL
+=========================================*/
+
+.industries-cta-container{
+
+    transition:
+
+        transform .45s,
+
+        border-color .35s,
+
+        box-shadow .45s;
+
+}
+
+
+.industries-cta-container:hover{
+
+    transform:translateY(-8px);
+
+    border-color:rgba(0,231,212,.18);
+
+    box-shadow:
+
+        0 35px 80px rgba(0,0,0,.35);
+
+}
+
+
+.industries-main-btn i{
+
+    transition:.35s;
+
+}
+
+
+.industries-main-btn:hover i{
+
+    transform:translateX(6px);
+
+}
+
+

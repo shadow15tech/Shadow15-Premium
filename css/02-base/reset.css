@@ -1,0 +1,355 @@
+/*==========================================================
+    SHADOW15 OFFICIAL WEBSITE
+    Modern CSS Reset
+    Version : 1.0
+==========================================================*/
+
+/*==========================================================
+    BOX SIZING
+==========================================================*/
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/*==========================================================
+    ROOT
+==========================================================*/
+
+html{
+    scroll-behavior:smooth;
+    font-size:16px;
+    -webkit-text-size-adjust:100%;
+    -moz-text-size-adjust:100%;
+    text-size-adjust:100%;
+}
+
+/*==========================================================
+    BODY
+==========================================================*/
+
+body{
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+    background:var(--white);
+
+    color:var(--text-primary);
+
+    font-family:var(--font-body);
+
+    font-size:var(--fs-base);
+
+    line-height:var(--lh-normal);
+
+    text-rendering:optimizeLegibility;
+
+    -webkit-font-smoothing:antialiased;
+
+    -moz-osx-font-smoothing:grayscale;
+
+}
+
+/*==========================================================
+    MEDIA
+==========================================================*/
+
+img,
+picture,
+video,
+canvas,
+svg{
+
+    display:block;
+
+    max-width:100%;
+
+}
+
+img{
+
+    height:auto;
+
+    user-select:none;
+
+}
+
+/*==========================================================
+    FORM ELEMENTS
+==========================================================*/
+
+input,
+textarea,
+button,
+select{
+
+    font:inherit;
+
+    border:none;
+
+    outline:none;
+
+    background:none;
+
+}
+
+textarea{
+
+    resize:none;
+
+}
+
+button{
+
+    cursor:pointer;
+
+    background:none;
+
+}
+
+input{
+
+    appearance:none;
+
+}
+
+/*==========================================================
+    LINKS
+==========================================================*/
+
+a{
+
+    color:inherit;
+
+    text-decoration:none;
+
+}
+
+/*==========================================================
+    LIST
+==========================================================*/
+
+ul,
+ol{
+
+    list-style:none;
+
+}
+
+/*==========================================================
+    TABLE
+==========================================================*/
+
+table{
+
+    border-collapse:collapse;
+
+    border-spacing:0;
+
+}
+
+/*==========================================================
+    HEADING
+==========================================================*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+
+    font-family:var(--font-heading);
+
+    font-weight:var(--fw-bold);
+
+    line-height:1.15;
+
+    color:var(--text-primary);
+
+}
+
+/*==========================================================
+    PARAGRAPH
+==========================================================*/
+
+p{
+
+    color:var(--text-secondary);
+
+}
+
+/*==========================================================
+    IFRAME
+==========================================================*/
+
+iframe{
+
+    border:0;
+
+}
+
+/*==========================================================
+    SELECTION
+==========================================================*/
+
+::selection{
+
+    background:var(--primary);
+
+    color:var(--white);
+
+}
+
+/*==========================================================
+    FOCUS
+==========================================================*/
+
+:focus-visible{
+
+    outline:2px solid var(--primary);
+
+    outline-offset:4px;
+
+}
+
+/*==========================================================
+    SCROLLBAR
+==========================================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#eef3f7;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:linear-gradient(
+        180deg,
+        #00E7D4,
+        #58D8E5,
+        #A9D79C
+    );
+
+    border-radius:50px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:linear-gradient(
+        180deg,
+        #00d6c5,
+        #47cbe2,
+        #91cb84
+    );
+
+}
+
+/*==========================================================
+    REDUCED MOTION
+==========================================================*/
+
+@media (prefers-reduced-motion: reduce){
+
+    *{
+
+        animation-duration:0.01ms !important;
+
+        animation-iteration-count:1 !important;
+
+        transition-duration:0.01ms !important;
+
+        scroll-behavior:auto !important;
+
+    }
+
+}
+
+/*==========================================================
+    HIDDEN ATTRIBUTE
+==========================================================*/
+
+[hidden]{
+
+    display:none !important;
+
+}
+
+/*==========================================================
+    SVG
+==========================================================*/
+
+svg{
+
+    overflow:hidden;
+
+    vertical-align:middle;
+
+}
+
+/*==========================================================
+    DISABLED
+==========================================================*/
+
+button:disabled,
+input:disabled{
+
+    cursor:not-allowed;
+
+    opacity:.6;
+
+}
+
+/*==========================================================
+    HR
+==========================================================*/
+
+hr{
+
+    border:none;
+
+    height:1px;
+
+    background:var(--border-color);
+
+}
+
+/*==========================================================
+    STRONG
+==========================================================*/
+
+strong{
+
+    font-weight:var(--fw-bold);
+
+}
+
+/*==========================================================
+    HTML5 ELEMENTS
+==========================================================*/
+
+header,
+main,
+section,
+article,
+aside,
+footer,
+nav{
+
+    display:block;
+
+}

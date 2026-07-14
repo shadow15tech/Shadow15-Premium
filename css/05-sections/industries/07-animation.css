@@ -1,0 +1,309 @@
+/*==========================================================
+
+                SHADOW15
+
+            INDUSTRIES V3
+
+            07 ANIMATION
+
+==========================================================*/
+
+
+/*=========================================
+GLOBAL TRANSITIONS
+=========================================*/
+
+.industries *{
+
+    transition:
+
+        transform .45s cubic-bezier(.22,1,.36,1),
+
+        opacity .35s,
+
+        border-color .35s,
+
+        color .35s,
+
+        background .35s,
+
+        box-shadow .45s;
+
+}
+
+
+/*=========================================
+RING ROTATION
+=========================================*/
+
+.ring-1{
+
+    animation:
+
+        rotateClockwise 18s linear infinite;
+
+}
+
+.ring-2{
+
+    animation:
+
+        rotateAntiClockwise 28s linear infinite;
+
+}
+
+.ring-3{
+
+    animation:
+
+        rotateClockwise 40s linear infinite;
+
+}
+
+
+/*=========================================
+PULSE
+=========================================*/
+
+.engine-pulse{
+
+    animation:
+
+        pulseRing 2.6s ease-in-out infinite;
+
+}
+
+
+/*=========================================
+LABEL FLOAT
+=========================================*/
+
+.engine-label{
+
+    animation:
+
+        labelFloat 5s ease-in-out infinite;
+
+}
+
+.label-right{
+
+    animation-delay:.5s;
+
+}
+
+.label-bottom{
+
+    animation-delay:1s;
+
+}
+
+.label-left{
+
+    animation-delay:1.5s;
+
+}
+
+
+/*=========================================
+METRICS
+=========================================*/
+
+.engine-metric{
+
+    animation:
+
+        metricFloat 6s ease-in-out infinite;
+
+}
+
+.metric-2{
+
+    animation-delay:1s;
+
+}
+
+.metric-3{
+
+    animation-delay:2s;
+
+}
+
+
+/*=========================================
+BACKGROUND GLOW
+=========================================*/
+
+.glow-left{
+
+    animation:
+
+        auroraLeft 18s ease-in-out infinite;
+
+}
+
+.glow-right{
+
+    animation:
+
+        auroraRight 24s ease-in-out infinite;
+
+}
+
+
+/*=========================================
+CTA GLOW
+=========================================*/
+
+.industries-cta-glow{
+
+    animation:
+
+        glowBreath 7s ease-in-out infinite;
+
+}
+
+
+/*==========================================================
+
+                KEYFRAMES
+
+==========================================================*/
+
+
+@keyframes rotateClockwise{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+@keyframes rotateAntiClockwise{
+
+    from{
+
+        transform:rotate(360deg);
+
+    }
+
+    to{
+
+        transform:rotate(0deg);
+
+    }
+
+}
+
+
+@keyframes pulseRing{
+
+    0%{
+
+        transform:scale(.92);
+
+        opacity:.25;
+
+    }
+
+    50%{
+
+        transform:scale(1.08);
+
+        opacity:.75;
+
+    }
+
+    100%{
+
+        transform:scale(.92);
+
+        opacity:.25;
+
+    }
+
+}
+
+@keyframes labelFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+@keyframes metricFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+@keyframes glowBreath{
+
+    0%{
+
+        transform:scale(1);
+
+        opacity:.55;
+
+    }
+
+    50%{
+
+        transform:scale(1.08);
+
+        opacity:.85;
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+        opacity:.55;
+
+    }
+
+}
+

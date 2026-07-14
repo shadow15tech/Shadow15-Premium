@@ -1,0 +1,94 @@
+/*==========================================================
+    SHADOW15 OFFICIAL WEBSITE
+    MASTER STYLESHEET
+    Version : 1.0
+    Author : Shadow15
+==========================================================*/
+
+
+/*==========================================================
+    01. SETTINGS
+==========================================================*/
+
+@import url("./01-settings/variables.css");
+@import url("./01-settings/colors.css");
+@import url("./01-settings/typography.css");
+
+
+/*==========================================================
+    02. BASE
+==========================================================*/
+
+@import url("./02-base/reset.css");
+@import url("./02-base/base.css");
+@import url("./02-base/utilities.css");
+
+
+/*==========================================================
+    03. LAYOUT
+==========================================================*/
+
+@import url("./03-layout/container.css");
+@import url("./03-layout/grid.css");
+@import url("./03-layout/sections.css");
+
+
+/*==========================================================
+    04. COMPONENTS
+==========================================================*/
+
+@import url("./04-components/loader.css");
+@import url("./04-components/navbar.css");
+@import url("./04-components/buttons.css");
+@import url("./04-components/cards.css");
+@import url("./04-components/footer.css");
+
+
+/*==========================================================
+    05. SECTIONS
+==========================================================*/
+
+@import url("./05-sections/hero.css");
+@import url("./05-sections/about.css");
+@import url("./05-sections/stats.css");
+@import url("./05-sections/services.css");
+@import url("./05-sections/ai.css");
+@import url("./05-sections/industries.css");
+@import url("./05-sections/process.css");
+@import url("./05-sections/portfolio.css");
+@import url("./05-sections/testimonials.css");
+@import url("./05-sections/pricing.css");
+@import url("./05-sections/faq.css");
+@import url("./05-sections/contact.css");
+@import url("./05-sections/trusted.css");
+
+
+/*==========================================================
+    06. EFFECTS
+==========================================================*/
+
+@import url("./06-effects/cursor.css");
+@import url("./06-effects/animations.css");
+@import url("./06-effects/gradients.css");
+
+
+/*==========================================================
+    07. RESPONSIVE
+==========================================================*/
+
+@import url("./responsive.css");
+
+
+
+
+
+/* Industries */
+
+@import url("./05-sections/industries/01-background.css");
+@import url("./05-sections/industries/02-heading.css");
+@import url("./05-sections/industries/03-grid.css");
+@import url("./05-sections/industries/04-card.css");
+@import url("./05-sections/industries/05-engine.css");
+@import url("./05-sections/industries/06-cta.css");
+@import url("./05-sections/industries/07-animation.css");
+@import url("./05-sections/industries/08-responsive.css");

@@ -1,0 +1,293 @@
+/*==========================================================
+    SHADOW15 OFFICIAL WEBSITE
+    Utility Classes
+    Version : 1.0
+==========================================================*/
+
+/*==========================================================
+    DISPLAY
+==========================================================*/
+
+.d-none{display:none!important;}
+.d-block{display:block!important;}
+.d-inline{display:inline!important;}
+.d-inline-block{display:inline-block!important;}
+.d-flex{display:flex!important;}
+.d-grid{display:grid!important;}
+
+/*==========================================================
+    FLEX
+==========================================================*/
+
+.flex-column{flex-direction:column;}
+.flex-wrap{flex-wrap:wrap;}
+
+.justify-start{justify-content:flex-start;}
+.justify-center{justify-content:center;}
+.justify-between{justify-content:space-between;}
+.justify-around{justify-content:space-around;}
+.justify-end{justify-content:flex-end;}
+
+.items-start{align-items:flex-start;}
+.items-center{align-items:center;}
+.items-end{align-items:flex-end;}
+
+.gap-8{gap:8px;}
+.gap-12{gap:12px;}
+.gap-16{gap:16px;}
+.gap-20{gap:20px;}
+.gap-24{gap:24px;}
+.gap-32{gap:32px;}
+.gap-40{gap:40px;}
+.gap-48{gap:48px;}
+
+/*==========================================================
+    WIDTH
+==========================================================*/
+
+.w-100{width:100%;}
+.w-auto{width:auto;}
+.h-100{height:100%;}
+
+.max-600{max-width:600px;}
+.max-700{max-width:700px;}
+.max-800{max-width:800px;}
+.max-900{max-width:900px;}
+
+/*==========================================================
+    TEXT
+==========================================================*/
+
+.text-left{text-align:left;}
+.text-center{text-align:center;}
+.text-right{text-align:right;}
+
+.text-white{color:var(--white);}
+.text-dark{color:var(--text-primary);}
+.text-light{color:var(--text-secondary);}
+.text-primary{color:var(--primary);}
+.text-gradient{
+    background:var(--gradient-primary);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+/*==========================================================
+    FONT WEIGHT
+==========================================================*/
+
+.fw-400{font-weight:400;}
+.fw-500{font-weight:500;}
+.fw-600{font-weight:600;}
+.fw-700{font-weight:700;}
+.fw-800{font-weight:800;}
+
+/*==========================================================
+    MARGIN
+==========================================================*/
+
+.mt-16{margin-top:16px;}
+.mt-24{margin-top:24px;}
+.mt-32{margin-top:32px;}
+.mt-48{margin-top:48px;}
+.mt-64{margin-top:64px;}
+.mt-80{margin-top:80px;}
+
+.mb-16{margin-bottom:16px;}
+.mb-24{margin-bottom:24px;}
+.mb-32{margin-bottom:32px;}
+.mb-48{margin-bottom:48px;}
+.mb-64{margin-bottom:64px;}
+.mb-80{margin-bottom:80px;}
+
+.mx-auto{margin-inline:auto;}
+
+/*==========================================================
+    PADDING
+==========================================================*/
+
+.p-16{padding:16px;}
+.p-24{padding:24px;}
+.p-32{padding:32px;}
+.p-40{padding:40px;}
+.p-48{padding:48px;}
+
+.py-80{
+    padding-top:80px;
+    padding-bottom:80px;
+}
+
+.py-120{
+    padding-top:120px;
+    padding-bottom:120px;
+}
+
+/*==========================================================
+    BORDER RADIUS
+==========================================================*/
+
+.radius-sm{
+    border-radius:var(--radius-sm);
+}
+
+.radius-md{
+    border-radius:var(--radius-md);
+}
+
+.radius-lg{
+    border-radius:var(--radius-lg);
+}
+
+.radius-xl{
+    border-radius:var(--radius-xl);
+}
+
+.radius-round{
+    border-radius:999px;
+}
+
+/*==========================================================
+    SHADOW
+==========================================================*/
+
+.shadow-sm{
+    box-shadow:var(--shadow-sm);
+}
+
+.shadow-md{
+    box-shadow:var(--shadow-md);
+}
+
+.shadow-lg{
+    box-shadow:var(--shadow-lg);
+}
+
+.shadow-glow{
+    box-shadow:var(--shadow-glow);
+}
+
+/*==========================================================
+    BACKGROUND
+==========================================================*/
+
+.bg-white{
+    background:var(--white);
+}
+
+.bg-light{
+    background:var(--light-bg);
+}
+
+.bg-gradient{
+    background:var(--gradient-primary);
+}
+
+.glass{
+    background:var(--glass-bg);
+    backdrop-filter:blur(var(--glass-blur));
+    -webkit-backdrop-filter:blur(var(--glass-blur));
+    border:1px solid var(--glass-border);
+}
+
+/*==========================================================
+    POSITION
+==========================================================*/
+
+.relative{position:relative;}
+.absolute{position:absolute;}
+.fixed{position:fixed;}
+
+.overflow-hidden{
+    overflow:hidden;
+}
+
+.z-10{z-index:10;}
+.z-100{z-index:100;}
+.z-navbar{z-index:var(--z-navbar);}
+
+/*==========================================================
+    CURSOR
+==========================================================*/
+
+.pointer{
+    cursor:pointer;
+}
+
+/*==========================================================
+    TRANSITION
+==========================================================*/
+
+.transition{
+    transition:var(--transition);
+}
+
+/*==========================================================
+    HOVER SCALE
+==========================================================*/
+
+.hover-scale{
+    transition:var(--transition);
+}
+
+.hover-scale:hover{
+    transform:translateY(-8px) scale(1.02);
+}
+
+/*==========================================================
+    IMAGE
+==========================================================*/
+
+.img-cover{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.img-contain{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+}
+
+/*==========================================================
+    VISIBILITY
+==========================================================*/
+
+.hidden{
+    display:none!important;
+}
+
+.visible{
+    display:block!important;
+}
+
+/*==========================================================
+    USER SELECT
+==========================================================*/
+
+.no-select{
+    user-select:none;
+}
+
+/*==========================================================
+    POINTER EVENTS
+==========================================================*/
+
+.no-pointer{
+    pointer-events:none;
+}
+
+/*==========================================================
+    SCROLL REVEAL
+==========================================================*/
+
+.reveal{
+    opacity:0;
+    transform:translateY(80px);
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+    transition:1s ease;
+}

@@ -1,0 +1,1035 @@
+/*==========================================================
+
+                TRUSTED SECTION
+
+                PART 01
+
+==========================================================*/
+
+
+/*======================================
+SECTION
+======================================*/
+
+.trusted{
+
+    position:relative;
+
+    padding:140px 0;
+
+    overflow:hidden;
+
+    background:#06101D;
+
+}
+
+
+/*======================================
+BACKGROUND
+======================================*/
+
+.trusted-bg{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+}
+
+
+/*======================================
+GRID
+======================================*/
+
+.trusted-grid{
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+        linear-gradient(
+
+            rgba(255,255,255,.025) 1px,
+
+            transparent 1px
+
+        ),
+
+        linear-gradient(
+
+            90deg,
+
+            rgba(255,255,255,.025) 1px,
+
+            transparent 1px
+
+        );
+
+    background-size:70px 70px;
+
+    mask-image:
+
+        radial-gradient(
+
+            circle,
+
+            #000 45%,
+
+            transparent 100%
+
+        );
+
+}
+
+
+/*======================================
+GLOW ONE
+======================================*/
+
+.trusted-glow{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(110px);
+
+}
+
+
+.trusted-glow-1{
+
+    width:520px;
+
+    height:520px;
+
+    left:-180px;
+
+    top:-120px;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(0,231,212,.18),
+
+            transparent 70%
+
+        );
+
+}
+
+
+/*======================================
+GLOW TWO
+======================================*/
+
+.trusted-glow-2{
+
+    width:700px;
+
+    height:700px;
+
+    right:-220px;
+
+    bottom:-280px;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(86,195,255,.14),
+
+            transparent 70%
+
+        );
+
+}
+
+
+/*======================================
+CONTAINER
+======================================*/
+
+.trusted .container{
+
+    position:relative;
+
+    width:min(1400px,92%);
+
+    margin:auto;
+
+    z-index:2;
+
+}
+
+
+/*======================================
+SECTION SPACING
+======================================*/
+
+.trusted>*{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+/*==========================================================
+
+                TRUSTED HEADING
+
+                PART 02
+
+==========================================================*/
+
+
+/*======================================
+SECTION HEADING
+======================================*/
+
+.trusted-heading{
+
+    position:relative;
+
+    max-width:850px;
+
+    margin:0 auto 90px;
+
+    text-align:center;
+
+}
+
+
+/*======================================
+TAG
+======================================*/
+
+.trusted-tag{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:12px 24px;
+
+    margin-bottom:28px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    -webkit-backdrop-filter:blur(20px);
+
+    color:#DDEAF5;
+
+    font-size:.86rem;
+
+    font-weight:600;
+
+    letter-spacing:.08em;
+
+}
+
+
+/*======================================
+TAG DOT
+======================================*/
+
+.trusted-tag .tag-dot{
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:#00E7D4;
+
+    box-shadow:
+
+        0 0 18px rgba(0,231,212,.95);
+
+    animation:trustedPulse 2.5s ease-in-out infinite;
+
+}
+
+
+/*======================================
+TITLE
+======================================*/
+
+.trusted-heading h2{
+
+    margin:0;
+
+    color:#F8FAFC;
+
+    font-family:"Sora",sans-serif;
+
+    font-size:clamp(2.8rem,5vw,4.4rem);
+
+    font-weight:700;
+
+    line-height:1.15;
+
+    letter-spacing:-2px;
+
+}
+
+
+/*======================================
+GRADIENT WORD
+======================================*/
+
+.trusted-heading h2 span{
+
+    display:block;
+
+    margin-top:12px;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            #00E7D4,
+
+            #58D7F4,
+
+            #A8D98F,
+
+            #F2DF5A
+
+        );
+
+    background-size:250%;
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    animation:
+
+        trustedGradient 10s linear infinite;
+
+}
+
+
+/*======================================
+DESCRIPTION
+======================================*/
+
+.trusted-heading p{
+
+    max-width:760px;
+
+    margin:32px auto 0;
+
+    color:#9CB0C4;
+
+    font-size:1.08rem;
+
+    line-height:1.9;
+
+}
+
+
+/*======================================
+DECORATIVE LINE
+======================================*/
+
+.trusted-heading::after{
+
+    content:"";
+
+    display:block;
+
+    width:120px;
+
+    height:2px;
+
+    margin:45px auto 0;
+
+    border-radius:50px;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            transparent,
+
+            #00E7D4,
+
+            transparent
+
+        );
+
+}
+
+
+/*======================================
+ANIMATIONS
+======================================*/
+
+@keyframes trustedGradient{
+
+    from{
+
+        background-position:0%;
+
+    }
+
+    to{
+
+        background-position:250%;
+
+    }
+
+}
+
+@keyframes trustedPulse{
+
+    0%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+    50%{
+
+        transform:scale(1.4);
+
+        opacity:.7;
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+
+
+/*==========================================================
+
+                TRUSTED CARDS
+
+                PART 03
+
+==========================================================*/
+
+
+/*======================================
+GRID
+======================================*/
+
+.trusted-grid-box{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:28px;
+
+}
+
+
+/*======================================
+CARD
+======================================*/
+
+.trusted-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:38px 32px;
+
+    border-radius:28px;
+
+    background:
+
+    linear-gradient(
+
+        180deg,
+
+        rgba(255,255,255,.06),
+
+        rgba(255,255,255,.03)
+
+    );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(22px);
+
+    -webkit-backdrop-filter:blur(22px);
+
+    transition:
+
+        transform .45s cubic-bezier(.22,1,.36,1),
+
+        border-color .35s,
+
+        box-shadow .45s;
+
+}
+
+
+/*======================================
+TOP LIGHT
+======================================*/
+
+.trusted-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:1px;
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.45),
+
+        transparent
+
+    );
+
+}
+
+
+/*======================================
+GLOW
+======================================*/
+
+.trusted-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:260px;
+
+    height:260px;
+
+    left:-140px;
+
+    top:-140px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(
+
+        circle,
+
+        rgba(0,231,212,.16),
+
+        transparent 72%
+
+    );
+
+    opacity:0;
+
+    transition:.45s;
+
+}
+
+
+/*======================================
+ICON
+======================================*/
+
+.trusted-icon{
+
+    width:72px;
+
+    height:72px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:20px;
+
+    margin-bottom:28px;
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        rgba(0,231,212,.18),
+
+        rgba(255,255,255,.05)
+
+    );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    font-size:2rem;
+
+}
+
+
+/*======================================
+NUMBER
+======================================*/
+
+.trusted-card h3{
+
+    margin:0;
+
+    font-family:"Sora",sans-serif;
+
+    font-size:2.4rem;
+
+    font-weight:700;
+
+    color:#FFFFFF;
+
+}
+
+
+/*======================================
+TEXT
+======================================*/
+
+.trusted-card p{
+
+    margin-top:14px;
+
+    color:#9CB0C4;
+
+    line-height:1.8;
+
+    font-size:.95rem;
+
+}
+
+
+/*======================================
+HOVER
+======================================*/
+
+.trusted-card:hover{
+
+    transform:
+
+        translateY(-14px);
+
+    border-color:
+
+        rgba(0,231,212,.22);
+
+    box-shadow:
+
+        0 30px 70px rgba(0,0,0,.35);
+
+}
+
+
+.trusted-card:hover::after{
+
+    opacity:1;
+
+}
+
+
+/*======================================
+ICON HOVER
+======================================*/
+
+.trusted-card:hover .trusted-icon{
+
+    transform:
+
+        rotate(-8deg)
+
+        scale(1.08);
+
+}
+
+
+/*======================================
+NUMBER HOVER
+======================================*/
+
+.trusted-card:hover h3{
+
+    color:#00E7D4;
+
+}
+
+
+/*======================================
+TRANSITIONS
+======================================*/
+
+.trusted-icon,
+
+.trusted-card h3{
+
+    transition:.4s;
+
+}
+
+
+
+
+/*==========================================================
+
+                TRUSTED MARQUEE
+
+                PART 04
+
+==========================================================*/
+
+
+/*======================================
+MARQUEE
+======================================*/
+
+.trusted-marquee{
+
+    position:relative;
+
+    margin-top:100px;
+
+    overflow:hidden;
+
+    border-top:1px solid rgba(255,255,255,.06);
+
+    border-bottom:1px solid rgba(255,255,255,.06);
+
+    padding:34px 0;
+
+}
+
+
+/*======================================
+FADE LEFT
+======================================*/
+
+.trusted-marquee::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:180px;
+
+    height:100%;
+
+    z-index:2;
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        #06101D,
+
+        transparent
+
+    );
+
+}
+
+
+/*======================================
+FADE RIGHT
+======================================*/
+
+.trusted-marquee::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:0;
+
+    top:0;
+
+    width:180px;
+
+    height:100%;
+
+    z-index:2;
+
+    background:
+
+    linear-gradient(
+
+        -90deg,
+
+        #06101D,
+
+        transparent
+
+    );
+
+}
+
+
+/*======================================
+TRACK
+======================================*/
+
+.trusted-track{
+
+    display:flex;
+
+    align-items:center;
+
+    width:max-content;
+
+    animation:marqueeMove 28s linear infinite;
+
+}
+
+
+/*======================================
+ITEM
+======================================*/
+
+.trusted-track span{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin:0 24px;
+
+    padding:16px 28px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:#DCE8F4;
+
+    font-family:"Sora",sans-serif;
+
+    font-size:.95rem;
+
+    font-weight:600;
+
+    letter-spacing:.05em;
+
+    white-space:nowrap;
+
+    backdrop-filter:blur(16px);
+
+    transition:.35s;
+
+}
+
+
+/*======================================
+HOVER
+======================================*/
+
+.trusted-track span:hover{
+
+    transform:
+
+        translateY(-6px);
+
+    color:#00E7D4;
+
+    border-color:
+
+        rgba(0,231,212,.35);
+
+    box-shadow:
+
+        0 15px 35px rgba(0,231,212,.15);
+
+}
+
+
+/*======================================
+PAUSE
+======================================*/
+
+.trusted-marquee:hover .trusted-track{
+
+    animation-play-state:paused;
+
+}
+
+
+/*======================================
+ANIMATION
+======================================*/
+
+@keyframes marqueeMove{
+
+    from{
+
+        transform:translateX(0);
+
+    }
+
+    to{
+
+        transform:translateX(-50%);
+
+    }
+
+}
+
+
+
+
+/*==========================================================
+
+            RESPONSIVE
+
+==========================================================*/
+
+@media(max-width:1200px){
+
+.trusted-grid-box{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.trusted{
+
+padding:90px 0;
+
+}
+
+.trusted-heading{
+
+margin-bottom:60px;
+
+}
+
+.trusted-grid-box{
+
+grid-template-columns:1fr;
+
+gap:22px;
+
+}
+
+.trusted-heading h2{
+
+font-size:2.4rem;
+
+}
+
+.trusted-marquee{
+
+margin-top:70px;
+
+}
+
+.trusted-track span{
+
+padding:14px 22px;
+
+font-size:.85rem;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.trusted-heading h2{
+
+font-size:2rem;
+
+}
+
+.trusted-heading p{
+
+font-size:.95rem;
+
+}
+
+.trusted-card{
+
+padding:28px;
+
+}
+
+.trusted-icon{
+
+width:60px;
+
+height:60px;
+
+font-size:1.5rem;
+
+}
+
+}
+
+
+

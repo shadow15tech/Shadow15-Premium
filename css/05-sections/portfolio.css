@@ -1,0 +1,859 @@
+/*==========================================================
+
+                PORTFOLIO SECTION
+
+                PART 01
+
+==========================================================*/
+
+
+/*======================================
+SECTION
+======================================*/
+
+.portfolio{
+
+    position:relative;
+
+    padding:160px 0;
+
+    overflow:hidden;
+
+    background:#07111F;
+
+}
+
+
+/*======================================
+BACKGROUND
+======================================*/
+
+.portfolio-bg{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+}
+
+
+/*======================================
+GRID
+======================================*/
+
+.portfolio-grid{
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+        linear-gradient(
+
+            rgba(255,255,255,.025) 1px,
+
+            transparent 1px
+
+        ),
+
+        linear-gradient(
+
+            90deg,
+
+            rgba(255,255,255,.025) 1px,
+
+            transparent 1px
+
+        );
+
+    background-size:70px 70px;
+
+    mask-image:
+
+        radial-gradient(
+
+            circle,
+
+            #000 45%,
+
+            transparent 100%
+
+        );
+
+}
+
+
+/*======================================
+GLOW
+======================================*/
+
+.portfolio-glow{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(120px);
+
+}
+
+.portfolio-glow.glow-left{
+
+    width:600px;
+
+    height:600px;
+
+    top:-180px;
+
+    left:-220px;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(0,231,212,.16),
+
+            transparent 72%
+
+        );
+
+}
+
+.portfolio-glow.glow-right{
+
+    width:720px;
+
+    height:720px;
+
+    right:-250px;
+
+    bottom:-260px;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(92,195,255,.12),
+
+            transparent 72%
+
+        );
+
+}
+
+
+/*======================================
+CONTAINER
+======================================*/
+
+.portfolio .container{
+
+    position:relative;
+
+    width:min(1400px,92%);
+
+    margin:auto;
+
+    z-index:2;
+
+}
+
+
+/*======================================
+HEADING
+======================================*/
+
+.portfolio-heading{
+
+    max-width:900px;
+
+    margin:0 auto 110px;
+
+    text-align:center;
+
+}
+
+
+/*======================================
+PROJECT LIST
+======================================*/
+
+.portfolio-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:120px;
+
+}
+
+
+/*==========================================================
+
+                PORTFOLIO HEADING
+
+                PART 02
+
+==========================================================*/
+
+
+/*======================================
+HEADING
+======================================*/
+
+.portfolio-heading{
+
+    position:relative;
+
+    max-width:900px;
+
+    margin:0 auto 110px;
+
+    text-align:center;
+
+}
+
+
+/*======================================
+TAG
+======================================*/
+
+.portfolio-tag{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:12px 24px;
+
+    margin-bottom:28px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    -webkit-backdrop-filter:blur(20px);
+
+    color:#DDEAF5;
+
+    font-size:.88rem;
+
+    font-weight:600;
+
+    letter-spacing:.08em;
+
+}
+
+
+/*======================================
+DOT
+======================================*/
+
+.portfolio-tag .tag-dot{
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:#00E7D4;
+
+    box-shadow:
+
+        0 0 18px rgba(0,231,212,.9);
+
+    animation:portfolioPulse 2.5s ease-in-out infinite;
+
+}
+
+
+/*======================================
+TITLE
+======================================*/
+
+.portfolio-heading h2{
+
+    margin:0;
+
+    color:#F8FAFC;
+
+    font-family:"Sora",sans-serif;
+
+    font-size:clamp(3rem,5vw,4.8rem);
+
+    font-weight:700;
+
+    line-height:1.1;
+
+    letter-spacing:-2px;
+
+}
+
+
+/*======================================
+GRADIENT
+======================================*/
+
+.portfolio-heading h2 span{
+
+    display:block;
+
+    margin-top:10px;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            #00E7D4,
+
+            #59D7E6,
+
+            #A9D79C,
+
+            #F2DF5A
+
+        );
+
+    background-size:250%;
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    animation:
+
+        portfolioGradient 10s linear infinite;
+
+}
+
+
+/*======================================
+DESCRIPTION
+======================================*/
+
+.portfolio-heading p{
+
+    max-width:760px;
+
+    margin:34px auto 0;
+
+    color:#9CB0C4;
+
+    font-size:1.08rem;
+
+    line-height:1.9;
+
+}
+
+
+/*======================================
+DIVIDER
+======================================*/
+
+.portfolio-heading::after{
+
+    content:"";
+
+    display:block;
+
+    width:140px;
+
+    height:2px;
+
+    margin:45px auto 0;
+
+    border-radius:50px;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            transparent,
+
+            #00E7D4,
+
+            transparent
+
+        );
+
+}
+
+
+/*======================================
+ANIMATION
+======================================*/
+
+@keyframes portfolioGradient{
+
+    from{
+
+        background-position:0%;
+
+    }
+
+    to{
+
+        background-position:250%;
+
+    }
+
+}
+
+
+@keyframes portfolioPulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.45);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+/*==========================================================
+
+                CASE STUDY
+
+                PART 03
+
+==========================================================*/
+
+
+/*======================================
+CASE STUDY
+======================================*/
+
+.case-study{
+
+    position:relative;
+
+    display:grid;
+
+    grid-template-columns:1.15fr .85fr;
+
+    align-items:center;
+
+    gap:80px;
+
+}
+
+
+/*======================================
+REVERSE
+======================================*/
+
+.case-study.reverse{
+
+    grid-template-columns:.85fr 1.15fr;
+
+}
+
+.case-study.reverse .case-image{
+
+    order:2;
+
+}
+
+.case-study.reverse .case-content{
+
+    order:1;
+
+}
+
+
+/*======================================
+IMAGE
+======================================*/
+
+.case-image{
+
+    position:relative;
+
+}
+
+
+/*======================================
+BROWSER FRAME
+======================================*/
+
+.case-image::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-18px;
+
+    border-radius:30px;
+
+    background:
+
+    linear-gradient(
+
+        180deg,
+
+        rgba(255,255,255,.08),
+
+        rgba(255,255,255,.02)
+
+    );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(22px);
+
+    z-index:0;
+
+}
+
+
+/*======================================
+PROJECT IMAGE
+======================================*/
+
+.case-image img{
+
+    position:relative;
+
+    width:100%;
+
+    display:block;
+
+    border-radius:20px;
+
+    z-index:2;
+
+    box-shadow:
+
+        0 40px 90px rgba(0,0,0,.45);
+
+    transition:.6s cubic-bezier(.22,1,.36,1);
+
+}
+
+
+/*======================================
+BROWSER DOTS
+======================================*/
+
+.case-image::after{
+
+    content:"●  ●  ●";
+
+    position:absolute;
+
+    top:-4px;
+
+    left:18px;
+
+    color:
+
+    rgba(255,255,255,.45);
+
+    font-size:12px;
+
+    letter-spacing:8px;
+
+    z-index:5;
+
+}
+
+
+/*======================================
+CONTENT
+======================================*/
+
+.case-content{
+
+    position:relative;
+
+}
+
+
+/*======================================
+CATEGORY
+======================================*/
+
+.case-category{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    padding:10px 20px;
+
+    margin-bottom:24px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:#00E7D4;
+
+    font-size:.85rem;
+
+    font-weight:600;
+
+    letter-spacing:.08em;
+
+}
+
+
+/*======================================
+TITLE
+======================================*/
+
+.case-content h3{
+
+    margin:0;
+
+    color:#FFFFFF;
+
+    font-family:"Sora",sans-serif;
+
+    font-size:2.5rem;
+
+    line-height:1.15;
+
+}
+
+
+/*======================================
+DESCRIPTION
+======================================*/
+
+.case-content p{
+
+    margin:28px 0;
+
+    color:#9DB1C5;
+
+    line-height:1.9;
+
+    font-size:1.05rem;
+
+}
+
+
+/*======================================
+STATS
+======================================*/
+
+.case-stats{
+
+    display:flex;
+
+    gap:50px;
+
+    margin:40px 0;
+
+}
+
+
+.case-stats h4{
+
+    margin:0;
+
+    color:#00E7D4;
+
+    font-size:2rem;
+
+    font-family:"Sora",sans-serif;
+
+}
+
+
+.case-stats span{
+
+    color:#8FA6BE;
+
+    font-size:.9rem;
+
+}
+
+
+/*======================================
+CTA
+======================================*/
+
+.case-link{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    color:#FFFFFF;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+
+.case-link i{
+
+    transition:.35s;
+
+}
+
+
+
+/*==========================================================
+
+                PORTFOLIO
+
+                PART 04
+
+                Responsive
+
+==========================================================*/
+
+
+/*======================================
+LAPTOP
+======================================*/
+
+@media(max-width:1200px){
+
+    .case-study{
+
+        gap:50px;
+
+    }
+
+}
+
+
+/*======================================
+TABLET
+======================================*/
+
+@media(max-width:991px){
+
+    .portfolio{
+
+        padding:120px 0;
+
+    }
+
+    .case-study,
+
+    .case-study.reverse{
+
+        grid-template-columns:1fr;
+
+        gap:50px;
+
+    }
+
+    .case-study.reverse .case-image,
+
+    .case-study.reverse .case-content{
+
+        order:initial;
+
+    }
+
+    .case-content{
+
+        text-align:center;
+
+    }
+
+    .case-stats{
+
+        justify-content:center;
+
+    }
+
+}
+
+
+/*======================================
+MOBILE
+======================================*/
+
+@media(max-width:576px){
+
+    .portfolio-heading h2{
+
+        font-size:2.3rem;
+
+    }
+
+    .portfolio-heading p{
+
+        font-size:.95rem;
+
+    }
+
+    .case-content h3{
+
+        font-size:1.8rem;
+
+    }
+
+    .case-content p{
+
+        font-size:.95rem;
+
+    }
+
+    .case-stats{
+
+        flex-direction:column;
+
+        gap:25px;
+
+        align-items:center;
+
+    }
+
+    .case-image::before{
+
+        inset:-10px;
+
+    }
+
+}

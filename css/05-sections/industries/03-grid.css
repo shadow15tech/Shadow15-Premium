@@ -1,0 +1,141 @@
+/*==========================================================
+
+                SHADOW15
+
+            INDUSTRIES V3
+
+                03 GRID
+
+==========================================================*/
+
+
+/*=========================================
+TOP GRID
+=========================================*/
+
+.industries-top{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:36px;
+
+    align-items:start;
+
+    margin-bottom:100px;
+
+}
+
+
+/*=========================================
+BOTTOM GRID
+=========================================*/
+
+.industries-bottom{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:36px;
+
+    align-items:start;
+
+    margin-top:100px;
+
+}
+
+
+/*=========================================
+TOP OFFSET
+=========================================*/
+
+.industries-top .industry-card:nth-child(1){
+
+    transform:translateY(18px);
+
+}
+
+.industries-top .industry-card:nth-child(2){
+
+    transform:translateY(56px);
+
+}
+
+.industries-top .industry-card:nth-child(3){
+
+    transform:translateY(18px);
+
+}
+
+/*=========================================
+BOTTOM OFFSET
+=========================================*/
+
+.industries-bottom .industry-card:nth-child(1){
+
+    transform:translateY(-18px);
+
+}
+
+.industries-bottom .industry-card:nth-child(2){
+
+    transform:translateY(-56px);
+
+}
+
+.industries-bottom .industry-card:nth-child(3){
+
+    transform:translateY(-18px);
+
+}
+
+
+/*=========================================
+ENGINE
+=========================================*/
+
+.industries-engine{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin:80px 0;
+
+    z-index:15;
+
+}
+
+
+/*=========================================
+CTA
+=========================================*/
+
+.industries-cta{
+
+    margin-top:140px;
+
+}
+
+
+/*=========================================
+CARD WIDTH
+=========================================*/
+
+.industry-card{
+
+    max-width:390px;
+
+    width:100%;
+
+    justify-self:center;
+
+}
+
+

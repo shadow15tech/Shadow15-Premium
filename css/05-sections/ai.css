@@ -1,0 +1,1251 @@
+/*==========================================================
+
+                    AI SHOWCASE
+
+                    PART 01
+
+==========================================================*/
+
+
+/*======================================
+SECTION
+======================================*/
+
+.ai-showcase{
+
+    position:relative;
+
+    padding:160px 0;
+
+    overflow:hidden;
+
+    background:#06101D;
+
+}
+
+
+/*======================================
+BACKGROUND
+======================================*/
+
+.ai-bg{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+}
+
+
+/*======================================
+GRID
+======================================*/
+
+.ai-grid{
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+        linear-gradient(
+
+            rgba(255,255,255,.025) 1px,
+
+            transparent 1px
+
+        ),
+
+        linear-gradient(
+
+            90deg,
+
+            rgba(255,255,255,.025) 1px,
+
+            transparent 1px
+
+        );
+
+    background-size:70px 70px;
+
+    mask-image:
+
+        radial-gradient(
+
+            circle,
+
+            #000 45%,
+
+            transparent 100%
+
+        );
+
+}
+
+
+/*======================================
+GLOW
+======================================*/
+
+.ai-glow{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(130px);
+
+}
+
+.ai-glow.glow-left{
+
+    width:650px;
+
+    height:650px;
+
+    left:-250px;
+
+    top:-180px;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(0,231,212,.16),
+
+            transparent 72%
+
+        );
+
+}
+
+.ai-glow.glow-right{
+
+    width:780px;
+
+    height:780px;
+
+    right:-260px;
+
+    bottom:-300px;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(90,215,230,.12),
+
+            transparent 72%
+
+        );
+
+}
+
+
+/*======================================
+CONTAINER
+======================================*/
+
+.ai-showcase .container{
+
+    position:relative;
+
+    width:min(1400px,92%);
+
+    margin:auto;
+
+    z-index:2;
+
+}
+
+
+/*======================================
+WRAPPER
+======================================*/
+
+.ai-wrapper{
+
+    display:grid;
+
+    grid-template-columns:1fr 420px 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+    margin-top:90px;
+
+}
+
+
+/*======================================
+LEFT / RIGHT
+======================================*/
+
+.ai-left,
+
+.ai-right{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:28px;
+
+}
+
+
+/*======================================
+CENTER
+======================================*/
+
+.ai-center{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:600px;
+
+    position:relative;
+
+}
+
+
+
+/*==========================================================
+
+                AI HEADING
+
+                PART 02
+
+==========================================================*/
+
+
+/*======================================
+SECTION HEADING
+======================================*/
+
+.ai-heading{
+
+    position:relative;
+
+    max-width:900px;
+
+    margin:0 auto;
+
+    text-align:center;
+
+}
+
+
+/*======================================
+BADGE
+======================================*/
+
+.ai-tag{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:12px 24px;
+
+    margin-bottom:28px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    -webkit-backdrop-filter:blur(20px);
+
+    color:#DDEAF5;
+
+    font-size:.88rem;
+
+    font-weight:600;
+
+    letter-spacing:.08em;
+
+}
+
+
+/*======================================
+DOT
+======================================*/
+
+.ai-tag .tag-dot{
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:#00E7D4;
+
+    box-shadow:
+
+        0 0 16px rgba(0,231,212,.9);
+
+    animation:aiPulse 2.5s ease-in-out infinite;
+
+}
+
+
+/*======================================
+TITLE
+======================================*/
+
+.ai-heading h2{
+
+    margin:0;
+
+    color:#F8FAFC;
+
+    font-family:"Sora",sans-serif;
+
+    font-size:clamp(3rem,5vw,4.6rem);
+
+    font-weight:700;
+
+    line-height:1.1;
+
+    letter-spacing:-2px;
+
+}
+
+
+/*======================================
+GRADIENT
+======================================*/
+
+.ai-heading h2 span{
+
+    display:block;
+
+    margin-top:10px;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            #00E7D4,
+
+            #59D7E6,
+
+            #A9D79C,
+
+            #F2DF5A
+
+        );
+
+    background-size:250%;
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    animation:aiGradient 10s linear infinite;
+
+}
+
+
+/*======================================
+DESCRIPTION
+======================================*/
+
+.ai-heading p{
+
+    max-width:760px;
+
+    margin:34px auto 0;
+
+    color:#9CB0C4;
+
+    font-size:1.08rem;
+
+    line-height:1.9;
+
+}
+
+
+/*======================================
+DIVIDER
+======================================*/
+
+.ai-heading::after{
+
+    content:"";
+
+    display:block;
+
+    width:140px;
+
+    height:2px;
+
+    margin:45px auto 0;
+
+    border-radius:50px;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            transparent,
+
+            #00E7D4,
+
+            transparent
+
+        );
+
+}
+
+
+/*======================================
+ANIMATION
+======================================*/
+
+@keyframes aiGradient{
+
+    from{
+
+        background-position:0%;
+
+    }
+
+    to{
+
+        background-position:250%;
+
+    }
+
+}
+
+
+@keyframes aiPulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.45);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+
+/*==========================================================
+
+                AI CORE
+
+                PART 03
+
+==========================================================*/
+
+
+/*======================================
+CENTER
+======================================*/
+
+.ai-center{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+/*======================================
+CORE WRAPPER
+======================================*/
+
+.ai-core{
+
+    position:relative;
+
+    width:420px;
+
+    height:420px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+/*======================================
+CENTER SPHERE
+======================================*/
+
+.core-circle{
+
+    position:relative;
+
+    z-index:5;
+
+    width:150px;
+
+    height:150px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(
+
+        circle,
+
+        #5FD9FF,
+
+        #00E7D4 45%,
+
+        #081624 100%
+
+    );
+
+    color:#06101D;
+
+    font-family:"Sora",sans-serif;
+
+    font-size:2rem;
+
+    font-weight:700;
+
+    letter-spacing:.12em;
+
+    box-shadow:
+
+        0 0 90px rgba(0,231,212,.45),
+
+        inset 0 0 35px rgba(255,255,255,.28);
+
+    animation:
+
+        aiCorePulse 5s ease-in-out infinite;
+
+}
+
+
+/*======================================
+RING
+======================================*/
+
+.ai-core::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:250px;
+
+    height:250px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    animation:
+
+        rotateClock 18s linear infinite;
+
+}
+
+
+/*======================================
+SECOND RING
+======================================*/
+
+.ai-core::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:360px;
+
+    height:360px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(255,255,255,.05);
+
+    animation:
+
+        rotateAnti 26s linear infinite;
+
+}
+
+
+/*======================================
+NODE
+======================================*/
+
+.ai-node{
+
+    position:absolute;
+
+    width:14px;
+
+    height:14px;
+
+    border-radius:50%;
+
+    background:#00E7D4;
+
+    box-shadow:
+
+        0 0 18px rgba(0,231,212,.9);
+
+}
+
+
+.ai-node:nth-child(1){
+
+    top:10px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+}
+
+
+.ai-node:nth-child(2){
+
+    bottom:10px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+}
+
+
+.ai-node:nth-child(3){
+
+    left:10px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+}
+
+
+.ai-node:nth-child(4){
+
+    right:10px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+}
+
+
+/*======================================
+BACKGROUND GLOW
+======================================*/
+
+.ai-core-glow{
+
+    position:absolute;
+
+    width:520px;
+
+    height:520px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(
+
+        circle,
+
+        rgba(0,231,212,.12),
+
+        transparent 70%
+
+    );
+
+    filter:blur(90px);
+
+}
+
+
+/*======================================
+HOVER
+======================================*/
+
+.ai-center:hover .core-circle{
+
+    transform:
+
+        scale(1.08);
+
+    box-shadow:
+
+        0 0 120px rgba(0,231,212,.6),
+
+        inset 0 0 40px rgba(255,255,255,.35);
+
+}
+
+
+/*======================================
+ANIMATION
+======================================*/
+
+@keyframes aiCorePulse{
+
+    0%,100%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.08);
+
+    }
+
+}
+
+
+@keyframes rotateClock{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+@keyframes rotateAnti{
+
+    from{
+
+        transform:rotate(360deg);
+
+    }
+
+    to{
+
+        transform:rotate(0deg);
+
+    }
+
+}
+
+
+/*==========================================================
+
+                AI FEATURE CARDS
+
+                PART 04
+
+==========================================================*/
+
+
+/*======================================
+FEATURE CARD
+======================================*/
+
+.ai-feature{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:34px 30px;
+
+    border-radius:28px;
+
+    background:
+
+        linear-gradient(
+
+            180deg,
+
+            rgba(255,255,255,.06),
+
+            rgba(255,255,255,.025)
+
+        );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(22px);
+
+    -webkit-backdrop-filter:blur(22px);
+
+    transition:
+
+        transform .45s cubic-bezier(.22,1,.36,1),
+
+        border-color .35s,
+
+        box-shadow .45s;
+
+}
+
+
+/*======================================
+TOP LIGHT
+======================================*/
+
+.ai-feature::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:1px;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            transparent,
+
+            rgba(255,255,255,.45),
+
+            transparent
+
+        );
+
+}
+
+
+/*======================================
+CYAN GLOW
+======================================*/
+
+.ai-feature::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:260px;
+
+    height:260px;
+
+    right:-130px;
+
+    top:-130px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(0,231,212,.16),
+
+            transparent 72%
+
+        );
+
+    opacity:0;
+
+    transition:.45s;
+
+}
+
+
+/*======================================
+NUMBER
+======================================*/
+
+.feature-number{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:56px;
+
+    height:56px;
+
+    margin-bottom:24px;
+
+    border-radius:18px;
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            rgba(0,231,212,.18),
+
+            rgba(255,255,255,.05)
+
+        );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:#00E7D4;
+
+    font-family:"Sora",sans-serif;
+
+    font-weight:700;
+
+    font-size:1rem;
+
+}
+
+
+/*======================================
+TITLE
+======================================*/
+
+.ai-feature h3{
+
+    margin:0 0 14px;
+
+    color:#F8FAFC;
+
+    font-family:"Sora",sans-serif;
+
+    font-size:1.6rem;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+
+/*======================================
+TEXT
+======================================*/
+
+.ai-feature p{
+
+    margin:0;
+
+    color:#9DB1C5;
+
+    line-height:1.8;
+
+    font-size:.96rem;
+
+}
+
+
+/*======================================
+HOVER
+======================================*/
+
+.ai-feature:hover{
+
+    transform:
+
+        translateY(-12px);
+
+    border-color:
+
+        rgba(0,231,212,.25);
+
+    box-shadow:
+
+        0 28px 70px rgba(0,0,0,.35);
+
+}
+
+
+.ai-feature:hover::after{
+
+    opacity:1;
+
+}
+
+
+.ai-feature:hover h3{
+
+    color:#00E7D4;
+
+}
+
+
+.ai-feature:hover .feature-number{
+
+    transform:
+
+        rotate(-8deg)
+
+        scale(1.08);
+
+}
+
+
+/*======================================
+TRANSITION
+======================================*/
+
+.feature-number,
+
+.ai-feature h3{
+
+    transition:.35s;
+
+}
+
+
+
+/*======================================
+SHINE
+======================================*/
+
+.feature-shine{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+}
+
+.feature-shine::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-140%;
+
+    width:60%;
+
+    height:100%;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            transparent,
+
+            rgba(255,255,255,.16),
+
+            transparent
+
+        );
+
+    transform:skewX(-24deg);
+
+    transition:left .9s ease;
+
+}
+
+.ai-feature:hover .feature-shine::before{
+
+    left:150%;
+
+}
+
+
+
+
+/*==========================================================
+
+                RESPONSIVE
+
+                PART 05
+
+==========================================================*/
+
+
+/*======================================
+LAPTOP
+======================================*/
+
+@media(max-width:1200px){
+
+    .ai-wrapper{
+
+        grid-template-columns:1fr;
+
+        gap:60px;
+
+    }
+
+    .ai-center{
+
+        order:-1;
+
+        min-height:450px;
+
+    }
+
+}
+
+
+/*======================================
+TABLET
+======================================*/
+
+@media(max-width:768px){
+
+    .ai-showcase{
+
+        padding:100px 0;
+
+    }
+
+    .ai-core{
+
+        width:300px;
+
+        height:300px;
+
+    }
+
+    .core-circle{
+
+        width:120px;
+
+        height:120px;
+
+        font-size:1.5rem;
+
+    }
+
+    .ai-core::before{
+
+        width:190px;
+
+        height:190px;
+
+    }
+
+    .ai-core::after{
+
+        width:270px;
+
+        height:270px;
+
+    }
+
+}
+
+
+/*======================================
+MOBILE
+======================================*/
+
+@media(max-width:576px){
+
+    .ai-heading h2{
+
+        font-size:2.2rem;
+
+    }
+
+    .ai-heading p{
+
+        font-size:.95rem;
+
+    }
+
+    .ai-feature{
+
+        padding:26px;
+
+    }
+
+    .feature-number{
+
+        width:50px;
+
+        height:50px;
+
+        border-radius:14px;
+
+    }
+
+    .ai-feature h3{
+
+        font-size:1.35rem;
+
+    }
+
+}
