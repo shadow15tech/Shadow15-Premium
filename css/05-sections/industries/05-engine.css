@@ -17,9 +17,9 @@ WRAPPER
 
     position:relative;
 
-    width:520px;
+    width:560px;
 
-    height:520px;
+    height:560px;
 
     display:flex;
 
@@ -84,18 +84,18 @@ RINGS
 
 .ring-1{
 
-    width:220px;
+    width:240px;
 
-    height:220px;
+    height:240px;
 
 }
 
 
 .ring-2{
 
-    width:310px;
+    width:330px;
 
-    height:310px;
+    height:320px;
 
     border-style:dashed;
 
@@ -123,9 +123,9 @@ CORE
 
     z-index:20;
 
-    width:180px;
+    width:240px;
 
-    height:180px;
+    height:240px;
 
     border-radius:50%;
 
@@ -205,11 +205,12 @@ TITLE
 
     font-family:"Sora",sans-serif;
 
-    font-weight:700;
+    font-weight:800;
 
-    letter-spacing:.12em;
+    letter-spacing:.18em;
 
 }
+
 
 
 .engine-core small{
@@ -877,3 +878,39 @@ BOTTOM
     }
 
 }
+
+
+
+/*==========================================================
+
+            DATA PACKET
+
+==========================================================*/
+
+.data-packet{
+
+    position:absolute;
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:#00E7D4;
+
+    box-shadow:
+
+        0 0 15px #00E7D4,
+
+        0 0 30px rgba(0,231,212,.8);
+
+    opacity:0;
+
+    pointer-events:none;
+
+    z-index:100;
+
+}
+
+

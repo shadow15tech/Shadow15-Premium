@@ -760,3 +760,23 @@ SHINE EFFECT
 }
 
 
+
+
+.industry-card{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+}
+
+.industry-card.show-card{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+

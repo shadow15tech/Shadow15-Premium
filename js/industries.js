@@ -271,3 +271,178 @@ const observer=new IntersectionObserver(entries=>{
 });
 
 counters.forEach(counter=>observer.observe(counter));
+
+
+
+/*==========================================================
+
+            DATA FLOW
+
+==========================================================*/
+
+const packet = document.querySelector('.data-packet');
+
+cards.forEach(card=>{
+
+    card.addEventListener('mouseenter',()=>{
+
+        sendPacket(card);
+
+    });
+
+});
+
+
+function sendPacket(card){
+
+    if(!packet) return;
+
+    const cardRect = card.getBoundingClientRect();
+
+    const engineRect = engine.getBoundingClientRect();
+
+    const startX =
+    cardRect.left + cardRect.width/2;
+
+    const startY =
+    cardRect.top + cardRect.height/2;
+
+    const endX =
+    engineRect.left + engineRect.width/2;
+
+    const endY =
+    engineRect.top + engineRect.height/2;
+
+    packet.style.opacity = "1";
+
+    packet.style.left =
+    (startX-engineRect.left)+"px";
+
+    packet.style.top =
+    (startY-engineRect.top)+"px";
+
+    packet.animate(
+
+    [
+
+        {
+
+            left:(startX-engineRect.left)+"px",
+
+            top:(startY-engineRect.top)+"px",
+
+            transform:"scale(.4)",
+
+            opacity:0
+
+        },
+
+        {
+
+            opacity:1,
+
+            offset:.2
+
+        },
+
+        {
+
+            left:(endX-engineRect.left)+"px",
+
+            top:(endY-engineRect.top)+"px",
+
+            transform:"scale(1)",
+
+            opacity:1
+
+        }
+
+    ],
+
+    {
+
+        duration:650,
+
+        easing:"cubic-bezier(.22,1,.36,1)"
+
+    });
+
+    setTimeout(()=>{
+
+        packet.style.opacity="0";
+
+        core.classList.remove("pulse");
+
+        void core.offsetWidth;
+
+        core.classList.add("pulse");
+
+    },650);
+
+}
+
+
+/*==========================================================
+
+            MAGNETIC ENGINE
+
+==========================================================*/
+
+industrySection.addEventListener('mousemove',(e)=>{
+
+    const rect = engine.getBoundingClientRect();
+
+    const dx = e.clientX-(rect.left+rect.width/2);
+
+    const dy = e.clientY-(rect.top+rect.height/2);
+
+    const distance=Math.sqrt(dx*dx+dy*dy);
+
+    if(distance<280){
+
+        engine.style.transform=
+
+        `translate(${dx*.03}px,${dy*.03}px)`;
+
+    }
+
+});
+
+
+industrySection.addEventListener('mouseleave',()=>{
+
+    engine.style.transform="translate(0,0)";
+
+});
+
+
+/*==========================================================
+
+            CARD REVEAL
+
+==========================================================*/
+
+const revealObserver=new IntersectionObserver(entries=>{
+
+    entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+
+            entry.target.classList.add("show-card");
+
+        }
+
+    });
+
+},{
+    threshold:.15
+});
+
+cards.forEach(card=>{
+
+    revealObserver.observe(card);
+
+});
+
+
+
