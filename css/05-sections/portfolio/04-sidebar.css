@@ -1,0 +1,255 @@
+/*==========================================================
+                    SIDEBAR
+==========================================================*/
+
+.portfolio-projects{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+/*==========================================================
+                    PROJECT CARD
+==========================================================*/
+
+.project-card{
+
+    position:relative;
+
+    display:grid;
+
+    grid-template-columns:70px 1fr 30px;
+
+    gap:24px;
+
+    align-items:center;
+
+    padding:28px;
+
+    border-radius:28px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    background:
+
+    linear-gradient(
+
+        180deg,
+
+        rgba(18,34,54,.94),
+
+        rgba(9,18,32,.96)
+
+    );
+
+    backdrop-filter:blur(20px);
+
+    transition:
+
+    transform .35s ease,
+
+    border-color .35s ease,
+
+    box-shadow .35s ease,
+
+    background .35s ease;
+
+}
+
+/*==========================================================
+                    ACTIVE
+==========================================================*/
+
+.project-card.active{
+
+    border-color:rgba(41,247,255,.35);
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        rgba(18,40,62,.98),
+
+        rgba(10,22,38,.98)
+
+    );
+
+    box-shadow:
+
+        0 25px 60px rgba(0,0,0,.35),
+
+        0 0 35px rgba(41,247,255,.12);
+
+}
+
+/*==========================================================
+                    HOVER
+==========================================================*/
+
+.project-card:hover{
+
+    transform:
+
+    translateY(-8px);
+
+    border-color:
+
+    rgba(41,247,255,.25);
+
+}
+
+/*==========================================================
+                    NUMBER
+==========================================================*/
+
+.project-number{
+
+    font-size:2rem;
+
+    font-weight:800;
+
+    color:#29f7ff;
+
+}
+
+/*==========================================================
+                    CONTENT
+==========================================================*/
+
+.project-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+/*==========================================================
+                    INDUSTRY
+==========================================================*/
+
+.project-industry{
+
+    margin-bottom:12px;
+
+    color:#7eeeff;
+
+    font-size:.75rem;
+
+    font-weight:700;
+
+    letter-spacing:.15em;
+
+    text-transform:uppercase;
+
+}
+
+/*==========================================================
+                    TITLE
+==========================================================*/
+
+.project-content h3{
+
+    margin:0 0 14px;
+
+    color:#ffffff;
+
+    font-size:1.7rem;
+
+    font-weight:700;
+
+}
+
+/*==========================================================
+                    DESCRIPTION
+==========================================================*/
+
+.project-content p{
+
+    margin:0;
+
+    color:#9fb4c9;
+
+    line-height:1.8;
+
+}
+
+/*==========================================================
+                    SERVICES
+==========================================================*/
+
+.project-services{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+    margin:22px 0 0;
+
+    padding:0;
+
+    list-style:none;
+
+}
+
+/*==========================================================
+                    SERVICE ITEM
+==========================================================*/
+
+.project-services li{
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    border:1px solid rgba(41,247,255,.15);
+
+    background:rgba(41,247,255,.06);
+
+    color:#cfe8f4;
+
+    font-size:.75rem;
+
+    font-weight:600;
+
+}
+
+/*==========================================================
+                    ARROW
+==========================================================*/
+
+.project-arrow{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:1.2rem;
+
+    color:#29f7ff;
+
+    transition:
+
+    transform .35s ease;
+
+}
+
+.project-card:hover
+
+.project-arrow{
+
+    transform:
+
+    translateX(6px);
+
+}

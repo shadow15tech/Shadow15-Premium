@@ -1,370 +1,279 @@
 /*==========================================================
-
-                08 RESPONSIVE
-
+                    LAPTOP
 ==========================================================*/
 
 @media (max-width:1400px){
 
-.industries .container{
+    .industries-container{
 
-    width:min(1180px,94%);
+        width:min(95%,1300px);
 
-}
+    }
 
-.engine-wrapper{
+    .website-module,
+    .outcome-module{
 
-    width:460px;
+        width:360px;
 
-    height:460px;
+    }
 
-}
+    .seo-module,
+    .ads-module,
+    .brand-module{
 
-}
+        width:320px;
 
-
-@media (max-width:1200px){
-
-.industries{
-
-    padding:150px 0;
+    }
 
 }
 
-.industries-top,
+/*==========================================================
+                    LARGE TABLET
+==========================================================*/
 
-.industries-bottom{
+@media (max-width:1100px){
 
-    gap:26px;
+    .blueprint-canvas{
 
-}
+        min-height:auto;
 
-.industry-card{
+    }
 
-    min-height:390px;
+    .blueprint-engine{
 
-    padding:32px;
+        display:none;
 
-}
+    }
 
-.engine-wrapper{
+    .blueprint-grid{
 
-    width:400px;
+        grid-template-columns:repeat(2,1fr);
 
-    height:400px;
+        grid-template-areas:
 
-}
+        "website website"
 
-.industries-cta-container{
+        "seo ads"
 
-    padding:56px;
+        "branding branding"
 
-}
+        "outcome outcome";
 
-}
+        gap:28px;
 
+    }
 
+    .website-module,
+    .seo-module,
+    .ads-module,
+    .brand-module,
+    .outcome-module{
 
+        width:100%;
 
+        max-width:560px;
 
-@media (max-width:992px){
+        margin:0;
 
-.industries{
+    }
 
-    padding:120px 0;
+    .industries-cta-container{
 
-}
+        grid-template-columns:1fr;
 
-.industries-header{
+        gap:50px;
 
-    margin-bottom:80px;
-
-}
-
-.industries-header h2{
-
-    font-size:3.4rem;
-
-}
-
-.industries-top,
-
-.industries-bottom{
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:24px;
+    }
 
 }
 
-
-.industries-top .industry-card,
-
-.industries-bottom .industry-card{
-
-    transform:none !important;
-
-}
-
-.industries-engine{
-
-    margin:70px 0;
-
-}
-
-.engine-wrapper{
-
-    width:340px;
-
-    height:340px;
-
-}
-
-.industries-cta-container{
-
-    grid-template-columns:1fr;
-
-    gap:50px;
-
-}
-
-.industries-cta-action{
-
-    width:100%;
-
-}
-
-}
-
+/*==========================================================
+                    TABLET
+==========================================================*/
 
 @media (max-width:768px){
 
-.industries{
+    .industries{
 
-    padding:100px 0;
+        padding:90px 0;
 
-}
+    }
 
-.industries-header{
+    .industries-title{
 
-    margin-bottom:70px;
+        letter-spacing:-1px;
 
-}
+    }
 
-.industries-header h2{
+    .industries-description{
 
-    font-size:2.5rem;
+        font-size:1rem;
 
-}
+        line-height:1.8;
 
-.industries-header p{
+    }
 
-    font-size:.95rem;
+    .industry-switcher{
 
-}
+        gap:10px;
 
+    }
 
-.industries-top,
+    .industry-pill{
 
-.industries-bottom{
+        padding:12px 18px;
 
-    grid-template-columns:1fr;
+        font-size:.82rem;
 
-    gap:22px;
+    }
 
-}
+    .blueprint-grid{
 
-.industry-card{
+        grid-template-columns:1fr;
 
-    max-width:100%;
+        grid-template-areas:
 
-    min-height:auto;
+        "website"
 
-    padding:28px;
+        "seo"
 
-}
+        "ads"
 
-.industry-content h3{
+        "branding"
 
-    font-size:1.7rem;
+        "outcome";
 
-}
+    }
 
-.industry-icon{
+    .growth-module{
 
-    width:64px;
+        max-width:100%;
 
-    height:64px;
+        min-height:auto;
 
-}
+        padding:28px;
 
-.industry-icon i{
+    }
 
-    font-size:1.5rem;
+    .module-title{
 
-}
+        font-size:1.7rem;
 
-.engine-wrapper{
+    }
 
-    width:280px;
+    .metrics{
 
-    height:280px;
+        grid-template-columns:1fr;
 
-}
+    }
 
-.engine-core{
+    .industries-cta-container{
 
-    width:135px;
+        padding:34px;
 
-    height:135px;
+    }
 
-}
+    .cta-features{
 
+        grid-template-columns:1fr;
 
-.ring-1{
+    }
 
-    width:180px;
+    .industries-stats{
 
-    height:180px;
+        grid-template-columns:1fr;
 
-}
-
-.ring-2{
-
-    width:240px;
-
-    height:240px;
+    }
 
 }
 
-.ring-3{
+/*==========================================================
+                    MOBILE
+==========================================================*/
 
-    width:300px;
+@media (max-width:576px){
 
-    height:300px;
+    .industries-container{
 
-}
+        width:92%;
 
-.engine-label{
+    }
 
-    display:none;
+    .industries-badge{
 
-}
+        padding:10px 18px;
 
-.engine-metric{
+    }
 
-    display:none;
+    .industries-title{
 
-}
+        line-height:1.08;
 
-.connection{
+    }
 
-    display:none;
+    .title-outline{
 
-}
+        font-size:2.3rem;
 
-.network-line{
+    }
 
-    display:none;
+    .title-main{
 
-}
+        font-size:2.6rem;
 
-.industries-cta{
+    }
 
-    margin-top:90px;
+    .industries-description{
 
-}
+        margin-top:26px;
 
-.industries-cta-container{
+    }
 
-    padding:36px 26px;
+    .industry-switcher{
 
-}
+        justify-content:flex-start;
 
-.industries-cta-content h2{
+    }
 
-    font-size:2.2rem;
+    .industry-pill{
 
-}
+        width:100%;
 
-.industries-stats{
+        justify-content:center;
 
-    grid-template-columns:1fr;
+    }
 
-    gap:20px;
+    .growth-module{
 
-}
+        padding:24px;
 
-}
+        border-radius:24px;
 
-@media (max-width:480px){
+    }
 
-.industries{
+    .module-title{
 
-    padding:80px 0;
+        font-size:1.5rem;
 
-}
+    }
 
-.industries-header h2{
+    .module-description{
 
-    font-size:2rem;
+        font-size:.95rem;
 
-    letter-spacing:-1px;
+    }
 
-}
+    .metric-item{
 
-.industries-badge{
+        padding:16px;
 
-    padding:10px 16px;
+    }
 
-}
+    .industries-main-btn,
+    .industries-secondary-btn{
 
-.industry-card{
+        width:100%;
 
-    padding:24px;
-
-    border-radius:24px;
-
-}
-
-.engine-wrapper{
-
-    width:240px;
-
-    height:240px;
-
-}
-
-.engine-core{
-
-    width:110px;
-
-    height:110px;
-
-}
-
-.engine-logo{
-
-    width:42px;
-
-    height:42px;
-
-}
-
-.engine-logo i{
-
-    font-size:1.2rem;
-
-}
-
-.industries-main-btn,
-
-.industries-secondary-btn{
-
-    height:56px;
-
-    font-size:.95rem;
-
-}
+    }
 
 }

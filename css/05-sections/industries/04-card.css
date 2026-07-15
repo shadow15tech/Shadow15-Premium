@@ -1,25 +1,10 @@
 /*==========================================================
-
-                SHADOW15
-
-            INDUSTRIES V3
-
-                04 CARD
-
-                PART 01
-
+                    GROWTH MODULE
 ==========================================================*/
 
-
-/*=========================================
-CARD
-=========================================*/
-
-.industry-card{
+.growth-module{
 
     position:relative;
-
-    overflow:hidden;
 
     display:flex;
 
@@ -27,756 +12,354 @@ CARD
 
     justify-content:flex-start;
 
+    gap:22px;
+
+    overflow:hidden;
+
     width:100%;
 
-    max-width:390px;
+    min-height:300px;
 
-    min-height:420px;
+    padding:34px;
 
-    padding:38px;
+    border-radius:28px;
 
-    border-radius:32px;
+    background:rgba(255,255,255,.045);
 
-    background:
+    border:1px solid rgba(255,255,255,.08);
 
-        linear-gradient(
+    backdrop-filter:blur(18px);
 
-            180deg,
-
-            rgba(255,255,255,.06),
-
-            rgba(255,255,255,.025)
-
-        );
-
-    border:
-
-        1px solid rgba(255,255,255,.08);
-
-    backdrop-filter:blur(30px);
-
-    -webkit-backdrop-filter:blur(30px);
-
-    box-shadow:
-
-        0 20px 60px rgba(0,0,0,.18);
+    -webkit-backdrop-filter:blur(18px);
 
     transition:
 
-        transform .6s cubic-bezier(.22,1,.36,1),
+    transform .4s ease,
 
-        border-color .35s,
+    border-color .4s ease,
 
-        box-shadow .45s;
+    box-shadow .4s ease,
+
+    background .4s ease;
 
 }
 
+/*==========================================================
+                    TOP LIGHT
+==========================================================*/
 
+.growth-module::before{
 
-/*=========================================
-CARD GLOW
-=========================================*/
-
-.industry-card-glow{
+    content:"";
 
     position:absolute;
-
-    width:280px;
-
-    height:280px;
-
-    right:-120px;
 
     top:-120px;
 
-    border-radius:50%;
+    right:-80px;
 
-    opacity:0;
+    width:260px;
 
-    transition:.45s;
-
-    filter:blur(70px);
-
-}
-
-
-
-/*=========================================
-TOP BORDER
-=========================================*/
-
-.industry-card::before{
-
-    content:"";
-
-    position:absolute;
-
-    left:0;
-
-    top:0;
-
-    width:100%;
-
-    height:1px;
-
-    background:
-
-        linear-gradient(
-
-            90deg,
-
-            transparent,
-
-            rgba(255,255,255,.55),
-
-            transparent
-
-        );
-
-}
-
-
-/*=========================================
-BOTTOM SHADOW
-=========================================*/
-
-.industry-card::after{
-
-    content:"";
-
-    position:absolute;
-
-    left:30px;
-
-    right:30px;
-
-    bottom:0;
-
-    height:1px;
-
-    background:
-
-        rgba(255,255,255,.05);
-
-}
-
-
-
-/*=========================================
-NUMBER
-=========================================*/
-
-.industry-number{
-
-    position:absolute;
-
-    top:28px;
-
-    right:30px;
-
-    font-family:"Sora",sans-serif;
-
-    font-size:.9rem;
-
-    font-weight:700;
-
-    letter-spacing:.18em;
-
-    color:
-
-        rgba(255,255,255,.12);
-
-}
-
-
-
-/*=========================================
-ICON
-=========================================*/
-
-.industry-icon{
-
-    width:76px;
-
-    height:76px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    margin-bottom:34px;
-
-    border-radius:24px;
-
-    background:
-
-        rgba(255,255,255,.05);
-
-    border:
-
-        1px solid rgba(255,255,255,.08);
-
-    transition:.4s;
-
-}
-
-
-.industry-icon i{
-
-    font-size:1.9rem;
-
-    color:#FFFFFF;
-
-    transition:.4s;
-
-}
-
-
-/*==========================================================
-
-                CONTENT
-
-                PART 02
-
-==========================================================*/
-
-
-/*=========================================
-CONTENT
-=========================================*/
-
-.industry-content{
-
-    margin-bottom:28px;
-
-}
-
-
-/*=========================================
-TITLE
-=========================================*/
-
-.industry-content h3{
-
-    margin:0;
-
-    color:#FFFFFF;
-
-    font-family:"Sora",sans-serif;
-
-    font-size:2rem;
-
-    font-weight:700;
-
-    line-height:1.2;
-
-    transition:.35s;
-
-}
-
-
-/*=========================================
-DESCRIPTION
-=========================================*/
-
-.industry-content p{
-
-    margin-top:14px;
-
-    color:#9CB2C8;
-
-    font-size:1rem;
-
-    line-height:1.85;
-
-}
-
-
-/*==========================================================
-
-                FEATURES
-
-==========================================================*/
-
-
-.industry-features{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:16px;
-
-    margin-top:8px;
-
-}
-
-
-/*=========================================
-ITEM
-=========================================*/
-
-.industry-features li{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:14px;
-
-    color:#D7E5F4;
-
-    font-size:.95rem;
-
-    transition:.35s;
-
-}
-
-
-/*=========================================
-CHECK ICON
-=========================================*/
-
-.industry-features i{
-
-    width:22px;
-
-    height:22px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
+    height:260px;
 
     border-radius:50%;
 
     background:
 
-        rgba(0,231,212,.12);
+    radial-gradient(
 
-    color:#00E7D4;
+        circle,
 
-    font-size:.72rem;
+        rgba(40,247,255,.18),
 
-    flex-shrink:0;
+        transparent 70%
 
-    box-shadow:
+    );
 
-        0 0 18px rgba(0,231,212,.15);
+    pointer-events:none;
 
 }
 
-
 /*==========================================================
-
-                CTA
-
+                    BORDER EFFECT
 ==========================================================*/
 
+.growth-module::after{
 
-.industry-link{
+    content:"";
 
-    margin-top:auto;
+    position:absolute;
+
+    inset:0;
+
+    border-radius:inherit;
+
+    border:1px solid rgba(255,255,255,.03);
+
+    pointer-events:none;
+
+}
+
+/*==========================================================
+                    MODULE LABEL
+==========================================================*/
+
+.module-label{
 
     display:inline-flex;
 
     align-items:center;
 
-    gap:12px;
+    justify-content:center;
 
-    color:#FFFFFF;
+    align-self:flex-start;
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    background:rgba(40,247,255,.08);
+
+    border:1px solid rgba(40,247,255,.18);
+
+    color:#82fbff;
+
+    font-size:.72rem;
 
     font-weight:700;
 
-    font-size:.95rem;
+    letter-spacing:.16em;
 
-    transition:.35s;
-
-}
-
-
-.industry-link i{
-
-    background:none;
-
-    width:auto;
-
-    height:auto;
-
-    color:inherit;
-
-    box-shadow:none;
-
-    font-size:.9rem;
-
-    transition:.35s;
+    text-transform:uppercase;
 
 }
-
-
-/*=========================================
-BOTTOM SPACING
-=========================================*/
-
-.industry-card{
-
-    row-gap:0;
-
-}
-
-.industry-link{
-
-    padding-top:36px;
-
-}
-
 
 /*==========================================================
-
-            INDUSTRY COLOR THEMES
-
-                PART 03
-
+                    TITLE
 ==========================================================*/
 
+.module-title{
 
-/*=========================================
-HEALTHCARE
-=========================================*/
+    font-size:2rem;
 
-.healthcare .industry-card-glow{
+    line-height:1.2;
 
-    background:radial-gradient(circle,
-    rgba(0,231,212,.35),
-    transparent 72%);
+    font-weight:700;
 
-}
-
-
-/*=========================================
-HOSPITALITY
-=========================================*/
-
-.hospitality .industry-card-glow{
-
-    background:radial-gradient(circle,
-    rgba(78,212,255,.35),
-    transparent 72%);
+    color:#ffffff;
 
 }
-
-
-/*=========================================
-EDUCATION
-=========================================*/
-
-.education .industry-card-glow{
-
-    background:radial-gradient(circle,
-    rgba(168,85,247,.35),
-    transparent 72%);
-
-}
-
-
-/*=========================================
-REAL ESTATE
-=========================================*/
-
-.real-estate .industry-card-glow{
-
-    background:radial-gradient(circle,
-    rgba(16,185,129,.35),
-    transparent 72%);
-
-}
-
-
-/*=========================================
-ECOMMERCE
-=========================================*/
-
-.ecommerce .industry-card-glow{
-
-    background:radial-gradient(circle,
-    rgba(245,158,11,.35),
-    transparent 72%);
-
-}
-
-
-/*=========================================
-TRAVEL
-=========================================*/
-
-.travel .industry-card-glow{
-
-    background:radial-gradient(circle,
-    rgba(56,189,248,.35),
-    transparent 72%);
-
-}
-
 
 /*==========================================================
-
-                HOVER
-
+                    DESCRIPTION
 ==========================================================*/
 
+.module-description{
 
-.industry-card:hover{
+    color:rgba(255,255,255,.72);
 
-    transform:
+    font-size:1rem;
 
-        translateY(-16px)
+    line-height:1.9;
 
-        scale(1.02);
+}
 
-    border-color:
+/*==========================================================
+                    STATUS
+==========================================================*/
 
-        rgba(255,255,255,.16);
+.module-status{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-top:auto;
+
+    color:#ffffff;
+
+    font-size:.92rem;
+
+    font-weight:600;
+
+}
+
+/*==========================================================
+                    STATUS DOT
+==========================================================*/
+
+.status-dot{
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:#31ff96;
 
     box-shadow:
 
-        0 30px 80px rgba(0,0,0,.35);
+    0 0 14px rgba(49,255,150,.8);
 
 }
 
+/*==========================================================
+                    METRICS
+==========================================================*/
 
-.industry-card:hover .industry-card-glow{
+.metrics{
 
-    opacity:1;
+    display:grid;
 
-    transform:scale(1.2);
+    grid-template-columns:repeat(3,1fr);
 
-}
-
-
-/*=========================================
-ICON
-=========================================*/
-
-.industry-card:hover .industry-icon{
-
-    transform:
-
-        rotate(-8deg)
-
-        scale(1.08);
+    gap:16px;
 
 }
 
+/*==========================================================
+                    METRIC ITEM
+==========================================================*/
 
-.healthcare:hover .industry-icon{
+.metric-item{
 
-    border-color:#00E7D4;
+    padding:18px;
 
-}
+    border-radius:18px;
 
-.hospitality:hover .industry-icon{
+    background:rgba(255,255,255,.03);
 
-    border-color:#4ED4FF;
+    border:1px solid rgba(255,255,255,.06);
 
-}
-
-.education:hover .industry-icon{
-
-    border-color:#A855F7;
-
-}
-
-.real-estate:hover .industry-icon{
-
-    border-color:#10B981;
+    text-align:center;
 
 }
 
-.ecommerce:hover .industry-icon{
+/*==========================================================
+                    METRIC VALUE
+==========================================================*/
 
-    border-color:#F59E0B;
+.metric-item strong{
 
-}
+    display:block;
 
-.travel:hover .industry-icon{
+    margin-bottom:8px;
 
-    border-color:#38BDF8;
+    color:#ffffff;
 
-}
+    font-size:2rem;
 
-
-/*=========================================
-TITLE
-=========================================*/
-
-.healthcare:hover h3{
-
-    color:#00E7D4;
+    font-weight:700;
 
 }
 
-.hospitality:hover h3{
+/*==========================================================
+                    METRIC LABEL
+==========================================================*/
 
-    color:#4ED4FF;
+.metric-item span{
 
-}
+    display:block;
 
-.education:hover h3{
+    color:rgba(255,255,255,.65);
 
-    color:#A855F7;
+    font-size:.82rem;
 
-}
-
-.real-estate:hover h3{
-
-    color:#10B981;
+    line-height:1.5;
 
 }
 
-.ecommerce:hover h3{
+/*==========================================================
+                    FEATURED CARDS
+==========================================================*/
 
-    color:#F59E0B;
+.website-module,
 
-}
+.outcome-module{
 
-.travel:hover h3{
-
-    color:#38BDF8;
-
-}
-
-
-/*=========================================
-FEATURES
-=========================================*/
-
-.industry-card:hover .industry-features li{
-
-    transform:translateX(8px);
+    min-height:360px;
 
 }
 
-
-.industry-card:hover .industry-features li:nth-child(1){
-
-    transition-delay:.05s;
-
-}
-
-.industry-card:hover .industry-features li:nth-child(2){
-
-    transition-delay:.10s;
-
-}
-
-.industry-card:hover .industry-features li:nth-child(3){
-
-    transition-delay:.15s;
-
-}
-
-.industry-card:hover .industry-features li:nth-child(4){
-
-    transition-delay:.20s;
-
-}
-
-
-/*=========================================
-CTA
-=========================================*/
-
-.industry-card:hover .industry-link{
-
-    color:#FFFFFF;
-
-}
-
-
-.industry-card:hover .industry-link i{
-
-    transform:translateX(8px);
-
-}
-
-
-/*=========================================
-SHINE EFFECT
-=========================================*/
-
-.industry-card{
-
-    isolation:isolate;
-
-}
-
-
-.industry-card::before{
-
-    content:"";
-
-    position:absolute;
-
-    top:-120%;
-
-    left:-80%;
-
-    width:70%;
-
-    height:300%;
+.website-module{
 
     background:
 
-        linear-gradient(
+    linear-gradient(
 
-            90deg,
+        180deg,
 
-            transparent,
+        rgba(40,247,255,.08),
 
-            rgba(255,255,255,.20),
+        rgba(255,255,255,.03)
 
-            transparent
-
-        );
-
-    transform:rotate(28deg);
-
-    opacity:0;
-
-    transition:1s;
+    );
 
 }
 
+.outcome-module{
 
-.industry-card:hover::before{
+    background:
 
-    left:170%;
+    linear-gradient(
 
-    opacity:1;
+        180deg,
 
-}
+        rgba(0,255,170,.08),
 
+        rgba(255,255,255,.03)
 
-
-
-.industry-card{
-
-    opacity:0;
-
-    transform:translateY(60px);
+    );
 
 }
 
-.industry-card.show-card{
+/*==========================================================
+                    NORMAL CARDS
+==========================================================*/
 
-    opacity:1;
+.seo-module,
 
-    transform:translateY(0);
+.ads-module,
+
+.brand-module{
+
+    min-height:290px;
 
 }
 
+/*==========================================================
+                    ACTIVE
+==========================================================*/
 
+.growth-module.active{
 
+    border-color:rgba(40,247,255,.28);
+
+    box-shadow:
+
+    0 20px 50px rgba(0,0,0,.25),
+
+    0 0 35px rgba(40,247,255,.12);
+
+}
+
+/*==========================================================
+                    HOVER
+==========================================================*/
+
+.growth-module:hover{
+
+    transform:translateY(-8px);
+
+    border-color:rgba(40,247,255,.22);
+
+    box-shadow:
+
+    0 20px 45px rgba(0,0,0,.22),
+
+    0 0 30px rgba(40,247,255,.10);
+
+}

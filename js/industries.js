@@ -1,448 +1,1007 @@
 /*==========================================================
-
-                SHADOW15
-
-            INDUSTRIES V3
-
-                industries.js
-
+                    SHADOW15 INDUSTRIES V3
+                    PRODUCTION VERSION
 ==========================================================*/
 
-'use strict';
+/*==========================================================
+                    DOM CACHE
+==========================================================*/
+
+const industries = {
+
+    section:
+        document.querySelector(".industries"),
+
+    pills:
+        [...document.querySelectorAll(".industry-pill")],
+
+    modules:
+        [...document.querySelectorAll(".growth-module")],
+
+    nodes:
+        [...document.querySelectorAll(".node")],
+
+    paths:
+        [...document.querySelectorAll(".path-glow")],
+
+    counters:
+        [...document.querySelectorAll(".metric-item strong")]
+
+};
+
+/*==========================================================
+                    MODULES
+==========================================================*/
+
+const modules = {
+
+    website:
+        document.querySelector(".website-module"),
+
+    seo:
+        document.querySelector(".seo-module"),
+
+    ads:
+        document.querySelector(".ads-module"),
+
+    brand:
+        document.querySelector(".brand-module"),
+
+    outcome:
+        document.querySelector(".outcome-module")
+
+};
+
+/*==========================================================
+                    STATE
+==========================================================*/
+
+const state = {
+
+    activeIndustry:"healthcare",
+
+    initialized:false
+
+};
+
+/*==========================================================
+                    INDUSTRY DATA
+==========================================================*/
+
+const industryData = {
+
+    healthcare:{
+
+        website:{
+            label:"FOUNDATION",
+            title:"Healthcare Website",
+            description:"Premium clinic websites engineered to build trust and increase appointments.",
+            status:"Active"
+        },
+
+        seo:{
+            label:"ORGANIC",
+            title:"Medical SEO",
+            description:"Increase patient visibility with local healthcare SEO.",
+            status:"Optimizing"
+        },
+
+        ads:{
+            label:"PERFORMANCE",
+            title:"Patient Acquisition",
+            description:"Google & Meta campaigns that generate appointment enquiries.",
+            status:"Running"
+        },
+
+        branding:{
+            label:"BRAND",
+            title:"Healthcare Branding",
+            description:"Build a trusted medical brand across every touchpoint.",
+            status:"Connected"
+        },
+
+        outcome:{
+            label:"BUSINESS OUTCOME",
+            title:"Patient Growth",
+            description:"Connected systems focused on sustainable patient acquisition.",
+            status:"Growth Engine Running",
+            metrics:[
+                {
+                    value:"520+",
+                    label:"Appointments"
+                },
+                {
+                    value:"81%",
+                    label:"Conversion"
+                },
+                {
+                    value:"96%",
+                    label:"Visibility"
+                }
+            ]
+        }
+
+    },
+
+    hospitality:{
+
+        website:{
+            label:"FOUNDATION",
+            title:"Hotel Website",
+            description:"Luxury hotel websites designed for direct bookings.",
+            status:"Active"
+        },
+
+        seo:{
+            label:"LOCAL SEO",
+            title:"Hotel SEO",
+            description:"Rank your hotel higher on Google and Maps.",
+            status:"Optimizing"
+        },
+
+        ads:{
+            label:"BOOKINGS",
+            title:"Booking Campaigns",
+            description:"Campaigns focused on increasing reservations.",
+            status:"Running"
+        },
+
+        branding:{
+            label:"BRAND",
+            title:"Luxury Branding",
+            description:"Create memorable guest experiences online.",
+            status:"Connected"
+        },
+
+        outcome:{
+            label:"BUSINESS OUTCOME",
+            title:"Direct Bookings",
+            description:"Reduce OTA dependency through premium digital marketing.",
+            status:"Scaling",
+            metrics:[
+                {
+                    value:"84%",
+                    label:"Bookings"
+                },
+                {
+                    value:"310+",
+                    label:"Guests"
+                },
+                {
+                    value:"4.9",
+                    label:"Rating"
+                }
+            ]
+        }
+
+    },
+
+    education:{
+
+        website:{
+            label:"FOUNDATION",
+            title:"Institute Website",
+            description:"Admission-focused education websites.",
+            status:"Active"
+        },
+
+        seo:{
+            label:"SEO",
+            title:"Education SEO",
+            description:"Rank your institute for student searches.",
+            status:"Optimizing"
+        },
+
+        ads:{
+            label:"ADMISSIONS",
+            title:"Admission Campaigns",
+            description:"Generate quality student enquiries.",
+            status:"Running"
+        },
+
+        branding:{
+            label:"BRAND",
+            title:"Academic Branding",
+            description:"Build authority for your institution.",
+            status:"Connected"
+        },
+
+        outcome:{
+            label:"BUSINESS OUTCOME",
+            title:"Student Enquiries",
+            description:"Digital ecosystem focused on admissions.",
+            status:"Growing",
+            metrics:[
+                {
+                    value:"650+",
+                    label:"Enquiries"
+                },
+                {
+                    value:"72%",
+                    label:"Admissions"
+                },
+                {
+                    value:"95%",
+                    label:"Reach"
+                }
+            ]
+        }
+
+    },
+    realestate:{
+
+        website:{
+            label:"FOUNDATION",
+            title:"Property Website",
+            description:"Modern real estate websites designed to generate high-quality buyer enquiries.",
+            status:"Active"
+        },
+
+        seo:{
+            label:"LOCAL SEO",
+            title:"Property SEO",
+            description:"Rank projects higher in local property searches.",
+            status:"Optimizing"
+        },
+
+        ads:{
+            label:"LEADS",
+            title:"Property Campaigns",
+            description:"Lead generation campaigns for residential and commercial projects.",
+            status:"Running"
+        },
+
+        branding:{
+            label:"BRAND",
+            title:"Developer Branding",
+            description:"Build trust among buyers and investors.",
+            status:"Connected"
+        },
+
+        outcome:{
+            label:"BUSINESS OUTCOME",
+            title:"Qualified Leads",
+            description:"Complete lead generation ecosystem for real estate.",
+            status:"Growing",
+            metrics:[
+                {
+                    value:"440+",
+                    label:"Leads"
+                },
+                {
+                    value:"61%",
+                    label:"Qualified"
+                },
+                {
+                    value:"89%",
+                    label:"Visibility"
+                }
+            ]
+        }
+
+    },
+
+    ecommerce:{
+
+        website:{
+            label:"FOUNDATION",
+            title:"E-Commerce Store",
+            description:"High-converting online stores built for scalable sales.",
+            status:"Active"
+        },
+
+        seo:{
+            label:"PRODUCT SEO",
+            title:"Product SEO",
+            description:"Rank products higher for purchase intent keywords.",
+            status:"Optimizing"
+        },
+
+        ads:{
+            label:"SALES",
+            title:"Shopping Ads",
+            description:"Google Shopping & Meta campaigns that maximize ROAS.",
+            status:"Scaling"
+        },
+
+        branding:{
+            label:"BRAND",
+            title:"Brand Experience",
+            description:"Deliver a premium shopping experience across every channel.",
+            status:"Connected"
+        },
+
+        outcome:{
+            label:"BUSINESS OUTCOME",
+            title:"Online Sales",
+            description:"Digital commerce ecosystem built for profitable growth.",
+            status:"Growing",
+            metrics:[
+                {
+                    value:"980+",
+                    label:"Orders"
+                },
+                {
+                    value:"12X",
+                    label:"ROAS"
+                },
+                {
+                    value:"94%",
+                    label:"Retention"
+                }
+            ]
+        }
+
+    },
+
+    travel:{
+
+        website:{
+            label:"FOUNDATION",
+            title:"Travel Website",
+            description:"Beautiful travel websites built to inspire and convert visitors into bookings.",
+            status:"Active"
+        },
+
+        seo:{
+            label:"TRAVEL SEO",
+            title:"Destination SEO",
+            description:"Improve rankings for destinations and travel packages.",
+            status:"Optimizing"
+        },
+
+        ads:{
+            label:"BOOKINGS",
+            title:"Holiday Campaigns",
+            description:"Performance campaigns focused on travel bookings.",
+            status:"Running"
+        },
+
+        branding:{
+            label:"BRAND",
+            title:"Destination Branding",
+            description:"Create unforgettable travel experiences through strong branding.",
+            status:"Connected"
+        },
+
+        outcome:{
+            label:"BUSINESS OUTCOME",
+            title:"Travel Bookings",
+            description:"Integrated marketing system focused on year-round bookings.",
+            status:"Growing",
+            metrics:[
+                {
+                    value:"720+",
+                    label:"Bookings"
+                },
+                {
+                    value:"88%",
+                    label:"Occupancy"
+                },
+                {
+                    value:"97%",
+                    label:"Reach"
+                }
+            ]
+        }
+
+    }
+
+};
+
+/*==========================================================
+                    RESET
+==========================================================*/
+
+function resetActive(){
+
+    industries.pills.forEach(
+
+        pill=>pill.classList.remove("active")
+
+    );
+
+    industries.modules.forEach(
+
+        module=>module.classList.remove("active")
+
+    );
+
+    industries.nodes.forEach(
+
+        node=>node.classList.remove("active")
+
+    );
+
+    industries.paths.forEach(
+
+        path=>path.classList.remove("active")
+
+    );
+
+}
+
+/*==========================================================
+                    ACTIVATE
+==========================================================*/
+
+function activateBlueprint(industry){
+
+    document
+
+    .querySelector(
+
+        `.industry-pill[data-industry="${industry}"]`
+
+    )
+
+    ?.classList.add("active");
+
+    industries.modules.forEach(
+
+        module=>module.classList.add("active")
+
+    );
+
+    industries.nodes.forEach(
+
+        node=>node.classList.add("active")
+
+    );
+
+    industries.paths.forEach(
+
+        path=>path.classList.add("active")
+
+    );
+
+}
+
 
 
 /*==========================================================
-
-                DOM
-
+                    UPDATE MODULE
 ==========================================================*/
 
-const industrySection = document.querySelector('.industries');
+function updateModule(module,data){
 
-if (!industrySection) return;
+    if(!module || !data) return;
 
-const cards = industrySection.querySelectorAll('.industry-card');
+    module.querySelector(
 
-const engine = industrySection.querySelector('.engine-wrapper');
+        ".module-label"
 
-const core = industrySection.querySelector('.engine-core');
+    ).textContent = data.label;
 
-const rings = industrySection.querySelectorAll('.engine-ring');
+    module.querySelector(
 
-const particles = industrySection.querySelectorAll('.engine-particle');
+        ".module-title"
 
-const metrics = industrySection.querySelectorAll('.engine-metric');
+    ).textContent = data.title;
 
-const labels = industrySection.querySelectorAll('.engine-label');
+    module.querySelector(
 
-const networkLines = industrySection.querySelectorAll('.network-line');
+        ".module-description"
+
+    ).textContent = data.description;
+
+    module.querySelector(
+
+        ".module-status span:last-child"
+
+    ).textContent = data.status;
+
+}
 
 /*==========================================================
-
-                CARD TILT
-
+                    UPDATE OUTCOME
 ==========================================================*/
 
-cards.forEach(card=>{
+function updateOutcome(module,data){
 
-    card.addEventListener('mousemove',(e)=>{
+    if(!module || !data) return;
 
-        const rect = card.getBoundingClientRect();
+    module.querySelector(
 
-        const x = e.clientX - rect.left;
+        ".module-label"
 
-        const y = e.clientY - rect.top;
+    ).textContent = data.label;
 
-        const rotateX = (rect.height/2 - y)/18;
+    module.querySelector(
 
-        const rotateY = (x - rect.width/2)/18;
+        ".module-title"
 
-        card.style.transform =
+    ).textContent = data.title;
 
-        `
+    module.querySelector(
 
-        perspective(1000px)
+        ".module-description"
 
-        rotateX(${rotateX}deg)
+    ).textContent = data.description;
 
-        rotateY(${rotateY}deg)
+    module.querySelector(
 
-        translateY(-12px)
+        ".module-status span:last-child"
 
-        `;
+    ).textContent = data.status;
+
+    const metrics =
+
+        module.querySelectorAll(
+
+            ".metric-item"
+
+        );
+
+    data.metrics.forEach((metric,index)=>{
+
+        if(!metrics[index]) return;
+
+        metrics[index]
+
+        .querySelector("strong")
+
+        .textContent = metric.value;
+
+        metrics[index]
+
+        .querySelector("span")
+
+        .textContent = metric.label;
 
     });
 
-    card.addEventListener('mouseleave',()=>{
-
-        card.style.transform='';
-
-    });
-
-});
+}
 
 /*==========================================================
-
-                ENGINE PARALLAX
-
+                    UPDATE CONTENT
 ==========================================================*/
 
-industrySection.addEventListener('mousemove',(e)=>{
+function updateContent(industry){
 
-    const rect = engine.getBoundingClientRect();
+    const data =
 
-    const x = e.clientX - rect.left;
+        industryData[industry];
 
-    const y = e.clientY - rect.top;
+    if(!data) return;
 
-    const moveX =
+    updateModule(
 
-    (x-rect.width/2)/35;
+        modules.website,
 
-    const moveY =
+        data.website
 
-    (y-rect.height/2)/35;
+    );
 
-    core.style.transform=
+    updateModule(
 
-    `translate(${moveX}px,${moveY}px)`;
+        modules.seo,
 
-});
+        data.seo
 
+    );
 
-industrySection.addEventListener('mouseleave',()=>{
+    updateModule(
 
-    core.style.transform='translate(0,0)';
+        modules.ads,
 
-});
+        data.ads
 
+    );
+
+    updateModule(
+
+        modules.brand,
+
+        data.branding
+
+    );
+
+    updateOutcome(
+
+        modules.outcome,
+
+        data.outcome
+
+    );
+
+}
 
 /*==========================================================
-
-            NETWORK ACTIVATION
-
+                    SWITCH INDUSTRY
 ==========================================================*/
 
-cards.forEach((card,index)=>{
+function switchIndustry(industry){
 
-    card.addEventListener('mouseenter',()=>{
+    if(
 
-        if(networkLines[index]){
+        state.activeIndustry === industry ||
 
-            networkLines[index].classList.add('active');
+        !industryData[industry]
+
+    ){
+
+        return;
+
+    }
+
+    state.activeIndustry = industry;
+
+    resetActive();
+
+    activateBlueprint(industry);
+
+    updateContent(industry);
+
+    animateCards();
+
+    animateSVG();
+
+}
+
+/*==========================================================
+                    EVENTS
+==========================================================*/
+
+industries.pills.forEach(pill=>{
+
+    pill.addEventListener(
+
+        "click",
+
+        ()=>{
+
+            switchIndustry(
+
+                pill.dataset.industry
+
+            );
 
         }
 
-        core.classList.add('engine-active');
+    );
+
+});
+
+
+
+
+/*==========================================================
+                    CARD ANIMATION
+==========================================================*/
+
+function animateCards(){
+
+    if(typeof gsap === "undefined") return;
+
+    gsap.fromTo(
+
+        ".growth-module",
+
+        {
+
+            y:25,
+
+            opacity:.7,
+
+            scale:.97
+
+        },
+
+        {
+
+            y:0,
+
+            opacity:1,
+
+            scale:1,
+
+            duration:.55,
+
+            stagger:.08,
+
+            ease:"power3.out"
+
+        }
+
+    );
+
+}
+
+/*==========================================================
+                    SVG ANIMATION
+==========================================================*/
+
+function animateSVG(){
+
+    if(typeof gsap === "undefined") return;
+
+    gsap.fromTo(
+
+        ".path-glow",
+
+        {
+
+            strokeDashoffset:1000
+
+        },
+
+        {
+
+            strokeDashoffset:0,
+
+            duration:1,
+
+            stagger:.08,
+
+            ease:"power2.out"
+
+        }
+
+    );
+
+    gsap.fromTo(
+
+        ".node",
+
+        {
+
+            scale:0
+
+        },
+
+        {
+
+            scale:1,
+
+            duration:.45,
+
+            stagger:.05,
+
+            ease:"back.out(2)"
+
+        }
+
+    );
+
+}
+
+/*==========================================================
+                    COUNTERS
+==========================================================*/
+
+function animateCounters(){
+
+    if(typeof gsap === "undefined") return;
+
+    industries.counters.forEach(counter=>{
+
+        const value =
+
+            counter.textContent;
+
+        const number =
+
+            parseInt(value);
+
+        if(isNaN(number)) return;
+
+        const suffix =
+
+            value.replace(number,"");
+
+        gsap.fromTo(
+
+            counter,
+
+            {
+
+                innerText:0
+
+            },
+
+            {
+
+                innerText:number,
+
+                duration:1.2,
+
+                ease:"power2.out",
+
+                snap:{
+
+                    innerText:1
+
+                },
+
+                onUpdate:function(){
+
+                    counter.textContent =
+
+                        Math.round(
+
+                            this.targets()[0].innerText
+
+                        ) + suffix;
+
+                }
+
+            }
+
+        );
 
     });
 
-    card.addEventListener('mouseleave',()=>{
+}
 
-        networkLines.forEach(line=>{
+/*==========================================================
+                    GSAP TIMELINE
+==========================================================*/
 
-            line.classList.remove('active');
+if(
+
+    typeof gsap !== "undefined" &&
+
+    typeof ScrollTrigger !== "undefined"
+
+){
+
+    gsap.registerPlugin(
+
+        ScrollTrigger
+
+    );
+
+    const timeline =
+
+        gsap.timeline({
+
+            paused:true,
+
+            defaults:{
+
+                ease:"power3.out",
+
+                duration:.65
+
+            }
 
         });
 
-        core.classList.remove('engine-active');
+    timeline
 
-    });
+    .from(
 
-});
-
-/*==========================================================
-
-                ENGINE PULSE
-
-==========================================================*/
-
-cards.forEach(card=>{
-
-    card.addEventListener('mouseenter',()=>{
-
-        core.classList.remove('pulse');
-
-        void core.offsetWidth;
-
-        core.classList.add('pulse');
-
-    });
-
-});
-
-/*==========================================================
-
-            FLOATING PARTICLES
-
-==========================================================*/
-
-particles.forEach((particle,index)=>{
-
-    particle.animate(
-
-    [
+        ".industries-header",
 
         {
 
-            transform:'translateY(0px)'
+            y:60,
 
-        },
-
-        {
-
-            transform:'translateY(-12px)'
-
-        },
-
-        {
-
-            transform:'translateY(0px)'
+            opacity:0
 
         }
 
-    ],
+    )
 
-    {
+    .from(
 
-        duration:
-
-        1800+(index*350),
-
-        iterations:Infinity,
-
-        direction:'alternate',
-
-        easing:'ease-in-out'
-
-    });
-
-});
-
-
-
-
-/*==========================================================
-
-            COUNTERS
-
-==========================================================*/
-
-const counters=document.querySelectorAll('.metric-value');
-
-const observer=new IntersectionObserver(entries=>{
-
-    entries.forEach(entry=>{
-
-        if(!entry.isIntersecting) return;
-
-        const target=+entry.target.dataset.target;
-
-        let value=0;
-
-        const step=Math.ceil(target/40);
-
-        const update=()=>{
-
-            value+=step;
-
-            if(value>=target){
-
-                value=target;
-
-            }
-
-            entry.target.textContent=value+"+";
-
-            if(value<target){
-
-                requestAnimationFrame(update);
-
-            }
-
-        };
-
-        update();
-
-        observer.unobserve(entry.target);
-
-    });
-
-});
-
-counters.forEach(counter=>observer.observe(counter));
-
-
-
-/*==========================================================
-
-            DATA FLOW
-
-==========================================================*/
-
-const packet = document.querySelector('.data-packet');
-
-cards.forEach(card=>{
-
-    card.addEventListener('mouseenter',()=>{
-
-        sendPacket(card);
-
-    });
-
-});
-
-
-function sendPacket(card){
-
-    if(!packet) return;
-
-    const cardRect = card.getBoundingClientRect();
-
-    const engineRect = engine.getBoundingClientRect();
-
-    const startX =
-    cardRect.left + cardRect.width/2;
-
-    const startY =
-    cardRect.top + cardRect.height/2;
-
-    const endX =
-    engineRect.left + engineRect.width/2;
-
-    const endY =
-    engineRect.top + engineRect.height/2;
-
-    packet.style.opacity = "1";
-
-    packet.style.left =
-    (startX-engineRect.left)+"px";
-
-    packet.style.top =
-    (startY-engineRect.top)+"px";
-
-    packet.animate(
-
-    [
+        ".industry-pill",
 
         {
 
-            left:(startX-engineRect.left)+"px",
+            y:20,
 
-            top:(startY-engineRect.top)+"px",
+            opacity:0,
 
-            transform:"scale(.4)",
+            stagger:.08
+
+        },
+
+        "-=.35"
+
+    )
+
+    .from(
+
+        ".growth-module",
+
+        {
+
+            y:60,
+
+            opacity:0,
+
+            stagger:.1
+
+        },
+
+        "-=.25"
+
+    )
+
+    .from(
+
+        ".industries-cta",
+
+        {
+
+            y:60,
 
             opacity:0
 
         },
 
-        {
+        "-=.2"
 
-            opacity:1,
+    );
 
-            offset:.2
+    ScrollTrigger.create({
 
-        },
+        trigger:".industries",
 
-        {
+        start:"top 70%",
 
-            left:(endX-engineRect.left)+"px",
+        once:true,
 
-            top:(endY-engineRect.top)+"px",
+        animation:timeline,
 
-            transform:"scale(1)",
+        onEnter:()=>{
 
-            opacity:1
+            animateSVG();
+
+            animateCounters();
 
         }
 
-    ],
-
-    {
-
-        duration:650,
-
-        easing:"cubic-bezier(.22,1,.36,1)"
-
     });
-
-    setTimeout(()=>{
-
-        packet.style.opacity="0";
-
-        core.classList.remove("pulse");
-
-        void core.offsetWidth;
-
-        core.classList.add("pulse");
-
-    },650);
 
 }
 
-
 /*==========================================================
-
-            MAGNETIC ENGINE
-
+                    INITIALIZE
 ==========================================================*/
 
-industrySection.addEventListener('mousemove',(e)=>{
+function initializeIndustries(){
 
-    const rect = engine.getBoundingClientRect();
+    updateContent(
 
-    const dx = e.clientX-(rect.left+rect.width/2);
+        state.activeIndustry
 
-    const dy = e.clientY-(rect.top+rect.height/2);
+    );
 
-    const distance=Math.sqrt(dx*dx+dy*dy);
+    activateBlueprint(
 
-    if(distance<280){
+        state.activeIndustry
 
-        engine.style.transform=
+    );
 
-        `translate(${dx*.03}px,${dy*.03}px)`;
+    state.initialized = true;
 
-    }
-
-});
-
-
-industrySection.addEventListener('mouseleave',()=>{
-
-    engine.style.transform="translate(0,0)";
-
-});
-
+}
 
 /*==========================================================
-
-            CARD REVEAL
-
+                    DOM READY
 ==========================================================*/
 
-const revealObserver=new IntersectionObserver(entries=>{
+if(
 
-    entries.forEach(entry=>{
+    document.readyState === "loading"
 
-        if(entry.isIntersecting){
+){
 
-            entry.target.classList.add("show-card");
+    document.addEventListener(
 
-        }
+        "DOMContentLoaded",
 
-    });
+        initializeIndustries
 
-},{
-    threshold:.15
-});
+    );
 
-cards.forEach(card=>{
+}
 
-    revealObserver.observe(card);
+else{
 
-});
+    initializeIndustries();
 
-
-
+}

@@ -92,3 +92,61 @@
 @import url("./05-sections/industries/06-cta.css");
 @import url("./05-sections/industries/07-animation.css");
 @import url("./05-sections/industries/08-responsive.css");
+
+
+
+
+/*==========================================================
+                    PROCESS
+==========================================================*/
+
+@import url("./05-sections/process/01-background.css");
+
+@import url("./05-sections/process/02-heading.css");
+
+@import url("./05-sections/process/03-timeline.css");
+
+@import url("./05-sections/process/04-panel.css");
+
+@import url("./05-sections/process/05-cta.css");
+
+@import url("./05-sections/process/06-animation.css");
+
+@import url("./05-sections/process/07-responsive.css");
+
+
+
+/*==========================================================
+                    PORTFOLIO
+==========================================================*/
+
+@import url("./05-sections/portfolio/01-background.css");
+
+@import url("./05-sections/portfolio/02-heading.css");
+
+@import url("./05-sections/portfolio/03-showcase.css");
+
+@import url("./05-sections/portfolio/04-sidebar.css");
+
+@import url("./05-sections/portfolio/05-stats.css");
+
+@import url("./05-sections/portfolio/06-animation.css");
+
+@import url("./05-sections/portfolio/07-responsive.css");
+
+
+/*==========================================================
+                        METRICS
+==========================================================*/
+
+@import url("./05-sections/metrics/01-background.css");
+
+@import url("./05-sections/metrics/02-heading.css");
+
+@import url("./05-sections/metrics/03-dashboard.css");
+
+@import url("./05-sections/metrics/04-cards.css");
+
+@import url("./05-sections/metrics/05-animation.css");
+
+@import url("./05-sections/metrics/06-responsive.css");

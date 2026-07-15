@@ -1,309 +1,129 @@
 /*==========================================================
-
-                SHADOW15
-
-            INDUSTRIES V3
-
-            07 ANIMATION
-
+                    CARD TRANSITIONS
 ==========================================================*/
 
-
-/*=========================================
-GLOBAL TRANSITIONS
-=========================================*/
-
-.industries *{
+.growth-module{
 
     transition:
 
-        transform .45s cubic-bezier(.22,1,.36,1),
+    transform .35s ease,
 
-        opacity .35s,
+    border-color .35s ease,
 
-        border-color .35s,
+    box-shadow .35s ease,
 
-        color .35s,
-
-        background .35s,
-
-        box-shadow .45s;
+    background .35s ease;
 
 }
 
+.growth-module:hover{
 
-/*=========================================
-RING ROTATION
-=========================================*/
-
-.ring-1{
-
-    animation:
-
-        rotateClockwise 18s linear infinite;
+    transform:translateY(-8px);
 
 }
-
-.ring-2{
-
-    animation:
-
-        rotateAntiClockwise 28s linear infinite;
-
-}
-
-.ring-3{
-
-    animation:
-
-        rotateClockwise 40s linear infinite;
-
-}
-
-
-/*=========================================
-PULSE
-=========================================*/
-
-.engine-pulse{
-
-    animation:
-
-        pulseRing 2.6s ease-in-out infinite;
-
-}
-
-
-/*=========================================
-LABEL FLOAT
-=========================================*/
-
-.engine-label{
-
-    animation:
-
-        labelFloat 5s ease-in-out infinite;
-
-}
-
-.label-right{
-
-    animation-delay:.5s;
-
-}
-
-.label-bottom{
-
-    animation-delay:1s;
-
-}
-
-.label-left{
-
-    animation-delay:1.5s;
-
-}
-
-
-/*=========================================
-METRICS
-=========================================*/
-
-.engine-metric{
-
-    animation:
-
-        metricFloat 6s ease-in-out infinite;
-
-}
-
-.metric-2{
-
-    animation-delay:1s;
-
-}
-
-.metric-3{
-
-    animation-delay:2s;
-
-}
-
-
-/*=========================================
-BACKGROUND GLOW
-=========================================*/
-
-.glow-left{
-
-    animation:
-
-        auroraLeft 18s ease-in-out infinite;
-
-}
-
-.glow-right{
-
-    animation:
-
-        auroraRight 24s ease-in-out infinite;
-
-}
-
-
-/*=========================================
-CTA GLOW
-=========================================*/
-
-.industries-cta-glow{
-
-    animation:
-
-        glowBreath 7s ease-in-out infinite;
-
-}
-
 
 /*==========================================================
-
-                KEYFRAMES
-
+                    PILL TRANSITIONS
 ==========================================================*/
 
+.industry-pill{
 
-@keyframes rotateClockwise{
+    transition:
 
-    from{
-
-        transform:rotate(0deg);
-
-    }
-
-    to{
-
-        transform:rotate(360deg);
-
-    }
+    all .3s ease;
 
 }
 
+.industry-pill:hover{
 
-@keyframes rotateAntiClockwise{
-
-    from{
-
-        transform:rotate(360deg);
-
-    }
-
-    to{
-
-        transform:rotate(0deg);
-
-    }
+    transform:translateY(-3px);
 
 }
 
+/*==========================================================
+                    BUTTONS
+==========================================================*/
 
-@keyframes pulseRing{
+.industries-main-btn,
+.industries-secondary-btn{
 
-    0%{
+    transition:
 
-        transform:scale(.92);
-
-        opacity:.25;
-
-    }
-
-    50%{
-
-        transform:scale(1.08);
-
-        opacity:.75;
-
-    }
-
-    100%{
-
-        transform:scale(.92);
-
-        opacity:.25;
-
-    }
+    all .3s ease;
 
 }
 
-@keyframes labelFloat{
+.industries-main-btn:hover,
+.industries-secondary-btn:hover{
 
-    0%{
-
-        transform:translateY(0);
-
-    }
-
-    50%{
-
-        transform:translateY(-8px);
-
-    }
-
-    100%{
-
-        transform:translateY(0);
-
-    }
+    transform:translateY(-3px);
 
 }
 
+/*==========================================================
+                    STATUS DOT
+==========================================================*/
 
-@keyframes metricFloat{
+.status-dot{
 
-    0%{
-
-        transform:translateY(0);
-
-    }
-
-    50%{
-
-        transform:translateY(-12px);
-
-    }
-
-    100%{
-
-        transform:translateY(0);
-
-    }
+    animation:pulseDot 2s infinite;
 
 }
 
+@keyframes pulseDot{
 
-@keyframes glowBreath{
-
-    0%{
+    0%,100%{
 
         transform:scale(1);
 
-        opacity:.55;
+        opacity:1;
 
     }
 
     50%{
 
-        transform:scale(1.08);
+        transform:scale(1.35);
 
-        opacity:.85;
-
-    }
-
-    100%{
-
-        transform:scale(1);
-
-        opacity:.55;
+        opacity:.65;
 
     }
 
 }
 
+/*==========================================================
+                    NODE PULSE
+==========================================================*/
+
+.node.active{
+
+    animation:nodePulse 2.4s infinite;
+
+}
+
+@keyframes nodePulse{
+
+    0%,100%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.25);
+
+    }
+
+}
+
+/*==========================================================
+                    PERFORMANCE
+==========================================================*/
+
+.growth-module,
+.node,
+.path-glow{
+
+    will-change:transform,opacity;
+
+}

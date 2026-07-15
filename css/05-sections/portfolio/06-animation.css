@@ -1,0 +1,283 @@
+/*==========================================================
+                    GLOBAL TRANSITIONS
+==========================================================*/
+
+.project-card,
+.metric-card,
+.device-frame,
+.portfolio-primary-btn,
+.portfolio-secondary-btn,
+.project-preview{
+
+    transition:
+
+    transform .35s ease,
+
+    box-shadow .35s ease,
+
+    border-color .35s ease,
+
+    background .35s ease,
+
+    color .35s ease,
+
+    opacity .35s ease;
+
+}
+
+/*==========================================================
+                    DEVICE FLOAT
+==========================================================*/
+
+.device-frame{
+
+    animation:
+
+    portfolioFloat 7s ease-in-out infinite;
+
+}
+
+@keyframes portfolioFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==========================================================
+                    SHOWCASE IMAGE
+==========================================================*/
+
+.portfolio-showcase:hover
+
+.project-preview{
+
+    transform:
+
+    scale(1.04);
+
+}
+
+/*==========================================================
+                    PROJECT CARD
+==========================================================*/
+
+.project-card:hover{
+
+    transform:
+
+    translateY(-8px);
+
+}
+
+.project-card:hover
+
+.project-number{
+
+    color:#7efbff;
+
+}
+
+.project-card:hover
+
+.project-arrow{
+
+    transform:
+
+    translateX(8px);
+
+}
+
+/*==========================================================
+                    ACTIVE CARD
+==========================================================*/
+
+.project-card.active{
+
+    box-shadow:
+
+    0 30px 70px rgba(0,0,0,.35),
+
+    0 0 40px rgba(41,247,255,.12);
+
+}
+
+/*==========================================================
+                    METRIC CARD
+==========================================================*/
+
+.metric-card:hover{
+
+    transform:
+
+    translateY(-8px)
+
+    scale(1.03);
+
+}
+
+/*==========================================================
+                    PRIMARY BUTTON
+==========================================================*/
+
+.portfolio-primary-btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.portfolio-primary-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:60%;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.45),
+
+        transparent
+
+    );
+
+}
+
+.portfolio-primary-btn:hover::before{
+
+    animation:
+
+    portfolioButtonShine .8s forwards;
+
+}
+
+@keyframes portfolioButtonShine{
+
+    from{
+
+        left:-120%;
+
+    }
+
+    to{
+
+        left:160%;
+
+    }
+
+}
+
+/*==========================================================
+                    SECONDARY BUTTON
+==========================================================*/
+
+.portfolio-secondary-btn:hover{
+
+    transform:
+
+    translateY(-5px);
+
+}
+
+/*==========================================================
+                    GLOW
+==========================================================*/
+
+.showcase-glow{
+
+    animation:
+
+    glowPulse 8s ease-in-out infinite;
+
+}
+
+@keyframes glowPulse{
+
+    0%{
+
+        opacity:.18;
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        opacity:.28;
+
+        transform:scale(1.08);
+
+    }
+
+    100%{
+
+        opacity:.18;
+
+        transform:scale(1);
+
+    }
+
+}
+
+/*==========================================================
+                    PERFORMANCE
+==========================================================*/
+
+.device-frame,
+.project-card,
+.metric-card,
+.project-preview{
+
+    will-change:
+
+    transform,
+
+    opacity;
+
+}
+
+/*==========================================================
+                    REDUCED MOTION
+==========================================================*/
+
+@media (prefers-reduced-motion:reduce){
+
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+    }
+
+}

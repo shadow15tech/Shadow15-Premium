@@ -1,141 +1,173 @@
 /*==========================================================
-
-                SHADOW15
-
-            INDUSTRIES V3
-
-                03 GRID
-
+                    WORKSPACE
 ==========================================================*/
 
-
-/*=========================================
-TOP GRID
-=========================================*/
-
-.industries-top{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:36px;
-
-    align-items:start;
-
-    margin-bottom:100px;
-
-}
-
-
-/*=========================================
-BOTTOM GRID
-=========================================*/
-
-.industries-bottom{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:36px;
-
-    align-items:start;
-
-    margin-top:100px;
-
-}
-
-
-/*=========================================
-TOP OFFSET
-=========================================*/
-
-.industries-top .industry-card:nth-child(1){
-
-    transform:translateY(18px);
-
-}
-
-.industries-top .industry-card:nth-child(2){
-
-    transform:translateY(56px);
-
-}
-
-.industries-top .industry-card:nth-child(3){
-
-    transform:translateY(18px);
-
-}
-
-/*=========================================
-BOTTOM OFFSET
-=========================================*/
-
-.industries-bottom .industry-card:nth-child(1){
-
-    transform:translateY(-18px);
-
-}
-
-.industries-bottom .industry-card:nth-child(2){
-
-    transform:translateY(-56px);
-
-}
-
-.industries-bottom .industry-card:nth-child(3){
-
-    transform:translateY(-18px);
-
-}
-
-
-/*=========================================
-ENGINE
-=========================================*/
-
-.industries-engine{
+.blueprint-workspace{
 
     position:relative;
 
-    display:flex;
+    width:100%;
 
-    justify-content:center;
-
-    align-items:center;
-
-    margin:80px 0;
-
-    z-index:15;
+    margin-top:90px;
 
 }
 
+/*==========================================================
+                    CANVAS
+==========================================================*/
 
-/*=========================================
-CTA
-=========================================*/
+.blueprint-canvas{
 
-.industries-cta{
-
-    margin-top:140px;
-
-}
-
-
-/*=========================================
-CARD WIDTH
-=========================================*/
-
-.industry-card{
-
-    max-width:390px;
+    position:relative;
 
     width:100%;
 
-    justify-self:center;
+    max-width:1280px;
+
+    min-height:920px;
+
+    margin:0 auto;
 
 }
 
+/*==========================================================
+                    SVG
+==========================================================*/
 
+.blueprint-engine{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    z-index:1;
+
+}
+
+/*==========================================================
+                    GRID
+==========================================================*/
+
+.blueprint-grid{
+
+    position:relative;
+
+    z-index:5;
+
+    display:grid;
+
+    width:100%;
+
+    grid-template-columns:
+
+        1fr
+
+        1fr
+
+        1fr;
+
+    grid-template-areas:
+
+        ". website ."
+
+        "seo ads branding"
+
+        ". outcome .";
+
+    column-gap:34px;
+
+    row-gap:42px;
+
+    justify-items:center;
+
+    align-items:stretch;
+
+    padding:20px 0;
+
+}
+
+/*==========================================================
+                    GRID ITEMS
+==========================================================*/
+
+.website-module{
+
+    grid-area:website;
+
+}
+
+.seo-module{
+
+    grid-area:seo;
+
+}
+
+.ads-module{
+
+    grid-area:ads;
+
+}
+
+.brand-module{
+
+    grid-area:branding;
+
+}
+
+.outcome-module{
+
+    grid-area:outcome;
+
+}
+
+/*==========================================================
+                    CARD WIDTH
+==========================================================*/
+
+.website-module,
+
+.outcome-module{
+
+    width:380px;
+
+}
+
+.seo-module,
+
+.ads-module,
+
+.brand-module{
+
+    width:340px;
+
+}
+
+/*==========================================================
+                    CARD POSITION
+==========================================================*/
+
+.website-module{
+
+    margin-bottom:12px;
+
+}
+
+.outcome-module{
+
+    margin-top:12px;
+
+}
+
+/*==========================================================
+                    CTA
+==========================================================*/
+
+.industries-cta{
+
+    margin-top:110px;
+
+}

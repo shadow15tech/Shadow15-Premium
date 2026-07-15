@@ -1,37 +1,24 @@
 /*==========================================================
-
-                SHADOW15
-
-            INDUSTRIES V3
-
-             02 HEADING
-
+                    HEADER
 ==========================================================*/
-
-
-/*=========================================
-HEADER
-=========================================*/
 
 .industries-header{
 
     position:relative;
 
-    width:min(920px,100%);
+    z-index:10;
 
-    margin-inline:auto;
+    max-width:900px;
+
+    margin:0 auto;
 
     text-align:center;
 
-    margin-bottom:120px;
-
 }
 
-
-
-/*=========================================
-BADGE
-=========================================*/
+/*==========================================================
+                    BADGE
+==========================================================*/
 
 .industries-badge{
 
@@ -39,77 +26,61 @@ BADGE
 
     align-items:center;
 
-    gap:14px;
+    justify-content:center;
+
+    gap:12px;
 
     padding:12px 22px;
 
+    margin-bottom:28px;
+
     border-radius:999px;
 
-    background:
+    background:rgba(255,255,255,.04);
 
-        rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.08);
 
-    border:
-
-        1px solid rgba(255,255,255,.08);
-
-    backdrop-filter:
-
-        blur(20px);
+    backdrop-filter:blur(16px);
 
 }
-
-
-/*=========================================
-DOT
-=========================================*/
 
 .badge-dot{
 
-    width:9px;
+    width:10px;
 
-    height:9px;
+    height:10px;
 
     border-radius:50%;
 
-    background:
-
-        var(--industry-primary);
+    background:#28f7ff;
 
     box-shadow:
 
-        0 0 18px var(--industry-primary);
+    0 0 12px #28f7ff;
 
 }
 
+.industries-badge span{
 
-.industries-badge span:last-child{
-
-    color:#D9E8F7;
+    color:#d7faff;
 
     font-size:.82rem;
 
-    letter-spacing:.22em;
+    font-weight:600;
 
-    font-weight:700;
+    letter-spacing:.18em;
+
+    text-transform:uppercase;
 
 }
 
+/*==========================================================
+                    TITLE
+==========================================================*/
 
+.industries-title{
 
-/*=========================================
-TITLE
-=========================================*/
-
-.industries-header h2{
-
-    margin-top:34px;
-
-    color:#FFFFFF;
-
-    font-family:"Sora",sans-serif;
-
-    font-size:clamp(3rem,5vw,5.4rem);
+    margin:0;
 
     line-height:1.05;
 
@@ -117,30 +88,41 @@ TITLE
 
 }
 
+.title-outline{
 
-/*=========================================
-SECOND LINE
-=========================================*/
+    display:block;
 
-.industries-header h2 span{
+    font-size:clamp(3rem,6vw,5.2rem);
+
+    font-weight:700;
+
+    color:#ffffff;
+
+}
+
+.title-main{
 
     display:block;
 
     margin-top:14px;
 
+    font-size:clamp(3.2rem,6vw,5.6rem);
+
+    font-weight:800;
+
     background:
 
-        linear-gradient(
+    linear-gradient(
 
-            90deg,
+        90deg,
 
-            #FFFFFF,
+        #ffffff,
 
-            #8FF6EB,
+        #69f8ff,
 
-            #4ED4FF
+        #22f7c5
 
-        );
+    );
 
     -webkit-background-clip:text;
 
@@ -148,55 +130,140 @@ SECOND LINE
 
 }
 
+/*==========================================================
+                    DESCRIPTION
+==========================================================*/
 
-/*=========================================
-DESCRIPTION
-=========================================*/
-
-.industries-header p{
+.industries-description{
 
     width:min(760px,100%);
 
-    margin:34px auto 0;
+    margin:36px auto 0;
 
-    color:#97AEC3;
+    color:rgba(255,255,255,.72);
 
     font-size:1.08rem;
 
-    line-height:2;
+    line-height:1.9;
 
 }
 
+/*==========================================================
+                    SWITCHER
+==========================================================*/
 
-/*=========================================
-DIVIDER
-=========================================*/
+.industry-switcher{
 
-.industries-header::after{
+    display:flex;
 
-    content:"";
+    justify-content:center;
 
-    display:block;
+    align-items:center;
 
-    width:180px;
+    flex-wrap:wrap;
 
-    height:2px;
+    gap:14px;
 
-    margin:54px auto 0;
+    margin-top:60px;
+
+}
+
+/*==========================================================
+                    PILL
+==========================================================*/
+
+.industry-pill{
+
+    cursor:pointer;
+
+    padding:14px 24px;
+
+    border-radius:999px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    background:rgba(255,255,255,.04);
+
+    color:rgba(255,255,255,.72);
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+    backdrop-filter:blur(18px);
+
+    transition:
+
+    transform .35s ease,
+
+    background .35s ease,
+
+    color .35s ease,
+
+    border-color .35s ease,
+
+    box-shadow .35s ease;
+
+}
+
+/*==========================================================
+                    HOVER
+==========================================================*/
+
+.industry-pill:hover{
+
+    transform:translateY(-4px);
+
+    color:#ffffff;
+
+    border-color:rgba(40,247,255,.35);
+
+    background:rgba(40,247,255,.08);
+
+    box-shadow:
+
+    0 14px 28px rgba(0,0,0,.18);
+
+}
+
+/*==========================================================
+                    ACTIVE
+==========================================================*/
+
+.industry-pill.active{
+
+    color:#07131f;
+
+    border-color:transparent;
 
     background:
 
-        linear-gradient(
+    linear-gradient(
 
-            90deg,
+        135deg,
 
-            transparent,
+        #29f7ff,
 
-            var(--industry-primary),
+        #71ffe3
 
-            transparent
+    );
 
-        );
+    box-shadow:
+
+    0 16px 34px rgba(41,247,255,.28);
 
 }
+
+/*==========================================================
+                    FOCUS
+==========================================================*/
+
+.industry-pill:focus-visible{
+
+    outline:2px solid #29f7ff;
+
+    outline-offset:4px;
+
+}
+
 

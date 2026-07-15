@@ -1,0 +1,263 @@
+/*==========================================================
+                    GLOBAL TRANSITIONS
+==========================================================*/
+
+.metric-item,
+.progress-ring,
+.metrics-primary-btn,
+.metrics-secondary-btn,
+.ring-progress{
+
+    transition:
+
+    transform .35s ease,
+
+    box-shadow .35s ease,
+
+    border-color .35s ease,
+
+    background .35s ease,
+
+    color .35s ease,
+
+    opacity .35s ease;
+
+}
+
+/*==========================================================
+                    METRIC CARD
+==========================================================*/
+
+.metric-item:hover{
+
+    transform:
+
+    translateY(-10px);
+
+}
+
+.metric-item:hover
+
+.metric-value{
+
+    color:#7efcff;
+
+}
+
+/*==========================================================
+                    PROGRESS RING
+==========================================================*/
+
+.progress-ring{
+
+    animation:
+
+    metricsFloat 7s ease-in-out infinite;
+
+}
+
+@keyframes metricsFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==========================================================
+                    RING GLOW
+==========================================================*/
+
+.progress-ring::before{
+
+    animation:
+
+    ringGlow 6s ease-in-out infinite;
+
+}
+
+@keyframes ringGlow{
+
+    0%{
+
+        opacity:.18;
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        opacity:.30;
+
+        transform:scale(1.08);
+
+    }
+
+    100%{
+
+        opacity:.18;
+
+        transform:scale(1);
+
+    }
+
+}
+
+/*==========================================================
+                    NUMBER
+==========================================================*/
+
+.ring-number{
+
+    animation:
+
+    numberPulse 2.5s ease-in-out infinite;
+
+}
+
+@keyframes numberPulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.05);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+/*==========================================================
+                    PRIMARY BUTTON
+==========================================================*/
+
+.metrics-primary-btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.metrics-primary-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:60%;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.45),
+
+        transparent
+
+    );
+
+}
+
+.metrics-primary-btn:hover::before{
+
+    animation:
+
+    metricsButtonShine .8s forwards;
+
+}
+
+@keyframes metricsButtonShine{
+
+    from{
+
+        left:-120%;
+
+    }
+
+    to{
+
+        left:160%;
+
+    }
+
+}
+
+/*==========================================================
+                    SECONDARY BUTTON
+==========================================================*/
+
+.metrics-secondary-btn:hover{
+
+    transform:
+
+    translateY(-5px);
+
+}
+
+/*==========================================================
+                    PERFORMANCE
+==========================================================*/
+
+.metric-item,
+.progress-ring,
+.ring-progress{
+
+    will-change:
+
+    transform,
+
+    opacity;
+
+}
+
+/*==========================================================
+                    REDUCED MOTION
+==========================================================*/
+
+@media (prefers-reduced-motion:reduce){
+
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+    }
+
+}

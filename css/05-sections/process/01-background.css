@@ -1,18 +1,16 @@
 /*==========================================================
-                    INDUSTRIES SECTION
+                    PROCESS SECTION
 ==========================================================*/
 
-.industries{
+.process{
 
     position:relative;
 
     overflow:hidden;
 
-    isolation:isolate;
+    padding:160px 0;
 
-    padding:140px 0;
-
-    background:#07131f;
+    background:#06111d;
 
 }
 
@@ -20,23 +18,23 @@
                     CONTAINER
 ==========================================================*/
 
-.industries-container{
+.process-container{
 
     position:relative;
 
-    width:min(1400px,92%);
+    z-index:5;
+
+    width:min(92%,1400px);
 
     margin:0 auto;
-
-    z-index:2;
 
 }
 
 /*==========================================================
-                    BACKGROUND WRAPPER
+                    BACKGROUND
 ==========================================================*/
 
-.industries-background{
+.process-background{
 
     position:absolute;
 
@@ -46,7 +44,7 @@
 
     pointer-events:none;
 
-    z-index:0;
+    z-index:1;
 
 }
 
@@ -62,48 +60,27 @@
 
     background-image:
 
-    linear-gradient(
-        rgba(255,255,255,.035) 1px,
-        transparent 1px
-    ),
+        linear-gradient(
 
-    linear-gradient(
-        90deg,
-        rgba(255,255,255,.035) 1px,
-        transparent 1px
-    );
+            rgba(255,255,255,.035) 1px,
 
-    background-size:80px 80px;
+            transparent 1px
 
-    opacity:.35;
+        ),
 
-}
+        linear-gradient(
 
-/*==========================================================
-                    GRID FADE
-==========================================================*/
+            90deg,
 
-.background-grid::after{
+            rgba(255,255,255,.035) 1px,
 
-    content:"";
+            transparent 1px
 
-    position:absolute;
+        );
 
-    inset:0;
+    background-size:60px 60px;
 
-    background:
-
-    radial-gradient(
-
-        circle,
-
-        transparent 35%,
-
-        rgba(7,19,31,.25) 70%,
-
-        #07131f 100%
-
-    );
+    opacity:.55;
 
 }
 
@@ -119,43 +96,57 @@
 
     background:
 
-    radial-gradient(
+        radial-gradient(
 
-        circle at top center,
+            circle at 50% 25%,
 
-        rgba(45,235,255,.08) 0%,
+            rgba(41,247,255,.12),
 
-        transparent 38%
+            transparent 42%
 
-    ),
+        ),
 
-    radial-gradient(
+        radial-gradient(
 
-        circle at bottom center,
+            circle at 80% 0%,
 
-        rgba(0,255,180,.04) 0%,
+            rgba(111,95,255,.12),
 
-        transparent 45%
+            transparent 35%
 
-    );
+        ),
+
+        linear-gradient(
+
+            180deg,
+
+            rgba(8,20,36,0),
+
+            rgba(4,12,22,.35),
+
+            rgba(6,17,29,.92)
+
+        );
 
 }
 
 /*==========================================================
-                    GLOW
+                    AMBIENT GLOW
 ==========================================================*/
 
 .background-glow{
 
     position:absolute;
 
-    width:620px;
+    width:520px;
 
-    height:620px;
+    height:520px;
 
     border-radius:50%;
 
-    filter:blur(90px);
+    filter:blur(120px);
+
+    opacity:.18;
 
 }
 
@@ -165,21 +156,11 @@
 
 .background-glow-left{
 
-    top:-220px;
+    top:-120px;
 
     left:-180px;
 
-    background:
-
-    radial-gradient(
-
-        circle,
-
-        rgba(0,255,255,.12),
-
-        transparent 70%
-
-    );
+    background:#28f7ff;
 
 }
 
@@ -189,27 +170,15 @@
 
 .background-glow-center{
 
-    left:50%;
+    top:32%;
 
-    top:-260px;
+    left:50%;
 
     transform:translateX(-50%);
 
-    width:900px;
+    background:#00d9ff;
 
-    height:900px;
-
-    background:
-
-    radial-gradient(
-
-        circle,
-
-        rgba(55,150,255,.10),
-
-        transparent 72%
-
-    );
+    opacity:.12;
 
 }
 
@@ -219,21 +188,11 @@
 
 .background-glow-right{
 
-    right:-220px;
+    top:-80px;
 
-    bottom:-220px;
+    right:-180px;
 
-    background:
-
-    radial-gradient(
-
-        circle,
-
-        rgba(0,255,180,.10),
-
-        transparent 72%
-
-    );
+    background:#746bff;
 
 }
 
@@ -247,57 +206,30 @@
 
     inset:0;
 
-    opacity:.02;
+    opacity:.025;
 
     background-image:
 
-    radial-gradient(
+        radial-gradient(
 
-        rgba(255,255,255,.8) .8px,
+            rgba(255,255,255,.9) .6px,
 
-        transparent .8px
+            transparent .8px
 
-    );
+        );
 
-    background-size:18px 18px;
-
-    mix-blend-mode:soft-light;
+    background-size:26px 26px;
 
 }
 
 /*==========================================================
-                    STACK ORDER
+                    SECTION SPACING
 ==========================================================*/
 
-.background-grid{
+.process>*{
 
-    z-index:1;
-
-}
-
-.background-gradient{
+    position:relative;
 
     z-index:2;
 
 }
-
-.background-glow{
-
-    z-index:3;
-
-}
-
-.background-noise{
-
-    z-index:4;
-
-}
-
-.industries-container{
-
-    z-index:10;
-
-}
-
-
-

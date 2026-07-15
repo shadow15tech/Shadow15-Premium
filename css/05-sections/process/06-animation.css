@@ -1,0 +1,332 @@
+/*==========================================================
+                    GLOBAL TRANSITIONS
+==========================================================*/
+
+.process-step,
+.step-content,
+.summary-card,
+.process-panel,
+.process-primary-btn,
+.process-secondary-btn,
+.step-dot,
+.status-bar span{
+
+    transition:
+
+    transform .35s ease,
+
+    box-shadow .35s ease,
+
+    border-color .35s ease,
+
+    background .35s ease,
+
+    color .35s ease,
+
+    opacity .35s ease;
+
+}
+
+/*==========================================================
+                    STEP HOVER
+==========================================================*/
+
+.process-step:hover .step-content{
+
+    transform:
+
+    translateY(-8px);
+
+}
+
+.process-step:hover .step-number{
+
+    color:#6afcff;
+
+}
+
+.process-step:hover .step-dot{
+
+    transform:scale(1.2);
+
+}
+
+/*==========================================================
+                    ACTIVE STEP
+==========================================================*/
+
+.process-step.active .step-content{
+
+    box-shadow:
+
+    0 30px 70px rgba(0,0,0,.35),
+
+    0 0 35px rgba(41,247,255,.12);
+
+}
+
+/*==========================================================
+                    STEP DOT
+==========================================================*/
+
+.step-dot{
+
+    animation:
+
+    pulseDot 2.5s infinite;
+
+}
+
+@keyframes pulseDot{
+
+    0%{
+
+        transform:scale(1);
+
+        box-shadow:
+
+        0 0 0 rgba(41,247,255,.35);
+
+    }
+
+    50%{
+
+        transform:scale(1.25);
+
+        box-shadow:
+
+        0 0 20px rgba(41,247,255,.6);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+        box-shadow:
+
+        0 0 0 rgba(41,247,255,.35);
+
+    }
+
+}
+
+/*==========================================================
+                    PANEL FLOAT
+==========================================================*/
+
+.process-panel{
+
+    animation:
+
+    floatingPanel 8s ease-in-out infinite;
+
+}
+
+@keyframes floatingPanel{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==========================================================
+                    PROGRESS BAR
+==========================================================*/
+
+.status-bar{
+
+    overflow:hidden;
+
+}
+
+.status-bar span{
+
+    position:relative;
+
+}
+
+.status-bar span::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.45),
+
+        transparent
+
+    );
+
+    animation:
+
+    barShine 3s linear infinite;
+
+}
+
+@keyframes barShine{
+
+    from{
+
+        transform:translateX(-100%);
+
+    }
+
+    to{
+
+        transform:translateX(250%);
+
+    }
+
+}
+
+/*==========================================================
+                    SUMMARY CARD
+==========================================================*/
+
+.summary-card:hover{
+
+    transform:
+
+    translateY(-8px)
+
+    scale(1.03);
+
+}
+
+/*==========================================================
+                    PRIMARY BUTTON
+==========================================================*/
+
+.process-primary-btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.process-primary-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:60%;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.45),
+
+        transparent
+
+    );
+
+}
+
+.process-primary-btn:hover::before{
+
+    animation:
+
+    buttonShine .8s forwards;
+
+}
+
+@keyframes buttonShine{
+
+    from{
+
+        left:-120%;
+
+    }
+
+    to{
+
+        left:160%;
+
+    }
+
+}
+
+/*==========================================================
+                    SECONDARY BUTTON
+==========================================================*/
+
+.process-secondary-btn:hover{
+
+    transform:
+
+    translateY(-5px);
+
+}
+
+/*==========================================================
+                    PERFORMANCE
+==========================================================*/
+
+.process-step,
+.process-panel,
+.summary-card,
+.step-dot,
+.status-bar span{
+
+    will-change:
+
+    transform,
+
+    opacity;
+
+}
+
+/*==========================================================
+                    REDUCED MOTION
+==========================================================*/
+
+@media (prefers-reduced-motion:reduce){
+
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+    }
+
+}

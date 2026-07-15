@@ -1,0 +1,291 @@
+/*==========================================================
+                    WORKSPACE
+==========================================================*/
+
+.process-workspace{
+
+    display:grid;
+
+    grid-template-columns:1.1fr .9fr;
+
+    gap:80px;
+
+    align-items:start;
+
+}
+
+/*==========================================================
+                    TIMELINE
+==========================================================*/
+
+.process-timeline{
+
+    position:relative;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:38px;
+
+}
+
+/*==========================================================
+                    VERTICAL LINE
+==========================================================*/
+
+.process-timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    bottom:0;
+
+    left:48px;
+
+    width:2px;
+
+    background:
+
+    linear-gradient(
+
+        180deg,
+
+        rgba(41,247,255,.5),
+
+        rgba(41,247,255,.08)
+
+    );
+
+}
+
+/*==========================================================
+                    STEP
+==========================================================*/
+
+.process-step{
+
+    position:relative;
+
+    display:grid;
+
+    grid-template-columns:70px 40px 1fr;
+
+    gap:24px;
+
+    align-items:flex-start;
+
+}
+
+/*==========================================================
+                    NUMBER
+==========================================================*/
+
+.step-number{
+
+    font-size:1.05rem;
+
+    font-weight:700;
+
+    color:#29f7ff;
+
+    letter-spacing:.08em;
+
+    padding-top:6px;
+
+}
+
+/*==========================================================
+                    LINE
+==========================================================*/
+
+.step-line{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+/*==========================================================
+                    DOT
+==========================================================*/
+
+.step-dot{
+
+    width:18px;
+
+    height:18px;
+
+    border-radius:50%;
+
+    border:2px solid #29f7ff;
+
+    background:#06111d;
+
+    box-shadow:
+
+        0 0 0 6px rgba(41,247,255,.08);
+
+    z-index:2;
+
+}
+
+/*==========================================================
+                    CONTENT
+==========================================================*/
+
+.step-content{
+
+    position:relative;
+
+    padding:28px 30px;
+
+    border:1px solid rgba(41,247,255,.12);
+
+    border-radius:24px;
+
+    background:
+
+    linear-gradient(
+
+        180deg,
+
+        rgba(18,34,54,.92),
+
+        rgba(10,22,37,.95)
+
+    );
+
+    backdrop-filter:blur(20px);
+
+    transition:
+
+    transform .35s ease,
+
+    border-color .35s ease,
+
+    box-shadow .35s ease;
+
+}
+
+/*==========================================================
+                    TAG
+==========================================================*/
+
+.step-tag{
+
+    display:inline-flex;
+
+    padding:8px 18px;
+
+    margin-bottom:18px;
+
+    border-radius:999px;
+
+    border:1px solid rgba(41,247,255,.18);
+
+    background:rgba(41,247,255,.08);
+
+    color:#8eeeff;
+
+    font-size:.72rem;
+
+    font-weight:700;
+
+    letter-spacing:.12em;
+
+    text-transform:uppercase;
+
+}
+
+/*==========================================================
+                    TITLE
+==========================================================*/
+
+.step-content h3{
+
+    margin:0 0 18px;
+
+    font-size:2rem;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+}
+
+/*==========================================================
+                    DESCRIPTION
+==========================================================*/
+
+.step-content p{
+
+    margin:0;
+
+    color:#9fb4c9;
+
+    line-height:1.9;
+
+    font-size:1rem;
+
+}
+
+/*==========================================================
+                    ACTIVE
+==========================================================*/
+
+.process-step.active .step-dot{
+
+    background:#29f7ff;
+
+    box-shadow:
+
+        0 0 20px #29f7ff,
+
+        0 0 45px rgba(41,247,255,.45);
+
+}
+
+.process-step.active .step-content{
+
+    border-color:rgba(41,247,255,.45);
+
+    box-shadow:
+
+        0 25px 60px rgba(0,0,0,.35),
+
+        0 0 40px rgba(41,247,255,.12);
+
+}
+
+/*==========================================================
+                    HOVER
+==========================================================*/
+
+.process-step:hover .step-content{
+
+    transform:translateY(-8px);
+
+    border-color:rgba(41,247,255,.35);
+
+    box-shadow:
+
+        0 30px 70px rgba(0,0,0,.4),
+
+        0 0 35px rgba(41,247,255,.14);
+
+}
+
+.process-step:hover .step-dot{
+
+    background:#29f7ff;
+
+    transform:scale(1.15);
+
+}

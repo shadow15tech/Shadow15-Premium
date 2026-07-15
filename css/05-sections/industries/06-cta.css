@@ -1,30 +1,22 @@
 /*==========================================================
-
-                SHADOW15
-
-            INDUSTRIES V3
-
-                CTA
-
+                    CTA SECTION
 ==========================================================*/
-
-
-/*=========================================
-CTA
-=========================================*/
 
 .industries-cta{
 
     position:relative;
 
-    margin-top:140px;
+    width:100%;
+
+    margin-top:8rem;
+
+    z-index:5;
 
 }
 
-
-/*=========================================
-CONTAINER
-=========================================*/
+/*==========================================================
+                    CTA CONTAINER
+==========================================================*/
 
 .industries-cta-container{
 
@@ -34,75 +26,78 @@ CONTAINER
 
     display:grid;
 
-    grid-template-columns:1.3fr .8fr;
+    grid-template-columns:1.3fr .9fr;
 
-    gap:70px;
+    gap:4rem;
 
-    align-items:center;
+    padding:4rem;
 
-    padding:70px;
-
-    border-radius:36px;
+    border-radius:32px;
 
     background:
 
-        linear-gradient(
-
-            135deg,
-
-            rgba(255,255,255,.06),
-
-            rgba(255,255,255,.025)
-
-        );
+    linear-gradient(
+    180deg,
+    rgba(255,255,255,.05),
+    rgba(255,255,255,.02));
 
     border:1px solid rgba(255,255,255,.08);
 
-    backdrop-filter:blur(30px);
-
-    -webkit-backdrop-filter:blur(30px);
+    backdrop-filter:blur(24px);
 
 }
 
-
-/*=========================================
-BACKGROUND GLOW
-=========================================*/
+/*==========================================================
+                    CTA GLOW
+==========================================================*/
 
 .industries-cta-glow{
 
     position:absolute;
 
-    width:520px;
+    width:600px;
 
-    height:520px;
+    height:600px;
 
     right:-180px;
 
-    top:-160px;
+    top:-180px;
 
     border-radius:50%;
 
     background:
 
-        radial-gradient(
+    radial-gradient(
 
-            circle,
+        circle,
 
-            rgba(0,231,212,.22),
+        rgba(32,245,255,.10),
 
-            transparent 72%
+        transparent 72%
 
-        );
+    );
 
-    filter:blur(100px);
+    filter:blur(70px);
+
+    pointer-events:none;
 
 }
 
+/*==========================================================
+                    LEFT
+==========================================================*/
 
-/*=========================================
-BADGE
-=========================================*/
+.industries-cta-content{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+/*==========================================================
+                    BADGE
+==========================================================*/
 
 .cta-badge{
 
@@ -110,90 +105,97 @@ BADGE
 
     align-items:center;
 
-    padding:12px 20px;
+    padding:.7rem 1.4rem;
 
     border-radius:999px;
 
-    background:rgba(0,231,212,.10);
+    background:rgba(32,245,255,.08);
 
-    border:1px solid rgba(0,231,212,.18);
+    border:1px solid rgba(32,245,255,.18);
 
-    color:#00E7D4;
+    color:#84ffff;
 
-    font-size:.82rem;
+    font-size:.78rem;
 
     font-weight:700;
 
-    letter-spacing:.14em;
+    letter-spacing:.18em;
+
+    text-transform:uppercase;
+
+    margin-bottom:1.5rem;
 
 }
 
-
-/*=========================================
-TITLE
-=========================================*/
+/*==========================================================
+                    TITLE
+==========================================================*/
 
 .industries-cta-content h2{
 
-    margin:28px 0 0;
-
-    color:#FFFFFF;
-
-    font-family:"Sora",sans-serif;
-
-    font-size:clamp(2.8rem,4vw,4rem);
+    font-size:clamp(2.4rem,4vw,3.8rem);
 
     line-height:1.1;
 
-}
+    color:#ffffff;
 
+    margin-bottom:1.6rem;
+
+}
 
 .industries-cta-content h2 span{
 
     display:block;
 
-    margin-top:12px;
+    background:
 
-    color:#00E7D4;
+    linear-gradient(
+
+        90deg,
+
+        #20f5ff,
+
+        #9ffff4
+
+    );
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
 
 }
 
-
-/*=========================================
-DESCRIPTION
-=========================================*/
+/*==========================================================
+                    DESCRIPTION
+==========================================================*/
 
 .industries-cta-content p{
 
-    margin:30px 0 0;
-
-    max-width:620px;
-
-    color:#9CB2C8;
+    font-size:1.05rem;
 
     line-height:1.9;
 
-    font-size:1rem;
+    color:rgba(255,255,255,.72);
+
+    max-width:620px;
 
 }
 
-
-/*=========================================
-FEATURES
-=========================================*/
+/*==========================================================
+                    FEATURES
+==========================================================*/
 
 .cta-features{
 
-    display:flex;
+    display:grid;
 
-    flex-wrap:wrap;
+    grid-template-columns:repeat(2,1fr);
 
-    gap:18px;
+    gap:1rem;
 
-    margin-top:36px;
+    margin-top:2.5rem;
 
 }
-
 
 .cta-feature{
 
@@ -201,25 +203,43 @@ FEATURES
 
     align-items:center;
 
-    gap:10px;
+    gap:.75rem;
 
-    color:#D7E5F4;
+    color:rgba(255,255,255,.86);
 
-    font-size:.92rem;
+    font-weight:500;
 
 }
-
 
 .cta-feature i{
 
-    color:#00E7D4;
+    color:#20f5ff;
 
 }
 
+/*==========================================================
+                    RIGHT
+==========================================================*/
 
-/*=========================================
-PRIMARY BUTTON
-=========================================*/
+.industries-cta-actions{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    gap:1.4rem;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+/*==========================================================
+                    PRIMARY BUTTON
+==========================================================*/
 
 .industries-main-btn{
 
@@ -229,45 +249,49 @@ PRIMARY BUTTON
 
     align-items:center;
 
-    gap:12px;
+    gap:.8rem;
 
-    width:100%;
+    padding:1.2rem 2rem;
 
-    height:64px;
-
-    border-radius:18px;
+    border-radius:16px;
 
     background:
 
-        linear-gradient(
+    linear-gradient(
 
-            135deg,
+        135deg,
 
-            #00E7D4,
+        #20f5ff,
 
-            #4ED4FF
+        #72ffe5
 
-        );
+    );
 
-    color:#07111F;
+    color:#07111d;
 
     font-weight:700;
+
+    text-decoration:none;
 
     transition:.35s;
 
 }
 
-
 .industries-main-btn:hover{
 
     transform:translateY(-4px);
 
+    box-shadow:
+
+    0 18px 45px
+
+    rgba(32,245,255,.25);
+
 }
 
-
-/*=========================================
-SECONDARY
-=========================================*/
+/*==========================================================
+                    SECONDARY BUTTON
+==========================================================*/
 
 .industries-secondary-btn{
 
@@ -277,33 +301,33 @@ SECONDARY
 
     align-items:center;
 
-    margin-top:18px;
+    padding:1.2rem;
 
-    height:58px;
+    border-radius:16px;
 
-    border-radius:18px;
+    border:1px solid rgba(255,255,255,.10);
 
-    border:1px solid rgba(255,255,255,.08);
+    background:rgba(255,255,255,.03);
 
-    background:rgba(255,255,255,.04);
+    color:#ffffff;
 
-    color:#FFFFFF;
+    text-decoration:none;
 
     transition:.35s;
 
 }
 
-
 .industries-secondary-btn:hover{
 
-    border-color:#00E7D4;
+    border-color:rgba(32,245,255,.35);
+
+    background:rgba(32,245,255,.05);
 
 }
 
-
-/*=========================================
-STATS
-=========================================*/
+/*==========================================================
+                    STATS
+==========================================================*/
 
 .industries-stats{
 
@@ -311,86 +335,45 @@ STATS
 
     grid-template-columns:repeat(3,1fr);
 
-    gap:20px;
+    gap:1rem;
 
-    margin-top:40px;
+    margin-top:2rem;
 
 }
-
 
 .industry-stat{
 
+    padding:1.4rem;
+
     text-align:center;
 
-}
+    border-radius:20px;
 
+    background:rgba(255,255,255,.03);
+
+    border:1px solid rgba(255,255,255,.06);
+
+}
 
 .industry-stat h3{
 
-    margin:0;
-
-    color:#00E7D4;
-
-    font-family:"Sora",sans-serif;
-
     font-size:2rem;
 
-}
+    color:#ffffff;
 
+    margin-bottom:.4rem;
+
+}
 
 .industry-stat span{
 
-    display:block;
-
-    margin-top:8px;
-
-    color:#9CB2C8;
-
     font-size:.82rem;
 
-}
+    color:rgba(255,255,255,.65);
 
+    text-transform:uppercase;
 
-/*=========================================
-CTA PANEL
-=========================================*/
-
-.industries-cta-container{
-
-    transition:
-
-        transform .45s,
-
-        border-color .35s,
-
-        box-shadow .45s;
-
-}
-
-
-.industries-cta-container:hover{
-
-    transform:translateY(-8px);
-
-    border-color:rgba(0,231,212,.18);
-
-    box-shadow:
-
-        0 35px 80px rgba(0,0,0,.35);
-
-}
-
-
-.industries-main-btn i{
-
-    transition:.35s;
-
-}
-
-
-.industries-main-btn:hover i{
-
-    transform:translateX(6px);
+    letter-spacing:.08em;
 
 }
 
