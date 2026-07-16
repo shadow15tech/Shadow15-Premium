@@ -1,0 +1,245 @@
+/*==========================================================
+                    FOOTER TOP
+==========================================================*/
+
+.footer-top{
+
+    position:relative;
+
+    z-index:5;
+
+    max-width:980px;
+
+    margin:0 auto 120px;
+
+    text-align:center;
+
+}
+
+/*==========================================================
+                    LOGO
+==========================================================*/
+
+.footer-logo{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-bottom:28px;
+
+}
+
+.footer-logo img{
+
+    width:220px;
+
+    height:auto;
+
+    object-fit:contain;
+
+}
+
+/*==========================================================
+                    TAGLINE
+==========================================================*/
+
+.footer-tagline{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:12px 26px;
+
+    margin-bottom:34px;
+
+    border:1px solid rgba(41,247,255,.18);
+
+    border-radius:999px;
+
+    background:rgba(13,26,44,.60);
+
+    backdrop-filter:blur(18px);
+
+    color:#b7d8ea;
+
+    font-size:.82rem;
+
+    font-weight:600;
+
+    letter-spacing:.18em;
+
+    text-transform:uppercase;
+
+}
+
+/*==========================================================
+                    TITLE
+==========================================================*/
+
+.footer-title{
+
+    margin:0;
+
+    color:#ffffff;
+
+    font-size:5.2rem;
+
+    font-weight:800;
+
+    line-height:1;
+
+    letter-spacing:-3px;
+
+}
+
+.footer-title span{
+
+    display:block;
+
+    margin-top:12px;
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        #29f7ff,
+
+        #8af7ff,
+
+        #67ffd8
+
+    );
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    background-clip:text;
+
+}
+
+/*==========================================================
+                    DESCRIPTION
+==========================================================*/
+
+.footer-description{
+
+    max-width:760px;
+
+    margin:42px auto 0;
+
+    color:#9fb4c9;
+
+    font-size:1.12rem;
+
+    line-height:2;
+
+}
+
+/*==========================================================
+                    BUTTONS
+==========================================================*/
+
+.footer-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+    margin-top:55px;
+
+}
+
+/*==========================================================
+                    PRIMARY BUTTON
+==========================================================*/
+
+.footer-primary-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:18px 34px;
+
+    border-radius:999px;
+
+    text-decoration:none;
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        #29f7ff,
+
+        #67ffd8
+
+    );
+
+    color:#07131d;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+/*==========================================================
+                    SECONDARY BUTTON
+==========================================================*/
+
+.footer-secondary-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:18px 34px;
+
+    border:1px solid rgba(255,255,255,.10);
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.03);
+
+    backdrop-filter:blur(15px);
+
+    text-decoration:none;
+
+    color:#ffffff;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+/*==========================================================
+                    BUTTON HOVER
+==========================================================*/
+
+.footer-primary-btn:hover,
+
+.footer-secondary-btn:hover{
+
+    transform:translateY(-5px);
+
+}

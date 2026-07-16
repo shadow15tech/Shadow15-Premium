@@ -1,0 +1,338 @@
+/*==========================================================
+                    GLOBAL TRANSITIONS
+==========================================================*/
+
+.testimonial-card,
+.testimonial-prev,
+.testimonial-next,
+.trust-item{
+
+    transition:
+
+    transform .35s ease,
+
+    box-shadow .35s ease,
+
+    border-color .35s ease,
+
+    background .35s ease,
+
+    color .35s ease,
+
+    opacity .35s ease;
+
+}
+
+/*==========================================================
+                    CARD FLOAT
+==========================================================*/
+
+.testimonial-card{
+
+    animation:
+
+    testimonialFloat 8s ease-in-out infinite;
+
+}
+
+@keyframes testimonialFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==========================================================
+                    CARD HOVER
+==========================================================*/
+
+.testimonial-card:hover{
+
+    transform:
+
+    translateY(-12px);
+
+}
+
+/*==========================================================
+                    GLOW PULSE
+==========================================================*/
+
+.testimonial-card::before{
+
+    animation:
+
+    testimonialGlow 6s ease-in-out infinite;
+
+}
+
+@keyframes testimonialGlow{
+
+    0%{
+
+        opacity:.18;
+
+        transform:
+
+        translateX(-50%)
+
+        scale(1);
+
+    }
+
+    50%{
+
+        opacity:.30;
+
+        transform:
+
+        translateX(-50%)
+
+        scale(1.08);
+
+    }
+
+    100%{
+
+        opacity:.18;
+
+        transform:
+
+        translateX(-50%)
+
+        scale(1);
+
+    }
+
+}
+
+/*==========================================================
+                    STAR SHINE
+==========================================================*/
+
+.testimonial-stars i{
+
+    animation:
+
+    starTwinkle 3s ease-in-out infinite;
+
+}
+
+.testimonial-stars i:nth-child(2){
+
+    animation-delay:.15s;
+
+}
+
+.testimonial-stars i:nth-child(3){
+
+    animation-delay:.30s;
+
+}
+
+.testimonial-stars i:nth-child(4){
+
+    animation-delay:.45s;
+
+}
+
+.testimonial-stars i:nth-child(5){
+
+    animation-delay:.60s;
+
+}
+
+@keyframes starTwinkle{
+
+    0%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+    50%{
+
+        transform:scale(1.18);
+
+        opacity:.75;
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+/*==========================================================
+                    AVATAR
+==========================================================*/
+
+.client-avatar img{
+
+    transition:
+
+    transform .45s ease;
+
+}
+
+.testimonial-card:hover
+
+.client-avatar img{
+
+    transform:scale(1.08);
+
+}
+
+/*==========================================================
+                    BUTTON SHINE
+==========================================================*/
+
+.testimonial-prev,
+
+.testimonial-next{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.testimonial-prev::before,
+
+.testimonial-next::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:60%;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.45),
+
+        transparent
+
+    );
+
+}
+
+.testimonial-prev:hover::before,
+
+.testimonial-next:hover::before{
+
+    animation:
+
+    navShine .8s forwards;
+
+}
+
+@keyframes navShine{
+
+    from{
+
+        left:-120%;
+
+    }
+
+    to{
+
+        left:160%;
+
+    }
+
+}
+
+/*==========================================================
+                    TRUST ITEM
+==========================================================*/
+
+.trust-item:hover{
+
+    transform:
+
+    translateY(-6px);
+
+}
+
+.trust-item strong{
+
+    transition:
+
+    color .35s ease;
+
+}
+
+.trust-item:hover strong{
+
+    color:#7efcff;
+
+}
+
+/*==========================================================
+                    PERFORMANCE
+==========================================================*/
+
+.testimonial-card,
+
+.client-avatar img,
+
+.trust-item{
+
+    will-change:
+
+    transform,
+
+    opacity;
+
+}
+
+/*==========================================================
+                    REDUCED MOTION
+==========================================================*/
+
+@media (prefers-reduced-motion:reduce){
+
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+    }
+
+}

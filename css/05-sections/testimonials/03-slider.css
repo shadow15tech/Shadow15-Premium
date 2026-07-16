@@ -1,0 +1,273 @@
+/*==========================================================
+                    SLIDER
+==========================================================*/
+
+.testimonials-slider{
+
+    position:relative;
+
+    overflow:visible;
+
+    padding-bottom:90px;
+
+}
+
+/*==========================================================
+                    SWIPER WRAPPER
+==========================================================*/
+
+.testimonials-slider .swiper-wrapper{
+
+    align-items:stretch;
+
+}
+
+/*==========================================================
+                    SWIPER SLIDE
+==========================================================*/
+
+.testimonials-slider .swiper-slide{
+
+    height:auto;
+
+    display:flex;
+
+}
+
+/*==========================================================
+                    NAVIGATION
+==========================================================*/
+
+.testimonials-navigation{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:18px;
+
+    margin-top:50px;
+
+}
+
+/*==========================================================
+                    NAV BUTTON
+==========================================================*/
+
+.testimonial-prev,
+
+.testimonial-next{
+
+    width:60px;
+
+    height:60px;
+
+    border:none;
+
+    outline:none;
+
+    cursor:pointer;
+
+    border-radius:50%;
+
+    background:
+
+    rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:#ffffff;
+
+    font-size:1rem;
+
+    transition:
+
+    .35s ease;
+
+}
+
+/*==========================================================
+                    NAV HOVER
+==========================================================*/
+
+.testimonial-prev:hover,
+
+.testimonial-next:hover{
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        #29f7ff,
+
+        #67ffd8
+
+    );
+
+    color:#06111d;
+
+    transform:translateY(-5px);
+
+    box-shadow:
+
+    0 15px 35px rgba(41,247,255,.25);
+
+}
+
+/*==========================================================
+                    PAGINATION
+==========================================================*/
+
+.testimonials-pagination{
+
+    position:relative;
+
+    margin-top:45px;
+
+    text-align:center;
+
+}
+
+/*==========================================================
+                    BULLET
+==========================================================*/
+
+.testimonials-pagination
+
+.swiper-pagination-bullet{
+
+    width:12px;
+
+    height:12px;
+
+    margin:0 8px !important;
+
+    opacity:1;
+
+    border-radius:50%;
+
+    background:
+
+    rgba(255,255,255,.15);
+
+    transition:.35s;
+
+}
+
+/*==========================================================
+                    ACTIVE BULLET
+==========================================================*/
+
+.testimonials-pagination
+
+.swiper-pagination-bullet-active{
+
+    background:#29f7ff;
+
+    transform:scale(1.35);
+
+    box-shadow:
+
+    0 0 15px rgba(41,247,255,.5);
+
+}
+
+/*==========================================================
+                    TRUST BAR
+==========================================================*/
+
+.testimonials-trust{
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(4,1fr);
+
+    align-items:center;
+
+    gap:30px;
+
+    margin-top:120px;
+
+    padding:40px;
+
+    border-radius:28px;
+
+    background:
+
+    rgba(255,255,255,.03);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+}
+
+/*==========================================================
+                    TRUST ITEM
+==========================================================*/
+
+.trust-item{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+/*==========================================================
+                    NUMBER
+==========================================================*/
+
+.trust-item strong{
+
+    color:#29f7ff;
+
+    font-size:2.4rem;
+
+    font-weight:800;
+
+    line-height:1;
+
+}
+
+/*==========================================================
+                    LABEL
+==========================================================*/
+
+.trust-item span{
+
+    margin-top:12px;
+
+    color:#9fb4c9;
+
+    line-height:1.7;
+
+}
+
+/*==========================================================
+                    DIVIDER
+==========================================================*/
+
+.trust-divider{
+
+    width:1px;
+
+    height:70px;
+
+    justify-self:center;
+
+    background:
+
+    rgba(255,255,255,.08);
+
+}

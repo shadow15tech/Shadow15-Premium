@@ -150,3 +150,58 @@
 @import url("./05-sections/metrics/05-animation.css");
 
 @import url("./05-sections/metrics/06-responsive.css");
+
+
+
+
+/*==========================================================
+                    TESTIMONIALS
+==========================================================*/
+
+@import url("./05-sections/testimonials/01-background.css");
+
+@import url("./05-sections/testimonials/02-heading.css");
+
+@import url("./05-sections/testimonials/03-slider.css");
+
+@import url("./05-sections/testimonials/04-cards.css");
+
+@import url("./05-sections/testimonials/05-animation.css");
+
+@import url("./05-sections/testimonials/06-responsive.css");
+
+
+/*==========================================================
+                    FAQ
+==========================================================*/
+
+@import url("./05-sections/FAQ/01-background.css");
+
+@import url("./05-sections/FAQ/02-heading.css");
+
+@import url("./05-sections/FAQ/03-layout.css");
+
+@import url("./05-sections/FAQ/04-accordion.css");
+
+@import url("./05-sections/FAQ/05-animation.css");
+
+@import url("./05-sections/FAQ/06-responsive.css");
+
+
+
+
+/*==========================================================
+                    FOOTER IMPORTS
+==========================================================*/
+
+@import url("./05-sections/footer/01-background.css");
+
+@import url("./05-sections/footer/02-heading.css");
+
+@import url("./05-sections/footer/03-layout.css");
+
+@import url("./05-sections/footer/04-components.css");
+
+@import url("./05-sections/footer/05-animation.css");
+
+@import url("./05-sections/footer/06-responsive.css");

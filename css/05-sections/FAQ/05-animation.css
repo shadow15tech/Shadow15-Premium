@@ -1,0 +1,309 @@
+/*==========================================================
+                    GLOBAL TRANSITIONS
+==========================================================*/
+
+.faq-item,
+.faq-icon,
+.support-card,
+.support-button,
+.support-feature{
+
+    transition:
+
+    transform .35s ease,
+
+    box-shadow .35s ease,
+
+    border-color .35s ease,
+
+    background .35s ease,
+
+    color .35s ease,
+
+    opacity .35s ease;
+
+}
+
+/*==========================================================
+                    SUPPORT CARD
+==========================================================*/
+
+.support-card{
+
+    animation:
+
+    supportFloat 7s ease-in-out infinite;
+
+}
+
+@keyframes supportFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==========================================================
+                    SUPPORT GLOW
+==========================================================*/
+
+.support-card::before{
+
+    animation:
+
+    supportGlow 6s ease-in-out infinite;
+
+}
+
+@keyframes supportGlow{
+
+    0%{
+
+        opacity:.18;
+
+        transform:
+
+        translateX(-50%)
+
+        scale(1);
+
+    }
+
+    50%{
+
+        opacity:.30;
+
+        transform:
+
+        translateX(-50%)
+
+        scale(1.08);
+
+    }
+
+    100%{
+
+        opacity:.18;
+
+        transform:
+
+        translateX(-50%)
+
+        scale(1);
+
+    }
+
+}
+
+/*==========================================================
+                    ICON
+==========================================================*/
+
+.support-icon{
+
+    animation:
+
+    supportIconPulse 3s ease-in-out infinite;
+
+}
+
+@keyframes supportIconPulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.08);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+/*==========================================================
+                    FAQ ITEM
+==========================================================*/
+
+.faq-item:hover{
+
+    transform:
+
+    translateY(-6px);
+
+}
+
+/*==========================================================
+                    ICON ROTATION
+==========================================================*/
+
+.faq-icon{
+
+    transition:
+
+    transform .35s ease,
+
+    background .35s ease,
+
+    color .35s ease;
+
+}
+
+.faq-item.active
+
+.faq-icon{
+
+    transform:rotate(45deg);
+
+}
+
+/*==========================================================
+                    BUTTON
+==========================================================*/
+
+.support-button{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.support-button::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:60%;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.45),
+
+        transparent
+
+    );
+
+}
+
+.support-button:hover::before{
+
+    animation:
+
+    supportButtonShine .8s forwards;
+
+}
+
+@keyframes supportButtonShine{
+
+    from{
+
+        left:-120%;
+
+    }
+
+    to{
+
+        left:160%;
+
+    }
+
+}
+
+/*==========================================================
+                    FEATURE
+==========================================================*/
+
+.support-feature:hover{
+
+    transform:
+
+    translateX(8px);
+
+}
+
+.support-feature i{
+
+    transition:
+
+    color .35s ease,
+
+    transform .35s ease;
+
+}
+
+.support-feature:hover i{
+
+    color:#7efcff;
+
+    transform:scale(1.2);
+
+}
+
+/*==========================================================
+                    PERFORMANCE
+==========================================================*/
+
+.support-card,
+.faq-item,
+.support-icon{
+
+    will-change:
+
+    transform,
+
+    opacity;
+
+}
+
+/*==========================================================
+                    REDUCED MOTION
+==========================================================*/
+
+@media (prefers-reduced-motion:reduce){
+
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+    }
+
+}

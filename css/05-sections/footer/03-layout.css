@@ -1,0 +1,407 @@
+/*==========================================================
+                    FOOTER MAIN
+==========================================================*/
+
+.footer-main{
+
+    display:grid;
+
+    grid-template-columns:1.3fr 1fr 1fr 1fr;
+
+    gap:70px;
+
+    margin-bottom:90px;
+
+    align-items:start;
+
+}
+
+/*==========================================================
+                    COLUMN
+==========================================================*/
+
+.footer-column{
+
+    position:relative;
+
+}
+
+/*==========================================================
+                    COLUMN TITLE
+==========================================================*/
+
+.footer-column-title{
+
+    margin-bottom:30px;
+
+    color:#ffffff;
+
+    font-size:1.35rem;
+
+    font-weight:700;
+
+    letter-spacing:.02em;
+
+}
+
+/*==========================================================
+                    COMPANY DESCRIPTION
+==========================================================*/
+
+.footer-company-description{
+
+    margin-bottom:35px;
+
+    color:#9eb5c8;
+
+    line-height:2;
+
+}
+
+/*==========================================================
+                    COMPANY META
+==========================================================*/
+
+.footer-company-meta{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+/*==========================================================
+                    COMPANY ITEM
+==========================================================*/
+
+.footer-company-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    color:#d8e7f3;
+
+}
+
+.footer-company-item i{
+
+    color:#29f7ff;
+
+    font-size:1rem;
+
+}
+
+/*==========================================================
+                    STATUS DOT
+==========================================================*/
+
+.footer-status-dot{
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:#3dff7a;
+
+    box-shadow:
+
+        0 0 14px #3dff7a;
+
+}
+
+/*==========================================================
+                    LINKS
+==========================================================*/
+
+.footer-links-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+    list-style:none;
+
+}
+
+.footer-links-list li{
+
+    list-style:none;
+
+}
+
+.footer-links-list a{
+
+    color:#9eb5c8;
+
+    text-decoration:none;
+
+    transition:.35s;
+
+}
+
+.footer-links-list a:hover{
+
+    color:#29f7ff;
+
+    padding-left:10px;
+
+}
+
+/*==========================================================
+                    CONTACT
+==========================================================*/
+
+.footer-contact-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:22px;
+
+    list-style:none;
+
+}
+
+.footer-contact-list li{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:15px;
+
+    color:#dce9f4;
+
+}
+
+.footer-contact-list i{
+
+    width:18px;
+
+    margin-top:3px;
+
+    color:#29f7ff;
+
+}
+
+.footer-contact-list a{
+
+    color:#9eb5c8;
+
+    text-decoration:none;
+
+    transition:.35s;
+
+}
+
+.footer-contact-list a:hover{
+
+    color:#29f7ff;
+
+}
+
+/*==========================================================
+                    SOCIAL
+==========================================================*/
+
+.footer-social{
+
+    padding:70px 0;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    text-align:center;
+
+}
+
+/*==========================================================
+                    SOCIAL TITLE
+==========================================================*/
+
+.footer-social-title{
+
+    margin-bottom:16px;
+
+    color:#ffffff;
+
+    font-size:2rem;
+
+    font-weight:700;
+
+}
+
+/*==========================================================
+                    SOCIAL DESCRIPTION
+==========================================================*/
+
+.footer-social-description{
+
+    max-width:650px;
+
+    margin:0 auto 40px;
+
+    color:#9eb5c8;
+
+    line-height:1.9;
+
+}
+
+/*==========================================================
+                    SOCIAL ICONS
+==========================================================*/
+
+.footer-social-icons{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
+}
+
+/*==========================================================
+                    SOCIAL LINK
+==========================================================*/
+
+.footer-social-link{
+
+    width:62px;
+
+    height:62px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    background:rgba(255,255,255,.03);
+
+    color:#ffffff;
+
+    text-decoration:none;
+
+    font-size:1.2rem;
+
+    transition:.35s;
+
+}
+
+.footer-social-link:hover{
+
+    color:#08111b;
+
+    background:#29f7ff;
+
+    transform:translateY(-6px);
+
+}
+
+/*==========================================================
+                    DIVIDER
+==========================================================*/
+
+.footer-divider{
+
+    width:100%;
+
+    height:1px;
+
+    margin:60px 0;
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.12),
+
+        transparent
+
+    );
+
+}
+
+/*==========================================================
+                    FOOTER BOTTOM
+==========================================================*/
+
+.footer-bottom{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:30px;
+
+}
+
+/*==========================================================
+                    COPYRIGHT
+==========================================================*/
+
+.footer-copyright{
+
+    color:#7f93a6;
+
+}
+
+.footer-copyright strong{
+
+    color:#ffffff;
+
+}
+
+/*==========================================================
+                    POLICY
+==========================================================*/
+
+.footer-policy{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.footer-policy a{
+
+    color:#8ea5b8;
+
+    text-decoration:none;
+
+    transition:.35s;
+
+}
+
+.footer-policy a:hover{
+
+    color:#29f7ff;
+
+}

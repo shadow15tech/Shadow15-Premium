@@ -1,0 +1,281 @@
+/*==========================================================
+                    LARGE LAPTOP
+==========================================================*/
+
+@media (max-width:1400px){
+
+    .footer-container{
+
+        width:min(94%,1300px);
+
+    }
+
+    .footer-title{
+
+        font-size:4.8rem;
+
+    }
+
+}
+
+/*==========================================================
+                    LAPTOP
+==========================================================*/
+
+@media (max-width:1200px){
+
+    .footer-main{
+
+        grid-template-columns:
+
+        repeat(2,1fr);
+
+        gap:60px;
+
+    }
+
+    .footer-title{
+
+        font-size:4rem;
+
+    }
+
+}
+
+/*==========================================================
+                    TABLET
+==========================================================*/
+
+@media (max-width:992px){
+
+    .footer{
+
+        padding:140px 0 50px;
+
+    }
+
+    .footer-top{
+
+        margin-bottom:90px;
+
+    }
+
+    .footer-title{
+
+        font-size:3.3rem;
+
+        letter-spacing:-2px;
+
+    }
+
+    .footer-description{
+
+        font-size:1rem;
+
+    }
+
+    .footer-buttons{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .footer-primary-btn,
+
+    .footer-secondary-btn{
+
+        width:100%;
+
+        max-width:420px;
+
+        justify-content:center;
+
+    }
+
+    .footer-main{
+
+        grid-template-columns:1fr;
+
+        gap:50px;
+
+    }
+
+    .footer-column{
+
+        text-align:center;
+
+    }
+
+    .footer-company-meta{
+
+        align-items:center;
+
+    }
+
+    .footer-contact-list li{
+
+        justify-content:center;
+
+    }
+
+}
+
+/*==========================================================
+                    MOBILE
+==========================================================*/
+
+@media (max-width:768px){
+
+    .footer{
+
+        padding:110px 0 40px;
+
+    }
+
+    .footer-title{
+
+        font-size:2.7rem;
+
+        line-height:1.15;
+
+    }
+
+    .footer-title span{
+
+        margin-top:8px;
+
+    }
+
+    .footer-tagline{
+
+        font-size:.72rem;
+
+        letter-spacing:.14em;
+
+    }
+
+    .footer-description{
+
+        line-height:1.8;
+
+    }
+
+    .footer-logo img{
+
+        width:180px;
+
+    }
+
+    .footer-social-icons{
+
+        gap:14px;
+
+    }
+
+    .footer-social-link{
+
+        width:56px;
+
+        height:56px;
+
+    }
+
+    .footer-bottom{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .footer-policy{
+
+        justify-content:center;
+
+        flex-wrap:wrap;
+
+        row-gap:12px;
+
+    }
+
+}
+
+/*==========================================================
+                    SMALL MOBILE
+==========================================================*/
+
+@media (max-width:480px){
+
+    .footer-container{
+
+        width:92%;
+
+    }
+
+    .footer-title{
+
+        font-size:2.2rem;
+
+    }
+
+    .footer-description{
+
+        font-size:.95rem;
+
+    }
+
+    .footer-column-title{
+
+        font-size:1.2rem;
+
+    }
+
+    .footer-company-description{
+
+        font-size:.95rem;
+
+    }
+
+    .footer-links-list{
+
+        gap:15px;
+
+    }
+
+    .footer-contact-list{
+
+        gap:18px;
+
+    }
+
+    .footer-social-title{
+
+        font-size:1.6rem;
+
+    }
+
+    .footer-social-description{
+
+        font-size:.95rem;
+
+    }
+
+    .footer-social-link{
+
+        width:50px;
+
+        height:50px;
+
+        font-size:1rem;
+
+    }
+
+    .footer-policy{
+
+        gap:10px;
+
+    }
+
+}

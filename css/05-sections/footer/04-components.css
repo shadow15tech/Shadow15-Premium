@@ -1,0 +1,289 @@
+/*==========================================================
+                    PRIMARY BUTTON
+==========================================================*/
+
+.footer-primary-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    padding:18px 34px;
+
+    border:none;
+
+    border-radius:999px;
+
+    background:linear-gradient(135deg,#29f7ff,#67ffd8);
+
+    color:#06111d;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    transition:.35s;
+
+    cursor:pointer;
+
+}
+
+.footer-primary-btn:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+
+    0 20px 45px rgba(41,247,255,.30);
+
+}
+
+/*==========================================================
+                    SECONDARY BUTTON
+==========================================================*/
+
+.footer-secondary-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    padding:18px 34px;
+
+    border-radius:999px;
+
+    border:1px solid rgba(255,255,255,.10);
+
+    background:rgba(255,255,255,.03);
+
+    backdrop-filter:blur(18px);
+
+    color:#ffffff;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.footer-secondary-btn:hover{
+
+    transform:translateY(-6px);
+
+    border-color:#29f7ff;
+
+    background:rgba(41,247,255,.08);
+
+}
+
+/*==========================================================
+                    STATUS
+==========================================================*/
+
+.footer-status-dot{
+
+    position:relative;
+
+}
+
+.footer-status-dot::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-6px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(61,255,122,.45);
+
+}
+
+/*==========================================================
+                    COLUMN LINKS
+==========================================================*/
+
+.footer-links-list a{
+
+    position:relative;
+
+}
+
+.footer-links-list a::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-4px;
+
+    width:0;
+
+    height:1px;
+
+    background:#29f7ff;
+
+    transition:.35s;
+
+}
+
+.footer-links-list a:hover::before{
+
+    width:100%;
+
+}
+
+/*==========================================================
+                    CONTACT LINKS
+==========================================================*/
+
+.footer-contact-list a{
+
+    position:relative;
+
+}
+
+.footer-contact-list a::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-3px;
+
+    width:0;
+
+    height:1px;
+
+    background:#29f7ff;
+
+    transition:.35s;
+
+}
+
+.footer-contact-list a:hover::before{
+
+    width:100%;
+
+}
+
+/*==========================================================
+                    SOCIAL LINK
+==========================================================*/
+
+.footer-social-link{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.footer-social-link::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-100%;
+
+    left:-100%;
+
+    width:200%;
+
+    height:200%;
+
+    background:
+
+    radial-gradient(
+
+        rgba(255,255,255,.18),
+
+        transparent 65%
+
+    );
+
+    transition:.5s;
+
+}
+
+.footer-social-link:hover::before{
+
+    top:-50%;
+
+    left:-50%;
+
+}
+
+/*==========================================================
+                    POLICY LINKS
+==========================================================*/
+
+.footer-policy a{
+
+    position:relative;
+
+}
+
+.footer-policy a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-4px;
+
+    width:0;
+
+    height:1px;
+
+    background:#29f7ff;
+
+    transition:.35s;
+
+}
+
+.footer-policy a:hover::after{
+
+    width:100%;
+
+}
+
+/*==========================================================
+                    LOGO
+==========================================================*/
+
+.footer-logo img{
+
+    transition:
+
+    transform .45s ease,
+
+    filter .45s ease;
+
+}
+
+.footer-logo:hover img{
+
+    transform:scale(1.05);
+
+    filter:drop-shadow(0 0 18px rgba(41,247,255,.35));
+
+}
