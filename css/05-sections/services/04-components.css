@@ -1,0 +1,257 @@
+/*==========================================================
+                    SERVICE CARD
+==========================================================*/
+
+.ss-card{
+
+    padding:38px;
+
+    border-radius:30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.06),
+            rgba(255,255,255,.025)
+        );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(30px);
+
+    overflow:hidden;
+
+    transition:.45s ease;
+
+    box-shadow:
+
+        0 20px 60px rgba(0,0,0,.28),
+
+        inset 0 1px 0 rgba(255,255,255,.05);
+
+}
+
+/*==========================================================
+                CARD TOP
+==========================================================*/
+
+.ss-card-top{
+
+    position:relative;
+
+}
+
+/*==========================================================
+                    ICON
+==========================================================*/
+
+.ss-icon{
+
+    width:78px;
+
+    height:78px;
+
+    border-radius:22px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(0,229,255,.18),
+            rgba(124,102,255,.12)
+        );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:
+
+        0 12px 35px rgba(0,229,255,.10);
+
+}
+
+.ss-icon i{
+
+    font-size:2rem;
+
+    color:#00E5FF;
+
+}
+
+/*==========================================================
+                CONTENT
+==========================================================*/
+
+.ss-content h3{
+
+    color:#FFFFFF;
+
+    font-size:1.55rem;
+
+    font-weight:700;
+
+    line-height:1.3;
+
+}
+
+.ss-content p{
+
+    color:#9FB4C7;
+
+    line-height:1.9;
+
+    font-size:1rem;
+
+}
+
+/*==========================================================
+                    FEATURES
+==========================================================*/
+
+.ss-features li{
+
+    position:relative;
+
+    padding-left:28px;
+
+    color:#D9E8F4;
+
+    line-height:1.8;
+
+}
+
+.ss-features li::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:11px;
+
+    width:9px;
+
+    height:9px;
+
+    border-radius:50%;
+
+    background:#00E5FF;
+
+    box-shadow:
+
+        0 0 10px #00E5FF;
+
+}
+
+/*==========================================================
+                    FOOTER
+==========================================================*/
+
+.ss-footer{
+
+    border-top:1px solid rgba(255,255,255,.06);
+
+}
+
+/*==========================================================
+                    LINK
+==========================================================*/
+
+.ss-footer a{
+
+    color:#FFFFFF;
+
+    font-weight:600;
+
+    transition:.35s ease;
+
+}
+
+.ss-footer a i{
+
+    transition:.35s ease;
+
+}
+
+/*==========================================================
+                CARD HOVER
+==========================================================*/
+
+.ss-card:hover{
+
+    transform:translateY(-12px);
+
+    border-color:rgba(0,229,255,.30);
+
+    box-shadow:
+
+        0 30px 70px rgba(0,0,0,.35),
+
+        0 0 30px rgba(0,229,255,.08);
+
+}
+
+/*==========================================================
+                ICON HOVER
+==========================================================*/
+
+.ss-card:hover .ss-icon{
+
+    transform:rotate(-6deg) scale(1.08);
+
+    box-shadow:
+
+        0 20px 45px rgba(0,229,255,.20);
+
+}
+
+/*==========================================================
+                ICON
+==========================================================*/
+
+.ss-icon,
+
+.ss-icon i{
+
+    transition:.4s ease;
+
+}
+
+.ss-card:hover .ss-icon i{
+
+    transform:scale(1.15);
+
+}
+
+/*==========================================================
+                TITLE HOVER
+==========================================================*/
+
+.ss-card:hover h3{
+
+    color:#00E5FF;
+
+}
+
+/*==========================================================
+                LINK HOVER
+==========================================================*/
+
+.ss-card:hover .ss-footer a{
+
+    color:#00E5FF;
+
+}
+
+.ss-card:hover .ss-footer a i{
+
+    transform:translateX(6px);
+
+}

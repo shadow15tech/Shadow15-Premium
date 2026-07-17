@@ -1,0 +1,316 @@
+/*==========================================================
+                    TRANSITIONS
+==========================================================*/
+
+.sp-card,
+.sp-step,
+.sp-icon,
+.sp-icon i,
+.sp-content h3,
+.sp-card::before{
+
+    transition:
+        transform .45s ease,
+        color .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease,
+        opacity .35s ease;
+
+}
+
+/*==========================================================
+                FLOATING CARDS
+==========================================================*/
+
+.sp-card{
+
+    animation:spCardFloat 8s ease-in-out infinite;
+
+}
+
+.sp-card:nth-child(2){
+
+    animation-delay:.5s;
+
+}
+
+.sp-card:nth-child(3){
+
+    animation-delay:1s;
+
+}
+
+.sp-card:nth-child(4){
+
+    animation-delay:1.5s;
+
+}
+
+.sp-card:nth-child(5){
+
+    animation-delay:2s;
+
+}
+
+.sp-card:nth-child(6){
+
+    animation-delay:2.5s;
+
+}
+
+@keyframes spCardFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==========================================================
+                STEP PULSE
+==========================================================*/
+
+.sp-step{
+
+    animation:spStepPulse 3s ease-in-out infinite;
+
+}
+
+@keyframes spStepPulse{
+
+    0%{
+
+        box-shadow:
+            0 10px 30px rgba(0,229,255,.25);
+
+    }
+
+    50%{
+
+        box-shadow:
+            0 18px 45px rgba(0,229,255,.45);
+
+    }
+
+    100%{
+
+        box-shadow:
+            0 10px 30px rgba(0,229,255,.25);
+
+    }
+
+}
+
+/*==========================================================
+                ICON GLOW
+==========================================================*/
+
+.sp-icon{
+
+    animation:spIconGlow 4s ease-in-out infinite;
+
+}
+
+@keyframes spIconGlow{
+
+    0%{
+
+        box-shadow:
+            0 12px 35px rgba(0,229,255,.08);
+
+    }
+
+    50%{
+
+        box-shadow:
+            0 20px 50px rgba(0,229,255,.20);
+
+    }
+
+    100%{
+
+        box-shadow:
+            0 12px 35px rgba(0,229,255,.08);
+
+    }
+
+}
+
+/*==========================================================
+                TAG DOT
+==========================================================*/
+
+.sp-tag-dot{
+
+    animation:spTagPulse 2s infinite;
+
+}
+
+@keyframes spTagPulse{
+
+    0%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+    50%{
+
+        transform:scale(1.45);
+
+        opacity:.55;
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+/*==========================================================
+            TIMELINE LINE FLOW
+==========================================================*/
+
+.sp-timeline::before{
+
+    background-size:100% 220%;
+
+    animation:spTimelineFlow 6s linear infinite;
+
+}
+
+@keyframes spTimelineFlow{
+
+    from{
+
+        background-position:0 0;
+
+    }
+
+    to{
+
+        background-position:0 220%;
+
+    }
+
+}
+
+/*==========================================================
+            CONNECTOR GLOW
+==========================================================*/
+
+.sp-card::before{
+
+    animation:spConnectorGlow 3s ease-in-out infinite;
+
+}
+
+@keyframes spConnectorGlow{
+
+    0%{
+
+        opacity:.35;
+
+    }
+
+    50%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:.35;
+
+    }
+
+}
+
+/*==========================================================
+                ICON ROTATE
+==========================================================*/
+
+.sp-card:hover .sp-icon{
+
+    animation:spRotate .6s ease;
+
+}
+
+@keyframes spRotate{
+
+    0%{
+
+        transform:rotate(0deg);
+
+    }
+
+    35%{
+
+        transform:rotate(-8deg);
+
+    }
+
+    70%{
+
+        transform:rotate(6deg);
+
+    }
+
+    100%{
+
+        transform:rotate(0deg);
+
+    }
+
+}
+
+/*==========================================================
+            HOVER FLOAT STOP
+==========================================================*/
+
+.sp-card:hover{
+
+    animation-play-state:paused;
+
+}
+
+/*==========================================================
+            REDUCE MOTION
+==========================================================*/
+
+@media (prefers-reduced-motion: reduce){
+
+    .sp-card,
+    .sp-step,
+    .sp-icon,
+    .sp-tag-dot,
+    .sp-card::before,
+    .sp-timeline::before{
+
+        animation:none !important;
+
+    }
+
+}

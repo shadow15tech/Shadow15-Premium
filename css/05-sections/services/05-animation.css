@@ -1,0 +1,354 @@
+/*==========================================================
+                    TRANSITIONS
+==========================================================*/
+
+.ss-card,
+.ss-icon,
+.ss-icon i,
+.ss-footer a,
+.ss-footer a i,
+.ss-content h3{
+
+    transition:
+        transform .45s ease,
+        color .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease,
+        background .35s ease;
+
+}
+
+/*==========================================================
+                    FLOATING CARD
+==========================================================*/
+
+.ss-card{
+
+    animation:ssCardFloat 7s ease-in-out infinite;
+
+}
+
+.ss-card:nth-child(2){
+
+    animation-delay:.4s;
+
+}
+
+.ss-card:nth-child(3){
+
+    animation-delay:.8s;
+
+}
+
+.ss-card:nth-child(4){
+
+    animation-delay:1.2s;
+
+}
+
+.ss-card:nth-child(5){
+
+    animation-delay:1.6s;
+
+}
+
+.ss-card:nth-child(6){
+
+    animation-delay:2s;
+
+}
+
+.ss-card:nth-child(7){
+
+    animation-delay:2.4s;
+
+}
+
+.ss-card:nth-child(8){
+
+    animation-delay:2.8s;
+
+}
+
+.ss-card:nth-child(9){
+
+    animation-delay:3.2s;
+
+}
+
+@keyframes ssCardFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==========================================================
+                    ICON GLOW
+==========================================================*/
+
+.ss-icon{
+
+    animation:ssIconGlow 4s ease-in-out infinite;
+
+}
+
+@keyframes ssIconGlow{
+
+    0%{
+
+        box-shadow:
+            0 12px 35px rgba(0,229,255,.10);
+
+    }
+
+    50%{
+
+        box-shadow:
+            0 20px 50px rgba(0,229,255,.25);
+
+    }
+
+    100%{
+
+        box-shadow:
+            0 12px 35px rgba(0,229,255,.10);
+
+    }
+
+}
+
+/*==========================================================
+                    TAG DOT
+==========================================================*/
+
+.ss-tag-dot{
+
+    animation:ssPulse 2s infinite;
+
+}
+
+@keyframes ssPulse{
+
+    0%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+    50%{
+
+        transform:scale(1.45);
+
+        opacity:.6;
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+/*==========================================================
+                ICON ROTATION
+==========================================================*/
+
+.ss-card:hover .ss-icon{
+
+    animation:ssRotate .6s ease;
+
+}
+
+@keyframes ssRotate{
+
+    0%{
+
+        transform:rotate(0deg);
+
+    }
+
+    40%{
+
+        transform:rotate(-8deg);
+
+    }
+
+    70%{
+
+        transform:rotate(6deg);
+
+    }
+
+    100%{
+
+        transform:rotate(0deg);
+
+    }
+
+}
+
+/*==========================================================
+                CTA ARROW
+==========================================================*/
+
+.ss-card:hover .ss-footer a i{
+
+    animation:ssArrow .8s infinite;
+
+}
+
+@keyframes ssArrow{
+
+    0%{
+
+        transform:translateX(0);
+
+    }
+
+    50%{
+
+        transform:translateX(7px);
+
+    }
+
+    100%{
+
+        transform:translateX(0);
+
+    }
+
+}
+
+/*==========================================================
+                FEATURE BULLETS
+==========================================================*/
+
+.ss-features li::before{
+
+    animation:ssBulletGlow 2.8s infinite;
+
+}
+
+@keyframes ssBulletGlow{
+
+    0%{
+
+        box-shadow:
+            0 0 8px rgba(0,229,255,.35);
+
+    }
+
+    50%{
+
+        box-shadow:
+            0 0 18px rgba(0,229,255,.85);
+
+    }
+
+    100%{
+
+        box-shadow:
+            0 0 8px rgba(0,229,255,.35);
+
+    }
+
+}
+
+/*==========================================================
+                BACKGROUND GLOW
+==========================================================*/
+
+.ss-glow-left{
+
+    animation:ssGlowLeft 12s ease-in-out infinite alternate;
+
+}
+
+.ss-glow-right{
+
+    animation:ssGlowRight 12s ease-in-out infinite alternate;
+
+}
+
+@keyframes ssGlowLeft{
+
+    from{
+
+        transform:translate(0,0);
+
+    }
+
+    to{
+
+        transform:translate(60px,40px);
+
+    }
+
+}
+
+@keyframes ssGlowRight{
+
+    from{
+
+        transform:translate(0,0);
+
+    }
+
+    to{
+
+        transform:translate(-60px,-40px);
+
+    }
+
+}
+
+/*==========================================================
+                HOVER LIFT
+==========================================================*/
+
+.ss-card:hover{
+
+    animation-play-state:paused;
+
+}
+
+/*==========================================================
+            REDUCE MOTION SUPPORT
+==========================================================*/
+
+@media (prefers-reduced-motion: reduce){
+
+    .ss-card,
+    .ss-icon,
+    .ss-tag-dot,
+    .ss-glow-left,
+    .ss-glow-right,
+    .ss-features li::before{
+
+        animation:none !important;
+
+    }
+
+}

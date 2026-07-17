@@ -1,0 +1,295 @@
+/*==========================================================
+                LARGE LAPTOP
+==========================================================*/
+
+@media (max-width:1400px){
+
+    .sp-container{
+
+        width:min(94%,1280px);
+
+    }
+
+}
+
+/*==========================================================
+                    LAPTOP
+==========================================================*/
+
+@media (max-width:1200px){
+
+    .sp-card{
+
+        width:calc(50% - 40px);
+
+    }
+
+}
+
+/*==========================================================
+                    TABLET
+==========================================================*/
+
+@media (max-width:992px){
+
+    .solutions-process{
+
+        padding:110px 0;
+
+    }
+
+    .sp-header{
+
+        margin-bottom:70px;
+
+    }
+
+    .sp-title{
+
+        font-size:clamp(2.3rem,6vw,3.6rem);
+
+    }
+
+    .sp-description{
+
+        font-size:1rem;
+
+    }
+
+    .sp-timeline{
+
+        gap:40px;
+
+        padding-left:70px;
+
+    }
+
+    .sp-timeline::before{
+
+        left:30px;
+
+        transform:none;
+
+    }
+
+    .sp-card{
+
+        width:100%;
+
+        align-self:stretch !important;
+
+        flex-direction:row;
+
+        text-align:left;
+
+    }
+
+    .sp-card:nth-child(odd){
+
+        flex-direction:row;
+
+        text-align:left;
+
+    }
+
+    .sp-card::before{
+
+        left:-40px !important;
+
+        right:auto;
+
+        width:40px;
+
+    }
+
+}
+
+/*==========================================================
+                MOBILE LANDSCAPE
+==========================================================*/
+
+@media (max-width:768px){
+
+    .solutions-process{
+
+        padding:90px 0;
+
+    }
+
+    .sp-header{
+
+        margin-bottom:60px;
+
+    }
+
+    .sp-card{
+
+        padding:28px;
+
+        gap:22px;
+
+    }
+
+    .sp-step{
+
+        width:56px;
+
+        height:56px;
+
+        font-size:1rem;
+
+    }
+
+    .sp-icon{
+
+        width:68px;
+
+        height:68px;
+
+    }
+
+    .sp-icon i{
+
+        font-size:1.7rem;
+
+    }
+
+    .sp-content h3{
+
+        font-size:1.35rem;
+
+    }
+
+}
+
+/*==========================================================
+                    MOBILE
+==========================================================*/
+
+@media (max-width:576px){
+
+    .sp-container{
+
+        width:92%;
+
+    }
+
+    .sp-timeline{
+
+        padding-left:0;
+
+    }
+
+    .sp-timeline::before{
+
+        display:none;
+
+    }
+
+    .sp-card{
+
+        width:100%;
+
+        padding:24px;
+
+        flex-direction:column;
+
+        text-align:center;
+
+        gap:20px;
+
+    }
+
+    .sp-card:nth-child(odd),
+
+    .sp-card:nth-child(even){
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .sp-card::before{
+
+        display:none;
+
+    }
+
+    .sp-step{
+
+        margin:0 auto;
+
+    }
+
+    .sp-icon{
+
+        margin:0 auto;
+
+    }
+
+    .sp-content{
+
+        text-align:center;
+
+    }
+
+}
+
+/*==========================================================
+                SMALL MOBILE
+==========================================================*/
+
+@media (max-width:420px){
+
+    .sp-title{
+
+        font-size:1.8rem;
+
+    }
+
+    .sp-card{
+
+        padding:22px;
+
+    }
+
+    .sp-step{
+
+        width:52px;
+
+        height:52px;
+
+        font-size:.95rem;
+
+    }
+
+    .sp-icon{
+
+        width:62px;
+
+        height:62px;
+
+        border-radius:18px;
+
+    }
+
+    .sp-icon i{
+
+        font-size:1.5rem;
+
+    }
+
+    .sp-content h3{
+
+        font-size:1.2rem;
+
+    }
+
+    .sp-content p{
+
+        font-size:.95rem;
+
+    }
+
+}
