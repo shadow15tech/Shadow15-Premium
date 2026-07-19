@@ -1,0 +1,437 @@
+/*==========================================================
+                PANEL
+==========================================================*/
+
+.aa-panel{
+
+    transition:
+
+        transform .45s cubic-bezier(.22,.61,.36,1),
+
+        box-shadow .45s,
+
+        border-color .45s;
+
+}
+
+.aa-panel:hover{
+
+    transform:translateY(-10px);
+
+    border-color:rgba(0,229,255,.18);
+
+    box-shadow:
+
+        0 60px 140px rgba(0,0,0,.48),
+
+        0 0 90px rgba(0,229,255,.08),
+
+        inset 0 1px rgba(255,255,255,.10);
+
+}
+
+/*==========================================================
+                PANEL SHINE
+==========================================================*/
+
+.aa-panel::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-180%;
+
+    width:45%;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(
+
+        110deg,
+
+        transparent,
+
+        rgba(255,255,255,.14),
+
+        transparent
+
+    );
+
+    transition:left .9s ease;
+
+    pointer-events:none;
+
+}
+
+.aa-panel:hover::after{
+
+    left:160%;
+
+}
+
+/*==========================================================
+                WORKFLOW STEP
+==========================================================*/
+
+.aa-step{
+
+    border:1px solid transparent;
+
+    transition:
+
+        transform .35s,
+
+        border-color .35s,
+
+        background .35s,
+
+        box-shadow .35s;
+
+}
+
+.aa-step:hover{
+
+    transform:translateX(8px);
+
+    border-color:rgba(0,229,255,.14);
+
+    background:rgba(255,255,255,.05);
+
+    box-shadow:
+
+        0 20px 40px rgba(0,0,0,.18);
+
+}
+
+/*==========================================================
+                ICON
+==========================================================*/
+
+.aa-step .icon{
+
+    transition:
+
+        transform .35s,
+
+        box-shadow .35s,
+
+        background .35s;
+
+}
+
+.aa-step:hover .icon{
+
+    transform:
+
+        scale(1.08)
+
+        rotate(-6deg);
+
+    box-shadow:
+
+        0 0 24px rgba(0,229,255,.35);
+
+}
+
+.aa-step.active .icon{
+
+    box-shadow:
+
+        0 0 35px rgba(0,229,255,.40);
+
+}
+
+/*==========================================================
+                CONNECTOR
+==========================================================*/
+
+.aa-line{
+
+    overflow:hidden;
+
+}
+
+.aa-line::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:-100%;
+
+    left:-1px;
+
+    width:4px;
+
+    height:100%;
+
+    background:
+
+        linear-gradient(
+
+            transparent,
+
+            #00E5FF,
+
+            transparent
+
+        );
+
+    animation:dataFlow 2.4s linear infinite;
+
+}
+
+/*==========================================================
+                METRICS
+==========================================================*/
+
+.metric{
+
+    transition:
+
+        transform .35s,
+
+        border-color .35s,
+
+        box-shadow .35s,
+
+        background .35s;
+
+}
+
+.metric:hover{
+
+    transform:translateY(-6px);
+
+    border-color:rgba(0,229,255,.18);
+
+    background:rgba(255,255,255,.07);
+
+    box-shadow:
+
+        0 22px 45px rgba(0,0,0,.22);
+
+}
+
+.metric h4{
+
+    transition:
+
+        color .35s,
+
+        transform .35s;
+
+}
+
+.metric:hover h4{
+
+    color:#00E5FF;
+
+    transform:translateY(-2px);
+
+}
+
+/*==========================================================
+                BUTTONS
+==========================================================*/
+
+.btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        linear-gradient(
+
+            120deg,
+
+            transparent,
+
+            rgba(255,255,255,.28),
+
+            transparent
+
+        );
+
+    transform:translateX(-180%);
+
+    transition:transform .8s;
+
+}
+
+.btn:hover::before{
+
+    transform:translateX(180%);
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+
+        0 30px 60px rgba(0,229,255,.28);
+
+}
+
+.btn-secondary:hover{
+
+    transform:translateY(-5px);
+
+    border-color:rgba(0,229,255,.22);
+
+    background:rgba(255,255,255,.08);
+
+}
+
+/*==========================================================
+                STATS
+==========================================================*/
+
+.aa-stat{
+
+    transition:
+
+        transform .35s,
+
+        border-color .35s,
+
+        box-shadow .35s;
+
+}
+
+.aa-stat:hover{
+
+    transform:translateY(-6px);
+
+    border-color:rgba(0,229,255,.16);
+
+    box-shadow:
+
+        0 20px 40px rgba(0,0,0,.22);
+
+}
+
+.aa-stat:hover h3{
+
+    color:#00E5FF;
+
+}
+
+/*==========================================================
+                BADGE
+==========================================================*/
+
+.aa-badge{
+
+    transition:
+
+        border-color .35s,
+
+        background .35s,
+
+        transform .35s;
+
+}
+
+.aa-badge:hover{
+
+    transform:translateY(-2px);
+
+    border-color:rgba(0,229,255,.18);
+
+    background:rgba(255,255,255,.07);
+
+}
+
+/*==========================================================
+                STATUS
+==========================================================*/
+
+.status-dot{
+
+    animation:statusPulse 2s ease infinite;
+
+}
+
+/*==========================================================
+                KEYFRAMES
+==========================================================*/
+
+@keyframes dataFlow{
+
+    from{
+
+        top:-100%;
+
+    }
+
+    to{
+
+        top:100%;
+
+    }
+
+}
+
+@keyframes statusPulse{
+
+    0%,100%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+    50%{
+
+        transform:scale(1.5);
+
+        opacity:.45;
+
+    }
+
+}
+
+/*==========================================================
+                TOUCH DEVICES
+==========================================================*/
+
+@media (hover:none){
+
+    .aa-panel:hover,
+
+    .aa-step:hover,
+
+    .metric:hover,
+
+    .aa-stat:hover,
+
+    .btn:hover{
+
+        transform:none;
+
+        box-shadow:none;
+
+    }
+
+}

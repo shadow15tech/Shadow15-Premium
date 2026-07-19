@@ -1,0 +1,251 @@
+/*==========================================================
+                    SECTION
+==========================================================*/
+
+.wcs-section{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:180px 0;
+
+    background:#050816;
+
+    isolation:isolate;
+
+}
+
+/*==========================================================
+                    BACKGROUND
+==========================================================*/
+
+.wcs-bg{
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:0;
+
+    overflow:hidden;
+
+}
+
+/*==========================================================
+                    GRID
+==========================================================*/
+
+.wcs-grid{
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+        linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),
+
+        linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);
+
+    background-size:70px 70px;
+
+    mask-image:radial-gradient(circle at center,black 20%,transparent 85%);
+
+    opacity:.35;
+
+}
+
+/*==========================================================
+                    GLOW
+==========================================================*/
+
+.wcs-glow{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(130px);
+
+    opacity:.55;
+
+}
+
+/*==========================================================
+                    GLOW 01
+==========================================================*/
+
+.wcs-glow-1{
+
+    width:520px;
+
+    height:520px;
+
+    top:-140px;
+
+    left:-120px;
+
+    background:#00E5FF;
+
+}
+
+/*==========================================================
+                    GLOW 02
+==========================================================*/
+
+.wcs-glow-2{
+
+    width:560px;
+
+    height:560px;
+
+    right:-180px;
+
+    bottom:-180px;
+
+    background:#7C66FF;
+
+}
+
+/*==========================================================
+                    CENTER LIGHT
+==========================================================*/
+
+.wcs-section::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:900px;
+
+    height:900px;
+
+    border-radius:50%;
+
+    background:radial-gradient(
+
+        circle,
+
+        rgba(0,229,255,.08),
+
+        transparent 72%
+
+    );
+
+    pointer-events:none;
+
+}
+
+/*==========================================================
+                    TOP HIGHLIGHT
+==========================================================*/
+
+.wcs-section::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+
+        180deg,
+
+        rgba(255,255,255,.03),
+
+        transparent 18%,
+
+        transparent 82%,
+
+        rgba(255,255,255,.02)
+
+    );
+
+    pointer-events:none;
+
+}
+
+/*==========================================================
+                    NOISE
+==========================================================*/
+
+.wcs-noise{
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:url("../../assets/images/noise.png");
+
+    background-repeat:repeat;
+
+    opacity:.025;
+
+    mix-blend-mode:soft-light;
+
+    pointer-events:none;
+
+}
+
+/*==========================================================
+                    VIGNETTE
+==========================================================*/
+
+.wcs-bg::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:radial-gradient(
+
+        circle,
+
+        transparent 45%,
+
+        rgba(0,0,0,.48) 100%
+
+    );
+
+}
+
+/*==========================================================
+                    BOTTOM FADE
+==========================================================*/
+
+.wcs-bg::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    right:0;
+
+    bottom:0;
+
+    height:220px;
+
+    background:linear-gradient(
+
+        to bottom,
+
+        transparent,
+
+        #050816
+
+    );
+
+}

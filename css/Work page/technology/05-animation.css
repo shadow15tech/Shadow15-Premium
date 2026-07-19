@@ -1,0 +1,321 @@
+/*==========================================================
+                    ORBIT RINGS
+==========================================================*/
+
+.wt-core-ring:nth-child(1){
+
+    animation:wtOrbitOne 18s linear infinite;
+
+}
+
+.wt-core-ring:nth-child(2){
+
+    animation:wtOrbitTwo 28s linear infinite reverse;
+
+}
+
+.wt-core-ring:nth-child(3){
+
+    animation:wtOrbitThree 40s linear infinite;
+
+}
+
+@keyframes wtOrbitOne{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+@keyframes wtOrbitTwo{
+
+    from{
+
+        transform:translate(-50%,-50%) rotate(0deg);
+
+    }
+
+    to{
+
+        transform:translate(-50%,-50%) rotate(-360deg);
+
+    }
+
+}
+
+@keyframes wtOrbitThree{
+
+    from{
+
+        transform:translate(-50%,-50%) rotate(0deg);
+
+    }
+
+    to{
+
+        transform:translate(-50%,-50%) rotate(360deg);
+
+    }
+
+}
+
+/*==========================================================
+                    CORE FLOAT
+==========================================================*/
+
+.wt-core{
+
+    animation:wtCoreFloat 8s ease-in-out infinite;
+
+}
+
+@keyframes wtCoreFloat{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-14px);
+
+    }
+
+}
+
+/*==========================================================
+                    CORE PULSE
+==========================================================*/
+
+.wt-logo::before{
+
+    animation:wtPulse 3.5s ease-in-out infinite;
+
+}
+
+@keyframes wtPulse{
+
+    0%,100%{
+
+        opacity:.6;
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:scale(1.12);
+
+    }
+
+}
+
+/*==========================================================
+                    TECH FLOAT
+==========================================================*/
+
+.wt-tech{
+
+    animation:wtFloat 7s ease-in-out infinite;
+
+}
+
+.wt-tech:nth-child(2){animation-delay:.2s;}
+.wt-tech:nth-child(3){animation-delay:.4s;}
+.wt-tech:nth-child(4){animation-delay:.6s;}
+.wt-tech:nth-child(5){animation-delay:.8s;}
+.wt-tech:nth-child(6){animation-delay:1s;}
+.wt-tech:nth-child(7){animation-delay:1.2s;}
+.wt-tech:nth-child(8){animation-delay:1.4s;}
+.wt-tech:nth-child(9){animation-delay:1.6s;}
+.wt-tech:nth-child(10){animation-delay:1.8s;}
+.wt-tech:nth-child(11){animation-delay:2s;}
+.wt-tech:nth-child(12){animation-delay:2.2s;}
+
+@keyframes wtFloat{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+}
+
+/*==========================================================
+                    GRID
+==========================================================*/
+
+.wt-grid{
+
+    animation:wtGridMove 28s linear infinite;
+
+}
+
+@keyframes wtGridMove{
+
+    from{
+
+        background-position:0 0,0 0;
+
+    }
+
+    to{
+
+        background-position:80px 80px,80px 80px;
+
+    }
+
+}
+
+/*==========================================================
+                    GLOWS
+==========================================================*/
+
+.wt-glow-1{
+
+    animation:wtGlowLeft 14s ease-in-out infinite alternate;
+
+}
+
+.wt-glow-2{
+
+    animation:wtGlowRight 16s ease-in-out infinite alternate;
+
+}
+
+@keyframes wtGlowLeft{
+
+    from{
+
+        transform:translate(0,0);
+
+    }
+
+    to{
+
+        transform:translate(70px,50px);
+
+    }
+
+}
+
+@keyframes wtGlowRight{
+
+    from{
+
+        transform:translate(0,0);
+
+    }
+
+    to{
+
+        transform:translate(-70px,-60px);
+
+    }
+
+}
+
+/*==========================================================
+                    FEATURE FLOAT
+==========================================================*/
+
+.wt-feature{
+
+    animation:wtFeatureFloat 8s ease-in-out infinite;
+
+}
+
+.wt-feature:nth-child(2){
+
+    animation-delay:.3s;
+
+}
+
+.wt-feature:nth-child(3){
+
+    animation-delay:.6s;
+
+}
+
+.wt-feature:nth-child(4){
+
+    animation-delay:.9s;
+
+}
+
+@keyframes wtFeatureFloat{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+}
+
+/*==========================================================
+                    HOVER PAUSE
+==========================================================*/
+
+.wt-tech:hover,
+
+.wt-feature:hover{
+
+    animation-play-state:paused;
+
+}
+
+/*==========================================================
+                REDUCED MOTION
+==========================================================*/
+
+@media (prefers-reduced-motion:reduce){
+
+    .wt-core,
+
+    .wt-core-ring,
+
+    .wt-tech,
+
+    .wt-feature,
+
+    .wt-grid,
+
+    .wt-glow-1,
+
+    .wt-glow-2,
+
+    .wt-logo::before{
+
+        animation:none !important;
+
+    }
+
+}

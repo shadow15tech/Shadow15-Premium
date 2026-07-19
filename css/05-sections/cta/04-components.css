@@ -1,0 +1,259 @@
+/*==========================================================
+                    CTA CARD
+==========================================================*/
+
+.scta-card{
+
+    border-radius:36px;
+
+    background:linear-gradient(
+        145deg,
+        rgba(255,255,255,.06),
+        rgba(255,255,255,.02)
+    );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(28px);
+
+    box-shadow:
+
+        0 30px 90px rgba(0,0,0,.30),
+
+        inset 0 1px 0 rgba(255,255,255,.05);
+
+}
+
+/*==========================================================
+                    BUTTON
+==========================================================*/
+
+.scta-btn{
+
+    border-radius:999px;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    transition:.4s ease;
+
+}
+
+/*==========================================================
+                PRIMARY BUTTON
+==========================================================*/
+
+.scta-btn-primary{
+
+    background:linear-gradient(
+        135deg,
+        #00E5FF,
+        #7C66FF
+    );
+
+    color:#FFFFFF;
+
+    box-shadow:
+
+        0 15px 40px rgba(0,229,255,.22);
+
+}
+
+/*==========================================================
+                SECONDARY BUTTON
+==========================================================*/
+
+.scta-btn-secondary{
+
+    background:rgba(255,255,255,.05);
+
+    color:#FFFFFF;
+
+    border:1px solid rgba(255,255,255,.10);
+
+    backdrop-filter:blur(20px);
+
+}
+
+/*==========================================================
+                BUTTON ICON
+==========================================================*/
+
+.scta-btn i{
+
+    font-size:1rem;
+
+}
+
+/*==========================================================
+                BUTTON HOVER
+==========================================================*/
+
+.scta-btn:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.scta-btn-primary:hover{
+
+    box-shadow:
+
+        0 25px 60px rgba(0,229,255,.35);
+
+}
+
+.scta-btn-secondary:hover{
+
+    border-color:rgba(0,229,255,.30);
+
+    color:#00E5FF;
+
+}
+
+/*==========================================================
+                TRUST ITEM
+==========================================================*/
+
+.scta-trust-item{
+
+    padding:20px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+}
+
+/*==========================================================
+                TRUST ICON
+==========================================================*/
+
+.scta-trust-item i{
+
+    color:#00E5FF;
+
+    font-size:1.25rem;
+
+}
+
+/*==========================================================
+                TRUST TEXT
+==========================================================*/
+
+.scta-trust-item span{
+
+    color:#FFFFFF;
+
+    font-weight:600;
+
+}
+
+/*==========================================================
+                CONTACT ITEM
+==========================================================*/
+
+.scta-contact-item{
+
+    padding:18px 22px;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.03);
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+/*==========================================================
+                CONTACT ICON
+==========================================================*/
+
+.scta-contact-item i{
+
+    color:#7C66FF;
+
+    font-size:1.1rem;
+
+}
+
+/*==========================================================
+                CONTACT TEXT
+==========================================================*/
+
+.scta-contact-item span{
+
+    color:#DCEAF4;
+
+    font-size:.95rem;
+
+}
+
+/*==========================================================
+                TRUST HOVER
+==========================================================*/
+
+.scta-trust-item:hover{
+
+    transform:translateY(-8px);
+
+    border-color:rgba(0,229,255,.25);
+
+    box-shadow:
+
+        0 20px 45px rgba(0,229,255,.10);
+
+}
+
+/*==========================================================
+                CONTACT HOVER
+==========================================================*/
+
+.scta-contact-item:hover{
+
+    transform:translateY(-5px);
+
+    border-color:rgba(124,102,255,.30);
+
+}
+
+/*==========================================================
+                BUTTON FOCUS
+==========================================================*/
+
+.scta-btn:focus-visible{
+
+    outline:2px solid #00E5FF;
+
+    outline-offset:4px;
+
+}
+
+/*==========================================================
+                TRANSITIONS
+==========================================================*/
+
+.scta-card,
+.scta-btn,
+.scta-trust-item,
+.scta-contact-item,
+.scta-btn i{
+
+    transition:
+
+        transform .4s ease,
+
+        background .35s ease,
+
+        color .35s ease,
+
+        border-color .35s ease,
+
+        box-shadow .35s ease;
+
+}

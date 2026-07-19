@@ -1,0 +1,335 @@
+/*==========================================================
+                    GLOBAL TRANSITIONS
+==========================================================*/
+
+.wp-project,
+.wp-image,
+.wp-image img,
+.wp-stack span,
+.wp-buttons a,
+.wp-glow{
+
+    transition:
+
+        transform .45s ease,
+
+        opacity .35s ease,
+
+        border-color .35s ease,
+
+        box-shadow .35s ease,
+
+        background .35s ease;
+
+}
+
+/*==========================================================
+                    FLOATING PROJECTS
+==========================================================*/
+
+.wp-project{
+
+    animation:wpProjectFloat 8s ease-in-out infinite;
+
+}
+
+.wp-project:nth-child(2){
+
+    animation-delay:1.2s;
+
+}
+
+.wp-project:nth-child(3){
+
+    animation-delay:2.4s;
+
+}
+
+@keyframes wpProjectFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==========================================================
+                    IMAGE FLOAT
+==========================================================*/
+
+.wp-image img{
+
+    animation:wpImageFloat 10s ease-in-out infinite;
+
+}
+
+@keyframes wpImageFloat{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.04);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+/*==========================================================
+                    GRID MOVEMENT
+==========================================================*/
+
+.wp-grid{
+
+    animation:wpGridMove 35s linear infinite;
+
+}
+
+@keyframes wpGridMove{
+
+    from{
+
+        background-position:0 0,0 0;
+
+    }
+
+    to{
+
+        background-position:70px 70px,70px 70px;
+
+    }
+
+}
+
+/*==========================================================
+                    AURORA GLOWS
+==========================================================*/
+
+.wp-glow-1{
+
+    animation:wpGlowLeft 12s ease-in-out infinite alternate;
+
+}
+
+.wp-glow-2{
+
+    animation:wpGlowRight 14s ease-in-out infinite alternate;
+
+}
+
+@keyframes wpGlowLeft{
+
+    from{
+
+        transform:translate(0,0);
+
+    }
+
+    to{
+
+        transform:translate(80px,60px);
+
+    }
+
+}
+
+@keyframes wpGlowRight{
+
+    from{
+
+        transform:translate(0,0);
+
+    }
+
+    to{
+
+        transform:translate(-80px,-60px);
+
+    }
+
+}
+
+/*==========================================================
+                    BUTTON GLOW
+==========================================================*/
+
+.wp-buttons a:first-child{
+
+    animation:wpButtonGlow 3.5s ease-in-out infinite;
+
+}
+
+@keyframes wpButtonGlow{
+
+    0%{
+
+        box-shadow:
+
+            0 15px 35px rgba(0,229,255,.18);
+
+    }
+
+    50%{
+
+        box-shadow:
+
+            0 28px 65px rgba(0,229,255,.38);
+
+    }
+
+    100%{
+
+        box-shadow:
+
+            0 15px 35px rgba(0,229,255,.18);
+
+    }
+
+}
+
+/*==========================================================
+                    BUTTON ICON
+==========================================================*/
+
+.wp-buttons a:hover i{
+
+    animation:wpArrow .8s infinite;
+
+}
+
+@keyframes wpArrow{
+
+    0%{
+
+        transform:translateX(0);
+
+    }
+
+    50%{
+
+        transform:translateX(6px);
+
+    }
+
+    100%{
+
+        transform:translateX(0);
+
+    }
+
+}
+
+/*==========================================================
+                    TECH STACK
+==========================================================*/
+
+.wp-stack span{
+
+    animation:wpStackFloat 6s ease-in-out infinite;
+
+}
+
+.wp-stack span:nth-child(2){
+
+    animation-delay:.2s;
+
+}
+
+.wp-stack span:nth-child(3){
+
+    animation-delay:.4s;
+
+}
+
+.wp-stack span:nth-child(4){
+
+    animation-delay:.6s;
+
+}
+
+.wp-stack span:nth-child(5){
+
+    animation-delay:.8s;
+
+}
+
+@keyframes wpStackFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-4px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==========================================================
+                    HOVER PAUSE
+==========================================================*/
+
+.wp-project:hover,
+.wp-stack span:hover{
+
+    animation-play-state:paused;
+
+}
+
+/*==========================================================
+                    REDUCED MOTION
+==========================================================*/
+
+@media (prefers-reduced-motion:reduce){
+
+    .wp-project,
+
+    .wp-image img,
+
+    .wp-grid,
+
+    .wp-glow,
+
+    .wp-buttons a:first-child,
+
+    .wp-stack span{
+
+        animation:none !important;
+
+    }
+
+}

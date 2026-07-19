@@ -1,0 +1,284 @@
+/*==========================================
+        MAIN LAYOUT
+==========================================*/
+
+.s15-layout{
+
+    display:grid;
+
+    grid-template-columns:
+    1.05fr
+    1.15fr
+    .95fr;
+
+    gap:42px;
+
+    align-items:start;
+
+}
+
+
+/*==========================================
+        PANELS
+==========================================*/
+
+.s15-intro,
+.s15-modules,
+.s15-console{
+
+    position:relative;
+
+    min-width:0;
+
+}
+
+
+/*==========================================
+        INTRO
+==========================================*/
+
+.s15-intro{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    gap:28px;
+
+    padding-top:30px;
+
+}
+
+
+/*==========================================
+        MODULE LIST
+==========================================*/
+
+.s15-modules{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+
+/*==========================================
+        CONSOLE
+==========================================*/
+
+.s15-console{
+
+    display:flex;
+
+    flex-direction:column;
+
+    min-height:640px;
+
+}
+
+
+/*==========================================
+        SECTION SPACING
+==========================================*/
+
+.s15-intro,
+.s15-console{
+
+    align-self:stretch;
+
+}
+
+
+/*==========================================
+        DECORATIVE LINE
+==========================================*/
+
+.s15-layout::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:38%;
+
+    top:0;
+
+    width:1px;
+
+    height:100%;
+
+    background:linear-gradient(
+    transparent,
+    rgba(255,255,255,.08),
+    transparent
+    );
+
+    opacity:.45;
+
+    pointer-events:none;
+
+}
+
+
+.s15-layout::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:30%;
+
+    top:0;
+
+    width:1px;
+
+    height:100%;
+
+    background:linear-gradient(
+    transparent,
+    rgba(255,255,255,.08),
+    transparent
+    );
+
+    opacity:.35;
+
+    pointer-events:none;
+
+}
+
+
+/*==========================================
+        COLUMN GLOW
+==========================================*/
+
+.s15-intro::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:260px;
+
+    height:260px;
+
+    left:-120px;
+
+    top:120px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(circle,
+    rgba(79,124,255,.18),
+    transparent 72%);
+
+    filter:blur(45px);
+
+    pointer-events:none;
+
+}
+
+
+.s15-console::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:240px;
+
+    height:240px;
+
+    right:-80px;
+
+    bottom:-60px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(circle,
+    rgba(125,92,255,.18),
+    transparent 72%);
+
+    filter:blur(55px);
+
+    pointer-events:none;
+
+}
+
+
+/*==========================================
+        CONTENT STACK
+==========================================*/
+
+.s15-intro>*,
+.s15-modules>*,
+.s15-console>*{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+/*==========================================
+        MODULE SCROLL
+==========================================*/
+
+.s15-modules{
+
+    max-height:720px;
+
+    overflow-y:auto;
+
+    padding-right:8px;
+
+}
+
+
+/*==========================================
+        CUSTOM SCROLLBAR
+==========================================*/
+
+.s15-modules::-webkit-scrollbar{
+
+    width:5px;
+
+}
+
+
+.s15-modules::-webkit-scrollbar-thumb{
+
+    background:rgba(255,255,255,.14);
+
+    border-radius:50px;
+
+}
+
+
+.s15-modules::-webkit-scrollbar-track{
+
+    background:transparent;
+
+}
+
+
+/*==========================================
+        ALIGNMENT
+==========================================*/
+
+.s15-layout{
+
+    position:relative;
+
+    z-index:2;
+
+}

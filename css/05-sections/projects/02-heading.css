@@ -1,0 +1,153 @@
+/*==========================================================
+                    HEADER
+==========================================================*/
+
+.scp-header{
+
+    position:relative;
+
+    z-index:5;
+
+    max-width:900px;
+
+    margin:0 auto 90px;
+
+    text-align:center;
+
+}
+
+/*==========================================================
+                    TAG
+==========================================================*/
+
+.scp-tag{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:12px 24px;
+
+    margin-bottom:28px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+}
+
+/*==========================================================
+                TAG DOT
+==========================================================*/
+
+.scp-tag-dot{
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:#00E5FF;
+
+    box-shadow:
+
+        0 0 12px #00E5FF,
+
+        0 0 30px rgba(0,229,255,.45);
+
+}
+
+/*==========================================================
+                TAG TEXT
+==========================================================*/
+
+.scp-tag span:last-child{
+
+    color:#D7E8F4;
+
+    font-size:.82rem;
+
+    font-weight:600;
+
+    letter-spacing:.18em;
+
+    text-transform:uppercase;
+
+}
+
+/*==========================================================
+                    TITLE
+==========================================================*/
+
+.scp-title{
+
+    margin:0;
+
+    color:#FFFFFF;
+
+    font-size:clamp(2.8rem,5vw,4.5rem);
+
+    font-weight:800;
+
+    line-height:1.15;
+
+    letter-spacing:-2px;
+
+}
+
+/*==========================================================
+                TITLE HIGHLIGHT
+==========================================================*/
+
+.scp-title span{
+
+    display:block;
+
+    margin-top:12px;
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            #00E5FF,
+
+            #7C66FF,
+
+            #9AF7FF
+
+        );
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    background-clip:text;
+
+}
+
+/*==========================================================
+                DESCRIPTION
+==========================================================*/
+
+.scp-description{
+
+    max-width:760px;
+
+    margin:35px auto 0;
+
+    color:#9FB4C7;
+
+    font-size:1.08rem;
+
+    line-height:1.9;
+
+}

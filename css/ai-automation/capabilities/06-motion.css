@@ -1,0 +1,523 @@
+/*==========================================
+        GLOBAL TRANSITIONS
+==========================================*/
+
+.s15-intro *,
+.s15-module,
+.s15-console,
+.s15-stat,
+.s15-btn-primary,
+.s15-btn-secondary{
+
+    transition:
+    transform .45s ease,
+    opacity .45s ease,
+    border-color .35s ease,
+    background .35s ease,
+    box-shadow .35s ease;
+
+}
+
+
+/*==========================================
+        SECTION REVEAL
+==========================================*/
+
+.s15-ai-showcase{
+
+    animation:s15SectionReveal 1.2s ease both;
+
+}
+
+
+@keyframes s15SectionReveal{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(60px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/*==========================================
+        HEADING REVEAL
+==========================================*/
+
+.s15-chip{
+
+    animation:s15FadeUp .6s .1s both;
+
+}
+
+.s15-label{
+
+    animation:s15FadeUp .6s .2s both;
+
+}
+
+.s15-heading{
+
+    animation:s15FadeUp .8s .35s both;
+
+}
+
+.s15-divider{
+
+    animation:s15Scale .7s .5s both;
+
+}
+
+.s15-text{
+
+    animation:s15FadeUp .8s .55s both;
+
+}
+
+.s15-actions{
+
+    animation:s15FadeUp .8s .75s both;
+
+}
+
+
+/*==========================================
+        MODULE STAGGER
+==========================================*/
+
+.s15-module{
+
+    opacity:0;
+
+    transform:translateX(50px);
+
+    animation:s15CardReveal .7s forwards;
+
+}
+
+.s15-module:nth-child(1){
+
+    animation-delay:.15s;
+
+}
+
+.s15-module:nth-child(2){
+
+    animation-delay:.25s;
+
+}
+
+.s15-module:nth-child(3){
+
+    animation-delay:.35s;
+
+}
+
+.s15-module:nth-child(4){
+
+    animation-delay:.45s;
+
+}
+
+.s15-module:nth-child(5){
+
+    animation-delay:.55s;
+
+}
+
+.s15-module:nth-child(6){
+
+    animation-delay:.65s;
+
+}
+
+
+@keyframes s15CardReveal{
+
+    to{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+}
+
+
+/*==========================================
+        CONSOLE
+==========================================*/
+
+.s15-console{
+
+    animation:s15ConsoleReveal .9s .4s both;
+
+}
+
+
+@keyframes s15ConsoleReveal{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(60px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+}
+
+
+/*==========================================
+        AI LOGO
+==========================================*/
+
+.s15-console-logo{
+
+    animation:s15Pulse 4s infinite;
+
+}
+
+
+@keyframes s15Pulse{
+
+    0%{
+
+        transform:scale(1);
+
+        box-shadow:
+        0 20px 40px rgba(79,124,255,.35);
+
+    }
+
+    50%{
+
+        transform:scale(1.06);
+
+        box-shadow:
+        0 25px 60px rgba(79,124,255,.55);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+        box-shadow:
+        0 20px 40px rgba(79,124,255,.35);
+
+    }
+
+}
+
+
+/*==========================================
+        CHIP DOT
+==========================================*/
+
+.s15-chip-dot{
+
+    animation:s15Blink 2s infinite;
+
+}
+
+
+@keyframes s15Blink{
+
+    0%,100%{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        opacity:.35;
+
+        transform:scale(.75);
+
+    }
+
+}
+
+
+/*==========================================
+        WORKFLOW
+==========================================*/
+
+.s15-workflow span{
+
+    animation:s15Float 5s ease-in-out infinite;
+
+}
+
+.s15-workflow span:nth-child(2){
+
+    animation-delay:.3s;
+
+}
+
+.s15-workflow span:nth-child(3){
+
+    animation-delay:.6s;
+
+}
+
+.s15-workflow span:nth-child(4){
+
+    animation-delay:.9s;
+
+}
+
+.s15-workflow span:nth-child(5){
+
+    animation-delay:1.2s;
+
+}
+
+
+@keyframes s15Float{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+}
+
+
+/*==========================================
+        BUTTON SHIMMER
+==========================================*/
+
+.s15-btn-primary::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:inherit;
+
+    background:
+
+    linear-gradient(
+
+    120deg,
+
+    transparent,
+
+    rgba(255,255,255,.35),
+
+    transparent
+
+    );
+
+    transform:translateX(-180%);
+
+}
+
+
+.s15-btn-primary:hover::after{
+
+    animation:s15Shimmer .8s linear;
+
+}
+
+
+@keyframes s15Shimmer{
+
+    to{
+
+        transform:translateX(180%);
+
+    }
+
+}
+
+
+/*==========================================
+        CARD HOVER
+==========================================*/
+
+.s15-module:hover{
+
+    transform:
+
+    translateY(-10px)
+
+    scale(1.02);
+
+}
+
+
+.s15-module:hover .s15-module-icon{
+
+    animation:s15Rotate .45s ease;
+
+}
+
+
+@keyframes s15Rotate{
+
+    50%{
+
+        transform:rotate(-10deg) scale(1.12);
+
+    }
+
+}
+
+
+/*==========================================
+        STATS
+==========================================*/
+
+.s15-stat{
+
+    animation:s15FadeUp .8s both;
+
+}
+
+.s15-stat:nth-child(1){
+
+    animation-delay:.6s;
+
+}
+
+.s15-stat:nth-child(2){
+
+    animation-delay:.75s;
+
+}
+
+.s15-stat:nth-child(3){
+
+    animation-delay:.9s;
+
+}
+
+
+/*==========================================
+        GLOW
+==========================================*/
+
+.s15-ai-showcase::after{
+
+    animation:s15Glow 10s ease-in-out infinite alternate;
+
+}
+
+
+@keyframes s15Glow{
+
+    from{
+
+        transform:scale(1);
+
+        opacity:.8;
+
+    }
+
+    to{
+
+        transform:scale(1.2);
+
+        opacity:1;
+
+    }
+
+}
+
+
+/*==========================================
+        GENERIC
+==========================================*/
+
+@keyframes s15FadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+}
+
+
+@keyframes s15Scale{
+
+    from{
+
+        opacity:0;
+
+        transform:scaleX(0);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scaleX(1);
+
+    }
+
+}
+
+
+/*==========================================
+        REDUCED MOTION
+==========================================*/
+
+@media (prefers-reduced-motion:reduce){
+
+    *{
+
+        animation:none!important;
+
+        transition:none!important;
+
+    }
+
+}

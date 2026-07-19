@@ -1,0 +1,300 @@
+/*==========================================================
+                    TRANSITIONS
+==========================================================*/
+
+.scta-card,
+.scta-btn,
+.scta-btn i,
+.scta-trust-item,
+.scta-contact-item,
+.scta-glow{
+
+    transition:
+
+        transform .45s ease,
+
+        background .35s ease,
+
+        color .35s ease,
+
+        border-color .35s ease,
+
+        box-shadow .35s ease,
+
+        opacity .35s ease;
+
+}
+
+/*==========================================================
+                FLOATING CTA CARD
+==========================================================*/
+
+.scta-card{
+
+    animation:sctaFloat 8s ease-in-out infinite;
+
+}
+
+@keyframes sctaFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==========================================================
+                BACKGROUND GLOW
+==========================================================*/
+
+.scta-glow-left{
+
+    animation:sctaGlowLeft 12s ease-in-out infinite alternate;
+
+}
+
+.scta-glow-right{
+
+    animation:sctaGlowRight 12s ease-in-out infinite alternate;
+
+}
+
+@keyframes sctaGlowLeft{
+
+    from{
+
+        transform:translate(0,0);
+
+    }
+
+    to{
+
+        transform:translate(70px,45px);
+
+    }
+
+}
+
+@keyframes sctaGlowRight{
+
+    from{
+
+        transform:translate(0,0);
+
+    }
+
+    to{
+
+        transform:translate(-70px,-45px);
+
+    }
+
+}
+
+/*==========================================================
+                PRIMARY BUTTON GLOW
+==========================================================*/
+
+.scta-btn-primary{
+
+    animation:sctaButtonGlow 3.5s ease-in-out infinite;
+
+}
+
+@keyframes sctaButtonGlow{
+
+    0%{
+
+        box-shadow:
+
+            0 15px 35px rgba(0,229,255,.18);
+
+    }
+
+    50%{
+
+        box-shadow:
+
+            0 25px 60px rgba(0,229,255,.38);
+
+    }
+
+    100%{
+
+        box-shadow:
+
+            0 15px 35px rgba(0,229,255,.18);
+
+    }
+
+}
+
+/*==========================================================
+                BUTTON ICON
+==========================================================*/
+
+.scta-btn:hover i{
+
+    animation:sctaArrow .8s infinite;
+
+}
+
+@keyframes sctaArrow{
+
+    0%{
+
+        transform:translateX(0);
+
+    }
+
+    50%{
+
+        transform:translateX(6px);
+
+    }
+
+    100%{
+
+        transform:translateX(0);
+
+    }
+
+}
+
+/*==========================================================
+                TRUST FLOAT
+==========================================================*/
+
+.scta-trust-item{
+
+    animation:sctaTrustFloat 6s ease-in-out infinite;
+
+}
+
+.scta-trust-item:nth-child(2){
+
+    animation-delay:.3s;
+
+}
+
+.scta-trust-item:nth-child(3){
+
+    animation-delay:.6s;
+
+}
+
+.scta-trust-item:nth-child(4){
+
+    animation-delay:.9s;
+
+}
+
+@keyframes sctaTrustFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-6px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==========================================================
+                CONTACT FLOAT
+==========================================================*/
+
+.scta-contact-item{
+
+    animation:sctaContactFloat 7s ease-in-out infinite;
+
+}
+
+.scta-contact-item:nth-child(2){
+
+    animation-delay:.4s;
+
+}
+
+.scta-contact-item:nth-child(3){
+
+    animation-delay:.8s;
+
+}
+
+@keyframes sctaContactFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-5px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==========================================================
+                PAUSE ON HOVER
+==========================================================*/
+
+.scta-card:hover,
+.scta-trust-item:hover,
+.scta-contact-item:hover{
+
+    animation-play-state:paused;
+
+}
+
+/*==========================================================
+                REDUCED MOTION
+==========================================================*/
+
+@media (prefers-reduced-motion: reduce){
+
+    .scta-card,
+    .scta-btn-primary,
+    .scta-trust-item,
+    .scta-contact-item,
+    .scta-glow{
+
+        animation:none !important;
+
+    }
+
+}

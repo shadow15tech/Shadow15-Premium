@@ -1,0 +1,169 @@
+/*==========================================================
+                    CTA CARD
+==========================================================*/
+
+.scta-card{
+
+    position:relative;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:55px;
+
+    padding:70px;
+
+}
+
+/*==========================================================
+                    HEADER
+==========================================================*/
+
+.scta-header{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+/*==========================================================
+                    BUTTON GROUP
+==========================================================*/
+
+.scta-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:22px;
+
+}
+
+/*==========================================================
+                    BUTTON
+==========================================================*/
+
+.scta-btn{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:14px;
+
+    min-width:230px;
+
+    padding:18px 34px;
+
+    text-decoration:none;
+
+}
+
+/*==========================================================
+                    TRUST BAR
+==========================================================*/
+
+.scta-trust{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:22px;
+
+}
+
+/*==========================================================
+                TRUST ITEM
+==========================================================*/
+
+.scta-trust-item{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    text-align:center;
+
+}
+
+/*==========================================================
+                CONTACT ROW
+==========================================================*/
+
+.scta-contact{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:22px;
+
+}
+
+/*==========================================================
+                CONTACT ITEM
+==========================================================*/
+
+.scta-contact-item{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    text-align:center;
+
+}
+
+/*==========================================================
+                    ICON
+==========================================================*/
+
+.scta-contact-item i,
+.scta-trust-item i{
+
+    flex-shrink:0;
+
+}
+
+/*==========================================================
+                TEXT WRAPPING
+==========================================================*/
+
+.scta-contact-item span,
+.scta-trust-item span{
+
+    display:block;
+
+}
+
+/*==========================================================
+                CTA CONTENT
+==========================================================*/
+
+.scta-card>*{
+
+    position:relative;
+
+    z-index:2;
+
+}

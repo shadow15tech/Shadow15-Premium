@@ -1,0 +1,300 @@
+/*==========================================================
+                    TRANSITIONS
+==========================================================*/
+
+.scp-card,
+.scp-image img,
+.scp-category,
+.scp-tech span,
+.scp-footer a,
+.scp-footer a i,
+.scp-content h3{
+
+    transition:
+        transform .45s ease,
+        color .35s ease,
+        border-color .35s ease,
+        background .35s ease,
+        box-shadow .35s ease,
+        opacity .35s ease;
+
+}
+
+/*==========================================================
+                FLOATING CARDS
+==========================================================*/
+
+.scp-card{
+
+    animation:scpFloat 8s ease-in-out infinite;
+
+}
+
+.scp-card:nth-child(2){
+
+    animation-delay:.4s;
+
+}
+
+.scp-card:nth-child(3){
+
+    animation-delay:.8s;
+
+}
+
+.scp-card:nth-child(4){
+
+    animation-delay:1.2s;
+
+}
+
+.scp-card:nth-child(5){
+
+    animation-delay:1.6s;
+
+}
+
+.scp-card:nth-child(6){
+
+    animation-delay:2s;
+
+}
+
+@keyframes scpFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==========================================================
+                CATEGORY GLOW
+==========================================================*/
+
+.scp-category{
+
+    animation:scpCategoryGlow 3.5s ease-in-out infinite;
+
+}
+
+@keyframes scpCategoryGlow{
+
+    0%{
+
+        box-shadow:0 0 0 rgba(0,229,255,0);
+
+    }
+
+    50%{
+
+        box-shadow:0 0 22px rgba(0,229,255,.28);
+
+    }
+
+    100%{
+
+        box-shadow:0 0 0 rgba(0,229,255,0);
+
+    }
+
+}
+
+/*==========================================================
+                TECH TAG GLOW
+==========================================================*/
+
+.scp-tech span{
+
+    animation:scpTagGlow 4s ease-in-out infinite;
+
+}
+
+.scp-tech span:nth-child(2){
+
+    animation-delay:.3s;
+
+}
+
+.scp-tech span:nth-child(3){
+
+    animation-delay:.6s;
+
+}
+
+@keyframes scpTagGlow{
+
+    0%{
+
+        box-shadow:none;
+
+    }
+
+    50%{
+
+        box-shadow:0 0 16px rgba(124,102,255,.20);
+
+    }
+
+    100%{
+
+        box-shadow:none;
+
+    }
+
+}
+
+/*==========================================================
+                IMAGE FLOAT
+==========================================================*/
+
+.scp-image img{
+
+    animation:scpImageFloat 10s ease-in-out infinite;
+
+}
+
+@keyframes scpImageFloat{
+
+    0%{
+
+        transform:scale(1.04) translateY(0);
+
+    }
+
+    50%{
+
+        transform:scale(1.08) translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:scale(1.04) translateY(0);
+
+    }
+
+}
+
+/*==========================================================
+                CTA ICON
+==========================================================*/
+
+.scp-card:hover .scp-footer a i{
+
+    animation:scpArrow .8s infinite;
+
+}
+
+@keyframes scpArrow{
+
+    0%{
+
+        transform:translate(0,0);
+
+    }
+
+    50%{
+
+        transform:translate(6px,-6px);
+
+    }
+
+    100%{
+
+        transform:translate(0,0);
+
+    }
+
+}
+
+/*==========================================================
+                BACKGROUND GLOW
+==========================================================*/
+
+.scp-glow-left{
+
+    animation:scpGlowLeft 12s ease-in-out infinite alternate;
+
+}
+
+.scp-glow-right{
+
+    animation:scpGlowRight 12s ease-in-out infinite alternate;
+
+}
+
+@keyframes scpGlowLeft{
+
+    from{
+
+        transform:translate(0,0);
+
+    }
+
+    to{
+
+        transform:translate(60px,35px);
+
+    }
+
+}
+
+@keyframes scpGlowRight{
+
+    from{
+
+        transform:translate(0,0);
+
+    }
+
+    to{
+
+        transform:translate(-60px,-35px);
+
+    }
+
+}
+
+/*==========================================================
+                PAUSE FLOAT
+==========================================================*/
+
+.scp-card:hover{
+
+    animation-play-state:paused;
+
+}
+
+/*==========================================================
+            REDUCED MOTION
+==========================================================*/
+
+@media (prefers-reduced-motion: reduce){
+
+    .scp-card,
+    .scp-image img,
+    .scp-category,
+    .scp-tech span,
+    .scp-glow-left,
+    .scp-glow-right{
+
+        animation:none !important;
+
+    }
+
+}

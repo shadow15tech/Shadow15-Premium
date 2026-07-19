@@ -1,0 +1,243 @@
+/*==========================================================
+                    CONTAINER
+==========================================================*/
+
+.wcs-container{
+
+    position:relative;
+
+    z-index:5;
+
+    width:min(92%,1280px);
+
+    margin:0 auto;
+
+}
+
+/*==========================================================
+                    HEADER
+==========================================================*/
+
+.wcs-header{
+
+    max-width:760px;
+
+    margin:0 auto 110px;
+
+    text-align:center;
+
+}
+
+/*==========================================================
+                    TAG
+==========================================================*/
+
+.wcs-tag{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:12px 22px;
+
+    margin-bottom:28px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(22px);
+
+}
+
+/*==========================================================
+                    DOT
+==========================================================*/
+
+.wcs-dot{
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:#00E5FF;
+
+    box-shadow:0 0 18px #00E5FF;
+
+}
+
+/*==========================================================
+                    TAG TEXT
+==========================================================*/
+
+.wcs-tag span:last-child{
+
+    color:#DCEAF4;
+
+    font-size:.78rem;
+
+    font-weight:600;
+
+    letter-spacing:.18em;
+
+    text-transform:uppercase;
+
+}
+
+/*==========================================================
+                    TITLE
+==========================================================*/
+
+.wcs-title{
+
+    margin:0;
+
+    color:#FFFFFF;
+
+    font-size:clamp(3rem,5vw,4.8rem);
+
+    font-weight:800;
+
+    line-height:1.08;
+
+    letter-spacing:-.03em;
+
+}
+
+/*==========================================================
+                TITLE GRADIENT
+==========================================================*/
+
+.wcs-title span{
+
+    display:block;
+
+    margin-top:10px;
+
+    background:linear-gradient(
+
+        90deg,
+
+        #00E5FF,
+
+        #7C66FF
+
+    );
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    background-clip:text;
+
+}
+
+/*==========================================================
+                DESCRIPTION
+==========================================================*/
+
+.wcs-description{
+
+    max-width:680px;
+
+    margin:32px auto 0;
+
+    color:#9FB4C7;
+
+    font-size:1.08rem;
+
+    line-height:1.9;
+
+}
+
+/*==========================================================
+                HEADER ELEMENTS
+==========================================================*/
+
+.wcs-header>*{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+/*==========================================================
+                HEADER DECORATION
+==========================================================*/
+
+.wcs-header::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    top:-30px;
+
+    transform:translateX(-50%);
+
+    width:160px;
+
+    height:160px;
+
+    border-radius:50%;
+
+    background:radial-gradient(
+
+        circle,
+
+        rgba(0,229,255,.18),
+
+        transparent 72%
+
+    );
+
+    filter:blur(50px);
+
+    z-index:-1;
+
+}
+
+/*==========================================================
+                SUBTLE DIVIDER
+==========================================================*/
+
+.wcs-header::after{
+
+    content:"";
+
+    display:block;
+
+    width:120px;
+
+    height:2px;
+
+    margin:42px auto 0;
+
+    border-radius:999px;
+
+    background:linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(0,229,255,.85),
+
+        rgba(124,102,255,.85),
+
+        transparent
+
+    );
+
+    opacity:.85;
+
+}

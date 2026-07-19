@@ -1,0 +1,311 @@
+/*==========================================================
+                    GLOBAL TRANSITIONS
+==========================================================*/
+
+.wh-card,
+.wh-btn,
+.wh-glow,
+.wh-scroll,
+.wh-card img{
+
+    transition:
+
+        transform .45s ease,
+
+        opacity .35s ease,
+
+        box-shadow .35s ease,
+
+        border-color .35s ease,
+
+        background .35s ease;
+
+}
+
+/*==========================================================
+                    FLOATING CARDS
+==========================================================*/
+
+.wh-card{
+
+    animation:whCardFloat 8s ease-in-out infinite;
+
+}
+
+.wh-card:nth-child(2){
+
+    animation-delay:1.2s;
+
+}
+
+.wh-card:nth-child(3){
+
+    animation-delay:2.4s;
+
+}
+
+@keyframes whCardFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-18px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==========================================================
+                    IMAGE FLOAT
+==========================================================*/
+
+.wh-card-image img{
+
+    animation:whImageFloat 10s ease-in-out infinite;
+
+}
+
+@keyframes whImageFloat{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.04);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+/*==========================================================
+                    AURORA GLOWS
+==========================================================*/
+
+.wh-glow-1{
+
+    animation:whGlowLeft 12s ease-in-out infinite alternate;
+
+}
+
+.wh-glow-2{
+
+    animation:whGlowRight 14s ease-in-out infinite alternate;
+
+}
+
+@keyframes whGlowLeft{
+
+    from{
+
+        transform:translate(0,0);
+
+    }
+
+    to{
+
+        transform:translate(90px,60px);
+
+    }
+
+}
+
+@keyframes whGlowRight{
+
+    from{
+
+        transform:translate(0,0);
+
+    }
+
+    to{
+
+        transform:translate(-90px,-60px);
+
+    }
+
+}
+
+/*==========================================================
+                    GRID MOVEMENT
+==========================================================*/
+
+.wh-grid{
+
+    animation:whGridMove 30s linear infinite;
+
+}
+
+@keyframes whGridMove{
+
+    from{
+
+        background-position:0 0,0 0;
+
+    }
+
+    to{
+
+        background-position:70px 70px,70px 70px;
+
+    }
+
+}
+
+/*==========================================================
+                    BUTTON GLOW
+==========================================================*/
+
+.wh-btn-primary{
+
+    animation:whButtonGlow 3.5s ease-in-out infinite;
+
+}
+
+@keyframes whButtonGlow{
+
+    0%{
+
+        box-shadow:
+
+            0 15px 35px rgba(0,229,255,.18);
+
+    }
+
+    50%{
+
+        box-shadow:
+
+            0 25px 60px rgba(0,229,255,.38);
+
+    }
+
+    100%{
+
+        box-shadow:
+
+            0 15px 35px rgba(0,229,255,.18);
+
+    }
+
+}
+
+/*==========================================================
+                    BUTTON ICON
+==========================================================*/
+
+.wh-btn:hover i{
+
+    animation:whArrow .8s infinite;
+
+}
+
+@keyframes whArrow{
+
+    0%{
+
+        transform:translateX(0);
+
+    }
+
+    50%{
+
+        transform:translateX(6px);
+
+    }
+
+    100%{
+
+        transform:translateX(0);
+
+    }
+
+}
+
+/*==========================================================
+                    SCROLL INDICATOR
+==========================================================*/
+
+.wh-scroll{
+
+    animation:whScroll 2.5s ease-in-out infinite;
+
+}
+
+@keyframes whScroll{
+
+    0%{
+
+        transform:translateX(-50%) translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateX(-50%) translateY(10px);
+
+    }
+
+    100%{
+
+        transform:translateX(-50%) translateY(0);
+
+    }
+
+}
+
+/*==========================================================
+                    HOVER PAUSE
+==========================================================*/
+
+.wh-card:hover,
+
+.wh-btn:hover{
+
+    animation-play-state:paused;
+
+}
+
+/*==========================================================
+                    REDUCED MOTION
+==========================================================*/
+
+@media (prefers-reduced-motion:reduce){
+
+    .wh-card,
+
+    .wh-card img,
+
+    .wh-grid,
+
+    .wh-glow,
+
+    .wh-btn-primary,
+
+    .wh-scroll{
+
+        animation:none !important;
+
+    }
+
+}

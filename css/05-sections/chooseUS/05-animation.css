@@ -1,0 +1,277 @@
+/*==========================================================
+                    TRANSITIONS
+==========================================================*/
+
+.scw-card,
+.scw-icon,
+.scw-core,
+.scw-ring,
+.scw-glow,
+.scw-card h3{
+
+    transition:
+
+        transform .45s ease,
+
+        color .35s ease,
+
+        background .35s ease,
+
+        border-color .35s ease,
+
+        box-shadow .35s ease,
+
+        opacity .35s ease;
+
+}
+
+/*==========================================================
+                FLOATING FEATURE CARDS
+==========================================================*/
+
+.scw-card{
+
+    animation:scwFloat 8s ease-in-out infinite;
+
+}
+
+.scw-column .scw-card:nth-child(2){
+
+    animation-delay:.5s;
+
+}
+
+.scw-column .scw-card:nth-child(3){
+
+    animation-delay:1s;
+
+}
+
+@keyframes scwFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==========================================================
+                ROTATING RINGS
+==========================================================*/
+
+.scw-ring-one{
+
+    animation:scwRotateClockwise 18s linear infinite;
+
+}
+
+.scw-ring-two{
+
+    animation:scwRotateAntiClockwise 26s linear infinite;
+
+}
+
+@keyframes scwRotateClockwise{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+@keyframes scwRotateAntiClockwise{
+
+    from{
+
+        transform:rotate(360deg);
+
+    }
+
+    to{
+
+        transform:rotate(0deg);
+
+    }
+
+}
+
+/*==========================================================
+                CORE PULSE
+==========================================================*/
+
+.scw-core{
+
+    animation:scwCorePulse 4.5s ease-in-out infinite;
+
+}
+
+@keyframes scwCorePulse{
+
+    0%{
+
+        transform:scale(1);
+
+        box-shadow:
+
+            0 0 50px rgba(0,229,255,.18);
+
+    }
+
+    50%{
+
+        transform:scale(1.05);
+
+        box-shadow:
+
+            0 0 90px rgba(0,229,255,.32);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+        box-shadow:
+
+            0 0 50px rgba(0,229,255,.18);
+
+    }
+
+}
+
+/*==========================================================
+                ICON GLOW
+==========================================================*/
+
+.scw-icon{
+
+    animation:scwIconGlow 3.5s ease-in-out infinite;
+
+}
+
+@keyframes scwIconGlow{
+
+    0%{
+
+        box-shadow:0 0 18px rgba(0,229,255,.10);
+
+    }
+
+    50%{
+
+        box-shadow:0 0 40px rgba(0,229,255,.28);
+
+    }
+
+    100%{
+
+        box-shadow:0 0 18px rgba(0,229,255,.10);
+
+    }
+
+}
+
+/*==========================================================
+                BACKGROUND GLOW
+==========================================================*/
+
+.scw-glow-left{
+
+    animation:scwGlowLeft 12s ease-in-out infinite alternate;
+
+}
+
+.scw-glow-right{
+
+    animation:scwGlowRight 12s ease-in-out infinite alternate;
+
+}
+
+@keyframes scwGlowLeft{
+
+    from{
+
+        transform:translate(0,0);
+
+    }
+
+    to{
+
+        transform:translate(60px,40px);
+
+    }
+
+}
+
+@keyframes scwGlowRight{
+
+    from{
+
+        transform:translate(0,0);
+
+    }
+
+    to{
+
+        transform:translate(-60px,-40px);
+
+    }
+
+}
+
+/*==========================================================
+                HOVER CONTROL
+==========================================================*/
+
+.scw-card:hover{
+
+    animation-play-state:paused;
+
+}
+
+.scw-center:hover .scw-ring-one,
+.scw-center:hover .scw-ring-two{
+
+    animation-play-state:paused;
+
+}
+
+/*==========================================================
+                REDUCED MOTION
+==========================================================*/
+
+@media (prefers-reduced-motion: reduce){
+
+    .scw-card,
+    .scw-ring,
+    .scw-core,
+    .scw-icon,
+    .scw-glow{
+
+        animation:none !important;
+
+    }
+
+}

@@ -1,0 +1,323 @@
+/*==========================================================
+                    CORE
+==========================================================*/
+
+.wt-logo{
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        145deg,
+        rgba(255,255,255,.08),
+        rgba(255,255,255,.03)
+    );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(24px);
+
+    box-shadow:
+
+        0 30px 80px rgba(0,0,0,.35),
+
+        inset 0 1px 0 rgba(255,255,255,.08);
+
+}
+
+.wt-logo::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-12px;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+
+        135deg,
+
+        rgba(0,229,255,.35),
+
+        rgba(124,102,255,.35)
+
+    );
+
+    filter:blur(30px);
+
+    z-index:-1;
+
+    opacity:.8;
+
+}
+
+.wt-logo h3{
+
+    color:#FFFFFF;
+
+    font-size:1.8rem;
+
+    font-weight:700;
+
+    letter-spacing:-.03em;
+
+}
+
+.wt-logo span{
+
+    color:#9FB4C7;
+
+    font-size:.9rem;
+
+    letter-spacing:.12em;
+
+    text-transform:uppercase;
+
+}
+
+/*==========================================================
+                    ORBIT RINGS
+==========================================================*/
+
+.wt-core-ring{
+
+    border:1px dashed rgba(255,255,255,.08);
+
+    box-shadow:
+
+        inset 0 0 40px rgba(255,255,255,.02);
+
+}
+
+/*==========================================================
+                    TECH CARD
+==========================================================*/
+
+.wt-tech{
+
+    border-radius:22px;
+
+    background:linear-gradient(
+
+        145deg,
+
+        rgba(255,255,255,.06),
+
+        rgba(255,255,255,.025)
+
+    );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(22px);
+
+    box-shadow:
+
+        0 20px 45px rgba(0,0,0,.25);
+
+    transition:.45s ease;
+
+    cursor:default;
+
+}
+
+/*==========================================================
+                    TOP HIGHLIGHT
+==========================================================*/
+
+.wt-tech::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:1px;
+
+    background:linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.45),
+
+        transparent
+
+    );
+
+}
+
+/*==========================================================
+                    ICON
+==========================================================*/
+
+.wt-tech i{
+
+    color:#00E5FF;
+
+    transition:.45s ease;
+
+}
+
+/*==========================================================
+                    TITLE
+==========================================================*/
+
+.wt-tech span{
+
+    color:#FFFFFF;
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+}
+
+/*==========================================================
+                    FEATURE CARD
+==========================================================*/
+
+.wt-feature{
+
+    padding:34px;
+
+    border-radius:26px;
+
+    background:linear-gradient(
+
+        145deg,
+
+        rgba(255,255,255,.05),
+
+        rgba(255,255,255,.025)
+
+    );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(22px);
+
+    transition:.45s ease;
+
+}
+
+.wt-feature i{
+
+    width:68px;
+
+    height:68px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:18px;
+
+    background:rgba(0,229,255,.08);
+
+    color:#00E5FF;
+
+    font-size:1.5rem;
+
+}
+
+.wt-feature h4{
+
+    color:#FFFFFF;
+
+    font-size:1.3rem;
+
+    font-weight:700;
+
+}
+
+.wt-feature p{
+
+    color:#9FB4C7;
+
+    line-height:1.8;
+
+}
+
+/*==========================================================
+                    HOVER
+==========================================================*/
+
+.wt-tech:hover{
+
+    transform:translateY(-10px) scale(1.04);
+
+    border-color:rgba(0,229,255,.25);
+
+    box-shadow:
+
+        0 30px 70px rgba(0,229,255,.12),
+
+        0 25px 60px rgba(0,0,0,.30);
+
+}
+
+.wt-tech:hover i{
+
+    transform:scale(1.15) rotate(-8deg);
+
+    color:#FFFFFF;
+
+}
+
+.wt-feature:hover{
+
+    transform:translateY(-10px);
+
+    border-color:rgba(0,229,255,.22);
+
+    box-shadow:
+
+        0 30px 70px rgba(0,229,255,.10);
+
+}
+
+.wt-feature:hover i{
+
+    transform:rotate(-10deg) scale(1.08);
+
+}
+
+/*==========================================================
+                    TRANSITIONS
+==========================================================*/
+
+.wt-logo,
+
+.wt-core-ring,
+
+.wt-tech,
+
+.wt-tech i,
+
+.wt-feature,
+
+.wt-feature i{
+
+    transition:
+
+        transform .45s ease,
+
+        box-shadow .35s ease,
+
+        border-color .35s ease,
+
+        background .35s ease,
+
+        color .35s ease;
+
+}

@@ -1,0 +1,245 @@
+/*==========================================================
+                    CONTAINER
+==========================================================*/
+
+.wh-container{
+
+    position:relative;
+
+    z-index:5;
+
+    width:min(92%,1280px);
+
+    margin:0 auto;
+
+}
+
+/*==========================================================
+                    CONTENT
+==========================================================*/
+
+.wh-content{
+
+    max-width:650px;
+
+}
+
+/*==========================================================
+                    TAG
+==========================================================*/
+
+.wh-tag{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:12px 22px;
+
+    margin-bottom:28px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+}
+
+/*==========================================================
+                    TAG DOT
+==========================================================*/
+
+.wh-dot{
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:#00E5FF;
+
+    box-shadow:0 0 18px #00E5FF;
+
+}
+
+/*==========================================================
+                    TAG TEXT
+==========================================================*/
+
+.wh-tag span:last-child{
+
+    color:#DCEAF4;
+
+    font-size:.78rem;
+
+    font-weight:600;
+
+    letter-spacing:.18em;
+
+    text-transform:uppercase;
+
+}
+
+/*==========================================================
+                    TITLE
+==========================================================*/
+
+.wh-title{
+
+    margin:0;
+
+    color:#FFFFFF;
+
+    font-size:clamp(3.5rem,6vw,5.8rem);
+
+    font-weight:800;
+
+    line-height:1.05;
+
+    letter-spacing:-.04em;
+
+}
+
+/*==========================================================
+                TITLE GRADIENT
+==========================================================*/
+
+.wh-title span{
+
+    display:block;
+
+    margin:.15em 0;
+
+    background:linear-gradient(
+
+        90deg,
+
+        #00E5FF,
+
+        #7C66FF
+
+    );
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    background-clip:text;
+
+}
+
+/*==========================================================
+                DESCRIPTION
+==========================================================*/
+
+.wh-description{
+
+    max-width:620px;
+
+    margin-top:34px;
+
+    color:#9FB4C7;
+
+    font-size:1.08rem;
+
+    line-height:1.9;
+
+}
+
+/*==========================================================
+                BUTTONS
+==========================================================*/
+
+.wh-buttons{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    margin-top:45px;
+
+}
+
+/*==========================================================
+                STATS
+==========================================================*/
+
+.wh-stats{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:55px;
+
+    margin-top:60px;
+
+}
+
+/*==========================================================
+                STAT
+==========================================================*/
+
+.wh-stat{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+/*==========================================================
+                STAT NUMBER
+==========================================================*/
+
+.wh-stat h3{
+
+    margin:0;
+
+    color:#FFFFFF;
+
+    font-size:2rem;
+
+    font-weight:700;
+
+    line-height:1;
+
+}
+
+/*==========================================================
+                STAT LABEL
+==========================================================*/
+
+.wh-stat span{
+
+    color:#9FB4C7;
+
+    font-size:.9rem;
+
+    letter-spacing:.08em;
+
+    text-transform:uppercase;
+
+}
+
+/*==========================================================
+                CONTENT LAYERS
+==========================================================*/
+
+.wh-content>*{
+
+    position:relative;
+
+    z-index:2;
+
+}

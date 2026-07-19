@@ -1,0 +1,317 @@
+/*==========================================================
+                    GLOBAL TRANSITIONS
+==========================================================*/
+
+.wcs-card,
+.wcs-preview,
+.wcs-preview img,
+.wcs-content>a,
+.wcs-point::after,
+.wcs-glow{
+
+    transition:
+
+        transform .45s ease,
+
+        opacity .35s ease,
+
+        border-color .35s ease,
+
+        box-shadow .35s ease,
+
+        background .35s ease;
+
+}
+
+/*==========================================================
+                    FLOATING CARDS
+==========================================================*/
+
+.wcs-card{
+
+    animation:wcsFloat 8s ease-in-out infinite;
+
+}
+
+.wcs-card:nth-of-type(2){
+
+    animation-delay:1.2s;
+
+}
+
+.wcs-card:nth-of-type(3){
+
+    animation-delay:2.4s;
+
+}
+
+@keyframes wcsFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==========================================================
+                    IMAGE FLOAT
+==========================================================*/
+
+.wcs-preview img{
+
+    animation:wcsImageFloat 10s ease-in-out infinite;
+
+}
+
+@keyframes wcsImageFloat{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.04);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+/*==========================================================
+                    GRID MOVEMENT
+==========================================================*/
+
+.wcs-grid{
+
+    animation:wcsGridMove 36s linear infinite;
+
+}
+
+@keyframes wcsGridMove{
+
+    from{
+
+        background-position:0 0,0 0;
+
+    }
+
+    to{
+
+        background-position:70px 70px,70px 70px;
+
+    }
+
+}
+
+/*==========================================================
+                    GLOW MOVEMENT
+==========================================================*/
+
+.wcs-glow-1{
+
+    animation:wcsGlowLeft 13s ease-in-out infinite alternate;
+
+}
+
+.wcs-glow-2{
+
+    animation:wcsGlowRight 15s ease-in-out infinite alternate;
+
+}
+
+@keyframes wcsGlowLeft{
+
+    from{
+
+        transform:translate(0,0);
+
+    }
+
+    to{
+
+        transform:translate(80px,60px);
+
+    }
+
+}
+
+@keyframes wcsGlowRight{
+
+    from{
+
+        transform:translate(0,0);
+
+    }
+
+    to{
+
+        transform:translate(-80px,-60px);
+
+    }
+
+}
+
+/*==========================================================
+                    TIMELINE PULSE
+==========================================================*/
+
+.wcs-point::after{
+
+    animation:wcsPulse 2.8s ease-in-out infinite;
+
+}
+
+@keyframes wcsPulse{
+
+    0%{
+
+        box-shadow:
+
+            0 0 0 0 rgba(0,229,255,.45);
+
+    }
+
+    70%{
+
+        box-shadow:
+
+            0 0 0 14px rgba(0,229,255,0);
+
+    }
+
+    100%{
+
+        box-shadow:
+
+            0 0 0 0 rgba(0,229,255,0);
+
+    }
+
+}
+
+/*==========================================================
+                    BUTTON GLOW
+==========================================================*/
+
+.wcs-content>a{
+
+    animation:wcsButtonGlow 3.5s ease-in-out infinite;
+
+}
+
+@keyframes wcsButtonGlow{
+
+    0%{
+
+        box-shadow:
+
+            0 15px 35px rgba(0,229,255,.18);
+
+    }
+
+    50%{
+
+        box-shadow:
+
+            0 28px 65px rgba(0,229,255,.40);
+
+    }
+
+    100%{
+
+        box-shadow:
+
+            0 15px 35px rgba(0,229,255,.18);
+
+    }
+
+}
+
+/*==========================================================
+                    BUTTON ICON
+==========================================================*/
+
+.wcs-content>a:hover i{
+
+    animation:wcsArrow .8s infinite;
+
+}
+
+@keyframes wcsArrow{
+
+    0%{
+
+        transform:translateX(0);
+
+    }
+
+    50%{
+
+        transform:translateX(6px);
+
+    }
+
+    100%{
+
+        transform:translateX(0);
+
+    }
+
+}
+
+/*==========================================================
+                    HOVER PAUSE
+==========================================================*/
+
+.wcs-card:hover,
+.wcs-card:hover .wcs-point::after{
+
+    animation-play-state:paused;
+
+}
+
+/*==========================================================
+                    REDUCED MOTION
+==========================================================*/
+
+@media (prefers-reduced-motion:reduce){
+
+    .wcs-card,
+
+    .wcs-preview img,
+
+    .wcs-grid,
+
+    .wcs-glow,
+
+    .wcs-point::after,
+
+    .wcs-content>a{
+
+        animation:none !important;
+
+    }
+
+}

@@ -248,3 +248,204 @@
 @import url("./05-sections/progress/05-animation.css");
 
 @import url("./05-sections/progress/06-responsive.css");
+
+
+
+@import url("./05-sections/projects/01-background.css");
+
+@import url("./05-sections/projects/02-heading.css");
+
+@import url("./05-sections/projects/03-layout.css");
+
+@import url("./05-sections/projects/04-components.css");
+
+@import url("./05-sections/projects/05-animation.css");
+
+@import url("./05-sections/projects/06-responsive.css");
+
+
+
+@import url("./05-sections/chooseUS/01-background.css");
+
+@import url("./05-sections/chooseUS/02-heading.css");
+
+@import url("./05-sections/chooseUS/03-layout.css");
+
+@import url("./05-sections/chooseUS/04-components.css");
+
+@import url("./05-sections/chooseUS/05-animation.css");
+
+@import url("./05-sections/chooseUS/06-responsive.css");
+
+
+@import url("./05-sections/cta/01-background.css");
+
+@import url("./05-sections/cta/02-heading.css");
+
+@import url("./05-sections/cta/03-layout.css");
+
+@import url("./05-sections/cta/04-components.css");
+
+@import url("./05-sections/cta/05-animation.css");
+
+@import url("./05-sections/cta/06-responsive.css");
+
+
+
+
+
+/*==========================================================
+                WORK HERO CSS IMPORTS
+==========================================================*/
+
+@import url("./Work page/hero section/01-background.css");
+
+@import url("./Work page/hero section/02-heading.css");
+
+@import url("./Work page/hero section/03-layout.css");
+
+@import url("./Work page/hero section/04-components.css");
+
+@import url("./Work page/hero section/05-animation.css");
+
+@import url("./Work page/hero section/06-responsive.css");
+
+
+
+
+
+
+/*==========================================================
+                WORK PROJECT CSS IMPORTS
+==========================================================*/
+
+@import url("./Work page/projects/01-background.css");
+
+@import url("./Work page/projects/02-heading.css");
+
+@import url("./Work page/projects/03-layout.css");
+
+@import url("./Work page/projects/04-components.css");
+
+@import url("./Work page/projects/05-animation.css");
+
+@import url("./Work page/projects/06-responsive.css");
+
+
+
+
+
+
+/*==========================================================
+                WORK CASE STUDY CSS IMPORTS
+==========================================================*/
+
+@import url("./Work page/case study/01-background.css");
+
+@import url("./Work page/case study/02-heading.css");
+
+@import url("./Work page/case study/03-layout.css");
+
+@import url("./Work page/case study/04-components.css");
+
+@import url("./Work page/case study/05-animation.css");
+
+@import url("./Work page/case study/06-responsive.css");
+
+
+
+
+
+
+/*==========================================================
+                WORK INDUSTRIES STUDY CSS IMPORTS
+==========================================================*/
+
+@import url("./Work page/technology/01-background.css");
+
+@import url("./Work page/technology/02-heading.css");
+
+@import url("./Work page/technology/03-layout.css");
+
+@import url("./Work page/technology/04-components.css");
+
+@import url("./Work page/technology/05-animation.css");
+
+@import url("./Work page/technology/06-responsive.css");
+
+
+
+
+
+
+
+
+
+
+/*==========================================================
+                AI-AUTOMATIONS HERO CSS IMPORTS
+==========================================================*/
+
+@import url("./ai-automation/hero/01-background.css");
+
+@import url("./ai-automation/hero/02-heading.css");
+
+@import url("./ai-automation/hero/03-layout.css");
+
+@import url("./ai-automation/hero/04-components.css");
+
+@import url("./ai-automation/hero/05-animation.css");
+
+@import url("./ai-automation/hero/06-responsive.css");
+
+
+
+
+
+
+
+/*==========================================================
+                AI-AUTOMATIONS CAPABILITIES CSS IMPORTS
+==========================================================*/
+
+@import url("./ai-automation/capabilities/01-core.css");
+
+@import url("./ai-automation/capabilities/02-structure.css");
+
+@import url("./ai-automation/capabilities/03-intro.css");
+
+@import url("./ai-automation/capabilities/04-modules.css");
+
+@import url("./ai-automation/capabilities/05-console.css");
+
+@import url("./ai-automation/capabilities/06-motion.css");
+
+@import url("./ai-automation/capabilities/07-breakpoints.css");
+
+
+
+
+
+
+
+/*==========================================================
+                AI-AUTOMATIONS  AUTOMATION-JOURNEY CSS IMPORTS
+==========================================================*/
+
+@import url("./ai-automation/automation-journey/01-core.css");
+
+@import url("./ai-automation/automation-journey/02-layout.css");
+
+@import url("./ai-automation/automation-journey/03-nodes.css");
+
+@import url("./ai-automation/automation-journey/04-ai-brain.css");
+
+@import url("./ai-automation/automation-journey/05-live-impact.css");
+
+@import url("./ai-automation/automation-journey/06-animation.css");
+
+@import url("./ai-automation/automation-journey/07-responsive.css");
+
+
+
+

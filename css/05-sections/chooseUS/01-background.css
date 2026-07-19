@@ -1,0 +1,176 @@
+/*==========================================================
+                    SECTION
+==========================================================*/
+
+.solutions-why{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:140px 0;
+
+    background:#040B16;
+
+    isolation:isolate;
+
+}
+
+/*==========================================================
+                    BACKGROUND
+==========================================================*/
+
+.scw-bg{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+    z-index:1;
+
+}
+
+/*==========================================================
+                    GRID
+==========================================================*/
+
+.scw-grid{
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+        linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+
+        linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+
+    background-size:70px 70px;
+
+    mask-image:radial-gradient(circle at center, black 35%, transparent 100%);
+
+    opacity:.45;
+
+}
+
+/*==========================================================
+                RADIAL GRADIENT
+==========================================================*/
+
+.scw-gradient{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        radial-gradient(circle at 20% 25%, rgba(0,229,255,.14), transparent 45%),
+
+        radial-gradient(circle at 80% 70%, rgba(124,102,255,.16), transparent 45%),
+
+        radial-gradient(circle at center, rgba(255,255,255,.02), transparent 70%);
+
+}
+
+/*==========================================================
+                    GLOW
+==========================================================*/
+
+.scw-glow{
+
+    position:absolute;
+
+    width:520px;
+
+    height:520px;
+
+    border-radius:50%;
+
+    filter:blur(120px);
+
+    opacity:.35;
+
+}
+
+.scw-glow-left{
+
+    top:-120px;
+
+    left:-150px;
+
+    background:#00E5FF;
+
+}
+
+.scw-glow-right{
+
+    bottom:-180px;
+
+    right:-160px;
+
+    background:#7C66FF;
+
+}
+
+/*==========================================================
+                    NOISE
+==========================================================*/
+
+.scw-noise{
+
+    position:absolute;
+
+    inset:0;
+
+    opacity:.05;
+
+    background-image:
+
+        radial-gradient(circle, rgba(255,255,255,.35) 1px, transparent 1px);
+
+    background-size:16px 16px;
+
+}
+
+/*==========================================================
+                TOP & BOTTOM FADE
+==========================================================*/
+
+.solutions-why::before,
+.solutions-why::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    width:100%;
+
+    height:140px;
+
+    pointer-events:none;
+
+    z-index:2;
+
+}
+
+.solutions-why::before{
+
+    top:0;
+
+    background:linear-gradient(#040B16, transparent);
+
+}
+
+.solutions-why::after{
+
+    bottom:0;
+
+    background:linear-gradient(transparent, #040B16);
+
+}

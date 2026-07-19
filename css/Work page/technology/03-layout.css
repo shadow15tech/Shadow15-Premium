@@ -1,0 +1,333 @@
+/*==========================================================
+                    SHOWCASE
+==========================================================*/
+
+.wt-showcase{
+
+    position:relative;
+
+    width:100%;
+
+    max-width:1100px;
+
+    height:820px;
+
+    margin:0 auto 140px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+/*==========================================================
+                    CORE
+==========================================================*/
+
+.wt-core{
+
+    position:relative;
+
+    width:260px;
+
+    height:260px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    z-index:5;
+
+}
+
+/*==========================================================
+                    LOGO
+==========================================================*/
+
+.wt-logo{
+
+    width:170px;
+
+    height:170px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    position:relative;
+
+    z-index:3;
+
+}
+
+.wt-logo h3{
+
+    margin:0;
+
+}
+
+.wt-logo span{
+
+    display:block;
+
+    margin-top:8px;
+
+}
+
+/*==========================================================
+                    ORBIT RINGS
+==========================================================*/
+
+.wt-core-ring{
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:50%;
+
+}
+
+.wt-core-ring:nth-child(1){
+
+    width:260px;
+
+    height:260px;
+
+}
+
+.wt-core-ring:nth-child(2){
+
+    width:420px;
+
+    height:420px;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+}
+
+.wt-core-ring:nth-child(3){
+
+    width:620px;
+
+    height:620px;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+}
+
+/*==========================================================
+                    TECH CARD
+==========================================================*/
+
+.wt-tech{
+
+    position:absolute;
+
+    width:140px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    padding:22px;
+
+    text-align:center;
+
+}
+
+/*==========================================================
+                    ICON
+==========================================================*/
+
+.wt-tech i{
+
+    font-size:2rem;
+
+}
+
+.wt-tech span{
+
+    display:block;
+
+}
+
+/*==========================================================
+                    POSITIONING
+==========================================================*/
+
+.wt-tech.html{
+
+    top:0;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+}
+
+.wt-tech.css{
+
+    top:90px;
+
+    right:140px;
+
+}
+
+.wt-tech.js{
+
+    top:250px;
+
+    right:20px;
+
+}
+
+.wt-tech.react{
+
+    bottom:220px;
+
+    right:80px;
+
+}
+
+.wt-tech.node{
+
+    bottom:60px;
+
+    right:220px;
+
+}
+
+.wt-tech.mongo{
+
+    bottom:0;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+}
+
+.wt-tech.mysql{
+
+    bottom:60px;
+
+    left:220px;
+
+}
+
+.wt-tech.gsap{
+
+    bottom:220px;
+
+    left:80px;
+
+}
+
+.wt-tech.three{
+
+    top:250px;
+
+    left:20px;
+
+}
+
+.wt-tech.git{
+
+    top:90px;
+
+    left:140px;
+
+}
+
+.wt-tech.vercel{
+
+    top:390px;
+
+    right:180px;
+
+}
+
+.wt-tech.cloudflare{
+
+    top:390px;
+
+    left:180px;
+
+}
+
+/*==========================================================
+                    FEATURES
+==========================================================*/
+
+.wt-features{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:28px;
+
+    align-items:stretch;
+
+}
+
+/*==========================================================
+                    FEATURE
+==========================================================*/
+
+.wt-feature{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:18px;
+
+    min-height:260px;
+
+}
+
+.wt-feature i{
+
+    font-size:2rem;
+
+}
+
+.wt-feature h4{
+
+    margin:0;
+
+}
+
+.wt-feature p{
+
+    margin:0;
+
+}

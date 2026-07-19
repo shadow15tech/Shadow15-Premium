@@ -1,0 +1,249 @@
+/*==========================================================
+                    HERO SECTION
+==========================================================*/
+
+.wh-hero{
+
+    position:relative;
+
+    overflow:hidden;
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:140px 0 100px;
+
+    background:#050816;
+
+    isolation:isolate;
+
+}
+
+/*==========================================================
+                    BACKGROUND
+==========================================================*/
+
+.wh-bg{
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:-1;
+
+    overflow:hidden;
+
+}
+
+/*==========================================================
+                    GRID
+==========================================================*/
+
+.wh-grid{
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+
+        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+
+    background-size:70px 70px;
+
+    mask-image:radial-gradient(circle at center, #000 45%, transparent 100%);
+
+    opacity:.45;
+
+}
+
+/*==========================================================
+                    AURORA GLOWS
+==========================================================*/
+
+.wh-glow{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(120px);
+
+    opacity:.75;
+
+}
+
+.wh-glow-1{
+
+    width:700px;
+
+    height:700px;
+
+    top:-220px;
+
+    left:-180px;
+
+    background:radial-gradient(circle,
+        rgba(0,229,255,.45) 0%,
+        rgba(0,229,255,.12) 45%,
+        transparent 80%
+    );
+
+}
+
+.wh-glow-2{
+
+    width:650px;
+
+    height:650px;
+
+    right:-180px;
+
+    bottom:-220px;
+
+    background:radial-gradient(circle,
+        rgba(124,102,255,.45) 0%,
+        rgba(124,102,255,.12) 45%,
+        transparent 80%
+    );
+
+}
+
+/*==========================================================
+                    CENTER LIGHT
+==========================================================*/
+
+.wh-bg::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:900px;
+
+    height:900px;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+
+        rgba(255,255,255,.05),
+
+        transparent 72%
+
+    );
+
+}
+
+/*==========================================================
+                    TOP HIGHLIGHT
+==========================================================*/
+
+.wh-bg::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        radial-gradient(circle at 50% 0%,
+
+            rgba(255,255,255,.08),
+
+            transparent 55%
+
+        );
+
+}
+
+/*==========================================================
+                    NOISE
+==========================================================*/
+
+.wh-noise{
+
+    position:absolute;
+
+    inset:0;
+
+    opacity:.03;
+
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.9'/%3E%3C/svg%3E");
+
+    background-size:220px;
+
+    pointer-events:none;
+
+}
+
+/*==========================================================
+                    BOTTOM FADE
+==========================================================*/
+
+.wh-hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    right:0;
+
+    bottom:0;
+
+    height:220px;
+
+    background:linear-gradient(
+
+        to bottom,
+
+        transparent,
+
+        #050816 92%
+
+    );
+
+    pointer-events:none;
+
+}
+
+/*==========================================================
+                VIGNETTE
+==========================================================*/
+
+.wh-hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:radial-gradient(circle at center,
+
+        transparent 35%,
+
+        rgba(0,0,0,.22) 100%
+
+    );
+
+    pointer-events:none;
+
+}

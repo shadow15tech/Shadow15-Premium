@@ -1,0 +1,305 @@
+/*==========================================================
+                    PROJECT CARD
+==========================================================*/
+
+.scp-card{
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    background:linear-gradient(
+        145deg,
+        rgba(255,255,255,.06),
+        rgba(255,255,255,.025)
+    );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(24px);
+
+    box-shadow:
+
+        0 20px 60px rgba(0,0,0,.28),
+
+        inset 0 1px 0 rgba(255,255,255,.05);
+
+    transition:.45s ease;
+
+}
+
+/*==========================================================
+                    IMAGE
+==========================================================*/
+
+.scp-image{
+
+    background:#081421;
+
+}
+
+/*==========================================================
+                PROJECT IMAGE
+==========================================================*/
+
+.scp-image img{
+
+    transition:
+
+        transform .8s ease,
+
+        filter .4s ease;
+
+}
+
+/*==========================================================
+                    OVERLAY
+==========================================================*/
+
+.scp-overlay{
+
+    background:
+
+        linear-gradient(
+
+            180deg,
+
+            rgba(5,13,23,.05),
+
+            rgba(5,13,23,.20),
+
+            rgba(5,13,23,.85)
+
+        );
+
+}
+
+/*==========================================================
+                CATEGORY
+==========================================================*/
+
+.scp-category{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:#FFFFFF;
+
+    font-size:.78rem;
+
+    font-weight:600;
+
+    letter-spacing:.08em;
+
+    text-transform:uppercase;
+
+}
+
+/*==========================================================
+                    CONTENT
+==========================================================*/
+
+.scp-content{
+
+    flex:1;
+
+    background:#050D17;
+
+}
+
+/*==========================================================
+                    TITLE
+==========================================================*/
+
+.scp-content h3{
+
+    color:#FFFFFF;
+
+    font-size:1.55rem;
+
+    font-weight:700;
+
+    line-height:1.3;
+
+}
+
+/*==========================================================
+                DESCRIPTION
+==========================================================*/
+
+.scp-content p{
+
+    color:#9FB4C7;
+
+    line-height:1.8;
+
+}
+
+/*==========================================================
+                TECH STACK
+==========================================================*/
+
+.scp-tech span{
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:#DCEAF4;
+
+    font-size:.82rem;
+
+    font-weight:500;
+
+}
+
+/*==========================================================
+                    FOOTER
+==========================================================*/
+
+.scp-footer{
+
+    margin-top:auto;
+
+    padding-top:22px;
+
+    border-top:1px solid rgba(255,255,255,.06);
+
+}
+
+/*==========================================================
+                    LINK
+==========================================================*/
+
+.scp-footer a{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:#FFFFFF;
+
+    font-weight:600;
+
+}
+
+/*==========================================================
+                    HOVER
+==========================================================*/
+
+.scp-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:rgba(0,229,255,.30);
+
+    box-shadow:
+
+        0 35px 80px rgba(0,0,0,.35),
+
+        0 0 30px rgba(0,229,255,.10);
+
+}
+
+/*==========================================================
+                IMAGE HOVER
+==========================================================*/
+
+.scp-card:hover .scp-image img{
+
+    transform:scale(1.08);
+
+}
+
+/*==========================================================
+                CATEGORY HOVER
+==========================================================*/
+
+.scp-card:hover .scp-category{
+
+    background:#00E5FF;
+
+    color:#050D17;
+
+}
+
+/*==========================================================
+                TITLE HOVER
+==========================================================*/
+
+.scp-card:hover .scp-content h3{
+
+    color:#00E5FF;
+
+}
+
+/*==========================================================
+                TECH HOVER
+==========================================================*/
+
+.scp-card:hover .scp-tech span{
+
+    border-color:rgba(0,229,255,.35);
+
+}
+
+/*==========================================================
+                LINK HOVER
+==========================================================*/
+
+.scp-card:hover .scp-footer a{
+
+    color:#00E5FF;
+
+}
+
+.scp-card:hover .scp-footer a i{
+
+    transform:translate(6px,-6px);
+
+}
+
+/*==========================================================
+                TRANSITIONS
+==========================================================*/
+
+.scp-card,
+.scp-image img,
+.scp-category,
+.scp-tech span,
+.scp-content h3,
+.scp-footer a,
+.scp-footer a i{
+
+    transition:
+
+        transform .4s ease,
+
+        color .35s ease,
+
+        background .35s ease,
+
+        border-color .35s ease,
+
+        box-shadow .35s ease;
+
+}

@@ -1,0 +1,305 @@
+/*==========================================================
+                    PROJECT CARD
+==========================================================*/
+
+.wp-project{
+
+    padding:40px;
+
+    border-radius:36px;
+
+    background:linear-gradient(
+        145deg,
+        rgba(255,255,255,.05),
+        rgba(255,255,255,.02)
+    );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(28px);
+
+    box-shadow:
+
+        0 35px 90px rgba(0,0,0,.30),
+
+        inset 0 1px 0 rgba(255,255,255,.05);
+
+}
+
+/*==========================================================
+                    IMAGE
+==========================================================*/
+
+.wp-image{
+
+    border-radius:24px;
+
+    background:#0A1025;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+
+        0 25px 60px rgba(0,0,0,.35);
+
+}
+
+/*==========================================================
+                    IMAGE OVERLAY
+==========================================================*/
+
+.wp-image::before{
+
+    background:linear-gradient(
+
+        to top,
+
+        rgba(5,8,22,.35),
+
+        transparent
+
+    );
+
+    opacity:.85;
+
+}
+
+.wp-image img{
+
+    transition:transform .8s ease;
+
+}
+
+/*==========================================================
+                    CATEGORY
+==========================================================*/
+
+.wp-category{
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    background:rgba(0,229,255,.08);
+
+    border:1px solid rgba(0,229,255,.18);
+
+    color:#00E5FF;
+
+    font-size:.78rem;
+
+    font-weight:600;
+
+    letter-spacing:.14em;
+
+    text-transform:uppercase;
+
+}
+
+/*==========================================================
+                    TITLE
+==========================================================*/
+
+.wp-content h3{
+
+    color:#FFFFFF;
+
+    font-size:2.1rem;
+
+    font-weight:700;
+
+    line-height:1.25;
+
+}
+
+/*==========================================================
+                    DESCRIPTION
+==========================================================*/
+
+.wp-content p{
+
+    color:#9FB4C7;
+
+    font-size:1rem;
+
+    line-height:1.9;
+
+}
+
+/*==========================================================
+                    STACK
+==========================================================*/
+
+.wp-stack span{
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:#DCEAF4;
+
+    font-size:.82rem;
+
+    font-weight:500;
+
+    transition:.35s ease;
+
+}
+
+/*==========================================================
+                    BUTTONS
+==========================================================*/
+
+.wp-buttons a{
+
+    padding:16px 28px;
+
+    border-radius:999px;
+
+    font-size:.92rem;
+
+    font-weight:600;
+
+    transition:.35s ease;
+
+}
+
+.wp-buttons a:first-child{
+
+    color:#FFFFFF;
+
+    background:linear-gradient(
+
+        135deg,
+
+        #00E5FF,
+
+        #7C66FF
+
+    );
+
+    box-shadow:
+
+        0 15px 40px rgba(0,229,255,.22);
+
+}
+
+.wp-buttons a:last-child{
+
+    color:#FFFFFF;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+/*==========================================================
+                    BUTTON ICON
+==========================================================*/
+
+.wp-buttons i{
+
+    font-size:.9rem;
+
+}
+
+/*==========================================================
+                    PROJECT HOVER
+==========================================================*/
+
+.wp-project:hover{
+
+    border-color:rgba(0,229,255,.20);
+
+    box-shadow:
+
+        0 40px 100px rgba(0,229,255,.08),
+
+        0 35px 90px rgba(0,0,0,.35);
+
+}
+
+/*==========================================================
+                    IMAGE HOVER
+==========================================================*/
+
+.wp-project:hover img{
+
+    transform:scale(1.08);
+
+}
+
+/*==========================================================
+                    STACK HOVER
+==========================================================*/
+
+.wp-stack span:hover{
+
+    background:rgba(0,229,255,.10);
+
+    border-color:rgba(0,229,255,.25);
+
+    color:#FFFFFF;
+
+    transform:translateY(-3px);
+
+}
+
+/*==========================================================
+                    BUTTON HOVER
+==========================================================*/
+
+.wp-buttons a:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.wp-buttons a:first-child:hover{
+
+    box-shadow:
+
+        0 25px 60px rgba(0,229,255,.35);
+
+}
+
+.wp-buttons a:last-child:hover{
+
+    color:#00E5FF;
+
+    border-color:rgba(0,229,255,.28);
+
+}
+
+/*==========================================================
+                    TRANSITIONS
+==========================================================*/
+
+.wp-project,
+
+.wp-image,
+
+.wp-image img,
+
+.wp-stack span,
+
+.wp-buttons a{
+
+    transition:
+
+        transform .45s ease,
+
+        background .35s ease,
+
+        color .35s ease,
+
+        border-color .35s ease,
+
+        box-shadow .35s ease;
+
+}
