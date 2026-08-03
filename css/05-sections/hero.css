@@ -1,40 +1,104 @@
-/*==========================================================
-
-                    HERO SECTION
-
-                    PART 01
-
-                    Layout + Background
-
-==========================================================*/
-
-
-/*======================================
-HERO
-======================================*/
+/*==================================================
+    HERO SECTION
+==================================================*/
 
 .s15-hero{
 
     position:relative;
 
-    min-height:100vh;
+    overflow:hidden;
+
+    isolation:isolate;
+
+    min-height:100svh;
 
     display:flex;
 
     align-items:center;
 
-    overflow:hidden;
+    padding:
 
-    background:#07111F;
+        clamp(110px,10vw,160px)
+
+        0
+
+        clamp(70px,7vw,120px);
 
 }
 
+/*==================================================
+    CONTAINER
+==================================================*/
 
-/*======================================
-BACKGROUND
-======================================*/
+.s15-hero .container{
 
-.hero-bg{
+    position:relative;
+
+    z-index:5;
+
+}
+
+/*==================================================
+    HERO WRAPPER
+==================================================*/
+
+.hero-wrapper{
+
+    display:grid;
+
+    grid-template-columns:
+
+        minmax(0,620px)
+
+        minmax(420px,1fr);
+
+    align-items:center;
+
+    gap:
+
+        clamp(80px,8vw,140px);
+
+}
+
+/*==================================================
+    LEFT CONTENT
+==================================================*/
+
+.hero-content{
+
+    position:relative;
+
+    z-index:20;
+
+    max-width:620px;
+
+}
+
+/*==================================================
+    RIGHT VISUAL
+==================================================*/
+
+.hero-visual{
+
+    position:relative;
+
+    width:100%;
+
+    height:720px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    isolation:isolate;
+
+}/*==================================================
+    HERO BACKGROUND
+==================================================*/
+
+.hero-background{
 
     position:absolute;
 
@@ -42,16 +106,65 @@ BACKGROUND
 
     overflow:hidden;
 
-    z-index:0;
+    z-index:1;
 
-}
+}.hero-ambient{
 
+    position:absolute;
 
-/*======================================
-GRID
-======================================*/
+    left:-8%;
 
-.hero-grid{
+    top:-12%;
+
+    width:900px;
+
+    height:900px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            rgba(34,211,238,.14),
+
+            transparent 72%
+
+        );
+
+    filter:blur(120px);
+
+}.hero-mouse-light{
+
+    position:absolute;
+
+    width:480px;
+
+    height:480px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            rgba(34,211,238,.12),
+
+            transparent 70%
+
+        );
+
+    filter:blur(90px);
+
+    pointer-events:none;
+
+    opacity:.55;
+
+    transition:
+
+        transform .25s linear;
+
+}.hero-grid{
 
     position:absolute;
 
@@ -77,88 +190,23 @@ GRID
 
         );
 
-    background-size:60px 60px;
+    background-size:
 
-    mask-image:radial-gradient(circle,#000 45%,transparent 100%);
+        72px 72px;
 
-}
-
-
-/*======================================
-GRADIENT 01
-======================================*/
-
-.hero-gradient-1{
-
-    position:absolute;
-
-    width:700px;
-
-    height:700px;
-
-    left:-220px;
-
-    top:-120px;
-
-    border-radius:50%;
-
-    background:
+    mask-image:
 
         radial-gradient(
 
             circle,
 
-            rgba(0,231,212,.22),
+            rgba(0,0,0,1),
 
-            transparent 72%
-
-        );
-
-    filter:blur(90px);
-
-}
-
-
-/*======================================
-GRADIENT 02
-======================================*/
-
-.hero-gradient-2{
-
-    position:absolute;
-
-    width:850px;
-
-    height:850px;
-
-    right:-250px;
-
-    bottom:-260px;
-
-    border-radius:50%;
-
-    background:
-
-        radial-gradient(
-
-            circle,
-
-            rgba(0,160,255,.18),
-
-            transparent 72%
+            transparent 95%
 
         );
 
-    filter:blur(120px);
-
-}
-
-
-/*======================================
-NOISE
-======================================*/
-
-.hero-noise{
+}.hero-noise{
 
     position:absolute;
 
@@ -166,99 +214,63 @@ NOISE
 
     opacity:.03;
 
-    background-image:url("../image/noise.png");
+    background-image:
 
-    background-size:220px;
+        radial-gradient(#fff 1px,transparent 1px);
 
-    pointer-events:none;
+    background-size:
+
+        5px 5px;
+
+}.hero-grid{
+
+    z-index:1;
 
 }
 
+.hero-noise{
 
-/*======================================
-CONTAINER
-======================================*/
+    z-index:2;
 
-.s15-hero .container{
+}
 
-    position:relative;
+.hero-ambient{
 
-    width:min(1400px,92%);
+    z-index:3;
 
-    margin:auto;
+}
+
+.hero-mouse-light{
+
+    z-index:4;
+
+}
+
+#hero-particles{
 
     z-index:5;
 
-}
+}/*==================================================
+    LARGE LAPTOP
+==================================================*/
 
+@media (max-width:1200px){
 
-/*======================================
-WRAPPER
-======================================*/
+    .hero-wrapper{
 
-.hero-wrapper{
+        gap:80px;
 
-    display:grid;
+    }
 
-    grid-template-columns:1.1fr .9fr;
+    .hero-visual{
 
-    align-items:center;
+        height:620px;
 
-    gap:80px;
+    }
 
-    min-height:100vh;
-
-    padding-top:120px;
-
-    padding-bottom:80px;
-
-}
-
-
-/*======================================
-LEFT
-======================================*/
-
-.hero-left{
-
-    position:relative;
-
-    z-index:5;
-
-}
-
-
-/*======================================
-RIGHT
-======================================*/
-
-.hero-right{
-
-    position:relative;
-
-    height:700px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-}
-
-
-/*==========================================================
-
-                HERO LEFT CONTENT
-
-                PART 02
-
-==========================================================*/
-
-
-/*======================================
-BADGE
-======================================*/
+}/*==================================================
+    PREMIUM BADGE
+==================================================*/
 
 .hero-badge{
 
@@ -266,130 +278,160 @@ BADGE
 
     align-items:center;
 
-    gap:12px;
+    gap:14px;
 
     padding:12px 22px;
 
-    margin-bottom:28px;
+    margin-bottom:34px;
 
     border-radius:999px;
 
-    background:rgba(255,255,255,.05);
+    background:
+        rgba(255,255,255,.04);
 
-    border:1px solid rgba(255,255,255,.08);
+    border:
+        1px solid rgba(255,255,255,.08);
 
-    backdrop-filter:blur(18px);
+    backdrop-filter:
+        blur(16px);
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.12);
 
 }
 
 .badge-dot{
 
-    width:8px;
+    width:9px;
 
-    height:8px;
+    height:9px;
 
     border-radius:50%;
 
-    background:#00E7D4;
+    background:#22D3EE;
 
-    box-shadow:0 0 14px rgba(0,231,212,.9);
-
-    animation:s15BadgePulse 2s infinite;
+    box-shadow:
+        0 0 14px rgba(34,211,238,.65);
 
 }
 
 .hero-badge span:last-child{
 
-    color:#D7E6F5;
+    color:#D8E8F6;
 
-    font-size:.88rem;
+    font-size:.82rem;
 
     font-weight:600;
 
-    letter-spacing:.08em;
+    letter-spacing:.14em;
 
-}
+    text-transform:uppercase;
 
-
-/*======================================
-TITLE
-======================================*/
+}/*==================================================
+    HERO TITLE
+==================================================*/
 
 .hero-title{
 
-    margin:0;
+    display:flex;
 
-    max-width:760px;
+    flex-direction:column;
 
-    color:#F8FAFC;
+    margin-bottom:34px;
 
     font-family:"Sora",sans-serif;
 
-    font-size:clamp(3.6rem,7vw,5.3rem);
-
     font-weight:700;
 
-    line-height:1.08;
+    line-height:.95;
 
-    letter-spacing:-2.5px;
+    letter-spacing:-3px;
 
 }
 
-.hero-title span{
+.hero-line{
 
     display:block;
 
-    margin:8px 0;
+}
 
-    background:linear-gradient(
+.hero-line-one{
 
-        90deg,
+    font-size:
+        clamp(3.9rem,6vw,5.7rem);
 
-        #00E7D4,
+    color:#FFFFFF;
 
-        #5FD9FF,
+}
 
-        #A8D98F,
+.hero-line-gradient{
 
-        #F2DF5A
+    margin:10px 0 16px;
 
-    );
+    font-size:
+        clamp(4.3rem,6.6vw,6.3rem);
 
-    background-size:250%;
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            #22D3EE,
+
+            #7DD3FC,
+
+            #60A5FA
+
+        );
+
+    background-size:220%;
 
     -webkit-background-clip:text;
 
     -webkit-text-fill-color:transparent;
 
-    animation:s15GradientFlow 8s linear infinite;
+}
+
+.hero-line-three{
+
+    font-size:
+        clamp(3.2rem,5vw,4.9rem);
+
+    color:#FFFFFF;
 
 }
 
+.hero-line-four{
 
-/*======================================
-DESCRIPTION
-======================================*/
+    font-size:
+        clamp(3.2rem,5vw,4.9rem);
+
+    color:#FFFFFF;
+
+}/*==================================================
+    DESCRIPTION
+==================================================*/
 
 .hero-description{
 
-    max-width:680px;
+    max-width:590px;
 
-    margin:32px 0 42px;
+    margin-bottom:46px;
 
-    color:#A8B7C9;
+    color:#8FA7BC;
 
     font-size:1.08rem;
 
     line-height:1.9;
 
-}
+    font-weight:400;
 
+}/*==================================================
+    ACTIONS
+==================================================*/
 
-/*======================================
-BUTTON GROUP
-======================================*/
-
-.hero-buttons{
+.hero-actions{
 
     display:flex;
 
@@ -399,14 +441,11 @@ BUTTON GROUP
 
     flex-wrap:wrap;
 
-}
+    margin-bottom:44px;
 
+}.hero-btn-primary{
 
-/*======================================
-PRIMARY BUTTON
-======================================*/
-
-.hero-primary-btn{
+    position:relative;
 
     display:inline-flex;
 
@@ -414,334 +453,379 @@ PRIMARY BUTTON
 
     justify-content:center;
 
-    padding:18px 34px;
+    height:60px;
+
+    min-width:220px;
+
+    padding:0 32px;
 
     border-radius:999px;
-
-    background:linear-gradient(
-
-        135deg,
-
-        #00E7D4,
-
-        #59D7E6,
-
-        #A9D79C
-
-    );
-
-    color:#07111F;
-
-    text-decoration:none;
-
-    font-weight:700;
-
-    transition:.35s;
-
-    box-shadow:
-
-        0 15px 45px rgba(0,231,212,.28);
-
-}
-
-.hero-primary-btn:hover{
-
-    transform:translateY(-4px);
-
-    box-shadow:
-
-        0 24px 60px rgba(0,231,212,.35);
-
-}
-
-
-/*======================================
-SECONDARY BUTTON
-======================================*/
-
-.hero-secondary-btn{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    padding:18px 34px;
-
-    border-radius:999px;
-
-    border:1px solid rgba(255,255,255,.10);
-
-    background:rgba(255,255,255,.04);
-
-    backdrop-filter:blur(18px);
-
-    color:#F8FAFC;
-
-    text-decoration:none;
-
-    font-weight:600;
-
-    transition:.35s;
-
-}
-
-.hero-secondary-btn:hover{
-
-    transform:translateY(-4px);
-
-    border-color:#00E7D4;
-
-    background:rgba(255,255,255,.08);
-
-}
-
-
-/*======================================
-STATS
-======================================*/
-
-.hero-stats{
-
-    display:grid;
-
-    grid-template-columns:repeat(4,1fr);
-
-    gap:18px;
-
-    margin-top:65px;
-
-}
-
-.hero-stat{
-
-    padding:22px;
-
-    border-radius:20px;
-
-    background:rgba(255,255,255,.04);
-
-    border:1px solid rgba(255,255,255,.08);
-
-    backdrop-filter:blur(16px);
-
-    transition:.35s;
-
-}
-
-.hero-stat:hover{
-
-    transform:translateY(-8px);
-
-    border-color:rgba(0,231,212,.25);
-
-}
-
-.hero-stat h2{
-
-    margin:0;
-
-    font-size:2.2rem;
-
-    color:#FFFFFF;
-
-    font-family:"Sora",sans-serif;
-
-}
-
-.hero-stat p{
-
-    margin-top:8px;
-
-    color:#8EA5BD;
-
-    font-size:.9rem;
-
-}
-
-
-/*======================================
-ANIMATIONS
-======================================*/
-
-@keyframes s15GradientFlow{
-
-    from{
-
-        background-position:0%;
-
-    }
-
-    to{
-
-        background-position:250%;
-
-    }
-
-}
-
-@keyframes s15BadgePulse{
-
-    0%{
-
-        transform:scale(1);
-
-    }
-
-    50%{
-
-        transform:scale(1.35);
-
-    }
-
-    100%{
-
-        transform:scale(1);
-
-    }
-
-}
-
-
-/*==========================================================
-
-                HERO RIGHT SIDE
-
-                PART 03
-
-==========================================================*/
-
-
-/*======================================
-RIGHT AREA
-======================================*/
-
-.hero-right{
-
-    position:relative;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-}
-
-
-/*======================================
-AI ORB
-======================================*/
-
-.hero-orb{
-
-    position:relative;
-
-    width:430px;
-
-    height:430px;
-
-    border-radius:50%;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-}
-
-
-/*======================================
-CORE
-======================================*/
-
-.orb-core{
-
-    width:120px;
-
-    height:120px;
-
-    border-radius:50%;
 
     background:
 
-        radial-gradient(
+        linear-gradient(
 
-            circle,
+            135deg,
 
-            #5FD9FF,
+            #2563EB,
 
-            #00E7D4 45%,
-
-            #0B2038 100%
+            #22D3EE
 
         );
 
-    box-shadow:
+    color:#FFFFFF;
 
-        0 0 80px rgba(0,231,212,.55),
+    font-size:.96rem;
 
-        inset 0 0 40px rgba(255,255,255,.25);
+    font-weight:600;
 
-    animation:
+    transition:.35s;
 
-        orbPulse 5s ease-in-out infinite;
+    overflow:hidden;
+
+}.hero-btn-secondary{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    height:60px;
+
+    padding:0 30px;
+
+    border-radius:999px;
+
+    border:
+
+        1px solid rgba(255,255,255,.08);
+
+    background:
+
+        rgba(255,255,255,.04);
+
+    color:#EAF5FF;
+
+    backdrop-filter:
+
+        blur(14px);
+
+    transition:.35s;
+
+}.hero-btn-primary:hover,
+
+.hero-btn-secondary:hover{
+
+    transform:
+
+        translateY(-4px);
 
 }
 
+.hero-btn-primary:hover{
 
-/*======================================
-RINGS
-======================================*/
+    box-shadow:
 
-.orb-ring{
+        0 18px 40px rgba(34,211,238,.25);
+
+}
+
+.hero-btn-secondary:hover{
+
+    border-color:
+
+        rgba(34,211,238,.25);
+
+}.hero-btn::before{
+
+    content:"";
 
     position:absolute;
 
-    border-radius:50%;
+    left:-120%;
+
+    top:0;
+
+    width:70%;
+
+    height:100%;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            transparent,
+
+            rgba(255,255,255,.18),
+
+            transparent
+
+        );
+
+    transform:skewX(-22deg);
+
+    transition:1s;
+
+}
+
+.hero-btn:hover::before{
+
+    left:170%;
+
+}/*==================================================
+    TRUST
+==================================================*/
+
+.hero-trust{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    margin-bottom:44px;
+
+}
+
+.trust-stars{
+
+    color:#FFD54A;
+
+    font-size:.95rem;
+
+    letter-spacing:3px;
+
+}
+
+.trust-text{
+
+    display:flex;
+
+    gap:6px;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    color:#8FA7BC;
+
+    font-size:.92rem;
+
+}
+
+.trust-text strong{
+
+    color:#FFFFFF;
+
+    font-weight:600;
+
+}/*==================================================
+    HERO VISUAL
+==================================================*/
+
+.hero-visual{
+
+    position:relative;
+
+    width:100%;
+
+    height:720px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    isolation:isolate;
+
+}/*==================================================
+    CENTER CRYSTAL
+==================================================*/
+
+.visual-center{
+
+    position:absolute;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:180px;
+
+    height:180px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:20;
+
+}
+
+.visual-sphere{
+
+    position:relative;
+
+    width:130px;
+
+    height:130px;
+
+    border-radius:32px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.08),
+            rgba(255,255,255,.02)
+        );
+
+    backdrop-filter:blur(18px);
 
     border:1px solid rgba(255,255,255,.08);
 
-}
+    box-shadow:
 
-.ring-1{
+        0 25px 70px rgba(0,0,0,.18);
 
-    width:220px;
+    font-family:"Sora",sans-serif;
 
-    height:220px;
+    font-size:2rem;
 
-    animation:rotateClock 18s linear infinite;
+    font-weight:700;
 
-}
+    color:#ffffff;
 
-.ring-2{
+    letter-spacing:.14em;
 
-    width:310px;
+}.visual-sphere::before{
 
-    height:310px;
+    content:"";
 
-    animation:rotateAnti 24s linear infinite;
+    position:absolute;
 
-}
+    inset:2px;
 
-.ring-3{
+    border-radius:30px;
 
-    width:400px;
+    border:
 
-    height:400px;
-
-    animation:rotateClock 30s linear infinite;
+        1px solid rgba(255,255,255,.05);
 
 }
 
+.visual-sphere::after{
 
-/*======================================
-FLOATING CARDS
-======================================*/
+    content:"";
 
-.hero-card{
+    position:absolute;
+
+    top:14px;
+
+    left:18px;
+
+    width:44px;
+
+    height:8px;
+
+    border-radius:30px;
+
+    background:
+
+        rgba(255,255,255,.16);
+
+    filter:blur(2px);
+
+}/*==================================================
+    ORBITS
+==================================================*/
+
+.orbit{
+
+    position:absolute;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    border-radius:50%;
+
+    border:
+
+        1px solid rgba(255,255,255,.05);
+
+}
+
+.orbit-one{
+
+    width:240px;
+
+    height:240px;
+
+}
+
+.orbit-two{
+
+    width:360px;
+
+    height:360px;
+
+}
+
+.orbit-three{
+
+    width:500px;
+
+    height:500px;
+
+    opacity:.45;
+
+}.orbit::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    top:-4px;
+
+    transform:translateX(-50%);
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:#22D3EE;
+
+    box-shadow:
+
+        0 0 14px rgba(34,211,238,.65);
+
+}/*==================================================
+    SERVICE LABELS
+==================================================*/
+
+.service-label{
 
     position:absolute;
 
@@ -749,346 +833,310 @@ FLOATING CARDS
 
     align-items:center;
 
-    gap:10px;
+    justify-content:center;
 
-    padding:14px 20px;
+    height:48px;
 
-    border-radius:18px;
+    padding:0 18px;
 
-    background:rgba(255,255,255,.05);
+    border-radius:999px;
 
-    border:1px solid rgba(255,255,255,.08);
+    background:
 
-    backdrop-filter:blur(20px);
+        rgba(255,255,255,.05);
+
+    backdrop-filter:blur(14px);
+
+    border:
+
+        1px solid rgba(255,255,255,.07);
 
     color:#F8FAFC;
 
-    font-weight:600;
+    font-size:.88rem;
+
+    font-weight:500;
+
+    transition:.35s;
+
+}.service-label:hover{
+
+    transform:
+
+        translateY(-5px);
+
+    border-color:
+
+        rgba(34,211,238,.25);
 
     box-shadow:
 
-        0 12px 40px rgba(0,0,0,.25);
+        0 16px 36px rgba(34,211,238,.12);
 
-}
+}.label-web{
 
-
-/*======================================
-CARD POSITION
-======================================*/
-
-.card-1{
-
-    top:20px;
-
-    left:20px;
-
-    animation:floatOne 6s ease-in-out infinite;
-
-}
-
-.card-2{
-
-    top:40px;
-
-    right:0;
-
-    animation:floatTwo 7s ease-in-out infinite;
-
-}
-
-.card-3{
-
-    bottom:110px;
-
-    left:0;
-
-    animation:floatThree 8s ease-in-out infinite;
-
-}
-
-.card-4{
-
-    bottom:25px;
-
-    right:20px;
-
-    animation:floatFour 6.5s ease-in-out infinite;
-
-}
-
-.card-5{
-
-    bottom:-10px;
+    top:8%;
 
     left:50%;
 
     transform:translateX(-50%);
 
-    animation:floatFive 7.5s ease-in-out infinite;
+}
+
+.label-ai{
+
+    top:26%;
+
+    right:4%;
 
 }
 
+.label-brand{
 
-/*======================================
-CARD HOVER
-======================================*/
+    bottom:28%;
 
-.hero-card:hover{
-
-    transform:translateY(-8px) scale(1.03);
-
-    border-color:rgba(0,231,212,.35);
-
-    box-shadow:
-
-        0 18px 50px rgba(0,231,212,.18);
+    right:10%;
 
 }
 
+.label-ads{
 
-/*======================================
-ORB ANIMATION
-======================================*/
+    bottom:8%;
 
-@keyframes orbPulse{
+    left:50%;
 
-    0%,100%{
-
-        transform:scale(1);
-
-    }
-
-    50%{
-
-        transform:scale(1.08);
-
-    }
+    transform:translateX(-50%);
 
 }
 
+.label-seo{
 
-/*======================================
-ROTATION
-======================================*/
+    bottom:28%;
 
-@keyframes rotateClock{
+    left:10%;
 
-    from{
-
-        transform:rotate(0deg);
-
-    }
-
-    to{
-
-        transform:rotate(360deg);
-
-    }
-
-}
-
-@keyframes rotateAnti{
-
-    from{
-
-        transform:rotate(360deg);
-
-    }
-
-    to{
-
-        transform:rotate(0deg);
-
-    }
-
-}
-
-
-/*======================================
-FLOATING
-======================================*/
-
-@keyframes floatOne{
-
-    50%{
-
-        transform:translateY(-14px);
-
-    }
-
-}
-
-@keyframes floatTwo{
-
-    50%{
-
-        transform:translateY(14px);
-
-    }
-
-}
-
-@keyframes floatThree{
-
-    50%{
-
-        transform:translateY(-12px);
-
-    }
-
-}
-
-@keyframes floatFour{
-
-    50%{
-
-        transform:translateY(10px);
-
-    }
-
-}
-
-@keyframes floatFive{
-
-    0%,100%{
-
-        transform:translateX(-50%) translateY(0);
-
-    }
-
-    50%{
-
-        transform:translateX(-50%) translateY(-14px);
-
-    }
-
-}
-
-
-
-/*==========================================================
-
-            HERO EFFECTS
-
-            PART 04
-
-==========================================================*/
-
-
-/*======================================
-AMBIENT LIGHT
-======================================*/
-
-.hero-left::before{
-
-    content:"";
+}.connection-lines{
 
     position:absolute;
 
-    width:450px;
-
-    height:450px;
-
-    left:-180px;
-
-    top:-120px;
-
-    border-radius:50%;
+    inset:0;
 
     background:
 
-        radial-gradient(
-
-            circle,
-
-            rgba(0,231,212,.12),
-
-            transparent 70%
-
-        );
-
-    filter:blur(70px);
+        radial-gradient(circle at center,
+        transparent 38%,
+        rgba(34,211,238,.04) 39%,
+        transparent 40%);
 
     pointer-events:none;
 
-    animation:ambientFloat 12s ease-in-out infinite;
+}.orbit-dot{
+
+    position:absolute;
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:#22D3EE;
+
+    box-shadow:
+
+        0 0 12px rgba(34,211,238,.6);
 
 }
 
+.dot-1{
 
-/*======================================
-RIGHT LIGHT
-======================================*/
+    top:16%;
 
-.hero-right::before{
+    left:50%;
+
+}
+
+.dot-2{
+
+    top:32%;
+
+    right:18%;
+
+}
+
+.dot-3{
+
+    bottom:18%;
+
+    right:24%;
+
+}
+
+.dot-4{
+
+    bottom:10%;
+
+    left:50%;
+
+}/*==================================================
+    HERO STATS
+==================================================*/
+
+.hero-stats{
+
+    display:flex;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:42px;
+
+}
+
+.hero-stat{
+
+    position:relative;
+
+    min-width:90px;
+
+    transition:
+
+        transform .35s,
+
+        color .35s;
+
+}
+
+.hero-stat:not(:last-child)::after{
 
     content:"";
 
     position:absolute;
 
-    width:520px;
+    right:-22px;
 
-    height:520px;
+    top:50%;
 
-    border-radius:50%;
+    transform:translateY(-50%);
+
+    width:1px;
+
+    height:42px;
 
     background:
 
-        radial-gradient(
-
-            circle,
-
-            rgba(90,215,230,.10),
-
-            transparent 70%
-
-        );
-
-    filter:blur(90px);
-
-    animation:ambientFloatReverse 15s ease-in-out infinite;
+        rgba(255,255,255,.08);
 
 }
 
+.hero-stat span{
 
-/*======================================
-CENTER GLOW
-======================================*/
+    display:block;
 
-.hero-right::after{
+    margin-bottom:8px;
 
-    content:"";
+    color:#FFFFFF;
+
+    font-family:"Sora",sans-serif;
+
+    font-size:clamp(1.8rem,2.2vw,2.5rem);
+
+    font-weight:700;
+
+    line-height:1;
+
+}
+
+.hero-stat small{
+
+    display:block;
+
+    color:#8EA6BC;
+
+    font-size:.80rem;
+
+    text-transform:uppercase;
+
+    letter-spacing:.16em;
+
+}
+
+.hero-stat:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.hero-stat:hover span{
+
+    color:#22D3EE;
+
+}/*==================================================
+    SCROLL INDICATOR
+==================================================*/
+
+.hero-scroll{
 
     position:absolute;
 
-    width:650px;
+    left:50%;
 
-    height:650px;
+    bottom:34px;
 
-    border-radius:50%;
+    transform:translateX(-50%);
 
-    background:
+    display:flex;
 
-        radial-gradient(
+    flex-direction:column;
 
-            circle,
+    align-items:center;
 
-            rgba(255,255,255,.03),
+    gap:14px;
 
-            transparent 70%
+    color:#8EA6BC;
 
-        );
+    font-size:.72rem;
 
-    filter:blur(120px);
+    letter-spacing:.25em;
+
+    text-transform:uppercase;
 
 }
 
+.hero-scroll::after{
 
-/*======================================
-CONNECTION LINES
-======================================*/
+    content:"";
 
-.hero-orb::before{
+    width:1px;
+
+    height:46px;
+
+    background:
+
+        linear-gradient(
+
+            transparent,
+
+            rgba(255,255,255,.4),
+
+            transparent
+
+        );
+
+}/*==================================================
+    SERVICE HOVER
+==================================================*/
+
+.service-label{
+
+    overflow:hidden;
+
+    isolation:isolate;
+
+}
+
+.service-label::before{
 
     content:"";
 
@@ -1098,65 +1146,1303 @@ CONNECTION LINES
 
     background:
 
-        repeating-conic-gradient(
+        linear-gradient(
 
-            rgba(255,255,255,.05) 0deg,
+            135deg,
 
-            rgba(255,255,255,.05) 2deg,
+            rgba(34,211,238,.08),
 
-            transparent 2deg,
-
-            transparent 18deg
+            transparent
 
         );
 
-    border-radius:50%;
+    opacity:0;
 
-    animation:
-
-        rotateClock 35s linear infinite;
-
-    opacity:.35;
+    transition:.35s;
 
 }
 
+.service-label:hover::before{
 
-/*======================================
-OUTER GLOW
-======================================*/
+    opacity:1;
 
-.hero-orb::after{
+}
+
+.service-label span{
+
+    position:relative;
+
+    z-index:2;
+
+}/*==================================================
+    CENTER LIGHT
+==================================================*/
+
+.visual-center::before{
 
     content:"";
 
     position:absolute;
 
-    width:520px;
+    width:320px;
 
-    height:520px;
+    height:320px;
 
     border-radius:50%;
 
-    border:1px solid rgba(255,255,255,.03);
+    background:
 
-    box-shadow:
+        radial-gradient(
 
-        0 0 80px rgba(0,231,212,.08);
+            rgba(34,211,238,.10),
+
+            transparent 72%
+
+        );
+
+    filter:blur(90px);
+
+    z-index:-1;
+
+}/*==================================================
+    ORBIT ROTATION
+==================================================*/
+
+.orbit-one{
+
+    animation:
+
+        orbitRotate 22s linear infinite;
 
 }
 
+.orbit-two{
 
-/*======================================
-CARD SHINE
-======================================*/
+    animation:
 
-.hero-card{
+        orbitRotateReverse 34s linear infinite;
+
+}
+
+.orbit-three{
+
+    animation:
+
+        orbitRotate 46s linear infinite;
+
+}
+
+@keyframes orbitRotate{
+
+    from{
+
+        transform:
+
+            translate(-50%,-50%)
+
+            rotate(0deg);
+
+    }
+
+    to{
+
+        transform:
+
+            translate(-50%,-50%)
+
+            rotate(360deg);
+
+    }
+
+}
+
+@keyframes orbitRotateReverse{
+
+    from{
+
+        transform:
+
+            translate(-50%,-50%)
+
+            rotate(360deg);
+
+    }
+
+    to{
+
+        transform:
+
+            translate(-50%,-50%)
+
+            rotate(0deg);
+
+    }
+
+}/*==================================================
+    HERO FLOAT
+==================================================*/
+
+.hero-visual{
+
+    animation:
+
+        heroFloat 8s ease-in-out infinite;
+
+}
+
+@keyframes heroFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}/*==================================================
+    CTA HOVER
+==================================================*/
+
+.hero-btn{
+
+    position:relative;
 
     overflow:hidden;
 
 }
 
-.hero-card::before{
+.hero-btn::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:-120%;
+
+    top:0;
+
+    width:70%;
+
+    height:100%;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            transparent,
+
+            rgba(255,255,255,.18),
+
+            transparent
+
+        );
+
+    transform:skewX(-22deg);
+
+    transition:1s;
+
+}
+
+.hero-btn:hover::after{
+
+    left:180%;
+
+}/*==================================================
+    PREMIUM DEPTH
+==================================================*/
+
+.hero-badge,
+
+.hero-btn,
+
+.service-label,
+
+.visual-sphere{
+
+    box-shadow:
+
+        0 18px 50px rgba(0,0,0,.16);
+
+}/*==================================================
+    PERFORMANCE
+==================================================*/
+
+.hero-btn,
+
+.service-label,
+
+.hero-stat,
+
+.visual-sphere{
+
+    will-change:
+
+        transform;
+
+}/*==================================================
+    HERO CONTENT
+==================================================*/
+
+.hero-content>*{
+
+    opacity:0;
+
+    transform:translateY(30px);
+
+    animation:s15FadeUp .8s forwards;
+
+}
+
+.hero-badge{
+
+    animation-delay:.15s;
+
+}
+
+.hero-title{
+
+    animation-delay:.3s;
+
+}
+
+.hero-description{
+
+    animation-delay:.45s;
+
+}
+
+.hero-actions{
+
+    animation-delay:.6s;
+
+}
+
+.hero-trust{
+
+    animation-delay:.75s;
+
+}
+
+.hero-stats{
+
+    animation-delay:.9s;
+
+}/*==================================================
+    VISUAL ENTRANCE
+==================================================*/
+
+.hero-visual{
+
+    opacity:0;
+
+    transform:translateX(60px);
+
+    animation:
+
+        visualEnter 1.2s .5s forwards;
+
+}
+
+@keyframes visualEnter{
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}@keyframes s15FadeUp{
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}/*==================================================
+    GLASS EDGE
+==================================================*/
+
+.visual-sphere{
+
+    overflow:hidden;
+
+}
+
+.visual-sphere::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:inherit;
+
+    background:
+
+        linear-gradient(
+
+            145deg,
+
+            rgba(255,255,255,.16),
+
+            transparent 38%,
+
+            transparent 62%,
+
+            rgba(255,255,255,.05)
+
+        );
+
+    pointer-events:none;
+
+}/*==================================================
+    DEPTH
+==================================================*/
+
+.visual-center{
+
+    filter:
+
+        drop-shadow(
+
+            0 30px 70px rgba(0,0,0,.28)
+
+        );
+
+}.hero-badge,
+
+.hero-btn,
+
+.service-label,
+
+.visual-sphere{
+
+    border:
+
+        1px solid rgba(255,255,255,.08);
+
+}::selection{
+
+    background:#22D3EE;
+
+    color:#08111F;
+
+}::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#07111C;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#1E334D;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#22D3EE;
+
+}img{
+
+    image-rendering:auto;
+
+    object-fit:cover;
+
+}.hero-btn:focus-visible{
+
+    outline:
+
+        2px solid #22D3EE;
+
+    outline-offset:4px;
+
+}body{
+
+    -webkit-font-smoothing:antialiased;
+
+    text-rendering:optimizeLegibility;
+
+}.hero-title,
+
+.hero-description,
+
+.hero-btn,
+
+.hero-stat{
+
+    contain:layout style;
+
+}.hero-background,
+
+.hero-grid,
+
+.hero-noise,
+
+.hero-ambient{
+
+    transform:translateZ(0);
+
+}@media (prefers-reduced-motion:reduce){
+
+    *{
+
+        animation:none!important;
+
+        transition:none!important;
+
+        scroll-behavior:auto!important;
+
+    }
+
+}/*==================================================
+    LAPTOP
+==================================================*/
+
+@media (max-width:1400px){
+
+    .hero-wrapper{
+
+        grid-template-columns:
+
+            minmax(0,580px)
+
+            1fr;
+
+        gap:80px;
+
+    }
+
+    .hero-visual{
+
+        height:640px;
+
+    }
+
+    .orbit-three{
+
+        width:440px;
+
+        height:440px;
+
+    }
+
+}/*==================================================
+    TABLET LANDSCAPE
+==================================================*/
+
+@media (max-width:1200px){
+
+    .hero-wrapper{
+
+        gap:60px;
+
+    }
+
+    .hero-title{
+
+        letter-spacing:-2px;
+
+    }
+
+    .hero-line-one{
+
+        font-size:4rem;
+
+    }
+
+    .hero-line-gradient{
+
+        font-size:4.3rem;
+
+    }
+
+    .hero-line-three,
+
+    .hero-line-four{
+
+        font-size:3.5rem;
+
+    }
+
+}/*==================================================
+    TABLET
+==================================================*/
+
+@media (max-width:992px){
+
+    .hero-wrapper{
+
+        grid-template-columns:1fr;
+
+        gap:70px;
+
+        text-align:center;
+
+    }
+
+    .hero-content{
+
+        max-width:760px;
+
+        margin-inline:auto;
+
+    }
+
+    .hero-badge{
+
+        margin-inline:auto;
+
+    }
+
+    .hero-description{
+
+        margin-inline:auto;
+
+    }
+
+    .hero-actions{
+
+        justify-content:center;
+
+    }
+
+    .hero-trust{
+
+        justify-content:center;
+
+    }
+
+    .hero-stats{
+
+        justify-content:center;
+
+    }
+
+    .hero-visual{
+
+        order:-1;
+
+        height:560px;
+
+    }
+
+}/*==================================================
+    MOBILE
+==================================================*/
+
+@media (max-width:768px){
+
+    .s15-hero{
+
+        padding-top:120px;
+
+        padding-bottom:80px;
+
+    }
+
+    .hero-title{
+
+        letter-spacing:-1px;
+
+    }
+
+    .hero-line-one{
+
+        font-size:2.9rem;
+
+    }
+
+    .hero-line-gradient{
+
+        font-size:3.3rem;
+
+    }
+
+    .hero-line-three,
+
+    .hero-line-four{
+
+        font-size:2.7rem;
+
+    }
+
+    .hero-description{
+
+        font-size:1rem;
+
+        line-height:1.8;
+
+    }
+
+    .hero-visual{
+
+        height:470px;
+
+    }
+
+    .orbit-one{
+
+        width:180px;
+
+        height:180px;
+
+    }
+
+    .orbit-two{
+
+        width:270px;
+
+        height:270px;
+
+    }
+
+    .orbit-three{
+
+        width:360px;
+
+        height:360px;
+
+    }
+
+}/*==================================================
+    SMALL MOBILE
+==================================================*/
+
+@media (max-width:576px){
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+        width:100%;
+
+    }
+
+    .hero-btn-primary,
+
+    .hero-btn-secondary{
+
+        width:100%;
+
+    }
+
+    .hero-stats{
+
+        gap:20px;
+
+    }
+
+    .hero-stat{
+
+        width:45%;
+
+        text-align:center;
+
+    }
+
+    .hero-stat::after{
+
+        display:none;
+
+    }
+
+    .service-label{
+
+        height:40px;
+
+        padding:0 14px;
+
+        font-size:.78rem;
+
+    }
+
+}/*==================================================
+    EXTRA SMALL
+==================================================*/
+
+@media (max-width:420px){
+
+    .hero-visual{
+
+        height:400px;
+
+    }
+
+    .visual-sphere{
+
+        width:100px;
+
+        height:100px;
+
+        font-size:1.5rem;
+
+    }
+
+    .orbit-three{
+
+        display:none;
+
+    }
+
+}/*==================================================
+    LAYER SYSTEM
+==================================================*/
+
+.hero-background{
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:1;
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:50;
+
+}
+
+.hero-visual{
+
+    position:relative;
+
+    z-index:20;
+
+}
+
+.visual-center{
+
+    z-index:25;
+
+}
+
+.service-label{
+
+    z-index:30;
+
+}
+
+.orbit{
+
+    z-index:10;
+
+}
+
+.orbit-dot{
+
+    z-index:12;
+
+}/*==================================================
+    GLASS SYSTEM
+==================================================*/
+
+:root{
+
+    --glass-1:rgba(255,255,255,.03);
+
+    --glass-2:rgba(255,255,255,.05);
+
+    --glass-3:rgba(255,255,255,.08);
+
+}
+
+.hero-badge{
+
+    background:var(--glass-1);
+
+}
+
+.hero-btn-secondary{
+
+    background:var(--glass-2);
+
+}
+
+.service-label{
+
+    background:var(--glass-2);
+
+}
+
+.visual-sphere{
+
+    background:var(--glass-3);
+
+}/*==================================================
+    BORDER SYSTEM
+==================================================*/
+
+.hero-badge,
+
+.hero-btn,
+
+.service-label,
+
+.visual-sphere{
+
+    border:
+
+        1px solid rgba(255,255,255,.08);
+
+}
+
+.hero-btn:hover,
+
+.service-label:hover{
+
+    border-color:
+
+        rgba(34,211,238,.20);
+
+}/*==================================================
+    SHADOW SYSTEM
+==================================================*/
+
+.hero-badge{
+
+    box-shadow:
+
+        0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.hero-btn{
+
+    box-shadow:
+
+        0 14px 35px rgba(0,0,0,.12);
+
+}
+
+.service-label{
+
+    box-shadow:
+
+        0 16px 40px rgba(0,0,0,.14);
+
+}
+
+.visual-sphere{
+
+    box-shadow:
+
+        0 28px 80px rgba(0,0,0,.18);
+
+}/*==================================================
+    OVERLAY
+==================================================*/
+
+.s15-hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        linear-gradient(
+
+            180deg,
+
+            rgba(255,255,255,.015),
+
+            transparent 30%,
+
+            transparent 70%,
+
+            rgba(255,255,255,.02)
+
+        );
+
+    pointer-events:none;
+
+    z-index:2;
+
+}/*==================================================
+    HERO MASK
+==================================================*/
+
+.s15-hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        radial-gradient(
+
+            ellipse at center,
+
+            transparent 62%,
+
+            rgba(4,11,23,.35)
+
+        );
+
+    pointer-events:none;
+
+}/*==================================================
+    GLOBAL HOVER
+==================================================*/
+
+.hero-btn,
+
+.hero-stat,
+
+.service-label{
+
+    transition:
+
+        transform .35s cubic-bezier(.22,.61,.36,1),
+
+        box-shadow .35s,
+
+        border-color .35s,
+
+        background .35s;
+
+}/*==================================================
+    CURSOR
+==================================================*/
+
+.hero-btn{
+
+    cursor:pointer;
+
+}
+
+.service-label{
+
+    cursor:default;
+
+}   /*==================================================
+    VERTICAL RHYTHM
+==================================================*/
+
+.hero-content>*+*{
+
+    margin-top:0;
+
+}
+
+.hero-badge{
+
+    margin-bottom:34px;
+
+}
+
+.hero-title{
+
+    margin-bottom:30px;
+
+}
+
+.hero-description{
+
+    margin-bottom:42px;
+
+}
+
+.hero-buttons{
+
+    margin-bottom:42px;
+
+}
+
+.hero-trust{
+
+    margin-bottom:38px;
+
+}/*==================================================
+    GPU
+==================================================*/
+
+.visual-sphere,
+
+.service-label,
+
+.hero-btn,
+
+.orbit{
+
+    transform:translateZ(0);
+
+    backface-visibility:hidden;
+
+}/*==================================================
+    HERO PREMIUM FINISH
+==================================================*/
+
+/*==================================
+    SMOOTH INTERACTION
+==================================*/
+
+.hero-btn,
+.hero-stat,
+.service-label,
+.visual-sphere,
+.hero-badge{
+
+    transition:
+
+        transform .45s cubic-bezier(.22,.61,.36,1),
+
+        box-shadow .45s,
+
+        border-color .35s,
+
+        background .35s,
+
+        color .35s;
+
+}/*==================================================
+    PREMIUM ELEVATION
+==================================================*/
+
+.hero-btn:hover,
+
+.service-label:hover,
+
+.hero-stat:hover{
+
+    transform:
+
+        translateY(-6px);
+
+}/*==================================================
+    SERVICE GLASS
+==================================================*/
+
+.service-label{
+
+    overflow:hidden;
+
+    position:absolute;
+
+    backdrop-filter:blur(14px);
+
+}
+
+.service-label::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            rgba(255,255,255,.10),
+
+            transparent 60%
+
+        );
+
+    opacity:0;
+
+    transition:.4s;
+
+}
+
+.service-label:hover::before{
+
+    opacity:1;
+
+}/*==================================================
+    CRYSTAL REFLECTION
+==================================================*/
+
+.visual-sphere{
+
+    overflow:hidden;
+
+}
+
+.visual-sphere::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:120px;
+
+    height:220px;
+
+    top:-50px;
+
+    left:-60px;
+
+    background:
+
+        linear-gradient(
+
+            rgba(255,255,255,.22),
+
+            transparent
+
+        );
+
+    transform:
+
+        rotate(-30deg);
+
+    opacity:.35;
+
+}/*==================================================
+    AMBIENT
+==================================================*/
+
+.hero-ambient{
+
+    animation:
+
+        ambientFloat 18s ease-in-out infinite;
+
+}
+
+@keyframes ambientFloat{
+
+    0%{
+
+        transform:translate(0,0);
+
+    }
+
+    50%{
+
+        transform:translate(35px,-25px);
+
+    }
+
+    100%{
+
+        transform:translate(0,0);
+
+    }
+
+}/*==================================================
+    GRID
+==================================================*/
+
+.hero-grid{
+
+    animation:
+
+        gridMove 35s linear infinite;
+
+}
+
+@keyframes gridMove{
+
+    from{
+
+        background-position:0 0;
+
+    }
+
+    to{
+
+        background-position:0 72px;
+
+    }
+
+}/*==================================================
+    ORBIT GLOW
+==================================================*/
+
+.orbit{
+
+    box-shadow:
+
+        inset 0 0 0 1px rgba(255,255,255,.02);
+
+}/*==================================================
+    DOT
+==================================================*/
+
+.orbit-dot{
+
+    animation:
+
+        dotPulse 3s ease-in-out infinite;
+
+}
+
+@keyframes dotPulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.5);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}/*==================================================
+    BUTTON SHINE
+==================================================*/
+
+.hero-btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.hero-btn::after{
 
     content:"";
 
@@ -1164,7 +2450,7 @@ CARD SHINE
 
     top:0;
 
-    left:-140%;
+    left:-150%;
 
     width:60%;
 
@@ -1178,377 +2464,53 @@ CARD SHINE
 
             transparent,
 
-            rgba(255,255,255,.20),
+            rgba(255,255,255,.18),
 
             transparent
 
         );
 
-    transform:skewX(-25deg);
+    transform:
 
-    transition:left .8s ease;
+        skewX(-22deg);
 
-}
-
-.hero-card:hover::before{
-
-    left:160%;
+    transition:1.2s;
 
 }
 
+.hero-btn:hover::after{
 
-/*======================================
-ORB HOVER
-======================================*/
+    left:180%;
 
-.hero-right:hover .orb-core{
+}/*==================================================
+    FOCUS
+==================================================*/
 
-    transform:scale(1.12);
+.hero-btn:focus-visible{
 
-    box-shadow:
+    outline:
 
-        0 0 110px rgba(0,231,212,.65),
+        2px solid #22D3EE;
 
-        inset 0 0 50px rgba(255,255,255,.30);
+    outline-offset:5px;
 
-}
+}/*==================================================
+    REDUCED MOTION
+==================================================*/
 
+@media (prefers-reduced-motion:reduce){
 
-/*======================================
-BACKGROUND PARALLAX READY
-======================================*/
+    .hero-grid,
 
-.hero-bg{
+    .hero-ambient,
 
-    will-change:transform;
+    .orbit,
 
-}
+    .orbit-dot,
 
-.hero-orb{
+    .hero-visual{
 
-    will-change:transform;
-
-}
-
-.hero-card{
-
-    will-change:transform;
-
-}
-
-
-/*======================================
-ANIMATIONS
-======================================*/
-
-@keyframes ambientFloat{
-
-    0%{
-
-        transform:translate(0,0);
-
-    }
-
-    50%{
-
-        transform:translate(40px,-30px);
-
-    }
-
-    100%{
-
-        transform:translate(0,0);
-
-    }
-
-}
-
-@keyframes ambientFloatReverse{
-
-    0%{
-
-        transform:translate(0,0);
-
-    }
-
-    50%{
-
-        transform:translate(-35px,30px);
-
-    }
-
-    100%{
-
-        transform:translate(0,0);
-
-    }
-
-}
-
-/*==========================================================
-
-                HERO PREMIUM EFFECTS
-
-                PART 05
-
-==========================================================*/
-
-
-/*======================================
-PARTICLE CONTAINER
-======================================*/
-
-#hero-particles{
-
-    position:absolute;
-
-    inset:0;
-
-    pointer-events:none;
-
-    overflow:hidden;
-
-}
-
-
-/*======================================
-FLOATING PARTICLES
-======================================*/
-
-.hero-particle{
-
-    position:absolute;
-
-    width:4px;
-
-    height:4px;
-
-    border-radius:50%;
-
-    background:#00E7D4;
-
-    opacity:.35;
-
-    box-shadow:
-
-        0 0 12px rgba(0,231,212,.8);
-
-    animation:
-
-        particleFloat linear infinite;
-
-}
-
-
-/*======================================
-SCAN LINE
-======================================*/
-
-.hero-bg::after{
-
-    content:"";
-
-    position:absolute;
-
-    left:0;
-
-    top:-100%;
-
-    width:100%;
-
-    height:200px;
-
-    background:
-
-    linear-gradient(
-
-        180deg,
-
-        transparent,
-
-        rgba(0,231,212,.06),
-
-        transparent
-
-    );
-
-    animation:
-
-        scanMove 9s linear infinite;
-
-}
-
-
-/*======================================
-GRID GLOW
-======================================*/
-
-.hero-grid{
-
-    animation:
-
-        gridPulse 8s ease-in-out infinite;
-
-}
-
-
-/*======================================
-LEFT LIGHT
-======================================*/
-
-.hero-gradient-1{
-
-    animation:
-
-        glowMoveOne 14s ease-in-out infinite;
-
-}
-
-
-/*======================================
-RIGHT LIGHT
-======================================*/
-
-.hero-gradient-2{
-
-    animation:
-
-        glowMoveTwo 16s ease-in-out infinite;
-
-}
-
-
-/*======================================
-ANIMATIONS
-======================================*/
-
-@keyframes particleFloat{
-
-    from{
-
-        transform:
-
-            translateY(120vh)
-
-            scale(.4);
-
-        opacity:0;
-
-    }
-
-    20%{
-
-        opacity:.35;
-
-    }
-
-    100%{
-
-        transform:
-
-            translateY(-150px)
-
-            scale(1);
-
-        opacity:0;
-
-    }
-
-}
-
-
-@keyframes scanMove{
-
-    from{
-
-        top:-30%;
-
-    }
-
-    to{
-
-        top:120%;
-
-    }
-
-}
-
-
-@keyframes gridPulse{
-
-    0%{
-
-        opacity:.35;
-
-    }
-
-    50%{
-
-        opacity:.6;
-
-    }
-
-    100%{
-
-        opacity:.35;
-
-    }
-
-}
-
-
-@keyframes glowMoveOne{
-
-    0%{
-
-        transform:
-
-        translate(0,0);
-
-    }
-
-    50%{
-
-        transform:
-
-        translate(80px,-40px);
-
-    }
-
-    100%{
-
-        transform:
-
-        translate(0,0);
-
-    }
-
-}
-
-
-@keyframes glowMoveTwo{
-
-    0%{
-
-        transform:
-
-        translate(0,0);
-
-    }
-
-    50%{
-
-        transform:
-
-        translate(-90px,50px);
-
-    }
-
-    100%{
-
-        transform:
-
-        translate(0,0);
+        animation:none;
 
     }
 
