@@ -53,7 +53,7 @@
 @import url("./05-sections/stats.css");
 @import url("./05-sections/services.css");
 @import url("./05-sections/ai.css");
-@import url("./05-sections/industries.css");
+/* @import url("./05-sections/industries.css"); */
 @import url("./05-sections/process.css");
 @import url("./05-sections/portfolio.css");
 @import url("./05-sections/testimonials.css");
@@ -445,6 +445,33 @@
 @import url("./ai-automation/automation-journey/06-animation.css");
 
 @import url("./ai-automation/automation-journey/07-responsive.css");
+
+
+
+
+
+
+
+
+
+/*==========================================================
+                ABOUT US   AUTOMATION-JOURNEY CSS IMPORTS
+==========================================================*/
+
+@import url("./About-us-page/01-layout.css");
+
+@import url("./About-us-page/02-content.css");
+
+@import url("./About-us-page/03-visual.css");
+
+@import url("./About-us-page/04-background.css");
+
+@import url("./About-us-page/05-animation.css");
+
+@import url("./About-us-page/06-responsive.css");
+
+
+
 
 
 

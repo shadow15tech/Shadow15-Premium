@@ -1,0 +1,242 @@
+/*==========================================
+        ABOUT HERO VISUAL
+==========================================*/
+
+.s15-about-hero-visual{
+
+    position: relative;
+
+    isolation: isolate;
+
+}
+
+
+/*==========================================
+        SHADOW15 CORE
+==========================================*/
+
+.s15-about-hero-core{
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    z-index: 10;
+
+}
+
+
+.s15-about-hero-core span{
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 100%;
+
+    height: 100%;
+
+}
+
+
+/*==========================================
+        ORBIT
+==========================================*/
+
+.s15-about-hero-orbit{
+
+    z-index: 2;
+
+}
+
+
+/*==========================================
+        NETWORK
+==========================================*/
+
+.s15-about-hero-network{
+
+    pointer-events: none;
+
+    z-index: 1;
+
+}
+
+
+/*==========================================
+        SERVICE CARD
+==========================================*/
+
+.s15-about-hero-service-card{
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 14px 22px;
+
+    border-radius: 14px;
+
+    white-space: nowrap;
+
+    z-index: 5;
+
+}
+
+
+/*==========================================
+        CARD POSITIONS
+==========================================*/
+
+.hero-card-web{
+
+    top: 5%;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+}
+
+
+.hero-card-ai{
+
+    top: 22%;
+
+    right: 2%;
+
+}
+
+
+.hero-card-ads{
+
+    top: 50%;
+
+    right: -3%;
+
+    transform: translateY(-50%);
+
+}
+
+
+.hero-card-seo{
+
+    bottom: 18%;
+
+    right: 8%;
+
+}
+
+
+.hero-card-gbp{
+
+    bottom: 2%;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+}
+
+
+.hero-card-design{
+
+    bottom: 18%;
+
+    left: 6%;
+
+}
+
+
+.hero-card-app{
+
+    top: 50%;
+
+    left: -3%;
+
+    transform: translateY(-50%);
+
+}
+
+
+.hero-card-chatbot{
+
+    top: 22%;
+
+    left: 2%;
+
+}
+
+
+/*==========================================
+        CARD CONTENT
+==========================================*/
+
+.s15-about-hero-service-card{
+
+    font-size: .95rem;
+
+    font-weight: 600;
+
+    letter-spacing: .4px;
+
+}
+
+
+/*==========================================
+        VISUAL DEPTH
+==========================================*/
+
+.s15-about-hero-visual>*{
+
+    position: absolute;
+
+}
+
+
+/*==========================================
+        CORE LAYER
+==========================================*/
+
+.s15-about-hero-core{
+
+    overflow: hidden;
+
+}
+
+
+/*==========================================
+        VISUAL STACK
+==========================================*/
+
+.s15-about-hero-core{
+
+    z-index: 20;
+
+}
+
+.s15-about-hero-service-card{
+
+    z-index: 15;
+
+}
+
+.s15-about-hero-orbit{
+
+    z-index: 8;
+
+}
+
+.s15-about-hero-network{
+
+    z-index: 5;
+
+}

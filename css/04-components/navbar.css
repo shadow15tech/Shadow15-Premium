@@ -1,52 +1,46 @@
-/*==========================================================
+/*==================================================
+    SHADOW15 NAVBAR V2.0
+==================================================*/
 
-                SHADOW15 NAVBAR
+/*==========================================
+    01. ROOT
+==========================================*/
 
-                VERSION 3.0
-
-==========================================================*/
-
-
-/*======================================
-ROOT
-======================================*/
-
-.s15-navbar{
+.s15x-dock{
 
     position:fixed;
 
     top:20px;
 
-    left:50%;
+    left:0;
 
-    transform:translateX(-50%);
+    width:100%;
 
-    width:min(1400px,calc(100% - 32px));
+    z-index:999;
 
-    height:84px;
-
-    z-index:9999;
+    pointer-events:none;
 
     transition:
-
-        transform .45s ease,
-
-        height .45s ease,
-
         top .45s ease,
-
-        background .45s ease;
+        transform .45s ease;
 
 }
 
+/*==========================================
+    02. FLOATING DOCK
+==========================================*/
 
-/*======================================
-CONTAINER
-======================================*/
-
-.s15-navbar-container{
+.s15x-dock-shell{
 
     position:relative;
+
+    width:min(1420px,calc(100% - 48px));
+
+    height:72px;
+
+    margin-inline:auto;
+
+    padding-inline:20px;
 
     display:flex;
 
@@ -54,36 +48,20 @@ CONTAINER
 
     justify-content:space-between;
 
-    width:100%;
+    gap:24px;
 
-    height:100%;
+    pointer-events:auto;
 
-    padding:0 32px;
-
-    border-radius:22px;
+    border-radius:24px;
 
     overflow:visible;
 
-}
-
-
-/*======================================
-OPTICAL GLASS
-======================================*/
-
-.s15-navbar-container{
-
     background:
-
-    linear-gradient(
-
-        180deg,
-
-        rgba(255,255,255,.09),
-
-        rgba(255,255,255,.03)
-
-    );
+        linear-gradient(
+            180deg,
+            rgba(14,21,38,.88),
+            rgba(9,15,29,.94)
+        );
 
     backdrop-filter:blur(28px);
 
@@ -91,49 +69,21 @@ OPTICAL GLASS
 
     border:1px solid rgba(255,255,255,.08);
 
-}
+    box-shadow:
 
+        0 25px 70px rgba(0,0,0,.35),
 
-/*======================================
-TOP REFLECTION
-======================================*/
+        inset 0 1px 0 rgba(255,255,255,.08),
 
-.s15-navbar-container::before{
-
-    content:"";
-
-    position:absolute;
-
-    left:0;
-
-    top:0;
-
-    width:100%;
-
-    height:1px;
-
-    background:
-
-    linear-gradient(
-
-        90deg,
-
-        transparent,
-
-        rgba(255,255,255,.30),
-
-        transparent
-
-    );
+        0 0 40px rgba(34,211,238,.05);
 
 }
 
+/*==========================================
+    GLASS HIGHLIGHT
+==========================================*/
 
-/*======================================
-INNER SHADOW
-======================================*/
-
-.s15-navbar-container::after{
+.s15x-dock-shell::before{
 
     content:"";
 
@@ -143,209 +93,219 @@ INNER SHADOW
 
     border-radius:inherit;
 
+    background:
+
+        linear-gradient(
+
+            180deg,
+
+            rgba(255,255,255,.08),
+
+            transparent 38%
+
+        );
+
     pointer-events:none;
+
+}
+
+.s15x-dock-shell::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:-80px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:520px;
+
+    height:160px;
+
+    background:
+
+        radial-gradient(
+
+            rgba(34,211,238,.10),
+
+            transparent 72%
+
+        );
+
+    pointer-events:none;
+
+}
+
+/*==========================================
+    SCROLL STATE
+==========================================*/
+
+.s15x-dock.is-scrolled{
+
+    top:12px;
+
+}
+
+.s15x-dock.is-scrolled .s15x-dock-shell{
+
+    height:66px;
+
+    background:
+
+        linear-gradient(
+
+            180deg,
+
+            rgba(10,16,30,.94),
+
+            rgba(7,12,24,.96)
+
+        );
 
     box-shadow:
 
-        inset 0 1px 0 rgba(255,255,255,.08),
+        0 30px 80px rgba(0,0,0,.45),
 
-        inset 0 -1px 0 rgba(255,255,255,.03),
-
-        0 25px 80px rgba(0,0,0,.35);
+        inset 0 1px 0 rgba(255,255,255,.06);
 
 }
 
+/*==========================================
+    03. BRAND
+==========================================*/
 
-/*======================================
-LAYOUT
-======================================*/
-
-.s15-brand{
-
-    flex:0 0 auto;
-
-    text-decoration:none;
-
-}
-
-.s15-nav{
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    flex:0 1 auto;
-
-    margin:0 auto;
-}
-
-.s15-navbar-right{
+.s15x-brandmark{
 
     display:flex;
 
     align-items:center;
 
-    justify-content:flex-end;
-
-    gap:5px;
+    gap:14px;
 
     flex-shrink:0;
 
-    min-width:max-content;
-
 }
 
+.s15x-brandmark-orb{
 
-/*======================================
-MENU BUTTON
-======================================*/
+    position:relative;
 
-.s15-menu-toggle{
+    width:48px;
 
-    display:none;
+    height:48px;
 
-}
-
-
-/*======================================
-HOVER LIFT
-======================================*/
-
-.s15-navbar:hover{
-
-    transform:
-
-    translateX(-50%)
-
-    translateY(-2px);
-
-}
-
-/*==========================================================
-
-                BRAND IDENTITY
-
-==========================================================*/
-
-
-/*======================================
-BRAND
-======================================*/
-
-.s15-brand{
+    border-radius:50%;
 
     display:flex;
 
     align-items:center;
 
-    position:relative;
+    justify-content:center;
 
-    z-index:5;
+    overflow:hidden;
+
+    background:
+
+        linear-gradient(
+
+            145deg,
+
+            #2563eb,
+
+            #22d3ee
+
+        );
+
+    box-shadow:
+
+        0 12px 35px rgba(37,99,235,.35);
+
+    transition:
+
+        transform .45s ease,
+
+        box-shadow .45s ease;
 
 }
 
+.s15x-brandmark-orb::before{
 
-/*======================================
-TEXT WRAPPER
-======================================*/
+    content:"";
 
-.s15-brand-text{
+    position:absolute;
+
+    inset:5px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(255,255,255,.30);
+
+}
+
+.s15x-brandmark-orb span{
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:#ffffff;
+
+}
+
+.s15x-brandmark:hover .s15x-brandmark-orb{
+
+    transform:
+
+        rotate(-12deg)
+
+        scale(1.08);
+
+    box-shadow:
+
+        0 18px 45px rgba(34,211,238,.40);
+
+}
+
+/*==========================================
+    BRAND TYPOGRAPHY
+==========================================*/
+
+.s15x-brandmark-copy{
 
     display:flex;
 
     flex-direction:column;
 
-    justify-content:center;
-
-    gap:6px;
+    gap:5px;
 
 }
 
+.s15x-brand-title{
 
-/*======================================
-LOGO
-======================================*/
+    font-size:2rem;
 
-.s15-logo{
-
-    margin:0;
-
-    padding:0;
-
-    font-family:"Sora",sans-serif;
-
-    font-size:1.75rem;
-
-    font-weight:700;
+    font-weight:800;
 
     line-height:1;
 
-    letter-spacing:-1px;
+    letter-spacing:-.04em;
 
-    color:#F8FAFC;
-
-    cursor:pointer;
+    color:#f8fafc;
 
 }
 
+.s15x-brand-title span{
 
-/*======================================
-SHADOW
-======================================*/
-
-.s15-logo{
-
-    transition:.45s;
+    color:#22d3ee;
 
 }
 
-
-/*======================================
-15
-======================================*/
-
-.s15-logo span{
-
-    display:inline-block;
-
-    margin-left:2px;
-
-    background:
-
-    linear-gradient(
-
-        135deg,
-
-        #00E7D4,
-
-        #5BDCF3,
-
-        #A9D79C,
-
-        #F2DF5A
-
-    );
-
-    background-size:250%;
-
-    -webkit-background-clip:text;
-
-    -webkit-text-fill-color:transparent;
-
-    animation:
-
-    logoGradient 8s linear infinite;
-
-}
-
-
-/*======================================
-TAGLINE
-======================================*/
-
-.s15-tagline{
+.s15x-brand-caption{
 
     display:flex;
 
@@ -353,105 +313,37 @@ TAGLINE
 
     gap:8px;
 
-    margin:0;
-
-    padding:0;
-
-    font-size:.67rem;
+    font-size:.64rem;
 
     font-weight:600;
 
-    letter-spacing:.22em;
+    letter-spacing:.28em;
 
     text-transform:uppercase;
 
-}
-
-
-/*======================================
-TAG WORD
-======================================*/
-
-.s15-tagline span{
-
-    color:#8EA5BD;
+    color:#94a3b8;
 
 }
 
+.s15x-dot{
 
-/*======================================
-DOT
-======================================*/
+    width:4px;
 
-.tag-dot{
-
-    width:5px;
-
-    height:5px;
+    height:4px;
 
     border-radius:50%;
 
-    background:#00E7D4;
+    background:#22d3ee;
 
-    box-shadow:
+} 
 
-        0 0 10px rgba(0,231,212,.8);
+/*==================================================
+    04. DESKTOP NAVIGATION
+==================================================*/
 
-}
+.s15x-navigation{
 
-
-/*======================================
-HOVER
-======================================*/
-
-.s15-brand:hover .s15-logo{
-
-    transform:translateY(-1px);
-
-    text-shadow:
-
-        0 0 18px rgba(255,255,255,.18);
-
-}
-
-
-.s15-brand:hover .tag-dot{
-
-    transform:scale(1.35);
-
-}
-
-
-/*======================================
-ANIMATION
-======================================*/
-
-@keyframes logoGradient{
-
-    from{
-
-        background-position:0%;
-
-    }
-
-    to{
-
-        background-position:250%;
-
-    }
-
-}/*==========================================================
-
-                NAVIGATION
-
-==========================================================*/
-
-
-/*======================================
-NAV
-======================================*/
-
-.s15-nav{
+    flex:1;
 
     display:flex;
 
@@ -459,32 +351,36 @@ NAV
 
     align-items:center;
 
-    height:100%;
-
 }
 
-.s15-nav ul{
+.s15x-nav-cluster{
 
     display:flex;
 
     align-items:center;
 
-    gap:34px;
+    gap:6px;
 
-    margin:0;
+    padding:6px;
 
-    padding:0;
+    border-radius:999px;
 
-    list-style:none;
+    background:rgba(255,255,255,.02);
 
 }
 
+.s15x-nav-node{
 
-/*======================================
-LINK
-======================================*/
+    position:relative;
 
-.s15-nav-link{
+}
+
+/*==================================================
+    NAV LINKS
+==================================================*/
+
+.s15x-nav-link,
+.s15x-nav-trigger{
 
     position:relative;
 
@@ -494,192 +390,952 @@ LINK
 
     justify-content:center;
 
-    height:72px;
+    gap:8px;
 
-    color:#D7E3EF;
+    height:44px;
 
-    text-decoration:none;
+    padding:0 18px;
 
-    font-family:"Manrope",sans-serif;
+    border:none;
 
-    font-size:.84rem;
+    outline:none;
+
+    cursor:pointer;
+
+    border-radius:999px;
+
+    background:transparent;
+
+    color:#cbd5e1;
+
+    font-size:.92rem;
 
     font-weight:600;
 
-    letter-spacing:.14em;
-
-    text-transform:uppercase;
+    letter-spacing:-.01em;
 
     transition:
 
         color .35s ease,
 
-        transform .35s ease;
+        background .35s ease,
+
+        transform .35s ease,
+
+        box-shadow .35s ease;
 
 }
 
+.s15x-nav-trigger{
 
-/*======================================
-ACTIVE DOT
-======================================*/
+    font-family:inherit;
 
-.s15-nav-link::before{
+}
 
-    content:"";
+/*==================================================
+    ACTIVE LINK
+==================================================*/
 
-    position:absolute;
+.s15x-nav-link.is-active{
 
-    top:18px;
+    color:#ffffff;
 
-    left:50%;
+    background:
 
-    transform:
+        linear-gradient(
 
-        translateX(-50%)
+            180deg,
 
-        scale(0);
+            rgba(255,255,255,.08),
 
-    width:6px;
+            rgba(255,255,255,.04)
 
-    height:6px;
+        );
 
-    border-radius:50%;
-
-    background:#00E7D4;
+    border:1px solid rgba(255,255,255,.08);
 
     box-shadow:
 
-        0 0 12px rgba(0,231,212,.8);
+        inset 0 1px 0 rgba(255,255,255,.08),
 
-    transition:.35s;
+        0 8px 25px rgba(0,0,0,.18);
 
 }
 
+/*==================================================
+    HOVER
+==================================================*/
 
-/*======================================
-UNDERLINE
-======================================*/
+.s15x-nav-link:hover,
+.s15x-nav-trigger:hover{
 
-.s15-nav-link::after{
+    color:#ffffff;
+
+    background:
+
+        rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transform:translateY(-2px);
+
+    box-shadow:
+
+        0 14px 35px rgba(0,0,0,.18);
+
+}
+
+/*==================================================
+    DROPDOWN ICON
+==================================================*/
+
+.s15x-nav-trigger i{
+
+    font-size:.72rem;
+
+    color:#94a3b8;
+
+    transition:
+
+        transform .35s ease,
+
+        color .35s ease;
+
+}
+
+.s15x-has-panel:hover>.s15x-nav-trigger i{
+
+    color:#22d3ee;
+
+    transform:rotate(180deg);
+
+}
+
+/*==================================================
+    ACTIVE INDICATOR
+==================================================*/
+
+.s15x-nav-link::after,
+.s15x-nav-trigger::after{
 
     content:"";
 
     position:absolute;
 
-    bottom:18px;
-
     left:50%;
 
-    transform:translateX(-50%);
+    bottom:8px;
 
     width:0;
 
     height:2px;
 
-    border-radius:20px;
+    border-radius:999px;
+
+    transform:translateX(-50%);
+
+    background:#22d3ee;
+
+    transition:width .35s ease;
+
+}
+
+.s15x-nav-link:hover::after,
+.s15x-nav-trigger:hover::after,
+
+.s15x-nav-link.is-active::after{
+
+    width:18px;
+
+}
+
+/*==================================================
+    NAV GLOW
+==================================================*/
+
+.s15x-nav-node:hover{
+
+    z-index:10;
+
+}
+
+/*==================================================
+    TABLET
+==================================================*/
+
+@media(max-width:1200px){
+
+    .s15x-nav-link,
+    .s15x-nav-trigger{
+
+        padding-inline:15px;
+
+        font-size:.88rem;
+
+    }
+
+}
+
+/*==================================================
+    MOBILE
+==================================================*/
+
+@media(max-width:1024px){
+
+    .s15x-navigation{
+
+        display:none;
+
+    }
+
+}
+
+/*==================================================
+    05. PREMIUM MEGA PANEL
+==================================================*/
+
+.s15x-has-panel{
+
+    position:relative;
+
+}
+
+/*==============================
+    PANEL
+==============================*/
+
+.s15x-panel{
+
+    position:absolute;
+
+    top:calc(100% + 18px);
+
+    left:50%;
+
+    transform:
+        translateX(-50%)
+        translateY(22px)
+        scale(.96);
+
+    width:min(860px,92vw);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+    border-radius:28px;
 
     background:
+        linear-gradient(
+            180deg,
+            rgba(10,16,30,.97),
+            rgba(6,11,22,.98)
+        );
 
-    linear-gradient(
+    border:1px solid rgba(255,255,255,.06);
 
-        90deg,
+    backdrop-filter:blur(30px);
 
-        #00E7D4,
+    -webkit-backdrop-filter:blur(30px);
 
-        #59D7E6,
+    box-shadow:
 
-        #F2DF5A
+        0 35px 90px rgba(0,0,0,.45),
 
-    );
+        inset 0 1px 0 rgba(255,255,255,.05),
+
+        0 0 80px rgba(34,211,238,.05);
 
     transition:
 
-        width .4s ease;
+        opacity .35s ease,
+
+        transform .45s cubic-bezier(.22,1,.36,1),
+
+        visibility .35s ease;
+
+    z-index:500;
 
 }
 
+/*==============================
+    OPEN
+==============================*/
 
-/*======================================
-HOVER
-======================================*/
+.s15x-has-panel:hover>.s15x-panel,
 
-.s15-nav-link:hover{
+.s15x-has-panel:focus-within>.s15x-panel{
 
-    color:#FFFFFF;
+    opacity:1;
 
-    transform:translateY(-2px);
+    visibility:visible;
 
-}
-
-.s15-nav-link:hover::after{
-
-    width:24px;
-
-}
-
-.s15-nav-link:hover::before{
+    pointer-events:auto;
 
     transform:
-
         translateX(-50%)
-
+        translateY(0)
         scale(1);
 
 }
 
+/*==============================
+    ARROW
+==============================*/
 
-/*======================================
-ACTIVE
-======================================*/
+.s15x-panel::before{
 
-.s15-nav-link.active{
+    content:"";
 
-    color:#FFFFFF;
+    position:absolute;
+
+    top:-10px;
+
+    left:50%;
+
+    width:20px;
+
+    height:20px;
+
+    transform:
+        translateX(-50%)
+        rotate(45deg);
+
+    background:rgb(11,17,30);
+
+    border-top:1px solid rgba(255,255,255,.06);
+
+    border-left:1px solid rgba(255,255,255,.06);
 
 }
 
-.s15-nav-link.active::after{
+/*==============================
+    CYAN GLOW
+==============================*/
 
-    width:28px;
+.s15x-panel::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+
+    height:500px;
+
+    right:-220px;
+
+    top:-220px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            rgba(34,211,238,.12),
+
+            transparent 70%
+
+        );
+
+    pointer-events:none;
+
+}
+/*==================================================
+    HEADER
+==================================================*/
+
+.s15x-panel-header{
+
+    padding:26px 30px 20px;
+
+    border-bottom:1px solid rgba(255,255,255,.05);
 
 }
 
-.s15-nav-link.active::before{
+.s15x-panel-label{
+
+    display:inline-block;
+
+    margin-bottom:8px;
+
+    color:#22d3ee;
+
+    font-size:.70rem;
+
+    letter-spacing:.22em;
+
+    text-transform:uppercase;
+
+    font-weight:700;
+
+}
+
+.s15x-panel-header h3{
+
+    color:#ffffff;
+
+    font-size:1.75rem;
+
+    font-weight:800;
+
+    letter-spacing:-.03em;
+
+    margin-bottom:8px;
+
+}
+
+.s15x-panel-header p{
+
+    color:#94a3b8;
+
+    font-size:.90rem;
+
+    max-width:420px;
+
+    line-height:1.6;
+
+}
+
+/*==================================================
+    GRID
+==================================================*/
+
+.s15x-panel-grid{
+
+    display:grid;
+
+    grid-template-columns:
+
+        repeat(2,1fr);
+
+    gap:24px;
+
+    padding:28px;
+
+}
+
+.s15x-panel-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.s15x-panel-group h4{
+
+    color:#22d3ee;
+
+    font-size:.72rem;
+
+    font-weight:700;
+
+    letter-spacing:.18em;
+
+    text-transform:uppercase;
+
+    margin-bottom:4px;
+
+}
+
+/*==================================================
+    06. PREMIUM SERVICE CARD
+==================================================*/
+
+.s15x-service-card{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    min-height:64px;
+
+    padding:14px 16px;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    background:transparent;
+
+    border:1px solid transparent;
+
+    transition:
+
+        background .35s ease,
+
+        border-color .35s ease,
+
+        transform .35s ease,
+
+        box-shadow .35s ease;
+
+}
+
+/*==========================================
+    LIGHT EFFECT
+==========================================*/
+
+.s15x-service-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    opacity:0;
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            rgba(34,211,238,.08),
+
+            transparent
+
+        );
+
+    transition:.35s;
+
+}
+
+/*==========================================
+    ICON
+==========================================*/
+
+.s15x-service-icon{
+
+    width:52px;
+
+    height:52px;
+
+    flex-shrink:0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:16px;
+
+    background:
+
+        rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.05);
+
+    color:#22d3ee;
+
+    font-size:1.15rem;
+
+    transition:.35s;
+
+}
+
+/*==========================================
+    CONTENT
+==========================================*/
+
+.s15x-service-copy{
+
+    flex:1;
+
+}
+
+.s15x-service-copy h5{
+
+    color:#ffffff;
+
+    font-size:.94rem;
+
+    font-weight:700;
+
+    margin-bottom:4px;
+
+    transition:.35s;
+
+}
+
+.s15x-service-copy p{
+
+    color:#94a3b8;
+
+    font-size:.80rem;
+
+    line-height:1.5;
+
+}
+
+/*==========================================
+    ARROW
+==========================================*/
+
+.s15x-service-card::after{
+
+    content:"";
+
+    width:36px;
+
+    height:36px;
+
+    border-radius:50%;
+
+    background:
+
+        rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.05);
+
+    position:absolute;
+
+    right:16px;
+
+    display:grid;
+
+    place-items:center;
+
+    opacity:0;
 
     transform:
 
-        translateX(-50%)
+        translateX(-8px);
 
-        scale(1);
+    transition:.35s;
 
 }
 
+.s15x-service-card:hover::after{
 
-/*======================================
-FOCUS
-======================================*/
+    content:"→";
 
-.s15-nav-link:focus-visible{
+    color:#22d3ee;
+
+    opacity:1;
+
+    transform:
+
+        translateX(0);
+
+}
+
+/*==========================================
+    HOVER
+==========================================*/
+
+.s15x-service-card:hover{
+
+    transform:
+
+        translateY(-3px);
+
+    border-color:
+
+        rgba(34,211,238,.16);
+
+    background:
+
+        rgba(255,255,255,.03);
+
+    box-shadow:
+
+        0 20px 40px rgba(0,0,0,.18);
+
+}
+
+.s15x-service-card:hover::before{
+
+    opacity:1;
+
+}
+
+.s15x-service-card:hover .s15x-service-icon{
+
+    background:
+
+        linear-gradient(
+
+            145deg,
+
+            #2563eb,
+
+            #22d3ee
+
+        );
+
+    color:#ffffff;
+
+    transform:
+
+        rotate(-10deg)
+
+        scale(1.05);
+
+}
+
+.s15x-service-card:hover h5{
+
+    color:#22d3ee;
+
+}
+
+/*==========================================
+    ACTIVE
+==========================================*/
+
+.s15x-service-card:focus-visible{
 
     outline:none;
 
-    color:#FFFFFF;
+    border-color:#22d3ee;
 
 }
 
+/*==================================================
+    07. PANEL GROUPS
+==================================================*/
 
-/*==========================================================
+.s15x-panel-grid{
 
-                STATUS BADGE
+    display:grid;
 
-==========================================================*/
+    grid-template-columns:repeat(2,1fr);
 
+    gap:18px;
 
-/*======================================
-STATUS
-======================================*/
+    padding:22px;
 
-.s15-status{
+}
+
+/*==========================================
+    GROUP CARD
+==========================================*/
+
+.s15x-panel-group{
+
+    position:relative;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+    padding:22px;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.035),
+            rgba(255,255,255,.015)
+        );
+
+    border:1px solid rgba(255,255,255,.05);
+
+    transition:
+        transform .35s ease,
+        border-color .35s ease,
+        background .35s ease,
+        box-shadow .35s ease;
+
+}
+
+.s15x-panel-group::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    opacity:0;
+
+    background:
+
+        radial-gradient(
+
+            circle at top right,
+
+            rgba(34,211,238,.10),
+
+            transparent 70%
+
+        );
+
+    transition:.35s;
+
+}
+
+.s15x-panel-group:hover{
+
+    transform:translateY(-4px);
+
+    border-color:rgba(34,211,238,.12);
+
+    background:
+
+        linear-gradient(
+
+            180deg,
+
+            rgba(255,255,255,.05),
+
+            rgba(255,255,255,.02)
+
+        );
+
+    box-shadow:
+
+        0 18px 40px rgba(0,0,0,.18);
+
+}
+
+.s15x-panel-group:hover::before{
+
+    opacity:1;
+
+}
+
+/*==========================================
+    GROUP TITLE
+==========================================*/
+
+.s15x-panel-group h4{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    margin:0;
+
+    padding-bottom:12px;
+
+    border-bottom:1px solid rgba(255,255,255,.05);
+
+    color:#22d3ee;
+
+    font-size:.74rem;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    letter-spacing:.18em;
+
+}
+
+.s15x-panel-group h4::after{
+
+    content:"";
+
+    width:34px;
+
+    height:1px;
+
+    background:#22d3ee;
+
+    opacity:.45;
+
+}
+
+/*==================================================
+    SERVICE SPACING
+==================================================*/
+
+.s15x-panel-group .s15x-service-card{
+
+    margin:0;
+
+}
+
+.s15x-panel-group .s15x-service-card:not(:last-child){
+
+    margin-bottom:6px;
+
+}
+
+/*==================================================
+    PANEL DIVIDER
+==================================================*/
+
+.s15x-panel-header{
+
+    position:relative;
+
+}
+
+.s15x-panel-header::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:30px;
+
+    bottom:0;
+
+    width:120px;
+
+    height:2px;
+
+    border-radius:999px;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            #22d3ee,
+
+            transparent
+
+        );
+
+}
+
+/*==================================================
+    08. COMMAND ZONE
+==================================================*/
+
+.s15x-command-zone{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    flex-shrink:0;
+
+}
+
+/*==========================================
+    LIVE BADGE
+==========================================*/
+
+.s15x-live-badge{
 
     position:relative;
 
@@ -695,66 +1351,46 @@ STATUS
 
     border-radius:999px;
 
+    background:
+
+        rgba(255,255,255,.03);
+
+    border:1px solid rgba(255,255,255,.05);
+
+    backdrop-filter:blur(20px);
+
     overflow:hidden;
 
-    cursor:default;
+}
 
-    transition:
+.s15x-live-badge::before{
 
-        transform .35s ease,
+    content:"";
 
-        border-color .35s ease,
+    position:absolute;
 
-        background .35s ease;
+    inset:0;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.05),
+            transparent
+        );
+
+    transform:translateX(-100%);
 
 }
 
+.s15x-live-badge:hover::before{
 
-/*======================================
-GLASS
-======================================*/
-
-.s15-glass{
-
-    background:rgba(91, 201, 201, 0.55);
-
-    border:1px solid rgba(97, 47, 161, 0.08);
-
-    backdrop-filter:blur(18px);
-
-    -webkit-backdrop-filter:blur(18px);
+    animation:s15xBadgeSweep 1s linear;
 
 }
 
-
-/*======================================
-STATUS TEXT
-======================================*/
-
-.status-text{
-
-    color:#C6D3E0;
-
-    font-family:"Manrope",sans-serif;
-
-    font-size:.74rem;
-
-    font-weight:600;
-
-    letter-spacing:.08em;
-
-    white-space:nowrap;
-
-}
-
-
-/*======================================
-STATUS DOT
-======================================*/
-
-.status-dot{
-
-    position:relative;
+.s15x-live-pulse{
 
     width:8px;
 
@@ -762,507 +1398,210 @@ STATUS DOT
 
     border-radius:50%;
 
-    background:#00E7D4;
-
-    flex-shrink:0;
+    background:#22c55e;
 
     box-shadow:
 
-        0 0 12px rgba(0,231,212,.9);
+        0 0 12px #22c55e;
 
 }
 
+.s15x-live-badge span:last-child{
 
-/*======================================
-PULSE
-======================================*/
-
-.status-dot::after{
-
-    content:"";
-
-    position:absolute;
-
-    inset:-5px;
-
-    border-radius:50%;
-
-    border:1px solid rgba(0,231,212,.55);
-
-    animation:s15Pulse 2s infinite;
-
-}
-
-
-/*======================================
-HOVER
-======================================*/
-
-.s15-status:hover{
-
-    transform:translateY(-2px);
-
-    border-color:rgba(0,231,212,.25);
-
-    background:rgba(255,255,255,.07);
-
-}
-
-
-.s15-status:hover .status-dot{
-
-    box-shadow:
-
-        0 0 18px rgba(0,231,212,1);
-
-}
-
-
-/*======================================
-LIGHT SWEEP
-======================================*/
-
-.s15-status::before{
-
-    content:"";
-
-    position:absolute;
-
-    top:0;
-
-    left:-140%;
-
-    width:60%;
-
-    height:100%;
-
-    background:
-
-    linear-gradient(
-
-        90deg,
-
-        transparent,
-
-        rgba(255,255,255,.18),
-
-        transparent
-
-    );
-
-    transition:left .8s ease;
-
-}
-
-
-.s15-status:hover::before{
-
-    left:140%;
-
-}
-
-
-/*======================================
-PULSE ANIMATION
-======================================*/
-
-@keyframes s15Pulse{
-
-    0%{
-
-        transform:scale(.6);
-
-        opacity:1;
-
-    }
-
-    100%{
-
-        transform:scale(2.6);
-
-        opacity:0;
-
-    }
-
-}
-
-
-
-
-/*==========================================================
-
-                CTA BUTTON
-
-==========================================================*/
-
-
-/*======================================
-BASE BUTTON
-======================================*/
-
-.s15-btn{
-
-    position:relative;
-
-    display:inline-flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    gap:12px;
-
-    overflow:hidden;
-
-    text-decoration:none;
-
-    cursor:pointer;
-
-}
-
-
-/*======================================
-PRIMARY BUTTON
-======================================*/
-
-.s15-btn-primary{
-
-    height:52px;
-
-    padding:0 24px;
-
-    border-radius:999px;
-
-    border:1px solid rgba(255,255,255,.08);
-
-    background:
-
-    linear-gradient(
-
-        135deg,
-
-        #00E7D4 0%,
-
-        #59D7E6 35%,
-
-        #A9D79C 70%,
-
-        #F2DF5A 100%
-
-    );
-
-    background-size:250%;
-
-    animation:s15Gradient 10s linear infinite;
-
-    box-shadow:
-
-        0 12px 35px rgba(0,231,212,.22);
-
-}
-
-
-/*======================================
-TEXT
-======================================*/
-
-.s15-btn-primary span{
-
-    position:relative;
-
-    z-index:2;
-
-    color:#06111D;
-
-    font-family:"Sora",sans-serif;
-
-    font-size:.86rem;
-
-    font-weight:700;
-
-    letter-spacing:.03em;
-
-}
-
-
-/*======================================
-ICON
-======================================*/
-
-.s15-btn-primary i{
-
-    position:relative;
-
-    z-index:2;
-
-    color:#06111D;
+    color:#cbd5e1;
 
     font-size:.82rem;
 
-    transition:
-
-        transform .35s ease;
+    font-weight:500;
 
 }
 
+/*==========================================
+    CTA
+==========================================*/
 
-/*======================================
-LIGHT EFFECT
-======================================*/
+.s15x-command-button{
 
-.s15-btn-primary::before{
+    position:relative;
 
-    content:"";
+    display:flex;
 
-    position:absolute;
+    align-items:center;
 
-    left:-120%;
+    gap:12px;
 
-    top:0;
+    height:48px;
 
-    width:60%;
-
-    height:100%;
-
-    background:
-
-    linear-gradient(
-
-        90deg,
-
-        transparent,
-
-        rgba(255,255,255,.45),
-
-        transparent
-
-    );
-
-    transform:skewX(-25deg);
-
-    transition:left .9s ease;
-
-}
-
-
-/*======================================
-INNER GLOW
-======================================*/
-
-.s15-btn-primary::after{
-
-    content:"";
-
-    position:absolute;
-
-    inset:2px;
+    padding:0 22px;
 
     border-radius:999px;
 
-    background:
+    overflow:hidden;
 
-    linear-gradient(
+    color:#ffffff;
 
-        180deg,
-
-        rgba(255,255,255,.20),
-
-        transparent
-
-    );
-
-    pointer-events:none;
-
-}
-
-
-/*======================================
-HOVER
-======================================*/
-
-.s15-btn-primary:hover{
-
-    transform:
-
-        translateY(-3px)
-
-        scale(1.02);
-
-    box-shadow:
-
-        0 18px 45px rgba(0,231,212,.35);
-
-}
-
-
-.s15-btn-primary:hover::before{
-
-    left:150%;
-
-}
-
-
-.s15-btn-primary:hover i{
-
-    transform:
-
-        translateX(4px)
-
-        translateY(-2px);
-
-}
-
-
-/*======================================
-ACTIVE
-======================================*/
-
-.s15-btn-primary:active{
-
-    transform:
-
-        translateY(1px)
-
-        scale(.98);
-
-}
-
-
-/*======================================
-ANIMATION
-======================================*/
-
-@keyframes s15Gradient{
-
-    0%{
-
-        background-position:0%;
-
-    }
-
-    100%{
-
-        background-position:250%;
-
-    }
-
-}
-
-
-/*==========================================================
-
-            OPTICAL GLASS ENGINE
-
-==========================================================*/
-
-
-/*======================================
-PREMIUM GLASS SURFACE
-======================================*/
-
-.s15-navbar-container{
-
-    isolation:isolate;
+    font-weight:600;
 
     background:
 
         linear-gradient(
-            180deg,
-            rgba(255,255,255,.08),
-            rgba(255,255,255,.02)
-        ),
-
-        rgba(8,18,32,.58);
-
-}
-
-
-/*======================================
-TOP HIGHLIGHT
-======================================*/
-
-.s15-navbar-container::before{
-
-    height:2px;
-
-    opacity:.9;
-
-    background:
-
-        linear-gradient(
-
-            90deg,
-
-            transparent 0%,
-
-            rgba(255,255,255,.45) 25%,
-
-            rgba(255,255,255,.18) 50%,
-
-            rgba(255,255,255,.45) 75%,
-
-            transparent 100%
-
+            135deg,
+            #2563eb,
+            #22d3ee
         );
 
-}
-
-
-/*======================================
-OUTER SHADOW
-======================================*/
-
-.s15-navbar{
-
-    filter:
-
-        drop-shadow(0 18px 60px rgba(66, 154, 212, 0.32));
-
-}
-
-
-/*======================================
-SOFT INNER GLOW
-======================================*/
-
-.s15-navbar-container{
-
     box-shadow:
 
-        inset 0 1px 0 rgba(255,255,255,.08),
+        0 14px 40px rgba(34,211,238,.25);
 
-        inset 0 -1px 0 rgba(255,255,255,.02),
-
-        0 12px 45px rgba(0,0,0,.30);
+    transition:.35s;
 
 }
 
+.s15x-command-button::before{
 
-/*======================================
-SIDE LIGHT
-======================================*/
-
-.s15-navbar-container .glass-light{
+    content:"";
 
     position:absolute;
 
-    top:-60%;
+    inset:0;
 
-    left:-15%;
+    background:
 
-    width:240px;
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.18),
+            transparent
+        );
 
-    height:240px;
+    transform:translateX(-100%);
 
-    border-radius:50%;
+}
+
+.s15x-command-button:hover::before{
+
+    animation:s15xSweep .9s linear;
+
+}
+
+.s15x-command-button:hover{
+
+    transform:
+
+        translateY(-3px);
+
+    box-shadow:
+
+        0 18px 45px rgba(34,211,238,.35);
+
+}
+
+.s15x-command-button i{
+
+    transition:.35s;
+
+}
+
+.s15x-command-button:hover i{
+
+    transform:
+
+        translate(4px,-4px);
+
+}
+
+/*==========================================
+    ANIMATIONS
+==========================================*/
+
+@keyframes s15xSweep{
+
+    to{
+
+        transform:translateX(200%);
+
+    }
+
+}
+
+@keyframes s15xBadgeSweep{
+
+    to{
+
+        transform:translateX(200%);
+
+    }
+
+}
+
+
+
+/*==================================================
+    09. PANEL ANIMATION
+==================================================*/
+
+.s15x-panel{
+
+    transform:
+
+        translateX(-50%)
+
+        translateY(18px)
+
+        scale(.96);
+
+    filter:
+
+        blur(8px);
+
+    opacity:0;
+
+}
+
+.s15x-has-panel:hover>.s15x-panel,
+
+.s15x-has-panel:focus-within>.s15x-panel{
+
+    opacity:1;
+
+    filter:blur(0);
+
+    transform:
+
+        translateX(-50%)
+
+        translateY(0)
+
+        scale(1);
+
+}
+
+/*==================================================
+    NAVBAR AMBIENT LIGHT
+==================================================*/
+
+.s15x-dock::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    top:-120px;
+
+    transform:translateX(-50%);
+
+    width:700px;
+
+    height:250px;
 
     background:
 
         radial-gradient(
 
-            circle,
-
-            rgba(0,231,212,.12),
+            rgba(34,211,238,.12),
 
             transparent 70%
 
@@ -1275,106 +1614,447 @@ SIDE LIGHT
 }
 
 
-/*======================================
-BOTTOM REFLECTION
-======================================*/
 
-.s15-navbar-container .glass-bottom{
 
-    position:absolute;
+/*==================================================
+    HAMBURGER
+==================================================*/
 
-    left:0;
+.s15x-hamburger{
 
-    bottom:0;
+    display:none;
 
-    width:100%;
+    align-items:center;
 
-    height:1px;
+    justify-content:center;
 
-    background:
+    flex-direction:column;
 
-        linear-gradient(
+    gap:5px;
 
-            90deg,
+    width:52px;
 
-            transparent,
+    height:52px;
 
-            rgba(255,255,255,.08),
+    padding:0;
 
-            transparent
+    cursor:pointer;
 
-        );
+    border:none;
+
+    outline:none;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.06);
+
+    border-radius:18px;
+
+    transition:.35s;
+
+}
+
+.s15x-hamburger:hover{
+
+    background:rgba(255,255,255,.08);
+
+    border-color:rgba(34,211,238,.15);
+
+}
+
+.s15x-hamburger span{
+
+    display:block;
+
+    width:22px;
+
+    height:2px;
+
+    background:#F8FAFC;
+
+    border-radius:999px;
+
+    transition:.35s;
+
+}
+
+.s15x-hamburger.is-active span:nth-child(1){
+
+    transform:
+        translateY(7px)
+        rotate(45deg);
+
+}
+
+.s15x-hamburger.is-active span:nth-child(2){
+
+    opacity:0;
+
+}
+
+.s15x-hamburger.is-active span:nth-child(3){
+
+    transform:
+        translateY(-7px)
+        rotate(-45deg);
+
+}
+/*==================================================
+    10. RESPONSIVE
+==================================================*/
+
+/*==========================================
+    LARGE LAPTOP
+==========================================*/
+
+@media (max-width:1200px){
+
+    .s15x-dock-shell{
+
+        width:calc(100% - 32px);
+
+        padding-inline:18px;
+
+        gap:18px;
+
+    }
+
+    .s15x-brand-caption{
+
+        display:none;
+
+    }
+
+    .s15x-nav-link,
+    .s15x-nav-trigger{
+
+        padding-inline:14px;
+
+        font-size:.88rem;
+
+    }
+
+    .s15x-live-badge{
+
+        display:none;
+
+    }
+
+}
+
+/*==========================================
+    TABLET
+==========================================*/
+
+@media (max-width:1024px){
+
+    .s15x-dock{
+
+        top:16px;
+
+    }
+
+    .s15x-dock-shell{
+
+        width:calc(100% - 24px);
+
+        height:68px;
+
+        padding-inline:18px;
+
+        border-radius:22px;
+
+    }
+
+    /* Hide Desktop Navigation */
+
+    .s15x-navigation{
+
+        display:none;
+
+    }
+
+    /* Hide Desktop CTA */
+
+    .s15x-command-zone{
+
+        display:none;
+
+    }
+
+    /* Show Hamburger */
+
+    .s15x-hamburger{
+
+        display:flex;
+
+        align-items:center;
+
+        justify-content:center;
+
+    }
+
+    /* Brand */
+
+    .s15x-brandmark{
+
+        gap:12px;
+
+    }
+
+    .s15x-brandmark-orb{
+
+        width:44px;
+
+        height:44px;
+
+    }
+
+    .s15x-brand-title{
+
+        font-size:1.55rem;
+
+    }
+
+    .s15x-brand-caption{
+
+        display:none;
+
+    }
+
+}
+
+/*==================================================
+    11. MOBILE RESPONSIVE
+==================================================*/
+
+@media (max-width:768px){
+
+    /*==========================================
+        NAVBAR
+    ==========================================*/
+
+    .s15x-dock{
+
+        top:14px;
+
+    }
+
+    .s15x-dock-shell{
+
+        width:calc(100% - 20px);
+
+        height:64px;
+
+        padding-inline:16px;
+
+        border-radius:20px;
+
+        gap:12px;
+
+    }
+
+    /*==========================================
+        BRAND
+    ==========================================*/
+
+    .s15x-brandmark{
+
+        gap:10px;
+
+    }
+
+    .s15x-brandmark-orb{
+
+        width:42px;
+
+        height:42px;
+
+    }
+
+    .s15x-brandmark-orb span{
+
+        width:8px;
+
+        height:8px;
+
+    }
+
+    .s15x-brand-title{
+
+        font-size:1.35rem;
+
+    }
+
+    .s15x-brand-caption{
+
+        display:none;
+
+    }
+
+    /*==========================================
+        HAMBURGER
+    ==========================================*/
+
+    .s15x-hamburger{
+
+        width:48px;
+
+        height:48px;
+
+        border-radius:16px;
+
+    }
+
+    .s15x-hamburger span{
+
+        width:20px;
+
+    }
+
+}
+
+/*==================================================
+    SMALL MOBILE
+==================================================*/
+
+@media (max-width:480px){
+
+    .s15x-dock{
+
+        top:10px;
+
+    }
+
+    .s15x-dock-shell{
+
+        width:calc(100% - 16px);
+
+        height:60px;
+
+        padding-inline:14px;
+
+        border-radius:18px;
+
+    }
+
+    /*==========================================
+        LOGO
+    ==========================================*/
+
+    .s15x-brandmark{
+
+        gap:8px;
+
+    }
+
+    .s15x-brandmark-orb{
+
+        width:38px;
+
+        height:38px;
+
+    }
+
+    .s15x-brand-title{
+
+        font-size:1.15rem;
+
+        letter-spacing:-.03em;
+
+    }
+
+    /*==========================================
+        HAMBURGER
+    ==========================================*/
+
+    .s15x-hamburger{
+
+        width:44px;
+
+        height:44px;
+
+        border-radius:14px;
+
+    }
+
+    .s15x-hamburger span{
+
+        width:18px;
+
+    }
+
+}
+
+/*==================================================
+    12. PREMIUM MOBILE DRAWER
+==================================================*/
+
+.s15x-backdrop{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:998;
+
+    opacity:0;
+
+    visibility:hidden;
 
     pointer-events:none;
 
-}
+    background:rgba(2,6,18,.65);
 
+    backdrop-filter:blur(14px);
 
-/*======================================
-HOVER DEPTH
-======================================*/
-
-.s15-navbar:hover .s15-navbar-container{
-
-    transform:translateY(-1px);
-
-    box-shadow:
-
-        inset 0 1px 0 rgba(255,255,255,.12),
-
-        inset 0 -1px 0 rgba(255,255,255,.04),
-
-        0 18px 70px rgba(0,0,0,.40);
-
-}
-
-
-/*======================================
-SMOOTH TRANSITION
-======================================*/
-
-.s15-navbar,
-
-.s15-navbar-container{
+    -webkit-backdrop-filter:blur(14px);
 
     transition:
 
-        background .45s ease,
+        opacity .45s ease,
 
-        box-shadow .45s ease,
-
-        transform .45s ease,
-
-        border-color .45s ease;
+        visibility .45s ease;
 
 }
 
+.s15x-backdrop.is-active{
 
-/*==========================================================
+    opacity:1;
 
-                SCROLL STATE
+    visibility:visible;
 
-==========================================================*/
-
-
-/*======================================
-SCROLLED NAVBAR
-======================================*/
-
-.s15-navbar.scrolled{
-
-    top:8px;
-
-    height:66px;
+    pointer-events:auto;
 
 }
 
+/*==========================================
+    DRAWER
+==========================================*/
 
-/*======================================
-CONTAINER
-======================================*/
+.s15x-drawer{
 
-.s15-navbar.scrolled .s15-navbar-container{
+    position:fixed;
+
+    top:0;
+
+    right:0;
+
+    width:420px;
+
+    max-width:100%;
+
+    height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    padding:28px;
+
+    overflow:hidden;
+
+    z-index:1000;
 
     background:
 
@@ -1382,582 +2062,275 @@ CONTAINER
 
             180deg,
 
-            rgba(255,255,255,.12),
+            rgba(7,12,24,.98),
 
-            rgba(255,255,255,.03)
+            rgba(4,8,18,.99)
 
-        ),
-
-        rgba(5,11,20,.82);
-
-    border-color:
-
-        rgba(255,255,255,.10);
+        );
 
     backdrop-filter:blur(40px);
 
     -webkit-backdrop-filter:blur(40px);
 
-}
+    border-left:
 
-
-/*======================================
-BRAND
-======================================*/
-
-.s15-navbar.scrolled .s15-logo{
-
-    font-size:1.90rem;
-
-}
-
-.s15-navbar.scrolled .s15-tagline{
-
-    opacity:.95;
-
-}
-
-
-/*======================================
-NAVIGATION
-======================================*/
-
-.s15-navbar.scrolled .s15-nav-link{
-
-    height:66px;
-
-}
-
-
-/*======================================
-STATUS
-======================================*/
-
-.s15-navbar.scrolled .s15-status{
-
-    height:40px;
-
-}
-
-
-/*======================================
-BUTTON
-======================================*/
-
-.s15-navbar.scrolled .s15-btn-primary{
-
-    height:58px;
-
-}
-
-
-
-
-
-/*======================================
-DEPTH
-======================================*/
-
-.s15-navbar.scrolled{
-
-    filter:
-
-        drop-shadow(
-
-            0 24px 70px
-
-            rgba(98, 49, 212, 0.45)
-
-        );
-
-}
-
-
-/*======================================
-TRANSITION
-======================================*/
-
-.s15-navbar,
-
-.s15-logo,
-
-.s15-tagline,
-
-.s15-nav-link,
-
-.s15-status,
-
-.s15-btn-primary{
-
-    transition:
-
-        all .45s cubic-bezier(.22,1,.36,1);
-
-}
-
-
-
-/*==========================================================
-
-                RESPONSIVE NAVIGATION
-
-==========================================================*/
-
-
-/*======================================
-LAPTOP
-======================================*/
-
-@media (max-width:1200px){
-
-    .s15-navbar{
-
-        width:calc(100% - 24px);
-
-    }
-
-    .s15-nav ul{
-
-        gap:22px;
-
-    }
-
-    .s15-nav-link{
-
-        font-size:.78rem;
-
-        letter-spacing:.12em;
-
-    }
-
-    .s15-status{
-
-        display:none;
-
-    }
-
-}
-
-
-/*======================================
-TABLET
-======================================*/
-
-@media (max-width:991px){
-
-    .s15-navbar{
-
-        width:calc(100% - 18px);
-
-        height:70px;
-
-    }
-
-    .s15-navbar-container{
-
-        padding:0 20px;
-
-    }
-
-    .s15-nav{
-
-        position:fixed;
-
-        top:0;
-
-        right:-100%;
-
-        width:360px;
-
-        max-width:100%;
-
-        height:100vh;
-
-        background:
-
-        rgba(6,14,24,.92);
-
-        backdrop-filter:blur(35px);
-
-        -webkit-backdrop-filter:blur(35px);
-
-        border-left:1px solid rgba(255,255,255,.08);
-
-        display:flex;
-
-        justify-content:center;
-
-        align-items:center;
-
-        transition:right .45s cubic-bezier(.22,1,.36,1);
-
-        z-index:9998;
-
-    }
-
-    .s15-nav.active{
-
-        right:0;
-
-    }
-
-    .s15-nav ul{
-
-        flex-direction:column;
-
-        gap:34px;
-
-    }
-
-    .s15-nav-link{
-
-        height:auto;
-
-        font-size:1rem;
-
-        letter-spacing:.18em;
-
-    }
-
-    .s15-navbar-right{
-
-        display:none;
-
-    }
-
-    .s15-menu-toggle{
-
-        display:flex;
-
-        flex-direction:column;
-
-        justify-content:center;
-
-        align-items:center;
-
-        gap:7px;
-
-        width:52px;
-
-        height:52px;
-
-        border:none;
-
-        border-radius:50%;
-
-        background:rgba(255,255,255,.05);
-
-        backdrop-filter:blur(20px);
-
-        -webkit-backdrop-filter:blur(20px);
-
-        border:1px solid rgba(255,255,255,.08);
-
-        cursor:pointer;
-
-        transition:.35s;
-
-        z-index:10000;
-
-    }
-
-    .s15-menu-toggle span{
-
-        width:22px;
-
-        height:2px;
-
-        border-radius:50px;
-
-        background:#F8FAFC;
-
-        transition:.35s;
-
-    }
-
-}
-
-
-/*======================================
-MENU ACTIVE
-======================================*/
-
-.s15-menu-toggle.active span:nth-child(1){
-
-    transform:
-
-        rotate(45deg)
-
-        translateY(6px);
-
-}
-
-.s15-menu-toggle.active span:nth-child(2){
-
-    transform:
-
-        rotate(-45deg)
-
-        translateY(-6px);
-
-}
-
-
-/*======================================
-MOBILE
-======================================*/
-
-@media (max-width:576px){
-
-    .s15-navbar{
-
-        top:10px;
-
-        width:calc(100% - 12px);
-
-    }
-
-    .s15-navbar-container{
-
-        padding:0 16px;
-
-        border-radius:18px;
-
-    }
-
-    .s15-logo{
-
-        font-size:1.45rem;
-
-    }
-
-    .s15-tagline{
-
-        font-size:.58rem;
-
-        letter-spacing:.18em;
-
-    }
-
-    .s15-nav{
-
-        width:100%;
-
-    }
-
-}
-
-
-/*==========================================================
-
-            MICRO INTERACTIONS
-
-            VERSION 1.0
-
-==========================================================*/
-
-
-/*======================================
-SMOOTH RENDERING
-======================================*/
-
-.s15-navbar *{
-
-    -webkit-font-smoothing:antialiased;
-
-    -moz-osx-font-smoothing:grayscale;
-
-}
-
-
-/*======================================
-NAVBAR TRANSITIONS
-======================================*/
-
-.s15-navbar,
-
-.s15-navbar *{
-
-    transition:
-
-        color .35s ease,
-
-        background .35s ease,
-
-        border-color .35s ease,
-
-        transform .35s ease,
-
-        opacity .35s ease,
-
-        box-shadow .35s ease;
-
-}
-
-
-/*======================================
-NAV LINK SHIMMER
-======================================*/
-
-.s15-nav-link{
-
-    overflow:hidden;
-
-}
-
-.s15-nav-link::selection{
-
-    background:transparent;
-
-}
-
-.s15-nav-link:hover{
-
-    letter-spacing:.16em;
-
-}
-
-
-/*======================================
-CTA GLOW
-======================================*/
-
-.s15-btn-primary{
-
-    position:relative;
-
-}
-
-.s15-btn-primary::before{
-
-    filter:blur(2px);
-
-}
-
-.s15-btn-primary:hover{
+        1px solid rgba(255,255,255,.06);
 
     box-shadow:
 
-        0 0 0 1px rgba(255,255,255,.08),
+        -30px 0 80px rgba(0,0,0,.45);
 
-        0 12px 30px rgba(0,231,212,.30),
-
-        0 22px 60px rgba(0,231,212,.22);
-
-}
-
-
-/*======================================
-STATUS BADGE
-======================================*/
-
-.s15-status{
-
-    will-change:transform;
-
-}
-
-.s15-status:hover{
-
-    transform:
-
-        translateY(-2px)
-
-        scale(1.02);
-
-}
-
-
-/*======================================
-LOGO
-======================================*/
-
-.s15-logo{
-
-    user-select:none;
-
-}
-
-.s15-logo span{
-
-    filter:
-
-        drop-shadow(
-
-            0 0 12px
-
-            rgba(0,231,212,.25)
-
-        );
-
-}
-
-
-/*======================================
-GLASS HOVER
-======================================*/
-
-.s15-navbar:hover .glass-light{
-
-    opacity:1;
-
-}
-
-.glass-light{
-
-    opacity:.75;
+    transform:translateX(100%);
 
     transition:
 
-        opacity .45s ease;
+        transform .55s cubic-bezier(.22,1,.36,1);
 
 }
 
+.s15x-drawer.is-active{
 
-/*======================================
-BORDER ENHANCEMENT
-======================================*/
-
-.s15-navbar-container{
-
-    position:relative;
+    transform:translateX(0);
 
 }
 
-.s15-navbar-container:hover{
+/*==========================================
+    HEADER
+==========================================*/
+
+.s15x-drawer-header{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding-bottom:24px;
+
+    margin-bottom:24px;
+
+    border-bottom:
+
+        1px solid rgba(255,255,255,.06);
+
+}
+
+.s15x-drawer-close{
+
+    width:46px;
+
+    height:46px;
+
+    border:none;
+
+    outline:none;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    cursor:pointer;
+
+    border-radius:16px;
+
+    background:
+
+        rgba(255,255,255,.05);
+
+    color:#ffffff;
+
+    transition:.35s;
+
+}
+
+.s15x-drawer-close:hover{
+
+    background:#22d3ee;
+
+    color:#08101d;
+
+    transform:rotate(90deg);
+
+}
+
+/*==================================================
+    MOBILE MENU
+==================================================*/
+
+.s15x-drawer-navigation{
+
+    flex:1;
+
+    overflow-y:auto;
+
+    scrollbar-width:none;
+
+}
+
+.s15x-drawer-navigation::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+.s15x-drawer-menu{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.s15x-drawer-menu>li>a,
+
+.s15x-mobile-trigger{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    width:100%;
+
+    min-height:60px;
+
+    padding-inline:18px;
+
+    border-radius:18px;
+
+    background:
+
+        rgba(255,255,255,.03);
+
+    border:
+
+        1px solid rgba(255,255,255,.05);
+
+    color:#ffffff;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.s15x-drawer-menu>li>a:hover,
+
+.s15x-mobile-trigger:hover{
+
+    background:
+
+        rgba(34,211,238,.08);
 
     border-color:
 
-        rgba(255,255,255,.14);
+        rgba(34,211,238,.16);
 
 }
 
+.s15x-mobile-trigger i{
 
-/*======================================
-BUTTON PRESS
-======================================*/
+    color:#94a3b8;
 
-.s15-btn:active{
-
-    transition:none;
+    transition:.35s;
 
 }
 
+/*==================================================
+    MOBILE ACCORDION
+==================================================*/
 
-/*======================================
-REDUCED MOTION
-======================================*/
+.s15x-mobile-panel{
 
-@media (prefers-reduced-motion:reduce){
+    max-height:0;
 
-    *{
+    overflow:hidden;
 
-        animation:none !important;
+    transition:
 
-        transition:none !important;
+        max-height .45s ease,
 
-        scroll-behavior:auto !important;
-
-    }
+        margin .35s ease;
 
 }
+
+.s15x-mobile-dropdown.is-open
+
+.s15x-mobile-panel{
+
+    max-height:700px;
+
+    margin-top:8px;
+
+}
+
+.s15x-mobile-dropdown.is-open
+
+.s15x-mobile-trigger i{
+
+    color:#22d3ee;
+
+    transform:rotate(180deg);
+
+}
+
+.s15x-mobile-panel a{
+
+    display:block;
+
+    padding:14px 20px;
+
+    margin-bottom:6px;
+
+    border-left:
+
+        2px solid transparent;
+
+    color:#94a3b8;
+
+    transition:.35s;
+
+}
+
+.s15x-mobile-panel a:hover{
+
+    color:#22d3ee;
+
+    border-left-color:#22d3ee;
+
+    padding-left:28px;
+
+}
+
+/*==================================================
+    DRAWER FOOTER
+==================================================*/
+
+.s15x-drawer-actions{
+
+    margin-top:24px;
+
+    padding-top:24px;
+
+    border-top:
+
+        1px solid rgba(255,255,255,.06);
+
+}
+
+.s15x-command-button-block{
+
+    width:100%;
+
+    justify-content:center;
+
+}
+

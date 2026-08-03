@@ -1,185 +1,225 @@
-/*==========================================================
+/*==================================================
+    SHADOW15 NAVIGATION SYSTEM
+==================================================*/
 
-            SHADOW15 NAVBAR
+"use strict";
 
-            VERSION 1.0
+(() => {
 
-==========================================================*/
+    /*==========================================
+        ELEMENTS
+    ==========================================*/
 
-document.addEventListener("DOMContentLoaded", () => {
+    const dock = document.getElementById("s15xDock");
+    const drawer = document.getElementById("s15xDrawer");
+    const backdrop = document.getElementById("s15xBackdrop");
+    const hamburger = document.getElementById("s15xHamburger");
+    const drawerClose = document.getElementById("s15xDrawerClose");
 
-    /*======================================
-    ELEMENTS
-    ======================================*/
+    const accordions = document.querySelectorAll(".s15x-mobile-dropdown");
+    const drawerLinks = drawer.querySelectorAll("a");
 
-    const navbar = document.querySelector(".s15-navbar");
+    /*==========================================
+        SCROLL EFFECT
+    ==========================================*/
 
-    const menuButton = document.querySelector(".s15-menu-toggle");
+    function updateNavbar(){
 
-    const navigation = document.querySelector(".s15-nav");
-
-    const navLinks = document.querySelectorAll(".s15-nav-link");
-
-
-
-    /*======================================
-    NAVBAR SCROLL
-    ======================================*/
-
-    function handleNavbarScroll(){
-
-        if(window.scrollY > 40){
-
-            navbar.classList.add("scrolled");
-
-        }
-
-        else{
-
-            navbar.classList.remove("scrolled");
-
-        }
+        dock.classList.toggle(
+            "is-scrolled",
+            window.scrollY > 20
+        );
 
     }
 
-    handleNavbarScroll();
+    window.addEventListener(
+        "scroll",
+        updateNavbar,
+        { passive:true }
+    );
 
-    window.addEventListener("scroll", handleNavbarScroll);
+    updateNavbar();
 
+    /*==========================================
+        BODY LOCK
+    ==========================================*/
 
-
-    /*======================================
-    MOBILE MENU
-    ======================================*/
-
-    function closeMenu(){
-
-        menuButton.classList.remove("active");
-
-        navigation.classList.remove("active");
-
-        document.body.style.overflow = "";
-
-    }
-
-    function openMenu(){
-
-        menuButton.classList.add("active");
-
-        navigation.classList.add("active");
+    function lockBody(){
 
         document.body.style.overflow = "hidden";
+        document.body.classList.add("drawer-open");
 
     }
 
-    menuButton.addEventListener("click", () => {
+    function unlockBody(){
 
-        if(navigation.classList.contains("active")){
+        document.body.style.overflow = "";
+        document.body.classList.remove("drawer-open");
 
-            closeMenu();
+    }
 
-        }
+    /*==========================================
+        OPEN DRAWER
+    ==========================================*/
 
-        else{
+    function openDrawer(){
 
-            openMenu();
+        if(drawer.classList.contains("is-active")) return;
 
-        }
+        drawer.classList.add("is-active");
+        backdrop.classList.add("is-active");
+        hamburger.classList.add("is-active");
 
-    });
+        hamburger.setAttribute(
+            "aria-expanded",
+            "true"
+        );
 
+        drawer.setAttribute(
+            "aria-hidden",
+            "false"
+        );
 
+        lockBody();
 
-    /*======================================
-    CLOSE ON LINK CLICK
-    ======================================*/
+    }
 
-    navLinks.forEach(link=>{
+    /*==========================================
+        CLOSE DRAWER
+    ==========================================*/
 
-        link.addEventListener("click",()=>{
+    function closeDrawer(){
 
-            closeMenu();
+        drawer.classList.remove("is-active");
+        backdrop.classList.remove("is-active");
+        hamburger.classList.remove("is-active");
 
-        });
+        hamburger.setAttribute(
+            "aria-expanded",
+            "false"
+        );
 
-    });
+        drawer.setAttribute(
+            "aria-hidden",
+            "true"
+        );
 
+        unlockBody();
 
+        /* Close all accordions */
 
-    /*======================================
-    CLICK OUTSIDE
-    ======================================*/
+        accordions.forEach(item=>{
 
-    document.addEventListener("click",(event)=>{
-
-        const insideNavbar = navbar.contains(event.target);
-
-        if(!insideNavbar){
-
-            closeMenu();
-
-        }
-
-    });
-
-
-
-    /*======================================
-    ESC KEY
-    ======================================*/
-
-    document.addEventListener("keydown",(event)=>{
-
-        if(event.key==="Escape"){
-
-            closeMenu();
-
-        }
-
-    });
-
-
-
-    /*======================================
-    ACTIVE NAVIGATION
-    ======================================*/
-
-    const sections = document.querySelectorAll("section[id]");
-
-    function updateActiveLink(){
-
-        let current = "";
-
-        sections.forEach(section=>{
-
-            const top = section.offsetTop - 120;
-
-            const height = section.offsetHeight;
-
-            if(window.scrollY >= top){
-
-                current = section.getAttribute("id");
-
-            }
-
-        });
-
-        navLinks.forEach(link=>{
-
-            link.classList.remove("active");
-
-            if(link.getAttribute("href")==="#" + current){
-
-                link.classList.add("active");
-
-            }
+            item.classList.remove("is-open");
 
         });
 
     }
 
-    updateActiveLink();
+    /*==========================================
+        BUTTON EVENTS
+    ==========================================*/
 
-    window.addEventListener("scroll",updateActiveLink);
+    hamburger.addEventListener(
+        "click",
+        openDrawer
+    );
 
-});
+    drawerClose.addEventListener(
+        "click",
+        closeDrawer
+    );
+
+    backdrop.addEventListener(
+        "click",
+        closeDrawer
+    );
+
+    /*==========================================
+        CLOSE AFTER CLICKING A LINK
+    ==========================================*/
+
+    drawerLinks.forEach(link=>{
+
+        link.addEventListener(
+            "click",
+            closeDrawer
+        );
+
+    });
+
+    /*==========================================
+        ESC KEY
+    ==========================================*/
+
+    document.addEventListener(
+        "keydown",
+        e=>{
+
+            if(
+                e.key==="Escape" &&
+                drawer.classList.contains("is-active")
+            ){
+
+                closeDrawer();
+
+            }
+
+        }
+    );
+
+    /*==========================================
+        MOBILE ACCORDION
+    ==========================================*/
+
+    accordions.forEach(item=>{
+
+        const trigger = item.querySelector(
+            ".s15x-mobile-trigger"
+        );
+
+        if(!trigger) return;
+
+        trigger.addEventListener(
+            "click",
+            ()=>{
+
+                accordions.forEach(other=>{
+
+                    if(other!==item){
+
+                        other.classList.remove(
+                            "is-open"
+                        );
+
+                    }
+
+                });
+
+                item.classList.toggle(
+                    "is-open"
+                );
+
+            }
+        );
+
+    });
+
+    /*==========================================
+        RESET ON DESKTOP
+    ==========================================*/
+
+    window.addEventListener(
+        "resize",
+        ()=>{
+
+            if(window.innerWidth > 1024){
+
+                closeDrawer();
+
+            }
+
+        }
+    );
+
+})();

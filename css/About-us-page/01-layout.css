@@ -1,0 +1,221 @@
+/*==========================================
+        ABOUT HERO
+        LAYOUT
+==========================================*/
+
+.s15-about-hero-section{
+
+    position: relative;
+
+    min-height: 110vh;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+}
+
+
+/*==========================================
+        WRAPPER
+==========================================*/
+
+.s15-about-hero-wrapper{
+
+    position: relative;
+
+    z-index: 5;
+
+    display: grid;
+
+    grid-template-columns: 56% 44%;
+
+    align-items: center;
+
+    gap: 90px;
+
+    min-height: 110vh;
+
+}
+
+
+/*==========================================
+        LEFT SIDE
+==========================================*/
+
+.s15-about-hero-content{
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 720px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+
+/*==========================================
+        RIGHT SIDE
+==========================================*/
+
+.s15-about-hero-visual{
+
+    position: relative;
+
+    width: 100%;
+
+    height: 760px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+/*==========================================
+        HIGHLIGHTS
+==========================================*/
+
+.s15-about-hero-highlights{
+
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 22px;
+
+    margin-top: 48px;
+
+}
+
+
+.s15-about-hero-highlight-card{
+
+    position: relative;
+
+}
+
+
+/*==========================================
+        BUTTON GROUP
+==========================================*/
+
+.s15-about-hero-actions{
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-top: 50px;
+
+    flex-wrap: wrap;
+
+}
+
+
+/*==========================================
+        CORE
+==========================================*/
+
+.s15-about-hero-core{
+
+    position: absolute;
+
+    width: 220px;
+
+    height: 220px;
+
+    left: 50%;
+
+    top: 50%;
+
+    transform: translate(-50%,-50%);
+
+}
+
+
+/*==========================================
+        ORBIT
+==========================================*/
+
+.s15-about-hero-orbit{
+
+    position: absolute;
+
+    width: 560px;
+
+    height: 560px;
+
+    left: 50%;
+
+    top: 50%;
+
+    transform: translate(-50%,-50%);
+
+    border-radius: 50%;
+
+}
+
+
+/*==========================================
+        NETWORK
+==========================================*/
+
+.s15-about-hero-network{
+
+    position: absolute;
+
+    inset: 0;
+
+}
+
+
+/*==========================================
+        SERVICE CARD
+==========================================*/
+
+.s15-about-hero-service-card{
+
+    position: absolute;
+
+}
+
+
+/*==========================================
+        SCROLL
+==========================================*/
+
+.s15-about-hero-scroll{
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 45px;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 12px;
+
+    z-index: 10;
+
+}

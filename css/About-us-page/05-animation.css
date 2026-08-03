@@ -1,0 +1,383 @@
+/*==========================================
+        HERO REVEAL
+==========================================*/
+
+.s15-about-hero-badge,
+.s15-about-hero-title,
+.s15-about-hero-description,
+.s15-about-hero-highlights,
+.s15-about-hero-actions,
+.s15-about-hero-visual,
+.s15-about-hero-scroll{
+
+    opacity:0;
+
+    animation-fill-mode:forwards;
+
+}
+
+
+/*==========================================
+        STAGGER
+==========================================*/
+
+.s15-about-hero-badge{
+
+    animation:
+    s15FadeUp .8s ease .15s forwards;
+
+}
+
+.s15-about-hero-title{
+
+    animation:
+    s15FadeUp .9s ease .35s forwards;
+
+}
+
+.s15-about-hero-description{
+
+    animation:
+    s15FadeUp .9s ease .55s forwards;
+
+}
+
+.s15-about-hero-highlights{
+
+    animation:
+    s15FadeUp .9s ease .75s forwards;
+
+}
+
+.s15-about-hero-actions{
+
+    animation:
+    s15FadeUp .9s ease .95s forwards;
+
+}
+
+.s15-about-hero-visual{
+
+    animation:
+    s15ScaleIn 1.2s ease .45s forwards;
+
+}
+
+.s15-about-hero-scroll{
+
+    animation:
+    s15FadeUp .8s ease 1.3s forwards;
+
+}
+
+
+/*==========================================
+        FLOATING CARDS
+==========================================*/
+
+.s15-about-hero-service-card{
+
+    animation:
+
+    s15Floating 7s ease-in-out infinite;
+
+}
+
+.hero-card-web{
+
+    animation-delay:0s;
+
+}
+
+.hero-card-ai{
+
+    animation-delay:.5s;
+
+}
+
+.hero-card-ads{
+
+    animation-delay:1s;
+
+}
+
+.hero-card-seo{
+
+    animation-delay:1.5s;
+
+}
+
+.hero-card-gbp{
+
+    animation-delay:2s;
+
+}
+
+.hero-card-design{
+
+    animation-delay:2.5s;
+
+}
+
+.hero-card-app{
+
+    animation-delay:3s;
+
+}
+
+.hero-card-chatbot{
+
+    animation-delay:3.5s;
+
+}
+
+
+/*==========================================
+        ORBIT
+==========================================*/
+
+.s15-about-hero-orbit{
+
+    animation:
+
+    s15Rotate 40s linear infinite;
+
+}
+
+
+/*==========================================
+        CORE
+==========================================*/
+
+.s15-about-hero-core{
+
+    animation:
+
+    s15Pulse 5s ease-in-out infinite;
+
+}
+
+
+/*==========================================
+        BADGE DOT
+==========================================*/
+
+.s15-about-hero-badge-dot{
+
+    animation:
+
+    s15Blink 2s ease infinite;
+
+}
+
+
+/*==========================================
+        SCROLL
+==========================================*/
+
+.s15-about-hero-scroll i{
+
+    animation:
+
+    s15Bounce 2s ease infinite;
+
+}
+
+
+/*==========================================
+        BUTTON HOVER
+==========================================*/
+
+.s15-about-hero-btn-primary:hover{
+
+    transform:
+
+    translateY(-6px)
+    scale(1.03);
+
+}
+
+.s15-about-hero-btn-secondary:hover{
+
+    transform:
+
+    translateY(-6px)
+    scale(1.03);
+
+}
+
+
+/*==========================================
+        CARD HOVER
+==========================================*/
+
+.s15-about-hero-service-card:hover{
+
+    transform:
+
+    translateY(-12px)
+    scale(1.05);
+
+}
+
+.s15-about-hero-highlight-card:hover{
+
+    transform:
+
+    translateY(-8px);
+
+}
+
+
+/*==========================================
+        KEYFRAMES
+==========================================*/
+
+@keyframes s15FadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(60px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+
+    }
+
+}
+
+
+@keyframes s15ScaleIn{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        scale(.85);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        scale(1);
+
+    }
+
+}
+
+
+@keyframes s15Floating{
+
+    0%{
+
+        transform:
+        translateY(0);
+
+    }
+
+    50%{
+
+        transform:
+        translateY(-14px);
+
+    }
+
+    100%{
+
+        transform:
+        translateY(0);
+
+    }
+
+}
+
+
+@keyframes s15Rotate{
+
+    from{
+
+        transform:
+        translate(-50%,-50%)
+        rotate(0deg);
+
+    }
+
+    to{
+
+        transform:
+        translate(-50%,-50%)
+        rotate(360deg);
+
+    }
+
+}
+
+
+@keyframes s15Pulse{
+
+    0%,100%{
+
+        transform:
+        translate(-50%,-50%)
+        scale(1);
+
+    }
+
+    50%{
+
+        transform:
+        translate(-50%,-50%)
+        scale(1.04);
+
+    }
+
+}
+
+
+@keyframes s15Blink{
+
+    0%,100%{
+
+        opacity:1;
+
+    }
+
+    50%{
+
+        opacity:.35;
+
+    }
+
+}
+
+
+@keyframes s15Bounce{
+
+    0%,100%{
+
+        transform:
+        translateY(0);
+
+    }
+
+    50%{
+
+        transform:
+        translateY(10px);
+
+    }
+
+}

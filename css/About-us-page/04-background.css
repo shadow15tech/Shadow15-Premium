@@ -1,0 +1,415 @@
+/*==========================================
+        ABOUT HERO
+        BACKGROUND
+==========================================*/
+
+
+/*==========================================
+        HERO BACKGROUND
+==========================================*/
+
+.s15-about-hero-background{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+    z-index:1;
+
+    background:
+
+    radial-gradient(circle at top,#183B8C22 0%,transparent 40%),
+
+    radial-gradient(circle at bottom right,#2563EB18 0%,transparent 35%),
+
+    linear-gradient(180deg,#050814 0%,#08111F 55%,#050814 100%);
+
+}
+
+
+/*==========================================
+        GRID
+==========================================*/
+
+.s15-about-hero-grid{
+
+    position:absolute;
+
+    inset:0;
+
+    opacity:.08;
+
+    background-image:
+
+    linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),
+
+    linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);
+
+    background-size:70px 70px;
+
+}
+
+
+/*==========================================
+        AURORA
+==========================================*/
+
+.s15-about-hero-aurora{
+
+    position:absolute;
+
+    width:900px;
+
+    height:900px;
+
+    left:50%;
+
+    top:-450px;
+
+    transform:translateX(-50%);
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(circle,
+
+    rgba(77,124,255,.30),
+
+    rgba(97,218,251,.12),
+
+    transparent 70%);
+
+    filter:blur(120px);
+
+}
+
+
+/*==========================================
+        NOISE
+==========================================*/
+
+.s15-about-hero-noise{
+
+    position:absolute;
+
+    inset:0;
+
+    opacity:.03;
+
+    pointer-events:none;
+
+    background-image:
+
+    radial-gradient(#ffffff 1px,transparent 1px);
+
+    background-size:10px 10px;
+
+}
+
+
+/*==========================================
+        MONOGRAM
+==========================================*/
+
+.s15-about-hero-monogram{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    pointer-events:none;
+
+}
+
+
+.s15-about-hero-monogram span{
+
+    font-size:34rem;
+
+    font-weight:900;
+
+    line-height:1;
+
+    color:rgba(255,255,255,.025);
+
+    user-select:none;
+
+}
+
+
+/*==========================================
+        HERO CORE
+==========================================*/
+
+.s15-about-hero-core{
+
+    background:
+
+    linear-gradient(
+
+    145deg,
+
+    rgba(255,255,255,.08),
+
+    rgba(255,255,255,.02)
+
+    );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(30px);
+
+    box-shadow:
+
+    0 0 80px rgba(37,99,235,.18),
+
+    inset 0 0 40px rgba(255,255,255,.05);
+
+}
+
+
+.s15-about-hero-core span{
+
+    color:#ffffff;
+
+    font-size:1.2rem;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+}
+
+
+/*==========================================
+        ORBIT
+==========================================*/
+
+.s15-about-hero-orbit{
+
+    border:1px dashed rgba(255,255,255,.10);
+
+}
+
+
+/*==========================================
+        SERVICE CARDS
+==========================================*/
+
+.s15-about-hero-service-card{
+
+    background:
+
+    rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(22px);
+
+    color:#EAF1FF;
+
+    box-shadow:
+
+    0 18px 45px rgba(0,0,0,.28);
+
+    transition:.35s ease;
+
+}
+
+
+.s15-about-hero-service-card:hover{
+
+    border-color:rgba(77,124,255,.45);
+
+    box-shadow:
+
+    0 25px 60px rgba(37,99,235,.22);
+
+}
+
+
+/*==========================================
+        HIGHLIGHT CARDS
+==========================================*/
+
+.s15-about-hero-highlight-card{
+
+    background:
+
+    rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+}
+
+
+.s15-about-hero-highlight-card strong{
+
+    color:#ffffff;
+
+}
+
+
+.s15-about-hero-highlight-card span{
+
+    color:#9FB0C8;
+
+}
+
+
+/*==========================================
+        BADGE
+==========================================*/
+
+.s15-about-hero-badge{
+
+    background:
+
+    rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:#C9D4E8;
+
+}
+
+
+.s15-about-hero-badge-dot{
+
+    background:#4D7CFF;
+
+    box-shadow:
+
+    0 0 18px rgba(77,124,255,.9);
+
+}
+
+
+/*==========================================
+        TYPOGRAPHY
+==========================================*/
+
+.s15-about-hero-title{
+
+    color:#ffffff;
+
+}
+
+
+.s15-about-hero-title span{
+
+    background:
+
+    linear-gradient(
+
+    90deg,
+
+    #ffffff,
+
+    #61DAFB,
+
+    #4D7CFF
+
+    );
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+}
+
+
+.s15-about-hero-description{
+
+    color:#98A5BF;
+
+}
+
+
+/*==========================================
+        BUTTONS
+==========================================*/
+
+.s15-about-hero-btn-primary{
+
+    background:
+
+    linear-gradient(
+
+    135deg,
+
+    #4D7CFF,
+
+    #2563EB
+
+    );
+
+    color:#ffffff;
+
+    box-shadow:
+
+    0 20px 45px rgba(37,99,235,.28);
+
+}
+
+
+.s15-about-hero-btn-secondary{
+
+    background:
+
+    rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:#ffffff;
+
+    backdrop-filter:blur(18px);
+
+}
+
+
+.s15-about-hero-btn-primary:hover{
+
+    box-shadow:
+
+    0 30px 70px rgba(37,99,235,.40);
+
+}
+
+
+.s15-about-hero-btn-secondary:hover{
+
+    background:
+
+    rgba(255,255,255,.08);
+
+}
+
+
+/*==========================================
+        SCROLL
+==========================================*/
+
+.s15-about-hero-scroll{
+
+    color:#A7B7D2;
+
+}
+
+
+.s15-about-hero-scroll i{
+
+    color:#61DAFB;
+
+}

@@ -1,0 +1,378 @@
+/*==========================================
+        1400px
+==========================================*/
+
+@media (max-width:1400px){
+
+    .s15-about-hero-wrapper{
+
+        grid-template-columns:54% 46%;
+
+        gap:70px;
+
+    }
+
+    .s15-about-hero-title{
+
+        font-size:clamp(3.8rem,6vw,5.8rem);
+
+    }
+
+    .s15-about-hero-visual{
+
+        height:680px;
+
+    }
+
+    .s15-about-hero-orbit{
+
+        width:500px;
+        height:500px;
+
+    }
+
+}
+
+
+/*==========================================
+        1200px
+==========================================*/
+
+@media (max-width:1200px){
+
+    .s15-about-hero-wrapper{
+
+        grid-template-columns:1fr 1fr;
+
+        gap:55px;
+
+    }
+
+    .s15-about-hero-title{
+
+        font-size:4rem;
+
+    }
+
+    .s15-about-hero-highlights{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .hero-card-chatbot,
+    .hero-card-design{
+
+        display:none;
+
+    }
+
+}
+
+
+/*==========================================
+        992px
+==========================================*/
+
+@media (max-width:992px){
+
+    .s15-about-hero-section{
+
+        min-height:auto;
+
+        padding:140px 0 90px;
+
+    }
+
+    .s15-about-hero-wrapper{
+
+        grid-template-columns:1fr;
+
+        gap:70px;
+
+        min-height:auto;
+
+    }
+
+    .s15-about-hero-visual{
+
+        order:-1;
+
+        height:560px;
+
+        max-width:620px;
+
+        margin:0 auto;
+
+    }
+
+    .s15-about-hero-content{
+
+        max-width:100%;
+
+        text-align:left;
+
+        align-items:flex-start;
+
+    }
+
+    .s15-about-hero-description{
+
+        max-width:100%;
+
+        margin-left:0;
+
+        margin-right:0;
+
+    }
+
+    .s15-about-hero-actions{
+
+        justify-content:flex-start;
+
+    }
+
+    .s15-about-hero-highlights{
+
+        width:100%;
+
+        grid-template-columns:repeat(3,1fr);
+
+    }
+
+}
+
+
+/*==========================================
+        768px
+==========================================*/
+
+@media (max-width:768px){
+
+    .s15-about-hero-section{
+
+        padding:120px 0 80px;
+
+    }
+
+    .s15-about-hero-wrapper{
+
+        gap:55px;
+
+    }
+
+    .s15-about-hero-title{
+
+        font-size:3.2rem;
+
+        line-height:1;
+
+        letter-spacing:-1px;
+
+    }
+
+    .s15-about-hero-description{
+
+        font-size:1rem;
+
+    }
+
+    .s15-about-hero-highlights{
+
+        grid-template-columns:1fr;
+
+        gap:18px;
+
+    }
+
+    .s15-about-hero-actions{
+
+        width:100%;
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+        gap:18px;
+
+    }
+
+    .s15-about-hero-btn-primary,
+    .s15-about-hero-btn-secondary{
+
+        width:100%;
+
+    }
+
+    .s15-about-hero-visual{
+
+        height:470px;
+
+    }
+
+    .s15-about-hero-core{
+
+        width:180px;
+        height:180px;
+
+    }
+
+    .s15-about-hero-orbit{
+
+        width:380px;
+        height:380px;
+
+    }
+
+    .hero-card-gbp,
+    .hero-card-app{
+
+        display:none;
+
+    }
+
+}
+
+
+/*==========================================
+        576px
+==========================================*/
+
+@media (max-width:576px){
+
+    .s15-about-hero-section{
+
+        padding:110px 0 70px;
+
+    }
+
+    .s15-about-hero-wrapper{
+
+        gap:45px;
+
+    }
+
+    .s15-about-hero-title{
+
+        font-size:2.65rem;
+
+        line-height:1;
+
+    }
+
+    .s15-about-hero-badge{
+
+        font-size:.72rem;
+
+        padding:10px 18px;
+
+    }
+
+    .s15-about-hero-description{
+
+        font-size:.95rem;
+
+        line-height:1.8;
+
+    }
+
+    .s15-about-hero-highlight-card{
+
+        padding:18px;
+
+    }
+
+    .s15-about-hero-highlight-card strong{
+
+        font-size:1.5rem;
+
+    }
+
+    .s15-about-hero-visual{
+
+        height:400px;
+
+    }
+
+    .s15-about-hero-core{
+
+        width:150px;
+
+        height:150px;
+
+    }
+
+    .s15-about-hero-orbit{
+
+        width:300px;
+
+        height:300px;
+
+    }
+
+    .hero-card-web,
+    .hero-card-seo{
+
+        font-size:.85rem;
+
+    }
+
+}
+
+
+/*==========================================
+        420px
+==========================================*/
+
+@media (max-width:420px){
+
+    .s15-about-hero-section{
+
+        padding:100px 0 60px;
+
+    }
+
+    .s15-about-hero-title{
+
+        font-size:2.2rem;
+
+    }
+
+    .s15-about-hero-description{
+
+        font-size:.9rem;
+
+    }
+
+    .s15-about-hero-core{
+
+        width:130px;
+
+        height:130px;
+
+    }
+
+    .s15-about-hero-core span{
+
+        font-size:.8rem;
+
+        letter-spacing:1px;
+
+    }
+
+    .s15-about-hero-orbit{
+
+        width:250px;
+
+        height:250px;
+
+    }
+
+    .hero-card-ai,
+    .hero-card-ads{
+
+        display:none;
+
+    }
+
+}
