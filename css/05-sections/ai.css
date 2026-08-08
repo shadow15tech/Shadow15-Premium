@@ -526,9 +526,9 @@ CENTER SPHERE
 
     z-index:5;
 
-    width:150px;
+    width:400px;
 
-    height:150px;
+    height:400px;
 
     display:flex;
 
@@ -552,7 +552,7 @@ CENTER SPHERE
 
     );
 
-    color:#06101D;
+    color:#12e4d2;
 
     font-family:"Sora",sans-serif;
 
