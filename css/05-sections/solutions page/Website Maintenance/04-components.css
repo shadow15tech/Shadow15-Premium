@@ -1,0 +1,1113 @@
+/* ==========================================================
+   SHADOW15 — WEBSITE MAINTENANCE
+   04-COMPONENTS.CSS
+========================================================== */
+
+
+/* ==========================================================
+   01 — SERVICES
+========================================================== */
+
+.maintenance-services {
+
+    position:
+        relative;
+
+    z-index:
+        5;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0,1fr));
+
+    gap:
+        18px;
+
+    margin-top:
+        22px;
+
+}
+
+
+/* ==========================================================
+   02 — SERVICE CARD
+========================================================== */
+
+.maintenance-service-card {
+
+    position:
+        relative;
+
+    min-height:
+        320px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    overflow:
+        hidden;
+
+    padding:
+        25px;
+
+    border:
+        1px solid
+        rgba(148,163,184,.10);
+
+    border-radius:
+        20px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(16,33,52,.88),
+            rgba(5,16,28,.97)
+        );
+
+    box-shadow:
+
+        0 25px 60px
+        rgba(0,0,0,.20),
+
+        inset 0 1px 0
+        rgba(255,255,255,.035);
+
+    backdrop-filter:
+        blur(18px);
+
+    -webkit-backdrop-filter:
+        blur(18px);
+
+    transition:
+
+        transform .5s
+        cubic-bezier(.22,1,.36,1),
+
+        border-color .4s ease,
+
+        box-shadow .5s ease;
+
+}
+
+
+/* ==========================================================
+   03 — CARD AMBIENT LIGHT
+========================================================== */
+
+.maintenance-service-card::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        -120px;
+
+    right:
+        -100px;
+
+    width:
+        270px;
+
+    height:
+        270px;
+
+    border-radius:
+        50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(34,211,238,.12),
+            rgba(34,211,238,.025) 45%,
+            transparent 72%
+        );
+
+    filter:
+        blur(16px);
+
+    opacity:
+        .55;
+
+    pointer-events:
+        none;
+
+    transition:
+
+        transform .65s
+        cubic-bezier(.22,1,.36,1),
+
+        opacity .5s ease;
+
+}
+
+
+/* ==========================================================
+   04 — CARD GRID
+========================================================== */
+
+.maintenance-service-card::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    pointer-events:
+        none;
+
+    opacity:
+        .17;
+
+    background-image:
+
+        linear-gradient(
+            rgba(148,163,184,.025) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(148,163,184,.025) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        26px 26px;
+
+    mask-image:
+
+        linear-gradient(
+            145deg,
+            black,
+            transparent 72%
+        );
+
+    -webkit-mask-image:
+
+        linear-gradient(
+            145deg,
+            black,
+            transparent 72%
+        );
+
+}
+
+
+/* ==========================================================
+   05 — CARD TOP
+========================================================== */
+
+.maintenance-service-top {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+}
+
+
+/* ==========================================================
+   06 — NUMBER
+========================================================== */
+
+.maintenance-service-number {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    min-width:
+        37px;
+
+    height:
+        26px;
+
+    padding:
+        0 9px;
+
+    border:
+        1px solid
+        rgba(148,163,184,.11);
+
+    border-radius:
+        999px;
+
+    color:
+        #71879a;
+
+    background:
+        rgba(148,163,184,.025);
+
+    font-size:
+        .50rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .11em;
+
+}
+
+
+/* ==========================================================
+   07 — ICON
+========================================================== */
+
+.maintenance-service-icon {
+
+    position:
+        relative;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    width:
+        50px;
+
+    height:
+        50px;
+
+    border:
+        1px solid
+        rgba(34,211,238,.17);
+
+    border-radius:
+        14px;
+
+    color:
+        #22d3ee;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(34,211,238,.08),
+            rgba(34,211,238,.012)
+        );
+
+    box-shadow:
+
+        inset 0 1px 0
+        rgba(255,255,255,.05),
+
+        0 14px 30px
+        rgba(0,0,0,.18);
+
+    transition:
+
+        transform .45s
+        cubic-bezier(.22,1,.36,1),
+
+        border-color .35s ease,
+
+        box-shadow .35s ease;
+
+}
+
+
+.maintenance-service-icon::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        6px;
+
+    border:
+        1px solid
+        rgba(34,211,238,.055);
+
+    border-radius:
+        9px;
+
+}
+
+
+.maintenance-service-icon i {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    font-size:
+        .95rem;
+
+    filter:
+
+        drop-shadow(
+            0 0 10px
+            rgba(34,211,238,.25)
+        );
+
+}
+
+
+/* ==========================================================
+   08 — CARD CONTENT
+========================================================== */
+
+.maintenance-service-content {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    flex:
+        1;
+
+    padding-top:
+        45px;
+
+}
+
+
+.maintenance-service-content h3 {
+
+    margin:
+        0;
+
+    color:
+        #e9f1f6;
+
+    font-size:
+        1.28rem;
+
+    font-weight:
+        750;
+
+    line-height:
+        1.15;
+
+    letter-spacing:
+        -.035em;
+
+}
+
+
+.maintenance-service-content p {
+
+    max-width:
+        370px;
+
+    margin:
+        14px 0 0;
+
+    color:
+        #8094a7;
+
+    font-size:
+        .76rem;
+
+    line-height:
+        1.75;
+
+}
+
+
+/* ==========================================================
+   09 — TAGS
+========================================================== */
+
+.maintenance-service-tags {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        6px;
+
+    margin-top:
+        24px;
+
+    padding-top:
+        16px;
+
+    border-top:
+        1px solid
+        rgba(148,163,184,.08);
+
+}
+
+
+.maintenance-service-tags span {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    min-height:
+        25px;
+
+    padding:
+        0 9px;
+
+    border:
+        1px solid
+        rgba(148,163,184,.09);
+
+    border-radius:
+        7px;
+
+    color:
+        #667d90;
+
+    background:
+        rgba(148,163,184,.025);
+
+    font-size:
+        .43rem;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        .04em;
+
+    transition:
+
+        color .3s ease,
+
+        border-color .3s ease,
+
+        background .3s ease;
+
+}
+
+
+/* ==========================================================
+   10 — CARD 01
+========================================================== */
+
+.maintenance-service-card:nth-child(1)::before {
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(34,211,238,.13),
+            rgba(34,211,238,.025) 45%,
+            transparent 72%
+        );
+
+}
+
+
+/* ==========================================================
+   11 — CARD 02
+========================================================== */
+
+.maintenance-service-card:nth-child(2)::before {
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(34,197,94,.12),
+            rgba(34,197,94,.022) 45%,
+            transparent 72%
+        );
+
+}
+
+
+.maintenance-service-card:nth-child(2)
+.maintenance-service-icon {
+
+    color:
+        #4ade80;
+
+    border-color:
+        rgba(74,222,128,.16);
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(34,197,94,.08),
+            rgba(34,197,94,.012)
+        );
+
+}
+
+
+.maintenance-service-card:nth-child(2)
+.maintenance-service-icon::before {
+
+    border-color:
+        rgba(74,222,128,.05);
+
+}
+
+
+/* ==========================================================
+   12 — CARD 03
+========================================================== */
+
+.maintenance-service-card:nth-child(3)::before {
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(96,165,250,.13),
+            rgba(59,130,246,.025) 45%,
+            transparent 72%
+        );
+
+}
+
+
+.maintenance-service-card:nth-child(3)
+.maintenance-service-icon {
+
+    color:
+        #60a5fa;
+
+    border-color:
+        rgba(96,165,250,.17);
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(96,165,250,.08),
+            rgba(96,165,250,.012)
+        );
+
+}
+
+
+.maintenance-service-card:nth-child(3)
+.maintenance-service-icon::before {
+
+    border-color:
+        rgba(96,165,250,.05);
+
+}
+
+
+/* ==========================================================
+   13 — HOVER
+========================================================== */
+
+.maintenance-service-card:hover {
+
+    transform:
+        translateY(-10px);
+
+    border-color:
+        rgba(34,211,238,.19);
+
+    box-shadow:
+
+        0 35px 75px
+        rgba(0,0,0,.32),
+
+        0 0 45px
+        rgba(34,211,238,.035),
+
+        inset 0 1px 0
+        rgba(255,255,255,.055);
+
+}
+
+
+.maintenance-service-card:hover::before {
+
+    transform:
+        translate(-35px,35px)
+        scale(1.25);
+
+    opacity:
+        1;
+
+}
+
+
+.maintenance-service-card:hover
+.maintenance-service-icon {
+
+    transform:
+        translateY(-4px)
+        rotate(-3deg);
+
+    border-color:
+        rgba(34,211,238,.28);
+
+    box-shadow:
+
+        0 15px 35px
+        rgba(34,211,238,.07),
+
+        inset 0 1px 0
+        rgba(255,255,255,.07);
+
+}
+
+
+.maintenance-service-card:hover
+.maintenance-service-tags span {
+
+    color:
+        #91a9bb;
+
+    border-color:
+        rgba(34,211,238,.11);
+
+    background:
+        rgba(34,211,238,.02);
+
+}
+
+
+/* ==========================================================
+   14 — FOOTNOTE
+========================================================== */
+
+.maintenance-footnote {
+
+    position:
+        relative;
+
+    z-index:
+        5;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        22px;
+
+    margin-top:
+        68px;
+
+}
+
+
+.maintenance-footnote > span {
+
+    flex:
+        1;
+
+    height:
+        1px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(148,163,184,.12)
+        );
+
+}
+
+
+.maintenance-footnote > span:last-child {
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(148,163,184,.12),
+            transparent
+        );
+
+}
+
+
+.maintenance-footnote p {
+
+    flex:
+        0 1 auto;
+
+    max-width:
+        620px;
+
+    margin:
+        0;
+
+    color:
+        #60768a;
+
+    font-size:
+        .61rem;
+
+    line-height:
+        1.75;
+
+    text-align:
+        center;
+
+}
+
+
+/* ==========================================================
+   15 — RESPONSIVE
+========================================================== */
+
+@media (max-width: 1200px) {
+
+    .maintenance-services {
+
+        gap:
+            14px;
+
+    }
+
+    .maintenance-service-card {
+
+        min-height:
+            310px;
+
+        padding:
+            21px;
+
+    }
+
+    .maintenance-service-content {
+
+        padding-top:
+            38px;
+
+    }
+
+    .maintenance-service-content h3 {
+
+        font-size:
+            1.15rem;
+
+    }
+
+    .maintenance-service-content p {
+
+        font-size:
+            .71rem;
+
+    }
+
+}
+
+
+@media (max-width: 850px) {
+
+    .maintenance-services {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            13px;
+
+    }
+
+    .maintenance-service-card {
+
+        min-height:
+            260px;
+
+    }
+
+    .maintenance-service-content {
+
+        padding-top:
+            30px;
+
+    }
+
+    .maintenance-service-content p {
+
+        max-width:
+            650px;
+
+    }
+
+    .maintenance-footnote {
+
+        margin-top:
+            52px;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .maintenance-services {
+
+        gap:
+            11px;
+
+    }
+
+    .maintenance-service-card {
+
+        min-height:
+            270px;
+
+        padding:
+            18px;
+
+        border-radius:
+            16px;
+
+    }
+
+    .maintenance-service-number {
+
+        min-width:
+            32px;
+
+        height:
+            23px;
+
+        font-size:
+            .45rem;
+
+    }
+
+    .maintenance-service-icon {
+
+        width:
+            42px;
+
+        height:
+            42px;
+
+        border-radius:
+            11px;
+
+    }
+
+    .maintenance-service-icon i {
+
+        font-size:
+            .78rem;
+
+    }
+
+    .maintenance-service-content {
+
+        padding-top:
+            29px;
+
+    }
+
+    .maintenance-service-content h3 {
+
+        font-size:
+            1.08rem;
+
+    }
+
+    .maintenance-service-content p {
+
+        margin-top:
+            11px;
+
+        font-size:
+            .70rem;
+
+        line-height:
+            1.7;
+
+    }
+
+    .maintenance-service-tags {
+
+        gap:
+            5px;
+
+        margin-top:
+            20px;
+
+        padding-top:
+            13px;
+
+    }
+
+    .maintenance-service-tags span {
+
+        min-height:
+            23px;
+
+        padding:
+            0 8px;
+
+        font-size:
+            .40rem;
+
+    }
+
+    .maintenance-footnote {
+
+        gap:
+            12px;
+
+        margin-top:
+            40px;
+
+    }
+
+    .maintenance-footnote p {
+
+        max-width:
+            300px;
+
+        font-size:
+            .51rem;
+
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .maintenance-service-card {
+
+        min-height:
+            250px;
+
+        padding:
+            16px;
+
+    }
+
+    .maintenance-service-content {
+
+        padding-top:
+            25px;
+
+    }
+
+    .maintenance-service-content h3 {
+
+        font-size:
+            1rem;
+
+    }
+
+    .maintenance-service-content p {
+
+        font-size:
+            .66rem;
+
+    }
+
+    .maintenance-footnote > span {
+
+        display:
+            none;
+
+    }
+
+    .maintenance-footnote {
+
+        justify-content:
+            center;
+
+    }
+
+}
+
+
+/* ==========================================================
+   16 — TOUCH
+========================================================== */
+
+@media (hover: none) {
+
+    .maintenance-service-card:hover {
+
+        transform:
+            none;
+
+    }
+
+    .maintenance-service-card:hover
+    .maintenance-service-icon {
+
+        transform:
+            none;
+
+    }
+
+}
+
+
+/* ==========================================================
+   17 — REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .maintenance-service-card,
+    .maintenance-service-icon,
+    .maintenance-service-tags span {
+
+        transition:
+            none;
+
+    }
+
+}

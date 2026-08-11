@@ -1,0 +1,1096 @@
+/* ==========================================================
+   SHADOW15 — GRAPHIC DESIGN
+   04-COMPONENTS.CSS
+========================================================== */
+
+
+/* ==========================================================
+   01 — SERVICES
+========================================================== */
+
+.graphic-services {
+
+    position: relative;
+
+    z-index: 5;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0,1fr));
+
+    gap: 18px;
+
+    margin-top: 22px;
+
+}
+
+
+/* ==========================================================
+   02 — SERVICE CARD
+========================================================== */
+
+.graphic-service-card {
+
+    position: relative;
+
+    min-height: 320px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    overflow: hidden;
+
+    padding: 25px;
+
+    border:
+        1px solid
+        rgba(148,163,184,.10);
+
+    border-radius: 20px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(16,33,52,.88),
+            rgba(5,16,28,.97)
+        );
+
+    box-shadow:
+
+        0 25px 60px
+        rgba(0,0,0,.20),
+
+        inset 0 1px 0
+        rgba(255,255,255,.035);
+
+    backdrop-filter:
+        blur(18px);
+
+    -webkit-backdrop-filter:
+        blur(18px);
+
+    transition:
+
+        transform .5s
+        cubic-bezier(.22,1,.36,1),
+
+        border-color .4s ease,
+
+        box-shadow .5s ease;
+
+}
+
+
+/* ==========================================================
+   03 — CARD LIGHT
+========================================================== */
+
+.graphic-service-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -120px;
+
+    right: -100px;
+
+    width: 270px;
+
+    height: 270px;
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(192,132,252,.13),
+            rgba(168,85,247,.025) 45%,
+            transparent 72%
+        );
+
+    filter:
+        blur(16px);
+
+    opacity: .55;
+
+    pointer-events: none;
+
+    transition:
+
+        transform .65s
+        cubic-bezier(.22,1,.36,1),
+
+        opacity .5s ease;
+
+}
+
+
+/* ==========================================================
+   04 — CARD GRID
+========================================================== */
+
+.graphic-service-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: .17;
+
+    background-image:
+
+        linear-gradient(
+            rgba(148,163,184,.025) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(148,163,184,.025) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        26px 26px;
+
+    mask-image:
+
+        linear-gradient(
+            145deg,
+            black,
+            transparent 72%
+        );
+
+    -webkit-mask-image:
+
+        linear-gradient(
+            145deg,
+            black,
+            transparent 72%
+        );
+
+}
+
+
+/* ==========================================================
+   05 — CARD TOP
+========================================================== */
+
+.graphic-service-top {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+}
+
+
+/* ==========================================================
+   06 — NUMBER
+========================================================== */
+
+.graphic-service-number {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    min-width:
+        37px;
+
+    height:
+        26px;
+
+    padding:
+        0 9px;
+
+    border:
+        1px solid
+        rgba(148,163,184,.11);
+
+    border-radius:
+        999px;
+
+    color:
+        #71879a;
+
+    background:
+        rgba(148,163,184,.025);
+
+    font-size:
+        .50rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .11em;
+
+}
+
+
+/* ==========================================================
+   07 — ICON
+========================================================== */
+
+.graphic-service-icon {
+
+    position:
+        relative;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    width:
+        50px;
+
+    height:
+        50px;
+
+    border:
+        1px solid
+        rgba(192,132,252,.17);
+
+    border-radius:
+        14px;
+
+    color:
+        #c084fc;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(168,85,247,.09),
+            rgba(168,85,247,.015)
+        );
+
+    box-shadow:
+
+        inset 0 1px 0
+        rgba(255,255,255,.05),
+
+        0 14px 30px
+        rgba(0,0,0,.18);
+
+    transition:
+
+        transform .45s
+        cubic-bezier(.22,1,.36,1),
+
+        border-color .35s ease,
+
+        box-shadow .35s ease;
+
+}
+
+
+.graphic-service-icon::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        6px;
+
+    border:
+        1px solid
+        rgba(192,132,252,.055);
+
+    border-radius:
+        9px;
+
+}
+
+
+.graphic-service-icon i {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    font-size:
+        .95rem;
+
+    filter:
+
+        drop-shadow(
+            0 0 10px
+            rgba(192,132,252,.25)
+        );
+
+}
+
+
+/* ==========================================================
+   08 — CARD CONTENT
+========================================================== */
+
+.graphic-service-content {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    flex:
+        1;
+
+    padding-top:
+        45px;
+
+}
+
+
+.graphic-service-content h3 {
+
+    margin:
+        0;
+
+    color:
+        #e9f1f6;
+
+    font-size:
+        1.28rem;
+
+    font-weight:
+        750;
+
+    line-height:
+        1.15;
+
+    letter-spacing:
+        -.035em;
+
+}
+
+
+.graphic-service-content p {
+
+    max-width:
+        370px;
+
+    margin:
+        14px 0 0;
+
+    color:
+        #8094a7;
+
+    font-size:
+        .76rem;
+
+    line-height:
+        1.75;
+
+}
+
+
+/* ==========================================================
+   09 — TAGS
+========================================================== */
+
+.graphic-service-tags {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        6px;
+
+    margin-top:
+        24px;
+
+    padding-top:
+        16px;
+
+    border-top:
+        1px solid
+        rgba(148,163,184,.08);
+
+}
+
+
+.graphic-service-tags span {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    min-height:
+        25px;
+
+    padding:
+        0 9px;
+
+    border:
+        1px solid
+        rgba(148,163,184,.09);
+
+    border-radius:
+        7px;
+
+    color:
+        #667d90;
+
+    background:
+        rgba(148,163,184,.025);
+
+    font-size:
+        .43rem;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        .04em;
+
+    transition:
+
+        color .3s ease,
+
+        border-color .3s ease,
+
+        background .3s ease;
+
+}
+
+
+/* ==========================================================
+   10 — CARD 01
+========================================================== */
+
+.graphic-service-card:nth-child(1)::before {
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(192,132,252,.14),
+            rgba(168,85,247,.025) 45%,
+            transparent 72%
+        );
+
+}
+
+
+.graphic-service-card:nth-child(1)
+.graphic-service-icon {
+
+    color:
+        #c084fc;
+
+}
+
+
+/* ==========================================================
+   11 — CARD 02
+========================================================== */
+
+.graphic-service-card:nth-child(2)::before {
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(34,211,238,.13),
+            rgba(14,165,233,.025) 45%,
+            transparent 72%
+        );
+
+}
+
+
+.graphic-service-card:nth-child(2)
+.graphic-service-icon {
+
+    color:
+        #22d3ee;
+
+    border-color:
+        rgba(34,211,238,.17);
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(34,211,238,.09),
+            rgba(34,211,238,.015)
+        );
+
+}
+
+
+.graphic-service-card:nth-child(2)
+.graphic-service-icon::before {
+
+    border-color:
+        rgba(34,211,238,.055);
+
+}
+
+
+/* ==========================================================
+   12 — CARD 03
+========================================================== */
+
+.graphic-service-card:nth-child(3)::before {
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(96,165,250,.14),
+            rgba(59,130,246,.025) 45%,
+            transparent 72%
+        );
+
+}
+
+
+.graphic-service-card:nth-child(3)
+.graphic-service-icon {
+
+    color:
+        #60a5fa;
+
+    border-color:
+        rgba(96,165,250,.17);
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(96,165,250,.09),
+            rgba(96,165,250,.015)
+        );
+
+}
+
+
+.graphic-service-card:nth-child(3)
+.graphic-service-icon::before {
+
+    border-color:
+        rgba(96,165,250,.055);
+
+}
+
+
+/* ==========================================================
+   13 — HOVER
+========================================================== */
+
+.graphic-service-card:hover {
+
+    transform:
+        translateY(-10px);
+
+    border-color:
+        rgba(192,132,252,.20);
+
+    box-shadow:
+
+        0 35px 75px
+        rgba(0,0,0,.32),
+
+        0 0 45px
+        rgba(168,85,247,.045),
+
+        inset 0 1px 0
+        rgba(255,255,255,.055);
+
+}
+
+
+.graphic-service-card:hover::before {
+
+    transform:
+        translate(-35px,35px)
+        scale(1.25);
+
+    opacity:
+        1;
+
+}
+
+
+.graphic-service-card:hover
+.graphic-service-icon {
+
+    transform:
+        translateY(-4px)
+        rotate(-3deg);
+
+    border-color:
+        rgba(192,132,252,.30);
+
+    box-shadow:
+
+        0 15px 35px
+        rgba(168,85,247,.08),
+
+        inset 0 1px 0
+        rgba(255,255,255,.07);
+
+}
+
+
+.graphic-service-card:hover
+.graphic-service-tags span {
+
+    color:
+        #91a9bb;
+
+    border-color:
+        rgba(192,132,252,.12);
+
+    background:
+        rgba(168,85,247,.025);
+
+}
+
+
+/* ==========================================================
+   14 — FOOTNOTE
+========================================================== */
+
+.graphic-footnote {
+
+    position:
+        relative;
+
+    z-index:
+        5;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        22px;
+
+    margin-top:
+        68px;
+
+}
+
+
+.graphic-footnote > span {
+
+    flex:
+        1;
+
+    height:
+        1px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(148,163,184,.12)
+        );
+
+}
+
+
+.graphic-footnote > span:last-child {
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(148,163,184,.12),
+            transparent
+        );
+
+}
+
+
+.graphic-footnote p {
+
+    flex:
+        0 1 auto;
+
+    max-width:
+        620px;
+
+    margin:
+        0;
+
+    color:
+        #60768a;
+
+    font-size:
+        .61rem;
+
+    line-height:
+        1.75;
+
+    text-align:
+        center;
+
+}
+
+
+/* ==========================================================
+   15 — RESPONSIVE
+========================================================== */
+
+@media (max-width: 1200px) {
+
+    .graphic-services {
+
+        gap:
+            14px;
+
+    }
+
+    .graphic-service-card {
+
+        min-height:
+            310px;
+
+        padding:
+            21px;
+
+    }
+
+    .graphic-service-content {
+
+        padding-top:
+            38px;
+
+    }
+
+    .graphic-service-content h3 {
+
+        font-size:
+            1.15rem;
+
+    }
+
+    .graphic-service-content p {
+
+        font-size:
+            .71rem;
+
+    }
+
+}
+
+
+@media (max-width: 850px) {
+
+    .graphic-services {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            13px;
+
+    }
+
+    .graphic-service-card {
+
+        min-height:
+            260px;
+
+    }
+
+    .graphic-service-content {
+
+        padding-top:
+            30px;
+
+    }
+
+    .graphic-service-content p {
+
+        max-width:
+            650px;
+
+    }
+
+    .graphic-footnote {
+
+        margin-top:
+            52px;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .graphic-services {
+
+        gap:
+            11px;
+
+    }
+
+    .graphic-service-card {
+
+        min-height:
+            270px;
+
+        padding:
+            18px;
+
+        border-radius:
+            16px;
+
+    }
+
+    .graphic-service-number {
+
+        min-width:
+            32px;
+
+        height:
+            23px;
+
+        font-size:
+            .45rem;
+
+    }
+
+    .graphic-service-icon {
+
+        width:
+            42px;
+
+        height:
+            42px;
+
+        border-radius:
+            11px;
+
+    }
+
+    .graphic-service-icon i {
+
+        font-size:
+            .78rem;
+
+    }
+
+    .graphic-service-content {
+
+        padding-top:
+            29px;
+
+    }
+
+    .graphic-service-content h3 {
+
+        font-size:
+            1.08rem;
+
+    }
+
+    .graphic-service-content p {
+
+        margin-top:
+            11px;
+
+        font-size:
+            .70rem;
+
+        line-height:
+            1.7;
+
+    }
+
+    .graphic-service-tags {
+
+        gap:
+            5px;
+
+        margin-top:
+            20px;
+
+        padding-top:
+            13px;
+
+    }
+
+    .graphic-service-tags span {
+
+        min-height:
+            23px;
+
+        padding:
+            0 8px;
+
+        font-size:
+            .40rem;
+
+    }
+
+    .graphic-footnote {
+
+        gap:
+            12px;
+
+        margin-top:
+            40px;
+
+    }
+
+    .graphic-footnote p {
+
+        max-width:
+            300px;
+
+        font-size:
+            .51rem;
+
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .graphic-service-card {
+
+        min-height:
+            250px;
+
+        padding:
+            16px;
+
+    }
+
+    .graphic-service-content {
+
+        padding-top:
+            25px;
+
+    }
+
+    .graphic-service-content h3 {
+
+        font-size:
+            1rem;
+
+    }
+
+    .graphic-service-content p {
+
+        font-size:
+            .66rem;
+
+    }
+
+    .graphic-footnote > span {
+
+        display:
+            none;
+
+    }
+
+    .graphic-footnote {
+
+        justify-content:
+            center;
+
+    }
+
+}
+
+
+/* ==========================================================
+   16 — TOUCH
+========================================================== */
+
+@media (hover: none) {
+
+    .graphic-service-card:hover {
+
+        transform:
+            none;
+
+    }
+
+    .graphic-service-card:hover
+    .graphic-service-icon {
+
+        transform:
+            none;
+
+    }
+
+}
+
+
+/* ==========================================================
+   17 — REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .graphic-service-card,
+    .graphic-service-icon,
+    .graphic-service-tags span {
+
+        transition:
+            none;
+
+    }
+
+}

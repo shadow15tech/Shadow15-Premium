@@ -1,0 +1,751 @@
+/* ==========================================================
+   SHADOW15 — SEO / LOCAL SEO
+   01-BACKGROUND.CSS
+========================================================== */
+
+
+/* ==========================================================
+   01 — SECTION FOUNDATION
+========================================================== */
+
+.solution-seo {
+
+    position: relative;
+
+    isolation: isolate;
+
+    overflow: hidden;
+
+    background:
+        #020b14;
+
+}
+
+
+/* ==========================================================
+   02 — BACKGROUND LAYER
+========================================================== */
+
+.solution-seo .seo-bg {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+}
+
+
+/* ==========================================================
+   03 — TECH GRID
+========================================================== */
+
+.solution-seo .seo-grid {
+
+    position: absolute;
+
+    inset: -10%;
+
+    width: 120%;
+
+    height: 120%;
+
+    opacity: .28;
+
+    background-image:
+
+        linear-gradient(
+            rgba(148,163,184,.032) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(148,163,184,.032) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        56px 56px;
+
+    mask-image:
+
+        radial-gradient(
+            ellipse at center,
+            black 0%,
+            rgba(0,0,0,.82) 42%,
+            transparent 82%
+        );
+
+    -webkit-mask-image:
+
+        radial-gradient(
+            ellipse at center,
+            black 0%,
+            rgba(0,0,0,.82) 42%,
+            transparent 82%
+        );
+
+}
+
+
+/* ==========================================================
+   04 — AMBIENT GLOWS
+========================================================== */
+
+.solution-seo .seo-glow {
+
+    position: absolute;
+
+    width: 560px;
+
+    height: 560px;
+
+    border-radius: 50%;
+
+    filter:
+        blur(105px);
+
+    pointer-events: none;
+
+}
+
+
+/* ==========================================================
+   05 — LEFT SEARCH GLOW
+========================================================== */
+
+.solution-seo .seo-glow-left {
+
+    top: 7%;
+
+    left: -275px;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(34,211,238,.14) 0%,
+            rgba(59,130,246,.06) 40%,
+            transparent 72%
+        );
+
+    opacity: .70;
+
+}
+
+
+/* ==========================================================
+   06 — RIGHT LOCAL GLOW
+========================================================== */
+
+.solution-seo .seo-glow-right {
+
+    right: -275px;
+
+    bottom: 8%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(96,165,250,.12) 0%,
+            rgba(34,211,238,.045) 40%,
+            transparent 72%
+        );
+
+    opacity: .62;
+
+}
+
+
+/* ==========================================================
+   07 — CENTRAL SEARCH LIGHT
+========================================================== */
+
+.solution-seo .seo-bg::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 34%;
+
+    left: 50%;
+
+    width: 900px;
+
+    height: 900px;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(34,211,238,.045) 0%,
+            rgba(59,130,246,.022) 36%,
+            transparent 70%
+        );
+
+    filter:
+        blur(20px);
+
+}
+
+
+/* ==========================================================
+   08 — SEARCH ORBITS
+========================================================== */
+
+.solution-seo .seo-orbit {
+
+    position: absolute;
+
+    top: 35%;
+
+    left: 50%;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+}
+
+
+/* ==========================================================
+   09 — OUTER ORBIT
+========================================================== */
+
+.solution-seo .seo-orbit-one {
+
+    width: 940px;
+
+    height: 350px;
+
+    border:
+        1px solid
+        rgba(34,211,238,.05);
+
+    transform:
+        translate(-50%, -50%)
+        rotate(-16deg);
+
+}
+
+
+/* ==========================================================
+   10 — INNER ORBIT
+========================================================== */
+
+.solution-seo .seo-orbit-two {
+
+    width: 680px;
+
+    height: 255px;
+
+    border:
+        1px solid
+        rgba(96,165,250,.045);
+
+    transform:
+        translate(-50%, -50%)
+        rotate(17deg);
+
+}
+
+
+/* ==========================================================
+   11 — ORBIT POINTS
+========================================================== */
+
+.solution-seo .seo-orbit-one::before,
+.solution-seo .seo-orbit-two::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 6px;
+
+    height: 6px;
+
+    border-radius: 50%;
+
+}
+
+
+/* ==========================================================
+   12 — CYAN SEARCH POINT
+========================================================== */
+
+.solution-seo .seo-orbit-one::before {
+
+    top: 50%;
+
+    left: -3px;
+
+    transform:
+        translateY(-50%);
+
+    background:
+        #22d3ee;
+
+    box-shadow:
+
+        0 0 8px
+        rgba(34,211,238,.75),
+
+        0 0 24px
+        rgba(34,211,238,.30);
+
+}
+
+
+/* ==========================================================
+   13 — BLUE POINT
+========================================================== */
+
+.solution-seo .seo-orbit-two::before {
+
+    top: -3px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    background:
+        #60a5fa;
+
+    box-shadow:
+
+        0 0 8px
+        rgba(96,165,250,.75),
+
+        0 0 24px
+        rgba(96,165,250,.28);
+
+}
+
+
+/* ==========================================================
+   14 — VIGNETTE
+========================================================== */
+
+.solution-seo .seo-bg::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+
+        linear-gradient(
+            to bottom,
+            rgba(2,10,18,.08),
+            transparent 18%,
+            transparent 78%,
+            rgba(2,10,18,.58)
+        );
+
+}
+
+
+/* ==========================================================
+   15 — CONTENT STACK
+========================================================== */
+
+.solution-seo > .container {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+/* ==========================================================
+   16 — SHOWCASE ATMOSPHERE
+========================================================== */
+
+.solution-seo .seo-showcase {
+
+    position: relative;
+
+}
+
+
+.solution-seo .seo-showcase::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    width: 92%;
+
+    height: 72%;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            ellipse,
+            rgba(34,211,238,.035),
+            rgba(59,130,246,.015),
+            transparent 70%
+        );
+
+    filter:
+        blur(50px);
+
+    pointer-events: none;
+
+    z-index: -1;
+
+}
+
+
+/* ==========================================================
+   17 — ANALYTICS ATMOSPHERE
+========================================================== */
+
+.solution-seo .seo-chart::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    width: 300px;
+
+    height: 180px;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            ellipse,
+            rgba(34,211,238,.055),
+            transparent 70%
+        );
+
+    filter:
+        blur(28px);
+
+    pointer-events: none;
+
+}
+
+
+/* ==========================================================
+   18 — LOCAL SEO ATMOSPHERE
+========================================================== */
+
+.solution-seo .seo-local-panel::after {
+
+    content: "";
+
+    position: absolute;
+
+    right: -90px;
+
+    bottom: -100px;
+
+    width: 260px;
+
+    height: 260px;
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(96,165,250,.055),
+            transparent 70%
+        );
+
+    filter:
+        blur(22px);
+
+    pointer-events: none;
+
+}
+
+
+/* ==========================================================
+   19 — LARGE DESKTOP
+========================================================== */
+
+@media (min-width: 1440px) {
+
+    .solution-seo .seo-orbit-one {
+
+        width:
+            1040px;
+
+        height:
+            390px;
+
+    }
+
+    .solution-seo .seo-orbit-two {
+
+        width:
+            760px;
+
+        height:
+            285px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   20 — TABLET
+========================================================== */
+
+@media (max-width: 900px) {
+
+    .solution-seo .seo-grid {
+
+        background-size:
+            48px 48px;
+
+        opacity:
+            .25;
+
+    }
+
+    .solution-seo .seo-orbit-one {
+
+        width:
+            680px;
+
+        height:
+            260px;
+
+    }
+
+    .solution-seo .seo-orbit-two {
+
+        width:
+            510px;
+
+        height:
+            195px;
+
+    }
+
+    .solution-seo .seo-bg::before {
+
+        width:
+            680px;
+
+        height:
+            680px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   21 — MOBILE
+========================================================== */
+
+@media (max-width: 600px) {
+
+    .solution-seo .seo-grid {
+
+        inset:
+            -5%;
+
+        width:
+            110%;
+
+        height:
+            110%;
+
+        background-size:
+            38px 38px;
+
+        opacity:
+            .21;
+
+    }
+
+
+    .solution-seo .seo-glow {
+
+        width:
+            370px;
+
+        height:
+            370px;
+
+        filter:
+            blur(78px);
+
+    }
+
+
+    .solution-seo .seo-glow-left {
+
+        top:
+            10%;
+
+        left:
+            -275px;
+
+    }
+
+
+    .solution-seo .seo-glow-right {
+
+        right:
+            -275px;
+
+        bottom:
+            13%;
+
+    }
+
+
+    .solution-seo .seo-bg::before {
+
+        width:
+            500px;
+
+        height:
+            500px;
+
+        top:
+            28%;
+
+    }
+
+
+    .solution-seo .seo-orbit {
+
+        top:
+            31%;
+
+    }
+
+
+    .solution-seo .seo-orbit-one {
+
+        width:
+            460px;
+
+        height:
+            175px;
+
+    }
+
+
+    .solution-seo .seo-orbit-two {
+
+        width:
+            340px;
+
+        height:
+            130px;
+
+    }
+
+
+    .solution-seo .seo-chart::before {
+
+        width:
+            210px;
+
+        height:
+            140px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   22 — SMALL MOBILE
+========================================================== */
+
+@media (max-width: 420px) {
+
+    .solution-seo .seo-grid {
+
+        background-size:
+            32px 32px;
+
+    }
+
+    .solution-seo .seo-orbit-one {
+
+        width:
+            390px;
+
+        height:
+            145px;
+
+    }
+
+    .solution-seo .seo-orbit-two {
+
+        width:
+            285px;
+
+        height:
+            108px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   23 — REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .solution-seo .seo-orbit,
+    .solution-seo .seo-glow {
+
+        animation:
+            none !important;
+
+    }
+
+}   

@@ -1,0 +1,1321 @@
+/* ==========================================================
+   SHADOW15 — SEO / LOCAL SEO
+   05-ANIMATION.CSS
+========================================================== */
+
+
+/* ==========================================================
+   01 — INTRO REVEAL
+========================================================== */
+
+.seo-intro {
+
+    animation:
+        seoIntroReveal
+        1s
+        cubic-bezier(.22,1,.36,1)
+        both;
+
+}
+
+
+@keyframes seoIntroReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(32px);
+
+        filter:
+            blur(6px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+        filter:
+            blur(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   02 — LABEL
+========================================================== */
+
+.seo-label {
+
+    animation:
+        seoLabelReveal
+        .7s
+        cubic-bezier(.22,1,.36,1)
+        .08s
+        both;
+
+}
+
+
+@keyframes seoLabelReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateX(-18px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateX(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   03 — HEADING
+========================================================== */
+
+.seo-heading h2 {
+
+    animation:
+        seoHeadingReveal
+        1s
+        cubic-bezier(.22,1,.36,1)
+        .18s
+        both;
+
+}
+
+
+@keyframes seoHeadingReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(28px)
+            scale(.98);
+
+        filter:
+            blur(7px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+        filter:
+            blur(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   04 — GRADIENT FLOW
+========================================================== */
+
+.seo-heading h2 span {
+
+    animation:
+        seoGradientFlow
+        5s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes seoGradientFlow {
+
+    0%,
+    100% {
+
+        background-position:
+            0% 50%;
+
+    }
+
+    50% {
+
+        background-position:
+            100% 50%;
+
+    }
+
+}
+
+
+/* ==========================================================
+   05 — DESCRIPTION
+========================================================== */
+
+.seo-description {
+
+    animation:
+        seoDescriptionReveal
+        .8s
+        cubic-bezier(.22,1,.36,1)
+        .38s
+        both;
+
+}
+
+
+@keyframes seoDescriptionReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   06 — SHOWCASE
+========================================================== */
+
+.seo-showcase {
+
+    animation:
+        seoShowcaseReveal
+        1.05s
+        cubic-bezier(.22,1,.36,1)
+        .32s
+        both;
+
+}
+
+
+@keyframes seoShowcaseReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(42px)
+            scale(.975);
+
+        filter:
+            blur(7px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+        filter:
+            blur(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   07 — BACKGROUND GLOWS
+========================================================== */
+
+.seo-glow-left {
+
+    animation:
+        seoGlowLeft
+        8s
+        ease-in-out
+        infinite;
+
+}
+
+
+.seo-glow-right {
+
+    animation:
+        seoGlowRight
+        9s
+        ease-in-out
+        1s
+        infinite;
+
+}
+
+
+@keyframes seoGlowLeft {
+
+    0%,
+    100% {
+
+        transform:
+            translate3d(0,0,0)
+            scale(1);
+
+        opacity:
+            .50;
+
+    }
+
+    50% {
+
+        transform:
+            translate3d(35px,-25px,0)
+            scale(1.08);
+
+        opacity:
+            .82;
+
+    }
+
+}
+
+
+@keyframes seoGlowRight {
+
+    0%,
+    100% {
+
+        transform:
+            translate3d(0,0,0)
+            scale(1);
+
+        opacity:
+            .45;
+
+    }
+
+    50% {
+
+        transform:
+            translate3d(-30px,25px,0)
+            scale(1.10);
+
+        opacity:
+            .75;
+
+    }
+
+}
+
+
+/* ==========================================================
+   08 — ORBITS
+========================================================== */
+
+.seo-orbit-one {
+
+    animation:
+        seoOrbitOne
+        24s
+        linear
+        infinite;
+
+}
+
+
+.seo-orbit-two {
+
+    animation:
+        seoOrbitTwo
+        31s
+        linear
+        infinite;
+
+}
+
+
+@keyframes seoOrbitOne {
+
+    from {
+
+        transform:
+            translate(-50%,-50%)
+            rotate(-16deg);
+
+    }
+
+    to {
+
+        transform:
+            translate(-50%,-50%)
+            rotate(344deg);
+
+    }
+
+}
+
+
+@keyframes seoOrbitTwo {
+
+    from {
+
+        transform:
+            translate(-50%,-50%)
+            rotate(17deg);
+
+    }
+
+    to {
+
+        transform:
+            translate(-50%,-50%)
+            rotate(-343deg);
+
+    }
+
+}
+
+
+/* ==========================================================
+   09 — ORBIT POINT PULSE
+========================================================== */
+
+.seo-orbit-one::before,
+.seo-orbit-two::before {
+
+    animation:
+        seoOrbitPulse
+        2.5s
+        ease-in-out
+        infinite;
+
+}
+
+
+.seo-orbit-two::before {
+
+    animation-delay:
+        .8s;
+
+}
+
+
+@keyframes seoOrbitPulse {
+
+    0%,
+    100% {
+
+        opacity:
+            .40;
+
+    }
+
+    50% {
+
+        opacity:
+            1;
+
+        transform:
+            scale(1.5);
+
+    }
+
+}
+
+
+/* ==========================================================
+   10 — STATUS PULSE
+========================================================== */
+
+.seo-status-dot {
+
+    animation:
+        seoStatusPulse
+        1.8s
+        ease-out
+        infinite;
+
+}
+
+
+@keyframes seoStatusPulse {
+
+    0% {
+
+        box-shadow:
+            0 0 0 0
+            rgba(34,197,94,.45);
+
+    }
+
+    70% {
+
+        box-shadow:
+            0 0 0 9px
+            rgba(34,197,94,0);
+
+    }
+
+    100% {
+
+        box-shadow:
+            0 0 0 0
+            rgba(34,197,94,0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   11 — DASHBOARD ICON
+========================================================== */
+
+.seo-dashboard-icon {
+
+    animation:
+        seoDashboardFloat
+        5s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes seoDashboardFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-3px);
+
+    }
+
+}
+
+
+/* ==========================================================
+   12 — RANKING RING
+========================================================== */
+
+.seo-ranking-ring {
+
+    animation:
+        seoRankingRingReveal
+        1.2s
+        cubic-bezier(.22,1,.36,1)
+        .75s
+        both;
+
+}
+
+
+@keyframes seoRankingRingReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            scale(.72)
+            rotate(-35deg);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            scale(1)
+            rotate(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   13 — RANKING SCORE
+========================================================== */
+
+.seo-ranking-ring strong {
+
+    animation:
+        seoScoreReveal
+        .8s
+        cubic-bezier(.22,1,.36,1)
+        1.2s
+        both;
+
+}
+
+
+@keyframes seoScoreReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(10px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   14 — RANKING LIST
+========================================================== */
+
+.seo-ranking-list div {
+
+    opacity:
+        0;
+
+    animation:
+        seoRankingItem
+        .5s
+        cubic-bezier(.22,1,.36,1)
+        both;
+
+}
+
+
+.seo-ranking-list div:nth-child(1) {
+
+    animation-delay:
+        1.15s;
+
+}
+
+
+.seo-ranking-list div:nth-child(2) {
+
+    animation-delay:
+        1.28s;
+
+}
+
+
+.seo-ranking-list div:nth-child(3) {
+
+    animation-delay:
+        1.41s;
+
+}
+
+
+@keyframes seoRankingItem {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateX(-12px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateX(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   15 — ANALYTICS PANEL
+========================================================== */
+
+.seo-analytics-panel {
+
+    animation:
+        seoAnalyticsReveal
+        .9s
+        cubic-bezier(.22,1,.36,1)
+        .65s
+        both;
+
+}
+
+
+@keyframes seoAnalyticsReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(22px)
+            scale(.98);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+/* ==========================================================
+   16 — CHART AREA
+========================================================== */
+
+.seo-chart-area {
+
+    transform-origin:
+        left bottom;
+
+    animation:
+        seoChartReveal
+        1.5s
+        cubic-bezier(.22,1,.36,1)
+        1.15s
+        both;
+
+}
+
+
+@keyframes seoChartReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            scaleY(0);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            scaleY(1);
+
+    }
+
+}
+
+
+/* ==========================================================
+   17 — CHART POINTS
+========================================================== */
+
+.seo-chart-line span {
+
+    opacity:
+        0;
+
+    animation:
+        seoChartPoint
+        .45s
+        cubic-bezier(.22,1,.36,1)
+        both;
+
+}
+
+
+.seo-chart-line span:nth-child(1) {
+
+    animation-delay:
+        1.25s;
+
+}
+
+.seo-chart-line span:nth-child(2) {
+
+    animation-delay:
+        1.34s;
+
+}
+
+.seo-chart-line span:nth-child(3) {
+
+    animation-delay:
+        1.43s;
+
+}
+
+.seo-chart-line span:nth-child(4) {
+
+    animation-delay:
+        1.52s;
+
+}
+
+.seo-chart-line span:nth-child(5) {
+
+    animation-delay:
+        1.61s;
+
+}
+
+.seo-chart-line span:nth-child(6) {
+
+    animation-delay:
+        1.70s;
+
+}
+
+.seo-chart-line span:nth-child(7) {
+
+    animation-delay:
+        1.79s;
+
+}
+
+.seo-chart-line span:nth-child(8) {
+
+    animation-delay:
+        1.88s;
+
+}
+
+.seo-chart-line span:nth-child(9) {
+
+    animation-delay:
+        1.97s;
+
+}
+
+.seo-chart-line span:nth-child(10) {
+
+    animation-delay:
+        2.06s;
+
+}
+
+
+@keyframes seoChartPoint {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            scale(.3);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            scale(1);
+
+    }
+
+}
+
+
+/* ==========================================================
+   18 — LOCAL PANEL
+========================================================== */
+
+.seo-local-panel {
+
+    animation:
+        seoLocalReveal
+        .85s
+        cubic-bezier(.22,1,.36,1)
+        .82s
+        both;
+
+}
+
+
+@keyframes seoLocalReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateX(20px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateX(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   19 — LOCAL ICON
+========================================================== */
+
+.seo-local-icon {
+
+    animation:
+        seoLocalFloat
+        4.5s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes seoLocalFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-4px);
+
+    }
+
+}
+
+
+/* ==========================================================
+   20 — LOCAL ITEMS
+========================================================== */
+
+.seo-local-list div {
+
+    opacity:
+        0;
+
+    animation:
+        seoLocalItem
+        .5s
+        cubic-bezier(.22,1,.36,1)
+        both;
+
+}
+
+
+.seo-local-list div:nth-child(1) {
+
+    animation-delay:
+        1.20s;
+
+}
+
+.seo-local-list div:nth-child(2) {
+
+    animation-delay:
+        1.33s;
+
+}
+
+.seo-local-list div:nth-child(3) {
+
+    animation-delay:
+        1.46s;
+
+}
+
+
+@keyframes seoLocalItem {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateX(12px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateX(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   21 — SERVICE CARDS
+========================================================== */
+
+.seo-service-card {
+
+    opacity:
+        0;
+
+    animation:
+        seoServiceReveal
+        .8s
+        cubic-bezier(.22,1,.36,1)
+        both;
+
+}
+
+
+.seo-service-card:nth-child(1) {
+
+    animation-delay:
+        .15s;
+
+}
+
+
+.seo-service-card:nth-child(2) {
+
+    animation-delay:
+        .30s;
+
+}
+
+
+.seo-service-card:nth-child(3) {
+
+    animation-delay:
+        .45s;
+
+}
+
+
+@keyframes seoServiceReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(30px)
+            scale(.975);
+
+        filter:
+            blur(4px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+        filter:
+            blur(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   22 — SERVICE ICON FLOAT
+========================================================== */
+
+.seo-service-icon {
+
+    animation:
+        seoIconFloat
+        5s
+        ease-in-out
+        infinite;
+
+}
+
+
+.seo-service-card:nth-child(2)
+.seo-service-icon {
+
+    animation-delay:
+        .8s;
+
+}
+
+
+.seo-service-card:nth-child(3)
+.seo-service-icon {
+
+    animation-delay:
+        1.6s;
+
+}
+
+
+@keyframes seoIconFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-3px);
+
+    }
+
+}
+
+
+/* ==========================================================
+   23 — CARD AMBIENT LIGHT
+========================================================== */
+
+.seo-service-card::before {
+
+    animation:
+        seoCardAmbient
+        6s
+        ease-in-out
+        infinite;
+
+}
+
+
+.seo-service-card:nth-child(2)::before {
+
+    animation-delay:
+        1s;
+
+}
+
+
+.seo-service-card:nth-child(3)::before {
+
+    animation-delay:
+        2s;
+
+}
+
+
+@keyframes seoCardAmbient {
+
+    0%,
+    100% {
+
+        opacity:
+            .30;
+
+    }
+
+    50% {
+
+        opacity:
+            .82;
+
+    }
+
+}
+
+
+/* ==========================================================
+   24 — FOOTNOTE
+========================================================== */
+
+.seo-footnote {
+
+    animation:
+        seoFootnoteReveal
+        .8s
+        cubic-bezier(.22,1,.36,1)
+        .9s
+        both;
+
+}
+
+
+@keyframes seoFootnoteReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(18px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   25 — GPU OPTIMIZATION
+========================================================== */
+
+.seo-showcase,
+.seo-ranking-ring,
+.seo-chart-area,
+.seo-service-card,
+.seo-service-icon,
+.seo-orbit,
+.seo-glow {
+
+    will-change:
+        transform;
+
+}
+
+
+.seo-showcase,
+.seo-service-card,
+.seo-orbit {
+
+    backface-visibility:
+        hidden;
+
+    -webkit-backface-visibility:
+        hidden;
+
+}
+
+
+/* ==========================================================
+   26 — TOUCH DEVICES
+========================================================== */
+
+@media (hover: none) {
+
+    .seo-service-card:hover {
+
+        transform:
+            none;
+
+    }
+
+    .seo-service-card:hover
+    .seo-service-icon {
+
+        transform:
+            none;
+
+    }
+
+}
+
+
+/* ==========================================================
+   27 — REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .solution-seo *,
+    .solution-seo *::before,
+    .solution-seo *::after {
+
+        animation:
+            none !important;
+
+        transition:
+            none !important;
+
+    }
+
+}

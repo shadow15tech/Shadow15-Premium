@@ -1,0 +1,1686 @@
+/* ==========================================================
+   SHADOW15 — WEBSITE MAINTENANCE
+   03-WORKSPACE.CSS
+========================================================== */
+
+
+/* ==========================================================
+   01 — SHOWCASE
+========================================================== */
+
+.maintenance-showcase {
+
+    position: relative;
+
+    width: 100%;
+
+    padding: 28px;
+
+    border:
+        1px solid
+        rgba(148,163,184,.11);
+
+    border-radius: 26px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(16,31,51,.94),
+            rgba(4,14,25,.98)
+        );
+
+    box-shadow:
+
+        0 40px 100px
+        rgba(0,0,0,.30),
+
+        inset 0 1px 0
+        rgba(255,255,255,.045);
+
+    backdrop-filter:
+        blur(22px);
+
+    -webkit-backdrop-filter:
+        blur(22px);
+
+}
+
+
+/* ==========================================================
+   02 — TOP LIGHT
+========================================================== */
+
+.maintenance-showcase::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 12%;
+
+    width: 76%;
+
+    height: 1px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(34,211,238,.22),
+            rgba(96,165,250,.15),
+            transparent
+        );
+
+}
+
+
+/* ==========================================================
+   03 — DASHBOARD HEADER
+========================================================== */
+
+.maintenance-dashboard-top {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    padding-bottom: 22px;
+
+    border-bottom:
+        1px solid
+        rgba(148,163,184,.075);
+
+}
+
+
+/* ==========================================================
+   04 — BRAND
+========================================================== */
+
+.maintenance-dashboard-brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+}
+
+
+.maintenance-dashboard-icon {
+
+    display: grid;
+
+    place-items: center;
+
+    width: 43px;
+
+    height: 43px;
+
+    border:
+        1px solid
+        rgba(34,211,238,.17);
+
+    border-radius: 12px;
+
+    color: #22d3ee;
+
+    background:
+        rgba(34,211,238,.035);
+
+    box-shadow:
+
+        inset 0 1px 0
+        rgba(255,255,255,.04),
+
+        0 12px 30px
+        rgba(0,0,0,.18);
+
+}
+
+
+.maintenance-dashboard-brand span {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #5d7184;
+
+    font-size: .40rem;
+
+    font-weight: 800;
+
+    letter-spacing: .13em;
+
+}
+
+
+.maintenance-dashboard-brand strong {
+
+    color: #dce9f1;
+
+    font-size: .82rem;
+
+    font-weight: 750;
+
+    letter-spacing: -.02em;
+
+}
+
+
+/* ==========================================================
+   05 — SYSTEM STATUS
+========================================================== */
+
+.maintenance-system-status {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 8px 12px;
+
+    border:
+        1px solid
+        rgba(34,197,94,.13);
+
+    border-radius: 999px;
+
+    color: #7895a5;
+
+    background:
+        rgba(34,197,94,.025);
+
+    font-size: .43rem;
+
+    font-weight: 750;
+
+}
+
+
+.maintenance-status-dot {
+
+    width: 6px;
+
+    height: 6px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background:
+        #22c55e;
+
+    box-shadow:
+        0 0 10px
+        rgba(34,197,94,.55);
+
+}
+
+
+/* ==========================================================
+   06 — WORKSPACE
+========================================================== */
+
+.maintenance-workspace {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(185px,.72fr)
+        minmax(340px,1.8fr)
+        minmax(185px,.72fr);
+
+    gap: 12px;
+
+    margin-top: 14px;
+
+}
+
+
+/* ==========================================================
+   07 — SHARED PANELS
+========================================================== */
+
+.maintenance-health-panel,
+.maintenance-monitor-panel,
+.maintenance-security-panel {
+
+    position: relative;
+
+    min-width: 0;
+
+    min-height: 430px;
+
+    overflow: hidden;
+
+    padding: 18px;
+
+    border:
+        1px solid
+        rgba(148,163,184,.075);
+
+    border-radius: 16px;
+
+    background:
+        rgba(148,163,184,.018);
+
+}
+
+
+/* ==========================================================
+   08 — PANEL HEADING
+========================================================== */
+
+.maintenance-panel-heading {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+.maintenance-panel-heading span {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #526a7d;
+
+    font-size: .36rem;
+
+    font-weight: 800;
+
+    letter-spacing: .10em;
+
+}
+
+
+.maintenance-panel-heading strong {
+
+    color: #cfdee7;
+
+    font-size: .68rem;
+
+    font-weight: 750;
+
+}
+
+
+/* ==========================================================
+   09 — HEALTH SCORE
+========================================================== */
+
+.maintenance-health-score {
+
+    display: grid;
+
+    place-items: center;
+
+    margin-top: 30px;
+
+}
+
+
+.maintenance-health-ring {
+
+    position: relative;
+
+    display: grid;
+
+    place-items: center;
+
+    width: 155px;
+
+    height: 155px;
+
+    border-radius: 50%;
+
+    background:
+
+        conic-gradient(
+            #22d3ee 0deg,
+            #60a5fa 350deg,
+            rgba(148,163,184,.08) 350deg,
+            rgba(148,163,184,.08) 360deg
+        );
+
+    box-shadow:
+
+        0 0 40px
+        rgba(34,211,238,.07),
+
+        inset 0 0 30px
+        rgba(0,0,0,.25);
+
+}
+
+
+.maintenance-health-ring::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 9px;
+
+    border-radius: 50%;
+
+    background:
+        #071522;
+
+    box-shadow:
+        inset 0 0 25px
+        rgba(0,0,0,.35);
+
+}
+
+
+.maintenance-health-ring > div {
+
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+}
+
+
+.maintenance-health-ring strong {
+
+    display: block;
+
+    color: #eff8fa;
+
+    font-size: 2.65rem;
+
+    font-weight: 800;
+
+    line-height: .85;
+
+    letter-spacing: -.07em;
+
+}
+
+
+.maintenance-health-ring span {
+
+    display: block;
+
+    margin-top: 8px;
+
+    color: #5e7a8b;
+
+    font-size: .38rem;
+
+    font-weight: 800;
+
+    letter-spacing: .12em;
+
+}
+
+
+/* ==========================================================
+   10 — HEALTH LIST
+========================================================== */
+
+.maintenance-health-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-top: 30px;
+
+}
+
+
+.maintenance-health-list div {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    padding: 10px;
+
+    border:
+        1px solid
+        rgba(148,163,184,.055);
+
+    border-radius: 8px;
+
+    background:
+        rgba(148,163,184,.018);
+
+}
+
+
+.maintenance-health-list span {
+
+    color: #62788a;
+
+    font-size: .34rem;
+
+}
+
+
+.maintenance-health-list strong {
+
+    color: #22d3ee;
+
+    font-size: .39rem;
+
+}
+
+
+/* ==========================================================
+   11 — MONITOR PANEL
+========================================================== */
+
+.maintenance-monitor-panel {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+/* ==========================================================
+   12 — MONITOR HEADER
+========================================================== */
+
+.maintenance-monitor-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding-bottom: 13px;
+
+    border-bottom:
+        1px solid
+        rgba(148,163,184,.06);
+
+}
+
+
+.maintenance-monitor-header span {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #526a7d;
+
+    font-size: .33rem;
+
+    font-weight: 800;
+
+    letter-spacing: .10em;
+
+}
+
+
+.maintenance-monitor-header strong {
+
+    color: #cfdee7;
+
+    font-size: .65rem;
+
+}
+
+
+/* ==========================================================
+   13 — LIVE
+========================================================== */
+
+.maintenance-live {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 6px 9px;
+
+    border:
+        1px solid
+        rgba(34,211,238,.10);
+
+    border-radius: 7px;
+
+    color: #5f8897;
+
+    background:
+        rgba(34,211,238,.02);
+
+    font-size: .34rem;
+
+    font-weight: 800;
+
+}
+
+
+.maintenance-live span {
+
+    width: 5px;
+
+    height: 5px;
+
+    margin: 0;
+
+    border-radius: 50%;
+
+    background:
+        #22d3ee;
+
+    box-shadow:
+        0 0 8px
+        rgba(34,211,238,.65);
+
+}
+
+
+/* ==========================================================
+   14 — CHART
+========================================================== */
+
+.maintenance-chart {
+
+    position: relative;
+
+    flex: 1;
+
+    min-height: 300px;
+
+    margin-top: 15px;
+
+    overflow: hidden;
+
+}
+
+
+/* ==========================================================
+   15 — CHART GRID
+========================================================== */
+
+.maintenance-chart-grid {
+
+    position: absolute;
+
+    inset: 0 0 0 30px;
+
+    background-image:
+
+        linear-gradient(
+            rgba(148,163,184,.055) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(148,163,184,.035) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        100% 25%,
+        10% 100%;
+
+}
+
+
+/* ==========================================================
+   16 — CHART Y AXIS
+========================================================== */
+
+.maintenance-chart-y {
+
+    position: absolute;
+
+    top: 0;
+
+    bottom: 0;
+
+    left: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    width: 25px;
+
+}
+
+
+.maintenance-chart-y span {
+
+    color:
+        #43596a;
+
+    font-size:
+        .30rem;
+
+}
+
+
+/* ==========================================================
+   17 — CHART LINE
+========================================================== */
+
+.maintenance-chart-line {
+
+    position: absolute;
+
+    top: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    left: 30px;
+
+}
+
+
+/* ==========================================================
+   18 — CHART POINTS
+========================================================== */
+
+.maintenance-chart-line span {
+
+    position: absolute;
+
+    width: 7px;
+
+    height: 7px;
+
+    border:
+        2px solid
+        #071522;
+
+    border-radius: 50%;
+
+    background:
+        #22d3ee;
+
+    box-shadow:
+        0 0 10px
+        rgba(34,211,238,.55);
+
+}
+
+
+.maintenance-chart-line span:nth-child(1) {
+
+    left: 2%;
+
+    top: 68%;
+
+}
+
+
+.maintenance-chart-line span:nth-child(2) {
+
+    left: 13%;
+
+    top: 56%;
+
+}
+
+
+.maintenance-chart-line span:nth-child(3) {
+
+    left: 24%;
+
+    top: 63%;
+
+}
+
+
+.maintenance-chart-line span:nth-child(4) {
+
+    left: 35%;
+
+    top: 40%;
+
+}
+
+
+.maintenance-chart-line span:nth-child(5) {
+
+    left: 46%;
+
+    top: 47%;
+
+}
+
+
+.maintenance-chart-line span:nth-child(6) {
+
+    left: 57%;
+
+    top: 31%;
+
+}
+
+
+.maintenance-chart-line span:nth-child(7) {
+
+    left: 68%;
+
+    top: 37%;
+
+}
+
+
+.maintenance-chart-line span:nth-child(8) {
+
+    left: 79%;
+
+    top: 21%;
+
+}
+
+
+.maintenance-chart-line span:nth-child(9) {
+
+    left: 89%;
+
+    top: 28%;
+
+}
+
+
+.maintenance-chart-line span:nth-child(10) {
+
+    right: 1%;
+
+    top: 14%;
+
+}
+
+
+/* ==========================================================
+   19 — CHART CONNECTING LINE
+========================================================== */
+
+.maintenance-chart-area {
+
+    position: absolute;
+
+    left: 30px;
+
+    right: 0;
+
+    bottom: 0;
+
+    height: 100%;
+
+    clip-path:
+        polygon(
+            0 68%,
+            11% 56%,
+            22% 63%,
+            33% 40%,
+            44% 47%,
+            55% 31%,
+            66% 37%,
+            77% 21%,
+            87% 28%,
+            100% 14%,
+            100% 100%,
+            0 100%
+        );
+
+    background:
+
+        linear-gradient(
+            180deg,
+            rgba(34,211,238,.10),
+            rgba(34,211,238,.015)
+        );
+
+}
+
+
+/* ==========================================================
+   20 — CHART FOOTER
+========================================================== */
+
+.maintenance-chart-footer {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 8px;
+
+    padding:
+        10px 0 0 30px;
+
+}
+
+
+.maintenance-chart-footer span {
+
+    color:
+        #43596a;
+
+    font-size:
+        .30rem;
+
+}
+
+
+/* ==========================================================
+   21 — SECURITY PANEL
+========================================================== */
+
+.maintenance-security-panel {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+}
+
+
+/* ==========================================================
+   22 — SECURITY STATUS
+========================================================== */
+
+.maintenance-security-status {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        12px;
+
+    margin-top:
+        30px;
+
+    padding:
+        14px;
+
+    border:
+        1px solid
+        rgba(34,197,94,.09);
+
+    border-radius:
+        12px;
+
+    background:
+        rgba(34,197,94,.018);
+
+}
+
+
+.maintenance-security-icon {
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    width:
+        42px;
+
+    height:
+        42px;
+
+    flex-shrink:
+        0;
+
+    border:
+        1px solid
+        rgba(34,197,94,.13);
+
+    border-radius:
+        11px;
+
+    color:
+        #4ade80;
+
+    background:
+        rgba(34,197,94,.035);
+
+}
+
+
+.maintenance-security-icon i {
+
+    font-size:
+        .78rem;
+
+}
+
+
+.maintenance-security-status strong {
+
+    display:
+        block;
+
+    color:
+        #cfe7d8;
+
+    font-size:
+        .58rem;
+
+}
+
+
+.maintenance-security-status span {
+
+    display:
+        block;
+
+    margin-top:
+        5px;
+
+    color:
+        #587266;
+
+    font-size:
+        .33rem;
+
+}
+
+
+/* ==========================================================
+   23 — SECURITY LIST
+========================================================== */
+
+.maintenance-security-list {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        8px;
+
+    margin-top:
+        auto;
+
+}
+
+
+.maintenance-security-list div {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        10px;
+
+    padding:
+        10px;
+
+    border:
+        1px solid
+        rgba(148,163,184,.055);
+
+    border-radius:
+        8px;
+
+    background:
+        rgba(148,163,184,.018);
+
+}
+
+
+.maintenance-security-list span {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        7px;
+
+    color:
+        #62788a;
+
+    font-size:
+        .34rem;
+
+}
+
+
+.maintenance-security-list i {
+
+    color:
+        #22d3ee;
+
+    font-size:
+        .42rem;
+
+}
+
+
+.maintenance-security-list strong {
+
+    color:
+        #71c78b;
+
+    font-size:
+        .35rem;
+
+}
+
+
+/* ==========================================================
+   24 — PIPELINE
+========================================================== */
+
+.maintenance-pipeline {
+
+    margin-top:
+        12px;
+
+    padding:
+        18px;
+
+    border:
+        1px solid
+        rgba(148,163,184,.075);
+
+    border-radius:
+        16px;
+
+    background:
+        rgba(148,163,184,.018);
+
+}
+
+
+/* ==========================================================
+   25 — PIPELINE HEADER
+========================================================== */
+
+.maintenance-pipeline-heading {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        20px;
+
+    padding-bottom:
+        15px;
+
+    border-bottom:
+        1px solid
+        rgba(148,163,184,.06);
+
+}
+
+
+.maintenance-pipeline-heading div span {
+
+    display:
+        block;
+
+    margin-bottom:
+        5px;
+
+    color:
+        #526a7d;
+
+    font-size:
+        .36rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .10em;
+
+}
+
+
+.maintenance-pipeline-heading div strong {
+
+    color:
+        #cfdee7;
+
+    font-size:
+        .68rem;
+
+}
+
+
+.maintenance-pipeline-status {
+
+    padding:
+        6px 9px;
+
+    border:
+        1px solid
+        rgba(34,211,238,.10);
+
+    border-radius:
+        7px;
+
+    color:
+        #5f8897;
+
+    background:
+        rgba(34,211,238,.02);
+
+    font-size:
+        .37rem;
+
+    font-weight:
+        750;
+
+}
+
+
+/* ==========================================================
+   26 — PIPELINE FLOW
+========================================================== */
+
+.maintenance-pipeline-flow {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    margin-top:
+        16px;
+
+}
+
+
+/* ==========================================================
+   27 — PIPELINE STEP
+========================================================== */
+
+.maintenance-pipeline-step {
+
+    position:
+        relative;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        auto 1fr;
+
+    grid-template-rows:
+        auto auto;
+
+    column-gap:
+        9px;
+
+    flex:
+        1;
+
+    min-width:
+        0;
+
+}
+
+
+.maintenance-step-number {
+
+    position:
+        absolute;
+
+    top:
+        -2px;
+
+    right:
+        0;
+
+    color:
+        #3e5668;
+
+    font-size:
+        .30rem;
+
+    font-weight:
+        800;
+
+}
+
+
+.maintenance-pipeline-step > i {
+
+    grid-row:
+        span 2;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    width:
+        31px;
+
+    height:
+        31px;
+
+    border:
+        1px solid
+        rgba(34,211,238,.11);
+
+    border-radius:
+        8px;
+
+    color:
+        #22d3ee;
+
+    background:
+        rgba(34,211,238,.025);
+
+    font-size:
+        .46rem;
+
+}
+
+
+.maintenance-pipeline-step strong {
+
+    color:
+        #aebfcb;
+
+    font-size:
+        .42rem;
+
+    align-self:
+        end;
+
+}
+
+
+.maintenance-pipeline-step small {
+
+    margin-top:
+        4px;
+
+    color:
+        #536a7c;
+
+    font-size:
+        .31rem;
+
+}
+
+
+/* ==========================================================
+   28 — PIPELINE LINE
+========================================================== */
+
+.maintenance-pipeline-line {
+
+    flex:
+        0 0 55px;
+
+    height:
+        1px;
+
+    margin:
+        0 12px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(34,211,238,.18),
+            rgba(96,165,250,.10)
+        );
+
+}
+
+
+/* ==========================================================
+   29 — TABLET
+========================================================== */
+
+@media (max-width: 1050px) {
+
+    .maintenance-workspace {
+
+        grid-template-columns:
+            minmax(170px,.65fr)
+            minmax(300px,1.7fr)
+            minmax(170px,.65fr);
+
+    }
+
+    .maintenance-health-panel,
+    .maintenance-monitor-panel,
+    .maintenance-security-panel {
+
+        padding:
+            15px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   30 — SMALL TABLET
+========================================================== */
+
+@media (max-width: 850px) {
+
+    .maintenance-workspace {
+
+        grid-template-columns:
+            1fr 1.4fr;
+
+    }
+
+    .maintenance-security-panel {
+
+        grid-column:
+            1 / -1;
+
+        min-height:
+            270px;
+
+    }
+
+    .maintenance-security-list {
+
+        display:
+            grid;
+
+        grid-template-columns:
+            repeat(3,1fr);
+
+    }
+
+    .maintenance-security-status {
+
+        margin-top:
+            20px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   31 — MOBILE
+========================================================== */
+
+@media (max-width: 600px) {
+
+    .maintenance-showcase {
+
+        padding:
+            14px;
+
+        border-radius:
+            18px;
+
+    }
+
+    .maintenance-dashboard-top {
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+        gap:
+            14px;
+
+    }
+
+    .maintenance-dashboard-icon {
+
+        width:
+            38px;
+
+        height:
+            38px;
+
+    }
+
+    .maintenance-dashboard-brand strong {
+
+        font-size:
+            .72rem;
+
+    }
+
+    .maintenance-workspace {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            8px;
+
+    }
+
+    .maintenance-health-panel,
+    .maintenance-monitor-panel,
+    .maintenance-security-panel {
+
+        min-height:
+            auto;
+
+        padding:
+            14px;
+
+        border-radius:
+            13px;
+
+    }
+
+    .maintenance-health-panel {
+
+        min-height:
+            350px;
+
+    }
+
+    .maintenance-monitor-panel {
+
+        min-height:
+            390px;
+
+    }
+
+    .maintenance-security-panel {
+
+        min-height:
+            340px;
+
+    }
+
+    .maintenance-chart {
+
+        min-height:
+            285px;
+
+    }
+
+    .maintenance-security-list {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+    .maintenance-pipeline {
+
+        padding:
+            14px;
+
+    }
+
+    .maintenance-pipeline-heading {
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+        gap:
+            10px;
+
+    }
+
+    .maintenance-pipeline-flow {
+
+        flex-direction:
+            column;
+
+        align-items:
+            stretch;
+
+        gap:
+            10px;
+
+    }
+
+    .maintenance-pipeline-step {
+
+        flex:
+            none;
+
+        min-height:
+            42px;
+
+    }
+
+    .maintenance-pipeline-line {
+
+        flex:
+            none;
+
+        width:
+            1px;
+
+        height:
+            15px;
+
+        margin:
+            -2px 0 -2px 15px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   32 — SMALL MOBILE
+========================================================== */
+
+@media (max-width: 420px) {
+
+    .maintenance-showcase {
+
+        padding:
+            11px;
+
+    }
+
+    .maintenance-monitor-header {
+
+        align-items:
+            flex-start;
+
+    }
+
+    .maintenance-chart {
+
+        min-height:
+            250px;
+
+    }
+
+    .maintenance-health-ring {
+
+        width:
+            135px;
+
+        height:
+            135px;
+
+    }
+
+    .maintenance-health-ring strong {
+
+        font-size:
+            2.25rem;
+
+    }
+
+    .maintenance-chart-footer span {
+
+        font-size:
+            .27rem;
+
+    }
+
+}

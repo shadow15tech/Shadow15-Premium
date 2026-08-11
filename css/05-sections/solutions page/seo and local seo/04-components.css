@@ -1,0 +1,1764 @@
+/* ==========================================================
+   SHADOW15 — SEO / LOCAL SEO
+   04-COMPONENTS.CSS
+========================================================== */
+
+
+/* ==========================================================
+   01 — SEO SERVICES
+========================================================== */
+
+.seo-services {
+
+    position:
+        relative;
+
+    z-index:
+        5;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap:
+        18px;
+
+    margin-top:
+        22px;
+
+}
+
+
+/* ==========================================================
+   02 — SERVICE CARD
+========================================================== */
+
+.seo-service-card {
+
+    position:
+        relative;
+
+    min-height:
+        320px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    overflow:
+        hidden;
+
+    padding:
+        25px;
+
+    border:
+        1px solid
+        rgba(148,163,184,.10);
+
+    border-radius:
+        20px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(16,33,52,.88),
+            rgba(5,16,28,.97)
+        );
+
+    box-shadow:
+
+        0 25px 60px
+        rgba(0,0,0,.20),
+
+        inset 0 1px 0
+        rgba(255,255,255,.035);
+
+    backdrop-filter:
+        blur(18px);
+
+    -webkit-backdrop-filter:
+        blur(18px);
+
+    transition:
+
+        transform .5s
+        cubic-bezier(.22,1,.36,1),
+
+        border-color .4s ease,
+
+        box-shadow .5s ease;
+
+}
+
+
+/* ==========================================================
+   03 — CARD AMBIENT LIGHT
+========================================================== */
+
+.seo-service-card::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        -120px;
+
+    right:
+        -100px;
+
+    width:
+        270px;
+
+    height:
+        270px;
+
+    border-radius:
+        50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(34,211,238,.12),
+            rgba(34,211,238,.025) 45%,
+            transparent 72%
+        );
+
+    filter:
+        blur(16px);
+
+    opacity:
+        .55;
+
+    pointer-events:
+        none;
+
+    transition:
+
+        transform .65s
+        cubic-bezier(.22,1,.36,1),
+
+        opacity .5s ease;
+
+}
+
+
+/* ==========================================================
+   04 — CARD GRID
+========================================================== */
+
+.seo-service-card::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    pointer-events:
+        none;
+
+    opacity:
+        .17;
+
+    background-image:
+
+        linear-gradient(
+            rgba(148,163,184,.025) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(148,163,184,.025) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        26px 26px;
+
+    mask-image:
+
+        linear-gradient(
+            145deg,
+            black,
+            transparent 72%
+        );
+
+    -webkit-mask-image:
+
+        linear-gradient(
+            145deg,
+            black,
+            transparent 72%
+        );
+
+}
+
+
+/* ==========================================================
+   05 — SERVICE TOP
+========================================================== */
+
+.seo-service-top {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+}
+
+
+/* ==========================================================
+   06 — SERVICE NUMBER
+========================================================== */
+
+.seo-service-number {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    min-width:
+        37px;
+
+    height:
+        26px;
+
+    padding:
+        0 9px;
+
+    border:
+        1px solid
+        rgba(148,163,184,.11);
+
+    border-radius:
+        999px;
+
+    color:
+        #71879a;
+
+    background:
+        rgba(148,163,184,.025);
+
+    font-size:
+        .50rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .11em;
+
+}
+
+
+/* ==========================================================
+   07 — SERVICE ICON
+========================================================== */
+
+.seo-service-icon {
+
+    position:
+        relative;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    width:
+        50px;
+
+    height:
+        50px;
+
+    border:
+        1px solid
+        rgba(34,211,238,.17);
+
+    border-radius:
+        14px;
+
+    color:
+        #22d3ee;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(34,211,238,.08),
+            rgba(34,211,238,.012)
+        );
+
+    box-shadow:
+
+        inset 0 1px 0
+        rgba(255,255,255,.05),
+
+        0 14px 30px
+        rgba(0,0,0,.18);
+
+    transition:
+
+        transform .45s
+        cubic-bezier(.22,1,.36,1),
+
+        border-color .35s ease,
+
+        box-shadow .35s ease;
+
+}
+
+
+.seo-service-icon::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        6px;
+
+    border:
+        1px solid
+        rgba(34,211,238,.055);
+
+    border-radius:
+        9px;
+
+}
+
+
+.seo-service-icon i {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    font-size:
+        .95rem;
+
+    filter:
+
+        drop-shadow(
+            0 0 10px
+            rgba(34,211,238,.25)
+        );
+
+}
+
+
+/* ==========================================================
+   08 — SERVICE CONTENT
+========================================================== */
+
+.seo-service-content {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    flex:
+        1;
+
+    padding-top:
+        45px;
+
+}
+
+
+.seo-service-content h3 {
+
+    margin:
+        0;
+
+    color:
+        #e9f1f6;
+
+    font-size:
+        1.28rem;
+
+    font-weight:
+        750;
+
+    line-height:
+        1.15;
+
+    letter-spacing:
+        -.035em;
+
+}
+
+
+.seo-service-content p {
+
+    max-width:
+        370px;
+
+    margin:
+        14px 0 0;
+
+    color:
+        #8094a7;
+
+    font-size:
+        .76rem;
+
+    line-height:
+        1.75;
+
+}
+
+
+/* ==========================================================
+   09 — TAGS
+========================================================== */
+
+.seo-service-tags {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        6px;
+
+    margin-top:
+        24px;
+
+    padding-top:
+        16px;
+
+    border-top:
+        1px solid
+        rgba(148,163,184,.08);
+
+}
+
+
+.seo-service-tags span {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    min-height:
+        25px;
+
+    padding:
+        0 9px;
+
+    border:
+        1px solid
+        rgba(148,163,184,.09);
+
+    border-radius:
+        7px;
+
+    color:
+        #667d90;
+
+    background:
+        rgba(148,163,184,.025);
+
+    font-size:
+        .43rem;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        .04em;
+
+    transition:
+
+        color .3s ease,
+
+        border-color .3s ease,
+
+        background .3s ease;
+
+}
+
+
+/* ==========================================================
+   10 — CARD 02: LOCAL SEO
+========================================================== */
+
+.seo-service-card:nth-child(2)::before {
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(96,165,250,.13),
+            rgba(96,165,250,.025) 45%,
+            transparent 72%
+        );
+
+}
+
+
+.seo-service-card:nth-child(2)
+.seo-service-icon {
+
+    color:
+        #60a5fa;
+
+    border-color:
+        rgba(96,165,250,.17);
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(96,165,250,.08),
+            rgba(96,165,250,.012)
+        );
+
+}
+
+
+.seo-service-card:nth-child(2)
+.seo-service-icon::before {
+
+    border-color:
+        rgba(96,165,250,.05);
+
+}
+
+
+/* ==========================================================
+   11 — CARD 03: ANALYTICS
+========================================================== */
+
+.seo-service-card:nth-child(3)::before {
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(168,85,247,.12),
+            rgba(96,165,250,.025) 45%,
+            transparent 72%
+        );
+
+}
+
+
+.seo-service-card:nth-child(3)
+.seo-service-icon {
+
+    color:
+        #a78bfa;
+
+    border-color:
+        rgba(167,139,250,.17);
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(167,139,250,.08),
+            rgba(167,139,250,.012)
+        );
+
+}
+
+
+.seo-service-card:nth-child(3)
+.seo-service-icon::before {
+
+    border-color:
+        rgba(167,139,250,.05);
+
+}
+
+
+/* ==========================================================
+   12 — HOVER
+========================================================== */
+
+.seo-service-card:hover {
+
+    transform:
+        translateY(-10px);
+
+    border-color:
+        rgba(34,211,238,.19);
+
+    box-shadow:
+
+        0 35px 75px
+        rgba(0,0,0,.32),
+
+        0 0 45px
+        rgba(34,211,238,.035),
+
+        inset 0 1px 0
+        rgba(255,255,255,.055);
+
+}
+
+
+.seo-service-card:hover::before {
+
+    transform:
+        translate(-35px,35px)
+        scale(1.25);
+
+    opacity:
+        1;
+
+}
+
+
+.seo-service-card:hover
+.seo-service-icon {
+
+    transform:
+        translateY(-4px)
+        rotate(-3deg);
+
+    border-color:
+        rgba(34,211,238,.28);
+
+    box-shadow:
+
+        0 15px 35px
+        rgba(34,211,238,.07),
+
+        inset 0 1px 0
+        rgba(255,255,255,.07);
+
+}
+
+
+.seo-service-card:hover
+.seo-service-tags span {
+
+    color:
+        #91a9bb;
+
+    border-color:
+        rgba(34,211,238,.11);
+
+    background:
+        rgba(34,211,238,.02);
+
+}
+
+
+/* ==========================================================
+   13 — FOOTNOTE
+========================================================== */
+
+.seo-footnote {
+
+    position:
+        relative;
+
+    z-index:
+        5;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        22px;
+
+    margin-top:
+        68px;
+
+}
+
+
+.seo-footnote > span {
+
+    flex:
+        1;
+
+    height:
+        1px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(148,163,184,.12)
+        );
+
+}
+
+
+.seo-footnote > span:last-child {
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(148,163,184,.12),
+            transparent
+        );
+
+}
+
+
+.seo-footnote p {
+
+    flex:
+        0 1 auto;
+
+    max-width:
+        620px;
+
+    margin:
+        0;
+
+    color:
+        #60768a;
+
+    font-size:
+        .61rem;
+
+    line-height:
+        1.75;
+
+    text-align:
+        center;
+
+}
+
+
+/* ==========================================================
+   14 — RESPONSIVE
+========================================================== */
+
+@media (max-width: 1200px) {
+
+    .seo-services {
+
+        gap:
+            14px;
+
+    }
+
+
+
+
+    /* ==========================================================
+   SEO GROWTH PIPELINE
+========================================================== */
+
+.seo-pipeline {
+
+    position: relative;
+
+    z-index: 3;
+
+    margin-top: 14px;
+
+    padding: 18px 20px 20px;
+
+    border:
+        1px solid
+        rgba(148,163,184,.075);
+
+    border-radius: 16px;
+
+    background:
+        rgba(148,163,184,.018);
+
+    overflow: hidden;
+
+}
+
+
+/* ==========================================================
+   PIPELINE HEADER
+========================================================== */
+
+.seo-pipeline-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding-bottom: 15px;
+
+    border-bottom:
+        1px solid
+        rgba(148,163,184,.055);
+
+}
+
+
+.seo-pipeline-heading > div span {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color:
+        #526a7d;
+
+    font-size:
+        .34rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .11em;
+
+}
+
+
+.seo-pipeline-heading > div strong {
+
+    display: block;
+
+    color:
+        #cfdee7;
+
+    font-size:
+        .68rem;
+
+    font-weight:
+        750;
+
+}
+
+
+/* ==========================================================
+   PIPELINE STATUS
+========================================================== */
+
+.seo-pipeline-status {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        7px;
+
+    padding:
+        7px 10px;
+
+    border:
+        1px solid
+        rgba(34,197,94,.10);
+
+    border-radius:
+        999px;
+
+    color:
+        #648078;
+
+    background:
+        rgba(34,197,94,.018);
+
+    font-size:
+        .34rem;
+
+    font-weight:
+        700;
+
+    white-space:
+        nowrap;
+
+}
+
+
+.seo-pipeline-status::before {
+
+    content:
+        "";
+
+    width:
+        5px;
+
+    height:
+        5px;
+
+    border-radius:
+        50%;
+
+    background:
+        #22c55e;
+
+    box-shadow:
+        0 0 9px
+        rgba(34,197,94,.55);
+
+}
+
+
+/* ==========================================================
+   PIPELINE FLOW
+========================================================== */
+
+.seo-pipeline-flow {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+    padding-top:
+        16px;
+
+}
+
+
+/* ==========================================================
+   PIPELINE STEP
+========================================================== */
+
+.seo-pipeline-step {
+
+    position:
+        relative;
+
+    flex:
+        1;
+
+    min-width:
+        0;
+
+    min-height:
+        76px;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        auto 1fr;
+
+    grid-template-rows:
+        auto auto;
+
+    column-gap:
+        11px;
+
+    align-items:
+        center;
+
+    padding:
+        11px 12px;
+
+    border:
+        1px solid
+        rgba(148,163,184,.075);
+
+    border-radius:
+        11px;
+
+    background:
+        rgba(148,163,184,.018);
+
+    transition:
+        transform .35s
+        cubic-bezier(.22,1,.36,1),
+
+        border-color .35s ease,
+
+        background .35s ease;
+
+}
+
+
+/* ==========================================================
+   STEP NUMBER
+========================================================== */
+
+.seo-step-number {
+
+    position:
+        absolute;
+
+    top:
+        8px;
+
+    right:
+        9px;
+
+    color:
+        #41596b;
+
+    font-size:
+        .31rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .06em;
+
+}
+
+
+/* ==========================================================
+   STEP ICON
+========================================================== */
+
+.seo-pipeline-step > i {
+
+    grid-row:
+        1 / 3;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    width:
+        34px;
+
+    height:
+        34px;
+
+    border:
+        1px solid
+        rgba(34,211,238,.12);
+
+    border-radius:
+        9px;
+
+    color:
+        #22d3ee;
+
+    background:
+        rgba(34,211,238,.035);
+
+    font-size:
+        .68rem;
+
+}
+
+
+/* ==========================================================
+   STEP TITLE
+========================================================== */
+
+.seo-pipeline-step strong {
+
+    align-self:
+        end;
+
+    color:
+        #d8e5ec;
+
+    font-size:
+        .53rem;
+
+    font-weight:
+        750;
+
+    line-height:
+        1.2;
+
+}
+
+
+/* ==========================================================
+   STEP DESCRIPTION
+========================================================== */
+
+.seo-pipeline-step small {
+
+    align-self:
+        start;
+
+    margin-top:
+        3px;
+
+    color:
+        #566d7e;
+
+    font-size:
+        .34rem;
+
+    line-height:
+        1.3;
+
+}
+
+
+/* ==========================================================
+   PIPELINE CONNECTOR
+========================================================== */
+
+.seo-pipeline-line {
+
+    position:
+        relative;
+
+    flex:
+        0 0 28px;
+
+    width:
+        28px;
+
+    height:
+        1px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(34,211,238,.08),
+            rgba(34,211,238,.38),
+            rgba(96,165,250,.10)
+        );
+
+}
+
+
+/* ==========================================================
+   CONNECTOR ARROW
+========================================================== */
+
+.seo-pipeline-line::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        50%;
+
+    right:
+        0;
+
+    width:
+        5px;
+
+    height:
+        5px;
+
+    border-top:
+        1px solid
+        rgba(34,211,238,.45);
+
+    border-right:
+        1px solid
+        rgba(34,211,238,.45);
+
+    transform:
+        translateY(-50%)
+        rotate(45deg);
+
+}
+
+
+/* ==========================================================
+   STEP HOVER
+========================================================== */
+
+.seo-pipeline-step:hover {
+
+    transform:
+        translateY(-4px);
+
+    border-color:
+        rgba(34,211,238,.16);
+
+    background:
+        rgba(34,211,238,.025);
+
+}
+
+
+.seo-pipeline-step:hover > i {
+
+    border-color:
+        rgba(34,211,238,.25);
+
+    background:
+        rgba(34,211,238,.06);
+
+}
+
+
+/* ==========================================================
+   SECOND STEP
+========================================================== */
+
+.seo-pipeline-step:nth-of-type(3) > i {
+
+    color:
+        #60a5fa;
+
+    border-color:
+        rgba(96,165,250,.13);
+
+    background:
+        rgba(96,165,250,.035);
+
+}
+
+
+/* ==========================================================
+   THIRD STEP
+========================================================== */
+
+.seo-pipeline-step:nth-of-type(5) > i {
+
+    color:
+        #67e8f9;
+
+    border-color:
+        rgba(103,232,249,.13);
+
+    background:
+        rgba(103,232,249,.035);
+
+}
+
+
+/* ==========================================================
+   FOURTH STEP
+========================================================== */
+
+.seo-pipeline-step:nth-of-type(7) > i {
+
+    color:
+        #a78bfa;
+
+    border-color:
+        rgba(167,139,250,.13);
+
+    background:
+        rgba(167,139,250,.035);
+
+}
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 850px) {
+
+    .seo-pipeline {
+
+        padding:
+            16px;
+
+    }
+
+    .seo-pipeline-flow {
+
+        gap:
+            7px;
+
+    }
+
+    .seo-pipeline-line {
+
+        flex-basis:
+            18px;
+
+        width:
+            18px;
+
+    }
+
+    .seo-pipeline-step {
+
+        padding:
+            10px;
+
+    }
+
+    .seo-pipeline-step strong {
+
+        font-size:
+            .47rem;
+
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 600px) {
+
+    .seo-pipeline {
+
+        padding:
+            14px;
+
+        margin-top:
+            8px;
+
+        border-radius:
+            13px;
+
+    }
+
+    .seo-pipeline-heading {
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+        gap:
+            10px;
+
+    }
+
+    .seo-pipeline-flow {
+
+        flex-direction:
+            column;
+
+        align-items:
+            stretch;
+
+        gap:
+            8px;
+
+    }
+
+    .seo-pipeline-step {
+
+        flex:
+            none;
+
+        width:
+            100%;
+
+        min-height:
+            52px;
+
+        grid-template-columns:
+            auto 1fr;
+
+    }
+
+    .seo-pipeline-line {
+
+        flex:
+            none;
+
+        width:
+            1px;
+
+        height:
+            13px;
+
+        margin:
+            0 0 0 17px;
+
+        background:
+
+            linear-gradient(
+                180deg,
+                rgba(34,211,238,.08),
+                rgba(34,211,238,.38),
+                rgba(96,165,250,.08)
+            );
+
+    }
+
+    .seo-pipeline-line::after {
+
+        top:
+            auto;
+
+        right:
+            auto;
+
+        bottom:
+            -1px;
+
+        left:
+            50%;
+
+        transform:
+            translateX(-50%)
+            rotate(135deg);
+
+    }
+
+}
+
+
+/* ==========================================================
+   REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .seo-pipeline-step {
+
+        transition:
+            none;
+
+    }
+
+}
+    .seo-service-card {
+
+        min-height:
+            310px;
+
+        padding:
+            21px;
+
+    }
+
+    .seo-service-content {
+
+        padding-top:
+            38px;
+
+    }
+
+    .seo-service-content h3 {
+
+        font-size:
+            1.15rem;
+
+    }
+
+    .seo-service-content p {
+
+        font-size:
+            .71rem;
+
+    }
+
+}
+
+
+@media (max-width: 850px) {
+
+    .seo-services {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            13px;
+
+    }
+
+    .seo-service-card {
+
+        min-height:
+            260px;
+
+    }
+
+    .seo-service-content {
+
+        padding-top:
+            30px;
+
+    }
+
+    .seo-service-content p {
+
+        max-width:
+            650px;
+
+    }
+
+    .seo-footnote {
+
+        margin-top:
+            52px;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .seo-service-card {
+
+        min-height:
+            270px;
+
+        padding:
+            18px;
+
+        border-radius:
+            16px;
+
+    }
+
+    .seo-service-number {
+
+        min-width:
+            32px;
+
+        height:
+            23px;
+
+        font-size:
+            .45rem;
+
+    }
+
+    .seo-service-icon {
+
+        width:
+            42px;
+
+        height:
+            42px;
+
+        border-radius:
+            11px;
+
+    }
+
+    .seo-service-icon i {
+
+        font-size:
+            .78rem;
+
+    }
+
+    .seo-service-content {
+
+        padding-top:
+            29px;
+
+    }
+
+    .seo-service-content h3 {
+
+        font-size:
+            1.08rem;
+
+    }
+
+    .seo-service-content p {
+
+        margin-top:
+            11px;
+
+        font-size:
+            .70rem;
+
+        line-height:
+            1.7;
+
+    }
+
+    .seo-service-tags {
+
+        gap:
+            5px;
+
+        margin-top:
+            20px;
+
+        padding-top:
+            13px;
+
+    }
+
+    .seo-service-tags span {
+
+        min-height:
+            23px;
+
+        padding:
+            0 8px;
+
+        font-size:
+            .40rem;
+
+    }
+
+    .seo-footnote {
+
+        gap:
+            12px;
+
+        margin-top:
+            40px;
+
+    }
+
+    .seo-footnote p {
+
+        max-width:
+            300px;
+
+        font-size:
+            .51rem;
+
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .seo-service-card {
+
+        min-height:
+            250px;
+
+        padding:
+            16px;
+
+    }
+
+    .seo-service-content {
+
+        padding-top:
+            25px;
+
+    }
+
+    .seo-service-content h3 {
+
+        font-size:
+            1rem;
+
+    }
+
+    .seo-service-content p {
+
+        font-size:
+            .66rem;
+
+    }
+
+    .seo-footnote > span {
+
+        display:
+            none;
+
+    }
+
+    .seo-footnote {
+
+        justify-content:
+            center;
+
+    }
+
+}
+
+
+/* ==========================================================
+   15 — TOUCH
+========================================================== */
+
+@media (hover: none) {
+
+    .seo-service-card:hover {
+
+        transform:
+            none;
+
+    }
+
+    .seo-service-card:hover
+    .seo-service-icon {
+
+        transform:
+            none;
+
+    }
+
+}
+
+
+/* ==========================================================
+   16 — REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .seo-service-card,
+    .seo-service-icon,
+    .seo-service-tags span {
+
+        transition:
+            none;
+
+    }
+
+}

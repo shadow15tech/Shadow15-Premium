@@ -1,0 +1,1548 @@
+/* ==========================================================
+   SHADOW15 — WEBSITE MAINTENANCE
+   05-ANIMATION.CSS
+========================================================== */
+
+
+/* ==========================================================
+   01 — INTRO REVEAL
+========================================================== */
+
+.maintenance-intro {
+
+    animation:
+        maintenanceIntroReveal
+        1s
+        cubic-bezier(.22,1,.36,1)
+        both;
+
+}
+
+
+@keyframes maintenanceIntroReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(32px);
+
+        filter:
+            blur(6px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+        filter:
+            blur(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   02 — LABEL
+========================================================== */
+
+.maintenance-label {
+
+    animation:
+        maintenanceLabelReveal
+        .7s
+        cubic-bezier(.22,1,.36,1)
+        .08s
+        both;
+
+}
+
+
+@keyframes maintenanceLabelReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateX(-18px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateX(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   03 — HEADING
+========================================================== */
+
+.maintenance-heading h2 {
+
+    animation:
+        maintenanceHeadingReveal
+        1s
+        cubic-bezier(.22,1,.36,1)
+        .18s
+        both;
+
+}
+
+
+@keyframes maintenanceHeadingReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(28px)
+            scale(.98);
+
+        filter:
+            blur(7px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+        filter:
+            blur(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   04 — HEADING GRADIENT
+========================================================== */
+
+.maintenance-heading h2 span {
+
+    animation:
+        maintenanceGradientFlow
+        5s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes maintenanceGradientFlow {
+
+    0%,
+    100% {
+
+        background-position:
+            0% 50%;
+
+    }
+
+    50% {
+
+        background-position:
+            100% 50%;
+
+    }
+
+}
+
+
+/* ==========================================================
+   05 — DESCRIPTION
+========================================================== */
+
+.maintenance-description {
+
+    animation:
+        maintenanceDescriptionReveal
+        .8s
+        cubic-bezier(.22,1,.36,1)
+        .38s
+        both;
+
+}
+
+
+@keyframes maintenanceDescriptionReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   06 — SHOWCASE
+========================================================== */
+
+.maintenance-showcase {
+
+    animation:
+        maintenanceShowcaseReveal
+        1.05s
+        cubic-bezier(.22,1,.36,1)
+        .32s
+        both;
+
+}
+
+
+@keyframes maintenanceShowcaseReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(42px)
+            scale(.975);
+
+        filter:
+            blur(7px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+        filter:
+            blur(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   07 — BACKGROUND GLOWS
+========================================================== */
+
+.maintenance-glow-left {
+
+    animation:
+        maintenanceGlowLeft
+        8s
+        ease-in-out
+        infinite;
+
+}
+
+
+.maintenance-glow-right {
+
+    animation:
+        maintenanceGlowRight
+        9s
+        ease-in-out
+        1s
+        infinite;
+
+}
+
+
+@keyframes maintenanceGlowLeft {
+
+    0%,
+    100% {
+
+        transform:
+            translate3d(0,0,0)
+            scale(1);
+
+        opacity:
+            .50;
+
+    }
+
+    50% {
+
+        transform:
+            translate3d(35px,-25px,0)
+            scale(1.08);
+
+        opacity:
+            .82;
+
+    }
+
+}
+
+
+@keyframes maintenanceGlowRight {
+
+    0%,
+    100% {
+
+        transform:
+            translate3d(0,0,0)
+            scale(1);
+
+        opacity:
+            .45;
+
+    }
+
+    50% {
+
+        transform:
+            translate3d(-30px,25px,0)
+            scale(1.10);
+
+        opacity:
+            .75;
+
+    }
+
+}
+
+
+/* ==========================================================
+   08 — ORBITS
+========================================================== */
+
+.maintenance-orbit-one {
+
+    animation:
+        maintenanceOrbitOne
+        24s
+        linear
+        infinite;
+
+}
+
+
+.maintenance-orbit-two {
+
+    animation:
+        maintenanceOrbitTwo
+        31s
+        linear
+        infinite;
+
+}
+
+
+@keyframes maintenanceOrbitOne {
+
+    from {
+
+        transform:
+            translate(-50%,-50%)
+            rotate(-16deg);
+
+    }
+
+    to {
+
+        transform:
+            translate(-50%,-50%)
+            rotate(344deg);
+
+    }
+
+}
+
+
+@keyframes maintenanceOrbitTwo {
+
+    from {
+
+        transform:
+            translate(-50%,-50%)
+            rotate(17deg);
+
+    }
+
+    to {
+
+        transform:
+            translate(-50%,-50%)
+            rotate(-343deg);
+
+    }
+
+}
+
+
+/* ==========================================================
+   09 — ORBIT POINTS
+========================================================== */
+
+.maintenance-orbit-one::before,
+.maintenance-orbit-two::before {
+
+    animation:
+        maintenanceOrbitPulse
+        2.5s
+        ease-in-out
+        infinite;
+
+}
+
+
+.maintenance-orbit-two::before {
+
+    animation-delay:
+        .8s;
+
+}
+
+
+@keyframes maintenanceOrbitPulse {
+
+    0%,
+    100% {
+
+        opacity:
+            .40;
+
+    }
+
+    50% {
+
+        opacity:
+            1;
+
+        transform:
+            scale(1.5);
+
+    }
+
+}
+
+
+/* ==========================================================
+   10 — STATUS PULSE
+========================================================== */
+
+.maintenance-status-dot {
+
+    animation:
+        maintenanceStatusPulse
+        1.8s
+        ease-out
+        infinite;
+
+}
+
+
+@keyframes maintenanceStatusPulse {
+
+    0% {
+
+        box-shadow:
+            0 0 0 0
+            rgba(34,197,94,.45);
+
+    }
+
+    70% {
+
+        box-shadow:
+            0 0 0 9px
+            rgba(34,197,94,0);
+
+    }
+
+    100% {
+
+        box-shadow:
+            0 0 0 0
+            rgba(34,197,94,0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   11 — DASHBOARD ICON
+========================================================== */
+
+.maintenance-dashboard-icon {
+
+    animation:
+        maintenanceDashboardFloat
+        5s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes maintenanceDashboardFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-3px);
+
+    }
+
+}
+
+
+/* ==========================================================
+   12 — HEALTH RING
+========================================================== */
+
+.maintenance-health-ring {
+
+    animation:
+        maintenanceRingReveal
+        1.2s
+        cubic-bezier(.22,1,.36,1)
+        .75s
+        both;
+
+}
+
+
+@keyframes maintenanceRingReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            scale(.72)
+            rotate(-35deg);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            scale(1)
+            rotate(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   13 — HEALTH SCORE
+========================================================== */
+
+.maintenance-health-ring strong {
+
+    animation:
+        maintenanceScoreReveal
+        .8s
+        cubic-bezier(.22,1,.36,1)
+        1.2s
+        both;
+
+}
+
+
+@keyframes maintenanceScoreReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(10px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   14 — HEALTH LIST
+========================================================== */
+
+.maintenance-health-list div {
+
+    opacity:
+        0;
+
+    animation:
+        maintenanceListReveal
+        .5s
+        cubic-bezier(.22,1,.36,1)
+        both;
+
+}
+
+
+.maintenance-health-list div:nth-child(1) {
+
+    animation-delay:
+        1.15s;
+
+}
+
+
+.maintenance-health-list div:nth-child(2) {
+
+    animation-delay:
+        1.28s;
+
+}
+
+
+.maintenance-health-list div:nth-child(3) {
+
+    animation-delay:
+        1.41s;
+
+}
+
+
+@keyframes maintenanceListReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateX(-12px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateX(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   15 — MONITOR
+========================================================== */
+
+.maintenance-monitor-panel {
+
+    animation:
+        maintenanceMonitorReveal
+        .9s
+        cubic-bezier(.22,1,.36,1)
+        .65s
+        both;
+
+}
+
+
+@keyframes maintenanceMonitorReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(22px)
+            scale(.98);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+/* ==========================================================
+   16 — LIVE INDICATOR
+========================================================== */
+
+.maintenance-live span {
+
+    animation:
+        maintenanceLivePulse
+        1.4s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes maintenanceLivePulse {
+
+    0%,
+    100% {
+
+        opacity:
+            .45;
+
+        transform:
+            scale(.85);
+
+    }
+
+    50% {
+
+        opacity:
+            1;
+
+        transform:
+            scale(1.25);
+
+    }
+
+}
+
+
+/* ==========================================================
+   17 — CHART AREA
+========================================================== */
+
+.maintenance-chart-area {
+
+    transform-origin:
+        left bottom;
+
+    animation:
+        maintenanceChartReveal
+        1.5s
+        cubic-bezier(.22,1,.36,1)
+        1.15s
+        both;
+
+}
+
+
+@keyframes maintenanceChartReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            scaleY(0);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            scaleY(1);
+
+    }
+
+}
+
+
+/* ==========================================================
+   18 — CHART POINTS
+========================================================== */
+
+.maintenance-chart-line span {
+
+    opacity:
+        0;
+
+    animation:
+        maintenanceChartPoint
+        .45s
+        cubic-bezier(.22,1,.36,1)
+        both;
+
+}
+
+
+.maintenance-chart-line span:nth-child(1) {
+
+    animation-delay:
+        1.25s;
+
+}
+
+
+.maintenance-chart-line span:nth-child(2) {
+
+    animation-delay:
+        1.34s;
+
+}
+
+
+.maintenance-chart-line span:nth-child(3) {
+
+    animation-delay:
+        1.43s;
+
+}
+
+
+.maintenance-chart-line span:nth-child(4) {
+
+    animation-delay:
+        1.52s;
+
+}
+
+
+.maintenance-chart-line span:nth-child(5) {
+
+    animation-delay:
+        1.61s;
+
+}
+
+
+.maintenance-chart-line span:nth-child(6) {
+
+    animation-delay:
+        1.70s;
+
+}
+
+
+.maintenance-chart-line span:nth-child(7) {
+
+    animation-delay:
+        1.79s;
+
+}
+
+
+.maintenance-chart-line span:nth-child(8) {
+
+    animation-delay:
+        1.88s;
+
+}
+
+
+.maintenance-chart-line span:nth-child(9) {
+
+    animation-delay:
+        1.97s;
+
+}
+
+
+.maintenance-chart-line span:nth-child(10) {
+
+    animation-delay:
+        2.06s;
+
+}
+
+
+@keyframes maintenanceChartPoint {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            scale(.3);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            scale(1);
+
+    }
+
+}
+
+
+/* ==========================================================
+   19 — SECURITY PANEL
+========================================================== */
+
+.maintenance-security-panel {
+
+    animation:
+        maintenanceSecurityReveal
+        .85s
+        cubic-bezier(.22,1,.36,1)
+        .82s
+        both;
+
+}
+
+
+@keyframes maintenanceSecurityReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateX(20px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateX(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   20 — SECURITY ICON
+========================================================== */
+
+.maintenance-security-icon {
+
+    animation:
+        maintenanceSecurityFloat
+        4.5s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes maintenanceSecurityFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-4px);
+
+    }
+
+}
+
+
+/* ==========================================================
+   21 — SECURITY ITEMS
+========================================================== */
+
+.maintenance-security-list div {
+
+    opacity:
+        0;
+
+    animation:
+        maintenanceSecurityItem
+        .5s
+        cubic-bezier(.22,1,.36,1)
+        both;
+
+}
+
+
+.maintenance-security-list div:nth-child(1) {
+
+    animation-delay:
+        1.20s;
+
+}
+
+
+.maintenance-security-list div:nth-child(2) {
+
+    animation-delay:
+        1.33s;
+
+}
+
+
+.maintenance-security-list div:nth-child(3) {
+
+    animation-delay:
+        1.46s;
+
+}
+
+
+@keyframes maintenanceSecurityItem {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateX(12px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateX(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   22 — PIPELINE
+========================================================== */
+
+.maintenance-pipeline {
+
+    animation:
+        maintenancePipelineReveal
+        .8s
+        cubic-bezier(.22,1,.36,1)
+        1s
+        both;
+
+}
+
+
+@keyframes maintenancePipelineReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(20px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   23 — PIPELINE STEPS
+========================================================== */
+
+.maintenance-pipeline-step {
+
+    opacity:
+        0;
+
+    animation:
+        maintenancePipelineStep
+        .55s
+        cubic-bezier(.22,1,.36,1)
+        both;
+
+}
+
+
+.maintenance-pipeline-step:nth-child(1) {
+
+    animation-delay:
+        1.25s;
+
+}
+
+
+.maintenance-pipeline-step:nth-child(3) {
+
+    animation-delay:
+        1.40s;
+
+}
+
+
+.maintenance-pipeline-step:nth-child(5) {
+
+    animation-delay:
+        1.55s;
+
+}
+
+
+.maintenance-pipeline-step:nth-child(7) {
+
+    animation-delay:
+        1.70s;
+
+}
+
+
+@keyframes maintenancePipelineStep {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(13px)
+            scale(.96);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+/* ==========================================================
+   24 — PIPELINE LINES
+========================================================== */
+
+.maintenance-pipeline-line {
+
+    transform:
+        scaleX(0);
+
+    transform-origin:
+        left center;
+
+    animation:
+        maintenancePipelineLine
+        .6s
+        cubic-bezier(.22,1,.36,1)
+        both;
+
+}
+
+
+.maintenance-pipeline-line:nth-of-type(2) {
+
+    animation-delay:
+        1.38s;
+
+}
+
+
+.maintenance-pipeline-line:nth-of-type(4) {
+
+    animation-delay:
+        1.53s;
+
+}
+
+
+.maintenance-pipeline-line:nth-of-type(6) {
+
+    animation-delay:
+        1.68s;
+
+}
+
+
+@keyframes maintenancePipelineLine {
+
+    to {
+
+        transform:
+            scaleX(1);
+
+    }
+
+}
+
+
+/* ==========================================================
+   25 — SERVICE CARDS
+========================================================== */
+
+.maintenance-service-card {
+
+    opacity:
+        0;
+
+    animation:
+        maintenanceServiceReveal
+        .8s
+        cubic-bezier(.22,1,.36,1)
+        both;
+
+}
+
+
+.maintenance-service-card:nth-child(1) {
+
+    animation-delay:
+        .15s;
+
+}
+
+
+.maintenance-service-card:nth-child(2) {
+
+    animation-delay:
+        .30s;
+
+}
+
+
+.maintenance-service-card:nth-child(3) {
+
+    animation-delay:
+        .45s;
+
+}
+
+
+@keyframes maintenanceServiceReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(30px)
+            scale(.975);
+
+        filter:
+            blur(4px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+        filter:
+            blur(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   26 — SERVICE ICON FLOAT
+========================================================== */
+
+.maintenance-service-icon {
+
+    animation:
+        maintenanceIconFloat
+        5s
+        ease-in-out
+        infinite;
+
+}
+
+
+.maintenance-service-card:nth-child(2)
+.maintenance-service-icon {
+
+    animation-delay:
+        .8s;
+
+}
+
+
+.maintenance-service-card:nth-child(3)
+.maintenance-service-icon {
+
+    animation-delay:
+        1.6s;
+
+}
+
+
+@keyframes maintenanceIconFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-3px);
+
+    }
+
+}
+
+
+/* ==========================================================
+   27 — CARD AMBIENT LIGHT
+========================================================== */
+
+.maintenance-service-card::before {
+
+    animation:
+        maintenanceCardAmbient
+        6s
+        ease-in-out
+        infinite;
+
+}
+
+
+.maintenance-service-card:nth-child(2)::before {
+
+    animation-delay:
+        1s;
+
+}
+
+
+.maintenance-service-card:nth-child(3)::before {
+
+    animation-delay:
+        2s;
+
+}
+
+
+@keyframes maintenanceCardAmbient {
+
+    0%,
+    100% {
+
+        opacity:
+            .30;
+
+    }
+
+    50% {
+
+        opacity:
+            .82;
+
+    }
+
+}
+
+
+/* ==========================================================
+   28 — FOOTNOTE
+========================================================== */
+
+.maintenance-footnote {
+
+    animation:
+        maintenanceFootnoteReveal
+        .8s
+        cubic-bezier(.22,1,.36,1)
+        .9s
+        both;
+
+}
+
+
+@keyframes maintenanceFootnoteReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(18px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   29 — GPU OPTIMIZATION
+========================================================== */
+
+.maintenance-showcase,
+.maintenance-health-ring,
+.maintenance-chart-area,
+.maintenance-service-card,
+.maintenance-service-icon,
+.maintenance-orbit,
+.maintenance-glow {
+
+    will-change:
+        transform;
+
+}
+
+
+.maintenance-showcase,
+.maintenance-service-card,
+.maintenance-orbit {
+
+    backface-visibility:
+        hidden;
+
+    -webkit-backface-visibility:
+        hidden;
+
+}
+
+
+/* ==========================================================
+   30 — TOUCH DEVICES
+========================================================== */
+
+@media (hover: none) {
+
+    .maintenance-service-card:hover {
+
+        transform:
+            none;
+
+    }
+
+    .maintenance-service-card:hover
+    .maintenance-service-icon {
+
+        transform:
+            none;
+
+    }
+
+}
+
+
+/* ==========================================================
+   31 — REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .solution-maintenance *,
+    .solution-maintenance *::before,
+    .solution-maintenance *::after {
+
+        animation:
+            none !important;
+
+        transition:
+            none !important;
+
+    }
+
+}

@@ -1,0 +1,716 @@
+/* ==========================================================
+   SHADOW15 — GRAPHIC DESIGN
+   06-RESPONSIVE.CSS
+========================================================== */
+
+
+/* ==========================================================
+   LARGE DESKTOP
+========================================================== */
+
+@media (min-width: 1440px) {
+
+    .solution-graphic > .container {
+
+        width:
+            min(90%, 1480px);
+
+    }
+
+    .graphic-showcase {
+
+        padding:
+            30px;
+
+    }
+
+    .graphic-workspace {
+
+        gap:
+            15px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   LAPTOP
+========================================================== */
+
+@media (max-width: 1200px) {
+
+    .solution-graphic > .container {
+
+        width:
+            min(94%, 1180px);
+
+    }
+
+    .graphic-intro-grid {
+
+        gap:
+            55px;
+
+    }
+
+    .graphic-showcase {
+
+        padding:
+            24px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   SMALL LAPTOP
+========================================================== */
+
+@media (max-width: 1050px) {
+
+    .graphic-intro-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            25px;
+
+    }
+
+    .graphic-description {
+
+        max-width:
+            650px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 900px) {
+
+    .solution-graphic {
+
+        padding:
+            115px 0 95px;
+
+    }
+
+    .solution-graphic > .container {
+
+        width:
+            92%;
+
+    }
+
+    .graphic-showcase {
+
+        padding:
+            21px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   TABLET PORTRAIT
+========================================================== */
+
+@media (max-width: 768px) {
+
+    .solution-graphic {
+
+        padding:
+            105px 0 85px;
+
+    }
+
+    .graphic-intro {
+
+        margin-bottom:
+            50px;
+
+    }
+
+    .graphic-showcase {
+
+        margin-top:
+            8px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 600px) {
+
+    .solution-graphic {
+
+        width:
+            100%;
+
+        overflow:
+            hidden;
+
+        padding:
+            90px 0 75px;
+
+    }
+
+
+    /* ======================================================
+       CONTAINER
+    ====================================================== */
+
+    .solution-graphic > .container {
+
+        width:
+            92%;
+
+        max-width:
+            500px;
+
+    }
+
+
+    /* ======================================================
+       INTRO
+    ====================================================== */
+
+    .graphic-intro {
+
+        margin-bottom:
+            42px;
+
+    }
+
+
+    /* ======================================================
+       SHOWCASE
+    ====================================================== */
+
+    .graphic-showcase {
+
+        padding:
+            14px;
+
+        border-radius:
+            18px;
+
+    }
+
+
+    /* ======================================================
+       DASHBOARD HEADER
+    ====================================================== */
+
+    .graphic-dashboard-top {
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+        gap:
+            14px;
+
+    }
+
+    .graphic-dashboard-brand {
+
+        gap:
+            10px;
+
+    }
+
+    .graphic-dashboard-icon {
+
+        width:
+            38px;
+
+        height:
+            38px;
+
+        border-radius:
+            10px;
+
+    }
+
+    .graphic-dashboard-brand span {
+
+        font-size:
+            .35rem;
+
+    }
+
+    .graphic-dashboard-brand strong {
+
+        font-size:
+            .72rem;
+
+    }
+
+    .graphic-design-status {
+
+        align-self:
+            flex-start;
+
+    }
+
+
+    /* ======================================================
+       WORKSPACE
+    ====================================================== */
+
+    .graphic-workspace {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            8px;
+
+    }
+
+
+    /* ======================================================
+       BRAND PANEL
+    ====================================================== */
+
+    .graphic-brand-panel {
+
+        min-height:
+            300px;
+
+    }
+
+
+    /* ======================================================
+       CANVAS PANEL
+    ====================================================== */
+
+    .graphic-canvas-panel {
+
+        min-height:
+            360px;
+
+        padding:
+            14px;
+
+    }
+
+    .graphic-canvas {
+
+        min-height:
+            285px;
+
+        padding:
+            14px;
+
+    }
+
+
+    /* ======================================================
+       PERFORMANCE
+    ====================================================== */
+
+    .graphic-performance-panel {
+
+        min-height:
+            340px;
+
+    }
+
+    .graphic-performance-list {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    /* ======================================================
+       PIPELINE
+    ====================================================== */
+
+    .graphic-pipeline {
+
+        padding:
+            14px;
+
+        border-radius:
+            13px;
+
+    }
+
+    .graphic-pipeline-heading {
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+        gap:
+            10px;
+
+    }
+
+    .graphic-pipeline-flow {
+
+        flex-direction:
+            column;
+
+        align-items:
+            stretch;
+
+        gap:
+            10px;
+
+    }
+
+    .graphic-pipeline-step {
+
+        flex:
+            none;
+
+        min-height:
+            42px;
+
+    }
+
+    .graphic-pipeline-line {
+
+        flex:
+            none;
+
+        width:
+            1px;
+
+        height:
+            15px;
+
+        margin:
+            -2px 0 -2px 15px;
+
+    }
+
+
+    /* ======================================================
+       SERVICES
+    ====================================================== */
+
+    .graphic-services {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            11px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   SMALL MOBILE
+========================================================== */
+
+@media (max-width: 480px) {
+
+    .solution-graphic {
+
+        padding:
+            82px 0 68px;
+
+    }
+
+    .solution-graphic > .container {
+
+        width:
+            91%;
+
+    }
+
+    .graphic-showcase {
+
+        padding:
+            12px;
+
+    }
+
+    .graphic-canvas-top {
+
+        align-items:
+            flex-start;
+
+    }
+
+    .graphic-canvas-tools {
+
+        gap:
+            4px;
+
+    }
+
+    .graphic-canvas-tools span {
+
+        width:
+            24px;
+
+        height:
+            24px;
+
+    }
+
+    .graphic-canvas {
+
+        min-height:
+            255px;
+
+    }
+
+    .graphic-artboard {
+
+        width:
+            min(100%, 310px);
+
+        aspect-ratio:
+            1 / .95;
+
+    }
+
+}
+
+
+/* ==========================================================
+   VERY SMALL MOBILE
+========================================================== */
+
+@media (max-width: 420px) {
+
+    .solution-graphic > .container {
+
+        width:
+            92%;
+
+    }
+
+    .graphic-heading h2 {
+
+        font-size:
+            2.35rem;
+
+    }
+
+    .graphic-description p {
+
+        font-size:
+            .79rem;
+
+    }
+
+    .graphic-showcase {
+
+        padding:
+            10px;
+
+        border-radius:
+            16px;
+
+    }
+
+    .graphic-dashboard-brand strong {
+
+        font-size:
+            .68rem;
+
+    }
+
+    .graphic-canvas {
+
+        min-height:
+            235px;
+
+    }
+
+    .graphic-artboard {
+
+        aspect-ratio:
+            1 / 1;
+
+    }
+
+    .graphic-artboard-circle {
+
+        width:
+            125px;
+
+        height:
+            125px;
+
+    }
+
+    .graphic-artboard-heading {
+
+        top:
+            31%;
+
+    }
+
+    .graphic-artboard-heading strong {
+
+        font-size:
+            1.28rem;
+
+    }
+
+}
+
+
+/* ==========================================================
+   EXTRA SMALL
+========================================================== */
+
+@media (max-width: 360px) {
+
+    .solution-graphic > .container {
+
+        width:
+            92%;
+
+    }
+
+    .graphic-heading h2 {
+
+        font-size:
+            2.15rem;
+
+    }
+
+    .graphic-canvas {
+
+        padding:
+            10px;
+
+    }
+
+    .graphic-brand-preview {
+
+        gap:
+            9px;
+
+    }
+
+    .graphic-brand-mark {
+
+        width:
+            50px;
+
+        height:
+            50px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   LANDSCAPE MOBILE
+========================================================== */
+
+@media (max-height: 600px)
+and (orientation: landscape) {
+
+    .solution-graphic {
+
+        padding-top:
+            80px;
+
+        padding-bottom:
+            70px;
+
+    }
+
+    .graphic-canvas {
+
+        min-height:
+            270px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   TOUCH DEVICES
+========================================================== */
+
+@media (hover: none) {
+
+    .graphic-service-card:hover {
+
+        transform:
+            none;
+
+    }
+
+    .graphic-showcase:hover
+    .graphic-dashboard-icon {
+
+        transform:
+            none;
+
+    }
+
+}
+
+
+/* ==========================================================
+   OVERFLOW PROTECTION
+========================================================== */
+
+.solution-graphic,
+.graphic-bg,
+.graphic-showcase,
+.graphic-services {
+
+    max-width:
+        100%;
+
+}
+
+
+/* ==========================================================
+   REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .solution-graphic *,
+    .solution-graphic *::before,
+    .solution-graphic *::after {
+
+        animation:
+            none !important;
+
+        transition:
+            none !important;
+
+    }
+
+}

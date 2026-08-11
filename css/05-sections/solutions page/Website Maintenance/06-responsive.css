@@ -1,0 +1,649 @@
+/* ==========================================================
+   SHADOW15 — WEBSITE MAINTENANCE
+   06-RESPONSIVE.CSS
+========================================================== */
+
+
+/* ==========================================================
+   LARGE DESKTOP
+========================================================== */
+
+@media (min-width: 1440px) {
+
+    .solution-maintenance > .container {
+
+        width:
+            min(90%, 1480px);
+
+    }
+
+    .maintenance-showcase {
+
+        padding:
+            30px;
+
+    }
+
+    .maintenance-workspace {
+
+        gap:
+            15px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   LAPTOP
+========================================================== */
+
+@media (max-width: 1200px) {
+
+    .solution-maintenance > .container {
+
+        width:
+            min(94%, 1180px);
+
+    }
+
+    .maintenance-intro-grid {
+
+        gap:
+            55px;
+
+    }
+
+    .maintenance-showcase {
+
+        padding:
+            24px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   SMALL LAPTOP
+========================================================== */
+
+@media (max-width: 1050px) {
+
+    .maintenance-intro-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            25px;
+
+    }
+
+    .maintenance-description {
+
+        max-width:
+            650px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 900px) {
+
+    .solution-maintenance {
+
+        padding:
+            115px 0 95px;
+
+    }
+
+    .solution-maintenance > .container {
+
+        width:
+            92%;
+
+    }
+
+    .maintenance-showcase {
+
+        padding:
+            21px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   TABLET PORTRAIT
+========================================================== */
+
+@media (max-width: 768px) {
+
+    .solution-maintenance {
+
+        padding:
+            105px 0 85px;
+
+    }
+
+    .maintenance-intro {
+
+        margin-bottom:
+            50px;
+
+    }
+
+    .maintenance-showcase {
+
+        margin-top:
+            8px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 600px) {
+
+    .solution-maintenance {
+
+        width:
+            100%;
+
+        overflow:
+            hidden;
+
+        padding:
+            90px 0 75px;
+
+    }
+
+
+    /* ======================================================
+       CONTAINER
+    ====================================================== */
+
+    .solution-maintenance > .container {
+
+        width:
+            92%;
+
+        max-width:
+            500px;
+
+    }
+
+
+    /* ======================================================
+       INTRO
+    ====================================================== */
+
+    .maintenance-intro {
+
+        margin-bottom:
+            42px;
+
+    }
+
+
+    /* ======================================================
+       SHOWCASE
+    ====================================================== */
+
+    .maintenance-showcase {
+
+        padding:
+            14px;
+
+        border-radius:
+            18px;
+
+    }
+
+
+    /* ======================================================
+       DASHBOARD HEADER
+    ====================================================== */
+
+    .maintenance-dashboard-top {
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+        gap:
+            14px;
+
+    }
+
+    .maintenance-dashboard-brand {
+
+        gap:
+            10px;
+
+    }
+
+    .maintenance-dashboard-icon {
+
+        width:
+            38px;
+
+        height:
+            38px;
+
+        border-radius:
+            10px;
+
+    }
+
+    .maintenance-dashboard-brand span {
+
+        font-size:
+            .35rem;
+
+    }
+
+    .maintenance-dashboard-brand strong {
+
+        font-size:
+            .72rem;
+
+    }
+
+    .maintenance-system-status {
+
+        align-self:
+            flex-start;
+
+    }
+
+
+    /* ======================================================
+       WORKSPACE
+    ====================================================== */
+
+    .maintenance-workspace {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            8px;
+
+    }
+
+
+    /* ======================================================
+       HEALTH
+    ====================================================== */
+
+    .maintenance-health-panel {
+
+        min-height:
+            340px;
+
+    }
+
+
+    /* ======================================================
+       MONITOR
+    ====================================================== */
+
+    .maintenance-monitor-panel {
+
+        min-height:
+            370px;
+
+    }
+
+    .maintenance-chart {
+
+        min-height:
+            275px;
+
+    }
+
+
+    /* ======================================================
+       SECURITY
+    ====================================================== */
+
+    .maintenance-security-panel {
+
+        min-height:
+            330px;
+
+    }
+
+
+    /* ======================================================
+       PIPELINE
+    ====================================================== */
+
+    .maintenance-pipeline {
+
+        padding:
+            14px;
+
+        border-radius:
+            13px;
+
+    }
+
+    .maintenance-pipeline-heading {
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+        gap:
+            10px;
+
+    }
+
+    .maintenance-pipeline-flow {
+
+        flex-direction:
+            column;
+
+        align-items:
+            stretch;
+
+        gap:
+            10px;
+
+    }
+
+    .maintenance-pipeline-step {
+
+        flex:
+            none;
+
+        min-height:
+            42px;
+
+    }
+
+    .maintenance-pipeline-line {
+
+        flex:
+            none;
+
+        width:
+            1px;
+
+        height:
+            15px;
+
+        margin:
+            -2px 0 -2px 15px;
+
+    }
+
+
+    /* ======================================================
+       SERVICES
+    ====================================================== */
+
+    .maintenance-services {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            11px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   SMALL MOBILE
+========================================================== */
+
+@media (max-width: 480px) {
+
+    .solution-maintenance {
+
+        padding:
+            84px 0 70px;
+
+    }
+
+    .solution-maintenance > .container {
+
+        width:
+            91%;
+
+    }
+
+    .maintenance-showcase {
+
+        padding:
+            12px;
+
+    }
+
+    .maintenance-chart {
+
+        min-height:
+            255px;
+
+    }
+
+    .maintenance-health-ring {
+
+        width:
+            140px;
+
+        height:
+            140px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   VERY SMALL MOBILE
+========================================================== */
+
+@media (max-width: 420px) {
+
+    .solution-maintenance > .container {
+
+        width:
+            92%;
+
+    }
+
+    .maintenance-heading h2 {
+
+        font-size:
+            2.35rem;
+
+    }
+
+    .maintenance-description p {
+
+        font-size:
+            .79rem;
+
+    }
+
+    .maintenance-showcase {
+
+        padding:
+            10px;
+
+        border-radius:
+            16px;
+
+    }
+
+    .maintenance-chart {
+
+        min-height:
+            235px;
+
+    }
+
+    .maintenance-health-ring {
+
+        width:
+            130px;
+
+        height:
+            130px;
+
+    }
+
+    .maintenance-health-ring strong {
+
+        font-size:
+            2.15rem;
+
+    }
+
+}
+
+
+/* ==========================================================
+   EXTRA SMALL
+========================================================== */
+
+@media (max-width: 360px) {
+
+    .solution-maintenance > .container {
+
+        width:
+            92%;
+
+    }
+
+    .maintenance-heading h2 {
+
+        font-size:
+            2.15rem;
+
+    }
+
+    .maintenance-chart {
+
+        min-height:
+            220px;
+
+    }
+
+    .maintenance-health-list div,
+    .maintenance-security-list div {
+
+        padding:
+            8px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   LANDSCAPE MOBILE
+========================================================== */
+
+@media (max-height: 600px)
+and (orientation: landscape) {
+
+    .solution-maintenance {
+
+        padding-top:
+            80px;
+
+        padding-bottom:
+            70px;
+
+    }
+
+    .maintenance-chart {
+
+        min-height:
+            260px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   TOUCH DEVICES
+========================================================== */
+
+@media (hover: none) {
+
+    .maintenance-service-card:hover {
+
+        transform:
+            none;
+
+    }
+
+    .maintenance-service-card:hover
+    .maintenance-service-icon {
+
+        transform:
+            none;
+
+    }
+
+}
+
+
+/* ==========================================================
+   OVERFLOW PROTECTION
+========================================================== */
+
+.solution-maintenance,
+.maintenance-bg,
+.maintenance-showcase,
+.maintenance-services {
+
+    max-width:
+        100%;
+
+}
+
+
+/* ==========================================================
+   REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .solution-maintenance *,
+    .solution-maintenance *::before,
+    .solution-maintenance *::after {
+
+        animation:
+            none !important;
+
+        transition:
+            none !important;
+
+    }
+
+}

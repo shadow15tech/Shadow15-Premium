@@ -1,0 +1,649 @@
+/* ==========================================================
+   SHADOW15 — SEO / LOCAL SEO
+   06-RESPONSIVE.CSS
+========================================================== */
+
+
+/* ==========================================================
+   01 — LARGE DESKTOP
+========================================================== */
+
+@media (min-width: 1440px) {
+
+    .solution-seo > .container {
+
+        width:
+            min(90%, 1480px);
+
+    }
+
+    .seo-showcase {
+
+        padding:
+            30px;
+
+    }
+
+    .seo-workspace {
+
+        gap:
+            15px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   02 — LAPTOP
+========================================================== */
+
+@media (max-width: 1200px) {
+
+    .solution-seo > .container {
+
+        width:
+            min(94%, 1180px);
+
+    }
+
+    .seo-intro-grid {
+
+        gap:
+            55px;
+
+    }
+
+    .seo-showcase {
+
+        padding:
+            24px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   03 — SMALL LAPTOP
+========================================================== */
+
+@media (max-width: 1050px) {
+
+    .seo-intro-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            25px;
+
+    }
+
+    .seo-description {
+
+        max-width:
+            650px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   04 — TABLET
+========================================================== */
+
+@media (max-width: 900px) {
+
+    .solution-seo {
+
+        padding:
+            115px 0 95px;
+
+    }
+
+    .solution-seo > .container {
+
+        width:
+            92%;
+
+    }
+
+    .seo-showcase {
+
+        padding:
+            21px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   05 — TABLET PORTRAIT
+========================================================== */
+
+@media (max-width: 768px) {
+
+    .solution-seo {
+
+        padding:
+            105px 0 85px;
+
+    }
+
+    .seo-intro {
+
+        margin-bottom:
+            50px;
+
+    }
+
+    .seo-showcase {
+
+        margin-top:
+            8px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   06 — MOBILE
+========================================================== */
+
+@media (max-width: 600px) {
+
+    .solution-seo {
+
+        width:
+            100%;
+
+        overflow:
+            hidden;
+
+        padding:
+            90px 0 75px;
+
+    }
+
+
+    /* ======================================================
+       CONTAINER
+    ====================================================== */
+
+    .solution-seo > .container {
+
+        width:
+            92%;
+
+        max-width:
+            500px;
+
+    }
+
+
+    /* ======================================================
+       INTRO
+    ====================================================== */
+
+    .seo-intro {
+
+        margin-bottom:
+            42px;
+
+    }
+
+
+    /* ======================================================
+       SHOWCASE
+    ====================================================== */
+
+    .seo-showcase {
+
+        padding:
+            14px;
+
+        border-radius:
+            18px;
+
+    }
+
+
+    /* ======================================================
+       DASHBOARD HEADER
+    ====================================================== */
+
+    .seo-dashboard-top {
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+        gap:
+            14px;
+
+    }
+
+    .seo-dashboard-brand {
+
+        gap:
+            10px;
+
+    }
+
+    .seo-dashboard-icon {
+
+        width:
+            38px;
+
+        height:
+            38px;
+
+        border-radius:
+            10px;
+
+    }
+
+    .seo-dashboard-brand span {
+
+        font-size:
+            .35rem;
+
+    }
+
+    .seo-dashboard-brand strong {
+
+        font-size:
+            .72rem;
+
+    }
+
+    .seo-system-status {
+
+        align-self:
+            flex-start;
+
+    }
+
+
+    /* ======================================================
+       WORKSPACE
+    ====================================================== */
+
+    .seo-workspace {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            8px;
+
+    }
+
+
+    /* ======================================================
+       RANKING
+    ====================================================== */
+
+    .seo-ranking-panel {
+
+        min-height:
+            340px;
+
+    }
+
+
+    /* ======================================================
+       ANALYTICS
+    ====================================================== */
+
+    .seo-analytics-panel {
+
+        min-height:
+            370px;
+
+    }
+
+    .seo-chart {
+
+        min-height:
+            275px;
+
+    }
+
+
+    /* ======================================================
+       LOCAL SEO
+    ====================================================== */
+
+    .seo-local-panel {
+
+        min-height:
+            330px;
+
+    }
+
+
+    /* ======================================================
+       PIPELINE
+    ====================================================== */
+
+    .seo-pipeline {
+
+        padding:
+            14px;
+
+        border-radius:
+            13px;
+
+    }
+
+    .seo-pipeline-heading {
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+        gap:
+            10px;
+
+    }
+
+    .seo-pipeline-flow {
+
+        flex-direction:
+            column;
+
+        align-items:
+            stretch;
+
+        gap:
+            10px;
+
+    }
+
+    .seo-pipeline-step {
+
+        flex:
+            none;
+
+        min-height:
+            42px;
+
+    }
+
+    .seo-pipeline-line {
+
+        flex:
+            none;
+
+        width:
+            1px;
+
+        height:
+            15px;
+
+        margin:
+            -2px 0 -2px 15px;
+
+    }
+
+
+    /* ======================================================
+       SERVICES
+    ====================================================== */
+
+    .seo-services {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            11px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   07 — SMALL MOBILE
+========================================================== */
+
+@media (max-width: 480px) {
+
+    .solution-seo {
+
+        padding:
+            84px 0 70px;
+
+    }
+
+    .solution-seo > .container {
+
+        width:
+            91%;
+
+    }
+
+    .seo-showcase {
+
+        padding:
+            12px;
+
+    }
+
+    .seo-chart {
+
+        min-height:
+            255px;
+
+    }
+
+    .seo-ranking-ring {
+
+        width:
+            140px;
+
+        height:
+            140px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   08 — VERY SMALL MOBILE
+========================================================== */
+
+@media (max-width: 420px) {
+
+    .solution-seo > .container {
+
+        width:
+            92%;
+
+    }
+
+    .seo-heading h2 {
+
+        font-size:
+            2.35rem;
+
+    }
+
+    .seo-description p {
+
+        font-size:
+            .79rem;
+
+    }
+
+    .seo-showcase {
+
+        padding:
+            10px;
+
+        border-radius:
+            16px;
+
+    }
+
+    .seo-chart {
+
+        min-height:
+            235px;
+
+    }
+
+    .seo-ranking-ring {
+
+        width:
+            130px;
+
+        height:
+            130px;
+
+    }
+
+    .seo-ranking-ring strong {
+
+        font-size:
+            2.15rem;
+
+    }
+
+}
+
+
+/* ==========================================================
+   09 — EXTRA SMALL
+========================================================== */
+
+@media (max-width: 360px) {
+
+    .solution-seo > .container {
+
+        width:
+            92%;
+
+    }
+
+    .seo-heading h2 {
+
+        font-size:
+            2.15rem;
+
+    }
+
+    .seo-chart {
+
+        min-height:
+            220px;
+
+    }
+
+    .seo-ranking-list div,
+    .seo-local-list div {
+
+        padding:
+            8px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   10 — LANDSCAPE MOBILE
+========================================================== */
+
+@media (max-height: 600px)
+and (orientation: landscape) {
+
+    .solution-seo {
+
+        padding-top:
+            80px;
+
+        padding-bottom:
+            70px;
+
+    }
+
+    .seo-chart {
+
+        min-height:
+            260px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   11 — TOUCH DEVICES
+========================================================== */
+
+@media (hover: none) {
+
+    .seo-service-card:hover {
+
+        transform:
+            none;
+
+    }
+
+    .seo-service-card:hover
+    .seo-service-icon {
+
+        transform:
+            none;
+
+    }
+
+}
+
+
+/* ==========================================================
+   12 — OVERFLOW PROTECTION
+========================================================== */
+
+.solution-seo,
+.seo-bg,
+.seo-showcase,
+.seo-services {
+
+    max-width:
+        100%;
+
+}
+
+
+/* ==========================================================
+   13 — REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .solution-seo *,
+    .solution-seo *::before,
+    .solution-seo *::after {
+
+        animation:
+            none !important;
+
+        transition:
+            none !important;
+
+    }
+
+}

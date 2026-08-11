@@ -1,0 +1,190 @@
+/* ==========================================================
+   SHADOW15 — GRAPHIC DESIGN
+   07-FINAL.CSS
+   Final polish / interaction / accessibility
+========================================================== */
+
+
+/* ==========================================================
+   01 — FINAL SECTION SPACING
+========================================================== */
+
+.solution-graphic {
+
+    scroll-margin-top:
+        90px;
+
+}
+
+
+/* ==========================================================
+   02 — INTERACTIVE ELEMENTS
+========================================================== */
+
+.graphic-link,
+.graphic-canvas-tools span,
+.graphic-service-card {
+
+    -webkit-tap-highlight-color:
+        transparent;
+
+}
+
+
+/* ==========================================================
+   03 — FOCUS STATES
+========================================================== */
+
+.graphic-link:focus-visible,
+.graphic-canvas-tools span:focus-visible {
+
+    outline:
+        1px solid
+        rgba(34,211,238,.65);
+
+    outline-offset:
+        4px;
+
+    border-radius:
+        6px;
+
+}
+
+
+/* ==========================================================
+   04 — CARD ACTIVE STATE
+========================================================== */
+
+.graphic-service-card:active {
+
+    transform:
+        translateY(-5px)
+        scale(.995);
+
+}
+
+
+/* ==========================================================
+   05 — ICON ACTIVE
+========================================================== */
+
+.graphic-canvas-tools span:active {
+
+    transform:
+        scale(.94);
+
+}
+
+
+/* ==========================================================
+   06 — ARTBOARD DEPTH
+========================================================== */
+
+.graphic-artboard {
+
+    transform-style:
+        preserve-3d;
+
+}
+
+
+/* ==========================================================
+   07 — CREATIVE SHAPES
+========================================================== */
+
+.graphic-artboard-circle,
+.graphic-artboard-square {
+
+    pointer-events:
+        none;
+
+}
+
+
+/* ==========================================================
+   08 — IMAGE RENDERING
+========================================================== */
+
+.graphic-showcase img {
+
+    max-width:
+        100%;
+
+    height:
+        auto;
+
+    display:
+        block;
+
+}
+
+
+/* ==========================================================
+   09 — SELECTION
+========================================================== */
+
+.solution-graphic ::selection {
+
+    color:
+        #f5f7fa;
+
+    background:
+        rgba(192,132,252,.22);
+
+}
+
+
+/* ==========================================================
+   10 — PRINT
+========================================================== */
+
+@media print {
+
+    .graphic-bg,
+    .graphic-orbit,
+    .graphic-glow {
+
+        display:
+            none !important;
+
+    }
+
+    .graphic-showcase,
+    .graphic-service-card {
+
+        box-shadow:
+            none !important;
+
+        backdrop-filter:
+            none !important;
+
+        -webkit-backdrop-filter:
+            none !important;
+
+    }
+
+}
+
+
+/* ==========================================================
+   11 — REDUCED MOTION FINAL OVERRIDE
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .solution-graphic *,
+    .solution-graphic *::before,
+    .solution-graphic *::after {
+
+        animation:
+            none !important;
+
+        transition:
+            none !important;
+
+        scroll-behavior:
+            auto !important;
+
+    }
+
+}

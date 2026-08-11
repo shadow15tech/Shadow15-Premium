@@ -1,0 +1,229 @@
+/* ==========================================================
+   SHADOW15 — WEBSITE MAINTENANCE
+   07-FINAL.CSS
+   Final polish / accessibility / interaction
+========================================================== */
+
+
+/* ==========================================================
+   01 — SECTION ANCHOR
+========================================================== */
+
+.solution-maintenance {
+
+    scroll-margin-top:
+        90px;
+
+}
+
+
+/* ==========================================================
+   02 — INTERACTIVE ELEMENTS
+========================================================== */
+
+.maintenance-link,
+.maintenance-service-card,
+.maintenance-dashboard-icon,
+.maintenance-security-icon,
+.maintenance-pipeline-step {
+
+    -webkit-tap-highlight-color:
+        transparent;
+
+}
+
+
+/* ==========================================================
+   03 — FOCUS STATES
+========================================================== */
+
+.maintenance-link:focus-visible {
+
+    outline:
+        1px solid
+        rgba(34,211,238,.65);
+
+    outline-offset:
+        5px;
+
+    border-radius:
+        5px;
+
+}
+
+
+/* ==========================================================
+   04 — ACTIVE CARD
+========================================================== */
+
+.maintenance-service-card:active {
+
+    transform:
+        translateY(-5px)
+        scale(.995);
+
+}
+
+
+/* ==========================================================
+   05 — SECURITY STATUS
+========================================================== */
+
+.maintenance-security-status {
+
+    transition:
+        border-color .3s ease,
+        background .3s ease;
+
+}
+
+
+.maintenance-security-status:hover {
+
+    border-color:
+        rgba(34,197,94,.16);
+
+    background:
+        rgba(34,197,94,.03);
+
+}
+
+
+/* ==========================================================
+   06 — HEALTH LIST
+========================================================== */
+
+.maintenance-health-list div,
+.maintenance-security-list div {
+
+    transition:
+        border-color .3s ease,
+        background .3s ease,
+        transform .3s ease;
+
+}
+
+
+.maintenance-health-list div:hover,
+.maintenance-security-list div:hover {
+
+    border-color:
+        rgba(34,211,238,.10);
+
+    background:
+        rgba(34,211,238,.018);
+
+    transform:
+        translateX(2px);
+
+}
+
+
+/* ==========================================================
+   07 — PIPELINE STEP
+========================================================== */
+
+.maintenance-pipeline-step {
+
+    transition:
+        transform .35s
+        cubic-bezier(.22,1,.36,1);
+
+}
+
+
+.maintenance-pipeline-step:hover {
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+/* ==========================================================
+   08 — IMAGE SAFETY
+========================================================== */
+
+.solution-maintenance img {
+
+    display:
+        block;
+
+    max-width:
+        100%;
+
+    height:
+        auto;
+
+}
+
+
+/* ==========================================================
+   09 — SELECTION
+========================================================== */
+
+.solution-maintenance ::selection {
+
+    color:
+        #f5f7fa;
+
+    background:
+        rgba(34,211,238,.20);
+
+}
+
+
+/* ==========================================================
+   10 — PRINT
+========================================================== */
+
+@media print {
+
+    .maintenance-bg,
+    .maintenance-glow,
+    .maintenance-orbit {
+
+        display:
+            none !important;
+
+    }
+
+    .maintenance-showcase,
+    .maintenance-service-card {
+
+        box-shadow:
+            none !important;
+
+        backdrop-filter:
+            none !important;
+
+        -webkit-backdrop-filter:
+            none !important;
+
+    }
+
+}
+
+
+/* ==========================================================
+   11 — REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .solution-maintenance *,
+    .solution-maintenance *::before,
+    .solution-maintenance *::after {
+
+        animation:
+            none !important;
+
+        transition:
+            none !important;
+
+        scroll-behavior:
+            auto !important;
+
+    }
+
+}
