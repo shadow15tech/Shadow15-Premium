@@ -208,32 +208,134 @@
 
 
 
-
-@import url("./05-sections/solutions/01-background.css");
-
-@import url("./05-sections/solutions/02-heading.css");
-
-@import url("./05-sections/solutions/03-layout.css");
-
-@import url("./05-sections/solutions/04-components.css");
-
-@import url("./05-sections/solutions/05-animation.css");
-
-@import url("./05-sections/solutions/06-responsive.css");
+/*==========================================================
+                    SOLUTIONS PAGE
+==========================================================*/
 
 
 
-@import url("./05-sections/services/01-background.css");
+/*==========================================================
+                    HERO SECTION SOLUTION PAGE
+==========================================================*/
 
-@import url("./05-sections/services/02-heading.css");
+@import url("./05-sections/solutions page/hero/01-background.css");
 
-@import url("./05-sections/services/03-layout.css");
+@import url("./05-sections/solutions page/hero/02-heading.css");
 
-@import url("./05-sections/services/04-components.css");
+@import url("./05-sections/solutions page/hero/03-layout.css");
 
-@import url("./05-sections/services/05-animation.css");
+@import url("./05-sections/solutions page/hero/04-components.css");
 
-@import url("./05-sections/services/06-responsive.css");
+@import url("./05-sections/solutions page/hero/05-animation.css");
+
+@import url("./05-sections/solutions page/hero/06-responsive.css");
+
+
+/*==========================================================
+                    DEVELOPMENT SECTION SOLUTION PAGE
+==========================================================*/
+
+
+@import url("./05-sections/solutions page/development/01-background.css");
+
+@import url("./05-sections/solutions page/development/02-heading.css");
+
+@import url("./05-sections/solutions page/development/03-showcase.css");
+
+@import url("./05-sections/solutions page/development/04-service-cards.css");
+
+@import url("./05-sections/solutions page/development/05-animation.css");
+
+@import url("./05-sections/solutions page/development/06-responsive.css");
+
+
+
+/*==========================================================
+                    AI-AUTOMATIONS SECTION SOLUTION PAGE 
+==========================================================*/
+
+
+
+@import url("./05-sections/solutions page/ai-automations/01-background.css");
+
+@import url("./05-sections/solutions page/ai-automations/02-heading.css");
+
+@import url("./05-sections/solutions page/ai-automations/03-system.css");
+
+@import url("./05-sections/solutions page/ai-automations/04-service-cards.css");
+
+@import url("./05-sections/solutions page/ai-automations/05-animation.css");
+
+@import url("./05-sections/solutions page/ai-automations/06-responsive.css");
+
+
+
+
+
+
+/*==========================================================
+                SEO AND VISIBILITY  SECTION SOLUTION PAGE 
+==========================================================*/
+
+@import url("./05-sections/solutions page/seo and visibility/01-background.css");
+
+@import url("./05-sections/solutions page/seo and visibility/02-heading.css");
+
+@import url("./05-sections/solutions page/seo and visibility/03-showcase.css");
+
+@import url("./05-sections/solutions page/seo and visibility/04-service-cards.css");
+
+@import url("./05-sections/solutions page/seo and visibility/05-animation.css");
+
+@import url("./05-sections/solutions page/seo and visibility/06-responsive.css");
+
+
+
+
+
+
+/*==========================================================
+                APP DEVELOPMENT  SECTION SOLUTION PAGE 
+==========================================================*/
+
+@import url("./05-sections/solutions page/app development/01-background.css");
+
+@import url("./05-sections/solutions page/app development/02-heading.css");
+
+@import url("./05-sections/solutions page/app development/03-product-showcase.css");
+
+@import url("./05-sections/solutions page/app development/04-service-cards.css");
+
+@import url("./05-sections/solutions page/app development/05-animation.css");
+
+@import url("./05-sections/solutions page/app development/06-responsive.css");
+
+
+
+
+/*==========================================================
+                ADS PROMOTION  SECTION SOLUTION PAGE 
+==========================================================*/
+
+@import url("./05-sections/solutions page/ads promotion/01-background.css");
+
+@import url("./05-sections/solutions page/ads promotion/02-heading.css");
+
+@import url("./05-sections/solutions page/ads promotion/03-campaign-showcase.css");
+
+@import url("./05-sections/solutions page/ads promotion/04-service-cards.css");
+
+@import url("./05-sections/solutions page/ads promotion/05-animation.css");
+
+@import url("./05-sections/solutions page/ads promotion/06-responsive.css");
+
+
+
+
+
+
+
+
 
 
 
@@ -469,6 +571,8 @@
 @import url("./About-us-page/05-animation.css");
 
 @import url("./About-us-page/06-responsive.css");
+
+
 
 
 

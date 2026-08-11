@@ -1,0 +1,730 @@
+/* ==========================================================
+   SHADOW15 — APP DEVELOPMENT
+   02-HEADING.CSS
+========================================================== */
+
+
+/* ==========================================================
+   01 — INTRO
+========================================================== */
+
+.app-intro {
+
+    position: relative;
+
+    z-index: 5;
+
+    width: 100%;
+
+    margin-bottom: 72px;
+
+}
+
+
+/* ==========================================================
+   02 — LABEL
+========================================================== */
+
+.app-label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    width: fit-content;
+
+    color: #8ea0b5;
+
+    font-size: .63rem;
+
+    font-weight: 800;
+
+    letter-spacing: .17em;
+
+    line-height: 1;
+
+    text-transform: uppercase;
+
+}
+
+
+/* ==========================================================
+   03 — LABEL NUMBER
+========================================================== */
+
+.app-label-number {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 34px;
+
+    height: 25px;
+
+    padding: 0 8px;
+
+    border:
+        1px solid
+        rgba(34,211,238,.22);
+
+    border-radius: 999px;
+
+    color: #67e8f9;
+
+    background:
+        rgba(34,211,238,.045);
+
+    font-size: .56rem;
+
+    letter-spacing: .10em;
+
+    box-shadow:
+
+        inset 0 1px 0
+        rgba(255,255,255,.04),
+
+        0 0 20px
+        rgba(34,211,238,.025);
+
+}
+
+
+/* ==========================================================
+   04 — LABEL LINE
+========================================================== */
+
+.app-label-line {
+
+    width: 48px;
+
+    height: 1px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+
+            rgba(34,211,238,.50),
+
+            rgba(34,211,238,.04)
+        );
+
+}
+
+
+/* ==========================================================
+   05 — INTRO GRID
+========================================================== */
+
+.app-intro-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0,1.15fr)
+        minmax(280px,.85fr);
+
+    align-items: end;
+
+    gap: 80px;
+
+    margin-top: 28px;
+
+}
+
+
+/* ==========================================================
+   06 — MAIN HEADING
+========================================================== */
+
+.app-heading h2 {
+
+    max-width: 820px;
+
+    margin: 0;
+
+    color: #f3f7fb;
+
+    font-size:
+        clamp(
+            3.2rem,
+            5.5vw,
+            6rem
+        );
+
+    font-weight: 800;
+
+    line-height: .91;
+
+    letter-spacing: -.065em;
+
+    text-wrap: balance;
+
+}
+
+
+/* ==========================================================
+   07 — HEADING ACCENT
+========================================================== */
+
+.app-heading h2 span {
+
+    display: block;
+
+    width: fit-content;
+
+    margin-top: 10px;
+
+    background:
+
+        linear-gradient(
+            100deg,
+
+            #67e8f9 0%,
+
+            #22d3ee 35%,
+
+            #38bdf8 68%,
+
+            #818cf8 100%
+        );
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    color: transparent;
+
+    -webkit-text-fill-color: transparent;
+
+    filter:
+
+        drop-shadow(
+            0 10px 30px
+            rgba(34,211,238,.08)
+        );
+
+}
+
+
+/* ==========================================================
+   08 — ACCENT UNDERLINE
+========================================================== */
+
+.app-heading h2 span::after {
+
+    content: "";
+
+    display: block;
+
+    width: 92px;
+
+    height: 2px;
+
+    margin-top: 17px;
+
+    border-radius: 999px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+
+            #22d3ee,
+
+            #818cf8,
+
+            transparent
+        );
+
+    opacity: .75;
+
+}
+
+
+/* ==========================================================
+   09 — DESCRIPTION
+========================================================== */
+
+.app-description {
+
+    max-width: 500px;
+
+    padding-bottom: 4px;
+
+}
+
+
+/* ==========================================================
+   10 — DESCRIPTION TEXT
+========================================================== */
+
+.app-description p {
+
+    margin: 0;
+
+    color: #9eafc1;
+
+    font-size:
+        clamp(
+            .88rem,
+            1.1vw,
+            1rem
+        );
+
+    font-weight: 400;
+
+    line-height: 1.85;
+
+}
+
+
+/* ==========================================================
+   11 — CTA
+========================================================== */
+
+.app-link {
+
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 27px;
+
+    padding-bottom: 7px;
+
+    color: #dbe8f3;
+
+    font-size: .7rem;
+
+    font-weight: 750;
+
+    letter-spacing: .03em;
+
+    transition:
+
+        color .3s ease,
+
+        transform .35s
+        cubic-bezier(.22,1,.36,1);
+
+}
+
+
+/* ==========================================================
+   12 — CTA LINE
+========================================================== */
+
+.app-link::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    width: 100%;
+
+    height: 1px;
+
+    transform: scaleX(.35);
+
+    transform-origin: left center;
+
+    background:
+
+        linear-gradient(
+            90deg,
+
+            #22d3ee,
+
+            #818cf8
+        );
+
+    transition:
+
+        transform .4s
+        cubic-bezier(.22,1,.36,1);
+
+}
+
+
+/* ==========================================================
+   13 — CTA ICON
+========================================================== */
+
+.app-link i {
+
+    color: #22d3ee;
+
+    font-size: .62rem;
+
+    transition:
+
+        transform .35s
+        cubic-bezier(.22,1,.36,1);
+
+}
+
+
+/* ==========================================================
+   14 — CTA HOVER
+========================================================== */
+
+.app-link:hover {
+
+    color: #67e8f9;
+
+    transform:
+        translateX(4px);
+
+}
+
+
+.app-link:hover::after {
+
+    transform:
+        scaleX(1);
+
+}
+
+
+.app-link:hover i {
+
+    transform:
+        translate(3px,-3px);
+
+}
+
+
+/* ==========================================================
+   15 — INTRO SEPARATOR
+========================================================== */
+
+.app-intro::after {
+
+    content: "";
+
+    display: block;
+
+    width: 100%;
+
+    height: 1px;
+
+    margin-top: 62px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+
+            rgba(148,163,184,.14),
+
+            rgba(34,211,238,.10) 42%,
+
+            rgba(129,140,248,.07) 65%,
+
+            transparent
+        );
+
+}
+
+
+/* ==========================================================
+   16 — LARGE DESKTOP
+========================================================== */
+
+@media (min-width: 1440px) {
+
+    .app-intro {
+
+        margin-bottom:
+            84px;
+
+    }
+
+    .app-intro-grid {
+
+        gap:
+            110px;
+
+        margin-top:
+            32px;
+
+    }
+
+    .app-heading h2 {
+
+        font-size:
+            clamp(
+                4.8rem,
+                5.2vw,
+                6.5rem
+            );
+
+    }
+
+}
+
+
+/* ==========================================================
+   17 — LAPTOP
+========================================================== */
+
+@media (max-width: 1200px) {
+
+    .app-intro-grid {
+
+        grid-template-columns:
+            minmax(0,1.05fr)
+            minmax(260px,.95fr);
+
+        gap:
+            55px;
+
+    }
+
+    .app-heading h2 {
+
+        font-size:
+            clamp(
+                3.1rem,
+                5.3vw,
+                5.2rem
+            );
+
+    }
+
+}
+
+
+/* ==========================================================
+   18 — TABLET
+========================================================== */
+
+@media (max-width: 850px) {
+
+    .app-intro {
+
+        margin-bottom:
+            55px;
+
+    }
+
+    .app-intro-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            25px;
+
+        margin-top:
+            25px;
+
+    }
+
+    .app-heading h2 {
+
+        max-width:
+            700px;
+
+    }
+
+    .app-description {
+
+        max-width:
+            620px;
+
+    }
+
+    .app-intro::after {
+
+        margin-top:
+            45px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   19 — MOBILE
+========================================================== */
+
+@media (max-width: 600px) {
+
+    .app-intro {
+
+        margin-bottom:
+            42px;
+
+    }
+
+    .app-label {
+
+        gap:
+            9px;
+
+        font-size:
+            .54rem;
+
+        letter-spacing:
+            .13em;
+
+    }
+
+    .app-label-number {
+
+        min-width:
+            30px;
+
+        height:
+            23px;
+
+        font-size:
+            .50rem;
+
+    }
+
+    .app-label-line {
+
+        width:
+            30px;
+
+    }
+
+    .app-intro-grid {
+
+        gap:
+            22px;
+
+        margin-top:
+            22px;
+
+    }
+
+    .app-heading h2 {
+
+        font-size:
+            clamp(
+                2.55rem,
+                10.5vw,
+                3.5rem
+            );
+
+        line-height:
+            .95;
+
+        letter-spacing:
+            -.06em;
+
+    }
+
+    .app-heading h2 span {
+
+        margin-top:
+            7px;
+
+    }
+
+    .app-heading h2 span::after {
+
+        width:
+            58px;
+
+        height:
+            1px;
+
+        margin-top:
+            12px;
+
+    }
+
+    .app-description {
+
+        max-width:
+            390px;
+
+    }
+
+    .app-description p {
+
+        font-size:
+            .82rem;
+
+        line-height:
+            1.78;
+
+    }
+
+    .app-link {
+
+        margin-top:
+            23px;
+
+        font-size:
+            .66rem;
+
+    }
+
+    .app-intro::after {
+
+        margin-top:
+            38px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   20 — SMALL MOBILE
+========================================================== */
+
+@media (max-width: 420px) {
+
+    .app-heading h2 {
+
+        font-size:
+            2.35rem;
+
+    }
+
+    .app-description p {
+
+        font-size:
+            .79rem;
+
+    }
+
+}
+
+
+/* ==========================================================
+   21 — REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .app-link,
+    .app-link::after,
+    .app-link i {
+
+        transition:
+            none;
+
+    }
+
+}

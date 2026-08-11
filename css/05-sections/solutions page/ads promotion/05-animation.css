@@ -1,0 +1,1377 @@
+/* ==========================================================
+   SHADOW15 — ADS PROMOTION
+   05-ANIMATION.CSS
+========================================================== */
+
+
+/* ==========================================================
+   01 — MOTION VARIABLES
+========================================================== */
+
+.solution-ads {
+
+    --ads-ease:
+        cubic-bezier(.22,1,.36,1);
+
+}
+
+
+/* ==========================================================
+   02 — INTRO REVEAL
+========================================================== */
+
+.ads-intro {
+
+    animation:
+        adsIntroReveal
+        1s
+        var(--ads-ease)
+        both;
+
+}
+
+
+@keyframes adsIntroReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(32px);
+
+        filter:
+            blur(6px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+        filter:
+            blur(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   03 — LABEL
+========================================================== */
+
+.ads-label {
+
+    animation:
+        adsLabelReveal
+        .7s
+        var(--ads-ease)
+        .1s
+        both;
+
+}
+
+
+@keyframes adsLabelReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateX(-18px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateX(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   04 — HEADING
+========================================================== */
+
+.ads-heading h2 {
+
+    animation:
+        adsHeadingReveal
+        1s
+        var(--ads-ease)
+        .18s
+        both;
+
+}
+
+
+@keyframes adsHeadingReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(28px)
+            scale(.98);
+
+        filter:
+            blur(7px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+        filter:
+            blur(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   05 — GRADIENT FLOW
+========================================================== */
+
+.ads-heading h2 span {
+
+    animation:
+        adsGradientFlow
+        5s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes adsGradientFlow {
+
+    0%,
+    100% {
+
+        background-position:
+            0% 50%;
+
+    }
+
+    50% {
+
+        background-position:
+            100% 50%;
+
+    }
+
+}
+
+
+/* ==========================================================
+   06 — DESCRIPTION
+========================================================== */
+
+.ads-description {
+
+    animation:
+        adsDescriptionReveal
+        .8s
+        var(--ads-ease)
+        .38s
+        both;
+
+}
+
+
+@keyframes adsDescriptionReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   07 — SHOWCASE REVEAL
+========================================================== */
+
+.ads-showcase {
+
+    animation:
+        adsShowcaseReveal
+        1.1s
+        var(--ads-ease)
+        .32s
+        both;
+
+}
+
+
+@keyframes adsShowcaseReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(42px)
+            scale(.975);
+
+        filter:
+            blur(7px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+        filter:
+            blur(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   08 — AMBIENT BACKGROUND
+========================================================== */
+
+.ads-glow-left {
+
+    animation:
+        adsGlowLeft
+        8s
+        ease-in-out
+        infinite;
+
+}
+
+
+.ads-glow-right {
+
+    animation:
+        adsGlowRight
+        9s
+        ease-in-out
+        1.2s
+        infinite;
+
+}
+
+
+@keyframes adsGlowLeft {
+
+    0%,
+    100% {
+
+        transform:
+            translate3d(0,0,0)
+            scale(1);
+
+        opacity:
+            .55;
+
+    }
+
+    50% {
+
+        transform:
+            translate3d(35px,-25px,0)
+            scale(1.08);
+
+        opacity:
+            .78;
+
+    }
+
+}
+
+
+@keyframes adsGlowRight {
+
+    0%,
+    100% {
+
+        transform:
+            translate3d(0,0,0)
+            scale(1);
+
+        opacity:
+            .48;
+
+    }
+
+    50% {
+
+        transform:
+            translate3d(-30px,25px,0)
+            scale(1.1);
+
+        opacity:
+            .72;
+
+    }
+
+}
+
+
+/* ==========================================================
+   09 — ORBIT MOTION
+========================================================== */
+
+.ads-orbit-one {
+
+    animation:
+        adsOrbitOne
+        22s
+        linear
+        infinite;
+
+}
+
+
+.ads-orbit-two {
+
+    animation:
+        adsOrbitTwo
+        30s
+        linear
+        infinite;
+
+}
+
+
+@keyframes adsOrbitOne {
+
+    from {
+
+        transform:
+            translate(-50%,-50%)
+            rotate(-12deg);
+
+    }
+
+    to {
+
+        transform:
+            translate(-50%,-50%)
+            rotate(348deg);
+
+    }
+
+}
+
+
+@keyframes adsOrbitTwo {
+
+    from {
+
+        transform:
+            translate(-50%,-50%)
+            rotate(18deg);
+
+    }
+
+    to {
+
+        transform:
+            translate(-50%,-50%)
+            rotate(-342deg);
+
+    }
+
+}
+
+
+/* ==========================================================
+   10 — ORBIT LIGHT PULSE
+========================================================== */
+
+.ads-orbit-one::before,
+.ads-orbit-two::before {
+
+    animation:
+        adsOrbitPulse
+        2.4s
+        ease-in-out
+        infinite;
+
+}
+
+
+.ads-orbit-two::before {
+
+    animation-delay:
+        .8s;
+
+}
+
+
+@keyframes adsOrbitPulse {
+
+    0%,
+    100% {
+
+        opacity:
+            .45;
+
+        box-shadow:
+            0 0 8px
+            rgba(34,211,238,.35);
+
+    }
+
+    50% {
+
+        opacity:
+            1;
+
+        box-shadow:
+            0 0 20px
+            rgba(34,211,238,.75);
+
+    }
+
+}
+
+
+/* ==========================================================
+   11 — LIVE STATUS PULSE
+========================================================== */
+
+.ads-status-dot,
+.ads-campaign-live {
+
+    animation:
+        adsLivePulse
+        1.8s
+        ease-out
+        infinite;
+
+}
+
+
+@keyframes adsLivePulse {
+
+    0% {
+
+        box-shadow:
+            0 0 0 0
+            rgba(74,222,128,.48);
+
+    }
+
+    70% {
+
+        box-shadow:
+            0 0 0 9px
+            rgba(74,222,128,0);
+
+    }
+
+    100% {
+
+        box-shadow:
+            0 0 0 0
+            rgba(74,222,128,0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   12 — METRIC REVEAL
+========================================================== */
+
+.ads-metric {
+
+    opacity:
+        0;
+
+    animation:
+        adsMetricReveal
+        .75s
+        var(--ads-ease)
+        both;
+
+}
+
+
+.ads-metric:nth-child(1) {
+
+    animation-delay:
+        .55s;
+
+}
+
+
+.ads-metric:nth-child(2) {
+
+    animation-delay:
+        .65s;
+
+}
+
+
+.ads-metric:nth-child(3) {
+
+    animation-delay:
+        .75s;
+
+}
+
+
+.ads-metric:nth-child(4) {
+
+    animation-delay:
+        .85s;
+
+}
+
+
+@keyframes adsMetricReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(20px)
+            scale(.97);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+/* ==========================================================
+   13 — METRIC LIGHT
+========================================================== */
+
+.ads-metric-highlight::before {
+
+    animation:
+        adsMetricGlow
+        4s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes adsMetricGlow {
+
+    0%,
+    100% {
+
+        opacity:
+            .45;
+
+        transform:
+            scale(.9);
+
+    }
+
+    50% {
+
+        opacity:
+            1;
+
+        transform:
+            scale(1.18);
+
+    }
+
+}
+
+
+/* ==========================================================
+   14 — CHART DRAW
+========================================================== */
+
+.ads-chart-line {
+
+    stroke-dasharray:
+        1000;
+
+    stroke-dashoffset:
+        1000;
+
+    animation:
+        adsChartDraw
+        2s
+        var(--ads-ease)
+        1.05s
+        forwards;
+
+}
+
+
+@keyframes adsChartDraw {
+
+    to {
+
+        stroke-dashoffset:
+            0;
+
+    }
+
+}
+
+
+/* ==========================================================
+   15 — CHART FILL
+========================================================== */
+
+.ads-chart-fill {
+
+    opacity:
+        0;
+
+    animation:
+        adsChartFill
+        1.2s
+        ease
+        1.35s
+        forwards;
+
+}
+
+
+@keyframes adsChartFill {
+
+    from {
+
+        opacity:
+            0;
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+    }
+
+}
+
+
+/* ==========================================================
+   16 — CHART POINTS
+========================================================== */
+
+.ads-chart-point {
+
+    opacity:
+        0;
+
+    transform-box:
+        fill-box;
+
+    transform-origin:
+        center;
+
+    transform:
+        scale(0);
+
+    animation:
+        adsChartPoint
+        .45s
+        var(--ads-ease)
+        forwards;
+
+}
+
+
+.point-one {
+
+    animation-delay:
+        1.55s;
+
+}
+
+
+.point-two {
+
+    animation-delay:
+        1.8s;
+
+}
+
+
+.point-three {
+
+    animation-delay:
+        2.05s;
+
+}
+
+
+@keyframes adsChartPoint {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            scale(0);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            scale(1);
+
+    }
+
+}
+
+
+/* ==========================================================
+   17 — CHART POINT PULSE
+========================================================== */
+
+.ads-chart-point {
+
+    animation-name:
+        adsChartPoint,
+        adsPointPulse;
+
+    animation-duration:
+        .45s,
+        2s;
+
+    animation-timing-function:
+        var(--ads-ease),
+        ease-in-out;
+
+    animation-iteration-count:
+        1,
+        infinite;
+
+    animation-fill-mode:
+        forwards,
+        none;
+
+}
+
+
+.point-one {
+
+    animation-delay:
+        1.55s,
+        2.5s;
+
+}
+
+
+.point-two {
+
+    animation-delay:
+        1.8s,
+        2.7s;
+
+}
+
+
+.point-three {
+
+    animation-delay:
+        2.05s,
+        2.9s;
+
+}
+
+
+@keyframes adsPointPulse {
+
+    0%,
+    100% {
+
+        filter:
+            drop-shadow(
+                0 0 4px
+                rgba(34,211,238,.35)
+            );
+
+    }
+
+    50% {
+
+        filter:
+            drop-shadow(
+                0 0 12px
+                rgba(34,211,238,.75)
+            );
+
+    }
+
+}
+
+
+/* ==========================================================
+   18 — FUNNEL REVEAL
+========================================================== */
+
+.ads-funnel-step {
+
+    opacity:
+        0;
+
+    animation:
+        adsFunnelReveal
+        .6s
+        var(--ads-ease)
+        both;
+
+}
+
+
+.ads-funnel-step:nth-child(1) {
+
+    animation-delay:
+        .9s;
+
+}
+
+
+.ads-funnel-step:nth-child(3) {
+
+    animation-delay:
+        1.05s;
+
+}
+
+
+.ads-funnel-step:nth-child(5) {
+
+    animation-delay:
+        1.20s;
+
+}
+
+
+.ads-funnel-step:nth-child(7) {
+
+    animation-delay:
+        1.35s;
+
+}
+
+
+@keyframes adsFunnelReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateX(18px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateX(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   19 — FUNNEL CONNECTORS
+========================================================== */
+
+.ads-funnel-line {
+
+    transform:
+        scaleY(0);
+
+    transform-origin:
+        top center;
+
+    animation:
+        adsFunnelLine
+        .45s
+        ease
+        forwards;
+
+}
+
+
+.ads-funnel-line:nth-child(2) {
+
+    animation-delay:
+        1s;
+
+}
+
+
+.ads-funnel-line:nth-child(4) {
+
+    animation-delay:
+        1.15s;
+
+}
+
+
+.ads-funnel-line:nth-child(6) {
+
+    animation-delay:
+        1.30s;
+
+}
+
+
+@keyframes adsFunnelLine {
+
+    to {
+
+        transform:
+            scaleY(1);
+
+    }
+
+}
+
+
+/* ==========================================================
+   20 — CAMPAIGN FOOTER
+========================================================== */
+
+.ads-campaign-footer {
+
+    animation:
+        adsFooterReveal
+        .8s
+        var(--ads-ease)
+        1.1s
+        both;
+
+}
+
+
+@keyframes adsFooterReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(15px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   21 — SERVICE CARDS
+========================================================== */
+
+.ads-service-card {
+
+    opacity:
+        0;
+
+    animation:
+        adsServiceReveal
+        .8s
+        var(--ads-ease)
+        both;
+
+}
+
+
+.ads-service-card:nth-child(1) {
+
+    animation-delay:
+        .15s;
+
+}
+
+
+.ads-service-card:nth-child(2) {
+
+    animation-delay:
+        .30s;
+
+}
+
+
+.ads-service-card:nth-child(3) {
+
+    animation-delay:
+        .45s;
+
+}
+
+
+@keyframes adsServiceReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(30px)
+            scale(.975);
+
+        filter:
+            blur(4px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+        filter:
+            blur(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   22 — SERVICE ICON FLOAT
+========================================================== */
+
+.ads-service-icon {
+
+    animation:
+        adsIconFloat
+        5s
+        ease-in-out
+        infinite;
+
+}
+
+
+.ads-service-card:nth-child(2)
+.ads-service-icon {
+
+    animation-delay:
+        .8s;
+
+}
+
+
+.ads-service-card:nth-child(3)
+.ads-service-icon {
+
+    animation-delay:
+        1.6s;
+
+}
+
+
+@keyframes adsIconFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-3px);
+
+    }
+
+}
+
+
+/* ==========================================================
+   23 — SERVICE AMBIENT
+========================================================== */
+
+.ads-service-card::before {
+
+    animation:
+        adsCardAmbient
+        6s
+        ease-in-out
+        infinite;
+
+}
+
+
+.ads-service-card:nth-child(2)::before {
+
+    animation-delay:
+        1s;
+
+}
+
+
+.ads-service-card:nth-child(3)::before {
+
+    animation-delay:
+        2s;
+
+}
+
+
+@keyframes adsCardAmbient {
+
+    0%,
+    100% {
+
+        opacity:
+            .30;
+
+    }
+
+    50% {
+
+        opacity:
+            .82;
+
+    }
+
+}
+
+
+/* ==========================================================
+   24 — FOOTNOTE
+========================================================== */
+
+.ads-footnote {
+
+    animation:
+        adsFootnoteReveal
+        .8s
+        var(--ads-ease)
+        .9s
+        both;
+
+}
+
+
+@keyframes adsFootnoteReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(18px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   25 — PERFORMANCE
+========================================================== */
+
+.ads-showcase,
+.ads-metric,
+.ads-chart-line,
+.ads-chart-fill,
+.ads-service-card,
+.ads-service-icon,
+.ads-glow,
+.ads-orbit {
+
+    will-change:
+        transform;
+
+}
+
+
+/* ==========================================================
+   26 — GPU OPTIMIZATION
+========================================================== */
+
+.ads-showcase,
+.ads-service-card,
+.ads-chart-line,
+.ads-chart-fill,
+.ads-orbit {
+
+    backface-visibility:
+        hidden;
+
+    -webkit-backface-visibility:
+        hidden;
+
+}
+
+
+/* ==========================================================
+   27 — TOUCH DEVICES
+========================================================== */
+
+@media (hover: none) {
+
+    .ads-platform:hover {
+
+        transform:
+            none;
+
+    }
+
+    .ads-service-card:hover {
+
+        transform:
+            none;
+
+    }
+
+    .ads-service-card:hover
+    .ads-service-icon {
+
+        transform:
+            none;
+
+    }
+
+}
+
+
+/* ==========================================================
+   28 — MOBILE
+========================================================== */
+
+@media (max-width: 600px) {
+
+    .ads-glow-left,
+    .ads-glow-right {
+
+        animation-duration:
+            10s;
+
+    }
+
+    .ads-orbit-one {
+
+        animation-duration:
+            28s;
+
+    }
+
+    .ads-orbit-two {
+
+        animation-duration:
+            35s;
+
+    }
+
+}
+
+
+/* ==========================================================
+   29 — REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .solution-ads *,
+    .solution-ads *::before,
+    .solution-ads *::after {
+
+        animation:
+            none !important;
+
+        transition:
+            none !important;
+
+    }
+
+}

@@ -1,0 +1,999 @@
+/* ==========================================================
+   SHADOW15 — SOLUTIONS PAGE
+   02-HEADING.CSS
+
+   PURPOSE:
+   • Eyebrow
+   • Hero typography
+   • Gradient heading
+   • Description
+   • CTA buttons
+   • Trust line
+
+   BACKGROUND:
+   01-background.css
+
+   LAYOUT:
+   03-layout.css
+
+   ANIMATION:
+   05-animation.css
+========================================================== */
+
+
+/* ==========================================================
+   01 — HERO CONTENT ROOT
+========================================================== */
+
+.solutions-hero-content {
+
+    position: relative;
+
+    z-index: 5;
+
+    max-width: 760px;
+
+}
+
+
+/* ==========================================================
+   02 — EYEBROW / CATEGORY LABEL
+========================================================== */
+
+.solutions-hero-tag {
+
+    position: relative;
+
+    width: fit-content;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 9px 15px;
+
+    border: 1px solid
+        rgba(34, 211, 238, .24);
+
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(34, 211, 238, .075),
+            rgba(15, 30, 47, .58)
+        );
+
+    color: #67e8f9;
+
+    font-size: .67rem;
+
+    font-weight: 800;
+
+    line-height: 1;
+
+    letter-spacing: .17em;
+
+    text-transform: uppercase;
+
+    white-space: nowrap;
+
+    box-shadow:
+
+        inset 0 1px 0
+        rgba(255,255,255,.055),
+
+        0 8px 30px
+        rgba(0,0,0,.12);
+
+    backdrop-filter:
+        blur(16px);
+
+    -webkit-backdrop-filter:
+        blur(16px);
+
+}
+
+
+/* ==========================================================
+   03 — EYEBROW TOP HIGHLIGHT
+========================================================== */
+
+.solutions-hero-tag::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 18%;
+
+    width: 38%;
+
+    height: 1px;
+
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(103,232,249,.65),
+            transparent
+        );
+
+    opacity: .8;
+
+}
+
+
+/* ==========================================================
+   04 — EYEBROW DOT
+========================================================== */
+
+.solutions-hero-tag-dot {
+
+    position: relative;
+
+    width: 7px;
+
+    height: 7px;
+
+    flex: 0 0 7px;
+
+    border-radius: 50%;
+
+    background:
+        #22d3ee;
+
+    box-shadow:
+
+        0 0 0 4px
+        rgba(34,211,238,.075),
+
+        0 0 16px
+        rgba(34,211,238,.85);
+
+}
+
+
+/* ==========================================================
+   05 — HERO TITLE
+========================================================== */
+
+.solutions-hero-title {
+
+    max-width: 780px;
+
+    margin-top: 30px;
+
+    color:
+        #f5f7fb;
+
+    font-family:
+        inherit;
+
+    font-size:
+        clamp(
+            3.5rem,
+            6vw,
+            6.4rem
+        );
+
+    font-weight: 800;
+
+    line-height: .94;
+
+    letter-spacing:
+        -.067em;
+
+    text-wrap: balance;
+
+}
+
+
+/* ==========================================================
+   06 — TITLE FIRST LINE
+========================================================== */
+
+.solutions-hero-title {
+
+    text-shadow:
+        0 1px 0
+        rgba(255,255,255,.025);
+
+}
+
+
+/* ==========================================================
+   07 — GRADIENT TITLE LINE
+========================================================== */
+
+.solutions-hero-title span {
+
+    position: relative;
+
+    display: block;
+
+    width: fit-content;
+
+    max-width: 100%;
+
+    margin-top: 12px;
+
+    background:
+
+        linear-gradient(
+            100deg,
+
+            #67e8f9 0%,
+
+            #22d3ee 38%,
+
+            #38bdf8 68%,
+
+            #60a5fa 100%
+        );
+
+    -webkit-background-clip:
+        text;
+
+    background-clip:
+        text;
+
+    color:
+        transparent;
+
+    -webkit-text-fill-color:
+        transparent;
+
+    filter:
+        drop-shadow(
+            0 8px 30px
+            rgba(34,211,238,.08)
+        );
+
+}
+
+
+/* ==========================================================
+   08 — TITLE ACCENT LINE
+========================================================== */
+
+.solutions-hero-title span::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 3px;
+
+    bottom: -15px;
+
+    width: 78px;
+
+    height: 2px;
+
+    border-radius: 999px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+
+            #22d3ee,
+
+            rgba(34,211,238,.28),
+
+            transparent
+        );
+
+    opacity: .75;
+
+}
+
+
+/* ==========================================================
+   09 — HERO DESCRIPTION
+========================================================== */
+
+.solutions-hero-description {
+
+    max-width: 620px;
+
+    margin-top: 35px;
+
+    color:
+        #aebdce;
+
+    font-size:
+        clamp(
+            .92rem,
+            1.15vw,
+            1.05rem
+        );
+
+    font-weight: 400;
+
+    line-height: 1.85;
+
+    letter-spacing:
+        -.005em;
+
+    text-wrap: pretty;
+
+}
+
+
+/* ==========================================================
+   10 — DESCRIPTION EMPHASIS
+========================================================== */
+
+.solutions-hero-description strong {
+
+    color:
+        #e5edf6;
+
+    font-weight: 600;
+
+}
+
+
+/* ==========================================================
+   11 — ACTION GROUP
+========================================================== */
+
+.solutions-hero-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 36px;
+
+}
+
+
+/* ==========================================================
+   12 — BASE BUTTON
+========================================================== */
+
+.solutions-hero-btn {
+
+    position: relative;
+
+    isolation: isolate;
+
+    min-height: 54px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 11px;
+
+    padding:
+        0 21px;
+
+    overflow: hidden;
+
+    border-radius: 13px;
+
+    font-size: .8rem;
+
+    font-weight: 750;
+
+    letter-spacing: -.01em;
+
+    cursor: pointer;
+
+    transition:
+
+        transform .35s
+        cubic-bezier(.22,1,.36,1),
+
+        border-color .35s ease,
+
+        background .35s ease,
+
+        box-shadow .35s ease,
+
+        color .35s ease;
+
+}
+
+
+/* ==========================================================
+   13 — PRIMARY BUTTON
+========================================================== */
+
+.solutions-hero-btn--primary {
+
+    color:
+        #03141b;
+
+    border:
+        1px solid
+        rgba(103,232,249,.35);
+
+    background:
+
+        linear-gradient(
+            110deg,
+
+            #22d3ee 0%,
+
+            #38bdf8 55%,
+
+            #67e8f9 100%
+        );
+
+    box-shadow:
+
+        0 14px 35px
+        rgba(34,211,238,.15),
+
+        inset 0 1px 0
+        rgba(255,255,255,.35);
+
+}
+
+
+/* ==========================================================
+   14 — PRIMARY BUTTON SHINE
+========================================================== */
+
+.solutions-hero-btn--primary::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -20%;
+
+    left: -80%;
+
+    width: 42%;
+
+    height: 140%;
+
+    z-index: -1;
+
+    transform:
+        skewX(-20deg);
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.55),
+            transparent
+        );
+
+    opacity: .65;
+
+}
+
+
+/* ==========================================================
+   15 — PRIMARY BUTTON HOVER
+========================================================== */
+
+.solutions-hero-btn--primary:hover {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+
+        0 22px 50px
+        rgba(34,211,238,.24),
+
+        inset 0 1px 0
+        rgba(255,255,255,.42);
+
+}
+
+
+/* ==========================================================
+   16 — SECONDARY BUTTON
+========================================================== */
+
+.solutions-hero-btn--secondary {
+
+    color:
+        #e5edf6;
+
+    border:
+        1px solid
+        rgba(148,163,184,.17);
+
+    background:
+
+        linear-gradient(
+            135deg,
+
+            rgba(18,34,51,.82),
+
+            rgba(8,19,32,.68)
+        );
+
+    box-shadow:
+
+        inset 0 1px 0
+        rgba(255,255,255,.035);
+
+    backdrop-filter:
+        blur(14px);
+
+    -webkit-backdrop-filter:
+        blur(14px);
+
+}
+
+
+/* ==========================================================
+   17 — SECONDARY BUTTON HOVER
+========================================================== */
+
+.solutions-hero-btn--secondary:hover {
+
+    transform:
+        translateY(-4px);
+
+    color:
+        #67e8f9;
+
+    border-color:
+        rgba(34,211,238,.3);
+
+    background:
+
+        linear-gradient(
+            135deg,
+
+            rgba(19,42,61,.92),
+
+            rgba(8,21,35,.86)
+        );
+
+    box-shadow:
+
+        0 15px 35px
+        rgba(0,0,0,.18),
+
+        inset 0 1px 0
+        rgba(255,255,255,.045);
+
+}
+
+
+/* ==========================================================
+   18 — BUTTON ICON
+========================================================== */
+
+.solutions-hero-btn i {
+
+    position: relative;
+
+    font-size: .68rem;
+
+    transition:
+        transform .35s
+        cubic-bezier(.22,1,.36,1);
+
+}
+
+.solutions-hero-btn--primary:hover i {
+
+    transform:
+        translateY(3px);
+
+}
+
+.solutions-hero-btn--secondary:hover i {
+
+    transform:
+        translate(3px,-3px);
+
+}
+
+
+/* ==========================================================
+   19 — TRUST / TECHNOLOGY LINE
+========================================================== */
+
+.solutions-hero-trust {
+
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 29px;
+
+    color:
+        #66758a;
+
+    font-size: .63rem;
+
+    line-height: 1.5;
+
+}
+
+
+/* ==========================================================
+   20 — TRUST LABEL
+========================================================== */
+
+.solutions-hero-trust-label {
+
+    color:
+        #22d3ee;
+
+    font-size: .57rem;
+
+    font-weight: 800;
+
+    letter-spacing: .15em;
+
+    text-transform: uppercase;
+
+}
+
+
+/* ==========================================================
+   21 — TRUST ITEMS
+========================================================== */
+
+.solutions-hero-trust-item {
+
+    color:
+        #91a1b4;
+
+    font-weight: 550;
+
+    transition:
+        color .3s ease;
+
+}
+
+.solutions-hero-trust-item:hover {
+
+    color:
+        #dbe7f3;
+
+}
+
+
+/* ==========================================================
+   22 — TRUST SEPARATOR
+========================================================== */
+
+.solutions-hero-trust-dot {
+
+    width: 3px;
+
+    height: 3px;
+
+    flex: 0 0 3px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(113,128,150,.7);
+
+}
+
+
+/* ==========================================================
+   23 — DESKTOP TYPOGRAPHY REFINEMENT
+========================================================== */
+
+@media (min-width: 1400px) {
+
+    .solutions-hero-title {
+
+        font-size:
+            clamp(
+                5rem,
+                5.6vw,
+                6.8rem
+            );
+
+    }
+
+    .solutions-hero-description {
+
+        max-width: 640px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   24 — LAPTOP
+========================================================== */
+
+@media (max-width: 1100px) {
+
+    .solutions-hero-title {
+
+        font-size:
+            clamp(
+                3.3rem,
+                5.8vw,
+                5.4rem
+            );
+
+    }
+
+    .solutions-hero-description {
+
+        max-width: 560px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   25 — TABLET
+========================================================== */
+
+@media (max-width: 850px) {
+
+    .solutions-hero-content {
+
+        max-width: 760px;
+
+        margin-inline: auto;
+
+        text-align: center;
+
+    }
+
+    .solutions-hero-tag {
+
+        margin-inline: auto;
+
+    }
+
+    .solutions-hero-title {
+
+        margin-inline: auto;
+
+        text-align: center;
+
+    }
+
+    .solutions-hero-title span {
+
+        margin-inline: auto;
+
+    }
+
+    .solutions-hero-title span::after {
+
+        left: 50%;
+
+        transform:
+            translateX(-50%);
+
+    }
+
+    .solutions-hero-description {
+
+        margin-inline: auto;
+
+    }
+
+    .solutions-hero-actions {
+
+        justify-content: center;
+
+    }
+
+    .solutions-hero-trust {
+
+        justify-content: center;
+
+    }
+
+}
+
+
+/* ==========================================================
+   26 — MOBILE
+========================================================== */
+
+@media (max-width: 600px) {
+
+    .solutions-hero-tag {
+
+        gap: 8px;
+
+        padding:
+            8px 12px;
+
+        font-size: .55rem;
+
+        letter-spacing: .12em;
+
+    }
+
+    .solutions-hero-title {
+
+        margin-top: 23px;
+
+        font-size:
+            clamp(
+                2.65rem,
+                11.5vw,
+                3.7rem
+            );
+
+        line-height: .98;
+
+        letter-spacing:
+            -.06em;
+
+    }
+
+    .solutions-hero-title span {
+
+        margin-top: 8px;
+
+    }
+
+    .solutions-hero-title span::after {
+
+        bottom: -11px;
+
+        width: 58px;
+
+        height: 1px;
+
+    }
+
+    .solutions-hero-description {
+
+        margin-top: 28px;
+
+        font-size: .86rem;
+
+        line-height: 1.78;
+
+    }
+
+    .solutions-hero-actions {
+
+        width: 100%;
+
+        flex-direction: column;
+
+        gap: 10px;
+
+        margin-top: 29px;
+
+    }
+
+    .solutions-hero-btn {
+
+        width: 100%;
+
+        min-height: 52px;
+
+    }
+
+    .solutions-hero-trust {
+
+        max-width: 320px;
+
+        justify-content: center;
+
+        margin-inline: auto;
+
+        margin-top: 25px;
+
+        gap: 8px;
+
+        font-size: .55rem;
+
+    }
+
+    .solutions-hero-trust-label {
+
+        width: 100%;
+
+        margin-bottom: 2px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   27 — SMALL MOBILE
+========================================================== */
+
+@media (max-width: 420px) {
+
+    .solutions-hero-title {
+
+        font-size:
+            2.5rem;
+
+    }
+
+    .solutions-hero-description {
+
+        font-size: .82rem;
+
+    }
+
+    .solutions-hero-trust {
+
+        font-size: .51rem;
+
+    }
+
+}
+
+
+/* ==========================================================
+   28 — ACCESSIBILITY
+========================================================== */
+
+.solutions-hero-btn:focus-visible {
+
+    outline:
+        2px solid
+        #67e8f9;
+
+    outline-offset:
+        4px;
+
+}
+
+.solutions-hero-tag:focus-visible {
+
+    outline:
+        2px solid
+        #67e8f9;
+
+    outline-offset:
+        4px;
+
+}
+
+
+/* ==========================================================
+   29 — REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .solutions-hero-btn,
+    .solutions-hero-btn i,
+    .solutions-hero-trust-item {
+
+        transition: none;
+
+    }
+
+}

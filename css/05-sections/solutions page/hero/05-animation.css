@@ -1,0 +1,1204 @@
+/* ==========================================================
+   SHADOW15 — SOLUTIONS PAGE
+   05-ANIMATION.CSS
+
+   MOTION SYSTEM
+   • Entrance reveal
+   • Orbit rotation
+   • Core breathing
+   • Node floating
+   • Ambient glow movement
+   • Status pulse
+   • Metric floating
+   • CTA shine
+   • Hover depth
+
+   NOTE:
+   Keep animation timings slow and premium.
+   No aggressive / distracting motion.
+========================================================== */
+
+
+/* ==========================================================
+   01 — GLOBAL MOTION VARIABLES
+========================================================== */
+
+.solutions-hero {
+
+    --motion-smooth:
+        cubic-bezier(.22, 1, .36, 1);
+
+    --motion-soft:
+        cubic-bezier(.4, 0, .2, 1);
+
+}
+
+
+/* ==========================================================
+   02 — HERO CONTENT REVEAL
+========================================================== */
+
+.solutions-hero-content {
+
+    animation:
+        solutionsContentReveal
+        1.1s
+        var(--motion-smooth)
+        both;
+
+}
+
+
+@keyframes solutionsContentReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translate3d(
+                -35px,
+                20px,
+                0
+            );
+
+        filter:
+            blur(8px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translate3d(
+                0,
+                0,
+                0
+            );
+
+        filter:
+            blur(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   03 — TAG REVEAL
+========================================================== */
+
+.solutions-hero-tag {
+
+    animation:
+        solutionsTagReveal
+        .8s
+        var(--motion-smooth)
+        .1s
+        both;
+
+}
+
+
+@keyframes solutionsTagReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(14px)
+            scale(.96);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+/* ==========================================================
+   04 — TITLE REVEAL
+========================================================== */
+
+.solutions-hero-title {
+
+    animation:
+        solutionsTitleReveal
+        1s
+        var(--motion-smooth)
+        .18s
+        both;
+
+}
+
+
+@keyframes solutionsTitleReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(32px);
+
+        filter:
+            blur(7px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+        filter:
+            blur(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   05 — DESCRIPTION REVEAL
+========================================================== */
+
+.solutions-hero-description {
+
+    animation:
+        solutionsDescriptionReveal
+        .9s
+        var(--motion-smooth)
+        .32s
+        both;
+
+}
+
+
+@keyframes solutionsDescriptionReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   06 — CTA REVEAL
+========================================================== */
+
+.solutions-hero-actions {
+
+    animation:
+        solutionsActionsReveal
+        .85s
+        var(--motion-smooth)
+        .44s
+        both;
+
+}
+
+
+@keyframes solutionsActionsReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(18px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   07 — TRUST REVEAL
+========================================================== */
+
+.solutions-hero-trust {
+
+    animation:
+        solutionsTrustReveal
+        .8s
+        var(--motion-smooth)
+        .55s
+        both;
+
+}
+
+
+@keyframes solutionsTrustReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(12px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   08 — VISUAL INITIAL REVEAL
+========================================================== */
+
+.solutions-hero-visual {
+
+    animation:
+        solutionsVisualReveal
+        1.25s
+        var(--motion-smooth)
+        .12s
+        both;
+
+}
+
+
+@keyframes solutionsVisualReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            scale(.94)
+            translateY(20px);
+
+        filter:
+            blur(7px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            scale(1)
+            translateY(0);
+
+        filter:
+            blur(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   09 — ORBIT ROTATION
+========================================================== */
+
+.solutions-hero-orbit {
+
+    animation:
+        solutionsOrbitRotate
+        48s
+        linear
+        infinite;
+
+    transform-origin:
+        center center;
+
+}
+
+
+@keyframes solutionsOrbitRotate {
+
+    from {
+
+        transform:
+            translate(-50%, -50%)
+            rotate(0deg);
+
+    }
+
+    to {
+
+        transform:
+            translate(-50%, -50%)
+            rotate(360deg);
+
+    }
+
+}
+
+
+/* ==========================================================
+   10 — COUNTER ROTATION FOR INNER RINGS
+========================================================== */
+
+.solutions-orbit-ring--two {
+
+    animation:
+        solutionsOrbitReverse
+        34s
+        linear
+        infinite;
+
+}
+
+
+.solutions-orbit-ring--three {
+
+    animation:
+        solutionsOrbitReverse
+        24s
+        linear
+        infinite;
+
+}
+
+
+@keyframes solutionsOrbitReverse {
+
+    from {
+
+        transform:
+            translate(-50%, -50%)
+            rotate(360deg);
+
+    }
+
+    to {
+
+        transform:
+            translate(-50%, -50%)
+            rotate(0deg);
+
+    }
+
+}
+
+
+/* ==========================================================
+   11 — ORBIT LIGHT POINTS
+========================================================== */
+
+.solutions-orbit-ring--one::before {
+
+    animation:
+        orbitPointPulse
+        2.8s
+        ease-in-out
+        infinite;
+
+}
+
+
+.solutions-orbit-ring--two::before {
+
+    animation:
+        orbitPointPulse
+        2.4s
+        ease-in-out
+        .7s
+        infinite;
+
+}
+
+
+.solutions-orbit-ring--three::before {
+
+    animation:
+        orbitPointPulse
+        2.1s
+        ease-in-out
+        1.1s
+        infinite;
+
+}
+
+
+@keyframes orbitPointPulse {
+
+    0%,
+    100% {
+
+        opacity:
+            .35;
+
+        transform:
+            scale(.75);
+
+        box-shadow:
+            0 0 7px
+            rgba(34,211,238,.45);
+
+    }
+
+    50% {
+
+        opacity:
+            1;
+
+        transform:
+            scale(1.35);
+
+        box-shadow:
+            0 0 10px
+            rgba(34,211,238,.95),
+
+            0 0 24px
+            rgba(34,211,238,.35);
+
+    }
+
+}
+
+
+/* ==========================================================
+   12 — CORE FLOAT
+========================================================== */
+
+.solutions-system-core {
+
+    animation:
+        solutionsCoreFloat
+        5.5s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes solutionsCoreFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translate(-50%, -50%)
+            translateY(0)
+            scale(1);
+
+    }
+
+    50% {
+
+        transform:
+            translate(-50%, -50%)
+            translateY(-9px)
+            scale(1.018);
+
+    }
+
+}
+
+
+/* ==========================================================
+   13 — CORE ATMOSPHERE PULSE
+========================================================== */
+
+.solutions-system::before {
+
+    animation:
+        solutionsCoreGlow
+        4.5s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes solutionsCoreGlow {
+
+    0%,
+    100% {
+
+        opacity:
+            .65;
+
+        transform:
+            translate(-50%, -50%)
+            scale(.92);
+
+    }
+
+    50% {
+
+        opacity:
+            1;
+
+        transform:
+            translate(-50%, -50%)
+            scale(1.08);
+
+    }
+
+}
+
+
+/* ==========================================================
+   14 — CORE STATUS DOT
+========================================================== */
+
+.solutions-system-core-dot {
+
+    animation:
+        coreDotPulse
+        2s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes coreDotPulse {
+
+    0%,
+    100% {
+
+        opacity:
+            .65;
+
+        box-shadow:
+            0 0 0 4px
+            rgba(34,211,238,.055),
+
+            0 0 12px
+            rgba(34,211,238,.65);
+
+    }
+
+    50% {
+
+        opacity:
+            1;
+
+        box-shadow:
+            0 0 0 6px
+            rgba(34,211,238,.08),
+
+            0 0 22px
+            rgba(34,211,238,1),
+
+            0 0 38px
+            rgba(34,211,238,.35);
+
+    }
+
+}
+
+
+/* ==========================================================
+   15 — SOLUTION NODE FLOATING
+========================================================== */
+
+.solutions-node--development {
+
+    animation:
+        nodeFloatOne
+        6s
+        ease-in-out
+        infinite;
+
+}
+
+
+.solutions-node--marketing {
+
+    animation:
+        nodeFloatTwo
+        6.8s
+        ease-in-out
+        .8s
+        infinite;
+
+}
+
+
+.solutions-node--creative {
+
+    animation:
+        nodeFloatThree
+        7.2s
+        ease-in-out
+        1.2s
+        infinite;
+
+}
+
+
+.solutions-node--support {
+
+    animation:
+        nodeFloatFour
+        6.5s
+        ease-in-out
+        1.8s
+        infinite;
+
+}
+
+
+/* ==========================================================
+   16 — DEVELOPMENT FLOAT
+========================================================== */
+
+@keyframes nodeFloatOne {
+
+    0%,
+    100% {
+
+        transform:
+            translate3d(
+                0,
+                0,
+                0
+            )
+            rotate(0deg);
+
+    }
+
+    50% {
+
+        transform:
+            translate3d(
+                0,
+                -10px,
+                0
+            )
+            rotate(-.4deg);
+
+    }
+
+}
+
+
+/* ==========================================================
+   17 — MARKETING FLOAT
+========================================================== */
+
+@keyframes nodeFloatTwo {
+
+    0%,
+    100% {
+
+        transform:
+            translate3d(
+                0,
+                0,
+                0
+            )
+            rotate(0deg);
+
+    }
+
+    50% {
+
+        transform:
+            translate3d(
+                0,
+                12px,
+                0
+            )
+            rotate(.5deg);
+
+    }
+
+}
+
+
+/* ==========================================================
+   18 — CREATIVE FLOAT
+========================================================== */
+
+@keyframes nodeFloatThree {
+
+    0%,
+    100% {
+
+        transform:
+            translate3d(
+                0,
+                0,
+                0
+            )
+            rotate(0deg);
+
+    }
+
+    50% {
+
+        transform:
+            translate3d(
+                0,
+                -8px,
+                0
+            )
+            rotate(.45deg);
+
+    }
+
+}
+
+
+/* ==========================================================
+   19 — SUPPORT FLOAT
+========================================================== */
+
+@keyframes nodeFloatFour {
+
+    0%,
+    100% {
+
+        transform:
+            translate3d(
+                0,
+                0,
+                0
+            )
+            rotate(0deg);
+
+    }
+
+    50% {
+
+        transform:
+            translate3d(
+                0,
+                10px,
+                0
+            )
+            rotate(-.45deg);
+
+    }
+
+}
+
+
+/* ==========================================================
+   20 — NODE HOVER OVERRIDE
+========================================================== */
+
+.solutions-node:hover {
+
+    animation-play-state:
+        paused;
+
+    transform:
+        translateY(-8px)
+        scale(1.025);
+
+}
+
+
+/* ==========================================================
+   21 — STATUS PULSE
+========================================================== */
+
+.solutions-hero-status {
+
+    animation:
+        statusFloat
+        4.5s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes statusFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-5px);
+
+    }
+
+}
+
+
+/* ==========================================================
+   22 — STATUS DOT PULSE
+========================================================== */
+
+.solutions-status-dot {
+
+    animation:
+        statusDotPulse
+        1.8s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes statusDotPulse {
+
+    0%,
+    100% {
+
+        box-shadow:
+            0 0 0 3px
+            rgba(61,255,122,.045),
+
+            0 0 9px
+            rgba(61,255,122,.55);
+
+    }
+
+    50% {
+
+        box-shadow:
+            0 0 0 6px
+            rgba(61,255,122,.075),
+
+            0 0 18px
+            rgba(61,255,122,1);
+
+    }
+
+}
+
+
+/* ==========================================================
+   23 — METRIC FLOAT
+========================================================== */
+
+.solutions-hero-metric {
+
+    animation:
+        metricFloat
+        5.2s
+        ease-in-out
+        1s
+        infinite;
+
+}
+
+
+@keyframes metricFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-8px);
+
+    }
+
+}
+
+
+/* ==========================================================
+   24 — PRIMARY CTA SHINE
+========================================================== */
+
+.solutions-hero-btn--primary::before {
+
+    animation:
+        buttonShine
+        5s
+        ease-in-out
+        2s
+        infinite;
+
+}
+
+
+@keyframes buttonShine {
+
+    0% {
+
+        left:
+            -80%;
+
+    }
+
+    18% {
+
+        left:
+            140%;
+
+    }
+
+    100% {
+
+        left:
+            140%;
+
+    }
+
+}
+
+
+/* ==========================================================
+   25 — HERO GLOW MOVEMENT
+========================================================== */
+
+.solutions-hero-glow--left {
+
+    animation:
+        leftAmbientFloat
+        11s
+        ease-in-out
+        infinite;
+
+}
+
+
+.solutions-hero-glow--right {
+
+    animation:
+        rightAmbientFloat
+        13s
+        ease-in-out
+        1.5s
+        infinite;
+
+}
+
+
+@keyframes leftAmbientFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translate3d(
+                0,
+                0,
+                0
+            )
+            scale(1);
+
+    }
+
+    50% {
+
+        transform:
+            translate3d(
+                55px,
+                -30px,
+                0
+            )
+            scale(1.12);
+
+    }
+
+}
+
+
+@keyframes rightAmbientFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translate3d(
+                0,
+                0,
+                0
+            )
+            scale(1);
+
+    }
+
+    50% {
+
+        transform:
+            translate3d(
+                -45px,
+                35px,
+                0
+            )
+            scale(1.1);
+
+    }
+
+}
+
+
+/* ==========================================================
+   26 — TAG DOT
+========================================================== */
+
+.solutions-hero-tag-dot {
+
+    animation:
+        tagDotPulse
+        2.4s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes tagDotPulse {
+
+    0%,
+    100% {
+
+        transform:
+            scale(1);
+
+    }
+
+    50% {
+
+        transform:
+            scale(1.3);
+
+    }
+
+}
+
+
+/* ==========================================================
+   27 — TRUST DOT
+========================================================== */
+
+.solutions-hero-trust-dot {
+
+    animation:
+        trustDotPulse
+        3s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes trustDotPulse {
+
+    0%,
+    100% {
+
+        opacity:
+            .45;
+
+    }
+
+    50% {
+
+        opacity:
+            1;
+
+    }
+
+}
+
+
+/* ==========================================================
+   28 — PERFORMANCE
+========================================================== */
+
+.solutions-hero-orbit,
+.solutions-system,
+.solutions-system-core,
+.solutions-node,
+.solutions-hero-status,
+.solutions-hero-metric,
+.solutions-hero-glow {
+
+    will-change:
+        transform;
+
+}
+
+
+/* ==========================================================
+   29 — GPU OPTIMIZATION
+========================================================== */
+
+.solutions-hero-orbit,
+.solutions-system,
+.solutions-node {
+
+    backface-visibility:
+        hidden;
+
+    -webkit-backface-visibility:
+        hidden;
+
+}
+
+
+/* ==========================================================
+   30 — REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .solutions-hero *,
+    .solutions-hero *::before,
+    .solutions-hero *::after {
+
+        animation:
+            none !important;
+
+        transition:
+            none !important;
+
+    }
+
+}

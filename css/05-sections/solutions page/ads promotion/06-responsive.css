@@ -1,0 +1,873 @@
+/* ==========================================================
+   SHADOW15 — ADS PROMOTION
+   06-RESPONSIVE.CSS
+========================================================== */
+
+
+/* ==========================================================
+   01 — LARGE DESKTOP
+========================================================== */
+
+@media (min-width: 1440px) {
+
+    .solution-ads > .container {
+
+        width:
+            min(90%, 1480px);
+
+    }
+
+    .ads-showcase {
+
+        padding:
+            30px;
+
+    }
+
+    .ads-chart {
+
+        height:
+            285px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   02 — LAPTOP
+========================================================== */
+
+@media (max-width: 1200px) {
+
+    .solution-ads > .container {
+
+        width:
+            min(94%, 1180px);
+
+    }
+
+    .ads-intro-grid {
+
+        gap:
+            55px;
+
+    }
+
+    .ads-showcase {
+
+        padding:
+            24px;
+
+    }
+
+    .ads-metric strong {
+
+        font-size:
+            1.25rem;
+
+    }
+
+}
+
+
+/* ==========================================================
+   03 — SMALL LAPTOP
+========================================================== */
+
+@media (max-width: 1050px) {
+
+    .ads-intro-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            25px;
+
+    }
+
+    .ads-description {
+
+        max-width:
+            650px;
+
+    }
+
+    .ads-analytics-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+}
+
+
+/* ==========================================================
+   04 — TABLET
+========================================================== */
+
+@media (max-width: 900px) {
+
+    .solution-ads {
+
+        padding:
+            115px 0 95px;
+
+    }
+
+    .solution-ads > .container {
+
+        width:
+            92%;
+
+    }
+
+
+    /* ======================================================
+       SHOWCASE
+    ====================================================== */
+
+    .ads-showcase {
+
+        padding:
+            21px;
+
+        border-radius:
+            22px;
+
+    }
+
+
+    /* ======================================================
+       METRICS
+    ====================================================== */
+
+    .ads-metrics {
+
+        grid-template-columns:
+            repeat(2, minmax(0,1fr));
+
+    }
+
+
+    /* ======================================================
+       ANALYTICS
+    ====================================================== */
+
+    .ads-analytics-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    /* ======================================================
+       SERVICES
+    ====================================================== */
+
+    .ads-services {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+}
+
+
+/* ==========================================================
+   05 — TABLET PORTRAIT
+========================================================== */
+
+@media (max-width: 768px) {
+
+    .solution-ads {
+
+        padding:
+            105px 0 85px;
+
+    }
+
+    .ads-intro {
+
+        margin-bottom:
+            50px;
+
+    }
+
+    .ads-showcase {
+
+        margin-top:
+            8px;
+
+    }
+
+    .ads-dashboard-top {
+
+        gap:
+            16px;
+
+    }
+
+    .ads-chart {
+
+        height:
+            240px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   06 — MOBILE
+========================================================== */
+
+@media (max-width: 600px) {
+
+    .solution-ads {
+
+        width:
+            100%;
+
+        overflow:
+            hidden;
+
+        padding:
+            90px 0 75px;
+
+    }
+
+
+    /* ======================================================
+       CONTAINER
+    ====================================================== */
+
+    .solution-ads > .container {
+
+        width:
+            92%;
+
+        max-width:
+            500px;
+
+    }
+
+
+    /* ======================================================
+       INTRO
+    ====================================================== */
+
+    .ads-intro {
+
+        margin-bottom:
+            42px;
+
+    }
+
+    .ads-intro-grid {
+
+        gap:
+            22px;
+
+    }
+
+
+    /* ======================================================
+       SHOWCASE
+    ====================================================== */
+
+    .ads-showcase {
+
+        padding:
+            14px;
+
+        border-radius:
+            18px;
+
+    }
+
+
+    /* ======================================================
+       DASHBOARD HEADER
+    ====================================================== */
+
+    .ads-dashboard-top {
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+        gap:
+            14px;
+
+    }
+
+    .ads-dashboard-brand {
+
+        gap:
+            10px;
+
+    }
+
+    .ads-dashboard-icon {
+
+        width:
+            38px;
+
+        height:
+            38px;
+
+        border-radius:
+            10px;
+
+    }
+
+    .ads-dashboard-brand span {
+
+        font-size:
+            .35rem;
+
+    }
+
+    .ads-dashboard-brand strong {
+
+        font-size:
+            .72rem;
+
+    }
+
+    .ads-dashboard-status {
+
+        align-self:
+            flex-start;
+
+    }
+
+
+    /* ======================================================
+       PLATFORM BAR
+    ====================================================== */
+
+    .ads-platforms {
+
+        flex-wrap:
+            wrap;
+
+        gap:
+            6px;
+
+    }
+
+    .ads-platform {
+
+        min-height:
+            32px;
+
+        padding:
+            0 10px;
+
+        font-size:
+            .42rem;
+
+    }
+
+    .ads-period {
+
+        width:
+            100%;
+
+        margin-left:
+            0;
+
+        margin-top:
+            4px;
+
+    }
+
+
+    /* ======================================================
+       METRICS
+    ====================================================== */
+
+    .ads-metrics {
+
+        grid-template-columns:
+            repeat(2, minmax(0,1fr));
+
+        gap:
+            7px;
+
+    }
+
+    .ads-metric {
+
+        min-height:
+            94px;
+
+        padding:
+            13px;
+
+        border-radius:
+            12px;
+
+    }
+
+    .ads-metric-label {
+
+        font-size:
+            .34rem;
+
+    }
+
+    .ads-metric strong {
+
+        margin-top:
+            11px;
+
+        font-size:
+            1.05rem;
+
+    }
+
+    .ads-metric small {
+
+        margin-top:
+            7px;
+
+        font-size:
+            .34rem;
+
+    }
+
+
+    /* ======================================================
+       ANALYTICS
+    ====================================================== */
+
+    .ads-analytics-grid {
+
+        gap:
+            8px;
+
+    }
+
+    .ads-chart-card,
+    .ads-conversion-card {
+
+        padding:
+            14px;
+
+        border-radius:
+            13px;
+
+    }
+
+    .ads-chart {
+
+        height:
+            215px;
+
+        grid-template-columns:
+            27px minmax(0,1fr);
+
+    }
+
+    .ads-chart-y span,
+    .ads-chart-x span {
+
+        font-size:
+            .29rem;
+
+    }
+
+    .ads-chart-header strong,
+    .ads-conversion-header strong {
+
+        font-size:
+            .62rem;
+
+    }
+
+
+    /* ======================================================
+       CAMPAIGN FOOTER
+    ====================================================== */
+
+    .ads-campaign-footer {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            13px;
+
+        padding:
+            13px;
+
+    }
+
+    .ads-campaign-result {
+
+        text-align:
+            left;
+
+    }
+
+
+    /* ======================================================
+       SERVICES
+    ====================================================== */
+
+    .ads-services {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            11px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   07 — SMALL MOBILE
+========================================================== */
+
+@media (max-width: 480px) {
+
+    .solution-ads {
+
+        padding:
+            82px 0 68px;
+
+    }
+
+    .solution-ads > .container {
+
+        width:
+            91%;
+
+    }
+
+    .ads-showcase {
+
+        padding:
+            12px;
+
+    }
+
+    .ads-dashboard-brand strong {
+
+        font-size:
+            .68rem;
+
+    }
+
+    .ads-metrics {
+
+        gap:
+            6px;
+
+    }
+
+    .ads-metric {
+
+        min-height:
+            88px;
+
+        padding:
+            11px;
+
+    }
+
+    .ads-metric strong {
+
+        font-size:
+            .94rem;
+
+    }
+
+    .ads-chart {
+
+        height:
+            190px;
+
+    }
+
+    .ads-chart-card,
+    .ads-conversion-card {
+
+        padding:
+            12px;
+
+    }
+
+    .ads-service-card {
+
+        min-height:
+            250px;
+
+        padding:
+            16px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   08 — VERY SMALL MOBILE
+========================================================== */
+
+@media (max-width: 420px) {
+
+    .solution-ads > .container {
+
+        width:
+            92%;
+
+    }
+
+    .ads-heading h2 {
+
+        font-size:
+            2.35rem;
+
+    }
+
+    .ads-description p {
+
+        font-size:
+            .79rem;
+
+    }
+
+    .ads-showcase {
+
+        padding:
+            10px;
+
+        border-radius:
+            16px;
+
+    }
+
+    .ads-platform {
+
+        min-height:
+            30px;
+
+        padding:
+            0 8px;
+
+    }
+
+    .ads-metric {
+
+        min-height:
+            82px;
+
+        padding:
+            10px;
+
+    }
+
+    .ads-metric strong {
+
+        font-size:
+            .86rem;
+
+    }
+
+    .ads-chart {
+
+        height:
+            175px;
+
+    }
+
+    .ads-chart-y {
+
+        padding:
+            3px 0 22px;
+
+    }
+
+    .ads-campaign-platforms {
+
+        gap:
+            4px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   09 — EXTRA SMALL
+========================================================== */
+
+@media (max-width: 360px) {
+
+    .solution-ads > .container {
+
+        width:
+            92%;
+
+    }
+
+    .ads-heading h2 {
+
+        font-size:
+            2.15rem;
+
+    }
+
+    .ads-metrics {
+
+        grid-template-columns:
+            1fr 1fr;
+
+    }
+
+    .ads-metric {
+
+        min-height:
+            78px;
+
+        padding:
+            9px;
+
+    }
+
+    .ads-metric-label {
+
+        font-size:
+            .30rem;
+
+    }
+
+    .ads-metric strong {
+
+        font-size:
+            .78rem;
+
+    }
+
+    .ads-chart {
+
+        height:
+            155px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   10 — LANDSCAPE MOBILE
+========================================================== */
+
+@media (max-height: 600px)
+and (orientation: landscape) {
+
+    .solution-ads {
+
+        padding-top:
+            80px;
+
+        padding-bottom:
+            70px;
+
+    }
+
+    .ads-chart {
+
+        height:
+            190px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   11 — TOUCH DEVICES
+========================================================== */
+
+@media (hover: none) {
+
+    .ads-platform:hover {
+
+        transform:
+            none;
+
+    }
+
+    .ads-metric:hover {
+
+        transform:
+            none;
+
+    }
+
+    .ads-service-card:hover {
+
+        transform:
+            none;
+
+    }
+
+    .ads-service-card:hover
+    .ads-service-icon {
+
+        transform:
+            none;
+
+    }
+
+}
+
+
+/* ==========================================================
+   12 — OVERFLOW PROTECTION
+========================================================== */
+
+.solution-ads,
+.ads-bg,
+.ads-showcase,
+.ads-services {
+
+    max-width:
+        100%;
+
+}
+
+
+/* ==========================================================
+   13 — REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .solution-ads *,
+    .solution-ads *::before,
+    .solution-ads *::after {
+
+        animation:
+            none !important;
+
+        transition:
+            none !important;
+
+    }
+
+}

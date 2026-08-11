@@ -1,0 +1,898 @@
+/* ==========================================================
+   SHADOW15 — APP DEVELOPMENT
+   01-BACKGROUND.CSS
+========================================================== */
+
+
+/* ==========================================================
+   01 — SECTION ROOT
+========================================================== */
+
+.solution-app {
+
+    position: relative;
+
+    isolation: isolate;
+
+    overflow: hidden;
+
+    padding:
+        155px
+        0
+        135px;
+
+    color: #f5f8fc;
+
+    background:
+
+        radial-gradient(
+            ellipse 70% 48%
+            at 50% 8%,
+
+            rgba(34,211,238,.045),
+
+            transparent 72%
+        ),
+
+        radial-gradient(
+            ellipse 48% 65%
+            at -8% 50%,
+
+            rgba(14,165,233,.04),
+
+            transparent 72%
+        ),
+
+        radial-gradient(
+            ellipse 48% 65%
+            at 108% 50%,
+
+            rgba(99,102,241,.04),
+
+            transparent 72%
+        ),
+
+        #050c17;
+
+}
+
+
+/* ==========================================================
+   02 — BACKGROUND MASTER
+========================================================== */
+
+.app-bg {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -5;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+}
+
+
+/* ==========================================================
+   03 — DIGITAL GRID
+========================================================== */
+
+.app-grid {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+
+        linear-gradient(
+            rgba(148,163,184,.032) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(148,163,184,.032) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        64px 64px;
+
+    opacity: .78;
+
+    mask-image:
+
+        radial-gradient(
+            ellipse 82% 78%
+            at 50% 45%,
+
+            black 0%,
+
+            rgba(0,0,0,.85) 48%,
+
+            transparent 100%
+        );
+
+    -webkit-mask-image:
+
+        radial-gradient(
+            ellipse 82% 78%
+            at 50% 45%,
+
+            black 0%,
+
+            rgba(0,0,0,.85) 48%,
+
+            transparent 100%
+        );
+
+}
+
+
+/* ==========================================================
+   04 — MICRO GRID
+========================================================== */
+
+.app-bg::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+
+        linear-gradient(
+            rgba(34,211,238,.013) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(34,211,238,.013) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        16px 16px;
+
+    opacity: .35;
+
+    mask-image:
+
+        radial-gradient(
+            ellipse 62% 60%
+            at 50% 48%,
+
+            black,
+
+            transparent 100%
+        );
+
+    -webkit-mask-image:
+
+        radial-gradient(
+            ellipse 62% 60%
+            at 50% 48%,
+
+            black,
+
+            transparent 100%
+        );
+
+}
+
+
+/* ==========================================================
+   05 — CENTRAL DEVICE ATMOSPHERE
+========================================================== */
+
+.app-bg::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 48%;
+
+    left: 50%;
+
+    width: 1000px;
+
+    height: 850px;
+
+    transform:
+        translate(-50%,-50%);
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            ellipse at center,
+
+            rgba(34,211,238,.055)
+            0%,
+
+            rgba(59,130,246,.025)
+            34%,
+
+            transparent 72%
+        );
+
+    filter:
+        blur(28px);
+
+}
+
+
+/* ==========================================================
+   06 — AMBIENT GLOWS
+========================================================== */
+
+.app-glow {
+
+    position: absolute;
+
+    width: 560px;
+
+    height: 560px;
+
+    border-radius: 50%;
+
+    filter:
+        blur(125px);
+
+}
+
+
+/* ==========================================================
+   07 — LEFT GLOW
+========================================================== */
+
+.app-glow-left {
+
+    top: 20%;
+
+    left: -370px;
+
+    background:
+
+        radial-gradient(
+            circle,
+
+            rgba(34,211,238,.48),
+
+            rgba(14,165,233,.10) 45%,
+
+            transparent 72%
+        );
+
+    opacity: .10;
+
+}
+
+
+/* ==========================================================
+   08 — RIGHT GLOW
+========================================================== */
+
+.app-glow-right {
+
+    top: 30%;
+
+    right: -370px;
+
+    background:
+
+        radial-gradient(
+            circle,
+
+            rgba(99,102,241,.48),
+
+            rgba(59,130,246,.10) 45%,
+
+            transparent 72%
+        );
+
+    opacity: .085;
+
+}
+
+
+/* ==========================================================
+   09 — DEVICE ORBITS
+========================================================== */
+
+.app-orbit {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    border:
+        1px solid
+        rgba(34,211,238,.055);
+
+    border-radius: 50%;
+
+    transform:
+        translate(-50%,-50%);
+
+    pointer-events: none;
+
+}
+
+
+/* ==========================================================
+   10 — INNER ORBIT
+========================================================== */
+
+.app-orbit-one {
+
+    width: 500px;
+
+    height: 500px;
+
+}
+
+
+/* ==========================================================
+   11 — OUTER ORBIT
+========================================================== */
+
+.app-orbit-two {
+
+    width: 760px;
+
+    height: 760px;
+
+    border-color:
+        rgba(96,165,250,.035);
+
+}
+
+
+/* ==========================================================
+   12 — ORBIT LIGHT
+========================================================== */
+
+.app-orbit-one::before,
+.app-orbit-two::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+
+    left: -3px;
+
+    width: 6px;
+
+    height: 6px;
+
+    transform:
+        translateY(-50%);
+
+    border-radius: 50%;
+
+    background:
+        #22d3ee;
+
+    box-shadow:
+
+        0 0 10px
+        rgba(34,211,238,.75),
+
+        0 0 25px
+        rgba(34,211,238,.30);
+
+}
+
+
+/* ==========================================================
+   13 — SECOND ORBIT LIGHT
+========================================================== */
+
+.app-orbit-two::before {
+
+    top: 18%;
+
+    left: auto;
+
+    right: 12%;
+
+    background:
+        #818cf8;
+
+    box-shadow:
+
+        0 0 10px
+        rgba(129,140,248,.65),
+
+        0 0 25px
+        rgba(129,140,248,.25);
+
+}
+
+
+/* ==========================================================
+   14 — SECTION TOP EDGE
+========================================================== */
+
+.solution-app::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 50%;
+
+    width: min(1000px,80%);
+
+    height: 1px;
+
+    transform:
+        translateX(-50%);
+
+    background:
+
+        linear-gradient(
+            90deg,
+
+            transparent,
+
+            rgba(148,163,184,.07),
+
+            rgba(34,211,238,.11),
+
+            rgba(148,163,184,.07),
+
+            transparent
+        );
+
+}
+
+
+/* ==========================================================
+   15 — SECTION BOTTOM FADE
+========================================================== */
+
+.solution-app::after {
+
+    content: "";
+
+    position: absolute;
+
+    right: 0;
+
+    bottom: 0;
+
+    left: 0;
+
+    height: 180px;
+
+    pointer-events: none;
+
+    background:
+
+        linear-gradient(
+            to bottom,
+
+            transparent,
+
+            rgba(2,7,13,.42)
+        );
+
+}
+
+
+/* ==========================================================
+   16 — LARGE DESKTOP
+========================================================== */
+
+@media (min-width: 1440px) {
+
+    .solution-app {
+
+        padding:
+            175px
+            0
+            150px;
+
+    }
+
+    .app-grid {
+
+        background-size:
+            70px 70px;
+
+    }
+
+    .app-bg::after {
+
+        width:
+            1200px;
+
+        height:
+            950px;
+
+    }
+
+    .app-orbit-one {
+
+        width:
+            560px;
+
+        height:
+            560px;
+
+    }
+
+    .app-orbit-two {
+
+        width:
+            840px;
+
+        height:
+            840px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   17 — LAPTOP
+========================================================== */
+
+@media (max-width: 1200px) {
+
+    .solution-app {
+
+        padding:
+            135px
+            0
+            115px;
+
+    }
+
+    .app-grid {
+
+        background-size:
+            58px 58px;
+
+    }
+
+    .app-glow {
+
+        width:
+            470px;
+
+        height:
+            470px;
+
+        filter:
+            blur(105px);
+
+    }
+
+    .app-orbit-one {
+
+        width:
+            430px;
+
+        height:
+            430px;
+
+    }
+
+    .app-orbit-two {
+
+        width:
+            650px;
+
+        height:
+            650px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   18 — TABLET
+========================================================== */
+
+@media (max-width: 850px) {
+
+    .solution-app {
+
+        padding:
+            115px
+            0
+            95px;
+
+    }
+
+    .app-grid {
+
+        background-size:
+            52px 52px;
+
+        opacity:
+            .60;
+
+    }
+
+    .app-bg::after {
+
+        width:
+            760px;
+
+        height:
+            700px;
+
+    }
+
+    .app-orbit-one {
+
+        width:
+            390px;
+
+        height:
+            390px;
+
+    }
+
+    .app-orbit-two {
+
+        width:
+            570px;
+
+        height:
+            570px;
+
+    }
+
+    .app-glow {
+
+        width:
+            380px;
+
+        height:
+            380px;
+
+        opacity:
+            .06;
+
+        filter:
+            blur(90px);
+
+    }
+
+}
+
+
+/* ==========================================================
+   19 — MOBILE
+========================================================== */
+
+@media (max-width: 600px) {
+
+    .solution-app {
+
+        width:
+            100%;
+
+        overflow:
+            hidden;
+
+        padding:
+            90px
+            0
+            75px;
+
+        background:
+
+            radial-gradient(
+                ellipse 100% 35%
+                at 50% 0%,
+
+                rgba(34,211,238,.04),
+
+                transparent 72%
+            ),
+
+            radial-gradient(
+                ellipse 90% 50%
+                at 50% 50%,
+
+                rgba(99,102,241,.025),
+
+                transparent 75%
+            ),
+
+            #050c17;
+
+    }
+
+    .app-grid {
+
+        background-size:
+            42px 42px;
+
+        opacity:
+            .46;
+
+    }
+
+    .app-bg::before {
+
+        opacity:
+            .12;
+
+    }
+
+    .app-bg::after {
+
+        width:
+            520px;
+
+        height:
+            560px;
+
+        filter:
+            blur(30px);
+
+    }
+
+    .app-glow {
+
+        width:
+            300px;
+
+        height:
+            300px;
+
+        opacity:
+            .04;
+
+        filter:
+            blur(80px);
+
+    }
+
+    .app-glow-left {
+
+        left:
+            -220px;
+
+    }
+
+    .app-glow-right {
+
+        right:
+            -220px;
+
+    }
+
+    .app-orbit-one {
+
+        width:
+            300px;
+
+        height:
+            300px;
+
+    }
+
+    .app-orbit-two {
+
+        width:
+            430px;
+
+        height:
+            430px;
+
+    }
+
+    .app-orbit-one::before,
+    .app-orbit-two::before {
+
+        width:
+            4px;
+
+        height:
+            4px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   20 — SMALL MOBILE
+========================================================== */
+
+@media (max-width: 420px) {
+
+    .solution-app {
+
+        padding:
+            78px
+            0
+            65px;
+
+    }
+
+    .app-grid {
+
+        background-size:
+            36px 36px;
+
+    }
+
+    .app-bg::after {
+
+        width:
+            440px;
+
+        height:
+            500px;
+
+    }
+
+    .app-orbit-one {
+
+        width:
+            260px;
+
+        height:
+            260px;
+
+    }
+
+    .app-orbit-two {
+
+        width:
+            370px;
+
+        height:
+            370px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   21 — REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .app-bg,
+    .app-grid,
+    .app-glow,
+    .app-orbit {
+
+        animation:
+            none !important;
+
+        transition:
+            none !important;
+
+    }
+
+}

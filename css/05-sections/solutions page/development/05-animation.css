@@ -1,0 +1,979 @@
+/* ==========================================================
+   SHADOW15 — DEVELOPMENT SECTION
+   05-ANIMATION.CSS
+
+   PURPOSE:
+   • Section reveal
+   • Showcase reveal
+   • Browser light sweep
+   • Preview atmosphere
+   • Floating UI cards
+   • Service card stagger
+   • Hover micro-interactions
+   • Footnote reveal
+========================================================== */
+
+
+/* ==========================================================
+   01 — MOTION VARIABLES
+========================================================== */
+
+.solution-development {
+
+    --dev-ease:
+        cubic-bezier(.22, 1, .36, 1);
+
+    --dev-soft:
+        cubic-bezier(.4, 0, .2, 1);
+
+}
+
+
+/* ==========================================================
+   02 — INTRO REVEAL
+========================================================== */
+
+.development-intro {
+
+    animation:
+        developmentIntroReveal
+        1s
+        var(--dev-ease)
+        both;
+
+}
+
+
+@keyframes developmentIntroReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(35px);
+
+        filter:
+            blur(7px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+
+        filter:
+            blur(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   03 — LABEL REVEAL
+========================================================== */
+
+.development-label {
+
+    animation:
+        developmentLabelReveal
+        .7s
+        var(--dev-ease)
+        .1s
+        both;
+
+}
+
+
+@keyframes developmentLabelReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateX(-20px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateX(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   04 — HEADING REVEAL
+========================================================== */
+
+.development-heading {
+
+    animation:
+        developmentHeadingReveal
+        1s
+        var(--dev-ease)
+        .2s
+        both;
+
+}
+
+
+@keyframes developmentHeadingReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(28px);
+
+        filter:
+            blur(6px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+
+        filter:
+            blur(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   05 — DESCRIPTION REVEAL
+========================================================== */
+
+.development-description {
+
+    animation:
+        developmentDescriptionReveal
+        .9s
+        var(--dev-ease)
+        .35s
+        both;
+
+}
+
+
+@keyframes developmentDescriptionReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(20px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   06 — SHOWCASE REVEAL
+========================================================== */
+
+.development-showcase {
+
+    animation:
+        developmentShowcaseReveal
+        1.15s
+        var(--dev-ease)
+        .25s
+        both;
+
+}
+
+
+@keyframes developmentShowcaseReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(45px)
+            scale(.975);
+
+        filter:
+            blur(6px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+        filter:
+            blur(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   07 — BROWSER BAR LIGHT
+========================================================== */
+
+.development-showcase-frame::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        0;
+
+    left:
+        -35%;
+
+    z-index:
+        30;
+
+    width:
+        22%;
+
+    height:
+        1px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+
+            transparent,
+
+            rgba(103,232,249,.9),
+
+            transparent
+        );
+
+    box-shadow:
+
+        0 0 16px
+        rgba(34,211,238,.45);
+
+    animation:
+        browserLightSweep
+        6s
+        ease-in-out
+        2s
+        infinite;
+
+}
+
+
+@keyframes browserLightSweep {
+
+    0% {
+
+        left:
+            -35%;
+
+        opacity:
+            0;
+
+    }
+
+    12% {
+
+        opacity:
+            1;
+
+    }
+
+    35% {
+
+        left:
+            115%;
+
+        opacity:
+            .75;
+
+    }
+
+    100% {
+
+        left:
+            115%;
+
+        opacity:
+            0;
+
+    }
+
+}
+
+
+/* ==========================================================
+   08 — PREVIEW ATMOSPHERE
+========================================================== */
+
+.development-preview::after {
+
+    animation:
+        previewAtmospherePulse
+        7s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes previewAtmospherePulse {
+
+    0%,
+    100% {
+
+        opacity:
+            .55;
+
+        transform:
+            translate(-50%, -50%)
+            scale(.94);
+
+    }
+
+    50% {
+
+        opacity:
+            1;
+
+        transform:
+            translate(-50%, -50%)
+            scale(1.08);
+
+    }
+
+}
+
+
+/* ==========================================================
+   09 — PREVIEW CONTENT FLOAT
+========================================================== */
+
+.development-preview-content {
+
+    animation:
+        previewContentFloat
+        7s
+        ease-in-out
+        1.2s
+        infinite;
+
+}
+
+
+@keyframes previewContentFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-5px);
+
+    }
+
+}
+
+
+/* ==========================================================
+   10 — ANALYTICS CARD
+========================================================== */
+
+.preview-ui-card--analytics {
+
+    animation:
+        analyticsFloat
+        5.5s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes analyticsFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translate3d(0, 0, 0)
+            rotate(0deg);
+
+    }
+
+    50% {
+
+        transform:
+            translate3d(0, -11px, 0)
+            rotate(.6deg);
+
+    }
+
+}
+
+
+/* ==========================================================
+   11 — CONVERSION CARD
+========================================================== */
+
+.preview-ui-card--conversion {
+
+    animation:
+        conversionFloat
+        6.2s
+        ease-in-out
+        .8s
+        infinite;
+
+}
+
+
+@keyframes conversionFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translate3d(0, 0, 0)
+            rotate(0deg);
+
+    }
+
+    50% {
+
+        transform:
+            translate3d(0, 9px, 0)
+            rotate(-.5deg);
+
+    }
+
+}
+
+
+/* ==========================================================
+   12 — UI CARD GLOW
+========================================================== */
+
+.preview-ui-card::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        0;
+
+    left:
+        12%;
+
+    width:
+        45%;
+
+    height:
+        1px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+
+            transparent,
+
+            rgba(103,232,249,.4),
+
+            transparent
+        );
+
+    opacity:
+        .7;
+
+}
+
+
+/* ==========================================================
+   13 — SERVICES REVEAL
+========================================================== */
+
+.development-service-card {
+
+    opacity:
+        0;
+
+    animation:
+        developmentCardReveal
+        .9s
+        var(--dev-ease)
+        both;
+
+}
+
+
+.development-service-card:nth-child(1) {
+
+    animation-delay:
+        .15s;
+
+}
+
+
+.development-service-card:nth-child(2) {
+
+    animation-delay:
+        .28s;
+
+}
+
+
+.development-service-card:nth-child(3) {
+
+    animation-delay:
+        .41s;
+
+}
+
+
+@keyframes developmentCardReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(35px)
+            scale(.975);
+
+        filter:
+            blur(5px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+        filter:
+            blur(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   14 — CARD AMBIENT LIGHT
+========================================================== */
+
+.development-service-card::before {
+
+    animation:
+        cardAmbientPulse
+        6s
+        ease-in-out
+        infinite;
+
+}
+
+
+.development-service-card:nth-child(2)::before {
+
+    animation-delay:
+        1.2s;
+
+}
+
+
+.development-service-card:nth-child(3)::before {
+
+    animation-delay:
+        2.1s;
+
+}
+
+
+@keyframes cardAmbientPulse {
+
+    0%,
+    100% {
+
+        opacity:
+            .45;
+
+    }
+
+    50% {
+
+        opacity:
+            .9;
+
+    }
+
+}
+
+
+/* ==========================================================
+   15 — CARD ICON IDLE MOTION
+========================================================== */
+
+.development-service-icon {
+
+    animation:
+        serviceIconFloat
+        5s
+        ease-in-out
+        infinite;
+
+}
+
+
+.development-service-card:nth-child(2)
+.development-service-icon {
+
+    animation-delay:
+        .8s;
+
+}
+
+
+.development-service-card:nth-child(3)
+.development-service-icon {
+
+    animation-delay:
+        1.5s;
+
+}
+
+
+@keyframes serviceIconFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-3px);
+
+    }
+
+}
+
+
+/* ==========================================================
+   16 — ICON HOVER
+========================================================== */
+
+.development-service-card:hover
+.development-service-icon {
+
+    animation-play-state:
+        paused;
+
+}
+
+
+/* ==========================================================
+   17 — SERVICE CARD HOVER DEPTH
+========================================================== */
+
+.development-service-card {
+
+    will-change:
+        transform;
+
+}
+
+
+/* ==========================================================
+   18 — FOOTNOTE REVEAL
+========================================================== */
+
+.development-footnote {
+
+    animation:
+        developmentFootnoteReveal
+        1s
+        var(--dev-ease)
+        .55s
+        both;
+
+}
+
+
+@keyframes developmentFootnoteReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(18px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   19 — META ITEMS
+========================================================== */
+
+.development-showcase-meta span {
+
+    transition:
+
+        color .3s ease,
+
+        transform .35s
+        var(--dev-ease);
+
+}
+
+
+.development-showcase-meta span:hover {
+
+    color:
+        #a9eefa;
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+/* ==========================================================
+   20 — BROWSER CONTROLS
+========================================================== */
+
+.development-browser-controls span {
+
+    transition:
+        transform .3s ease;
+
+}
+
+
+.development-showcase-frame:hover
+.development-browser-controls span:nth-child(1) {
+
+    transform:
+        scale(1.18);
+
+}
+
+
+.development-showcase-frame:hover
+.development-browser-controls span:nth-child(2) {
+
+    transform:
+        scale(1.18);
+
+}
+
+
+.development-showcase-frame:hover
+.development-browser-controls span:nth-child(3) {
+
+    transform:
+        scale(1.18);
+
+}
+
+
+/* ==========================================================
+   21 — SHOWCASE HOVER DEPTH
+========================================================== */
+
+.development-showcase-frame {
+
+    transition:
+
+        border-color .5s ease,
+
+        box-shadow .6s ease,
+
+        transform .6s
+        var(--dev-ease);
+
+}
+
+
+.development-showcase-frame:hover {
+
+    border-color:
+        rgba(34,211,238,.22);
+
+    box-shadow:
+
+        0 55px 110px
+        rgba(0,0,0,.43),
+
+        0 0 95px
+        rgba(34,211,238,.065),
+
+        inset 0 1px 0
+        rgba(255,255,255,.065);
+
+}
+
+
+/* ==========================================================
+   22 — PREVIEW BUTTON MICRO MOTION
+========================================================== */
+
+.development-preview-button {
+
+    transition:
+
+        transform .35s
+        var(--dev-ease),
+
+        border-color .3s ease,
+
+        background .3s ease;
+
+}
+
+
+.development-preview-button:hover {
+
+    transform:
+        translateY(-3px);
+
+    border-color:
+        rgba(34,211,238,.35);
+
+    background:
+        rgba(34,211,238,.085);
+
+}
+
+
+/* ==========================================================
+   23 — PROJECT LINK
+========================================================== */
+
+.development-link {
+
+    will-change:
+        transform;
+
+}
+
+
+/* ==========================================================
+   24 — PERFORMANCE
+========================================================== */
+
+.development-showcase,
+.development-showcase-frame,
+.development-preview,
+.preview-ui-card,
+.development-service-card,
+.development-service-icon,
+.development-glow {
+
+    backface-visibility:
+        hidden;
+
+    -webkit-backface-visibility:
+        hidden;
+
+}
+
+
+/* ==========================================================
+   25 — REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .solution-development *,
+    .solution-development *::before,
+    .solution-development *::after {
+
+        animation:
+            none !important;
+
+        transition:
+            none !important;
+
+    }
+
+}

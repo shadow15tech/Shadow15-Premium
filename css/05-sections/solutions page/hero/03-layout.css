@@ -1,0 +1,779 @@
+/* ==========================================================
+   SHADOW15 — SOLUTIONS PAGE
+   03-LAYOUT.CSS
+
+   PURPOSE:
+   • Main hero composition
+   • Desktop two-column structure
+   • Content / visual positioning
+   • Visual stage dimensions
+   • Vertical alignment
+   • Container spacing
+   • Tablet layout transition
+
+   BACKGROUND:
+   01-background.css
+
+   HEADING:
+   02-heading.css
+
+   COMPONENTS:
+   04-components.css
+
+   ANIMATION:
+   05-animation.css
+
+   RESPONSIVE:
+   06-responsive.css
+========================================================== */
+
+
+/* ==========================================================
+   01 — HERO CONTAINER
+========================================================== */
+
+.solutions-hero > .container {
+
+    position: relative;
+
+    width: min(
+        92%,
+        1380px
+    );
+
+    margin-inline: auto;
+
+}
+
+
+/* ==========================================================
+   02 — MAIN HERO LAYOUT
+========================================================== */
+
+.solutions-hero-layout {
+
+    position: relative;
+
+    min-height: 690px;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, .92fr)
+        minmax(0, 1.08fr);
+
+    align-items: center;
+
+    gap: clamp(
+        40px,
+        5vw,
+        95px
+    );
+
+}
+
+
+/* ==========================================================
+   03 — CONTENT COLUMN
+========================================================== */
+
+.solutions-hero-content {
+
+    position: relative;
+
+    z-index: 10;
+
+    width: 100%;
+
+    padding:
+        30px 0;
+
+}
+
+
+/* ==========================================================
+   04 — VISUAL COLUMN
+========================================================== */
+
+.solutions-hero-visual {
+
+    position: relative;
+
+    z-index: 4;
+
+    width: 100%;
+
+    min-height: 650px;
+
+    display: grid;
+
+    place-items: center;
+
+}
+
+
+/* ==========================================================
+   05 — VISUAL STAGE
+========================================================== */
+
+.solutions-hero-visual::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    width: 620px;
+
+    height: 620px;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+
+            rgba(34, 211, 238, .035)
+            0%,
+
+            rgba(34, 211, 238, .018)
+            35%,
+
+            transparent 70%
+        );
+
+    pointer-events: none;
+
+}
+
+
+/* ==========================================================
+   06 — VISUAL EDGE FADE
+========================================================== */
+
+.solutions-hero-visual::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 5% 0;
+
+    pointer-events: none;
+
+    background:
+
+        radial-gradient(
+            ellipse at center,
+
+            transparent 48%,
+
+            rgba(5, 12, 23, .38) 100%
+        );
+
+}
+
+
+/* ==========================================================
+   07 — ORBIT STAGE
+========================================================== */
+
+.solutions-hero-orbit {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    width: min(
+        620px,
+        48vw
+    );
+
+    aspect-ratio: 1 / 1;
+
+    transform:
+        translate(-50%, -50%);
+
+    display: grid;
+
+    place-items: center;
+
+    pointer-events: none;
+
+}
+
+
+/* ==========================================================
+   08 — ORBIT RINGS
+========================================================== */
+
+.solutions-orbit-ring {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+}
+
+
+/* OUTER */
+
+.solutions-orbit-ring--one {
+
+    width: 100%;
+
+    height: 100%;
+
+}
+
+
+/* MIDDLE */
+
+.solutions-orbit-ring--two {
+
+    width: 76%;
+
+    height: 76%;
+
+}
+
+
+/* INNER */
+
+.solutions-orbit-ring--three {
+
+    width: 50%;
+
+    height: 50%;
+
+}
+
+
+/* ==========================================================
+   09 — DIGITAL SYSTEM
+========================================================== */
+
+.solutions-system {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    width: min(
+        620px,
+        48vw
+    );
+
+    aspect-ratio: 1 / 1;
+
+    transform:
+        translate(-50%, -50%);
+
+}
+
+
+/* ==========================================================
+   10 — SYSTEM CENTER
+========================================================== */
+
+.solutions-system-core {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+}
+
+
+/* ==========================================================
+   11 — NODE STAGE
+========================================================== */
+
+.solutions-node {
+
+    position: absolute;
+
+}
+
+
+/* ==========================================================
+   12 — DEVELOPMENT NODE
+========================================================== */
+
+.solutions-node--development {
+
+    top: 5%;
+
+    left: 0;
+
+}
+
+
+/* ==========================================================
+   13 — MARKETING NODE
+========================================================== */
+
+.solutions-node--marketing {
+
+    top: 5%;
+
+    right: 0;
+
+}
+
+
+/* ==========================================================
+   14 — CREATIVE NODE
+========================================================== */
+
+.solutions-node--creative {
+
+    bottom: 5%;
+
+    left: 0;
+
+}
+
+
+/* ==========================================================
+   15 — SUPPORT NODE
+========================================================== */
+
+.solutions-node--support {
+
+    right: 0;
+
+    bottom: 5%;
+
+}
+
+
+/* ==========================================================
+   16 — STATUS POSITION
+========================================================== */
+
+.solutions-hero-status {
+
+    position: absolute;
+
+    top: 14%;
+
+    right: 3%;
+
+    z-index: 15;
+
+}
+
+
+/* ==========================================================
+   17 — METRIC POSITION
+========================================================== */
+
+.solutions-hero-metric {
+
+    position: absolute;
+
+    bottom: 12%;
+
+    left: 3%;
+
+    z-index: 15;
+
+}
+
+
+/* ==========================================================
+   18 — VISUAL BALANCE
+========================================================== */
+
+/*
+    Keeps the visual slightly behind the content
+    rather than looking like two isolated columns.
+*/
+
+.solutions-hero-visual {
+
+    margin-right: -20px;
+
+}
+
+
+/* ==========================================================
+   19 — DESKTOP LARGE
+========================================================== */
+
+@media (min-width: 1440px) {
+
+    .solutions-hero > .container {
+
+        width: min(
+            90%,
+            1480px
+        );
+
+    }
+
+    .solutions-hero-layout {
+
+        min-height: 730px;
+
+        grid-template-columns:
+            minmax(0, .88fr)
+            minmax(0, 1.12fr);
+
+        gap: 70px;
+
+    }
+
+    .solutions-hero-visual {
+
+        min-height: 700px;
+
+        margin-right: -40px;
+
+    }
+
+    .solutions-hero-orbit,
+    .solutions-system {
+
+        width: 680px;
+
+    }
+
+    .solutions-hero-visual::before {
+
+        width: 720px;
+
+        height: 720px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   20 — STANDARD LAPTOP
+========================================================== */
+
+@media (max-width: 1200px) {
+
+    .solutions-hero > .container {
+
+        width: min(
+            94%,
+            1180px
+        );
+
+    }
+
+    .solutions-hero-layout {
+
+        min-height: 640px;
+
+        gap: 35px;
+
+    }
+
+    .solutions-hero-visual {
+
+        min-height: 590px;
+
+        margin-right: 0;
+
+    }
+
+    .solutions-hero-orbit,
+    .solutions-system {
+
+        width: 540px;
+
+    }
+
+    .solutions-hero-visual::before {
+
+        width: 560px;
+
+        height: 560px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   21 — SMALL LAPTOP
+========================================================== */
+
+@media (max-width: 1050px) {
+
+    .solutions-hero-layout {
+
+        grid-template-columns:
+            minmax(0, .9fr)
+            minmax(0, 1.1fr);
+
+        gap: 20px;
+
+    }
+
+    .solutions-hero-visual {
+
+        min-height: 540px;
+
+    }
+
+    .solutions-hero-orbit,
+    .solutions-system {
+
+        width: 490px;
+
+    }
+
+    .solutions-hero-status {
+
+        right: 0;
+
+    }
+
+    .solutions-hero-metric {
+
+        left: 0;
+
+    }
+
+}
+
+
+/* ==========================================================
+   22 — TABLET COMPOSITION
+========================================================== */
+
+@media (max-width: 850px) {
+
+    .solutions-hero > .container {
+
+        width: min(
+            92%,
+            720px
+        );
+
+    }
+
+    .solutions-hero-layout {
+
+        min-height: auto;
+
+        grid-template-columns: 1fr;
+
+        gap: 65px;
+
+        padding-top: 20px;
+
+    }
+
+    .solutions-hero-content {
+
+        width: 100%;
+
+        padding: 0;
+
+        text-align: center;
+
+    }
+
+    .solutions-hero-visual {
+
+        width: 100%;
+
+        min-height: 540px;
+
+        margin: 0;
+
+    }
+
+    .solutions-hero-orbit,
+    .solutions-system {
+
+        width: 500px;
+
+    }
+
+    .solutions-hero-visual::before {
+
+        width: 540px;
+
+        height: 540px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   23 — LARGE MOBILE STAGE
+========================================================== */
+
+@media (max-width: 600px) {
+
+    .solutions-hero > .container {
+
+        width: 92%;
+
+    }
+
+    .solutions-hero-layout {
+
+        gap: 45px;
+
+    }
+
+    .solutions-hero-visual {
+
+        min-height: 430px;
+
+    }
+
+    .solutions-hero-orbit,
+    .solutions-system {
+
+        width: 390px;
+
+    }
+
+    .solutions-hero-visual::before {
+
+        width: 420px;
+
+        height: 420px;
+
+    }
+
+    .solutions-hero-status {
+
+        top: 40%;
+
+        right: 50%;
+
+        transform:
+            translateX(50%);
+
+    }
+
+    .solutions-hero-metric {
+
+        left: 50%;
+
+        bottom: 0;
+
+        transform:
+            translateX(-50%);
+
+    }
+
+}
+
+
+/* ==========================================================
+   24 — SMALL MOBILE
+========================================================== */
+
+@media (max-width: 420px) {
+
+    .solutions-hero > .container {
+
+        width: 91%;
+
+    }
+
+    .solutions-hero-layout {
+
+        gap: 38px;
+
+    }
+
+    .solutions-hero-visual {
+
+        min-height: 370px;
+
+    }
+
+    .solutions-hero-orbit,
+    .solutions-system {
+
+        width: 315px;
+
+    }
+
+    .solutions-hero-visual::before {
+
+        width: 340px;
+
+        height: 340px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   25 — VERY SMALL DEVICES
+========================================================== */
+
+@media (max-width: 360px) {
+
+    .solutions-hero-visual {
+
+        min-height: 340px;
+
+    }
+
+    .solutions-hero-orbit,
+    .solutions-system {
+
+        width: 285px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   26 — REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .solutions-hero-visual,
+    .solutions-system,
+    .solutions-hero-orbit {
+
+        transform: none;
+
+    }
+
+}

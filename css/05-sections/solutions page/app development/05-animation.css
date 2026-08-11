@@ -1,0 +1,1190 @@
+/* ==========================================================
+   SHADOW15 — APP DEVELOPMENT
+   05-ANIMATION.CSS
+========================================================== */
+
+
+/* ==========================================================
+   01 — MOTION VARIABLES
+========================================================== */
+
+.solution-app {
+
+    --app-ease:
+        cubic-bezier(.22,1,.36,1);
+
+}
+
+
+/* ==========================================================
+   02 — INTRO REVEAL
+========================================================== */
+
+.app-intro {
+
+    animation:
+        appIntroReveal
+        1s
+        var(--app-ease)
+        both;
+
+}
+
+
+@keyframes appIntroReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(35px);
+
+        filter:
+            blur(6px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+
+        filter:
+            blur(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   03 — LABEL REVEAL
+========================================================== */
+
+.app-label {
+
+    animation:
+        appLabelReveal
+        .7s
+        var(--app-ease)
+        .1s
+        both;
+
+}
+
+
+@keyframes appLabelReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateX(-18px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateX(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   04 — HEADING REVEAL
+========================================================== */
+
+.app-heading h2 {
+
+    animation:
+        appHeadingReveal
+        1s
+        var(--app-ease)
+        .18s
+        both;
+
+}
+
+
+@keyframes appHeadingReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(30px)
+            scale(.98);
+
+        filter:
+            blur(7px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+        filter:
+            blur(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   05 — HEADING ACCENT
+========================================================== */
+
+.app-heading h2 span {
+
+    background-size:
+        200% 100%;
+
+    animation:
+        appGradientFlow
+        5s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes appGradientFlow {
+
+    0%,
+    100% {
+
+        background-position:
+            0% 50%;
+
+    }
+
+    50% {
+
+        background-position:
+            100% 50%;
+
+    }
+
+}
+
+
+/* ==========================================================
+   06 — DESCRIPTION
+========================================================== */
+
+.app-description {
+
+    animation:
+        appDescriptionReveal
+        .8s
+        var(--app-ease)
+        .38s
+        both;
+
+}
+
+
+@keyframes appDescriptionReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(22px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   07 — SHOWCASE REVEAL
+========================================================== */
+
+.app-showcase {
+
+    animation:
+        appShowcaseReveal
+        1.15s
+        var(--app-ease)
+        .3s
+        both;
+
+}
+
+
+@keyframes appShowcaseReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(45px)
+            scale(.975);
+
+        filter:
+            blur(8px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+        filter:
+            blur(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   08 — DEVICE FLOAT
+========================================================== */
+
+.app-device {
+
+    animation:
+        appDeviceFloat
+        6s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes appDeviceFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-10px)
+            rotate(.45deg);
+
+    }
+
+}
+
+
+/* ==========================================================
+   09 — DEVICE GLOW
+========================================================== */
+
+.app-device-glow {
+
+    animation:
+        appDeviceGlow
+        5s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes appDeviceGlow {
+
+    0%,
+    100% {
+
+        opacity:
+            .45;
+
+        transform:
+            translate(-50%,-50%)
+            scale(.94);
+
+    }
+
+    50% {
+
+        opacity:
+            .78;
+
+        transform:
+            translate(-50%,-50%)
+            scale(1.06);
+
+    }
+
+}
+
+
+/* ==========================================================
+   10 — SCREEN HERO GLOW
+========================================================== */
+
+.app-screen-hero::before {
+
+    animation:
+        appScreenGlow
+        4s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes appScreenGlow {
+
+    0%,
+    100% {
+
+        opacity:
+            .45;
+
+        transform:
+            scale(.9);
+
+    }
+
+    50% {
+
+        opacity:
+            .85;
+
+        transform:
+            scale(1.12);
+
+    }
+
+}
+
+
+/* ==========================================================
+   11 — MINI CHART
+========================================================== */
+
+.app-mini-chart span {
+
+    transform:
+        scaleY(0);
+
+    transform-origin:
+        bottom;
+
+    animation:
+        appChartBar
+        .65s
+        var(--app-ease)
+        forwards;
+
+}
+
+
+.app-mini-chart span:nth-child(1) {
+
+    animation-delay:
+        .85s;
+
+}
+
+.app-mini-chart span:nth-child(2) {
+
+    animation-delay:
+        .93s;
+
+}
+
+.app-mini-chart span:nth-child(3) {
+
+    animation-delay:
+        1.01s;
+
+}
+
+.app-mini-chart span:nth-child(4) {
+
+    animation-delay:
+        1.09s;
+
+}
+
+.app-mini-chart span:nth-child(5) {
+
+    animation-delay:
+        1.17s;
+
+}
+
+.app-mini-chart span:nth-child(6) {
+
+    animation-delay:
+        1.25s;
+
+}
+
+
+@keyframes appChartBar {
+
+    from {
+
+        transform:
+            scaleY(0);
+
+    }
+
+    to {
+
+        transform:
+            scaleY(1);
+
+    }
+
+}
+
+
+/* ==========================================================
+   12 — ACTIVE USERS CARD
+========================================================== */
+
+.app-users-card {
+
+    animation:
+        appUsersFloat
+        6s
+        ease-in-out
+        1s
+        infinite;
+
+}
+
+
+@keyframes appUsersFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-8px);
+
+    }
+
+}
+
+
+/* ==========================================================
+   13 — PERFORMANCE CARD
+========================================================== */
+
+.app-performance-card {
+
+    animation:
+        appPerformanceFloat
+        6.5s
+        ease-in-out
+        1.3s
+        infinite;
+
+}
+
+
+@keyframes appPerformanceFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(9px);
+
+    }
+
+}
+
+
+/* ==========================================================
+   14 — PERFORMANCE BAR
+========================================================== */
+
+.app-performance-bar span {
+
+    transform:
+        scaleX(0);
+
+    transform-origin:
+        left center;
+
+    animation:
+        appPerformanceLoad
+        1.4s
+        var(--app-ease)
+        1.15s
+        forwards;
+
+}
+
+
+@keyframes appPerformanceLoad {
+
+    from {
+
+        transform:
+            scaleX(0);
+
+    }
+
+    to {
+
+        transform:
+            scaleX(1);
+
+    }
+
+}
+
+
+/* ==========================================================
+   15 — LIVE DOT
+========================================================== */
+
+.app-live-dot::before {
+
+    animation:
+        appLivePulse
+        1.8s
+        ease-out
+        infinite;
+
+}
+
+
+@keyframes appLivePulse {
+
+    0% {
+
+        box-shadow:
+            0 0 0 0
+            rgba(74,222,128,.55);
+
+    }
+
+    70% {
+
+        box-shadow:
+            0 0 0 9px
+            rgba(74,222,128,0);
+
+    }
+
+    100% {
+
+        box-shadow:
+            0 0 0 0
+            rgba(74,222,128,0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   16 — NOTIFICATION
+========================================================== */
+
+.app-notification {
+
+    animation:
+        appNotificationFloat
+        5.5s
+        ease-in-out
+        1.5s
+        infinite;
+
+}
+
+
+@keyframes appNotificationFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-7px);
+
+    }
+
+}
+
+
+/* ==========================================================
+   17 — NOTIFICATION ICON
+========================================================== */
+
+.app-notification-icon {
+
+    animation:
+        appNotificationPulse
+        3s
+        ease-in-out
+        2s
+        infinite;
+
+}
+
+
+@keyframes appNotificationPulse {
+
+    0%,
+    100% {
+
+        box-shadow:
+            0 0 0
+            rgba(74,222,128,0);
+
+    }
+
+    50% {
+
+        box-shadow:
+            0 0 20px
+            rgba(74,222,128,.12);
+
+    }
+
+}
+
+
+/* ==========================================================
+   18 — ORBITS
+========================================================== */
+
+.app-orbit-one {
+
+    animation:
+        appOrbitOne
+        18s
+        linear
+        infinite;
+
+}
+
+
+.app-orbit-two {
+
+    animation:
+        appOrbitTwo
+        26s
+        linear
+        infinite;
+
+}
+
+
+@keyframes appOrbitOne {
+
+    from {
+
+        transform:
+            translate(-50%,-50%)
+            rotate(0deg);
+
+    }
+
+    to {
+
+        transform:
+            translate(-50%,-50%)
+            rotate(360deg);
+
+    }
+
+}
+
+
+@keyframes appOrbitTwo {
+
+    from {
+
+        transform:
+            translate(-50%,-50%)
+            rotate(360deg);
+
+    }
+
+    to {
+
+        transform:
+            translate(-50%,-50%)
+            rotate(0deg);
+
+    }
+
+}
+
+
+/* ==========================================================
+   19 — SERVICE CARDS REVEAL
+========================================================== */
+
+.app-service-card {
+
+    opacity:
+        0;
+
+    animation:
+        appCardReveal
+        .8s
+        var(--app-ease)
+        both;
+
+}
+
+
+.app-service-card:nth-child(1) {
+
+    animation-delay:
+        .15s;
+
+}
+
+
+.app-service-card:nth-child(2) {
+
+    animation-delay:
+        .30s;
+
+}
+
+
+.app-service-card:nth-child(3) {
+
+    animation-delay:
+        .45s;
+
+}
+
+
+@keyframes appCardReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(35px)
+            scale(.975);
+
+        filter:
+            blur(5px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+        filter:
+            blur(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   20 — SERVICE ICON FLOAT
+========================================================== */
+
+.app-service-icon {
+
+    animation:
+        appIconFloat
+        5s
+        ease-in-out
+        infinite;
+
+}
+
+
+.app-service-card:nth-child(2)
+.app-service-icon {
+
+    animation-delay:
+        .7s;
+
+}
+
+
+.app-service-card:nth-child(3)
+.app-service-icon {
+
+    animation-delay:
+        1.4s;
+
+}
+
+
+@keyframes appIconFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-3px);
+
+    }
+
+}
+
+
+/* ==========================================================
+   21 — SERVICE GLOW
+========================================================== */
+
+.app-service-card::before {
+
+    animation:
+        appCardAmbient
+        6s
+        ease-in-out
+        infinite;
+
+}
+
+
+.app-service-card:nth-child(2)::before {
+
+    animation-delay:
+        1s;
+
+}
+
+
+.app-service-card:nth-child(3)::before {
+
+    animation-delay:
+        2s;
+
+}
+
+
+@keyframes appCardAmbient {
+
+    0%,
+    100% {
+
+        opacity:
+            .35;
+
+    }
+
+    50% {
+
+        opacity:
+            .85;
+
+    }
+
+}
+
+
+/* ==========================================================
+   22 — FOOTNOTE
+========================================================== */
+
+.app-footnote {
+
+    animation:
+        appFootnoteReveal
+        .8s
+        var(--app-ease)
+        .8s
+        both;
+
+}
+
+
+@keyframes appFootnoteReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(18px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   23 — FOOTNOTE LINES
+========================================================== */
+
+.app-footnote > span {
+
+    transform:
+        scaleX(0);
+
+    animation:
+        appFootnoteLine
+        1s
+        var(--app-ease)
+        1s
+        forwards;
+
+}
+
+
+@keyframes appFootnoteLine {
+
+    from {
+
+        transform:
+            scaleX(0);
+
+        opacity:
+            0;
+
+    }
+
+    to {
+
+        transform:
+            scaleX(1);
+
+        opacity:
+            1;
+
+    }
+
+}
+
+
+/* ==========================================================
+   24 — CTA ARROW
+========================================================== */
+
+.app-link i {
+
+    animation:
+        appArrowFloat
+        2.5s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes appArrowFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translate(0,0);
+
+    }
+
+    50% {
+
+        transform:
+            translate(3px,-3px);
+
+    }
+
+}
+
+
+/* ==========================================================
+   25 — PERFORMANCE
+========================================================== */
+
+.app-device,
+.app-device-glow,
+.app-floating-card,
+.app-notification,
+.app-service-card,
+.app-service-icon,
+.app-orbit {
+
+    will-change:
+        transform;
+
+}
+
+
+/* ==========================================================
+   26 — GPU OPTIMIZATION
+========================================================== */
+
+.app-device,
+.app-device-frame,
+.app-floating-card,
+.app-notification,
+.app-service-card,
+.app-orbit {
+
+    backface-visibility:
+        hidden;
+
+    -webkit-backface-visibility:
+        hidden;
+
+}
+
+
+/* ==========================================================
+   27 — TOUCH DEVICES
+========================================================== */
+
+@media (hover: none) {
+
+    .app-service-card:hover {
+
+        transform:
+            none;
+
+    }
+
+    .app-service-card:hover
+    .app-service-icon {
+
+        transform:
+            none;
+
+    }
+
+}
+
+
+/* ==========================================================
+   28 — MOBILE ANIMATION SCALE
+========================================================== */
+
+@media (max-width: 600px) {
+
+    .app-device {
+
+        animation-duration:
+            7s;
+
+    }
+
+    .app-users-card,
+    .app-performance-card,
+    .app-notification {
+
+        animation-duration:
+            7s;
+
+    }
+
+}
+
+
+/* ==========================================================
+   29 — REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .solution-app *,
+    .solution-app *::before,
+    .solution-app *::after {
+
+        animation:
+            none !important;
+
+        transition:
+            none !important;
+
+    }
+
+}

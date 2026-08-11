@@ -1,0 +1,1922 @@
+/* ==========================================================
+   SHADOW15 — APP DEVELOPMENT
+   03-PRODUCT-SHOWCASE.CSS
+========================================================== */
+
+
+/* ==========================================================
+   01 — SHOWCASE
+========================================================== */
+
+.app-showcase {
+
+    position: relative;
+
+    z-index: 5;
+
+    min-height: 680px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: visible;
+
+    margin-top: 10px;
+
+}
+
+
+/* ==========================================================
+   02 — DEVICE STAGE
+========================================================== */
+
+.app-device-stage {
+
+    position: relative;
+
+    z-index: 5;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 430px;
+
+    height: 610px;
+
+}
+
+
+/* ==========================================================
+   03 — DEVICE AMBIENT GLOW
+========================================================== */
+
+.app-device-glow {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    width: 390px;
+
+    height: 560px;
+
+    transform:
+        translate(-50%,-50%);
+
+    border-radius:
+        50%;
+
+    background:
+
+        radial-gradient(
+            ellipse at center,
+
+            rgba(34,211,238,.16),
+
+            rgba(59,130,246,.055) 42%,
+
+            transparent 72%
+        );
+
+    filter:
+        blur(45px);
+
+    opacity:
+        .65;
+
+    pointer-events:
+        none;
+
+}
+
+
+/* ==========================================================
+   04 — DEVICE OUTER
+========================================================== */
+
+.app-device {
+
+    position: relative;
+
+    width: 285px;
+
+    height: 585px;
+
+    padding: 7px;
+
+    border:
+        1px solid
+        rgba(226,232,240,.18);
+
+    border-radius:
+        42px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+
+            #27394b,
+
+            #07121f 38%,
+
+            #17283a 72%,
+
+            #050b13
+        );
+
+    box-shadow:
+
+        0 55px 100px
+        rgba(0,0,0,.48),
+
+        0 0 65px
+        rgba(34,211,238,.08),
+
+        inset 1px 1px 1px
+        rgba(255,255,255,.15),
+
+        inset -2px -3px 4px
+        rgba(0,0,0,.55);
+
+}
+
+
+/* ==========================================================
+   05 — DEVICE HIGHLIGHT
+========================================================== */
+
+.app-device::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 9%;
+
+    left: 2px;
+
+    width: 2px;
+
+    height: 42%;
+
+    border-radius:
+        999px;
+
+    background:
+
+        linear-gradient(
+            to bottom,
+
+            transparent,
+
+            rgba(255,255,255,.28),
+
+            transparent
+        );
+
+}
+
+
+/* ==========================================================
+   06 — DEVICE FRAME
+========================================================== */
+
+.app-device-frame {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 100%;
+
+    overflow: hidden;
+
+    border-radius:
+        36px;
+
+    background:
+
+        linear-gradient(
+            160deg,
+
+            #0b1c2c,
+
+            #06111d 55%,
+
+            #071725
+        );
+
+    box-shadow:
+
+        inset 0 0 0 1px
+        rgba(255,255,255,.035);
+
+}
+
+
+/* ==========================================================
+   07 — DEVICE TOP BAR
+========================================================== */
+
+.app-device-top {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    height: 30px;
+
+    padding:
+        0 19px;
+
+    color:
+        #a4b8c9;
+
+    font-size:
+        .43rem;
+
+    font-weight:
+        700;
+
+}
+
+
+/* ==========================================================
+   08 — DEVICE STATUS
+========================================================== */
+
+.app-device-top > div {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        5px;
+
+    color:
+        #91a7ba;
+
+    font-size:
+        .38rem;
+
+}
+
+
+/* ==========================================================
+   09 — APP HEADER
+========================================================== */
+
+.app-screen-header {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    padding:
+        17px 18px 13px;
+
+}
+
+
+/* ==========================================================
+   10 — HEADER LABEL
+========================================================== */
+
+.app-screen-header span {
+
+    display:
+        block;
+
+    margin-bottom:
+        5px;
+
+    color:
+        #4e7186;
+
+    font-size:
+        .36rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .13em;
+
+}
+
+
+/* ==========================================================
+   11 — HEADER TITLE
+========================================================== */
+
+.app-screen-header strong {
+
+    color:
+        #e4eef5;
+
+    font-size:
+        .82rem;
+
+    font-weight:
+        750;
+
+    letter-spacing:
+        -.025em;
+
+}
+
+
+/* ==========================================================
+   12 — AVATAR
+========================================================== */
+
+.app-avatar {
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    width:
+        31px;
+
+    height:
+        31px;
+
+    border:
+        1px solid
+        rgba(34,211,238,.22);
+
+    border-radius:
+        50%;
+
+    color:
+        #67e8f9;
+
+    background:
+
+        linear-gradient(
+            145deg,
+
+            rgba(34,211,238,.13),
+
+            rgba(99,102,241,.08)
+        );
+
+    font-size:
+        .52rem;
+
+    font-weight:
+        800;
+
+}
+
+
+/* ==========================================================
+   13 — APP HERO
+========================================================== */
+
+.app-screen-hero {
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    margin:
+        5px 15px 10px;
+
+    padding:
+        17px;
+
+    border:
+        1px solid
+        rgba(34,211,238,.12);
+
+    border-radius:
+        16px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+
+            rgba(16,53,70,.88),
+
+            rgba(8,27,42,.94)
+        );
+
+    box-shadow:
+
+        inset 0 1px 0
+        rgba(255,255,255,.04);
+
+}
+
+
+/* ==========================================================
+   14 — HERO GLOW
+========================================================== */
+
+.app-screen-hero::before {
+
+    content: "";
+
+    position:
+        absolute;
+
+    top:
+        -80px;
+
+    right:
+        -60px;
+
+    width:
+        160px;
+
+    height:
+        160px;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(34,211,238,.13);
+
+    filter:
+        blur(35px);
+
+}
+
+
+/* ==========================================================
+   15 — HERO LABEL
+========================================================== */
+
+.app-screen-hero > span {
+
+    position:
+        relative;
+
+    display:
+        block;
+
+    color:
+        #5f91a7;
+
+    font-size:
+        .35rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .12em;
+
+}
+
+
+/* ==========================================================
+   16 — HERO VALUE
+========================================================== */
+
+.app-screen-hero > strong {
+
+    position:
+        relative;
+
+    display:
+        block;
+
+    margin:
+        8px 0 4px;
+
+    color:
+        #edf7fb;
+
+    font-size:
+        1.75rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        -.065em;
+
+}
+
+
+/* ==========================================================
+   17 — HERO GROWTH
+========================================================== */
+
+.app-screen-hero > small {
+
+    position:
+        relative;
+
+    color:
+        #4ade80;
+
+    font-size:
+        .38rem;
+
+    font-weight:
+        700;
+
+}
+
+
+/* ==========================================================
+   18 — MINI CHART
+========================================================== */
+
+.app-mini-chart {
+
+    position:
+        absolute;
+
+    right:
+        13px;
+
+    bottom:
+        13px;
+
+    display:
+        flex;
+
+    align-items:
+        flex-end;
+
+    gap:
+        3px;
+
+    height:
+        38px;
+
+}
+
+
+.app-mini-chart span {
+
+    display:
+        block;
+
+    width:
+        4px;
+
+    border-radius:
+        4px 4px 1px 1px;
+
+    background:
+
+        linear-gradient(
+            to top,
+
+            rgba(34,211,238,.28),
+
+            #22d3ee
+        );
+
+}
+
+
+.app-mini-chart span:nth-child(1) {
+    height: 25%;
+}
+
+.app-mini-chart span:nth-child(2) {
+    height: 43%;
+}
+
+.app-mini-chart span:nth-child(3) {
+    height: 34%;
+}
+
+.app-mini-chart span:nth-child(4) {
+    height: 61%;
+}
+
+.app-mini-chart span:nth-child(5) {
+    height: 76%;
+}
+
+.app-mini-chart span:nth-child(6) {
+    height: 100%;
+}
+
+
+/* ==========================================================
+   19 — APP STATS
+========================================================== */
+
+.app-screen-stats {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:
+        8px;
+
+    padding:
+        0 15px;
+
+}
+
+
+.app-screen-stats > div {
+
+    padding:
+        12px;
+
+    border:
+        1px solid
+        rgba(148,163,184,.07);
+
+    border-radius:
+        12px;
+
+    background:
+        rgba(148,163,184,.025);
+
+}
+
+
+.app-screen-stats span {
+
+    display:
+        block;
+
+    color:
+        #526c80;
+
+    font-size:
+        .32rem;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        .08em;
+
+}
+
+
+.app-screen-stats strong {
+
+    display:
+        block;
+
+    margin-top:
+        6px;
+
+    color:
+        #dceaf2;
+
+    font-size:
+        .82rem;
+
+    font-weight:
+        800;
+
+}
+
+
+/* ==========================================================
+   20 — ACTIVITY SECTION
+========================================================== */
+
+.app-screen-section {
+
+    padding:
+        17px 15px 0;
+
+}
+
+
+.app-screen-section-title {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+    margin-bottom:
+        10px;
+
+}
+
+
+.app-screen-section-title strong {
+
+    color:
+        #cad9e4;
+
+    font-size:
+        .48rem;
+
+}
+
+
+.app-screen-section-title span {
+
+    color:
+        #22bcd3;
+
+    font-size:
+        .35rem;
+
+}
+
+
+/* ==========================================================
+   21 — ACTIVITY ITEM
+========================================================== */
+
+.app-activity {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        29px
+        minmax(0,1fr)
+        auto;
+
+    align-items:
+        center;
+
+    gap:
+        8px;
+
+    padding:
+        8px 0;
+
+    border-bottom:
+        1px solid
+        rgba(148,163,184,.055);
+
+}
+
+
+.app-activity-icon {
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    width:
+        27px;
+
+    height:
+        27px;
+
+    border:
+        1px solid
+        rgba(34,211,238,.10);
+
+    border-radius:
+        8px;
+
+    color:
+        #22d3ee;
+
+    background:
+        rgba(34,211,238,.045);
+
+    font-size:
+        .45rem;
+
+}
+
+
+.app-activity div:nth-child(2) {
+
+    min-width:
+        0;
+
+}
+
+
+.app-activity strong {
+
+    display:
+        block;
+
+    overflow:
+        hidden;
+
+    color:
+        #cbd9e3;
+
+    font-size:
+        .43rem;
+
+    white-space:
+        nowrap;
+
+    text-overflow:
+        ellipsis;
+
+}
+
+
+.app-activity span {
+
+    display:
+        block;
+
+    margin-top:
+        2px;
+
+    color:
+        #536b7e;
+
+    font-size:
+        .33rem;
+
+}
+
+
+.app-activity b {
+
+    color:
+        #4ade80;
+
+    font-size:
+        .36rem;
+
+}
+
+
+/* ==========================================================
+   22 — APP BOTTOM NAV
+========================================================== */
+
+.app-screen-nav {
+
+    position:
+        absolute;
+
+    right:
+        0;
+
+    bottom:
+        0;
+
+    left:
+        0;
+
+    display:
+        flex;
+
+    justify-content:
+        space-around;
+
+    align-items:
+        center;
+
+    height:
+        47px;
+
+    border-top:
+        1px solid
+        rgba(148,163,184,.08);
+
+    background:
+        rgba(4,13,23,.82);
+
+    backdrop-filter:
+        blur(10px);
+
+}
+
+
+.app-screen-nav span {
+
+    color:
+        #40586c;
+
+    font-size:
+        .52rem;
+
+}
+
+
+.app-screen-nav span.active {
+
+    color:
+        #22d3ee;
+
+    filter:
+        drop-shadow(
+            0 0 7px
+            rgba(34,211,238,.30)
+        );
+
+}
+
+
+/* ==========================================================
+   23 — FLOATING CARDS
+========================================================== */
+
+.app-floating-card {
+
+    position:
+        absolute;
+
+    z-index:
+        8;
+
+    border:
+        1px solid
+        rgba(148,163,184,.12);
+
+    border-radius:
+        17px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+
+            rgba(17,38,57,.92),
+
+            rgba(5,17,29,.95)
+        );
+
+    box-shadow:
+
+        0 28px 60px
+        rgba(0,0,0,.35),
+
+        inset 0 1px 0
+        rgba(255,255,255,.04);
+
+    backdrop-filter:
+        blur(18px);
+
+    -webkit-backdrop-filter:
+        blur(18px);
+
+}
+
+
+/* ==========================================================
+   24 — USERS CARD
+========================================================== */
+
+.app-users-card {
+
+    top:
+        17%;
+
+    left:
+        calc(50% - 420px);
+
+    display:
+        grid;
+
+    grid-template-columns:
+        43px
+        auto
+        auto;
+
+    align-items:
+        center;
+
+    gap:
+        11px;
+
+    min-width:
+        245px;
+
+    padding:
+        14px;
+
+}
+
+
+/* ==========================================================
+   25 — FLOATING ICON
+========================================================== */
+
+.app-floating-icon {
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    width:
+        40px;
+
+    height:
+        40px;
+
+    border:
+        1px solid
+        rgba(34,211,238,.15);
+
+    border-radius:
+        12px;
+
+    color:
+        #22d3ee;
+
+    background:
+        rgba(34,211,238,.05);
+
+    font-size:
+        .72rem;
+
+}
+
+
+/* ==========================================================
+   26 — FLOATING CONTENT
+========================================================== */
+
+.app-floating-content span {
+
+    display:
+        block;
+
+    color:
+        #536b7e;
+
+    font-size:
+        .38rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .10em;
+
+}
+
+
+.app-floating-content strong {
+
+    display:
+        block;
+
+    margin-top:
+        4px;
+
+    color:
+        #e3eef5;
+
+    font-size:
+        .86rem;
+
+    font-weight:
+        800;
+
+}
+
+
+/* ==========================================================
+   27 — FLOATING GROWTH
+========================================================== */
+
+.app-floating-growth {
+
+    align-self:
+        end;
+
+    color:
+        #4ade80;
+
+    font-size:
+        .43rem;
+
+    font-weight:
+        800;
+
+}
+
+
+/* ==========================================================
+   28 — PERFORMANCE CARD
+========================================================== */
+
+.app-performance-card {
+
+    top:
+        29%;
+
+    right:
+        calc(50% - 420px);
+
+    width:
+        205px;
+
+    padding:
+        17px;
+
+}
+
+
+/* ==========================================================
+   29 — PERFORMANCE TOP
+========================================================== */
+
+.app-performance-top {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+}
+
+
+.app-performance-top > span:first-child {
+
+    color:
+        #5d7487;
+
+    font-size:
+        .40rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .09em;
+
+}
+
+
+.app-live-dot {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        5px;
+
+    color:
+        #4ade80;
+
+    font-size:
+        .36rem;
+
+    font-weight:
+        800;
+
+}
+
+
+.app-live-dot::before {
+
+    content:
+        "";
+
+    width:
+        5px;
+
+    height:
+        5px;
+
+    border-radius:
+        50%;
+
+    background:
+        #4ade80;
+
+    box-shadow:
+        0 0 8px
+        rgba(74,222,128,.55);
+
+}
+
+
+/* ==========================================================
+   30 — PERFORMANCE VALUE
+========================================================== */
+
+.app-performance-card > strong {
+
+    display:
+        block;
+
+    margin-top:
+        15px;
+
+    color:
+        #edf6fb;
+
+    font-size:
+        1.75rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        -.065em;
+
+}
+
+
+.app-performance-card > p {
+
+    margin:
+        3px 0 13px;
+
+    color:
+        #60788b;
+
+    font-size:
+        .43rem;
+
+}
+
+
+/* ==========================================================
+   31 — PERFORMANCE BAR
+========================================================== */
+
+.app-performance-bar {
+
+    width:
+        100%;
+
+    height:
+        4px;
+
+    overflow:
+        hidden;
+
+    border-radius:
+        999px;
+
+    background:
+        rgba(148,163,184,.08);
+
+}
+
+
+.app-performance-bar span {
+
+    display:
+        block;
+
+    width:
+        98.6%;
+
+    height:
+        100%;
+
+    border-radius:
+        inherit;
+
+    background:
+
+        linear-gradient(
+            90deg,
+
+            #22d3ee,
+
+            #818cf8
+        );
+
+    box-shadow:
+        0 0 10px
+        rgba(34,211,238,.25);
+
+}
+
+
+/* ==========================================================
+   32 — NOTIFICATION
+========================================================== */
+
+.app-notification {
+
+    position:
+        absolute;
+
+    right:
+        calc(50% - 390px);
+
+    bottom:
+        13%;
+
+    z-index:
+        9;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+    width:
+        220px;
+
+    padding:
+        11px 13px;
+
+    border:
+        1px solid
+        rgba(74,222,128,.13);
+
+    border-radius:
+        14px;
+
+    background:
+        rgba(7,24,36,.92);
+
+    box-shadow:
+        0 20px 45px
+        rgba(0,0,0,.30);
+
+    backdrop-filter:
+        blur(16px);
+
+}
+
+
+/* ==========================================================
+   33 — NOTIFICATION ICON
+========================================================== */
+
+.app-notification-icon {
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    width:
+        31px;
+
+    height:
+        31px;
+
+    flex-shrink:
+        0;
+
+    border:
+        1px solid
+        rgba(74,222,128,.15);
+
+    border-radius:
+        9px;
+
+    color:
+        #4ade80;
+
+    background:
+        rgba(74,222,128,.055);
+
+    font-size:
+        .52rem;
+
+}
+
+
+/* ==========================================================
+   34 — NOTIFICATION TEXT
+========================================================== */
+
+.app-notification strong {
+
+    display:
+        block;
+
+    color:
+        #dbe8ef;
+
+    font-size:
+        .48rem;
+
+}
+
+
+.app-notification span {
+
+    display:
+        block;
+
+    margin-top:
+        3px;
+
+    color:
+        #526b7e;
+
+    font-size:
+        .38rem;
+
+}
+
+
+/* ==========================================================
+   35 — SHOWCASE EDGE
+========================================================== */
+
+.app-showcase::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        50%;
+
+    left:
+        50%;
+
+    width:
+        660px;
+
+    height:
+        660px;
+
+    transform:
+        translate(-50%,-50%);
+
+    border:
+        1px solid
+        rgba(34,211,238,.035);
+
+    border-radius:
+        50%;
+
+    pointer-events:
+        none;
+
+}
+
+
+/* ==========================================================
+   36 — LAPTOP
+========================================================== */
+
+@media (max-width: 1200px) {
+
+    .app-device {
+
+        width:
+            260px;
+
+        height:
+            540px;
+
+    }
+
+    .app-device-stage {
+
+        width:
+            380px;
+
+        height:
+            570px;
+
+    }
+
+    .app-users-card {
+
+        left:
+            calc(50% - 350px);
+
+    }
+
+    .app-performance-card {
+
+        right:
+            calc(50% - 350px);
+
+    }
+
+    .app-notification {
+
+        right:
+            calc(50% - 330px);
+
+    }
+
+}
+
+
+/* ==========================================================
+   37 — TABLET
+========================================================== */
+
+@media (max-width: 850px) {
+
+    .app-showcase {
+
+        min-height:
+            760px;
+
+        margin-top:
+            10px;
+
+    }
+
+    .app-device {
+
+        width:
+            260px;
+
+        height:
+            535px;
+
+    }
+
+    .app-device-stage {
+
+        width:
+            350px;
+
+        height:
+            560px;
+
+    }
+
+    .app-users-card {
+
+        top:
+            8%;
+
+        left:
+            calc(50% - 250px);
+
+        transform:
+            scale(.88);
+
+    }
+
+    .app-performance-card {
+
+        top:
+            18%;
+
+        right:
+            calc(50% - 250px);
+
+        transform:
+            scale(.88);
+
+    }
+
+    .app-notification {
+
+        right:
+            calc(50% - 230px);
+
+        bottom:
+            10%;
+
+        transform:
+            scale(.88);
+
+    }
+
+    .app-showcase::before {
+
+        width:
+            550px;
+
+        height:
+            550px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   38 — MOBILE
+========================================================== */
+
+@media (max-width: 600px) {
+
+    .app-showcase {
+
+        min-height:
+            650px;
+
+        display:
+            block;
+
+        margin-top:
+            0;
+
+    }
+
+    .app-device-stage {
+
+        width:
+            100%;
+
+        height:
+            560px;
+
+    }
+
+    .app-device {
+
+        width:
+            245px;
+
+        height:
+            515px;
+
+        border-radius:
+            36px;
+
+    }
+
+    .app-device-frame {
+
+        border-radius:
+            30px;
+
+    }
+
+    .app-users-card {
+
+        top:
+            4%;
+
+        left:
+            3%;
+
+        min-width:
+            190px;
+
+        padding:
+            10px;
+
+        grid-template-columns:
+            34px
+            auto
+            auto;
+
+        gap:
+            8px;
+
+        transform:
+            scale(.78);
+
+        transform-origin:
+            left top;
+
+    }
+
+    .app-floating-icon {
+
+        width:
+            34px;
+
+        height:
+            34px;
+
+        border-radius:
+            9px;
+
+    }
+
+    .app-floating-content strong {
+
+        font-size:
+            .75rem;
+
+    }
+
+    .app-performance-card {
+
+        top:
+            9%;
+
+        right:
+            2%;
+
+        width:
+            165px;
+
+        padding:
+            13px;
+
+        transform:
+            scale(.78);
+
+        transform-origin:
+            right top;
+
+    }
+
+    .app-performance-card > strong {
+
+        font-size:
+            1.45rem;
+
+    }
+
+    .app-notification {
+
+        right:
+            2%;
+
+        bottom:
+            5%;
+
+        width:
+            190px;
+
+        padding:
+            9px;
+
+        transform:
+            scale(.78);
+
+        transform-origin:
+            right bottom;
+
+    }
+
+    .app-showcase::before {
+
+        width:
+            400px;
+
+        height:
+            400px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   39 — SMALL MOBILE
+========================================================== */
+
+@media (max-width: 420px) {
+
+    .app-showcase {
+
+        min-height:
+            610px;
+
+    }
+
+    .app-device-stage {
+
+        height:
+            530px;
+
+    }
+
+    .app-device {
+
+        width:
+            220px;
+
+        height:
+            470px;
+
+        padding:
+            6px;
+
+        border-radius:
+            33px;
+
+    }
+
+    .app-device-frame {
+
+        border-radius:
+            28px;
+
+    }
+
+    .app-users-card {
+
+        left:
+            -8px;
+
+        transform:
+            scale(.68);
+
+    }
+
+    .app-performance-card {
+
+        right:
+            -8px;
+
+        transform:
+            scale(.68);
+
+    }
+
+    .app-notification {
+
+        right:
+            -8px;
+
+        bottom:
+            2%;
+
+        transform:
+            scale(.68);
+
+    }
+
+    .app-showcase::before {
+
+        width:
+            340px;
+
+        height:
+            340px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   40 — EXTRA SMALL
+========================================================== */
+
+@media (max-width: 360px) {
+
+    .app-device {
+
+        width:
+            205px;
+
+        height:
+            440px;
+
+    }
+
+    .app-device-stage {
+
+        height:
+            500px;
+
+    }
+
+    .app-users-card,
+    .app-performance-card,
+    .app-notification {
+
+        transform:
+            scale(.61);
+
+    }
+
+}

@@ -1,0 +1,1197 @@
+/* ==========================================================
+   SHADOW15 — APP DEVELOPMENT
+   04-SERVICE-CARDS.CSS
+========================================================== */
+
+
+/* ==========================================================
+   01 — SERVICES WRAPPER
+========================================================== */
+
+.app-services {
+
+    position:
+        relative;
+
+    z-index:
+        5;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0,1fr));
+
+    gap:
+        18px;
+
+    margin-top:
+        30px;
+
+}
+
+
+/* ==========================================================
+   02 — SERVICE CARD
+========================================================== */
+
+.app-service-card {
+
+    position:
+        relative;
+
+    min-height:
+        330px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    overflow:
+        hidden;
+
+    padding:
+        25px;
+
+    border:
+        1px solid
+        rgba(148,163,184,.11);
+
+    border-radius:
+        20px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+
+            rgba(15,35,54,.86),
+
+            rgba(5,16,28,.96)
+        );
+
+    box-shadow:
+
+        0 25px 60px
+        rgba(0,0,0,.20),
+
+        inset 0 1px 0
+        rgba(255,255,255,.035);
+
+    backdrop-filter:
+        blur(18px);
+
+    -webkit-backdrop-filter:
+        blur(18px);
+
+    transition:
+
+        transform .5s
+        cubic-bezier(.22,1,.36,1),
+
+        border-color .4s ease,
+
+        box-shadow .5s ease,
+
+        background .4s ease;
+
+}
+
+
+/* ==========================================================
+   03 — CARD AMBIENT LIGHT
+========================================================== */
+
+.app-service-card::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        -120px;
+
+    right:
+        -100px;
+
+    width:
+        260px;
+
+    height:
+        260px;
+
+    border-radius:
+        50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+
+            rgba(34,211,238,.13),
+
+            rgba(34,211,238,.025) 45%,
+
+            transparent 72%
+        );
+
+    filter:
+        blur(15px);
+
+    opacity:
+        .55;
+
+    pointer-events:
+        none;
+
+    transition:
+
+        transform .65s
+        cubic-bezier(.22,1,.36,1),
+
+        opacity .5s ease;
+
+}
+
+
+/* ==========================================================
+   04 — CARD TECHNICAL GRID
+========================================================== */
+
+.app-service-card::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    pointer-events:
+        none;
+
+    opacity:
+        .22;
+
+    background-image:
+
+        linear-gradient(
+            rgba(148,163,184,.025) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(148,163,184,.025) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        26px 26px;
+
+    mask-image:
+
+        linear-gradient(
+            145deg,
+            black,
+            transparent 70%
+        );
+
+    -webkit-mask-image:
+
+        linear-gradient(
+            145deg,
+            black,
+            transparent 70%
+        );
+
+}
+
+
+/* ==========================================================
+   05 — CARD TOP
+========================================================== */
+
+.app-service-top {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+}
+
+
+/* ==========================================================
+   06 — NUMBER
+========================================================== */
+
+.app-service-number {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    min-width:
+        37px;
+
+    height:
+        26px;
+
+    padding:
+        0 9px;
+
+    border:
+        1px solid
+        rgba(148,163,184,.11);
+
+    border-radius:
+        999px;
+
+    color:
+        #71879a;
+
+    background:
+        rgba(148,163,184,.025);
+
+    font-size:
+        .50rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .11em;
+
+}
+
+
+/* ==========================================================
+   07 — SERVICE ICON
+========================================================== */
+
+.app-service-icon {
+
+    position:
+        relative;
+
+    width:
+        50px;
+
+    height:
+        50px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border:
+        1px solid
+        rgba(34,211,238,.16);
+
+    border-radius:
+        14px;
+
+    color:
+        #67e8f9;
+
+    background:
+
+        linear-gradient(
+            145deg,
+
+            rgba(34,211,238,.09),
+
+            rgba(34,211,238,.015)
+        );
+
+    box-shadow:
+
+        inset 0 1px 0
+        rgba(255,255,255,.05),
+
+        0 14px 30px
+        rgba(0,0,0,.18);
+
+    transition:
+
+        transform .45s
+        cubic-bezier(.22,1,.36,1),
+
+        border-color .35s ease,
+
+        box-shadow .35s ease;
+
+}
+
+
+/* ==========================================================
+   08 — ICON INNER FRAME
+========================================================== */
+
+.app-service-icon::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        6px;
+
+    border:
+        1px solid
+        rgba(34,211,238,.055);
+
+    border-radius:
+        9px;
+
+}
+
+
+/* ==========================================================
+   09 — ICON GLYPH
+========================================================== */
+
+.app-service-icon i {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    font-size:
+        .95rem;
+
+    filter:
+
+        drop-shadow(
+            0 0 10px
+            rgba(34,211,238,.22)
+        );
+
+}
+
+
+/* ==========================================================
+   10 — CARD CONTENT
+========================================================== */
+
+.app-service-content {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    flex:
+        1;
+
+    padding-top:
+        46px;
+
+}
+
+
+/* ==========================================================
+   11 — TITLE
+========================================================== */
+
+.app-service-content h3 {
+
+    margin:
+        0;
+
+    color:
+        #e9f1f6;
+
+    font-size:
+        1.28rem;
+
+    font-weight:
+        750;
+
+    line-height:
+        1.15;
+
+    letter-spacing:
+        -.035em;
+
+}
+
+
+/* ==========================================================
+   12 — DESCRIPTION
+========================================================== */
+
+.app-service-content p {
+
+    max-width:
+        360px;
+
+    margin:
+        14px 0 0;
+
+    color:
+        #8094a7;
+
+    font-size:
+        .76rem;
+
+    line-height:
+        1.75;
+
+}
+
+
+/* ==========================================================
+   13 — TAGS
+========================================================== */
+
+.app-service-tags {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        6px;
+
+    margin-top:
+        24px;
+
+    padding-top:
+        16px;
+
+    border-top:
+        1px solid
+        rgba(148,163,184,.08);
+
+}
+
+
+/* ==========================================================
+   14 — TAG
+========================================================== */
+
+.app-service-tags span {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    min-height:
+        25px;
+
+    padding:
+        0 9px;
+
+    border:
+        1px solid
+        rgba(148,163,184,.09);
+
+    border-radius:
+        7px;
+
+    color:
+        #667d90;
+
+    background:
+        rgba(148,163,184,.025);
+
+    font-size:
+        .43rem;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        .04em;
+
+    transition:
+
+        color .3s ease,
+
+        border-color .3s ease,
+
+        background .3s ease;
+
+}
+
+
+/* ==========================================================
+   15 — CARD 02
+========================================================== */
+
+.app-service-card:nth-child(2)::before {
+
+    background:
+
+        radial-gradient(
+            circle,
+
+            rgba(96,165,250,.13),
+
+            rgba(96,165,250,.025) 45%,
+
+            transparent 72%
+        );
+
+}
+
+
+.app-service-card:nth-child(2)
+.app-service-icon {
+
+    color:
+        #60a5fa;
+
+    border-color:
+        rgba(96,165,250,.17);
+
+    background:
+
+        linear-gradient(
+            145deg,
+
+            rgba(96,165,250,.09),
+
+            rgba(96,165,250,.015)
+        );
+
+}
+
+
+.app-service-card:nth-child(2)
+.app-service-icon::before {
+
+    border-color:
+        rgba(96,165,250,.055);
+
+}
+
+
+/* ==========================================================
+   16 — CARD 03
+========================================================== */
+
+.app-service-card:nth-child(3)::before {
+
+    background:
+
+        radial-gradient(
+            circle,
+
+            rgba(129,140,248,.13),
+
+            rgba(129,140,248,.025) 45%,
+
+            transparent 72%
+        );
+
+}
+
+
+.app-service-card:nth-child(3)
+.app-service-icon {
+
+    color:
+        #818cf8;
+
+    border-color:
+        rgba(129,140,248,.17);
+
+    background:
+
+        linear-gradient(
+            145deg,
+
+            rgba(129,140,248,.09),
+
+            rgba(129,140,248,.015)
+        );
+
+}
+
+
+/* ==========================================================
+   17 — HOVER
+========================================================== */
+
+.app-service-card:hover {
+
+    transform:
+        translateY(-10px);
+
+    border-color:
+        rgba(34,211,238,.22);
+
+    background:
+
+        linear-gradient(
+            145deg,
+
+            rgba(19,42,63,.94),
+
+            rgba(5,17,29,.98)
+        );
+
+    box-shadow:
+
+        0 35px 75px
+        rgba(0,0,0,.32),
+
+        0 0 45px
+        rgba(34,211,238,.045),
+
+        inset 0 1px 0
+        rgba(255,255,255,.055);
+
+}
+
+
+/* ==========================================================
+   18 — HOVER AMBIENT LIGHT
+========================================================== */
+
+.app-service-card:hover::before {
+
+    transform:
+        translate(-35px,35px)
+        scale(1.25);
+
+    opacity:
+        1;
+
+}
+
+
+/* ==========================================================
+   19 — HOVER ICON
+========================================================== */
+
+.app-service-card:hover
+.app-service-icon {
+
+    transform:
+        translateY(-4px)
+        rotate(-3deg);
+
+    border-color:
+        rgba(34,211,238,.32);
+
+    box-shadow:
+
+        0 15px 35px
+        rgba(34,211,238,.08),
+
+        inset 0 1px 0
+        rgba(255,255,255,.07);
+
+}
+
+
+/* ==========================================================
+   20 — HOVER TAGS
+========================================================== */
+
+.app-service-card:hover
+.app-service-tags span {
+
+    color:
+        #91a9bb;
+
+    border-color:
+        rgba(34,211,238,.12);
+
+    background:
+        rgba(34,211,238,.025);
+
+}
+
+
+/* ==========================================================
+   21 — BOTTOM FOOTNOTE
+========================================================== */
+
+.app-footnote {
+
+    position:
+        relative;
+
+    z-index:
+        5;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        22px;
+
+    margin-top:
+        68px;
+
+}
+
+
+/* ==========================================================
+   22 — FOOTNOTE LINES
+========================================================== */
+
+.app-footnote > span {
+
+    flex:
+        1;
+
+    height:
+        1px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+
+            transparent,
+
+            rgba(148,163,184,.12)
+        );
+
+}
+
+
+.app-footnote > span:last-child {
+
+    background:
+
+        linear-gradient(
+            90deg,
+
+            rgba(148,163,184,.12),
+
+            transparent
+        );
+
+}
+
+
+/* ==========================================================
+   23 — FOOTNOTE TEXT
+========================================================== */
+
+.app-footnote p {
+
+    flex:
+        0 1 auto;
+
+    max-width:
+        610px;
+
+    margin:
+        0;
+
+    color:
+        #60768a;
+
+    font-size:
+        .61rem;
+
+    line-height:
+        1.75;
+
+    text-align:
+        center;
+
+}
+
+
+/* ==========================================================
+   24 — LARGE DESKTOP
+========================================================== */
+
+@media (min-width: 1440px) {
+
+    .app-services {
+
+        gap:
+            20px;
+
+    }
+
+    .app-service-card {
+
+        min-height:
+            350px;
+
+        padding:
+            28px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   25 — LAPTOP
+========================================================== */
+
+@media (max-width: 1200px) {
+
+    .app-services {
+
+        gap:
+            14px;
+
+    }
+
+    .app-service-card {
+
+        min-height:
+            315px;
+
+        padding:
+            21px;
+
+    }
+
+    .app-service-content {
+
+        padding-top:
+            38px;
+
+    }
+
+    .app-service-content h3 {
+
+        font-size:
+            1.15rem;
+
+    }
+
+    .app-service-content p {
+
+        font-size:
+            .71rem;
+
+    }
+
+}
+
+
+/* ==========================================================
+   26 — TABLET
+========================================================== */
+
+@media (max-width: 850px) {
+
+    .app-services {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            13px;
+
+    }
+
+    .app-service-card {
+
+        min-height:
+            260px;
+
+    }
+
+    .app-service-content {
+
+        padding-top:
+            30px;
+
+    }
+
+    .app-service-content p {
+
+        max-width:
+            600px;
+
+    }
+
+    .app-footnote {
+
+        margin-top:
+            52px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   27 — MOBILE
+========================================================== */
+
+@media (max-width: 600px) {
+
+    .app-services {
+
+        gap:
+            11px;
+
+    }
+
+    .app-service-card {
+
+        min-height:
+            270px;
+
+        padding:
+            18px;
+
+        border-radius:
+            16px;
+
+    }
+
+    .app-service-number {
+
+        min-width:
+            32px;
+
+        height:
+            23px;
+
+        font-size:
+            .45rem;
+
+    }
+
+    .app-service-icon {
+
+        width:
+            42px;
+
+        height:
+            42px;
+
+        border-radius:
+            11px;
+
+    }
+
+    .app-service-icon i {
+
+        font-size:
+            .78rem;
+
+    }
+
+    .app-service-content {
+
+        padding-top:
+            29px;
+
+    }
+
+    .app-service-content h3 {
+
+        font-size:
+            1.08rem;
+
+    }
+
+    .app-service-content p {
+
+        margin-top:
+            11px;
+
+        font-size:
+            .70rem;
+
+        line-height:
+            1.7;
+
+    }
+
+    .app-service-tags {
+
+        gap:
+            5px;
+
+        margin-top:
+            20px;
+
+        padding-top:
+            13px;
+
+    }
+
+    .app-service-tags span {
+
+        min-height:
+            23px;
+
+        padding:
+            0 8px;
+
+        font-size:
+            .40rem;
+
+    }
+
+    .app-footnote {
+
+        gap:
+            12px;
+
+        margin-top:
+            40px;
+
+    }
+
+    .app-footnote p {
+
+        max-width:
+            300px;
+
+        font-size:
+            .51rem;
+
+    }
+
+}
+
+
+/* ==========================================================
+   28 — SMALL MOBILE
+========================================================== */
+
+@media (max-width: 420px) {
+
+    .app-service-card {
+
+        min-height:
+            250px;
+
+        padding:
+            16px;
+
+    }
+
+    .app-service-content {
+
+        padding-top:
+            25px;
+
+    }
+
+    .app-service-content h3 {
+
+        font-size:
+            1rem;
+
+    }
+
+    .app-service-content p {
+
+        font-size:
+            .66rem;
+
+    }
+
+    .app-footnote > span {
+
+        display:
+            none;
+
+    }
+
+    .app-footnote {
+
+        justify-content:
+            center;
+
+    }
+
+}
+
+
+/* ==========================================================
+   29 — TOUCH DEVICES
+========================================================== */
+
+@media (hover: none) {
+
+    .app-service-card:hover {
+
+        transform:
+            none;
+
+    }
+
+    .app-service-card:hover
+    .app-service-icon {
+
+        transform:
+            none;
+
+    }
+
+}
+
+
+/* ==========================================================
+   30 — REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .app-service-card,
+    .app-service-icon,
+    .app-service-tags span {
+
+        transition:
+            none;
+
+    }
+
+}

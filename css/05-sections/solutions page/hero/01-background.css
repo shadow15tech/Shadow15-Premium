@@ -1,0 +1,726 @@
+/* ==========================================================
+   SHADOW15 — SOLUTIONS PAGE
+   01-BACKGROUND.CSS
+
+   PURPOSE:
+   • Main page background
+   • Grid system
+   • Atmospheric lighting
+   • Radial gradients
+   • Edge fades
+   • Ambient background depth
+
+   NOTE:
+   Animation logic belongs to:
+   05-animation.css
+========================================================== */
+
+
+/* ==========================================================
+   01 — SOLUTIONS ROOT BACKGROUND
+========================================================== */
+
+.solutions-hero {
+
+    position: relative;
+
+    isolation: isolate;
+
+    overflow: hidden;
+
+    background:
+
+        /* TOP CYAN ATMOSPHERE */
+        radial-gradient(
+            ellipse 70% 45%
+            at 50% -10%,
+
+            rgba(34, 211, 238, .075),
+
+            transparent 68%
+        ),
+
+        /* LEFT CYAN LIGHT */
+        radial-gradient(
+            ellipse 42% 65%
+            at -8% 38%,
+
+            rgba(14, 165, 233, .085),
+
+            transparent 72%
+        ),
+
+        /* RIGHT BLUE LIGHT */
+        radial-gradient(
+            ellipse 45% 65%
+            at 108% 50%,
+
+            rgba(59, 130, 246, .075),
+
+            transparent 72%
+        ),
+
+        /* LOWER ATMOSPHERE */
+        radial-gradient(
+            ellipse 65% 45%
+            at 50% 105%,
+
+            rgba(8, 145, 178, .055),
+
+            transparent 72%
+        ),
+
+        /* BASE */
+        #050c17;
+
+}
+
+
+/* ==========================================================
+   02 — BACKGROUND MASTER LAYER
+========================================================== */
+
+.solutions-hero-bg {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -5;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+}
+
+
+/* ==========================================================
+   03 — PRECISION GRID
+========================================================== */
+
+.solutions-hero-grid {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background-image:
+
+        linear-gradient(
+            rgba(148, 163, 184, .038) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(148, 163, 184, .038) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        64px 64px;
+
+    opacity: .9;
+
+    /*
+        Fade grid toward the edges.
+        Keeps the center readable.
+    */
+
+    mask-image:
+
+        radial-gradient(
+            ellipse 90% 75%
+            at 50% 42%,
+
+            black 0%,
+
+            rgba(0,0,0,.95) 42%,
+
+            transparent 100%
+        );
+
+    -webkit-mask-image:
+
+        radial-gradient(
+            ellipse 90% 75%
+            at 50% 42%,
+
+            black 0%,
+
+            rgba(0,0,0,.95) 42%,
+
+            transparent 100%
+        );
+
+}
+
+
+/* ==========================================================
+   04 — SECONDARY MICRO GRID
+========================================================== */
+
+.solutions-hero-bg::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+
+        linear-gradient(
+            rgba(34, 211, 238, .025) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(34, 211, 238, .025) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        16px 16px;
+
+    opacity: .32;
+
+    mask-image:
+
+        radial-gradient(
+            ellipse 55% 55%
+            at 50% 45%,
+
+            black,
+
+            transparent 100%
+        );
+
+    -webkit-mask-image:
+
+        radial-gradient(
+            ellipse 55% 55%
+            at 50% 45%,
+
+            black,
+
+            transparent 100%
+        );
+
+}
+
+
+/* ==========================================================
+   05 — CENTER ATMOSPHERE
+========================================================== */
+
+.solutions-hero-bg::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 900px;
+
+    height: 650px;
+
+    left: 50%;
+
+    top: 45%;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            ellipse at center,
+
+            rgba(34, 211, 238, .065)
+            0%,
+
+            rgba(34, 211, 238, .025)
+            34%,
+
+            transparent
+            70%
+        );
+
+    filter:
+        blur(20px);
+
+    pointer-events: none;
+
+}
+
+
+/* ==========================================================
+   06 — LEFT GLOW
+========================================================== */
+
+.solutions-hero-glow {
+
+    position: absolute;
+
+    width: 560px;
+
+    height: 560px;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    filter:
+        blur(110px);
+
+    opacity: .14;
+
+}
+
+
+/* ==========================================================
+   07 — LEFT GLOW CONFIGURATION
+========================================================== */
+
+.solutions-hero-glow--left {
+
+    top: 2%;
+
+    left: -330px;
+
+    background:
+
+        radial-gradient(
+            circle,
+
+            rgba(34, 211, 238, .8)
+            0%,
+
+            rgba(34, 211, 238, .25)
+            35%,
+
+            transparent 72%
+        );
+
+}
+
+
+/* ==========================================================
+   08 — RIGHT GLOW
+========================================================== */
+
+.solutions-hero-glow--right {
+
+    top: 20%;
+
+    right: -330px;
+
+    background:
+
+        radial-gradient(
+            circle,
+
+            rgba(59, 130, 246, .78)
+            0%,
+
+            rgba(59, 130, 246, .22)
+            36%,
+
+            transparent 72%
+        );
+
+}
+
+
+/* ==========================================================
+   09 — TOP LIGHT BAND
+========================================================== */
+
+.solutions-hero-bg {
+
+    --top-light:
+        rgba(34, 211, 238, .06);
+
+}
+
+
+/*
+    This creates a very subtle horizontal
+    illumination behind the hero.
+*/
+
+.solutions-hero-bg .solutions-hero-grid::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 240px;
+
+    background:
+
+        linear-gradient(
+            180deg,
+
+            rgba(34, 211, 238, .055),
+
+            transparent
+        );
+
+    pointer-events: none;
+
+}
+
+
+/* ==========================================================
+   10 — HORIZONTAL LIGHT RAIL
+========================================================== */
+
+.solutions-hero-bg .solutions-hero-grid::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 31%;
+
+    left: 50%;
+
+    width: min(900px, 70vw);
+
+    height: 1px;
+
+    transform:
+        translateX(-50%);
+
+    background:
+
+        linear-gradient(
+            90deg,
+
+            transparent,
+
+            rgba(34, 211, 238, .18),
+
+            rgba(34, 211, 238, .04),
+
+            transparent
+        );
+
+    opacity: .55;
+
+}
+
+
+/* ==========================================================
+   11 — RADIAL VIGNETTE
+========================================================== */
+
+.solutions-hero {
+
+    box-shadow:
+
+        inset 0 120px 150px
+        rgba(0, 0, 0, .12),
+
+        inset 0 -120px 160px
+        rgba(0, 0, 0, .22);
+
+}
+
+
+/* ==========================================================
+   12 — EDGE DARKENING
+========================================================== */
+
+.solutions-hero-bg {
+
+    -webkit-mask-image:
+
+        linear-gradient(
+            to bottom,
+
+            black 0%,
+
+            black 88%,
+
+            transparent 100%
+        );
+
+    mask-image:
+
+        linear-gradient(
+            to bottom,
+
+            black 0%,
+
+            black 88%,
+
+            transparent 100%
+        );
+
+}
+
+
+/* ==========================================================
+   13 — AMBIENT LIGHT SPOTS
+========================================================== */
+
+.solutions-hero-bg .ambient-light {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+}
+
+
+/*
+    Optional reusable light.
+    Can be used later if we add
+    decorative HTML elements.
+*/
+
+.solutions-hero-bg .ambient-light--cyan {
+
+    width: 180px;
+
+    height: 180px;
+
+    background:
+
+        radial-gradient(
+            circle,
+
+            rgba(34, 211, 238, .12),
+
+            transparent 70%
+        );
+
+    filter:
+        blur(30px);
+
+}
+
+.solutions-hero-bg .ambient-light--blue {
+
+    width: 220px;
+
+    height: 220px;
+
+    background:
+
+        radial-gradient(
+            circle,
+
+            rgba(59, 130, 246, .10),
+
+            transparent 70%
+        );
+
+    filter:
+        blur(35px);
+
+}
+
+
+/* ==========================================================
+   14 — DESKTOP DEPTH
+========================================================== */
+
+@media (min-width: 1200px) {
+
+    .solutions-hero-grid {
+
+        background-size:
+            68px 68px;
+
+    }
+
+    .solutions-hero-bg::after {
+
+        width: 1000px;
+
+        height: 700px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   15 — TABLET BACKGROUND
+========================================================== */
+
+@media (max-width: 900px) {
+
+    .solutions-hero-grid {
+
+        background-size:
+            54px 54px;
+
+    }
+
+    .solutions-hero-glow {
+
+        width: 430px;
+
+        height: 430px;
+
+        filter:
+            blur(100px);
+
+        opacity: .11;
+
+    }
+
+    .solutions-hero-bg::after {
+
+        width: 700px;
+
+        height: 550px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   16 — MOBILE BACKGROUND
+========================================================== */
+
+@media (max-width: 600px) {
+
+    .solutions-hero {
+
+        background:
+
+            radial-gradient(
+                ellipse 100% 35%
+                at 50% 0%,
+
+                rgba(34, 211, 238, .06),
+
+                transparent 72%
+            ),
+
+            radial-gradient(
+                ellipse 90% 50%
+                at 50% 65%,
+
+                rgba(59, 130, 246, .045),
+
+                transparent 75%
+            ),
+
+            #050c17;
+
+    }
+
+    .solutions-hero-grid {
+
+        background-size:
+            42px 42px;
+
+        opacity: .65;
+
+    }
+
+    .solutions-hero-bg::before {
+
+        opacity: .18;
+
+    }
+
+    .solutions-hero-bg::after {
+
+        width: 520px;
+
+        height: 430px;
+
+    }
+
+    .solutions-hero-glow {
+
+        width: 320px;
+
+        height: 320px;
+
+        filter:
+            blur(90px);
+
+        opacity: .08;
+
+    }
+
+    .solutions-hero-glow--left {
+
+        left: -220px;
+
+    }
+
+    .solutions-hero-glow--right {
+
+        right: -220px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   17 — SMALL MOBILE
+========================================================== */
+
+@media (max-width: 420px) {
+
+    .solutions-hero-grid {
+
+        background-size:
+            36px 36px;
+
+    }
+
+    .solutions-hero-bg::after {
+
+        width: 420px;
+
+        height: 350px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   18 — REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .solutions-hero-glow,
+    .solutions-hero-bg::after {
+
+        animation: none !important;
+
+        transition: none !important;
+
+    }
+
+}

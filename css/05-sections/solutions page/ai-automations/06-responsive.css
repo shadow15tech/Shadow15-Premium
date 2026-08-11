@@ -1,0 +1,946 @@
+/* ==========================================================
+   SHADOW15 — AI AUTOMATION
+   06-RESPONSIVE.CSS
+
+   PURPOSE:
+   • Final responsive corrections
+   • Tablet system composition
+   • Mobile AI core scaling
+   • Node spacing
+   • Card responsiveness
+   • Overflow protection
+========================================================== */
+
+
+/* ==========================================================
+   01 — LARGE DESKTOP
+========================================================== */
+
+@media (min-width: 1440px) {
+
+    .solution-ai > .container {
+
+        width:
+            min(90%, 1480px);
+
+    }
+
+    .ai-automation-system {
+
+        min-height:
+            590px;
+
+        padding:
+            55px 45px;
+
+    }
+
+    .ai-system-core {
+
+        width:
+            270px;
+
+        height:
+            270px;
+
+    }
+
+    .ai-core-center {
+
+        width:
+            122px;
+
+        height:
+            122px;
+
+    }
+
+    .ai-system-core-area {
+
+        min-height:
+            480px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   02 — LAPTOP
+========================================================== */
+
+@media (max-width: 1200px) {
+
+    .solution-ai > .container {
+
+        width:
+            min(94%, 1180px);
+
+    }
+
+    .ai-automation-system {
+
+        grid-template-columns:
+            minmax(190px,.8fr)
+            minmax(300px,1.2fr)
+            minmax(190px,.8fr);
+
+        padding:
+            35px 25px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   03 — SMALL LAPTOP
+========================================================== */
+
+@media (max-width: 1050px) {
+
+    .ai-automation-system {
+
+        grid-template-columns:
+            minmax(175px,.8fr)
+            minmax(280px,1.15fr)
+            minmax(175px,.8fr);
+
+        gap:
+            10px;
+
+    }
+
+    .ai-system-node {
+
+        padding:
+            10px;
+
+        gap:
+            10px;
+
+    }
+
+    .ai-node-icon {
+
+        width:
+            36px;
+
+        height:
+            36px;
+
+    }
+
+    .ai-system-node strong {
+
+        font-size:
+            .66rem;
+
+    }
+
+}
+
+
+/* ==========================================================
+   04 — TABLET LANDSCAPE
+========================================================== */
+
+@media (max-width: 900px) {
+
+    .solution-ai {
+
+        padding:
+            115px 0 95px;
+
+    }
+
+    .ai-automation-system {
+
+        grid-template-columns:
+            1fr;
+
+        min-height:
+            auto;
+
+        gap:
+            35px;
+
+        padding:
+            35px 25px 45px;
+
+    }
+
+    .ai-system-column {
+
+        display:
+            grid;
+
+        grid-template-columns:
+            repeat(3, minmax(0,1fr));
+
+        gap:
+            10px;
+
+    }
+
+    .ai-column-label {
+
+        grid-column:
+            1 / -1;
+
+    }
+
+    .ai-system-core-area {
+
+        order:
+            2;
+
+        min-height:
+            330px;
+
+    }
+
+    .ai-system-inputs {
+
+        order:
+            1;
+
+    }
+
+    .ai-system-outputs {
+
+        order:
+            3;
+
+    }
+
+    .ai-system-line {
+
+        display:
+            none;
+
+    }
+
+}
+
+
+/* ==========================================================
+   05 — TABLET PORTRAIT
+========================================================== */
+
+@media (max-width: 768px) {
+
+    .solution-ai {
+
+        padding:
+            105px 0 85px;
+
+    }
+
+    .ai-automation-system {
+
+        margin-top:
+            0;
+
+    }
+
+    .ai-system-column {
+
+        grid-template-columns:
+            repeat(3, minmax(0,1fr));
+
+    }
+
+    .ai-system-core {
+
+        width:
+            190px;
+
+        height:
+            190px;
+
+    }
+
+    .ai-core-center {
+
+        width:
+            90px;
+
+        height:
+            90px;
+
+    }
+
+    .ai-core-center strong {
+
+        font-size:
+            1.5rem;
+
+    }
+
+}
+
+
+/* ==========================================================
+   06 — LARGE MOBILE
+========================================================== */
+
+@media (max-width: 600px) {
+
+    .solution-ai {
+
+        width:
+            100%;
+
+        overflow:
+            hidden;
+
+        padding:
+            90px 0 75px;
+
+    }
+
+
+    /* ======================================================
+       CONTAINER
+    ====================================================== */
+
+    .solution-ai > .container {
+
+        width:
+            92%;
+
+        max-width:
+            500px;
+
+    }
+
+
+    /* ======================================================
+       INTRO
+    ====================================================== */
+
+    .ai-automation-intro {
+
+        margin-bottom:
+            42px;
+
+    }
+
+    .ai-automation-intro-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            22px;
+
+    }
+
+
+    /* ======================================================
+       SYSTEM
+    ====================================================== */
+
+    .ai-automation-system {
+
+        display:
+            flex;
+
+        flex-direction:
+            column;
+
+        gap:
+            28px;
+
+        min-height:
+            auto;
+
+        padding:
+            24px 16px 32px;
+
+        border-radius:
+            19px;
+
+    }
+
+
+    /* ======================================================
+       INPUT / OUTPUT COLUMNS
+    ====================================================== */
+
+    .ai-system-column {
+
+        display:
+            flex;
+
+        flex-direction:
+            column;
+
+        gap:
+            9px;
+
+        width:
+            100%;
+
+    }
+
+    .ai-column-label {
+
+        margin-bottom:
+            3px;
+
+        font-size:
+            .44rem;
+
+    }
+
+
+    /* ======================================================
+       NODES
+    ====================================================== */
+
+    .ai-system-node {
+
+        width:
+            100%;
+
+        min-height:
+            59px;
+
+        padding:
+            9px 11px;
+
+        border-radius:
+            12px;
+
+    }
+
+    .ai-node-icon {
+
+        width:
+            34px;
+
+        height:
+            34px;
+
+        border-radius:
+            9px;
+
+    }
+
+    .ai-node-icon i {
+
+        font-size:
+            .62rem;
+
+    }
+
+    .ai-system-node strong {
+
+        font-size:
+            .65rem;
+
+    }
+
+    .ai-system-node small {
+
+        margin-top:
+            4px;
+
+        font-size:
+            .44rem;
+
+    }
+
+
+    /* ======================================================
+       CORE AREA
+    ====================================================== */
+
+    .ai-system-core-area {
+
+        order:
+            2;
+
+        min-height:
+            280px;
+
+        width:
+            100%;
+
+    }
+
+
+    /* ======================================================
+       CORE
+    ====================================================== */
+
+    .ai-system-core {
+
+        width:
+            170px;
+
+        height:
+            170px;
+
+    }
+
+    .ai-core-ring--inner {
+
+        inset:
+            22px;
+
+    }
+
+    .ai-core-center {
+
+        width:
+            82px;
+
+        height:
+            82px;
+
+    }
+
+    .ai-core-center strong {
+
+        font-size:
+            1.35rem;
+
+    }
+
+    .ai-core-center small {
+
+        font-size:
+            .32rem;
+
+    }
+
+    .ai-core-caption {
+
+        margin-top:
+            18px;
+
+    }
+
+
+    /* ======================================================
+       CONNECTIONS
+    ====================================================== */
+
+    .ai-system-line {
+
+        display:
+            none;
+
+    }
+
+
+    /* ======================================================
+       SERVICES
+    ====================================================== */
+
+    .ai-automation-services {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            12px;
+
+    }
+
+    .ai-automation-card {
+
+        min-height:
+            275px;
+
+        padding:
+            18px;
+
+        border-radius:
+            16px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   07 — SMALL MOBILE
+========================================================== */
+
+@media (max-width: 480px) {
+
+    .solution-ai {
+
+        padding:
+            82px 0 68px;
+
+    }
+
+    .solution-ai > .container {
+
+        width:
+            91%;
+
+    }
+
+    .ai-automation-system {
+
+        padding:
+            21px 14px 29px;
+
+        gap:
+            25px;
+
+    }
+
+    .ai-system-core-area {
+
+        min-height:
+            255px;
+
+    }
+
+    .ai-system-core {
+
+        width:
+            155px;
+
+        height:
+            155px;
+
+    }
+
+    .ai-core-ring--inner {
+
+        inset:
+            19px;
+
+    }
+
+    .ai-core-orbit {
+
+        inset:
+            9px;
+
+    }
+
+    .ai-core-center {
+
+        width:
+            75px;
+
+        height:
+            75px;
+
+    }
+
+    .ai-core-center strong {
+
+        font-size:
+            1.18rem;
+
+    }
+
+    .ai-core-caption {
+
+        margin-top:
+            15px;
+
+    }
+
+    .ai-core-caption span {
+
+        font-size:
+            .39rem;
+
+    }
+
+    .ai-core-caption strong {
+
+        font-size:
+            .52rem;
+
+    }
+
+}
+
+
+/* ==========================================================
+   08 — SMALL MOBILE
+========================================================== */
+
+@media (max-width: 420px) {
+
+    .solution-ai {
+
+        padding:
+            76px 0 62px;
+
+    }
+
+    .solution-ai > .container {
+
+        width:
+            91%;
+
+    }
+
+    .ai-automation-system {
+
+        padding:
+            19px 12px 27px;
+
+        border-radius:
+            16px;
+
+    }
+
+    .ai-system-node {
+
+        min-height:
+            56px;
+
+        padding:
+            8px 10px;
+
+    }
+
+    .ai-node-icon {
+
+        width:
+            32px;
+
+        height:
+            32px;
+
+    }
+
+    .ai-system-node strong {
+
+        font-size:
+            .62rem;
+
+    }
+
+    .ai-system-node small {
+
+        font-size:
+            .41rem;
+
+    }
+
+    .ai-system-core-area {
+
+        min-height:
+            235px;
+
+    }
+
+    .ai-system-core {
+
+        width:
+            145px;
+
+        height:
+            145px;
+
+    }
+
+    .ai-core-ring--inner {
+
+        inset:
+            18px;
+
+    }
+
+    .ai-core-center {
+
+        width:
+            70px;
+
+        height:
+            70px;
+
+    }
+
+    .ai-core-center strong {
+
+        font-size:
+            1.08rem;
+
+    }
+
+    .ai-core-center small {
+
+        font-size:
+            .29rem;
+
+    }
+
+    .ai-core-caption span {
+
+        font-size:
+            .36rem;
+
+    }
+
+    .ai-core-caption strong {
+
+        font-size:
+            .48rem;
+
+    }
+
+    .ai-automation-card {
+
+        min-height:
+            255px;
+
+        padding:
+            16px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   09 — EXTRA SMALL
+========================================================== */
+
+@media (max-width: 360px) {
+
+    .solution-ai {
+
+        padding:
+            68px 0 55px;
+
+    }
+
+    .ai-automation-system {
+
+        padding:
+            17px 10px 24px;
+
+    }
+
+    .ai-system-core-area {
+
+        min-height:
+            220px;
+
+    }
+
+    .ai-system-core {
+
+        width:
+            135px;
+
+        height:
+            135px;
+
+    }
+
+    .ai-core-center {
+
+        width:
+            65px;
+
+        height:
+            65px;
+
+    }
+
+    .ai-core-center strong {
+
+        font-size:
+            1rem;
+
+    }
+
+    .ai-system-node {
+
+        min-height:
+            53px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   10 — TOUCH DEVICES
+========================================================== */
+
+@media (hover: none) {
+
+    .ai-system-node:hover {
+
+        transform:
+            none;
+
+        border-color:
+            rgba(148,163,184,.12);
+
+    }
+
+    .ai-automation-card:hover {
+
+        transform:
+            none;
+
+        border-color:
+            rgba(148,163,184,.12);
+
+    }
+
+    .ai-automation-card:hover
+    .ai-card-icon {
+
+        transform:
+            none;
+
+    }
+
+}
+
+
+/* ==========================================================
+   11 — OVERFLOW PROTECTION
+========================================================== */
+
+.solution-ai,
+.ai-automation-bg,
+.ai-automation-system,
+.ai-system-core-area,
+.ai-automation-services {
+
+    max-width:
+        100%;
+
+}
+
+
+/* ==========================================================
+   12 — REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .solution-ai *,
+    .solution-ai *::before,
+    .solution-ai *::after {
+
+        animation:
+            none !important;
+
+        transition:
+            none !important;
+
+    }
+
+}

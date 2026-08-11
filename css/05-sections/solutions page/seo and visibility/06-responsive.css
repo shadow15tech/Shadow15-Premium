@@ -1,0 +1,984 @@
+/* ==========================================================
+   SHADOW15 — SEO & DIGITAL VISIBILITY
+   06-RESPONSIVE.CSS
+
+   PURPOSE:
+   • Final responsive layer
+   • Search showcase restructuring
+   • Tablet optimization
+   • Mobile ranking cards
+   • Analytics adaptation
+   • Service card responsiveness
+========================================================== */
+
+
+/* ==========================================================
+   01 — LARGE DESKTOP
+========================================================== */
+
+@media (min-width: 1440px) {
+
+    .solution-seo > .container {
+
+        width:
+            min(90%, 1480px);
+
+    }
+
+    .seo-showcase {
+
+        border-radius:
+            28px;
+
+    }
+
+    .seo-search-header {
+
+        min-height:
+            76px;
+
+        padding:
+            0 28px;
+
+    }
+
+    .seo-search-content {
+
+        min-height:
+            530px;
+
+    }
+
+    .seo-results,
+    .seo-analytics {
+
+        padding:
+            40px 38px;
+
+    }
+
+    .seo-chart {
+
+        height:
+            225px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   02 — LAPTOP
+========================================================== */
+
+@media (max-width: 1200px) {
+
+    .solution-seo > .container {
+
+        width:
+            min(94%, 1180px);
+
+    }
+
+    .seo-search-content {
+
+        grid-template-columns:
+            minmax(0,1.1fr)
+            minmax(280px,.9fr);
+
+    }
+
+    .seo-results,
+    .seo-analytics {
+
+        padding:
+            30px 24px;
+
+    }
+
+    .seo-result-card {
+
+        grid-template-columns:
+            55px
+            minmax(0,1fr)
+            48px;
+
+        gap:
+            12px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   03 — SMALL LAPTOP
+========================================================== */
+
+@media (max-width: 1050px) {
+
+    .seo-search-content {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+    .seo-results {
+
+        border-right:
+            0;
+
+        border-bottom:
+            1px solid
+            rgba(148,163,184,.08);
+
+    }
+
+    .seo-analytics {
+
+        padding-top:
+            28px;
+
+    }
+
+    .seo-chart {
+
+        height:
+            200px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   04 — TABLET LANDSCAPE
+========================================================== */
+
+@media (max-width: 900px) {
+
+    .solution-seo {
+
+        padding:
+            115px 0 95px;
+
+    }
+
+    .seo-intro-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            25px;
+
+    }
+
+    .seo-description {
+
+        max-width:
+            620px;
+
+    }
+
+    .seo-search-header {
+
+        grid-template-columns:
+            90px
+            minmax(0,1fr)
+            80px;
+
+    }
+
+    .seo-search-content {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+    .seo-results {
+
+        border-right:
+            0;
+
+        border-bottom:
+            1px solid
+            rgba(148,163,184,.08);
+
+    }
+
+    .seo-services {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+}
+
+
+/* ==========================================================
+   05 — TABLET PORTRAIT
+========================================================== */
+
+@media (max-width: 768px) {
+
+    .solution-seo {
+
+        padding:
+            105px 0 85px;
+
+    }
+
+    .seo-showcase {
+
+        border-radius:
+            21px;
+
+    }
+
+    .seo-search-header {
+
+        min-height:
+            62px;
+
+        padding:
+            0 16px;
+
+    }
+
+    .seo-results {
+
+        padding:
+            28px 20px;
+
+    }
+
+    .seo-analytics {
+
+        padding:
+            28px 20px;
+
+    }
+
+    .seo-metrics {
+
+        gap:
+            7px;
+
+    }
+
+    .seo-service-card {
+
+        min-height:
+            275px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   06 — MOBILE
+========================================================== */
+
+@media (max-width: 600px) {
+
+    .solution-seo {
+
+        width:
+            100%;
+
+        overflow:
+            hidden;
+
+        padding:
+            90px 0 75px;
+
+    }
+
+
+    /* ======================================================
+       CONTAINER
+    ====================================================== */
+
+    .solution-seo > .container {
+
+        width:
+            92%;
+
+        max-width:
+            500px;
+
+    }
+
+
+    /* ======================================================
+       INTRO
+    ====================================================== */
+
+    .seo-intro {
+
+        margin-bottom:
+            42px;
+
+    }
+
+    .seo-intro-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            22px;
+
+    }
+
+
+    /* ======================================================
+       SHOWCASE
+    ====================================================== */
+
+    .seo-showcase {
+
+        border-radius:
+            18px;
+
+    }
+
+
+    /* ======================================================
+       SEARCH HEADER
+    ====================================================== */
+
+    .seo-search-header {
+
+        grid-template-columns:
+            auto
+            minmax(0,1fr)
+            auto;
+
+        gap:
+            9px;
+
+        min-height:
+            58px;
+
+        padding:
+            0 12px;
+
+    }
+
+    .seo-browser-controls {
+
+        gap:
+            4px;
+
+    }
+
+    .seo-browser-controls span {
+
+        width:
+            5px;
+
+        height:
+            5px;
+
+    }
+
+    .seo-search-bar {
+
+        min-height:
+            33px;
+
+        padding:
+            0 9px;
+
+        gap:
+            7px;
+
+    }
+
+    .seo-search-bar span {
+
+        font-size:
+            .47rem;
+
+    }
+
+    .seo-search-bar i:first-child {
+
+        font-size:
+            .52rem;
+
+    }
+
+    .seo-search-bar i:last-child {
+
+        display:
+            none;
+
+    }
+
+    .seo-live-status {
+
+        font-size:
+            .39rem;
+
+    }
+
+
+    /* ======================================================
+       RESULTS
+    ====================================================== */
+
+    .seo-results {
+
+        padding:
+            24px 15px;
+
+    }
+
+    .seo-results-heading {
+
+        margin-bottom:
+            17px;
+
+    }
+
+    .seo-result-card {
+
+        grid-template-columns:
+            47px
+            minmax(0,1fr);
+
+        gap:
+            10px;
+
+        min-height:
+            94px;
+
+        margin-bottom:
+            8px;
+
+        padding:
+            12px;
+
+        border-radius:
+            12px;
+
+    }
+
+    .seo-result-growth {
+
+        display:
+            none;
+
+    }
+
+    .seo-result-position {
+
+        gap:
+            5px;
+
+    }
+
+    .seo-result-position span {
+
+        font-size:
+            .35rem;
+
+    }
+
+    .seo-result-position strong {
+
+        font-size:
+            1.05rem;
+
+    }
+
+    .seo-result-url {
+
+        font-size:
+            .42rem;
+
+    }
+
+    .seo-result-info h3 {
+
+        margin-top:
+            5px;
+
+        font-size:
+            .61rem;
+
+        white-space:
+            normal;
+
+    }
+
+    .seo-result-info p {
+
+        font-size:
+            .42rem;
+
+        white-space:
+            normal;
+
+    }
+
+
+    /* ======================================================
+       ANALYTICS
+    ====================================================== */
+
+    .seo-analytics {
+
+        padding:
+            24px 15px;
+
+    }
+
+    .seo-analytics-heading {
+
+        margin-bottom:
+            16px;
+
+    }
+
+    .seo-chart {
+
+        height:
+            175px;
+
+        border-radius:
+            12px;
+
+    }
+
+    .seo-chart-axis span {
+
+        font-size:
+            .32rem;
+
+    }
+
+    .seo-metrics {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            7px;
+
+    }
+
+    .seo-metrics > div {
+
+        display:
+            flex;
+
+        align-items:
+            center;
+
+        justify-content:
+            space-between;
+
+        padding:
+            11px 12px;
+
+    }
+
+    .seo-metrics strong {
+
+        margin-top:
+            0;
+
+        font-size:
+            .65rem;
+
+    }
+
+
+    /* ======================================================
+       SERVICE CARDS
+    ====================================================== */
+
+    .seo-services {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            12px;
+
+    }
+
+    .seo-service-card {
+
+        min-height:
+            275px;
+
+        padding:
+            18px;
+
+        border-radius:
+            16px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   07 — SMALL MOBILE
+========================================================== */
+
+@media (max-width: 480px) {
+
+    .solution-seo {
+
+        padding:
+            82px 0 68px;
+
+    }
+
+    .solution-seo > .container {
+
+        width:
+            91%;
+
+    }
+
+    .seo-search-header {
+
+        grid-template-columns:
+            auto
+            minmax(0,1fr);
+
+        min-height:
+            55px;
+
+    }
+
+    .seo-live-status {
+
+        display:
+            none;
+
+    }
+
+    .seo-results {
+
+        padding:
+            21px 12px;
+
+    }
+
+    .seo-analytics {
+
+        padding:
+            21px 12px;
+
+    }
+
+    .seo-result-card {
+
+        min-height:
+            88px;
+
+        padding:
+            11px;
+
+    }
+
+    .seo-result-info h3 {
+
+        font-size:
+            .58rem;
+
+    }
+
+    .seo-result-info p {
+
+        font-size:
+            .40rem;
+
+    }
+
+    .seo-chart {
+
+        height:
+            160px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   08 — SMALL MOBILE
+========================================================== */
+
+@media (max-width: 420px) {
+
+    .solution-seo {
+
+        padding:
+            76px 0 62px;
+
+    }
+
+    .solution-seo > .container {
+
+        width:
+            91%;
+
+    }
+
+    .seo-showcase {
+
+        border-radius:
+            16px;
+
+    }
+
+    .seo-search-header {
+
+        padding:
+            0 10px;
+
+    }
+
+    .seo-browser-controls {
+
+        display:
+            none;
+
+    }
+
+    .seo-search-bar {
+
+        width:
+            100%;
+
+    }
+
+    .seo-results {
+
+        padding:
+            19px 10px;
+
+    }
+
+    .seo-analytics {
+
+        padding:
+            19px 10px;
+
+    }
+
+    .seo-result-card {
+
+        grid-template-columns:
+            40px
+            minmax(0,1fr);
+
+        gap:
+            8px;
+
+        min-height:
+            84px;
+
+    }
+
+    .seo-result-position strong {
+
+        font-size:
+            .95rem;
+
+    }
+
+    .seo-result-info h3 {
+
+        font-size:
+            .55rem;
+
+    }
+
+    .seo-result-info p {
+
+        font-size:
+            .38rem;
+
+    }
+
+    .seo-chart {
+
+        height:
+            145px;
+
+    }
+
+    .seo-chart-axis {
+
+        right:
+            10px;
+
+        left:
+            10px;
+
+    }
+
+    .seo-chart-axis span {
+
+        font-size:
+            .29rem;
+
+    }
+
+    .seo-metrics > div {
+
+        padding:
+            10px;
+
+    }
+
+    .seo-metrics span {
+
+        font-size:
+            .35rem;
+
+    }
+
+    .seo-metrics strong {
+
+        font-size:
+            .60rem;
+
+    }
+
+    .seo-service-card {
+
+        min-height:
+            255px;
+
+        padding:
+            16px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   09 — EXTRA SMALL
+========================================================== */
+
+@media (max-width: 360px) {
+
+    .solution-seo {
+
+        padding:
+            68px 0 55px;
+
+    }
+
+    .seo-result-card {
+
+        min-height:
+            80px;
+
+    }
+
+    .seo-chart {
+
+        height:
+            135px;
+
+    }
+
+    .seo-service-card {
+
+        min-height:
+            245px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   10 — TOUCH DEVICES
+========================================================== */
+
+@media (hover: none) {
+
+    .seo-result-card:hover {
+
+        transform:
+            none;
+
+        border-color:
+            rgba(148,163,184,.08);
+
+    }
+
+    .seo-service-card:hover {
+
+        transform:
+            none;
+
+        border-color:
+            rgba(148,163,184,.12);
+
+    }
+
+    .seo-service-card:hover
+    .seo-card-icon {
+
+        transform:
+            none;
+
+    }
+
+}
+
+
+/* ==========================================================
+   11 — OVERFLOW PROTECTION
+========================================================== */
+
+.solution-seo,
+.seo-bg,
+.seo-showcase,
+.seo-search-content,
+.seo-services {
+
+    max-width:
+        100%;
+
+}
+
+
+/* ==========================================================
+   12 — REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .solution-seo *,
+    .solution-seo *::before,
+    .solution-seo *::after {
+
+        animation:
+            none !important;
+
+        transition:
+            none !important;
+
+    }
+
+}
