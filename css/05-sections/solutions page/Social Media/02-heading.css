@@ -1,0 +1,650 @@
+/* ==========================================================
+   SHADOW15 — SOCIAL MEDIA
+   02-HEADING.CSS
+========================================================== */
+
+
+/* ==========================================================
+   01 — INTRO
+========================================================== */
+
+.social-intro {
+
+    position: relative;
+
+    z-index: 5;
+
+    width: 100%;
+
+    margin-bottom: 70px;
+
+}
+
+
+/* ==========================================================
+   02 — LABEL
+========================================================== */
+
+.social-label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    width: fit-content;
+
+    color: #8ea0b5;
+
+    font-size: .63rem;
+
+    font-weight: 800;
+
+    line-height: 1;
+
+    letter-spacing: .17em;
+
+    text-transform: uppercase;
+
+}
+
+
+/* ==========================================================
+   03 — LABEL NUMBER
+========================================================== */
+
+.social-label-number {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 34px;
+
+    height: 25px;
+
+    padding: 0 8px;
+
+    border:
+        1px solid
+        rgba(192,132,252,.20);
+
+    border-radius: 999px;
+
+    color: #c084fc;
+
+    background:
+        rgba(168,85,247,.045);
+
+    font-size: .56rem;
+
+    letter-spacing: .10em;
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255,255,255,.04),
+
+        0 0 20px
+        rgba(168,85,247,.025);
+
+}
+
+
+/* ==========================================================
+   04 — LABEL LINE
+========================================================== */
+
+.social-label-line {
+
+    width: 48px;
+
+    height: 1px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(192,132,252,.52),
+            rgba(34,211,238,.04)
+        );
+
+}
+
+
+/* ==========================================================
+   05 — INTRO GRID
+========================================================== */
+
+.social-intro-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0,1.15fr)
+        minmax(280px,.85fr);
+
+    align-items: end;
+
+    gap: 80px;
+
+    margin-top: 28px;
+
+}
+
+
+/* ==========================================================
+   06 — MAIN HEADING
+========================================================== */
+
+.social-heading h2 {
+
+    max-width: 850px;
+
+    margin: 0;
+
+    color: #f3f7fb;
+
+    font-size:
+        clamp(
+            3.2rem,
+            5.5vw,
+            6rem
+        );
+
+    font-weight: 800;
+
+    line-height: .91;
+
+    letter-spacing: -.065em;
+
+    text-wrap: balance;
+
+}
+
+
+/* ==========================================================
+   07 — HEADING ACCENT
+========================================================== */
+
+.social-heading h2 span {
+
+    display: block;
+
+    width: fit-content;
+
+    margin-top: 10px;
+
+    background:
+
+        linear-gradient(
+            100deg,
+            #f0abfc 0%,
+            #c084fc 28%,
+            #22d3ee 68%,
+            #60a5fa 100%
+        );
+
+    background-size:
+        180% 100%;
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    color: transparent;
+
+    -webkit-text-fill-color: transparent;
+
+    filter:
+        drop-shadow(
+            0 10px 30px
+            rgba(168,85,247,.08)
+        );
+
+}
+
+
+/* ==========================================================
+   08 — ACCENT UNDERLINE
+========================================================== */
+
+.social-heading h2 span::after {
+
+    content: "";
+
+    display: block;
+
+    width: 105px;
+
+    height: 2px;
+
+    margin-top: 17px;
+
+    border-radius: 999px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #c084fc,
+            #22d3ee,
+            transparent
+        );
+
+    opacity: .78;
+
+}
+
+
+/* ==========================================================
+   09 — DESCRIPTION
+========================================================== */
+
+.social-description {
+
+    max-width: 500px;
+
+    padding-bottom: 4px;
+
+}
+
+
+/* ==========================================================
+   10 — DESCRIPTION TEXT
+========================================================== */
+
+.social-description p {
+
+    margin: 0;
+
+    color: #9eafc1;
+
+    font-size:
+        clamp(
+            .88rem,
+            1.1vw,
+            1rem
+        );
+
+    font-weight: 400;
+
+    line-height: 1.85;
+
+}
+
+
+/* ==========================================================
+   11 — CTA
+========================================================== */
+
+.social-link {
+
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 27px;
+
+    padding-bottom: 7px;
+
+    color: #dbe8f3;
+
+    font-size: .70rem;
+
+    font-weight: 750;
+
+    letter-spacing: .03em;
+
+    transition:
+
+        color .3s ease,
+
+        transform .35s
+        cubic-bezier(.22,1,.36,1);
+
+}
+
+
+/* ==========================================================
+   12 — CTA LINE
+========================================================== */
+
+.social-link::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    width: 100%;
+
+    height: 1px;
+
+    transform:
+        scaleX(.35);
+
+    transform-origin:
+        left center;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #c084fc,
+            #22d3ee
+        );
+
+    transition:
+
+        transform .4s
+        cubic-bezier(.22,1,.36,1);
+
+}
+
+
+/* ==========================================================
+   13 — CTA ICON
+========================================================== */
+
+.social-link i {
+
+    color: #c084fc;
+
+    font-size: .62rem;
+
+    transition:
+
+        transform .35s
+        cubic-bezier(.22,1,.36,1);
+
+}
+
+
+/* ==========================================================
+   14 — CTA HOVER
+========================================================== */
+
+.social-link:hover {
+
+    color: #e9d5ff;
+
+    transform:
+        translateX(4px);
+
+}
+
+
+.social-link:hover::after {
+
+    transform:
+        scaleX(1);
+
+}
+
+
+.social-link:hover i {
+
+    transform:
+        translate(3px,-3px);
+
+}
+
+
+/* ==========================================================
+   15 — INTRO SEPARATOR
+========================================================== */
+
+.social-intro::after {
+
+    content: "";
+
+    display: block;
+
+    width: 100%;
+
+    height: 1px;
+
+    margin-top: 62px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(148,163,184,.14),
+            rgba(192,132,252,.10) 40%,
+            rgba(34,211,238,.08) 65%,
+            transparent
+        );
+
+}
+
+
+/* ==========================================================
+   16 — TABLET
+========================================================== */
+
+@media (max-width: 850px) {
+
+    .social-intro {
+
+        margin-bottom:
+            55px;
+
+    }
+
+    .social-intro-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            25px;
+
+        margin-top:
+            25px;
+
+    }
+
+    .social-heading h2 {
+
+        max-width:
+            700px;
+
+    }
+
+    .social-description {
+
+        max-width:
+            620px;
+
+    }
+
+    .social-intro::after {
+
+        margin-top:
+            45px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   17 — MOBILE
+========================================================== */
+
+@media (max-width: 600px) {
+
+    .social-intro {
+
+        margin-bottom:
+            42px;
+
+    }
+
+    .social-label {
+
+        gap:
+            9px;
+
+        font-size:
+            .54rem;
+
+        letter-spacing:
+            .13em;
+
+    }
+
+    .social-label-number {
+
+        min-width:
+            30px;
+
+        height:
+            23px;
+
+        font-size:
+            .50rem;
+
+    }
+
+    .social-label-line {
+
+        width:
+            30px;
+
+    }
+
+    .social-intro-grid {
+
+        gap:
+            22px;
+
+        margin-top:
+            22px;
+
+    }
+
+    .social-heading h2 {
+
+        font-size:
+            clamp(
+                2.55rem,
+                10.5vw,
+                3.5rem
+            );
+
+        line-height:
+            .95;
+
+        letter-spacing:
+            -.06em;
+
+    }
+
+    .social-heading h2 span {
+
+        margin-top:
+            7px;
+
+    }
+
+    .social-heading h2 span::after {
+
+        width:
+            62px;
+
+        height:
+            1px;
+
+        margin-top:
+            12px;
+
+    }
+
+    .social-description {
+
+        max-width:
+            390px;
+
+    }
+
+    .social-description p {
+
+        font-size:
+            .82rem;
+
+        line-height:
+            1.78;
+
+    }
+
+    .social-link {
+
+        margin-top:
+            23px;
+
+        font-size:
+            .66rem;
+
+    }
+
+    .social-intro::after {
+
+        margin-top:
+            38px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   18 — SMALL MOBILE
+========================================================== */
+
+@media (max-width: 420px) {
+
+    .social-heading h2 {
+
+        font-size:
+            2.35rem;
+
+    }
+
+    .social-description p {
+
+        font-size:
+            .79rem;
+
+    }
+
+}
+
+
+/* ==========================================================
+   19 — REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .social-link,
+    .social-link::after,
+    .social-link i {
+
+        transition:
+            none;
+
+    }
+
+}

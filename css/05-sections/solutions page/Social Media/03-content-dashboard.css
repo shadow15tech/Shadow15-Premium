@@ -1,0 +1,1830 @@
+/* ==========================================================
+   SHADOW15 — SOCIAL MEDIA
+   03-CONTENT-DASHBOARD.CSS
+========================================================== */
+
+
+/* ==========================================================
+   01 — SHOWCASE
+========================================================== */
+
+.social-showcase {
+
+    position: relative;
+
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding: 28px;
+
+    border:
+        1px solid
+        rgba(148,163,184,.11);
+
+    border-radius: 26px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(16,31,51,.94),
+            rgba(4,14,25,.98)
+        );
+
+    box-shadow:
+
+        0 40px 100px
+        rgba(0,0,0,.30),
+
+        inset 0 1px 0
+        rgba(255,255,255,.045);
+
+    backdrop-filter:
+        blur(22px);
+
+    -webkit-backdrop-filter:
+        blur(22px);
+
+}
+
+
+/* ==========================================================
+   02 — TOP EDGE
+========================================================== */
+
+.social-showcase::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 12%;
+
+    width: 76%;
+
+    height: 1px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(192,132,252,.25),
+            rgba(34,211,238,.18),
+            transparent
+        );
+
+}
+
+
+/* ==========================================================
+   03 — DASHBOARD TOP
+========================================================== */
+
+.social-dashboard-top {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    padding-bottom: 22px;
+
+    border-bottom:
+        1px solid
+        rgba(148,163,184,.075);
+
+}
+
+
+/* ==========================================================
+   04 — BRAND
+========================================================== */
+
+.social-dashboard-brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+}
+
+
+.social-dashboard-icon {
+
+    display: grid;
+
+    place-items: center;
+
+    width: 43px;
+
+    height: 43px;
+
+    border:
+        1px solid
+        rgba(192,132,252,.17);
+
+    border-radius: 12px;
+
+    color: #c084fc;
+
+    background:
+        rgba(168,85,247,.045);
+
+    box-shadow:
+
+        inset 0 1px 0
+        rgba(255,255,255,.04),
+
+        0 12px 30px
+        rgba(0,0,0,.18);
+
+}
+
+
+.social-dashboard-brand span {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #5d7184;
+
+    font-size: .40rem;
+
+    font-weight: 800;
+
+    letter-spacing: .13em;
+
+}
+
+
+.social-dashboard-brand strong {
+
+    color: #dce9f1;
+
+    font-size: .82rem;
+
+    font-weight: 750;
+
+    letter-spacing: -.02em;
+
+}
+
+
+/* ==========================================================
+   05 — LIVE STATUS
+========================================================== */
+
+.social-live-status {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 8px 12px;
+
+    border:
+        1px solid
+        rgba(74,222,128,.11);
+
+    border-radius: 999px;
+
+    color: #7e9a8b;
+
+    background:
+        rgba(74,222,128,.025);
+
+    font-size: .43rem;
+
+    font-weight: 750;
+
+}
+
+
+.social-status-dot {
+
+    width: 6px;
+
+    height: 6px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background:
+        #4ade80;
+
+    box-shadow:
+        0 0 10px
+        rgba(74,222,128,.55);
+
+}
+
+
+/* ==========================================================
+   06 — PLATFORM BAR
+========================================================== */
+
+.social-platform-bar {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-top: 22px;
+
+}
+
+
+/* ==========================================================
+   07 — PLATFORM
+========================================================== */
+
+.social-platform {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    min-height: 34px;
+
+    padding: 0 13px;
+
+    border:
+        1px solid
+        rgba(148,163,184,.08);
+
+    border-radius: 9px;
+
+    color: #647b8e;
+
+    background:
+        rgba(148,163,184,.025);
+
+    font-size: .44rem;
+
+    font-weight: 750;
+
+    transition:
+
+        color .3s ease,
+
+        border-color .3s ease,
+
+        background .3s ease,
+
+        transform .3s ease;
+
+}
+
+
+.social-platform i {
+
+    font-size: .68rem;
+
+}
+
+
+.social-platform.active {
+
+    color: #e0c4ff;
+
+    border-color:
+        rgba(192,132,252,.19);
+
+    background:
+        rgba(168,85,247,.055);
+
+    box-shadow:
+        0 0 22px
+        rgba(168,85,247,.025);
+
+}
+
+
+.social-platform:hover {
+
+    color: #f0d9ff;
+
+    border-color:
+        rgba(192,132,252,.22);
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+/* ==========================================================
+   08 — PERIOD
+========================================================== */
+
+.social-period {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-left: auto;
+
+    color: #60778a;
+
+    font-size: .43rem;
+
+    font-weight: 650;
+
+}
+
+
+.social-period i {
+
+    color: #4f687b;
+
+    font-size: .34rem;
+
+}
+
+
+/* ==========================================================
+   09 — METRICS
+========================================================== */
+
+.social-metrics {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0,1fr));
+
+    gap: 10px;
+
+    margin-top: 14px;
+
+}
+
+
+/* ==========================================================
+   10 — METRIC CARD
+========================================================== */
+
+.social-metric {
+
+    position: relative;
+
+    min-height: 112px;
+
+    padding: 17px;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(148,163,184,.075);
+
+    border-radius: 14px;
+
+    background:
+        rgba(148,163,184,.018);
+
+    transition:
+
+        transform .35s ease,
+
+        border-color .35s ease,
+
+        background .35s ease;
+
+}
+
+
+.social-metric:hover {
+
+    transform:
+        translateY(-3px);
+
+    border-color:
+        rgba(192,132,252,.15);
+
+    background:
+        rgba(168,85,247,.025);
+
+}
+
+
+/* ==========================================================
+   11 — METRIC AMBIENT
+========================================================== */
+
+.social-metric::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -55px;
+
+    right: -55px;
+
+    width: 130px;
+
+    height: 130px;
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(192,132,252,.075),
+            transparent 70%
+        );
+
+    filter:
+        blur(18px);
+
+}
+
+
+/* ==========================================================
+   12 — LABEL
+========================================================== */
+
+.social-metric-label {
+
+    position: relative;
+
+    display: block;
+
+    color: #536b7e;
+
+    font-size: .38rem;
+
+    font-weight: 800;
+
+    letter-spacing: .10em;
+
+}
+
+
+/* ==========================================================
+   13 — VALUE
+========================================================== */
+
+.social-metric strong {
+
+    position: relative;
+
+    display: block;
+
+    margin-top: 13px;
+
+    color: #e2edf3;
+
+    font-size: 1.38rem;
+
+    font-weight: 800;
+
+    line-height: 1;
+
+    letter-spacing: -.055em;
+
+}
+
+
+/* ==========================================================
+   14 — CHANGE
+========================================================== */
+
+.social-metric small {
+
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 4px;
+
+    margin-top: 9px;
+
+    color: #4ade80;
+
+    font-size: .38rem;
+
+    font-weight: 750;
+
+}
+
+
+.social-metric small i {
+
+    font-size: .31rem;
+
+}
+
+
+/* ==========================================================
+   15 — HIGHLIGHT
+========================================================== */
+
+.social-metric-highlight {
+
+    border-color:
+        rgba(34,211,238,.13);
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(34,211,238,.045),
+            rgba(168,85,247,.025)
+        );
+
+}
+
+
+.social-metric-highlight strong {
+
+    color:
+        #67e8f9;
+
+}
+
+
+/* ==========================================================
+   16 — CONTENT GRID
+========================================================== */
+
+.social-content-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0,1.55fr)
+        minmax(300px,.85fr);
+
+    gap: 12px;
+
+    margin-top: 12px;
+
+}
+
+
+/* ==========================================================
+   17 — SHARED CARD
+========================================================== */
+
+.social-growth-card,
+.social-content-card {
+
+    position: relative;
+
+    min-width: 0;
+
+    padding: 20px;
+
+    border:
+        1px solid
+        rgba(148,163,184,.075);
+
+    border-radius: 16px;
+
+    background:
+        rgba(148,163,184,.018);
+
+}
+
+
+/* ==========================================================
+   18 — CARD HEADER
+========================================================== */
+
+.social-card-header {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+}
+
+
+.social-card-header span {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #526a7d;
+
+    font-size: .36rem;
+
+    font-weight: 800;
+
+    letter-spacing: .10em;
+
+}
+
+
+.social-card-header strong {
+
+    color: #cfdee7;
+
+    font-size: .68rem;
+
+    font-weight: 750;
+
+}
+
+
+/* ==========================================================
+   19 — GROWTH VALUE
+========================================================== */
+
+.social-growth-value {
+
+    padding: 6px 8px;
+
+    border:
+        1px solid
+        rgba(74,222,128,.10);
+
+    border-radius: 7px;
+
+    color: #4ade80;
+
+    background:
+        rgba(74,222,128,.025);
+
+    font-size: .38rem;
+
+    font-weight: 750;
+
+}
+
+
+/* ==========================================================
+   20 — GROWTH CHART
+========================================================== */
+
+.social-growth-chart {
+
+    display: grid;
+
+    grid-template-columns:
+        32px minmax(0,1fr);
+
+    gap: 8px;
+
+    height: 270px;
+
+    margin-top: 18px;
+
+}
+
+
+/* ==========================================================
+   21 — Y AXIS
+========================================================== */
+
+.social-chart-y {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    padding:
+        3px 0 25px;
+
+}
+
+
+.social-chart-y span {
+
+    color: #43596b;
+
+    font-size: .34rem;
+
+}
+
+
+/* ==========================================================
+   22 — CHART AREA
+========================================================== */
+
+.social-chart-area {
+
+    position: relative;
+
+    min-width: 0;
+
+    height: 100%;
+
+    overflow: hidden;
+
+}
+
+
+/* ==========================================================
+   23 — CHART LINES
+========================================================== */
+
+.social-chart-lines {
+
+    position: absolute;
+
+    inset:
+        0 0 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+}
+
+
+.social-chart-lines span {
+
+    width: 100%;
+
+    height: 1px;
+
+    background:
+        rgba(148,163,184,.055);
+
+}
+
+
+/* ==========================================================
+   24 — SVG
+========================================================== */
+
+.social-chart-svg {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height:
+        calc(100% - 25px);
+
+    overflow: visible;
+
+}
+
+
+/* ==========================================================
+   25 — CHART FILL
+========================================================== */
+
+.social-chart-fill {
+
+    fill:
+        url(#socialChartGradient);
+
+}
+
+
+/* ==========================================================
+   26 — CHART LINE
+========================================================== */
+
+.social-chart-line {
+
+    fill: none;
+
+    stroke:
+        #c084fc;
+
+    stroke-width: 3;
+
+    vector-effect:
+        non-scaling-stroke;
+
+    filter:
+        drop-shadow(
+            0 0 7px
+            rgba(192,132,252,.30)
+        );
+
+}
+
+
+/* ==========================================================
+   27 — CHART POINTS
+========================================================== */
+
+.social-chart-point {
+
+    fill:
+        #071521;
+
+    stroke:
+        #c084fc;
+
+    stroke-width: 2;
+
+    vector-effect:
+        non-scaling-stroke;
+
+    filter:
+        drop-shadow(
+            0 0 7px
+            rgba(192,132,252,.45)
+        );
+
+}
+
+
+/* ==========================================================
+   28 — X AXIS
+========================================================== */
+
+.social-chart-x {
+
+    position: absolute;
+
+    right: 0;
+
+    bottom: 0;
+
+    left: 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+}
+
+
+.social-chart-x span {
+
+    color: #435a6c;
+
+    font-size: .32rem;
+
+}
+
+
+/* ==========================================================
+   29 — CONTENT CARD ICON
+========================================================== */
+
+.social-content-card
+.social-card-header > i {
+
+    color:
+        #22d3ee;
+
+    font-size:
+        .65rem;
+
+}
+
+
+/* ==========================================================
+   30 — CONTENT MIX
+========================================================== */
+
+.social-content-mix {
+
+    display: grid;
+
+    grid-template-columns:
+        145px minmax(0,1fr);
+
+    align-items: center;
+
+    gap: 18px;
+
+    min-height: 225px;
+
+    margin-top: 8px;
+
+}
+
+
+/* ==========================================================
+   31 — RING VISUAL
+========================================================== */
+
+.social-mix-visual {
+
+    display: grid;
+
+    place-items: center;
+
+}
+
+
+.social-mix-ring {
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 135px;
+
+    height: 135px;
+
+    border:
+        1px solid
+        rgba(192,132,252,.16);
+
+    border-radius: 50%;
+
+    background:
+
+        conic-gradient(
+            #c084fc 0 38%,
+            #22d3ee 38% 64%,
+            #60a5fa 64% 85%,
+            rgba(148,163,184,.10) 85% 100%
+        );
+
+    box-shadow:
+
+        0 0 40px
+        rgba(168,85,247,.06);
+
+}
+
+
+/* ==========================================================
+   32 — RING INNER
+========================================================== */
+
+.social-mix-ring::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 12px;
+
+    border-radius: 50%;
+
+    background:
+        #071522;
+
+    box-shadow:
+        inset 0 0 25px
+        rgba(0,0,0,.35);
+
+}
+
+
+/* ==========================================================
+   33 — RING VALUE
+========================================================== */
+
+.social-mix-ring span,
+.social-mix-ring small {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+.social-mix-ring span {
+
+    color:
+        #edf5f8;
+
+    font-size:
+        1.35rem;
+
+    font-weight:
+        800;
+
+    line-height:
+        1;
+
+}
+
+
+.social-mix-ring small {
+
+    margin-top:
+        5px;
+
+    color:
+        #5f7588;
+
+    font-size:
+        .34rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .12em;
+
+}
+
+
+/* ==========================================================
+   34 — MIX LIST
+========================================================== */
+
+.social-mix-list {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        13px;
+
+}
+
+
+/* ==========================================================
+   35 — MIX ITEM
+========================================================== */
+
+.social-mix-item {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        9px;
+
+}
+
+
+.social-mix-dot {
+
+    width:
+        6px;
+
+    height:
+        6px;
+
+    flex-shrink:
+        0;
+
+    border-radius:
+        50%;
+
+    background:
+        #c084fc;
+
+    box-shadow:
+        0 0 8px
+        rgba(192,132,252,.4);
+
+}
+
+
+.social-mix-item:nth-child(2)
+.social-mix-dot {
+
+    background:
+        #22d3ee;
+
+    box-shadow:
+        0 0 8px
+        rgba(34,211,238,.4);
+
+}
+
+
+.social-mix-item:nth-child(3)
+.social-mix-dot {
+
+    background:
+        #60a5fa;
+
+    box-shadow:
+        0 0 8px
+        rgba(96,165,250,.4);
+
+}
+
+
+.social-mix-item:nth-child(4)
+.social-mix-dot {
+
+    background:
+        #64748b;
+
+    box-shadow:
+        0 0 8px
+        rgba(100,116,139,.3);
+
+}
+
+
+.social-mix-item div {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        18px;
+
+    width:
+        100%;
+
+}
+
+
+.social-mix-item strong {
+
+    color:
+        #aebfcb;
+
+    font-size:
+        .43rem;
+
+}
+
+
+.social-mix-item small {
+
+    color:
+        #60768a;
+
+    font-size:
+        .38rem;
+
+}
+
+
+/* ==========================================================
+   36 — CONTENT CALENDAR
+========================================================== */
+
+.social-calendar {
+
+    margin-top:
+        12px;
+
+    padding:
+        18px;
+
+    border:
+        1px solid
+        rgba(148,163,184,.075);
+
+    border-radius:
+        16px;
+
+    background:
+        rgba(148,163,184,.018);
+
+}
+
+
+/* ==========================================================
+   37 — CALENDAR HEADING
+========================================================== */
+
+.social-calendar-heading {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        20px;
+
+    padding-bottom:
+        15px;
+
+    border-bottom:
+        1px solid
+        rgba(148,163,184,.06);
+
+}
+
+
+.social-calendar-heading > div span {
+
+    display:
+        block;
+
+    margin-bottom:
+        5px;
+
+    color:
+        #526a7d;
+
+    font-size:
+        .36rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .10em;
+
+}
+
+
+.social-calendar-heading > div strong {
+
+    color:
+        #cfdee7;
+
+    font-size:
+        .68rem;
+
+}
+
+
+/* ==========================================================
+   38 — CALENDAR COUNT
+========================================================== */
+
+.social-calendar-count {
+
+    padding:
+        6px 9px;
+
+    border:
+        1px solid
+        rgba(192,132,252,.11);
+
+    border-radius:
+        7px;
+
+    color:
+        #a78bfa;
+
+    background:
+        rgba(168,85,247,.025);
+
+    font-size:
+        .37rem;
+
+    font-weight:
+        750;
+
+}
+
+
+/* ==========================================================
+   39 — CALENDAR ITEMS
+========================================================== */
+
+.social-calendar-items {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:
+        9px;
+
+    margin-top:
+        11px;
+
+}
+
+
+/* ==========================================================
+   40 — CALENDAR ITEM
+========================================================== */
+
+.social-calendar-item {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        auto auto minmax(0,1fr) auto;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+    min-width:
+        0;
+
+    padding:
+        11px;
+
+    border:
+        1px solid
+        rgba(148,163,184,.065);
+
+    border-radius:
+        11px;
+
+    background:
+        rgba(148,163,184,.015);
+
+}
+
+
+/* ==========================================================
+   41 — DATE
+========================================================== */
+
+.social-calendar-date {
+
+    text-align:
+        center;
+
+    min-width:
+        30px;
+
+}
+
+
+.social-calendar-date strong {
+
+    display:
+        block;
+
+    color:
+        #d9e5ec;
+
+    font-size:
+        .70rem;
+
+    line-height:
+        1;
+
+}
+
+
+.social-calendar-date span {
+
+    display:
+        block;
+
+    margin-top:
+        4px;
+
+    color:
+        #536b7d;
+
+    font-size:
+        .30rem;
+
+    font-weight:
+        800;
+
+}
+
+
+/* ==========================================================
+   42 — CALENDAR ICON
+========================================================== */
+
+.social-calendar-icon {
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    width:
+        30px;
+
+    height:
+        30px;
+
+    border:
+        1px solid
+        rgba(192,132,252,.10);
+
+    border-radius:
+        8px;
+
+    color:
+        #c084fc;
+
+    background:
+        rgba(168,85,247,.035);
+
+    font-size:
+        .48rem;
+
+}
+
+
+/* ==========================================================
+   43 — CALENDAR INFO
+========================================================== */
+
+.social-calendar-info {
+
+    min-width:
+        0;
+
+}
+
+
+.social-calendar-info strong {
+
+    display:
+        block;
+
+    overflow:
+        hidden;
+
+    color:
+        #b9c9d4;
+
+    font-size:
+        .42rem;
+
+    font-weight:
+        700;
+
+    white-space:
+        nowrap;
+
+    text-overflow:
+        ellipsis;
+
+}
+
+
+.social-calendar-info span {
+
+    display:
+        block;
+
+    margin-top:
+        4px;
+
+    overflow:
+        hidden;
+
+    color:
+        #52697b;
+
+    font-size:
+        .32rem;
+
+    white-space:
+        nowrap;
+
+    text-overflow:
+        ellipsis;
+
+}
+
+
+/* ==========================================================
+   44 — STATUS
+========================================================== */
+
+.social-calendar-status {
+
+    color:
+        #647b8e;
+
+    font-size:
+        .31rem;
+
+    white-space:
+        nowrap;
+
+}
+
+
+/* ==========================================================
+   45 — TABLET
+========================================================== */
+
+@media (max-width: 1000px) {
+
+    .social-showcase {
+
+        padding:
+            22px;
+
+    }
+
+    .social-metrics {
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+    }
+
+    .social-content-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+    .social-calendar-items {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+}
+
+
+/* ==========================================================
+   46 — MOBILE
+========================================================== */
+
+@media (max-width: 600px) {
+
+    .social-showcase {
+
+        padding:
+            14px;
+
+        border-radius:
+            18px;
+
+    }
+
+    .social-dashboard-top {
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+        gap:
+            14px;
+
+    }
+
+    .social-dashboard-icon {
+
+        width:
+            38px;
+
+        height:
+            38px;
+
+    }
+
+    .social-platform-bar {
+
+        flex-wrap:
+            wrap;
+
+    }
+
+    .social-platform {
+
+        min-height:
+            32px;
+
+        padding:
+            0 10px;
+
+        font-size:
+            .40rem;
+
+    }
+
+    .social-period {
+
+        width:
+            100%;
+
+        margin-left:
+            0;
+
+        margin-top:
+            4px;
+
+    }
+
+    .social-metrics {
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+        gap:
+            7px;
+
+    }
+
+    .social-metric {
+
+        min-height:
+            94px;
+
+        padding:
+            13px;
+
+    }
+
+    .social-metric strong {
+
+        font-size:
+            1.04rem;
+
+    }
+
+    .social-growth-card,
+    .social-content-card {
+
+        padding:
+            14px;
+
+    }
+
+    .social-growth-chart {
+
+        height:
+            215px;
+
+    }
+
+    .social-content-mix {
+
+        grid-template-columns:
+            125px minmax(0,1fr);
+
+        gap:
+            12px;
+
+        min-height:
+            205px;
+
+    }
+
+    .social-mix-ring {
+
+        width:
+            115px;
+
+        height:
+            115px;
+
+    }
+
+    .social-mix-ring::before {
+
+        inset:
+            10px;
+
+    }
+
+    .social-mix-ring span {
+
+        font-size:
+            1.15rem;
+
+    }
+
+    .social-calendar {
+
+        padding:
+            14px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   47 — SMALL MOBILE
+========================================================== */
+
+@media (max-width: 420px) {
+
+    .social-showcase {
+
+        padding:
+            11px;
+
+    }
+
+    .social-metrics {
+
+        gap:
+            6px;
+
+    }
+
+    .social-metric {
+
+        min-height:
+            86px;
+
+        padding:
+            10px;
+
+    }
+
+    .social-metric strong {
+
+        font-size:
+            .90rem;
+
+    }
+
+    .social-growth-chart {
+
+        height:
+            185px;
+
+    }
+
+    .social-content-mix {
+
+        grid-template-columns:
+            1fr;
+
+        justify-items:
+            center;
+
+        padding:
+            12px 0;
+
+    }
+
+    .social-mix-list {
+
+        width:
+            100%;
+
+    }
+
+    .social-calendar-item {
+
+        grid-template-columns:
+            auto auto minmax(0,1fr);
+
+    }
+
+    .social-calendar-status {
+
+        display:
+            none;
+
+    }
+
+}

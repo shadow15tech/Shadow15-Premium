@@ -1,0 +1,1384 @@
+/* ==========================================================
+   SHADOW15 — SOCIAL MEDIA
+   05-ANIMATION.CSS
+========================================================== */
+
+
+/* ==========================================================
+   01 — INTRO REVEAL
+========================================================== */
+
+.social-intro {
+
+    animation:
+        socialIntroReveal
+        1s
+        cubic-bezier(.22,1,.36,1)
+        both;
+
+}
+
+
+@keyframes socialIntroReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(32px);
+
+        filter:
+            blur(6px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+        filter:
+            blur(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   02 — LABEL
+========================================================== */
+
+.social-label {
+
+    animation:
+        socialLabelReveal
+        .7s
+        cubic-bezier(.22,1,.36,1)
+        .1s
+        both;
+
+}
+
+
+@keyframes socialLabelReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateX(-18px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateX(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   03 — HEADING
+========================================================== */
+
+.social-heading h2 {
+
+    animation:
+        socialHeadingReveal
+        1s
+        cubic-bezier(.22,1,.36,1)
+        .18s
+        both;
+
+}
+
+
+@keyframes socialHeadingReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(28px)
+            scale(.98);
+
+        filter:
+            blur(7px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+        filter:
+            blur(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   04 — GRADIENT FLOW
+========================================================== */
+
+.social-heading h2 span {
+
+    animation:
+        socialGradientFlow
+        5s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes socialGradientFlow {
+
+    0%,
+    100% {
+
+        background-position:
+            0% 50%;
+
+    }
+
+    50% {
+
+        background-position:
+            100% 50%;
+
+    }
+
+}
+
+
+/* ==========================================================
+   05 — DESCRIPTION
+========================================================== */
+
+.social-description {
+
+    animation:
+        socialDescriptionReveal
+        .8s
+        cubic-bezier(.22,1,.36,1)
+        .38s
+        both;
+
+}
+
+
+@keyframes socialDescriptionReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   06 — SHOWCASE
+========================================================== */
+
+.social-showcase {
+
+    animation:
+        socialShowcaseReveal
+        1.05s
+        cubic-bezier(.22,1,.36,1)
+        .32s
+        both;
+
+}
+
+
+@keyframes socialShowcaseReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(42px)
+            scale(.975);
+
+        filter:
+            blur(7px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+        filter:
+            blur(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   07 — AMBIENT GLOWS
+========================================================== */
+
+.social-glow-left {
+
+    animation:
+        socialGlowLeft
+        8s
+        ease-in-out
+        infinite;
+
+}
+
+
+.social-glow-right {
+
+    animation:
+        socialGlowRight
+        9s
+        ease-in-out
+        1s
+        infinite;
+
+}
+
+
+@keyframes socialGlowLeft {
+
+    0%,
+    100% {
+
+        transform:
+            translate3d(0,0,0)
+            scale(1);
+
+        opacity:
+            .55;
+
+    }
+
+    50% {
+
+        transform:
+            translate3d(35px,-25px,0)
+            scale(1.08);
+
+        opacity:
+            .80;
+
+    }
+
+}
+
+
+@keyframes socialGlowRight {
+
+    0%,
+    100% {
+
+        transform:
+            translate3d(0,0,0)
+            scale(1);
+
+        opacity:
+            .48;
+
+    }
+
+    50% {
+
+        transform:
+            translate3d(-30px,25px,0)
+            scale(1.10);
+
+        opacity:
+            .74;
+
+    }
+
+}
+
+
+/* ==========================================================
+   08 — ORBIT MOTION
+========================================================== */
+
+.social-orbit-one {
+
+    animation:
+        socialOrbitOne
+        23s
+        linear
+        infinite;
+
+}
+
+
+.social-orbit-two {
+
+    animation:
+        socialOrbitTwo
+        31s
+        linear
+        infinite;
+
+}
+
+
+@keyframes socialOrbitOne {
+
+    from {
+
+        transform:
+            translate(-50%,-50%)
+            rotate(-14deg);
+
+    }
+
+    to {
+
+        transform:
+            translate(-50%,-50%)
+            rotate(346deg);
+
+    }
+
+}
+
+
+@keyframes socialOrbitTwo {
+
+    from {
+
+        transform:
+            translate(-50%,-50%)
+            rotate(17deg);
+
+    }
+
+    to {
+
+        transform:
+            translate(-50%,-50%)
+            rotate(-343deg);
+
+    }
+
+}
+
+
+/* ==========================================================
+   09 — ORBIT POINT PULSE
+========================================================== */
+
+.social-orbit-one::before,
+.social-orbit-two::before {
+
+    animation:
+        socialOrbitPulse
+        2.5s
+        ease-in-out
+        infinite;
+
+}
+
+
+.social-orbit-two::before {
+
+    animation-delay:
+        .8s;
+
+}
+
+
+@keyframes socialOrbitPulse {
+
+    0%,
+    100% {
+
+        opacity:
+            .40;
+
+    }
+
+    50% {
+
+        opacity:
+            1;
+
+        transform:
+            scale(1.5);
+
+    }
+
+}
+
+
+/* ==========================================================
+   10 — LIVE STATUS
+========================================================== */
+
+.social-status-dot {
+
+    animation:
+        socialStatusPulse
+        1.8s
+        ease-out
+        infinite;
+
+}
+
+
+@keyframes socialStatusPulse {
+
+    0% {
+
+        box-shadow:
+            0 0 0 0
+            rgba(74,222,128,.45);
+
+    }
+
+    70% {
+
+        box-shadow:
+            0 0 0 9px
+            rgba(74,222,128,0);
+
+    }
+
+    100% {
+
+        box-shadow:
+            0 0 0 0
+            rgba(74,222,128,0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   11 — METRIC CARDS
+========================================================== */
+
+.social-metric {
+
+    opacity:
+        0;
+
+    animation:
+        socialMetricReveal
+        .7s
+        cubic-bezier(.22,1,.36,1)
+        both;
+
+}
+
+
+.social-metric:nth-child(1) {
+
+    animation-delay:
+        .55s;
+
+}
+
+
+.social-metric:nth-child(2) {
+
+    animation-delay:
+        .65s;
+
+}
+
+
+.social-metric:nth-child(3) {
+
+    animation-delay:
+        .75s;
+
+}
+
+
+.social-metric:nth-child(4) {
+
+    animation-delay:
+        .85s;
+
+}
+
+
+@keyframes socialMetricReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(22px)
+            scale(.97);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+/* ==========================================================
+   12 — METRIC AMBIENT
+========================================================== */
+
+.social-metric::before {
+
+    animation:
+        socialMetricAmbient
+        4s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes socialMetricAmbient {
+
+    0%,
+    100% {
+
+        opacity:
+            .35;
+
+        transform:
+            scale(.9);
+
+    }
+
+    50% {
+
+        opacity:
+            .85;
+
+        transform:
+            scale(1.15);
+
+    }
+
+}
+
+
+/* ==========================================================
+   13 — CHART REVEAL
+========================================================== */
+
+.social-growth-card {
+
+    animation:
+        socialChartCardReveal
+        .85s
+        cubic-bezier(.22,1,.36,1)
+        .65s
+        both;
+
+}
+
+
+@keyframes socialChartCardReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(24px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   14 — CHART LINE DRAW
+========================================================== */
+
+.social-chart-line {
+
+    stroke-dasharray:
+        1000;
+
+    stroke-dashoffset:
+        1000;
+
+    animation:
+        socialChartDraw
+        2.1s
+        cubic-bezier(.22,1,.36,1)
+        1.15s
+        forwards;
+
+}
+
+
+@keyframes socialChartDraw {
+
+    to {
+
+        stroke-dashoffset:
+            0;
+
+    }
+
+}
+
+
+/* ==========================================================
+   15 — CHART FILL
+========================================================== */
+
+.social-chart-fill {
+
+    opacity:
+        0;
+
+    animation:
+        socialChartFill
+        1.2s
+        ease
+        1.45s
+        forwards;
+
+}
+
+
+@keyframes socialChartFill {
+
+    from {
+
+        opacity:
+            0;
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+    }
+
+}
+
+
+/* ==========================================================
+   16 — CHART POINTS
+========================================================== */
+
+.social-chart-point {
+
+    opacity:
+        0;
+
+    transform-box:
+        fill-box;
+
+    transform-origin:
+        center;
+
+    animation:
+        socialPointReveal
+        .45s
+        cubic-bezier(.22,1,.36,1)
+        forwards;
+
+}
+
+
+.social-point-one {
+
+    animation-delay:
+        1.65s;
+
+}
+
+
+.social-point-two {
+
+    animation-delay:
+        1.90s;
+
+}
+
+
+.social-point-three {
+
+    animation-delay:
+        2.15s;
+
+}
+
+
+@keyframes socialPointReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            scale(0);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            scale(1);
+
+    }
+
+}
+
+
+/* ==========================================================
+   17 — CONTENT MIX CARD
+========================================================== */
+
+.social-content-card {
+
+    animation:
+        socialMixReveal
+        .85s
+        cubic-bezier(.22,1,.36,1)
+        .75s
+        both;
+
+}
+
+
+@keyframes socialMixReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateX(25px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateX(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   18 — MIX RING
+========================================================== */
+
+.social-mix-ring {
+
+    animation:
+        socialRingReveal
+        1.2s
+        cubic-bezier(.22,1,.36,1)
+        1.15s
+        both;
+
+}
+
+
+@keyframes socialRingReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            rotate(-70deg)
+            scale(.75);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            rotate(0)
+            scale(1);
+
+    }
+
+}
+
+
+/* ==========================================================
+   19 — MIX ITEMS
+========================================================== */
+
+.social-mix-item {
+
+    opacity:
+        0;
+
+    animation:
+        socialMixItemReveal
+        .55s
+        cubic-bezier(.22,1,.36,1)
+        both;
+
+}
+
+
+.social-mix-item:nth-child(1) {
+
+    animation-delay:
+        1.35s;
+
+}
+
+
+.social-mix-item:nth-child(2) {
+
+    animation-delay:
+        1.48s;
+
+}
+
+
+.social-mix-item:nth-child(3) {
+
+    animation-delay:
+        1.61s;
+
+}
+
+
+.social-mix-item:nth-child(4) {
+
+    animation-delay:
+        1.74s;
+
+}
+
+
+@keyframes socialMixItemReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateX(15px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateX(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   20 — CALENDAR
+========================================================== */
+
+.social-calendar {
+
+    animation:
+        socialCalendarReveal
+        .8s
+        cubic-bezier(.22,1,.36,1)
+        .85s
+        both;
+
+}
+
+
+@keyframes socialCalendarReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(20px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   21 — CALENDAR ITEMS
+========================================================== */
+
+.social-calendar-item {
+
+    opacity:
+        0;
+
+    animation:
+        socialCalendarItem
+        .55s
+        cubic-bezier(.22,1,.36,1)
+        both;
+
+}
+
+
+.social-calendar-item:nth-child(1) {
+
+    animation-delay:
+        1.15s;
+
+}
+
+
+.social-calendar-item:nth-child(2) {
+
+    animation-delay:
+        1.28s;
+
+}
+
+
+.social-calendar-item:nth-child(3) {
+
+    animation-delay:
+        1.41s;
+
+}
+
+
+@keyframes socialCalendarItem {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(12px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   22 — SERVICE CARDS
+========================================================== */
+
+.social-service-card {
+
+    opacity:
+        0;
+
+    animation:
+        socialServiceReveal
+        .8s
+        cubic-bezier(.22,1,.36,1)
+        both;
+
+}
+
+
+.social-service-card:nth-child(1) {
+
+    animation-delay:
+        .15s;
+
+}
+
+
+.social-service-card:nth-child(2) {
+
+    animation-delay:
+        .30s;
+
+}
+
+
+.social-service-card:nth-child(3) {
+
+    animation-delay:
+        .45s;
+
+}
+
+
+@keyframes socialServiceReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(30px)
+            scale(.975);
+
+        filter:
+            blur(4px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+        filter:
+            blur(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   23 — SERVICE ICON FLOAT
+========================================================== */
+
+.social-service-icon {
+
+    animation:
+        socialIconFloat
+        5s
+        ease-in-out
+        infinite;
+
+}
+
+
+.social-service-card:nth-child(2)
+.social-service-icon {
+
+    animation-delay:
+        .8s;
+
+}
+
+
+.social-service-card:nth-child(3)
+.social-service-icon {
+
+    animation-delay:
+        1.6s;
+
+}
+
+
+@keyframes socialIconFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-3px);
+
+    }
+
+}
+
+
+/* ==========================================================
+   24 — SERVICE AMBIENT
+========================================================== */
+
+.social-service-card::before {
+
+    animation:
+        socialCardAmbient
+        6s
+        ease-in-out
+        infinite;
+
+}
+
+
+.social-service-card:nth-child(2)::before {
+
+    animation-delay:
+        1s;
+
+}
+
+
+.social-service-card:nth-child(3)::before {
+
+    animation-delay:
+        2s;
+
+}
+
+
+@keyframes socialCardAmbient {
+
+    0%,
+    100% {
+
+        opacity:
+            .30;
+
+    }
+
+    50% {
+
+        opacity:
+            .82;
+
+    }
+
+}
+
+
+/* ==========================================================
+   25 — FOOTNOTE
+========================================================== */
+
+.social-footnote {
+
+    animation:
+        socialFootnoteReveal
+        .8s
+        cubic-bezier(.22,1,.36,1)
+        .9s
+        both;
+
+}
+
+
+@keyframes socialFootnoteReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(18px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   26 — PERFORMANCE
+========================================================== */
+
+.social-showcase,
+.social-metric,
+.social-chart-line,
+.social-chart-fill,
+.social-service-card,
+.social-service-icon,
+.social-orbit {
+
+    will-change:
+        transform;
+
+}
+
+
+/* ==========================================================
+   27 — GPU
+========================================================== */
+
+.social-showcase,
+.social-service-card,
+.social-chart-line,
+.social-chart-fill,
+.social-orbit {
+
+    backface-visibility:
+        hidden;
+
+    -webkit-backface-visibility:
+        hidden;
+
+}
+
+
+/* ==========================================================
+   28 — TOUCH DEVICES
+========================================================== */
+
+@media (hover: none) {
+
+    .social-platform:hover {
+
+        transform:
+            none;
+
+    }
+
+    .social-metric:hover {
+
+        transform:
+            none;
+
+    }
+
+    .social-service-card:hover {
+
+        transform:
+            none;
+
+    }
+
+    .social-service-card:hover
+    .social-service-icon {
+
+        transform:
+            none;
+
+    }
+
+}
+
+
+/* ==========================================================
+   29 — REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .solution-social *,
+    .solution-social *::before,
+    .solution-social *::after {
+
+        animation:
+            none !important;
+
+        transition:
+            none !important;
+
+    }
+
+}

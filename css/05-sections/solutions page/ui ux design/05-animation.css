@@ -1,0 +1,1479 @@
+/* ==========================================================
+   SHADOW15 — UI / UX DESIGN
+   05-ANIMATION.CSS
+========================================================== */
+
+
+/* ==========================================================
+   01 — INTRO REVEAL
+========================================================== */
+
+.uiux-intro {
+
+    animation:
+        uiuxIntroReveal
+        1s
+        cubic-bezier(.22,1,.36,1)
+        both;
+
+}
+
+
+@keyframes uiuxIntroReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(32px);
+
+        filter:
+            blur(6px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+        filter:
+            blur(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   02 — LABEL
+========================================================== */
+
+.uiux-label {
+
+    animation:
+        uiuxLabelReveal
+        .7s
+        cubic-bezier(.22,1,.36,1)
+        .1s
+        both;
+
+}
+
+
+@keyframes uiuxLabelReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateX(-18px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateX(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   03 — HEADING
+========================================================== */
+
+.uiux-heading h2 {
+
+    animation:
+        uiuxHeadingReveal
+        1s
+        cubic-bezier(.22,1,.36,1)
+        .18s
+        both;
+
+}
+
+
+@keyframes uiuxHeadingReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(28px)
+            scale(.98);
+
+        filter:
+            blur(7px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+        filter:
+            blur(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   04 — GRADIENT FLOW
+========================================================== */
+
+.uiux-heading h2 span {
+
+    animation:
+        uiuxGradientFlow
+        5s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes uiuxGradientFlow {
+
+    0%,
+    100% {
+
+        background-position:
+            0% 50%;
+
+    }
+
+    50% {
+
+        background-position:
+            100% 50%;
+
+    }
+
+}
+
+
+/* ==========================================================
+   05 — DESCRIPTION
+========================================================== */
+
+.uiux-description {
+
+    animation:
+        uiuxDescriptionReveal
+        .8s
+        cubic-bezier(.22,1,.36,1)
+        .38s
+        both;
+
+}
+
+
+@keyframes uiuxDescriptionReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   06 — SHOWCASE
+========================================================== */
+
+.uiux-showcase {
+
+    animation:
+        uiuxShowcaseReveal
+        1.05s
+        cubic-bezier(.22,1,.36,1)
+        .32s
+        both;
+
+}
+
+
+@keyframes uiuxShowcaseReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(42px)
+            scale(.975);
+
+        filter:
+            blur(7px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+        filter:
+            blur(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   07 — BACKGROUND GLOWS
+========================================================== */
+
+.uiux-glow-left {
+
+    animation:
+        uiuxGlowLeft
+        8s
+        ease-in-out
+        infinite;
+
+}
+
+
+.uiux-glow-right {
+
+    animation:
+        uiuxGlowRight
+        9s
+        ease-in-out
+        1s
+        infinite;
+
+}
+
+
+@keyframes uiuxGlowLeft {
+
+    0%,
+    100% {
+
+        transform:
+            translate3d(0,0,0)
+            scale(1);
+
+        opacity:
+            .55;
+
+    }
+
+    50% {
+
+        transform:
+            translate3d(35px,-25px,0)
+            scale(1.08);
+
+        opacity:
+            .82;
+
+    }
+
+}
+
+
+@keyframes uiuxGlowRight {
+
+    0%,
+    100% {
+
+        transform:
+            translate3d(0,0,0)
+            scale(1);
+
+        opacity:
+            .48;
+
+    }
+
+    50% {
+
+        transform:
+            translate3d(-30px,25px,0)
+            scale(1.10);
+
+        opacity:
+            .76;
+
+    }
+
+}
+
+
+/* ==========================================================
+   08 — ORBIT MOTION
+========================================================== */
+
+.uiux-orbit-one {
+
+    animation:
+        uiuxOrbitOne
+        23s
+        linear
+        infinite;
+
+}
+
+
+.uiux-orbit-two {
+
+    animation:
+        uiuxOrbitTwo
+        31s
+        linear
+        infinite;
+
+}
+
+
+@keyframes uiuxOrbitOne {
+
+    from {
+
+        transform:
+            translate(-50%,-50%)
+            rotate(-15deg);
+
+    }
+
+    to {
+
+        transform:
+            translate(-50%,-50%)
+            rotate(345deg);
+
+    }
+
+}
+
+
+@keyframes uiuxOrbitTwo {
+
+    from {
+
+        transform:
+            translate(-50%,-50%)
+            rotate(18deg);
+
+    }
+
+    to {
+
+        transform:
+            translate(-50%,-50%)
+            rotate(-342deg);
+
+    }
+
+}
+
+
+/* ==========================================================
+   09 — ORBIT POINT PULSE
+========================================================== */
+
+.uiux-orbit-one::before,
+.uiux-orbit-two::before {
+
+    animation:
+        uiuxOrbitPulse
+        2.5s
+        ease-in-out
+        infinite;
+
+}
+
+
+.uiux-orbit-two::before {
+
+    animation-delay:
+        .8s;
+
+}
+
+
+@keyframes uiuxOrbitPulse {
+
+    0%,
+    100% {
+
+        opacity:
+            .40;
+
+    }
+
+    50% {
+
+        opacity:
+            1;
+
+        transform:
+            scale(1.5);
+
+    }
+
+}
+
+
+/* ==========================================================
+   10 — STATUS PULSE
+========================================================== */
+
+.uiux-status-dot {
+
+    animation:
+        uiuxStatusPulse
+        1.8s
+        ease-out
+        infinite;
+
+}
+
+
+@keyframes uiuxStatusPulse {
+
+    0% {
+
+        box-shadow:
+            0 0 0 0
+            rgba(34,211,238,.45);
+
+    }
+
+    70% {
+
+        box-shadow:
+            0 0 0 9px
+            rgba(34,211,238,0);
+
+    }
+
+    100% {
+
+        box-shadow:
+            0 0 0 0
+            rgba(34,211,238,0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   11 — DESIGN PANELS
+========================================================== */
+
+.uiux-system-panel {
+
+    animation:
+        uiuxPanelLeftReveal
+        .85s
+        cubic-bezier(.22,1,.36,1)
+        .60s
+        both;
+
+}
+
+
+.uiux-interface-panel {
+
+    animation:
+        uiuxPanelCenterReveal
+        .95s
+        cubic-bezier(.22,1,.36,1)
+        .70s
+        both;
+
+}
+
+
+.uiux-score-panel {
+
+    animation:
+        uiuxPanelRightReveal
+        .85s
+        cubic-bezier(.22,1,.36,1)
+        .80s
+        both;
+
+}
+
+
+@keyframes uiuxPanelLeftReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateX(-25px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateX(0);
+
+    }
+
+}
+
+
+@keyframes uiuxPanelCenterReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(28px)
+            scale(.97);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+@keyframes uiuxPanelRightReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateX(25px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateX(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   12 — COLOR SWATCH REVEAL
+========================================================== */
+
+.uiux-color-row {
+
+    opacity:
+        0;
+
+    animation:
+        uiuxColorReveal
+        .55s
+        cubic-bezier(.22,1,.36,1)
+        both;
+
+}
+
+
+.uiux-color-row:nth-child(1) {
+
+    animation-delay:
+        1.05s;
+
+}
+
+
+.uiux-color-row:nth-child(2) {
+
+    animation-delay:
+        1.18s;
+
+}
+
+
+.uiux-color-row:nth-child(3) {
+
+    animation-delay:
+        1.31s;
+
+}
+
+
+@keyframes uiuxColorReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateX(-14px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateX(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   13 — COLOR SWATCH PULSE
+========================================================== */
+
+.uiux-color-swatch {
+
+    animation:
+        uiuxSwatchPulse
+        4s
+        ease-in-out
+        infinite;
+
+}
+
+
+.uiux-color-row:nth-child(2)
+.uiux-color-swatch {
+
+    animation-delay:
+        .8s;
+
+}
+
+
+.uiux-color-row:nth-child(3)
+.uiux-color-swatch {
+
+    animation-delay:
+        1.6s;
+
+}
+
+
+@keyframes uiuxSwatchPulse {
+
+    0%,
+    100% {
+
+        transform:
+            scale(1);
+
+    }
+
+    50% {
+
+        transform:
+            scale(1.08);
+
+    }
+
+}
+
+
+/* ==========================================================
+   14 — TYPOGRAPHY SYSTEM
+========================================================== */
+
+.uiux-type-system {
+
+    animation:
+        uiuxTypeReveal
+        .7s
+        cubic-bezier(.22,1,.36,1)
+        1.2s
+        both;
+
+}
+
+
+@keyframes uiuxTypeReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(15px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   15 — BROWSER REVEAL
+========================================================== */
+
+.uiux-browser {
+
+    animation:
+        uiuxBrowserReveal
+        1s
+        cubic-bezier(.22,1,.36,1)
+        .95s
+        both;
+
+}
+
+
+@keyframes uiuxBrowserReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            perspective(900px)
+            rotateX(8deg)
+            translateY(20px)
+            scale(.96);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            perspective(900px)
+            rotateX(0)
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+/* ==========================================================
+   16 — INTERFACE VISUAL FLOAT
+========================================================== */
+
+.uiux-interface-visual {
+
+    animation:
+        uiuxVisualFloat
+        6s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes uiuxVisualFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-5px);
+
+    }
+
+}
+
+
+/* ==========================================================
+   17 — VISUAL ORB
+========================================================== */
+
+.uiux-visual-orb {
+
+    animation:
+        uiuxOrbFloat
+        5s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes uiuxOrbFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translate3d(0,0,0)
+            scale(1);
+
+    }
+
+    50% {
+
+        transform:
+            translate3d(-7px,-8px,0)
+            scale(1.06);
+
+    }
+
+}
+
+
+/* ==========================================================
+   18 — SCORE RING
+========================================================== */
+
+.uiux-score-ring {
+
+    opacity:
+        0;
+
+    animation:
+        uiuxScoreReveal
+        1.15s
+        cubic-bezier(.22,1,.36,1)
+        1.05s
+        forwards;
+
+}
+
+
+@keyframes uiuxScoreReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            rotate(-70deg)
+            scale(.70);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            rotate(0)
+            scale(1);
+
+    }
+
+}
+
+
+/* ==========================================================
+   19 — SCORE LIST
+========================================================== */
+
+.uiux-score-list div {
+
+    opacity:
+        0;
+
+    animation:
+        uiuxScoreItemReveal
+        .5s
+        cubic-bezier(.22,1,.36,1)
+        both;
+
+}
+
+
+.uiux-score-list div:nth-child(1) {
+
+    animation-delay:
+        1.45s;
+
+}
+
+
+.uiux-score-list div:nth-child(2) {
+
+    animation-delay:
+        1.58s;
+
+}
+
+
+.uiux-score-list div:nth-child(3) {
+
+    animation-delay:
+        1.71s;
+
+}
+
+
+@keyframes uiuxScoreItemReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateX(14px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateX(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   20 — JOURNEY REVEAL
+========================================================== */
+
+.uiux-journey {
+
+    animation:
+        uiuxJourneyReveal
+        .8s
+        cubic-bezier(.22,1,.36,1)
+        .95s
+        both;
+
+}
+
+
+@keyframes uiuxJourneyReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(22px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   21 — JOURNEY STEPS
+========================================================== */
+
+.uiux-journey-step {
+
+    opacity:
+        0;
+
+    animation:
+        uiuxJourneyStep
+        .55s
+        cubic-bezier(.22,1,.36,1)
+        both;
+
+}
+
+
+.uiux-journey-step:nth-of-type(1) {
+
+    animation-delay:
+        1.25s;
+
+}
+
+
+.uiux-journey-step:nth-of-type(3) {
+
+    animation-delay:
+        1.40s;
+
+}
+
+
+.uiux-journey-step:nth-of-type(5) {
+
+    animation-delay:
+        1.55s;
+
+}
+
+
+.uiux-journey-step:nth-of-type(7) {
+
+    animation-delay:
+        1.70s;
+
+}
+
+
+@keyframes uiuxJourneyStep {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(15px)
+            scale(.96);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+/* ==========================================================
+   22 — JOURNEY LINES
+========================================================== */
+
+.uiux-journey-line {
+
+    transform:
+        scaleX(0);
+
+    transform-origin:
+        left center;
+
+    animation:
+        uiuxJourneyLine
+        .6s
+        cubic-bezier(.22,1,.36,1)
+        both;
+
+}
+
+
+.uiux-journey-line:nth-of-type(2) {
+
+    animation-delay:
+        1.38s;
+
+}
+
+
+.uiux-journey-line:nth-of-type(4) {
+
+    animation-delay:
+        1.53s;
+
+}
+
+
+.uiux-journey-line:nth-of-type(6) {
+
+    animation-delay:
+        1.68s;
+
+}
+
+
+@keyframes uiuxJourneyLine {
+
+    to {
+
+        transform:
+            scaleX(1);
+
+    }
+
+}
+
+
+/* ==========================================================
+   23 — SERVICE CARDS
+========================================================== */
+
+.uiux-service-card {
+
+    opacity:
+        0;
+
+    animation:
+        uiuxServiceReveal
+        .8s
+        cubic-bezier(.22,1,.36,1)
+        both;
+
+}
+
+
+.uiux-service-card:nth-child(1) {
+
+    animation-delay:
+        .15s;
+
+}
+
+
+.uiux-service-card:nth-child(2) {
+
+    animation-delay:
+        .30s;
+
+}
+
+
+.uiux-service-card:nth-child(3) {
+
+    animation-delay:
+        .45s;
+
+}
+
+
+@keyframes uiuxServiceReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(30px)
+            scale(.975);
+
+        filter:
+            blur(4px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+        filter:
+            blur(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   24 — SERVICE ICON FLOAT
+========================================================== */
+
+.uiux-service-icon {
+
+    animation:
+        uiuxIconFloat
+        5s
+        ease-in-out
+        infinite;
+
+}
+
+
+.uiux-service-card:nth-child(2)
+.uiux-service-icon {
+
+    animation-delay:
+        .8s;
+
+}
+
+
+.uiux-service-card:nth-child(3)
+.uiux-service-icon {
+
+    animation-delay:
+        1.6s;
+
+}
+
+
+@keyframes uiuxIconFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-3px);
+
+    }
+
+}
+
+
+/* ==========================================================
+   25 — SERVICE AMBIENT
+========================================================== */
+
+.uiux-service-card::before {
+
+    animation:
+        uiuxCardAmbient
+        6s
+        ease-in-out
+        infinite;
+
+}
+
+
+.uiux-service-card:nth-child(2)::before {
+
+    animation-delay:
+        1s;
+
+}
+
+
+.uiux-service-card:nth-child(3)::before {
+
+    animation-delay:
+        2s;
+
+}
+
+
+@keyframes uiuxCardAmbient {
+
+    0%,
+    100% {
+
+        opacity:
+            .30;
+
+    }
+
+    50% {
+
+        opacity:
+            .82;
+
+    }
+
+}
+
+
+/* ==========================================================
+   26 — FOOTNOTE
+========================================================== */
+
+.uiux-footnote {
+
+    animation:
+        uiuxFootnoteReveal
+        .8s
+        cubic-bezier(.22,1,.36,1)
+        .9s
+        both;
+
+}
+
+
+@keyframes uiuxFootnoteReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(18px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   27 — GPU OPTIMIZATION
+========================================================== */
+
+.uiux-showcase,
+.uiux-browser,
+.uiux-interface-visual,
+.uiux-score-ring,
+.uiux-service-card,
+.uiux-service-icon,
+.uiux-orbit {
+
+    will-change:
+        transform;
+
+}
+
+
+.uiux-showcase,
+.uiux-browser,
+.uiux-service-card,
+.uiux-orbit {
+
+    backface-visibility:
+        hidden;
+
+    -webkit-backface-visibility:
+        hidden;
+
+}
+
+
+/* ==========================================================
+   28 — TOUCH DEVICES
+========================================================== */
+
+@media (hover: none) {
+
+    .uiux-service-card:hover {
+
+        transform:
+            none;
+
+    }
+
+    .uiux-showcase:hover
+    .uiux-dashboard-icon {
+
+        transform:
+            none;
+
+    }
+
+}
+
+
+/* ==========================================================
+   29 — REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .solution-uiux *,
+    .solution-uiux *::before,
+    .solution-uiux *::after {
+
+        animation:
+            none !important;
+
+        transition:
+            none !important;
+
+    }
+
+}

@@ -1,0 +1,707 @@
+/* ==========================================================
+   SHADOW15 — UI / UX DESIGN
+   06-RESPONSIVE.CSS
+========================================================== */
+
+
+/* ==========================================================
+   LARGE DESKTOP
+========================================================== */
+
+@media (min-width: 1440px) {
+
+    .solution-uiux > .container {
+
+        width:
+            min(90%, 1480px);
+
+    }
+
+    .uiux-showcase {
+
+        padding:
+            30px;
+
+    }
+
+    .uiux-workspace {
+
+        gap:
+            15px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   LAPTOP
+========================================================== */
+
+@media (max-width: 1200px) {
+
+    .solution-uiux > .container {
+
+        width:
+            min(94%, 1180px);
+
+    }
+
+    .uiux-intro-grid {
+
+        gap:
+            55px;
+
+    }
+
+    .uiux-showcase {
+
+        padding:
+            24px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   SMALL LAPTOP
+========================================================== */
+
+@media (max-width: 1050px) {
+
+    .uiux-intro-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            25px;
+
+    }
+
+    .uiux-description {
+
+        max-width:
+            650px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 900px) {
+
+    .solution-uiux {
+
+        padding:
+            115px 0 95px;
+
+    }
+
+    .solution-uiux > .container {
+
+        width:
+            92%;
+
+    }
+
+    .uiux-showcase {
+
+        padding:
+            21px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   TABLET PORTRAIT
+========================================================== */
+
+@media (max-width: 768px) {
+
+    .solution-uiux {
+
+        padding:
+            105px 0 85px;
+
+    }
+
+    .uiux-intro {
+
+        margin-bottom:
+            50px;
+
+    }
+
+    .uiux-showcase {
+
+        margin-top:
+            8px;
+
+    }
+
+    .uiux-interface-hero {
+
+        gap:
+            18px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 600px) {
+
+    .solution-uiux {
+
+        width:
+            100%;
+
+        overflow:
+            hidden;
+
+        padding:
+            90px 0 75px;
+
+    }
+
+
+    /* ======================================================
+       CONTAINER
+    ====================================================== */
+
+    .solution-uiux > .container {
+
+        width:
+            92%;
+
+        max-width:
+            500px;
+
+    }
+
+
+    /* ======================================================
+       INTRO
+    ====================================================== */
+
+    .uiux-intro {
+
+        margin-bottom:
+            42px;
+
+    }
+
+
+    /* ======================================================
+       SHOWCASE
+    ====================================================== */
+
+    .uiux-showcase {
+
+        padding:
+            14px;
+
+        border-radius:
+            18px;
+
+    }
+
+
+    /* ======================================================
+       DASHBOARD HEADER
+    ====================================================== */
+
+    .uiux-dashboard-top {
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+        gap:
+            14px;
+
+    }
+
+    .uiux-dashboard-brand {
+
+        gap:
+            10px;
+
+    }
+
+    .uiux-dashboard-icon {
+
+        width:
+            38px;
+
+        height:
+            38px;
+
+        border-radius:
+            10px;
+
+    }
+
+    .uiux-dashboard-brand span {
+
+        font-size:
+            .35rem;
+
+    }
+
+    .uiux-dashboard-brand strong {
+
+        font-size:
+            .72rem;
+
+    }
+
+    .uiux-design-status {
+
+        align-self:
+            flex-start;
+
+    }
+
+
+    /* ======================================================
+       WORKSPACE
+    ====================================================== */
+
+    .uiux-workspace {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            8px;
+
+    }
+
+
+    /* ======================================================
+       SYSTEM PANEL
+    ====================================================== */
+
+    .uiux-system-panel {
+
+        min-height:
+            300px;
+
+    }
+
+
+    /* ======================================================
+       INTERFACE PANEL
+    ====================================================== */
+
+    .uiux-interface-panel {
+
+        min-height:
+            350px;
+
+        padding:
+            14px;
+
+    }
+
+    .uiux-browser {
+
+        width:
+            100%;
+
+    }
+
+    .uiux-interface {
+
+        min-height:
+            285px;
+
+        padding:
+            14px;
+
+    }
+
+
+    /* ======================================================
+       SCORE PANEL
+    ====================================================== */
+
+    .uiux-score-panel {
+
+        min-height:
+            350px;
+
+    }
+
+    .uiux-score {
+
+        min-height:
+            190px;
+
+    }
+
+    .uiux-score-list {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    /* ======================================================
+       JOURNEY
+    ====================================================== */
+
+    .uiux-journey {
+
+        padding:
+            14px;
+
+        border-radius:
+            13px;
+
+    }
+
+    .uiux-journey-heading {
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+        gap:
+            10px;
+
+    }
+
+    .uiux-journey-flow {
+
+        flex-direction:
+            column;
+
+        align-items:
+            stretch;
+
+        gap:
+            10px;
+
+    }
+
+    .uiux-journey-step {
+
+        flex:
+            none;
+
+        min-height:
+            42px;
+
+    }
+
+    .uiux-journey-line {
+
+        flex:
+            none;
+
+        width:
+            1px;
+
+        height:
+            15px;
+
+        margin:
+            -2px 0 -2px 15px;
+
+    }
+
+
+    /* ======================================================
+       SERVICES
+    ====================================================== */
+
+    .uiux-services {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            11px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   SMALL MOBILE
+========================================================== */
+
+@media (max-width: 480px) {
+
+    .solution-uiux {
+
+        padding:
+            82px 0 68px;
+
+    }
+
+    .solution-uiux > .container {
+
+        width:
+            91%;
+
+    }
+
+    .uiux-showcase {
+
+        padding:
+            12px;
+
+    }
+
+    .uiux-interface {
+
+        min-height:
+            260px;
+
+    }
+
+    .uiux-interface-hero {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+    .uiux-interface-visual {
+
+        display:
+            none;
+
+    }
+
+    .uiux-browser-top {
+
+        grid-template-columns:
+            55px 1fr 20px;
+
+    }
+
+    .uiux-browser-url {
+
+        min-width:
+            90px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   VERY SMALL MOBILE
+========================================================== */
+
+@media (max-width: 420px) {
+
+    .solution-uiux > .container {
+
+        width:
+            92%;
+
+    }
+
+    .uiux-heading h2 {
+
+        font-size:
+            2.35rem;
+
+    }
+
+    .uiux-description p {
+
+        font-size:
+            .79rem;
+
+    }
+
+    .uiux-showcase {
+
+        padding:
+            10px;
+
+        border-radius:
+            16px;
+
+    }
+
+    .uiux-dashboard-brand strong {
+
+        font-size:
+            .68rem;
+
+    }
+
+    .uiux-interface {
+
+        min-height:
+            235px;
+
+    }
+
+    .uiux-score-ring {
+
+        width:
+            135px;
+
+        height:
+            135px;
+
+    }
+
+    .uiux-score-ring strong {
+
+        font-size:
+            1.8rem;
+
+    }
+
+}
+
+
+/* ==========================================================
+   EXTRA SMALL
+========================================================== */
+
+@media (max-width: 360px) {
+
+    .solution-uiux > .container {
+
+        width:
+            92%;
+
+    }
+
+    .uiux-heading h2 {
+
+        font-size:
+            2.15rem;
+
+    }
+
+    .uiux-interface {
+
+        padding:
+            11px;
+
+    }
+
+    .uiux-browser-top {
+
+        height:
+            31px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   LANDSCAPE MOBILE
+========================================================== */
+
+@media (max-height: 600px)
+and (orientation: landscape) {
+
+    .solution-uiux {
+
+        padding-top:
+            80px;
+
+        padding-bottom:
+            70px;
+
+    }
+
+    .uiux-interface {
+
+        min-height:
+            270px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   TOUCH DEVICES
+========================================================== */
+
+@media (hover: none) {
+
+    .uiux-service-card:hover {
+
+        transform:
+            none;
+
+    }
+
+    .uiux-showcase:hover
+    .uiux-dashboard-icon {
+
+        transform:
+            none;
+
+    }
+
+}
+
+
+/* ==========================================================
+   OVERFLOW PROTECTION
+========================================================== */
+
+.solution-uiux,
+.uiux-bg,
+.uiux-showcase,
+.uiux-services {
+
+    max-width:
+        100%;
+
+}
+
+
+/* ==========================================================
+   REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .solution-uiux *,
+    .solution-uiux *::before,
+    .solution-uiux *::after {
+
+        animation:
+            none !important;
+
+        transition:
+            none !important;
+
+    }
+
+}

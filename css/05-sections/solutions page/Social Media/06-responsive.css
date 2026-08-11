@@ -1,0 +1,910 @@
+/* ==========================================================
+   SHADOW15 — SOCIAL MEDIA
+   06-RESPONSIVE.CSS
+========================================================== */
+
+
+/* ==========================================================
+   01 — LARGE DESKTOP
+========================================================== */
+
+@media (min-width: 1440px) {
+
+    .solution-social > .container {
+
+        width:
+            min(90%, 1480px);
+
+    }
+
+    .social-showcase {
+
+        padding:
+            30px;
+
+    }
+
+    .social-growth-chart {
+
+        height:
+            285px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   02 — LAPTOP
+========================================================== */
+
+@media (max-width: 1200px) {
+
+    .solution-social > .container {
+
+        width:
+            min(94%, 1180px);
+
+    }
+
+    .social-intro-grid {
+
+        gap:
+            55px;
+
+    }
+
+    .social-showcase {
+
+        padding:
+            24px;
+
+    }
+
+    .social-metric strong {
+
+        font-size:
+            1.25rem;
+
+    }
+
+}
+
+
+/* ==========================================================
+   03 — SMALL LAPTOP
+========================================================== */
+
+@media (max-width: 1050px) {
+
+    .social-intro-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            25px;
+
+    }
+
+    .social-description {
+
+        max-width:
+            650px;
+
+    }
+
+    .social-content-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+}
+
+
+/* ==========================================================
+   04 — TABLET
+========================================================== */
+
+@media (max-width: 900px) {
+
+    .solution-social {
+
+        padding:
+            115px 0 95px;
+
+    }
+
+    .solution-social > .container {
+
+        width:
+            92%;
+
+    }
+
+    .social-showcase {
+
+        padding:
+            21px;
+
+    }
+
+    .social-metrics {
+
+        grid-template-columns:
+            repeat(2, minmax(0,1fr));
+
+    }
+
+    .social-content-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+    .social-services {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+}
+
+
+/* ==========================================================
+   05 — TABLET PORTRAIT
+========================================================== */
+
+@media (max-width: 768px) {
+
+    .solution-social {
+
+        padding:
+            105px 0 85px;
+
+    }
+
+    .social-intro {
+
+        margin-bottom:
+            50px;
+
+    }
+
+    .social-showcase {
+
+        margin-top:
+            8px;
+
+    }
+
+    .social-dashboard-top {
+
+        gap:
+            16px;
+
+    }
+
+    .social-growth-chart {
+
+        height:
+            240px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   06 — MOBILE
+========================================================== */
+
+@media (max-width: 600px) {
+
+    .solution-social {
+
+        width:
+            100%;
+
+        overflow:
+            hidden;
+
+        padding:
+            90px 0 75px;
+
+    }
+
+
+    /* ======================================================
+       CONTAINER
+    ====================================================== */
+
+    .solution-social > .container {
+
+        width:
+            92%;
+
+        max-width:
+            500px;
+
+    }
+
+
+    /* ======================================================
+       INTRO
+    ====================================================== */
+
+    .social-intro {
+
+        margin-bottom:
+            42px;
+
+    }
+
+
+    /* ======================================================
+       SHOWCASE
+    ====================================================== */
+
+    .social-showcase {
+
+        padding:
+            14px;
+
+        border-radius:
+            18px;
+
+    }
+
+
+    /* ======================================================
+       DASHBOARD HEADER
+    ====================================================== */
+
+    .social-dashboard-top {
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+        gap:
+            14px;
+
+    }
+
+    .social-dashboard-brand {
+
+        gap:
+            10px;
+
+    }
+
+    .social-dashboard-icon {
+
+        width:
+            38px;
+
+        height:
+            38px;
+
+        border-radius:
+            10px;
+
+    }
+
+    .social-dashboard-brand span {
+
+        font-size:
+            .35rem;
+
+    }
+
+    .social-dashboard-brand strong {
+
+        font-size:
+            .72rem;
+
+    }
+
+    .social-live-status {
+
+        align-self:
+            flex-start;
+
+    }
+
+
+    /* ======================================================
+       PLATFORM BAR
+    ====================================================== */
+
+    .social-platform-bar {
+
+        flex-wrap:
+            wrap;
+
+        gap:
+            6px;
+
+    }
+
+    .social-platform {
+
+        min-height:
+            32px;
+
+        padding:
+            0 10px;
+
+        font-size:
+            .40rem;
+
+    }
+
+    .social-period {
+
+        width:
+            100%;
+
+        margin-left:
+            0;
+
+        margin-top:
+            4px;
+
+    }
+
+
+    /* ======================================================
+       METRICS
+    ====================================================== */
+
+    .social-metrics {
+
+        grid-template-columns:
+            repeat(2, minmax(0,1fr));
+
+        gap:
+            7px;
+
+    }
+
+    .social-metric {
+
+        min-height:
+            94px;
+
+        padding:
+            13px;
+
+        border-radius:
+            12px;
+
+    }
+
+    .social-metric-label {
+
+        font-size:
+            .34rem;
+
+    }
+
+    .social-metric strong {
+
+        margin-top:
+            11px;
+
+        font-size:
+            1.05rem;
+
+    }
+
+    .social-metric small {
+
+        margin-top:
+            7px;
+
+        font-size:
+            .34rem;
+
+    }
+
+
+    /* ======================================================
+       CONTENT AREA
+    ====================================================== */
+
+    .social-content-grid {
+
+        gap:
+            8px;
+
+    }
+
+    .social-growth-card,
+    .social-content-card {
+
+        padding:
+            14px;
+
+        border-radius:
+            13px;
+
+    }
+
+
+    /* ======================================================
+       GRAPH
+    ====================================================== */
+
+    .social-growth-chart {
+
+        height:
+            215px;
+
+        grid-template-columns:
+            27px minmax(0,1fr);
+
+    }
+
+    .social-chart-y span,
+    .social-chart-x span {
+
+        font-size:
+            .29rem;
+
+    }
+
+    .social-card-header strong {
+
+        font-size:
+            .62rem;
+
+    }
+
+
+    /* ======================================================
+       CONTENT MIX
+    ====================================================== */
+
+    .social-content-mix {
+
+        grid-template-columns:
+            125px minmax(0,1fr);
+
+        gap:
+            12px;
+
+        min-height:
+            205px;
+
+    }
+
+    .social-mix-ring {
+
+        width:
+            115px;
+
+        height:
+            115px;
+
+    }
+
+    .social-mix-ring::before {
+
+        inset:
+            10px;
+
+    }
+
+    .social-mix-ring span {
+
+        font-size:
+            1.15rem;
+
+    }
+
+
+    /* ======================================================
+       CALENDAR
+    ====================================================== */
+
+    .social-calendar {
+
+        padding:
+            14px;
+
+        border-radius:
+            13px;
+
+    }
+
+    .social-calendar-items {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+    .social-calendar-item {
+
+        grid-template-columns:
+            auto auto minmax(0,1fr) auto;
+
+    }
+
+
+    /* ======================================================
+       SERVICES
+    ====================================================== */
+
+    .social-services {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            11px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   07 — SMALL MOBILE
+========================================================== */
+
+@media (max-width: 480px) {
+
+    .solution-social {
+
+        padding:
+            82px 0 68px;
+
+    }
+
+    .solution-social > .container {
+
+        width:
+            91%;
+
+    }
+
+    .social-showcase {
+
+        padding:
+            12px;
+
+    }
+
+    .social-dashboard-brand strong {
+
+        font-size:
+            .68rem;
+
+    }
+
+    .social-metrics {
+
+        gap:
+            6px;
+
+    }
+
+    .social-metric {
+
+        min-height:
+            88px;
+
+        padding:
+            11px;
+
+    }
+
+    .social-metric strong {
+
+        font-size:
+            .94rem;
+
+    }
+
+    .social-growth-chart {
+
+        height:
+            190px;
+
+    }
+
+    .social-growth-card,
+    .social-content-card {
+
+        padding:
+            12px;
+
+    }
+
+    .social-content-mix {
+
+        grid-template-columns:
+            1fr;
+
+        justify-items:
+            center;
+
+        gap:
+            18px;
+
+    }
+
+    .social-mix-list {
+
+        width:
+            100%;
+
+    }
+
+}
+
+
+/* ==========================================================
+   08 — VERY SMALL MOBILE
+========================================================== */
+
+@media (max-width: 420px) {
+
+    .solution-social > .container {
+
+        width:
+            92%;
+
+    }
+
+    .social-heading h2 {
+
+        font-size:
+            2.35rem;
+
+    }
+
+    .social-description p {
+
+        font-size:
+            .79rem;
+
+    }
+
+    .social-showcase {
+
+        padding:
+            10px;
+
+        border-radius:
+            16px;
+
+    }
+
+    .social-platform {
+
+        min-height:
+            30px;
+
+        padding:
+            0 8px;
+
+    }
+
+    .social-metric {
+
+        min-height:
+            82px;
+
+        padding:
+            10px;
+
+    }
+
+    .social-metric strong {
+
+        font-size:
+            .86rem;
+
+    }
+
+    .social-growth-chart {
+
+        height:
+            175px;
+
+    }
+
+    .social-chart-y {
+
+        padding:
+            3px 0 22px;
+
+    }
+
+    .social-calendar-item {
+
+        grid-template-columns:
+            auto auto minmax(0,1fr);
+
+    }
+
+    .social-calendar-status {
+
+        display:
+            none;
+
+    }
+
+}
+
+
+/* ==========================================================
+   09 — EXTRA SMALL
+========================================================== */
+
+@media (max-width: 360px) {
+
+    .solution-social > .container {
+
+        width:
+            92%;
+
+    }
+
+    .social-heading h2 {
+
+        font-size:
+            2.15rem;
+
+    }
+
+    .social-metrics {
+
+        grid-template-columns:
+            1fr 1fr;
+
+    }
+
+    .social-metric {
+
+        min-height:
+            78px;
+
+        padding:
+            9px;
+
+    }
+
+    .social-metric-label {
+
+        font-size:
+            .30rem;
+
+    }
+
+    .social-metric strong {
+
+        font-size:
+            .78rem;
+
+    }
+
+    .social-growth-chart {
+
+        height:
+            155px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   10 — LANDSCAPE MOBILE
+========================================================== */
+
+@media (max-height: 600px)
+and (orientation: landscape) {
+
+    .solution-social {
+
+        padding-top:
+            80px;
+
+        padding-bottom:
+            70px;
+
+    }
+
+    .social-growth-chart {
+
+        height:
+            190px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   11 — TOUCH DEVICES
+========================================================== */
+
+@media (hover: none) {
+
+    .social-platform:hover {
+
+        transform:
+            none;
+
+    }
+
+    .social-metric:hover {
+
+        transform:
+            none;
+
+    }
+
+    .social-service-card:hover {
+
+        transform:
+            none;
+
+    }
+
+    .social-service-card:hover
+    .social-service-icon {
+
+        transform:
+            none;
+
+    }
+
+}
+
+
+/* ==========================================================
+   12 — OVERFLOW PROTECTION
+========================================================== */
+
+.solution-social,
+.social-bg,
+.social-showcase,
+.social-services {
+
+    max-width:
+        100%;
+
+}
+
+
+/* ==========================================================
+   13 — REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .solution-social *,
+    .solution-social *::before,
+    .solution-social *::after {
+
+        animation:
+            none !important;
+
+        transition:
+            none !important;
+
+    }
+
+}
