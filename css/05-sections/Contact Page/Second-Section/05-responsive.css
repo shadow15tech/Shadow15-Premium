@@ -1,0 +1,540 @@
+/* ==========================================================
+   SHADOW15 — CONTACT FORM
+   05-RESPONSIVE.CSS
+========================================================== */
+
+
+/* ==========================================================
+   01 — LARGE DESKTOP
+========================================================== */
+
+@media (min-width: 1440px) {
+
+    .contact-form-wrapper {
+
+        max-width:
+            1120px;
+
+        padding:
+            64px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   02 — LAPTOP
+========================================================== */
+
+@media (max-width: 1100px) {
+
+    .contact-form-wrapper {
+
+        max-width:
+            1000px;
+
+        padding:
+            50px;
+
+    }
+
+    .contact-form-row {
+
+        gap:
+            15px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   03 — TABLET
+========================================================== */
+
+@media (max-width: 850px) {
+
+    .contact-form-section {
+
+        padding:
+            100px 0;
+
+    }
+
+    .contact-form-wrapper {
+
+        width:
+            92%;
+
+        padding:
+            42px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   04 — SMALL TABLET
+========================================================== */
+
+@media (max-width: 750px) {
+
+    .contact-form-row {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+    .contact-preferred {
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+    }
+
+    .contact-preferred-options {
+
+        width:
+            100%;
+
+    }
+
+}
+
+
+/* ==========================================================
+   05 — MOBILE
+========================================================== */
+
+@media (max-width: 600px) {
+
+    .contact-form-section {
+
+        padding:
+            80px 0;
+
+        overflow:
+            hidden;
+
+    }
+
+    .contact-form-section > .container {
+
+        width:
+            92%;
+
+    }
+
+    .contact-form-wrapper {
+
+        width:
+            100%;
+
+        padding:
+            30px 18px;
+
+        border-radius:
+            19px;
+
+    }
+
+    .contact-form-intro {
+
+        margin-bottom:
+            35px;
+
+    }
+
+    .contact-form-row {
+
+        display:
+            grid;
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            16px;
+
+        margin-bottom:
+            16px;
+
+    }
+
+    .contact-field-full {
+
+        margin-bottom:
+            18px;
+
+    }
+
+    .contact-input-wrap {
+
+        height:
+            53px;
+
+    }
+
+    .contact-input-wrap > i {
+
+        width:
+            44px;
+
+        flex-basis:
+            44px;
+
+    }
+
+    .contact-input-wrap input,
+    .contact-select-wrap select {
+
+        font-size:
+            .64rem;
+
+    }
+
+    .contact-textarea-wrap {
+
+        min-height:
+            170px;
+
+    }
+
+    .contact-textarea-wrap textarea {
+
+        min-height:
+            170px;
+
+        padding:
+            17px 15px 34px 44px;
+
+        font-size:
+            .64rem;
+
+    }
+
+    .contact-preferred {
+
+        gap:
+            15px;
+
+        padding:
+            16px 0;
+
+    }
+
+    .contact-preferred-options {
+
+        display:
+            grid;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap:
+            6px;
+
+    }
+
+    .contact-radio {
+
+        width:
+            100%;
+
+    }
+
+    .contact-radio-ui {
+
+        justify-content:
+            center;
+
+        width:
+            100%;
+
+        padding:
+            0 7px;
+
+        font-size:
+            .44rem;
+
+    }
+
+    .contact-form-footer {
+
+        align-items:
+            stretch;
+
+        flex-direction:
+            column;
+
+        gap:
+            17px;
+
+        margin-top:
+            20px;
+
+    }
+
+    .contact-form-note {
+
+        justify-content:
+            center;
+
+    }
+
+    .contact-submit {
+
+        width:
+            100%;
+
+        min-height:
+            53px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   06 — SMALL MOBILE
+========================================================== */
+
+@media (max-width: 480px) {
+
+    .contact-form-section > .container {
+
+        width:
+            93%;
+
+    }
+
+    .contact-form-wrapper {
+
+        padding:
+            27px 16px;
+
+    }
+
+    .contact-form-row {
+
+        gap:
+            14px;
+
+    }
+
+    .contact-input-wrap {
+
+        height:
+            51px;
+
+    }
+
+    .contact-textarea-wrap,
+    .contact-textarea-wrap textarea {
+
+        min-height:
+            160px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   07 — VERY SMALL MOBILE
+========================================================== */
+
+@media (max-width: 420px) {
+
+    .contact-form-section > .container {
+
+        width:
+            92%;
+
+    }
+
+    .contact-form-wrapper {
+
+        padding:
+            24px 14px;
+
+        border-radius:
+            17px;
+
+    }
+
+    .contact-input-wrap {
+
+        height:
+            49px;
+
+    }
+
+    .contact-input-wrap > i {
+
+        width:
+            40px;
+
+        flex-basis:
+            40px;
+
+    }
+
+    .contact-input-wrap input,
+    .contact-select-wrap select {
+
+        font-size:
+            .60rem;
+
+    }
+
+    .contact-field label {
+
+        font-size:
+            .46rem;
+
+    }
+
+    .contact-radio-ui {
+
+        min-height:
+            36px;
+
+        gap:
+            4px;
+
+        font-size:
+            .40rem;
+
+    }
+
+    .contact-radio-ui i {
+
+        font-size:
+            .48rem;
+
+    }
+
+    .contact-form-note {
+
+        font-size:
+            .40rem;
+
+    }
+
+    .contact-submit {
+
+        min-height:
+            50px;
+
+        font-size:
+            .49rem;
+
+    }
+
+}
+
+
+/* ==========================================================
+   08 — EXTRA SMALL
+========================================================== */
+
+@media (max-width: 360px) {
+
+    .contact-form-wrapper {
+
+        padding:
+            22px 12px;
+
+    }
+
+    .contact-preferred-options {
+
+        gap:
+            4px;
+
+    }
+
+    .contact-radio-ui {
+
+        padding:
+            0 4px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   09 — LANDSCAPE MOBILE
+========================================================== */
+
+@media (max-height: 600px)
+and (orientation: landscape) {
+
+    .contact-form-section {
+
+        padding:
+            75px 0;
+
+    }
+
+    .contact-form-wrapper {
+
+        padding:
+            28px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   10 — TOUCH DEVICES
+========================================================== */
+
+@media (hover: none) {
+
+    .contact-submit:hover {
+
+        transform:
+            none;
+
+    }
+
+    .contact-submit:hover
+    i {
+
+        transform:
+            none;
+
+    }
+
+}
+
+
+/* ==========================================================
+   11 — REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .contact-form-section *,
+    .contact-form-section *::before,
+    .contact-form-section *::after {
+
+        animation:
+            none !important;
+
+        transition:
+            none !important;
+
+    }
+
+}

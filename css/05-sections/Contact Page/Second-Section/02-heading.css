@@ -1,0 +1,317 @@
+/* ==========================================================
+   SHADOW15 — CONTACT FORM
+   02-HEADING.CSS
+========================================================== */
+
+
+/* ==========================================================
+   01 — FORM INTRO
+========================================================== */
+
+.contact-form-intro {
+
+    position:
+        relative;
+
+    z-index:
+        3;
+
+    max-width:
+        760px;
+
+    margin:
+        0 auto 48px;
+
+    text-align:
+        center;
+
+}
+
+
+/* ==========================================================
+   02 — EYEBROW
+========================================================== */
+
+.contact-form-eyebrow {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        12px;
+
+    margin-bottom:
+        24px;
+
+    color:
+        #22d3ee;
+
+    font-size:
+        .56rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .17em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+.contact-form-eyebrow-number {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    min-width:
+        29px;
+
+    height:
+        22px;
+
+    padding:
+        0 7px;
+
+    border:
+        1px solid
+        rgba(34,211,238,.18);
+
+    border-radius:
+        6px;
+
+    color:
+        #67e8f9;
+
+    background:
+        rgba(34,211,238,.025);
+
+    font-size:
+        .42rem;
+
+    letter-spacing:
+        .08em;
+
+}
+
+
+.contact-form-eyebrow-line {
+
+    width:
+        45px;
+
+    height:
+        1px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(34,211,238,.55)
+        );
+
+}
+
+
+/* ==========================================================
+   03 — HEADING
+========================================================== */
+
+.contact-form-heading {
+
+    margin:
+        0;
+
+    color:
+        #f1f6f9;
+
+    font-size:
+        clamp(
+            2.8rem,
+            5vw,
+            5rem
+        );
+
+    font-weight:
+        800;
+
+    line-height:
+        .98;
+
+    letter-spacing:
+        -.06em;
+
+}
+
+
+.contact-form-heading span {
+
+    display:
+        inline-block;
+
+    background:
+
+        linear-gradient(
+            100deg,
+            #60a5fa 0%,
+            #22d3ee 45%,
+            #c084fc 100%
+        );
+
+    background-size:
+        180% 100%;
+
+    -webkit-background-clip:
+        text;
+
+    background-clip:
+        text;
+
+    color:
+        transparent;
+
+    -webkit-text-fill-color:
+        transparent;
+
+    filter:
+
+        drop-shadow(
+            0 12px 32px
+            rgba(34,211,238,.07)
+        );
+
+}
+
+
+/* ==========================================================
+   04 — DESCRIPTION
+========================================================== */
+
+.contact-form-description {
+
+    max-width:
+        620px;
+
+    margin:
+        22px auto 0;
+
+    color:
+        #7f94a7;
+
+    font-size:
+        .82rem;
+
+    line-height:
+        1.8;
+
+}
+
+
+/* ==========================================================
+   05 — RESPONSIVE
+========================================================== */
+
+@media (max-width: 700px) {
+
+    .contact-form-intro {
+
+        margin-bottom:
+            35px;
+
+    }
+
+    .contact-form-eyebrow {
+
+        gap:
+            8px;
+
+        margin-bottom:
+            19px;
+
+        font-size:
+            .48rem;
+
+        letter-spacing:
+            .13em;
+
+    }
+
+    .contact-form-eyebrow-number {
+
+        min-width:
+            25px;
+
+        height:
+            20px;
+
+        font-size:
+            .38rem;
+
+    }
+
+    .contact-form-eyebrow-line {
+
+        width:
+            28px;
+
+    }
+
+    .contact-form-heading {
+
+        font-size:
+            clamp(
+                2.35rem,
+                10vw,
+                3.6rem
+            );
+
+    }
+
+    .contact-form-description {
+
+        margin-top:
+            17px;
+
+        font-size:
+            .73rem;
+
+        line-height:
+            1.7;
+
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .contact-form-heading {
+
+        font-size:
+            2.25rem;
+
+    }
+
+    .contact-form-description {
+
+        font-size:
+            .70rem;
+
+    }
+
+}

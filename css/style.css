@@ -602,48 +602,6 @@
 
 
 
-/*==========================================================
-                AI-AUTOMATIONS HERO CSS IMPORTS
-==========================================================*/
-
-@import url("./ai-automation/hero/01-background.css");
-
-@import url("./ai-automation/hero/02-heading.css");
-
-@import url("./ai-automation/hero/03-layout.css");
-
-@import url("./ai-automation/hero/04-components.css");
-
-@import url("./ai-automation/hero/05-animation.css");
-
-@import url("./ai-automation/hero/06-responsive.css");
-
-
-
-
-
-
-
-/*==========================================================
-                AI-AUTOMATIONS CAPABILITIES CSS IMPORTS
-==========================================================*/
-
-@import url("./ai-automation/capabilities/01-core.css");
-
-@import url("./ai-automation/capabilities/02-structure.css");
-
-@import url("./ai-automation/capabilities/03-intro.css");
-
-@import url("./ai-automation/capabilities/04-modules.css");
-
-@import url("./ai-automation/capabilities/05-console.css");
-
-@import url("./ai-automation/capabilities/06-motion.css");
-
-@import url("./ai-automation/capabilities/07-breakpoints.css");
-
-
-
 
 
 
@@ -652,19 +610,16 @@
                 AI-AUTOMATIONS  AUTOMATION-JOURNEY CSS IMPORTS
 ==========================================================*/
 
-@import url("./ai-automation/automation-journey/01-core.css");
+@import url("./ai-automation/hero/01-background.css");
 
-@import url("./ai-automation/automation-journey/02-layout.css");
+@import url("./ai-automation/hero/02-intro.css");
 
-@import url("./ai-automation/automation-journey/03-nodes.css");
+@import url("./ai-automation/hero/03-services.css");
 
-@import url("./ai-automation/automation-journey/04-ai-brain.css");
+@import url("./ai-automation/hero/04-process-impact.css");
 
-@import url("./ai-automation/automation-journey/05-live-impact.css");
+@import url("./ai-automation/hero/05-responsive.css");
 
-@import url("./ai-automation/automation-journey/06-animation.css");
-
-@import url("./ai-automation/automation-journey/07-responsive.css");
 
 
 
@@ -696,5 +651,33 @@
 
 
 
+/*==========================================================
+                CONTACT PAGE FIRST SECTION
+==========================================================*/
 
 
+@import url("./05-sections/Contact Page/First-Section/01-background.css");
+
+@import url("./05-sections/Contact Page/First-Section/02-heading.css");
+
+@import url("./05-sections/Contact Page/First-Section/03-contact-info.css");
+
+
+
+
+/*==========================================================
+                CONTACT PAGE SECOND SECTION
+==========================================================*/
+
+
+@import url("./05-sections/Contact Page/Second-Section/01-background.css");
+
+@import url("./05-sections/Contact Page/Second-Section/02-heading.css");
+
+@import url("./05-sections/Contact Page/Second-Section/03-form.css");
+
+@import url("./05-sections/Contact Page/Second-Section/04-animation.css");
+
+@import url("./05-sections/Contact Page/Second-Section/05-responsive.css");
+
+@import url("./05-sections/Contact Page/Second-Section/06-final.css");

@@ -153,7 +153,11 @@ Shadow15
                     MAIN STYLESHEET
     ===================================================-->
 
+
+    
     <link rel="stylesheet"href="css/style.css">
+
+     
           
 
 
@@ -219,38 +223,56 @@ Shadow15
      <!--==================================================
                 SHADOW15 NAVBAR
 ===================================================-->
+<!--==================================================
+                SHADOW15 PREMIUM NAVBAR
+===================================================-->
+
+
 
 <!--==================================================
                 SHADOW15 PREMIUM NAVBAR
 ===================================================-->
 
-<header class="s15-navbar" id="navbar">
+<header class="s15x-dock" id="navbar">
 
-    <div class="s15-navbar-container">
+    <div class="s15x-dock-shell">
+
 
         <!--==================================
                     BRAND
         ===================================-->
 
-        <a href="#hero" class="s15-brand" aria-label="Shadow15 Home">
+        <a
+            href="#hero"
+            class="s15x-brandmark"
+            aria-label="Shadow15 Home"
+        >
 
-            <div class="s15-brand-text">
+            <div class="s15x-brandmark-orb">
 
-                <h2 class="s15-logo">
+                <span></span>
+
+            </div>
+
+
+            <div class="s15x-brandmark-copy">
+
+                <h2 class="s15x-brand-title">
 
                     SHADOW<span>15</span>
 
                 </h2>
 
-                <p class="s15-tagline">
+
+                <p class="s15x-brand-caption">
 
                     <span>DIGITAL</span>
 
-                    <span class="tag-dot"></span>
+                    <span class="s15x-dot"></span>
 
                     <span>SOFTWARE</span>
 
-                    <span class="tag-dot"></span>
+                    <span class="s15x-dot"></span>
 
                     <span>GROWTH</span>
 
@@ -260,148 +282,527 @@ Shadow15
 
         </a>
 
+
+
         <!--==================================
-                    NAVIGATION
+                    DESKTOP NAVIGATION
         ===================================-->
 
-        <nav class="s15-nav" aria-label="Primary Navigation">
+        <nav
+            class="s15x-navigation"
+            aria-label="Primary Navigation"
+        >
 
-            <ul>
+            <div class="s15x-nav-cluster">
 
-                <li>
 
-                    <a href="#hero"
-                       class="s15-nav-link active">
+                <!-- HOME -->
+
+                <div class="s15x-nav-node">
+
+                    <a
+                        href="#hero"
+                        class="s15x-nav-link is-active"
+                    >
 
                         Home
 
                     </a>
 
-                </li>
+                </div>
 
-                <li>
 
-                    <a href="#services"
-                       class="s15-nav-link">
+
+                <!-- SOLUTIONS -->
+
+                <div class="s15x-nav-node">
+
+                    <a
+                        href="#services"
+                        class="s15x-nav-link"
+                    >
 
                         Solutions
 
                     </a>
 
-                </li>
+                </div>
 
-                <li>
 
-                    <a href="#work"
-                       class="s15-nav-link">
+
+                <!-- WORK -->
+
+                <div class="s15x-nav-node">
+
+                    <a
+                        href="#work"
+                        class="s15x-nav-link"
+                    >
 
                         Work
 
                     </a>
 
-                </li>
+                </div>
 
-                <li>
 
-                    <a href="#ai"
-                       class="s15-nav-link">
 
-                        AI Automation
+                <!--==================================
+                    AI AUTOMATION
+                ===================================-->
+
+                <div class="s15x-nav-node s15x-has-panel">
+
+
+                    <a
+                        href="ai-automation.html#ai-automation"
+                        class="s15x-nav-trigger"
+                        aria-haspopup="true"
+                    >
+
+                        <span>
+                            AI Automation
+                        </span>
+
+                        <i class="fa-solid fa-chevron-down"></i>
 
                     </a>
 
-                </li>
 
-                <li>
 
-                    <a href="#process"
-                       class="s15-nav-link">
+                    <!--==================================
+                            AI MEGA PANEL
+                    ===================================-->
+
+                    <div class="s15x-panel">
+
+
+                        <!-- PANEL HEADER -->
+
+                        <div class="s15x-panel-header">
+
+                            <span class="s15x-panel-label">
+
+                                AI AUTOMATION
+
+                            </span>
+
+
+                            <h3>
+
+                                Intelligent systems
+                                for modern businesses.
+
+                            </h3>
+
+
+                            <p>
+
+                                Automate conversations,
+                                workflows and repetitive
+                                operations with AI-powered
+                                business systems.
+
+                            </p>
+
+                        </div>
+
+
+
+                        <!-- PANEL GRID -->
+
+                        <div class="s15x-panel-grid">
+
+
+                            <!--==================================
+                                CUSTOMER AUTOMATION
+                            ===================================-->
+
+                            <div class="s15x-panel-group">
+
+
+                                <h4>
+
+                                    CUSTOMER AUTOMATION
+
+                                </h4>
+
+
+                                <!-- AI CHATBOTS -->
+
+                                <a
+                                    href="ai-automation.html#ai-chatbots"
+                                    class="s15x-service-card"
+                                >
+
+                                    <span class="s15x-service-icon">
+
+                                        <i class="fa-solid fa-robot"></i>
+
+                                    </span>
+
+
+                                    <span class="s15x-service-copy">
+
+                                        <h5>
+                                            AI Chatbots
+                                        </h5>
+
+                                        <p>
+                                            Intelligent customer conversations
+                                        </p>
+
+                                    </span>
+
+                                </a>
+
+
+
+                                <!-- WHATSAPP -->
+
+                                <a
+                                    href="ai-automation.html#whatsapp-automation"
+                                    class="s15x-service-card"
+                                >
+
+                                    <span class="s15x-service-icon">
+
+                                        <i class="fa-brands fa-whatsapp"></i>
+
+                                    </span>
+
+
+                                    <span class="s15x-service-copy">
+
+                                        <h5>
+                                            WhatsApp Automation
+                                        </h5>
+
+                                        <p>
+                                            Automated customer communication
+                                        </p>
+
+                                    </span>
+
+                                </a>
+
+
+
+                                <!-- AI VOICE -->
+
+                                <a
+                                    href="ai-automation.html#ai-voice-agents"
+                                    class="s15x-service-card"
+                                >
+
+                                    <span class="s15x-service-icon">
+
+                                        <i class="fa-solid fa-phone-volume"></i>
+
+                                    </span>
+
+
+                                    <span class="s15x-service-copy">
+
+                                        <h5>
+                                            AI Voice Agents
+                                        </h5>
+
+                                        <p>
+                                            AI-powered calls and conversations
+                                        </p>
+
+                                    </span>
+
+                                </a>
+
+
+
+                                <!-- APPOINTMENTS -->
+
+                                <a
+                                    href="ai-automation.html#appointment-automation"
+                                    class="s15x-service-card"
+                                >
+
+                                    <span class="s15x-service-icon">
+
+                                        <i class="fa-regular fa-calendar-check"></i>
+
+                                    </span>
+
+
+                                    <span class="s15x-service-copy">
+
+                                        <h5>
+                                            Appointment Automation
+                                        </h5>
+
+                                        <p>
+                                            Booking and reminder automation
+                                        </p>
+
+                                    </span>
+
+                                </a>
+
+                            </div>
+
+
+
+                            <!--==================================
+                                BUSINESS AUTOMATION
+                            ===================================-->
+
+                            <div class="s15x-panel-group">
+
+
+                                <h4>
+
+                                    BUSINESS AUTOMATION
+
+                                </h4>
+
+
+                                <!-- WORKFLOW -->
+
+                                <a
+                                    href="ai-automation.html#workflow-automation"
+                                    class="s15x-service-card"
+                                >
+
+                                    <span class="s15x-service-icon">
+
+                                        <i class="fa-solid fa-gears"></i>
+
+                                    </span>
+
+
+                                    <span class="s15x-service-copy">
+
+                                        <h5>
+                                            Workflow Automation
+                                        </h5>
+
+                                        <p>
+                                            Connect and automate workflows
+                                        </p>
+
+                                    </span>
+
+                                </a>
+
+
+
+                                <!-- CRM -->
+
+                                <a
+                                    href="ai-automation.html#crm-automation"
+                                    class="s15x-service-card"
+                                >
+
+                                    <span class="s15x-service-icon">
+
+                                        <i class="fa-solid fa-database"></i>
+
+                                    </span>
+
+
+                                    <span class="s15x-service-copy">
+
+                                        <h5>
+                                            CRM Automation
+                                        </h5>
+
+                                        <p>
+                                            Smarter leads and customer records
+                                        </p>
+
+                                    </span>
+
+                                </a>
+
+
+
+                                <!-- AI INTEGRATION -->
+
+                                <a
+                                    href="ai-automation.html#ai-integration"
+                                    class="s15x-service-card"
+                                >
+
+                                    <span class="s15x-service-icon">
+
+                                        <i class="fa-solid fa-link"></i>
+
+                                    </span>
+
+
+                                    <span class="s15x-service-copy">
+
+                                        <h5>
+                                            AI Integration
+                                        </h5>
+
+                                        <p>
+                                            Connect AI with existing systems
+                                        </p>
+
+                                    </span>
+
+                                </a>
+
+
+
+                                <!-- CUSTOM AI -->
+
+                                <a
+                                    href="ai-automation.html#custom-ai"
+                                    class="s15x-service-card"
+                                >
+
+                                    <span class="s15x-service-icon">
+
+                                        <i class="fa-solid fa-brain"></i>
+
+                                    </span>
+
+
+                                    <span class="s15x-service-copy">
+
+                                        <h5>
+                                            Custom AI Solutions
+                                        </h5>
+
+                                        <p>
+                                            AI systems built around your business
+                                        </p>
+
+                                    </span>
+
+                                </a>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PROCESS -->
+
+                <div class="s15x-nav-node">
+
+                    <a
+                        href="#process"
+                        class="s15x-nav-link"
+                    >
 
                         Process
 
                     </a>
 
-                </li>
+                </div>
 
-                <li>
 
-                    <a href="#about"
-                       class="s15-nav-link">
+
+                <!-- ABOUT -->
+
+                <div class="s15x-nav-node">
+
+                    <a
+                        href="#about"
+                        class="s15x-nav-link"
+                    >
 
                         About
 
                     </a>
 
-                </li>
+                </div>
 
-                <li>
 
-                    <a href="#contact"
-                       class="s15-nav-link">
+
+                <!-- CONTACT -->
+
+                <div class="s15x-nav-node">
+
+                    <a
+                        href="#contact"
+                        class="s15x-nav-link"
+                    >
 
                         Contact
 
                     </a>
 
-                </li>
+                </div>
 
-            </ul>
+
+            </div>
 
         </nav>
 
+
+
         <!--==================================
-                    RIGHT SIDE
+                    COMMAND ZONE
         ===================================-->
 
-        <div class="s15-navbar-right">
+        <div class="s15x-command-zone">
 
-            <!-- Status -->
 
-            <div class="s15-status s15-glass">
+            <!-- LIVE STATUS -->
 
-                <span class="status-dot"></span>
+            <div class="s15x-live-badge">
 
-                <span class="status-text">
+                <span class="s15x-live-pulse"></span>
 
+                <span>
                     Building Global Brands
-
                 </span>
 
             </div>
 
+
+
             <!-- CTA -->
 
-            <a href="#contact"
-
-               class="s15-btn s15-btn-primary s15-cta">
+            <a
+                href="#contact"
+                class="s15x-command-button"
+            >
 
                 <span>
-
                     Let's Build
-
                 </span>
 
                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
 
             </a>
 
+
         </div>
 
+
+
         <!--==================================
-                MOBILE MENU BUTTON
+                    MOBILE HAMBURGER
         ===================================-->
 
         <button
-
-            class="s15-menu-toggle"
-
+            class="s15x-hamburger"
             type="button"
-
             aria-label="Toggle Navigation"
-
             aria-expanded="false"
+            aria-controls="mobile-drawer"
+        >
 
-            aria-controls="mobile-menu">
+            <span></span>
 
             <span></span>
 
@@ -409,1012 +810,920 @@ Shadow15
 
         </button>
 
+
     </div>
 
 </header>
+<!-- ==========================================================
+     SHADOW15 — AI AUTOMATION
+     MIDDLE PAGE
+========================================================== -->
 
-<section class="aa-hero">
 
-    <div class="aa-container">
+<main class="ai-auto-page">
 
-        <!--=========================
-                LEFT CONTENT
-        ==========================-->
 
-        <div class="aa-content">
+    <!-- ======================================================
+         01 — AI AUTOMATION INTRO
+    ======================================================= -->
 
-            <!-- Badge -->
+    <section
+        class="ai-auto-intro"
+        id="ai-automation"
+    >
 
-            <div class="aa-badge">
+        <div
+            class="ai-auto-bg"
+            aria-hidden="true"
+        >
 
-                <span></span>
+            <div class="ai-auto-grid"></div>
 
-                AI AUTOMATION SOLUTIONS
+            <div class="ai-auto-glow ai-auto-glow-one"></div>
 
-            </div>
+            <div class="ai-auto-glow ai-auto-glow-two"></div>
 
-            <!-- Heading -->
-
-            <h1 class="aa-title">
-
-                Intelligent Workflows
-
-                <span>That Never Sleep.</span>
-
-            </h1>
-
-            <!-- Description -->
-
-            <p class="aa-description">
-
-                Automate repetitive tasks, qualify leads instantly, respond across WhatsApp and email, and let AI handle your business 24/7 while you focus on growth.
-
-            </p>
-
-            <!-- Buttons -->
-
-            <div class="aa-actions">
-
-                <a href="#" class="btn btn-primary">
-
-                    Start Automation
-
-                </a>
-
-                <a href="#" class="btn btn-secondary">
-
-                    View Solutions
-
-                </a>
-
-            </div>
-
-            <!-- Stats -->
-
-            <div class="aa-stats">
-
-                <div class="aa-stat">
-
-                    <h3>98%</h3>
-
-                    <p>Automation</p>
-
-                </div>
-
-                <div class="aa-stat">
-
-                    <h3>24/7</h3>
-
-                    <p>AI Support</p>
-
-                </div>
-
-                <div class="aa-stat">
-
-                    <h3>1.2s</h3>
-
-                    <p>Avg Response</p>
-
-                </div>
-
-            </div>
+            <div class="ai-auto-orbit"></div>
 
         </div>
 
-        <!--=========================
-                RIGHT DASHBOARD
-        ==========================-->
 
-        <div class="aa-dashboard">
+        <div class="container">
 
-            <div class="aa-panel">
+            <div class="ai-auto-intro-content">
 
-                <div class="aa-panel-header">
 
-                    <span class="status-dot"></span>
+                <div class="ai-auto-eyebrow">
 
-                    AI CONTROL CENTER
-
-                </div>
-
-                <!-- Workflow -->
-
-                <div class="aa-workflow">
-
-                    <div class="aa-step">
-
-                        <div class="icon">
-
-                            <i class="fa-solid fa-user-plus"></i>
-
-                        </div>
-
-                        <span>Lead Captured</span>
-
-                    </div>
-
-                    <div class="aa-line"></div>
-
-                    <div class="aa-step active">
-
-                        <div class="icon">
-
-                            <i class="fa-solid fa-brain"></i>
-
-                        </div>
-
-                        <span>AI Qualification</span>
-
-                    </div>
-
-                    <div class="aa-line"></div>
-
-                    <div class="aa-step">
-
-                        <div class="icon">
-
-                            <i class="fa-brands fa-whatsapp"></i>
-
-                        </div>
-
-                        <span>WhatsApp Reply</span>
-
-                    </div>
-
-                    <div class="aa-line"></div>
-
-                    <div class="aa-step">
-
-                        <div class="icon">
-
-                            <i class="fa-solid fa-calendar-check"></i>
-
-                        </div>
-
-                        <span>Appointment</span>
-
-                    </div>
-
-                    <div class="aa-line"></div>
-
-                    <div class="aa-step">
-
-                        <div class="icon">
-
-                            <i class="fa-solid fa-circle-check"></i>
-
-                        </div>
-
-                        <span>Completed</span>
-
-                    </div>
-
-                </div>
-
-                <!-- Analytics -->
-
-                <div class="aa-metrics">
-
-                    <div class="metric">
-
-                        <span>Today's Leads</span>
-
-                        <h4>+24</h4>
-
-                    </div>
-
-                    <div class="metric">
-
-                        <span>Response Time</span>
-
-                        <h4>1.2 sec</h4>
-
-                    </div>
-
-                    <div class="metric">
-
-                        <span>Automation Rate</span>
-
-                        <h4>98%</h4>
-
-                    </div>
-
-                    <div class="metric">
-
-                        <span>Status</span>
-
-                        <h4>Running 24/7</h4>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-<!--==========================================
-        AI CAPABILITIES
-===========================================-->
-
-<section class="s15-ai-showcase">
-
-    <div class="s15-wrapper">
-
-        <div class="s15-layout">
-
-            <!--==================================
-                    LEFT CONTENT
-            ===================================-->
-
-            <div class="s15-intro">
-
-                <div class="s15-chip">
-
-                    <span class="s15-chip-dot"></span>
-
-                    AI CAPABILITIES
-
-                </div>
-
-                <span class="s15-label">
+                    <span class="ai-auto-status-dot"></span>
 
                     INTELLIGENT AUTOMATION
 
-                </span>
+                </div>
 
-                <h2 class="s15-heading">
 
-                    Built For
+                <h1>
 
-                    <span>Modern Businesses</span>
+                    AI that works
 
-                </h2>
+                    <span>
+                        while you grow.
+                    </span>
 
-                <div class="s15-divider"></div>
+                </h1>
 
-                <p class="s15-text">
 
-                    Build a complete AI-powered customer journey that captures
-                    leads, automates conversations, synchronizes CRM, schedules
-                    appointments and provides actionable business insights from
-                    one intelligent platform.
+                <p>
+
+                    Build intelligent systems that automate
+                    customer interactions, sales processes,
+                    repetitive operations and business
+                    workflows — without adding unnecessary
+                    complexity.
 
                 </p>
 
-                <div class="s15-actions">
 
-                    <a href="#" class="s15-btn-primary">
+                <div class="ai-auto-intro-actions">
 
-                        Explore Platform
+                    <a
+                        href="#ai-automation-services"
+                        class="ai-auto-primary-btn"
+                    >
+
+                        Explore AI Solutions
+
+                        <i class="fa-solid fa-arrow-down"></i>
 
                     </a>
 
-                    <a href="#" class="s15-btn-secondary">
 
-                        <i class="fa-solid fa-circle-play"></i>
+                    <a
+                        href="#ai-auto-process"
+                        class="ai-auto-secondary-btn"
+                    >
 
-                        Live Demo
+                        How It Works
+
+                        <i class="fa-solid fa-arrow-right"></i>
 
                     </a>
 
                 </div>
 
-            </div>
 
-            <!--==================================
-                    FEATURE MODULES
-            ===================================-->
+                <!-- Quick Metrics -->
 
-            <div class="s15-modules">
+                <div class="ai-auto-intro-metrics">
 
-                <!-- CARD -->
+                    <div>
 
-                <button class="s15-module is-active" data-view="lead">
+                        <strong>
+                            24/7
+                        </strong>
 
-                    <div class="s15-module-icon">
-
-                        <i class="fa-solid fa-user-check"></i>
+                        <span>
+                            Automated Operations
+                        </span>
 
                     </div>
 
-                    <div class="s15-module-content">
+
+                    <div>
+
+                        <strong>
+                            AI
+                        </strong>
+
+                        <span>
+                            Intelligent Decisions
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            ∞
+                        </strong>
+
+                        <span>
+                            Scalable Workflows
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- AI CORE VISUAL -->
+
+            <div class="ai-auto-core">
+
+                <div class="ai-auto-core-ring ring-one"></div>
+
+                <div class="ai-auto-core-ring ring-two"></div>
+
+                <div class="ai-auto-core-ring ring-three"></div>
+
+
+                <div class="ai-auto-core-center">
+
+                    <i class="fa-solid fa-microchip"></i>
+
+                    <span>
+                        AI
+                    </span>
+
+                </div>
+
+
+                <div class="ai-auto-core-node node-one">
+
+                    <i class="fa-solid fa-comments"></i>
+
+                    <span>
+                        Chat
+                    </span>
+
+                </div>
+
+
+                <div class="ai-auto-core-node node-two">
+
+                    <i class="fa-brands fa-whatsapp"></i>
+
+                    <span>
+                        WhatsApp
+                    </span>
+
+                </div>
+
+
+                <div class="ai-auto-core-node node-three">
+
+                    <i class="fa-solid fa-phone-volume"></i>
+
+                    <span>
+                        Voice
+                    </span>
+
+                </div>
+
+
+                <div class="ai-auto-core-node node-four">
+
+                    <i class="fa-solid fa-gears"></i>
+
+                    <span>
+                        Workflow
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ======================================================
+         02 — AI AUTOMATION SERVICES
+    ======================================================= -->
+
+    <section
+        class="ai-auto-services"
+        id="ai-automation-services"
+    >
+
+        <div class="container">
+
+
+            <div class="ai-auto-section-heading">
+
+                <div class="ai-auto-section-label">
+
+                    <span>
+                        01
+                    </span>
+
+                    AI AUTOMATION ECOSYSTEM
+
+                </div>
+
+
+                <div>
+
+                    <h2>
+
+                        One system.
+
+                        <span>
+                            Multiple possibilities.
+                        </span>
+
+                    </h2>
+
+                    <p>
+
+                        From customer conversations to internal
+                        operations, connect AI with the parts of
+                        your business that consume the most time.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Service Grid -->
+
+            <div class="ai-auto-service-grid">
+
+
+                <!-- AI CHATBOTS -->
+
+                <article
+                    class="ai-auto-service-card"
+                    id="ai-chatbots"
+                >
+
+                    <div class="ai-auto-card-top">
+
+                        <span>
+                            01
+                        </span>
+
+                        <i class="fa-solid fa-robot"></i>
+
+                    </div>
+
+
+                    <div class="ai-auto-card-content">
 
                         <h3>
-
-                            Lead Qualification
-
+                            AI Chatbots
                         </h3>
 
                         <p>
 
-                            Capture and prioritize every high-intent lead.
+                            Intelligent customer assistants
+                            that answer questions, qualify
+                            leads and provide instant support.
 
                         </p>
 
                     </div>
 
-                    <div class="s15-module-arrow">
 
-                        <i class="fa-solid fa-arrow-right"></i>
+                    <div class="ai-auto-card-tags">
+
+                        <span>
+                            24/7 Support
+                        </span>
+
+                        <span>
+                            Lead Capture
+                        </span>
 
                     </div>
 
-                </button>
 
-                <!-- CARD -->
+                    <a
+                        href="#ai-chatbots"
+                        class="ai-auto-card-link"
+                    >
 
-                <button class="s15-module" data-view="whatsapp">
+                        Explore Solution
 
-                    <div class="s15-module-icon">
+                        <i class="fa-solid fa-arrow-up-right"></i>
+
+                    </a>
+
+                </article>
+
+
+
+                <!-- WHATSAPP -->
+
+                <article
+                    class="ai-auto-service-card"
+                    id="whatsapp-automation"
+                >
+
+                    <div class="ai-auto-card-top">
+
+                        <span>
+                            02
+                        </span>
 
                         <i class="fa-brands fa-whatsapp"></i>
 
                     </div>
 
-                    <div class="s15-module-content">
+
+                    <div class="ai-auto-card-content">
 
                         <h3>
-
-                            WhatsApp AI
-
+                            WhatsApp Automation
                         </h3>
 
                         <p>
 
-                            Intelligent conversations running 24×7.
+                            Automate enquiries, follow-ups,
+                            notifications and customer
+                            conversations through WhatsApp.
 
                         </p>
 
                     </div>
 
-                    <div class="s15-module-arrow">
 
-                        <i class="fa-solid fa-arrow-right"></i>
+                    <div class="ai-auto-card-tags">
+
+                        <span>
+                            Follow-ups
+                        </span>
+
+                        <span>
+                            Notifications
+                        </span>
 
                     </div>
 
-                </button>
 
-                <!-- CARD -->
+                    <a
+                        href="#whatsapp-automation"
+                        class="ai-auto-card-link"
+                    >
 
-                <button class="s15-module" data-view="crm">
+                        Explore Solution
 
-                    <div class="s15-module-icon">
+                        <i class="fa-solid fa-arrow-up-right"></i>
+
+                    </a>
+
+                </article>
+
+
+
+                <!-- VOICE -->
+
+                <article
+                    class="ai-auto-service-card"
+                    id="ai-voice-agents"
+                >
+
+                    <div class="ai-auto-card-top">
+
+                        <span>
+                            03
+                        </span>
+
+                        <i class="fa-solid fa-phone-volume"></i>
+
+                    </div>
+
+
+                    <div class="ai-auto-card-content">
+
+                        <h3>
+                            AI Voice Agents
+                        </h3>
+
+                        <p>
+
+                            AI-powered voice systems that
+                            handle calls, enquiries,
+                            qualification and scheduling.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="ai-auto-card-tags">
+
+                        <span>
+                            Voice AI
+                        </span>
+
+                        <span>
+                            Calling
+                        </span>
+
+                    </div>
+
+
+                    <a
+                        href="#ai-voice-agents"
+                        class="ai-auto-card-link"
+                    >
+
+                        Explore Solution
+
+                        <i class="fa-solid fa-arrow-up-right"></i>
+
+                    </a>
+
+                </article>
+
+
+
+                <!-- WORKFLOW -->
+
+                <article
+                    class="ai-auto-service-card"
+                    id="workflow-automation"
+                >
+
+                    <div class="ai-auto-card-top">
+
+                        <span>
+                            04
+                        </span>
+
+                        <i class="fa-solid fa-gears"></i>
+
+                    </div>
+
+
+                    <div class="ai-auto-card-content">
+
+                        <h3>
+                            Workflow Automation
+                        </h3>
+
+                        <p>
+
+                            Connect your tools and automate
+                            repetitive tasks from enquiry
+                            to completion.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="ai-auto-card-tags">
+
+                        <span>
+                            Workflows
+                        </span>
+
+                        <span>
+                            Integrations
+                        </span>
+
+                    </div>
+
+
+                    <a
+                        href="#workflow-automation"
+                        class="ai-auto-card-link"
+                    >
+
+                        Explore Solution
+
+                        <i class="fa-solid fa-arrow-up-right"></i>
+
+                    </a>
+
+                </article>
+
+
+
+                <!-- APPOINTMENT -->
+
+                <article
+                    class="ai-auto-service-card"
+                    id="appointment-automation"
+                >
+
+                    <div class="ai-auto-card-top">
+
+                        <span>
+                            05
+                        </span>
+
+                        <i class="fa-regular fa-calendar-check"></i>
+
+                    </div>
+
+
+                    <div class="ai-auto-card-content">
+
+                        <h3>
+                            Appointment Automation
+                        </h3>
+
+                        <p>
+
+                            Let customers book, reschedule
+                            and receive reminders without
+                            constant manual coordination.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="ai-auto-card-tags">
+
+                        <span>
+                            Booking
+                        </span>
+
+                        <span>
+                            Reminders
+                        </span>
+
+                    </div>
+
+
+                    <a
+                        href="#appointment-automation"
+                        class="ai-auto-card-link"
+                    >
+
+                        Explore Solution
+
+                        <i class="fa-solid fa-arrow-up-right"></i>
+
+                    </a>
+
+                </article>
+
+
+
+                <!-- CRM -->
+
+                <article
+                    class="ai-auto-service-card"
+                    id="crm-automation"
+                >
+
+                    <div class="ai-auto-card-top">
+
+                        <span>
+                            06
+                        </span>
 
                         <i class="fa-solid fa-database"></i>
 
                     </div>
 
-                    <div class="s15-module-content">
+
+                    <div class="ai-auto-card-content">
 
                         <h3>
-
-                            CRM Integration
-
+                            CRM Automation
                         </h3>
 
                         <p>
 
-                            Automatically synchronize customer data.
+                            Automatically organise leads,
+                            update customer records and
+                            trigger intelligent follow-ups.
 
                         </p>
 
                     </div>
 
-                    <div class="s15-module-arrow">
 
-                        <i class="fa-solid fa-arrow-right"></i>
+                    <div class="ai-auto-card-tags">
 
-                    </div>
-
-                </button>
-
-                <!-- CARD -->
-
-                <button class="s15-module" data-view="booking">
-
-                    <div class="s15-module-icon">
-
-                        <i class="fa-solid fa-calendar-check"></i>
-
-                    </div>
-
-                    <div class="s15-module-content">
-
-                        <h3>
-
-                            Smart Booking
-
-                        </h3>
-
-                        <p>
-
-                            AI scheduling with reminders and follow-ups.
-
-                        </p>
-
-                    </div>
-
-                    <div class="s15-module-arrow">
-
-                        <i class="fa-solid fa-arrow-right"></i>
-
-                    </div>
-
-                </button>
-
-                <!-- CARD -->
-
-                <button class="s15-module" data-view="analytics">
-
-                    <div class="s15-module-icon">
-
-                        <i class="fa-solid fa-chart-line"></i>
-
-                    </div>
-
-                    <div class="s15-module-content">
-
-                        <h3>
-
-                            Analytics
-
-                        </h3>
-
-                        <p>
-
-                            Live reports and performance monitoring.
-
-                        </p>
-
-                    </div>
-
-                    <div class="s15-module-arrow">
-
-                        <i class="fa-solid fa-arrow-right"></i>
-
-                    </div>
-
-                </button>
-
-                <!-- CARD -->
-
-                <button class="s15-module" data-view="voice">
-
-                    <div class="s15-module-icon">
-
-                        <i class="fa-solid fa-headset"></i>
-
-                    </div>
-
-                    <div class="s15-module-content">
-
-                        <h3>
-
-                            Voice Assistant
-
-                        </h3>
-
-                        <p>
-
-                            AI receptionist answering every call.
-
-                        </p>
-
-                    </div>
-
-                    <div class="s15-module-arrow">
-
-                        <i class="fa-solid fa-arrow-right"></i>
-
-                    </div>
-
-                </button>
-
-            </div>
-
-            <!--==================================
-                    AI CONSOLE
-            ===================================-->
-
-            <aside class="s15-console">
-
-                <div class="s15-console-header">
-
-                    <div class="s15-console-logo">
-
-                        AI
-
-                    </div>
-
-                    <div>
-
-                        <span class="s15-console-label">
-
-                            LIVE ENGINE
-
+                        <span>
+                            Lead Management
                         </span>
 
-                        <h4>
-
-                            Automation Console
-
-                        </h4>
+                        <span>
+                            CRM
+                        </span>
 
                     </div>
 
-                </div>
 
-                <div class="s15-console-body">
+                    <a
+                        href="#crm-automation"
+                        class="ai-auto-card-link"
+                    >
 
-                    <div class="s15-console-screen is-active" id="lead">
+                        Explore Solution
+
+                        <i class="fa-solid fa-arrow-up-right"></i>
+
+                    </a>
+
+                </article>
+
+
+
+                <!-- AI INTEGRATION -->
+
+                <article
+                    class="ai-auto-service-card"
+                    id="ai-integration"
+                >
+
+                    <div class="ai-auto-card-top">
+
+                        <span>
+                            07
+                        </span>
+
+                        <i class="fa-solid fa-link"></i>
+
+                    </div>
+
+
+                    <div class="ai-auto-card-content">
 
                         <h3>
-
-                            Lead Qualification
-
+                            AI Integration
                         </h3>
 
                         <p>
 
-                            Incoming visitors are automatically analyzed,
-                            scored and assigned to your sales pipeline.
+                            Connect AI with your existing
+                            software, CRM, website and
+                            business tools.
 
                         </p>
 
-                        <div class="s15-workflow">
+                    </div>
 
-                            <span>Lead</span>
 
-                            <span>AI</span>
+                    <div class="ai-auto-card-tags">
 
-                            <span>CRM</span>
+                        <span>
+                            APIs
+                        </span>
 
-                            <span>Sales</span>
-
-                            <span>Done</span>
-
-                        </div>
+                        <span>
+                            Systems
+                        </span>
 
                     </div>
 
-                </div>
 
-                <div class="s15-console-footer">
+                    <a
+                        href="#ai-integration"
+                        class="ai-auto-card-link"
+                    >
 
-                    <div class="s15-stat">
+                        Explore Solution
 
-                        <strong>99%</strong>
+                        <i class="fa-solid fa-arrow-up-right"></i>
 
-                        <span>Accuracy</span>
+                    </a>
+
+                </article>
+
+
+
+                <!-- CUSTOM AI -->
+
+                <article
+                    class="ai-auto-service-card ai-auto-service-card-featured"
+                    id="custom-ai"
+                >
+
+                    <div class="ai-auto-card-top">
+
+                        <span>
+                            08
+                        </span>
+
+                        <i class="fa-solid fa-brain"></i>
 
                     </div>
 
-                    <div class="s15-stat">
 
-                        <strong>24×7</strong>
+                    <div class="ai-auto-card-content">
 
-                        <span>Automation</span>
+                        <h3>
+                            Custom AI Solutions
+                        </h3>
+
+                        <p>
+
+                            Purpose-built AI systems designed
+                            around your exact business model,
+                            data and operational requirements.
+
+                        </p>
 
                     </div>
 
-                    <div class="s15-stat">
 
-                        <strong>&lt;1s</strong>
+                    <div class="ai-auto-card-tags">
 
-                        <span>Response</span>
+                        <span>
+                            Custom AI
+                        </span>
+
+                        <span>
+                            Business Systems
+                        </span>
 
                     </div>
 
-                </div>
 
-            </aside>
+                    <a
+                        href="#custom-ai"
+                        class="ai-auto-card-link"
+                    >
 
-        </div>
+                        Build Your System
 
-    </div>
+                        <i class="fa-solid fa-arrow-up-right"></i>
 
-</section>
+                    </a>
 
+                </article>
 
-
-
-
-<!--==========================================
-        AI AUTOMATION JOURNEY
-===========================================-->
-
-<section class="s15-journey">
-
-    <div class="s15-container">
-
-        <!--==============================
-                SECTION HEADER
-        ===============================-->
-
-        <div class="s15-journey-header">
-
-            <div class="s15-tag">
-
-                <span class="s15-tag-dot"></span>
-
-                HOW IT WORKS
 
             </div>
 
-            <h2 class="s15-journey-title">
-
-                AI Automation
-
-                <span>Journey</span>
-
-            </h2>
-
-            <p class="s15-journey-description">
-
-                Follow every customer interaction from the first website visit
-                to successful conversion through Shadow15 AI Automation.
-
-            </p>
-
         </div>
 
-        <!--==============================
-                JOURNEY FLOW
-        ===============================-->
+    </section>
 
-        <div class="s15-flow-wrapper">
 
-            <div class="s15-flow-line"></div>
 
-            <!-- STEP 01 -->
+    <!-- ======================================================
+         03 — HOW AI AUTOMATION WORKS
+    ======================================================= -->
 
-            <article class="s15-step active" data-step="visitor">
+    <section
+        class="ai-auto-process"
+        id="ai-auto-process"
+    >
 
-                <span class="s15-step-count">
+        <div class="container">
 
-                    01
 
-                </span>
+            <div class="ai-auto-process-heading">
 
-                <div class="s15-step-icon">
-
-                    <i class="fa-solid fa-user"></i>
-
-                </div>
-
-                <h3>
-
-                    Visitor
-
-                </h3>
-
-                <p>
-
-                    Website Visit
-
-                </p>
-
-            </article>
-
-            <!-- STEP 02 -->
-
-            <article class="s15-step" data-step="ai">
-
-                <span class="s15-step-count">
-
-                    02
-
-                </span>
-
-                <div class="s15-step-icon">
-
-                    <i class="fa-solid fa-brain"></i>
-
-                </div>
-
-                <h3>
-
-                    AI
-
-                </h3>
-
-                <p>
-
-                    Qualification
-
-                </p>
-
-            </article>
-
-            <!-- STEP 03 -->
-
-            <article class="s15-step" data-step="chat">
-
-                <span class="s15-step-count">
-
-                    03
-
-                </span>
-
-                <div class="s15-step-icon">
-
-                    <i class="fa-brands fa-whatsapp"></i>
-
-                </div>
-
-                <h3>
-
-                    WhatsApp
-
-                </h3>
-
-                <p>
-
-                    Conversation
-
-                </p>
-
-            </article>
-
-            <!-- STEP 04 -->
-
-            <article class="s15-step" data-step="crm">
-
-                <span class="s15-step-count">
-
-                    04
-
-                </span>
-
-                <div class="s15-step-icon">
-
-                    <i class="fa-solid fa-database"></i>
-
-                </div>
-
-                <h3>
-
-                    CRM
-
-                </h3>
-
-                <p>
-
-                    Auto Sync
-
-                </p>
-
-            </article>
-
-            <!-- STEP 05 -->
-
-            <article class="s15-step" data-step="booking">
-
-                <span class="s15-step-count">
-
-                    05
-
-                </span>
-
-                <div class="s15-step-icon">
-
-                    <i class="fa-solid fa-calendar-check"></i>
-
-                </div>
-
-                <h3>
-
-                    Booking
-
-                </h3>
-
-                <p>
-
-                    Appointment
-
-                </p>
-
-            </article>
-
-            <!-- STEP 06 -->
-
-            <article class="s15-step" data-step="customer">
-
-                <span class="s15-step-count">
-
-                    06
-
-                </span>
-
-                <div class="s15-step-icon">
-
-                    <i class="fa-solid fa-face-smile"></i>
-
-                </div>
-
-                <h3>
-
-                    Customer
-
-                </h3>
-
-                <p>
-
-                    Conversion
-
-                </p>
-
-            </article>
-
-        </div>
-
-        <!--==============================
-                CONTENT AREA
-        ===============================-->
-
-        <div class="s15-journey-content">
-
-            <!-- LEFT -->
-
-            <div class="s15-ai-card">
-
-                <div class="s15-ai-preview">
-
-                    <!-- Lottie / SVG Later -->
-
-                </div>
-
-                <div class="s15-ai-content">
+                <div class="ai-auto-section-label">
 
                     <span>
-
-                        Powered By
-
+                        02
                     </span>
 
+                    AUTOMATION PROCESS
+
+                </div>
+
+
+                <h2>
+
+                    From manual work
+
+                    <span>
+                        to intelligent flow.
+                    </span>
+
+                </h2>
+
+            </div>
+
+
+            <div class="ai-auto-process-flow">
+
+
+                <div class="ai-auto-process-step">
+
+                    <span>
+                        01
+                    </span>
+
+                    <i class="fa-solid fa-inbox"></i>
+
                     <h3>
-
-                        Shadow15 AI Brain
-
+                        Capture
                     </h3>
 
                     <p>
-
-                        Every interaction is analyzed in real time to improve
-                        qualification, response quality and customer experience.
-
+                        Collect enquiries,
+                        customer data and events.
                     </p>
 
-                    <ul>
-
-                        <li>
-
-                            Machine Learning
-
-                        </li>
-
-                        <li>
-
-                            Predictive Analysis
-
-                        </li>
-
-                        <li>
-
-                            Natural Language AI
-
-                        </li>
-
-                        <li>
-
-                            Continuous Learning
-
-                        </li>
-
-                    </ul>
-
                 </div>
 
-            </div>
 
-            <!-- RIGHT -->
+                <div class="ai-auto-process-line"></div>
 
-            <div class="s15-impact-panel">
 
-                <div class="s15-impact-header">
-
-                    <h3>
-
-                        Live Impact
-
-                    </h3>
+                <div class="ai-auto-process-step">
 
                     <span>
-
-                        Updated in real time
-
+                        02
                     </span>
+
+                    <i class="fa-solid fa-brain"></i>
+
+                    <h3>
+                        Understand
+                    </h3>
+
+                    <p>
+                        AI analyses context,
+                        intent and information.
+                    </p>
 
                 </div>
 
-                <div class="s15-impact-grid">
 
-                    <div class="s15-impact-card">
+                <div class="ai-auto-process-line"></div>
 
-                        <i class="fa-solid fa-users"></i>
 
-                        <strong>
+                <div class="ai-auto-process-step">
 
-                            2,453
+                    <span>
+                        03
+                    </span>
 
-                        </strong>
+                    <i class="fa-solid fa-code-branch"></i>
 
-                        <span>
+                    <h3>
+                        Decide
+                    </h3>
 
-                            New Leads
+                    <p>
+                        Rules and AI determine
+                        the right next action.
+                    </p>
 
-                        </span>
+                </div>
 
-                    </div>
 
-                    <div class="s15-impact-card">
+                <div class="ai-auto-process-line"></div>
 
-                        <i class="fa-solid fa-comments"></i>
 
-                        <strong>
+                <div class="ai-auto-process-step">
 
-                            1,856
+                    <span>
+                        04
+                    </span>
 
-                        </strong>
+                    <i class="fa-solid fa-bolt"></i>
 
-                        <span>
+                    <h3>
+                        Execute
+                    </h3>
 
-                            AI Chats
-
-                        </span>
-
-                    </div>
-
-                    <div class="s15-impact-card">
-
-                        <i class="fa-solid fa-calendar-days"></i>
-
-                        <strong>
-
-                            320
-
-                        </strong>
-
-                        <span>
-
-                            Appointments
-
-                        </span>
-
-                    </div>
-
-                    <div class="s15-impact-card">
-
-                        <i class="fa-solid fa-indian-rupee-sign"></i>
-
-                        <strong>
-
-                            ₹4.82M
-
-                        </strong>
-
-                        <span>
-
-                            Revenue
-
-                        </span>
-
-                    </div>
+                    <p>
+                        Systems respond,
+                        update and follow up.
+                    </p>
 
                 </div>
 
@@ -1422,9 +1731,197 @@ Shadow15
 
         </div>
 
-    </div>
+    </section>
 
-</section>
+
+
+    <!-- ======================================================
+         04 — BUSINESS IMPACT
+    ======================================================= -->
+
+    <section
+        class="ai-auto-impact"
+        id="ai-auto-impact"
+    >
+
+        <div class="container">
+
+
+            <div class="ai-auto-impact-panel">
+
+
+                <div class="ai-auto-impact-copy">
+
+                    <div class="ai-auto-section-label">
+
+                        <span>
+                            03
+                        </span>
+
+                        BUSINESS IMPACT
+
+                    </div>
+
+
+                    <h2>
+
+                        Automate the work.
+
+                        <span>
+                            Amplify the team.
+                        </span>
+
+                    </h2>
+
+
+                    <p>
+
+                        AI automation is not about replacing
+                        your team. It's about removing repetitive
+                        work so your people can focus on customers,
+                        decisions and growth.
+
+                    </p>
+
+                </div>
+
+
+                <div class="ai-auto-impact-stats">
+
+
+                    <div>
+
+                        <strong>
+                            24/7
+                        </strong>
+
+                        <span>
+                            Availability
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            ↓
+                        </strong>
+
+                        <span>
+                            Manual Work
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            ↑
+                        </strong>
+
+                        <span>
+                            Productivity
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            AI
+                        </strong>
+
+                        <span>
+                            Intelligence
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ======================================================
+         05 — CUSTOM AI CTA
+    ======================================================= -->
+
+    <section
+        class="ai-auto-cta"
+        id="ai-auto-cta"
+    >
+
+        <div class="container">
+
+            <div class="ai-auto-cta-box">
+
+
+                <div class="ai-auto-cta-orbit"></div>
+
+
+                <div class="ai-auto-cta-content">
+
+                    <div class="ai-auto-section-label">
+
+                        <span>
+                            04
+                        </span>
+
+                        CUSTOM AI
+
+                    </div>
+
+
+                    <h2>
+
+                        Your business is unique.
+
+                        <span>
+                            Your AI should be too.
+                        </span>
+
+                    </h2>
+
+
+                    <p>
+
+                        Tell us what your business does,
+                        where your team spends time and
+                        what you want to automate.
+
+                    </p>
+
+
+                    <a
+                        href="contact.html"
+                        class="ai-auto-cta-btn"
+                    >
+
+                        Build My AI System
+
+                        <i class="fa-solid fa-arrow-up-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+</main>
 
 
 

@@ -1,0 +1,1024 @@
+/* ==========================================================
+   SHADOW15 — CONTACT
+   02-HEADING.CSS
+========================================================== */
+
+
+/* ==========================================================
+   01 — LEFT CONTENT
+========================================================== */
+
+.contact-info-content {
+
+    position:
+        relative;
+
+    z-index:
+        3;
+
+    min-width:
+        0;
+
+}
+
+
+/* ==========================================================
+   02 — EYEBROW
+========================================================== */
+
+.contact-info-eyebrow {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        13px;
+
+    margin-bottom:
+        30px;
+
+    color:
+        #22d3ee;
+
+    font-size:
+        .62rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .18em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+.contact-info-eyebrow-line {
+
+    width:
+        48px;
+
+    height:
+        1px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #22d3ee,
+            rgba(34,211,238,.08)
+        );
+
+}
+
+
+/* ==========================================================
+   03 — MAIN HEADING
+========================================================== */
+
+.contact-info-heading {
+
+    max-width:
+        620px;
+
+    margin:
+        0;
+
+    color:
+        #f5f7fa;
+
+    font-size:
+        clamp(
+            3.4rem,
+            5.3vw,
+            5.8rem
+        );
+
+    font-weight:
+        800;
+
+    line-height:
+        .92;
+
+    letter-spacing:
+        -.065em;
+
+}
+
+
+/* ==========================================================
+   04 — HEADING ACCENT
+========================================================== */
+
+.contact-info-heading span {
+
+    display:
+        block;
+
+    width:
+        fit-content;
+
+    margin-top:
+        8px;
+
+    background:
+
+        linear-gradient(
+            100deg,
+            #60a5fa 0%,
+            #22d3ee 45%,
+            #a855f7 100%
+        );
+
+    background-size:
+        180% 100%;
+
+    -webkit-background-clip:
+        text;
+
+    background-clip:
+        text;
+
+    color:
+        transparent;
+
+    -webkit-text-fill-color:
+        transparent;
+
+    filter:
+
+        drop-shadow(
+            0 12px 35px
+            rgba(34,211,238,.08)
+        );
+
+}
+
+
+/* ==========================================================
+   05 — HEADING DECORATION
+========================================================== */
+
+.contact-info-heading-accent {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        7px;
+
+    margin-top:
+        28px;
+
+}
+
+
+.contact-info-heading-accent span {
+
+    display:
+        block;
+
+    width:
+        52px;
+
+    height:
+        1px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #60a5fa,
+            #22d3ee
+        );
+
+}
+
+
+.contact-info-heading-accent i {
+
+    position:
+        relative;
+
+    width:
+        5px;
+
+    height:
+        5px;
+
+    border-top:
+        1px solid
+        #22d3ee;
+
+    border-right:
+        1px solid
+        #22d3ee;
+
+    transform:
+        rotate(45deg);
+
+}
+
+
+.contact-info-heading-accent i::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        -1px;
+
+    left:
+        6px;
+
+    width:
+        14px;
+
+    height:
+        1px;
+
+    background:
+        rgba(34,211,238,.40);
+
+}
+
+
+/* ==========================================================
+   06 — DESCRIPTION
+========================================================== */
+
+.contact-info-description {
+
+    max-width:
+        520px;
+
+    margin:
+        30px 0 0;
+
+    color:
+        #93a6b8;
+
+    font-size:
+        clamp(
+            .88rem,
+            1.15vw,
+            1.02rem
+        );
+
+    font-weight:
+        400;
+
+    line-height:
+        1.85;
+
+}
+
+
+/* ==========================================================
+   07 — AVAILABILITY
+========================================================== */
+
+.contact-availability {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        14px;
+
+    max-width:
+        430px;
+
+    margin-top:
+        42px;
+
+    padding:
+        17px 19px;
+
+    border:
+        1px solid
+        rgba(148,163,184,.10);
+
+    border-radius:
+        13px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(34,197,94,.035),
+            rgba(148,163,184,.015)
+        );
+
+    box-shadow:
+
+        inset 0 1px 0
+        rgba(255,255,255,.025);
+
+}
+
+
+/* ==========================================================
+   08 — AVAILABILITY DOT
+========================================================== */
+
+.contact-availability-dot {
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    width:
+        35px;
+
+    height:
+        35px;
+
+    flex:
+        0 0 35px;
+
+    border:
+        1px solid
+        rgba(34,197,94,.15);
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(34,197,94,.025);
+
+}
+
+
+.contact-availability-dot span {
+
+    width:
+        10px;
+
+    height:
+        10px;
+
+    border-radius:
+        50%;
+
+    background:
+        #4ade80;
+
+    box-shadow:
+
+        0 0 9px
+        rgba(74,222,128,.75),
+
+        0 0 22px
+        rgba(74,222,128,.25);
+
+}
+
+
+/* ==========================================================
+   09 — AVAILABILITY TEXT
+========================================================== */
+
+.contact-availability-content {
+
+    min-width:
+        0;
+
+}
+
+
+.contact-availability-content strong {
+
+    display:
+        block;
+
+    color:
+        #4ade80;
+
+    font-size:
+        .56rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .08em;
+
+}
+
+
+.contact-availability-content span {
+
+    display:
+        block;
+
+    margin-top:
+        5px;
+
+    color:
+        #718699;
+
+    font-size:
+        .48rem;
+
+    line-height:
+        1.4;
+
+}
+
+
+/* ==========================================================
+   10 — SOCIAL
+========================================================== */
+
+.contact-social {
+
+    margin-top:
+        47px;
+
+}
+
+
+.contact-social-heading {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+    margin-bottom:
+        18px;
+
+}
+
+
+.contact-social-heading span {
+
+    width:
+        28px;
+
+    height:
+        1px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(34,211,238,.55),
+            transparent
+        );
+
+}
+
+
+.contact-social-heading strong {
+
+    color:
+        #8194a7;
+
+    font-size:
+        .52rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .16em;
+
+}
+
+
+/* ==========================================================
+   11 — SOCIAL LIST
+========================================================== */
+
+.contact-social-list {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        12px;
+
+}
+
+
+.contact-social-item {
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    width:
+        55px;
+
+    height:
+        55px;
+
+    border:
+        1px solid
+        rgba(148,163,184,.12);
+
+    border-radius:
+        12px;
+
+    color:
+        #8ea2b5;
+
+    background:
+        rgba(148,163,184,.018);
+
+    transition:
+
+        transform .35s
+        cubic-bezier(.22,1,.36,1),
+
+        border-color .3s ease,
+
+        color .3s ease,
+
+        background .3s ease,
+
+        box-shadow .35s ease;
+
+}
+
+
+.contact-social-item i {
+
+    font-size:
+        .92rem;
+
+}
+
+
+/* ==========================================================
+   12 — SOCIAL COLORS
+========================================================== */
+
+.contact-social-instagram:hover {
+
+    color:
+        #f472b6;
+
+    border-color:
+        rgba(244,114,182,.30);
+
+    background:
+        rgba(244,114,182,.035);
+
+    box-shadow:
+        0 12px 30px
+        rgba(244,114,182,.08);
+
+}
+
+
+.contact-social-linkedin:hover {
+
+    color:
+        #60a5fa;
+
+    border-color:
+        rgba(96,165,250,.30);
+
+    background:
+        rgba(96,165,250,.035);
+
+    box-shadow:
+        0 12px 30px
+        rgba(96,165,250,.08);
+
+}
+
+
+.contact-social-whatsapp:hover {
+
+    color:
+        #4ade80;
+
+    border-color:
+        rgba(74,222,128,.30);
+
+    background:
+        rgba(74,222,128,.035);
+
+    box-shadow:
+        0 12px 30px
+        rgba(74,222,128,.08);
+
+}
+
+
+.contact-social-email:hover {
+
+    color:
+        #c084fc;
+
+    border-color:
+        rgba(192,132,252,.30);
+
+    background:
+        rgba(192,132,252,.035);
+
+    box-shadow:
+        0 12px 30px
+        rgba(192,132,252,.08);
+
+}
+
+
+.contact-social-item:hover {
+
+    transform:
+        translateY(-5px);
+
+}
+
+
+/* ==========================================================
+   13 — PRIVACY
+========================================================== */
+
+.contact-privacy {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        8px;
+
+    margin-top:
+        48px;
+
+    color:
+        #52687b;
+
+    font-size:
+        .42rem;
+
+    line-height:
+        1.6;
+
+}
+
+
+.contact-privacy i {
+
+    color:
+        #3b82f6;
+
+    font-size:
+        .60rem;
+
+}
+
+
+.contact-privacy b {
+
+    color:
+        #33495c;
+
+    font-weight:
+        400;
+
+}
+
+
+/* ==========================================================
+   14 — RIGHT CHANNELS
+========================================================== */
+
+.contact-channels {
+
+    position:
+        relative;
+
+    z-index:
+        3;
+
+    min-width:
+        0;
+
+}
+
+
+/* ==========================================================
+   15 — CHANNEL HEADING
+========================================================== */
+
+.contact-channels-heading {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        20px;
+
+    margin-bottom:
+        25px;
+
+}
+
+
+.contact-channels-heading > div:first-child span {
+
+    color:
+        #d5e1e9;
+
+    font-size:
+        .68rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .19em;
+
+}
+
+
+.contact-channel-decoration {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        4px;
+
+}
+
+
+.contact-channel-decoration span {
+
+    width:
+        28px;
+
+    height:
+        1px;
+
+    background:
+        rgba(34,211,238,.28);
+
+}
+
+
+.contact-channel-decoration i {
+
+    width:
+        5px;
+
+    height:
+        5px;
+
+    border-top:
+        1px solid
+        #22d3ee;
+
+    border-right:
+        1px solid
+        #22d3ee;
+
+    transform:
+        rotate(45deg);
+
+}
+
+
+/* ==========================================================
+   16 — RESPONSIVE HEADING
+========================================================== */
+
+@media (max-width: 1050px) {
+
+    .contact-info-heading {
+
+        font-size:
+            clamp(
+                3rem,
+                6vw,
+                4.7rem
+            );
+
+    }
+
+    .contact-info-description {
+
+        max-width:
+            470px;
+
+    }
+
+}
+
+
+@media (max-width: 850px) {
+
+    .contact-info-heading {
+
+        max-width:
+            700px;
+
+    }
+
+    .contact-info-description {
+
+        max-width:
+            650px;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .contact-info-eyebrow {
+
+        margin-bottom:
+            22px;
+
+        gap:
+            9px;
+
+        font-size:
+            .53rem;
+
+        letter-spacing:
+            .14em;
+
+    }
+
+    .contact-info-eyebrow-line {
+
+        width:
+            32px;
+
+    }
+
+    .contact-info-heading {
+
+        font-size:
+            clamp(
+                2.7rem,
+                12vw,
+                4rem
+            );
+
+        line-height:
+            .94;
+
+    }
+
+    .contact-info-heading span {
+
+        margin-top:
+            5px;
+
+    }
+
+    .contact-info-heading-accent {
+
+        margin-top:
+            21px;
+
+    }
+
+    .contact-info-description {
+
+        margin-top:
+            23px;
+
+        font-size:
+            .82rem;
+
+        line-height:
+            1.75;
+
+    }
+
+    .contact-availability {
+
+        margin-top:
+            30px;
+
+        padding:
+            14px;
+
+    }
+
+    .contact-social {
+
+        margin-top:
+            36px;
+
+    }
+
+    .contact-social-item {
+
+        width:
+            48px;
+
+        height:
+            48px;
+
+    }
+
+    .contact-privacy {
+
+        margin-top:
+            34px;
+
+    }
+
+    .contact-channels-heading {
+
+        margin-bottom:
+            18px;
+
+    }
+
+    .contact-channels-heading > div:first-child span {
+
+        font-size:
+            .58rem;
+
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .contact-info-heading {
+
+        font-size:
+            2.45rem;
+
+    }
+
+    .contact-info-description {
+
+        font-size:
+            .78rem;
+
+    }
+
+    .contact-social-list {
+
+        gap:
+            8px;
+
+    }
+
+    .contact-social-item {
+
+        width:
+            45px;
+
+        height:
+            45px;
+
+    }
+
+}

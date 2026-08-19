@@ -1,0 +1,1119 @@
+/* ==========================================================
+   SHADOW15 — AI AUTOMATION
+   03-SERVICES.CSS
+========================================================== */
+
+
+/* ==========================================================
+   01 — SECTION HEADING
+========================================================== */
+
+.ai-auto-section-heading {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        .32fr
+        1fr;
+
+    gap:
+        70px;
+
+    align-items:
+        start;
+
+    margin-bottom:
+        58px;
+
+}
+
+
+.ai-auto-section-label {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+    color:
+        #6f8799;
+
+    font-size:
+        .58rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .14em;
+
+}
+
+
+.ai-auto-section-label span {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    width:
+        30px;
+
+    height:
+        24px;
+
+    border:
+        1px solid
+        rgba(34,211,238,.18);
+
+    border-radius:
+        6px;
+
+    color:
+        #22d3ee;
+
+    background:
+        rgba(34,211,238,.025);
+
+    font-size:
+        .46rem;
+
+}
+
+
+.ai-auto-section-heading h2,
+.ai-auto-process-heading h2 {
+
+    max-width:
+        760px;
+
+    margin:
+        0;
+
+    color:
+        #f1f6f9;
+
+    font-size:
+        clamp(
+            2.5rem,
+            4.3vw,
+            4.6rem
+        );
+
+    font-weight:
+        800;
+
+    line-height:
+        .98;
+
+    letter-spacing:
+        -.055em;
+
+}
+
+
+.ai-auto-section-heading h2 span,
+.ai-auto-process-heading h2 span {
+
+    display:
+        block;
+
+    background:
+
+        linear-gradient(
+            105deg,
+            #60a5fa,
+            #22d3ee 48%,
+            #c084fc
+        );
+
+    -webkit-background-clip:
+        text;
+
+    background-clip:
+        text;
+
+    color:
+        transparent;
+
+    -webkit-text-fill-color:
+        transparent;
+
+}
+
+
+.ai-auto-section-heading p {
+
+    max-width:
+        620px;
+
+    margin:
+        22px 0 0;
+
+    color:
+        #91a5b5;
+
+    font-size:
+        .88rem;
+
+    line-height:
+        1.8;
+
+}
+
+
+/* ==========================================================
+   02 — SERVICE GRID
+========================================================== */
+
+.ai-auto-service-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap:
+        14px;
+
+}
+
+
+/* ==========================================================
+   03 — SERVICE CARD
+========================================================== */
+
+.ai-auto-service-card {
+
+    position:
+        relative;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    min-height:
+        355px;
+
+    padding:
+        23px;
+
+    overflow:
+        hidden;
+
+    border:
+        1px solid
+        rgba(148,163,184,.105);
+
+    border-radius:
+        18px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(10,25,39,.78),
+            rgba(4,13,23,.92)
+        );
+
+    box-shadow:
+
+        inset 0 1px 0
+        rgba(255,255,255,.025),
+
+        0 18px 45px
+        rgba(0,0,0,.16);
+
+    transition:
+
+        transform .45s
+        cubic-bezier(.22,1,.36,1),
+
+        border-color .35s ease,
+
+        background .35s ease,
+
+        box-shadow .45s ease;
+
+}
+
+
+.ai-auto-service-card::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        0;
+
+    left:
+        15%;
+
+    width:
+        70%;
+
+    height:
+        1px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(34,211,238,.22),
+            transparent
+        );
+
+    opacity:
+        .45;
+
+}
+
+
+.ai-auto-service-card::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        150px;
+
+    height:
+        150px;
+
+    right:
+        -80px;
+
+    top:
+        -80px;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(34,211,238,.035);
+
+    filter:
+        blur(30px);
+
+    transition:
+        transform .5s ease,
+        opacity .5s ease;
+
+}
+
+
+.ai-auto-service-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    border-color:
+        rgba(34,211,238,.23);
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(11,29,45,.90),
+            rgba(4,14,24,.96)
+        );
+
+    box-shadow:
+
+        0 28px 65px
+        rgba(0,0,0,.28),
+
+        0 0 35px
+        rgba(34,211,238,.035),
+
+        inset 0 1px 0
+        rgba(255,255,255,.04);
+
+}
+
+
+.ai-auto-service-card:hover::after {
+
+    transform:
+        scale(1.35);
+
+    opacity:
+        .9;
+
+}
+
+
+/* ==========================================================
+   04 — CARD TOP
+========================================================== */
+
+.ai-auto-card-top {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+}
+
+
+.ai-auto-card-top span {
+
+    color:
+        #41596c;
+
+    font-size:
+        .48rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .10em;
+
+}
+
+
+.ai-auto-card-top i {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    width:
+        43px;
+
+    height:
+        43px;
+
+    border:
+        1px solid
+        rgba(34,211,238,.14);
+
+    border-radius:
+        11px;
+
+    color:
+        #22d3ee;
+
+    background:
+        rgba(34,211,238,.035);
+
+    font-size:
+        .85rem;
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255,255,255,.025);
+
+    transition:
+
+        transform .4s
+        cubic-bezier(.22,1,.36,1),
+
+        background .3s ease,
+
+        border-color .3s ease;
+
+}
+
+
+.ai-auto-service-card:hover
+.ai-auto-card-top i {
+
+    transform:
+        translateY(-3px)
+        scale(1.05);
+
+    border-color:
+        rgba(34,211,238,.30);
+
+    background:
+        rgba(34,211,238,.065);
+
+}
+
+
+/* ==========================================================
+   05 — CARD CONTENT
+========================================================== */
+
+.ai-auto-card-content {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    margin-top:
+        32px;
+
+}
+
+
+.ai-auto-card-content h3 {
+
+    margin:
+        0;
+
+    color:
+        #edf5f8;
+
+    font-size:
+        1.05rem;
+
+    font-weight:
+        800;
+
+    line-height:
+        1.2;
+
+    letter-spacing:
+        -.025em;
+
+}
+
+
+.ai-auto-card-content p {
+
+    margin:
+        13px 0 0;
+
+    color:
+        #8196a8;
+
+    font-size:
+        .70rem;
+
+    line-height:
+        1.75;
+
+}
+
+
+/* ==========================================================
+   06 — CARD TAGS
+========================================================== */
+
+.ai-auto-card-tags {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        6px;
+
+    margin-top:
+        auto;
+
+    padding-top:
+        25px;
+
+}
+
+
+.ai-auto-card-tags span {
+
+    padding:
+        6px 9px;
+
+    border:
+        1px solid
+        rgba(148,163,184,.09);
+
+    border-radius:
+        6px;
+
+    color:
+        #61798b;
+
+    background:
+        rgba(148,163,184,.018);
+
+    font-size:
+        .40rem;
+
+    font-weight:
+        700;
+
+}
+
+
+/* ==========================================================
+   07 — CARD LINK
+========================================================== */
+
+.ai-auto-card-link {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        10px;
+
+    margin-top:
+        18px;
+
+    padding-top:
+        15px;
+
+    border-top:
+        1px solid
+        rgba(148,163,184,.07);
+
+    color:
+        #6f8799;
+
+    font-size:
+        .47rem;
+
+    font-weight:
+        800;
+
+    text-decoration:
+        none;
+
+    transition:
+        color .3s ease;
+
+}
+
+
+.ai-auto-card-link i {
+
+    font-size:
+        .45rem;
+
+    transition:
+        transform .35s
+        cubic-bezier(.22,1,.36,1);
+
+}
+
+
+.ai-auto-card-link:hover {
+
+    color:
+        #67e8f9;
+
+}
+
+
+.ai-auto-card-link:hover i {
+
+    transform:
+        translate(3px,-3px);
+
+}
+
+
+/* ==========================================================
+   08 — FEATURED CUSTOM AI
+========================================================== */
+
+.ai-auto-service-card-featured {
+
+    border-color:
+        rgba(168,85,247,.16);
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(17,20,42,.84),
+            rgba(5,13,25,.94)
+        );
+
+}
+
+
+.ai-auto-service-card-featured::before {
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(168,85,247,.35),
+            rgba(34,211,238,.25),
+            transparent
+        );
+
+}
+
+
+.ai-auto-service-card-featured
+.ai-auto-card-top i {
+
+    color:
+        #c084fc;
+
+    border-color:
+        rgba(168,85,247,.18);
+
+    background:
+        rgba(168,85,247,.035);
+
+}
+
+
+.ai-auto-service-card-featured:hover {
+
+    border-color:
+        rgba(168,85,247,.32);
+
+    box-shadow:
+
+        0 28px 65px
+        rgba(0,0,0,.30),
+
+        0 0 38px
+        rgba(168,85,247,.045);
+
+}
+
+
+/* ==========================================================
+   09 — CARD NUMBER ACCENT
+========================================================== */
+
+.ai-auto-service-card:nth-child(1)
+.ai-auto-card-top span,
+.ai-auto-service-card:nth-child(2)
+.ai-auto-card-top span {
+
+    color:
+        #22d3ee;
+
+}
+
+
+.ai-auto-service-card:nth-child(3)
+.ai-auto-card-top span,
+.ai-auto-service-card:nth-child(4)
+.ai-auto-card-top span {
+
+    color:
+        #60a5fa;
+
+}
+
+
+.ai-auto-service-card:nth-child(5)
+.ai-auto-card-top span,
+.ai-auto-service-card:nth-child(6)
+.ai-auto-card-top span {
+
+    color:
+        #818cf8;
+
+}
+
+
+.ai-auto-service-card:nth-child(7)
+.ai-auto-card-top span {
+
+    color:
+        #a78bfa;
+
+}
+
+
+.ai-auto-service-card:nth-child(8)
+.ai-auto-card-top span {
+
+    color:
+        #c084fc;
+
+}
+
+
+/* ==========================================================
+   10 — SERVICE CARD ENTRANCE
+========================================================== */
+
+.ai-auto-service-card {
+
+    opacity:
+        0;
+
+    animation:
+        aiServiceCardReveal
+        .7s
+        cubic-bezier(.22,1,.36,1)
+        forwards;
+
+}
+
+
+.ai-auto-service-card:nth-child(1) {
+
+    animation-delay:
+        .05s;
+
+}
+
+
+.ai-auto-service-card:nth-child(2) {
+
+    animation-delay:
+        .10s;
+
+}
+
+
+.ai-auto-service-card:nth-child(3) {
+
+    animation-delay:
+        .15s;
+
+}
+
+
+.ai-auto-service-card:nth-child(4) {
+
+    animation-delay:
+        .20s;
+
+}
+
+
+.ai-auto-service-card:nth-child(5) {
+
+    animation-delay:
+        .25s;
+
+}
+
+
+.ai-auto-service-card:nth-child(6) {
+
+    animation-delay:
+        .30s;
+
+}
+
+
+.ai-auto-service-card:nth-child(7) {
+
+    animation-delay:
+        .35s;
+
+}
+
+
+.ai-auto-service-card:nth-child(8) {
+
+    animation-delay:
+        .40s;
+
+}
+
+
+@keyframes aiServiceCardReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(24px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   11 — LAPTOP
+========================================================== */
+
+@media (max-width: 1150px) {
+
+    .ai-auto-service-grid {
+
+        grid-template-columns:
+            repeat(3, minmax(0,1fr));
+
+    }
+
+}
+
+
+/* ==========================================================
+   12 — TABLET
+========================================================== */
+
+@media (max-width: 900px) {
+
+    .ai-auto-section-heading {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            25px;
+
+        margin-bottom:
+            45px;
+
+    }
+
+    .ai-auto-section-heading h2 {
+
+        font-size:
+            clamp(
+                2.5rem,
+                6vw,
+                4rem
+            );
+
+    }
+
+    .ai-auto-service-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0,1fr));
+
+    }
+
+}
+
+
+/* ==========================================================
+   13 — MOBILE
+========================================================== */
+
+@media (max-width: 600px) {
+
+    .ai-auto-section-heading {
+
+        gap:
+            20px;
+
+        margin-bottom:
+            32px;
+
+    }
+
+    .ai-auto-section-heading h2 {
+
+        font-size:
+            clamp(
+                2.2rem,
+                10vw,
+                3.4rem
+            );
+
+    }
+
+    .ai-auto-section-heading p {
+
+        margin-top:
+            17px;
+
+        font-size:
+            .78rem;
+
+        line-height:
+            1.75;
+
+    }
+
+    .ai-auto-section-label {
+
+        font-size:
+            .51rem;
+
+    }
+
+    .ai-auto-section-label span {
+
+        width:
+            27px;
+
+        height:
+            22px;
+
+    }
+
+    .ai-auto-service-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            12px;
+
+    }
+
+    .ai-auto-service-card {
+
+        min-height:
+            315px;
+
+        padding:
+            21px;
+
+    }
+
+    .ai-auto-card-content {
+
+        margin-top:
+            27px;
+
+    }
+
+    .ai-auto-card-content h3 {
+
+        font-size:
+            1.15rem;
+
+    }
+
+    .ai-auto-card-content p {
+
+        font-size:
+            .76rem;
+
+    }
+
+    .ai-auto-card-link {
+
+        font-size:
+            .50rem;
+
+    }
+
+}
+
+
+/* ==========================================================
+   14 — SMALL MOBILE
+========================================================== */
+
+@media (max-width: 420px) {
+
+    .ai-auto-section-heading h2 {
+
+        font-size:
+            2.15rem;
+
+    }
+
+    .ai-auto-section-heading p {
+
+        font-size:
+            .73rem;
+
+    }
+
+    .ai-auto-service-card {
+
+        min-height:
+            300px;
+
+        padding:
+            18px;
+
+        border-radius:
+            15px;
+
+    }
+
+    .ai-auto-card-top i {
+
+        width:
+            40px;
+
+        height:
+            40px;
+
+        font-size:
+            .78rem;
+
+    }
+
+    .ai-auto-card-content h3 {
+
+        font-size:
+            1.05rem;
+
+    }
+
+    .ai-auto-card-content p {
+
+        font-size:
+            .71rem;
+
+    }
+
+}

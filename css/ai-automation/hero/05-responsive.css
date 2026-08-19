@@ -1,0 +1,959 @@
+/* ==========================================================
+   SHADOW15 — AI AUTOMATION
+   05-RESPONSIVE.CSS
+========================================================== */
+
+
+/* ==========================================================
+   01 — LARGE DESKTOP
+========================================================== */
+
+@media (min-width: 1440px) {
+
+    .ai-auto-page > section > .container {
+
+        max-width:
+            1380px;
+
+    }
+
+    .ai-auto-intro {
+
+        min-height:
+            820px;
+
+    }
+
+    .ai-auto-service-grid {
+
+        gap:
+            16px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   02 — DESKTOP / LAPTOP
+========================================================== */
+
+@media (max-width: 1200px) {
+
+    .ai-auto-intro > .container {
+
+        gap:
+            50px;
+
+    }
+
+    .ai-auto-intro h1 {
+
+        font-size:
+            clamp(
+                3.7rem,
+                6vw,
+                6rem
+            );
+
+    }
+
+    .ai-auto-service-card {
+
+        min-height:
+            340px;
+
+        padding:
+            21px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   03 — TABLET LANDSCAPE
+========================================================== */
+
+@media (max-width: 1050px) {
+
+    .ai-auto-intro {
+
+        min-height:
+            auto;
+
+    }
+
+    .ai-auto-intro > .container {
+
+        grid-template-columns:
+            1fr
+            .72fr;
+
+        gap:
+            35px;
+
+    }
+
+    .ai-auto-core {
+
+        max-width:
+            420px;
+
+    }
+
+    .ai-auto-service-grid {
+
+        grid-template-columns:
+            repeat(3, minmax(0,1fr));
+
+    }
+
+    .ai-auto-process-flow {
+
+        grid-template-columns:
+            repeat(2, minmax(0,1fr));
+
+    }
+
+    .ai-auto-process-line {
+
+        display:
+            none;
+
+    }
+
+    .ai-auto-impact-panel {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            45px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   04 — TABLET PORTRAIT
+========================================================== */
+
+@media (max-width: 900px) {
+
+    .ai-auto-intro {
+
+        padding:
+            120px 0 100px;
+
+    }
+
+    .ai-auto-intro > .container {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            65px;
+
+    }
+
+    .ai-auto-intro-content {
+
+        max-width:
+            760px;
+
+        margin:
+            0 auto;
+
+        text-align:
+            center;
+
+    }
+
+    .ai-auto-intro h1 {
+
+        margin:
+            0 auto;
+
+    }
+
+    .ai-auto-intro p {
+
+        margin:
+            27px auto 0;
+
+    }
+
+    .ai-auto-intro-actions {
+
+        justify-content:
+            center;
+
+    }
+
+    .ai-auto-intro-metrics {
+
+        margin:
+            45px auto 0;
+
+    }
+
+    .ai-auto-core {
+
+        max-width:
+            410px;
+
+    }
+
+    .ai-auto-section-heading {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            25px;
+
+    }
+
+    .ai-auto-service-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0,1fr));
+
+    }
+
+}
+
+
+/* ==========================================================
+   05 — SMALL TABLET
+========================================================== */
+
+@media (max-width: 750px) {
+
+    .ai-auto-services {
+
+        padding:
+            95px 0 105px;
+
+    }
+
+    .ai-auto-process {
+
+        padding:
+            95px 0;
+
+    }
+
+    .ai-auto-impact {
+
+        padding:
+            80px 0 95px;
+
+    }
+
+    .ai-auto-cta {
+
+        padding:
+            95px 0 110px;
+
+    }
+
+    .ai-auto-process-flow {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            12px;
+
+    }
+
+    .ai-auto-process-step {
+
+        min-height:
+            215px;
+
+    }
+
+    .ai-auto-impact-panel {
+
+        padding:
+            42px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   06 — MOBILE
+========================================================== */
+
+@media (max-width: 600px) {
+
+    /* PAGE */
+
+    .ai-auto-page {
+
+        width:
+            100%;
+
+        overflow:
+            hidden;
+
+    }
+
+
+    /* INTRO */
+
+    .ai-auto-intro {
+
+        min-height:
+            auto;
+
+        padding:
+            105px 0 80px;
+
+    }
+
+    .ai-auto-intro > .container {
+
+        display:
+            flex;
+
+        flex-direction:
+            column;
+
+        gap:
+            55px;
+
+    }
+
+    .ai-auto-intro-content {
+
+        width:
+            100%;
+
+        text-align:
+            center;
+
+    }
+
+    .ai-auto-intro h1 {
+
+        font-size:
+            clamp(
+                3rem,
+                12vw,
+                4.2rem
+            );
+
+        line-height:
+            .94;
+
+    }
+
+    .ai-auto-intro p {
+
+        max-width:
+            540px;
+
+        font-size:
+            .88rem;
+
+        line-height:
+            1.78;
+
+    }
+
+
+    /* INTRO ACTIONS */
+
+    .ai-auto-intro-actions {
+
+        width:
+            100%;
+
+        flex-direction:
+            column;
+
+        align-items:
+            stretch;
+
+    }
+
+    .ai-auto-primary-btn,
+    .ai-auto-secondary-btn {
+
+        width:
+            100%;
+
+    }
+
+
+    /* METRICS */
+
+    .ai-auto-intro-metrics {
+
+        width:
+            100%;
+
+    }
+
+    .ai-auto-intro-metrics > div {
+
+        padding:
+            14px 7px;
+
+        text-align:
+            center;
+
+    }
+
+    .ai-auto-intro-metrics strong {
+
+        font-size:
+            1rem;
+
+    }
+
+    .ai-auto-intro-metrics span {
+
+        font-size:
+            .38rem;
+
+    }
+
+
+    /* CORE */
+
+    .ai-auto-core {
+
+        width:
+            min(88vw, 350px);
+
+    }
+
+    .ai-auto-core-center {
+
+        width:
+            110px;
+
+        height:
+            110px;
+
+    }
+
+    .ai-auto-core-node {
+
+        width:
+            61px;
+
+        height:
+            61px;
+
+        border-radius:
+            13px;
+
+    }
+
+
+    /* SERVICES */
+
+    .ai-auto-services {
+
+        padding:
+            80px 0 90px;
+
+    }
+
+    .ai-auto-section-heading {
+
+        gap:
+            20px;
+
+        margin-bottom:
+            35px;
+
+    }
+
+    .ai-auto-section-heading h2 {
+
+        font-size:
+            clamp(
+                2.2rem,
+                10vw,
+                3.5rem
+            );
+
+    }
+
+    .ai-auto-section-heading p {
+
+        font-size:
+            .78rem;
+
+        line-height:
+            1.75;
+
+    }
+
+    .ai-auto-service-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            12px;
+
+    }
+
+    .ai-auto-service-card {
+
+        min-height:
+            310px;
+
+        padding:
+            21px;
+
+    }
+
+
+    /* PROCESS */
+
+    .ai-auto-process {
+
+        padding:
+            80px 0;
+
+    }
+
+    .ai-auto-process-heading {
+
+        margin-bottom:
+            35px;
+
+    }
+
+    .ai-auto-process-heading h2 {
+
+        font-size:
+            clamp(
+                2.25rem,
+                10vw,
+                3.5rem
+            );
+
+    }
+
+    .ai-auto-process-step {
+
+        min-height:
+            200px;
+
+        padding:
+            22px 20px;
+
+    }
+
+
+    /* IMPACT */
+
+    .ai-auto-impact {
+
+        padding:
+            70px 0 85px;
+
+    }
+
+    .ai-auto-impact-panel {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            35px;
+
+        padding:
+            30px 20px;
+
+        border-radius:
+            19px;
+
+    }
+
+    .ai-auto-impact-copy h2 {
+
+        font-size:
+            2.35rem;
+
+    }
+
+    .ai-auto-impact-copy p {
+
+        font-size:
+            .76rem;
+
+    }
+
+    .ai-auto-impact-stats {
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+    }
+
+    .ai-auto-impact-stats > div {
+
+        min-height:
+            100px;
+
+        padding:
+            17px;
+
+    }
+
+
+    /* CTA */
+
+    .ai-auto-cta {
+
+        padding:
+            80px 0 100px;
+
+    }
+
+    .ai-auto-cta-box {
+
+        min-height:
+            380px;
+
+        border-radius:
+            20px;
+
+    }
+
+    .ai-auto-cta-box::before {
+
+        inset:
+            11px;
+
+        border-radius:
+            15px;
+
+    }
+
+    .ai-auto-cta-content {
+
+        width:
+            100%;
+
+        padding:
+            35px 18px;
+
+    }
+
+    .ai-auto-cta-content h2 {
+
+        font-size:
+            2.5rem;
+
+    }
+
+    .ai-auto-cta-content p {
+
+        font-size:
+            .75rem;
+
+    }
+
+    .ai-auto-cta-btn {
+
+        width:
+            100%;
+
+    }
+
+    .ai-auto-cta-orbit {
+
+        width:
+            550px;
+
+        height:
+            220px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   07 — SMALL MOBILE
+========================================================== */
+
+@media (max-width: 480px) {
+
+    .ai-auto-intro {
+
+        padding:
+            92px 0 72px;
+
+    }
+
+    .ai-auto-intro h1 {
+
+        font-size:
+            2.85rem;
+
+    }
+
+    .ai-auto-intro p {
+
+        font-size:
+            .82rem;
+
+    }
+
+    .ai-auto-intro-metrics > div {
+
+        padding:
+            12px 5px;
+
+    }
+
+    .ai-auto-intro-metrics strong {
+
+        font-size:
+            .92rem;
+
+    }
+
+    .ai-auto-intro-metrics span {
+
+        font-size:
+            .34rem;
+
+    }
+
+    .ai-auto-core {
+
+        width:
+            315px;
+
+    }
+
+    .ai-auto-core-center {
+
+        width:
+            98px;
+
+        height:
+            98px;
+
+    }
+
+    .ai-auto-core-node {
+
+        width:
+            55px;
+
+        height:
+            55px;
+
+    }
+
+    .ai-auto-service-card {
+
+        min-height:
+            295px;
+
+        padding:
+            19px;
+
+    }
+
+    .ai-auto-card-content h3 {
+
+        font-size:
+            1.08rem;
+
+    }
+
+    .ai-auto-card-content p {
+
+        font-size:
+            .72rem;
+
+    }
+
+    .ai-auto-process-step {
+
+        min-height:
+            190px;
+
+    }
+
+    .ai-auto-impact-panel {
+
+        padding:
+            27px 17px;
+
+    }
+
+    .ai-auto-impact-copy h2 {
+
+        font-size:
+            2.15rem;
+
+    }
+
+    .ai-auto-impact-stats > div {
+
+        min-height:
+            90px;
+
+        padding:
+            14px;
+
+    }
+
+    .ai-auto-impact-stats strong {
+
+        font-size:
+            1.15rem;
+
+    }
+
+    .ai-auto-cta-box {
+
+        min-height:
+            350px;
+
+    }
+
+    .ai-auto-cta-content h2 {
+
+        font-size:
+            2.25rem;
+
+    }
+
+}
+
+
+/* ==========================================================
+   08 — VERY SMALL MOBILE
+========================================================== */
+
+@media (max-width: 380px) {
+
+    .ai-auto-intro h1 {
+
+        font-size:
+            2.55rem;
+
+    }
+
+    .ai-auto-intro p {
+
+        font-size:
+            .76rem;
+
+    }
+
+    .ai-auto-core {
+
+        width:
+            285px;
+
+    }
+
+    .ai-auto-core-center {
+
+        width:
+            90px;
+
+        height:
+            90px;
+
+    }
+
+    .ai-auto-core-node {
+
+        width:
+            50px;
+
+        height:
+            50px;
+
+    }
+
+    .ai-auto-service-card {
+
+        min-height:
+            285px;
+
+    }
+
+    .ai-auto-cta-content h2 {
+
+        font-size:
+            2.05rem;
+
+    }
+
+}
+
+
+/* ==========================================================
+   09 — TOUCH DEVICES
+========================================================== */
+
+@media (hover: none) {
+
+    .ai-auto-service-card:hover,
+    .ai-auto-process-step:hover,
+    .ai-auto-impact-stats > div:hover {
+
+        transform:
+            none;
+
+    }
+
+    .ai-auto-primary-btn:hover,
+    .ai-auto-secondary-btn:hover,
+    .ai-auto-cta-btn:hover {
+
+        transform:
+            none;
+
+    }
+
+}
+
+
+/* ==========================================================
+   10 — REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .ai-auto-page *,
+    .ai-auto-page *::before,
+    .ai-auto-page *::after {
+
+        animation:
+            none !important;
+
+        transition:
+            none !important;
+
+        scroll-behavior:
+            auto !important;
+
+    }
+
+}

@@ -10,14 +10,55 @@
         ELEMENTS
     ==========================================*/
 
-    const dock = document.getElementById("s15xDock");
-    const drawer = document.getElementById("s15xDrawer");
-    const backdrop = document.getElementById("s15xBackdrop");
-    const hamburger = document.getElementById("s15xHamburger");
-    const drawerClose = document.getElementById("s15xDrawerClose");
+    const dock =
+        document.getElementById("s15xDock");
 
-    const accordions = document.querySelectorAll(".s15x-mobile-dropdown");
-    const drawerLinks = drawer.querySelectorAll("a");
+    const drawer =
+        document.getElementById("s15xDrawer");
+
+    const backdrop =
+        document.getElementById("s15xBackdrop");
+
+    const hamburger =
+        document.getElementById("s15xHamburger");
+
+    const drawerClose =
+        document.getElementById("s15xDrawerClose");
+
+
+    /*==========================================
+        SAFETY CHECK
+    ==========================================*/
+
+    if (
+        !dock ||
+        !drawer ||
+        !backdrop ||
+        !hamburger ||
+        !drawerClose
+    ) {
+
+        console.warn(
+            "SHADOW15 Navigation: Required navigation elements are missing."
+        );
+
+        return;
+
+    }
+
+
+    /*==========================================
+        MOBILE ELEMENTS
+    ==========================================*/
+
+    const accordions =
+        document.querySelectorAll(
+            ".s15x-mobile-dropdown"
+        );
+
+    const drawerLinks =
+        drawer.querySelectorAll("a");
+
 
     /*==========================================
         SCROLL EFFECT
@@ -32,13 +73,18 @@
 
     }
 
+
     window.addEventListener(
         "scroll",
         updateNavbar,
-        { passive:true }
+        {
+            passive: true
+        }
     );
 
+
     updateNavbar();
+
 
     /*==========================================
         BODY LOCK
@@ -47,16 +93,24 @@
     function lockBody(){
 
         document.body.style.overflow = "hidden";
-        document.body.classList.add("drawer-open");
+
+        document.body.classList.add(
+            "drawer-open"
+        );
 
     }
+
 
     function unlockBody(){
 
         document.body.style.overflow = "";
-        document.body.classList.remove("drawer-open");
+
+        document.body.classList.remove(
+            "drawer-open"
+        );
 
     }
+
 
     /*==========================================
         OPEN DRAWER
@@ -64,25 +118,46 @@
 
     function openDrawer(){
 
-        if(drawer.classList.contains("is-active")) return;
+        if(
+            drawer.classList.contains(
+                "is-active"
+            )
+        ){
 
-        drawer.classList.add("is-active");
-        backdrop.classList.add("is-active");
-        hamburger.classList.add("is-active");
+            return;
+
+        }
+
+
+        drawer.classList.add(
+            "is-active"
+        );
+
+        backdrop.classList.add(
+            "is-active"
+        );
+
+        hamburger.classList.add(
+            "is-active"
+        );
+
 
         hamburger.setAttribute(
             "aria-expanded",
             "true"
         );
 
+
         drawer.setAttribute(
             "aria-hidden",
             "false"
         );
 
+
         lockBody();
 
     }
+
 
     /*==========================================
         CLOSE DRAWER
@@ -90,34 +165,49 @@
 
     function closeDrawer(){
 
-        drawer.classList.remove("is-active");
-        backdrop.classList.remove("is-active");
-        hamburger.classList.remove("is-active");
+        drawer.classList.remove(
+            "is-active"
+        );
+
+        backdrop.classList.remove(
+            "is-active"
+        );
+
+        hamburger.classList.remove(
+            "is-active"
+        );
+
 
         hamburger.setAttribute(
             "aria-expanded",
             "false"
         );
 
+
         drawer.setAttribute(
             "aria-hidden",
             "true"
         );
 
+
         unlockBody();
+
 
         /* Close all accordions */
 
-        accordions.forEach(item=>{
+        accordions.forEach(item => {
 
-            item.classList.remove("is-open");
+            item.classList.remove(
+                "is-open"
+            );
 
         });
 
     }
 
+
     /*==========================================
-        BUTTON EVENTS
+        HAMBURGER
     ==========================================*/
 
     hamburger.addEventListener(
@@ -125,21 +215,32 @@
         openDrawer
     );
 
+
+    /*==========================================
+        DRAWER CLOSE
+    ==========================================*/
+
     drawerClose.addEventListener(
         "click",
         closeDrawer
     );
+
+
+    /*==========================================
+        BACKDROP CLOSE
+    ==========================================*/
 
     backdrop.addEventListener(
         "click",
         closeDrawer
     );
 
+
     /*==========================================
-        CLOSE AFTER CLICKING A LINK
+        CLOSE AFTER LINK CLICK
     ==========================================*/
 
-    drawerLinks.forEach(link=>{
+    drawerLinks.forEach(link => {
 
         link.addEventListener(
             "click",
@@ -148,17 +249,20 @@
 
     });
 
+
     /*==========================================
         ESC KEY
     ==========================================*/
 
     document.addEventListener(
         "keydown",
-        e=>{
+        event => {
 
-            if(
-                e.key==="Escape" &&
-                drawer.classList.contains("is-active")
+            if (
+                event.key === "Escape" &&
+                drawer.classList.contains(
+                    "is-active"
+                )
             ){
 
                 closeDrawer();
@@ -168,25 +272,36 @@
         }
     );
 
+
     /*==========================================
         MOBILE ACCORDION
     ==========================================*/
 
-    accordions.forEach(item=>{
+    accordions.forEach(item => {
 
-        const trigger = item.querySelector(
-            ".s15x-mobile-trigger"
-        );
+        const trigger =
+            item.querySelector(
+                ".s15x-mobile-trigger"
+            );
 
-        if(!trigger) return;
+
+        if(!trigger){
+
+            return;
+
+        }
+
 
         trigger.addEventListener(
             "click",
-            ()=>{
+            event => {
 
-                accordions.forEach(other=>{
+                event.preventDefault();
 
-                    if(other!==item){
+
+                accordions.forEach(other => {
+
+                    if(other !== item){
 
                         other.classList.remove(
                             "is-open"
@@ -195,6 +310,7 @@
                     }
 
                 });
+
 
                 item.classList.toggle(
                     "is-open"
@@ -205,15 +321,18 @@
 
     });
 
+
     /*==========================================
         RESET ON DESKTOP
     ==========================================*/
 
     window.addEventListener(
         "resize",
-        ()=>{
+        () => {
 
-            if(window.innerWidth > 1024){
+            if(
+                window.innerWidth > 1024
+            ){
 
                 closeDrawer();
 
@@ -221,5 +340,6 @@
 
         }
     );
+
 
 })();

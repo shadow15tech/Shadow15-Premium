@@ -1,0 +1,1254 @@
+/* ==========================================================
+   SHADOW15 — CONTACT FORM
+   03-FORM.CSS
+========================================================== */
+
+
+/* ==========================================================
+   01 — FORM
+========================================================== */
+
+.contact-form {
+
+    position:
+        relative;
+
+    z-index:
+        3;
+
+    width:
+        100%;
+
+}
+
+
+/* ==========================================================
+   02 — FORM ROW
+========================================================== */
+
+.contact-form-row {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap:
+        18px;
+
+    margin-bottom:
+        18px;
+
+}
+
+
+/* ==========================================================
+   03 — FIELD
+========================================================== */
+
+.contact-field {
+
+    position:
+        relative;
+
+    min-width:
+        0;
+
+}
+
+
+.contact-field-full {
+
+    width:
+        100%;
+
+    margin-bottom:
+        22px;
+
+}
+
+
+/* ==========================================================
+   04 — LABEL
+========================================================== */
+
+.contact-field label {
+
+    display:
+        block;
+
+    margin:
+        0 0 9px;
+
+    color:
+        #8fa3b4;
+
+    font-size:
+        .53rem;
+
+    font-weight:
+        750;
+
+    letter-spacing:
+        .06em;
+
+}
+
+
+.contact-field label span {
+
+    margin-left:
+        3px;
+
+    color:
+        #22d3ee;
+
+}
+
+
+/* ==========================================================
+   05 — INPUT WRAPPER
+========================================================== */
+
+.contact-input-wrap {
+
+    position:
+        relative;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    width:
+        100%;
+
+    height:
+        57px;
+
+    border:
+        1px solid
+        rgba(148,163,184,.12);
+
+    border-radius:
+        11px;
+
+    background:
+        rgba(148,163,184,.018);
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255,255,255,.018);
+
+    transition:
+
+        border-color .3s ease,
+
+        background .3s ease,
+
+        box-shadow .3s ease,
+
+        transform .3s
+        cubic-bezier(.22,1,.36,1);
+
+}
+
+
+.contact-input-wrap > i {
+
+    width:
+        48px;
+
+    flex:
+        0 0 48px;
+
+    color:
+        #50687b;
+
+    font-size:
+        .72rem;
+
+    text-align:
+        center;
+
+    transition:
+        color .3s ease;
+
+}
+
+
+/* ==========================================================
+   06 — INPUT
+========================================================== */
+
+.contact-input-wrap input {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    padding:
+        0 15px 0 0;
+
+    border:
+        0;
+
+    outline:
+        0;
+
+    color:
+        #dce7ee;
+
+    background:
+        transparent;
+
+    font-family:
+        inherit;
+
+    font-size:
+        .70rem;
+
+}
+
+
+.contact-input-wrap input::placeholder {
+
+    color:
+        #4e6476;
+
+    opacity:
+        1;
+
+}
+
+
+/* ==========================================================
+   07 — FOCUS
+========================================================== */
+
+.contact-input-wrap:focus-within {
+
+    border-color:
+        rgba(34,211,238,.38);
+
+    background:
+        rgba(34,211,238,.018);
+
+    box-shadow:
+
+        0 0 0 3px
+        rgba(34,211,238,.035),
+
+        inset 0 1px 0
+        rgba(255,255,255,.025);
+
+    transform:
+        translateY(-1px);
+
+}
+
+
+.contact-input-wrap:focus-within > i {
+
+    color:
+        #22d3ee;
+
+}
+
+
+/* ==========================================================
+   08 — SELECT
+========================================================== */
+
+.contact-select-wrap select {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    padding:
+        0 42px 0 0;
+
+    border:
+        0;
+
+    outline:
+        0;
+
+    appearance:
+        none;
+
+    -webkit-appearance:
+        none;
+
+    color:
+        #dce7ee;
+
+    background:
+        transparent;
+
+    font-family:
+        inherit;
+
+    font-size:
+        .70rem;
+
+    cursor:
+        pointer;
+
+}
+
+
+.contact-select-wrap select:invalid {
+
+    color:
+        #4e6476;
+
+}
+
+
+.contact-select-wrap select option {
+
+    color:
+        #dce7ee;
+
+    background:
+        #071321;
+
+}
+
+
+.contact-select-arrow {
+
+    position:
+        absolute;
+
+    top:
+        50%;
+
+    right:
+        16px;
+
+    width:
+        auto !important;
+
+    transform:
+        translateY(-50%);
+
+    color:
+        #526a7d !important;
+
+    font-size:
+        .48rem !important;
+
+    pointer-events:
+        none;
+
+}
+
+
+/* ==========================================================
+   09 — TEXTAREA
+========================================================== */
+
+.contact-textarea-wrap {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    min-height:
+        190px;
+
+    border:
+        1px solid
+        rgba(148,163,184,.12);
+
+    border-radius:
+        12px;
+
+    background:
+        rgba(148,163,184,.018);
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255,255,255,.018);
+
+    transition:
+
+        border-color .3s ease,
+
+        background .3s ease,
+
+        box-shadow .3s ease;
+
+}
+
+
+.contact-textarea-wrap > i {
+
+    position:
+        absolute;
+
+    top:
+        20px;
+
+    left:
+        17px;
+
+    color:
+        #50687b;
+
+    font-size:
+        .72rem;
+
+    pointer-events:
+        none;
+
+    transition:
+        color .3s ease;
+
+}
+
+
+.contact-textarea-wrap textarea {
+
+    display:
+        block;
+
+    width:
+        100%;
+
+    min-height:
+        190px;
+
+    padding:
+        19px 18px 35px 48px;
+
+    resize:
+        vertical;
+
+    border:
+        0;
+
+    outline:
+        0;
+
+    color:
+        #dce7ee;
+
+    background:
+        transparent;
+
+    font-family:
+        inherit;
+
+    font-size:
+        .70rem;
+
+    line-height:
+        1.7;
+
+}
+
+
+.contact-textarea-wrap textarea::placeholder {
+
+    color:
+        #4e6476;
+
+    opacity:
+        1;
+
+}
+
+
+.contact-textarea-wrap:focus-within {
+
+    border-color:
+        rgba(34,211,238,.38);
+
+    background:
+        rgba(34,211,238,.018);
+
+    box-shadow:
+
+        0 0 0 3px
+        rgba(34,211,238,.035),
+
+        inset 0 1px 0
+        rgba(255,255,255,.025);
+
+}
+
+
+.contact-textarea-wrap:focus-within > i {
+
+    color:
+        #22d3ee;
+
+}
+
+
+/* ==========================================================
+   10 — CHARACTER COUNT
+========================================================== */
+
+.contact-character-count {
+
+    position:
+        absolute;
+
+    right:
+        15px;
+
+    bottom:
+        11px;
+
+    color:
+        #405669;
+
+    font-size:
+        .42rem;
+
+    font-weight:
+        650;
+
+    pointer-events:
+        none;
+
+}
+
+
+/* ==========================================================
+   11 — PREFERRED CONTACT
+========================================================== */
+
+.contact-preferred {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        25px;
+
+    padding:
+        18px 0;
+
+    border-top:
+        1px solid
+        rgba(148,163,184,.075);
+
+    border-bottom:
+        1px solid
+        rgba(148,163,184,.075);
+
+}
+
+
+.contact-preferred-label {
+
+    min-width:
+        180px;
+
+}
+
+
+.contact-preferred-label span {
+
+    display:
+        block;
+
+    color:
+        #8ca1b2;
+
+    font-size:
+        .52rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .10em;
+
+}
+
+
+.contact-preferred-label small {
+
+    display:
+        block;
+
+    margin-top:
+        5px;
+
+    color:
+        #506678;
+
+    font-size:
+        .43rem;
+
+}
+
+
+/* ==========================================================
+   12 — RADIO OPTIONS
+========================================================== */
+
+.contact-preferred-options {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        8px;
+
+}
+
+
+.contact-radio {
+
+    position:
+        relative;
+
+    cursor:
+        pointer;
+
+}
+
+
+.contact-radio input {
+
+    position:
+        absolute;
+
+    width:
+        1px;
+
+    height:
+        1px;
+
+    opacity:
+        0;
+
+}
+
+
+.contact-radio-ui {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        8px;
+
+    min-height:
+        40px;
+
+    padding:
+        0 13px;
+
+    border:
+        1px solid
+        rgba(148,163,184,.10);
+
+    border-radius:
+        9px;
+
+    color:
+        #62788a;
+
+    background:
+        rgba(148,163,184,.018);
+
+    font-size:
+        .48rem;
+
+    font-weight:
+        700;
+
+    transition:
+
+        color .3s ease,
+
+        border-color .3s ease,
+
+        background .3s ease,
+
+        transform .3s
+        cubic-bezier(.22,1,.36,1);
+
+}
+
+
+.contact-radio-ui i {
+
+    font-size:
+        .58rem;
+
+}
+
+
+.contact-radio input:checked
++ .contact-radio-ui {
+
+    color:
+        #67e8f9;
+
+    border-color:
+        rgba(34,211,238,.30);
+
+    background:
+        rgba(34,211,238,.035);
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255,255,255,.025);
+
+}
+
+
+.contact-radio:hover
+.contact-radio-ui {
+
+    transform:
+        translateY(-2px);
+
+    border-color:
+        rgba(34,211,238,.20);
+
+}
+
+
+/* ==========================================================
+   13 — FORM FOOTER
+========================================================== */
+
+.contact-form-footer {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        25px;
+
+    margin-top:
+        25px;
+
+}
+
+
+/* ==========================================================
+   14 — FORM NOTE
+========================================================== */
+
+.contact-form-note {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        8px;
+
+    color:
+        #506679;
+
+    font-size:
+        .46rem;
+
+}
+
+
+.contact-form-note i {
+
+    color:
+        #3b82f6;
+
+    font-size:
+        .62rem;
+
+}
+
+
+/* ==========================================================
+   15 — SUBMIT BUTTON
+========================================================== */
+
+.contact-submit {
+
+    position:
+        relative;
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        14px;
+
+    min-height:
+        56px;
+
+    padding:
+        0 24px;
+
+    overflow:
+        hidden;
+
+    border:
+        1px solid
+        rgba(34,211,238,.25);
+
+    border-radius:
+        10px;
+
+    color:
+        #eafcff;
+
+    background:
+
+        linear-gradient(
+            110deg,
+            rgba(34,211,238,.13),
+            rgba(96,165,250,.10),
+            rgba(168,85,247,.10)
+        );
+
+    box-shadow:
+
+        0 18px 40px
+        rgba(0,0,0,.20),
+
+        inset 0 1px 0
+        rgba(255,255,255,.055);
+
+    font-family:
+        inherit;
+
+    font-size:
+        .56rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .05em;
+
+    cursor:
+        pointer;
+
+    transition:
+
+        transform .35s
+        cubic-bezier(.22,1,.36,1),
+
+        border-color .3s ease,
+
+        box-shadow .35s ease,
+
+        background .3s ease;
+
+}
+
+
+.contact-submit::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        0;
+
+    left:
+        -120%;
+
+    width:
+        80%;
+
+    height:
+        100%;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.10),
+            transparent
+        );
+
+    transform:
+        skewX(-20deg);
+
+    transition:
+        left .65s
+        cubic-bezier(.22,1,.36,1);
+
+}
+
+
+.contact-submit span,
+.contact-submit i {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+}
+
+
+.contact-submit i {
+
+    font-size:
+        .55rem;
+
+    transition:
+        transform .35s
+        cubic-bezier(.22,1,.36,1);
+
+}
+
+
+.contact-submit:hover {
+
+    transform:
+        translateY(-4px);
+
+    border-color:
+        rgba(34,211,238,.45);
+
+    background:
+
+        linear-gradient(
+            110deg,
+            rgba(34,211,238,.18),
+            rgba(96,165,250,.14),
+            rgba(168,85,247,.14)
+        );
+
+    box-shadow:
+
+        0 25px 50px
+        rgba(0,0,0,.28),
+
+        0 0 35px
+        rgba(34,211,238,.07),
+
+        inset 0 1px 0
+        rgba(255,255,255,.08);
+
+}
+
+
+.contact-submit:hover::before {
+
+    left:
+        140%;
+
+}
+
+
+.contact-submit:hover i {
+
+    transform:
+        translate(3px,-3px);
+
+}
+
+
+.contact-submit:active {
+
+    transform:
+        translateY(-1px)
+        scale(.99);
+
+}
+
+
+/* ==========================================================
+   16 — INVALID FIELDS
+========================================================== */
+
+.contact-field input:user-invalid,
+.contact-field select:user-invalid,
+.contact-field textarea:user-invalid {
+
+    border-color:
+        rgba(248,113,113,.30);
+
+}
+
+
+.contact-field input:user-invalid:focus,
+.contact-field select:user-invalid:focus,
+.contact-field textarea:user-invalid:focus {
+
+    outline:
+        0;
+
+}
+
+
+/* ==========================================================
+   17 — TABLET
+========================================================== */
+
+@media (max-width: 750px) {
+
+    .contact-form-row {
+
+        gap:
+            13px;
+
+    }
+
+    .contact-preferred {
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+    }
+
+    .contact-preferred-label {
+
+        min-width:
+            0;
+
+    }
+
+    .contact-form-footer {
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+    }
+
+    .contact-submit {
+
+        width:
+            100%;
+
+    }
+
+}
+
+
+/* ==========================================================
+   18 — MOBILE
+========================================================== */
+
+@media (max-width: 600px) {
+
+    .contact-form-row {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            16px;
+
+        margin-bottom:
+            16px;
+
+    }
+
+    .contact-field-full {
+
+        margin-bottom:
+            18px;
+
+    }
+
+    .contact-input-wrap {
+
+        height:
+            53px;
+
+    }
+
+    .contact-input-wrap > i {
+
+        width:
+            44px;
+
+        flex-basis:
+            44px;
+
+    }
+
+    .contact-input-wrap input,
+    .contact-select-wrap select {
+
+        font-size:
+            .64rem;
+
+    }
+
+    .contact-field label {
+
+        margin-bottom:
+            7px;
+
+        font-size:
+            .49rem;
+
+    }
+
+    .contact-textarea-wrap,
+    .contact-textarea-wrap textarea {
+
+        min-height:
+            170px;
+
+    }
+
+    .contact-textarea-wrap textarea {
+
+        padding:
+            17px 15px 34px 44px;
+
+        font-size:
+            .64rem;
+
+    }
+
+    .contact-preferred-options {
+
+        width:
+            100%;
+
+        display:
+            grid;
+
+        grid-template-columns:
+            repeat(3,1fr);
+
+    }
+
+    .contact-radio-ui {
+
+        justify-content:
+            center;
+
+        width:
+            100%;
+
+        padding:
+            0 7px;
+
+    }
+
+    .contact-form-note {
+
+        font-size:
+            .42rem;
+
+    }
+
+}
+
+
+/* ==========================================================
+   19 — SMALL MOBILE
+========================================================== */
+
+@media (max-width: 420px) {
+
+    .contact-input-wrap {
+
+        height:
+            50px;
+
+    }
+
+    .contact-textarea-wrap,
+    .contact-textarea-wrap textarea {
+
+        min-height:
+            155px;
+
+    }
+
+    .contact-preferred-options {
+
+        gap:
+            5px;
+
+    }
+
+    .contact-radio-ui {
+
+        gap:
+            5px;
+
+        min-height:
+            37px;
+
+        font-size:
+            .42rem;
+
+    }
+
+    .contact-radio-ui i {
+
+        font-size:
+            .50rem;
+
+    }
+
+    .contact-submit {
+
+        min-height:
+            52px;
+
+        font-size:
+            .52rem;
+
+    }
+
+}

@@ -1,0 +1,622 @@
+/* ==========================================================
+   SHADOW15 — CONTACT FORM
+   04-ANIMATION.CSS
+========================================================== */
+
+
+/* ==========================================================
+   01 — SECTION REVEAL
+========================================================== */
+
+.contact-form-wrapper {
+
+    animation:
+        contactFormReveal
+        1s
+        cubic-bezier(.22,1,.36,1)
+        both;
+
+}
+
+
+@keyframes contactFormReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(38px)
+            scale(.985);
+
+        filter:
+            blur(5px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+        filter:
+            blur(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   02 — INTRO
+========================================================== */
+
+.contact-form-intro {
+
+    animation:
+        contactIntroReveal
+        .8s
+        cubic-bezier(.22,1,.36,1)
+        .15s
+        both;
+
+}
+
+
+@keyframes contactIntroReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(22px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   03 — GRADIENT HEADING
+========================================================== */
+
+.contact-form-heading span {
+
+    animation:
+        contactGradientFlow
+        5s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes contactGradientFlow {
+
+    0%,
+    100% {
+
+        background-position:
+            0% 50%;
+
+    }
+
+    50% {
+
+        background-position:
+            100% 50%;
+
+    }
+
+}
+
+
+/* ==========================================================
+   04 — FORM FIELDS
+========================================================== */
+
+.contact-form-row {
+
+    opacity:
+        0;
+
+    animation:
+        contactFieldsReveal
+        .65s
+        cubic-bezier(.22,1,.36,1)
+        both;
+
+}
+
+
+.contact-form-row:nth-of-type(1) {
+
+    animation-delay:
+        .35s;
+
+}
+
+
+.contact-form-row:nth-of-type(2) {
+
+    animation-delay:
+        .45s;
+
+}
+
+
+.contact-form-row:nth-of-type(3) {
+
+    animation-delay:
+        .55s;
+
+}
+
+
+@keyframes contactFieldsReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(18px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   05 — MESSAGE FIELD
+========================================================== */
+
+.contact-field-full {
+
+    animation:
+        contactMessageReveal
+        .65s
+        cubic-bezier(.22,1,.36,1)
+        .65s
+        both;
+
+}
+
+
+@keyframes contactMessageReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(18px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   06 — PREFERRED CONTACT
+========================================================== */
+
+.contact-preferred {
+
+    animation:
+        contactPreferredReveal
+        .6s
+        cubic-bezier(.22,1,.36,1)
+        .75s
+        both;
+
+}
+
+
+@keyframes contactPreferredReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(14px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   07 — RADIO OPTIONS
+========================================================== */
+
+.contact-radio {
+
+    opacity:
+        0;
+
+    animation:
+        contactRadioReveal
+        .45s
+        cubic-bezier(.22,1,.36,1)
+        both;
+
+}
+
+
+.contact-radio:nth-child(1) {
+
+    animation-delay:
+        .85s;
+
+}
+
+
+.contact-radio:nth-child(2) {
+
+    animation-delay:
+        .93s;
+
+}
+
+
+.contact-radio:nth-child(3) {
+
+    animation-delay:
+        1.01s;
+
+}
+
+
+@keyframes contactRadioReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(8px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   08 — FORM FOOTER
+========================================================== */
+
+.contact-form-footer {
+
+    animation:
+        contactFooterReveal
+        .65s
+        cubic-bezier(.22,1,.36,1)
+        .9s
+        both;
+
+}
+
+
+@keyframes contactFooterReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(15px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   09 — SUBMIT SHINE
+========================================================== */
+
+.contact-submit::before {
+
+    animation:
+        contactButtonShine
+        5s
+        ease-in-out
+        2s
+        infinite;
+
+}
+
+
+@keyframes contactButtonShine {
+
+    0%,
+    65%,
+    100% {
+
+        left:
+            -120%;
+
+    }
+
+    80% {
+
+        left:
+            140%;
+
+    }
+
+}
+
+
+/* ==========================================================
+   10 — INPUT ICON PULSE
+========================================================== */
+
+.contact-input-wrap:focus-within > i,
+.contact-textarea-wrap:focus-within > i {
+
+    animation:
+        contactIconPulse
+        .45s
+        ease-out;
+
+}
+
+
+@keyframes contactIconPulse {
+
+    0% {
+
+        transform:
+            scale(.85);
+
+        opacity:
+            .45;
+
+    }
+
+    60% {
+
+        transform:
+            scale(1.12);
+
+        opacity:
+            1;
+
+    }
+
+    100% {
+
+        transform:
+            scale(1);
+
+        opacity:
+            1;
+
+    }
+
+}
+
+
+/* ==========================================================
+   11 — BACKGROUND GLOW
+========================================================== */
+
+.contact-form-glow-cyan {
+
+    animation:
+        contactCyanGlow
+        9s
+        ease-in-out
+        infinite;
+
+}
+
+
+.contact-form-glow-purple {
+
+    animation:
+        contactPurpleGlow
+        11s
+        ease-in-out
+        1s
+        infinite;
+
+}
+
+
+@keyframes contactCyanGlow {
+
+    0%,
+    100% {
+
+        transform:
+            translate3d(0,0,0)
+            scale(1);
+
+        opacity:
+            .55;
+
+    }
+
+    50% {
+
+        transform:
+            translate3d(35px,-25px,0)
+            scale(1.10);
+
+        opacity:
+            .85;
+
+    }
+
+}
+
+
+@keyframes contactPurpleGlow {
+
+    0%,
+    100% {
+
+        transform:
+            translate3d(0,0,0)
+            scale(1);
+
+        opacity:
+            .50;
+
+    }
+
+    50% {
+
+        transform:
+            translate3d(-30px,25px,0)
+            scale(1.08);
+
+        opacity:
+            .78;
+
+    }
+
+}
+
+
+/* ==========================================================
+   12 — RADIO ACTIVE PULSE
+========================================================== */
+
+.contact-radio input:checked
++ .contact-radio-ui {
+
+    animation:
+        contactRadioActive
+        .35s
+        ease-out;
+
+}
+
+
+@keyframes contactRadioActive {
+
+    from {
+
+        box-shadow:
+            0 0 0 5px
+            rgba(34,211,238,.08);
+
+    }
+
+    to {
+
+        box-shadow:
+            0 0 0 0
+            rgba(34,211,238,0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   13 — GPU OPTIMIZATION
+========================================================== */
+
+.contact-form-wrapper,
+.contact-form-glow,
+.contact-submit {
+
+    will-change:
+        transform;
+
+}
+
+
+/* ==========================================================
+   14 — REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .contact-form-section *,
+    .contact-form-section *::before,
+    .contact-form-section *::after {
+
+        animation:
+            none !important;
+
+        transition:
+            none !important;
+
+    }
+
+}
