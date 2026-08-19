@@ -225,34 +225,45 @@ Shadow15
 <!--==================================================
                 SHADOW15 PREMIUM NAVBAR
 ===================================================-->
+<!--==================================================
+                SHADOW15 NAVIGATION
+===================================================-->
 
-<header class="s15-navbar" id="navbar">
+<header class="s15x-dock" id="s15xDock">
 
-    <div class="s15-navbar-container">
+    <div class="s15x-dock-shell">
 
         <!--==================================
                     BRAND
         ===================================-->
 
-        <a href="#hero" class="s15-brand" aria-label="Shadow15 Home">
+        <a href="index.html"
+           class="s15x-brandmark"
+           aria-label="Shadow15 Home">
 
-            <div class="s15-brand-text">
+            <div class="s15x-brandmark-orb">
 
-                <h2 class="s15-logo">
+                <span></span>
+
+            </div>
+
+            <div class="s15x-brandmark-copy">
+
+                <h2 class="s15x-brand-title">
 
                     SHADOW<span>15</span>
 
                 </h2>
 
-                <p class="s15-tagline">
+                <p class="s15x-brand-caption">
 
                     <span>DIGITAL</span>
 
-                    <span class="tag-dot"></span>
+                    <span class="s15x-dot"></span>
 
                     <span>SOFTWARE</span>
 
-                    <span class="tag-dot"></span>
+                    <span class="s15x-dot"></span>
 
                     <span>GROWTH</span>
 
@@ -263,17 +274,22 @@ Shadow15
         </a>
 
         <!--==================================
-                    NAVIGATION
+                DESKTOP NAVIGATION
         ===================================-->
 
-        <nav class="s15-nav" aria-label="Primary Navigation">
+        <nav class="s15x-navigation"
+             aria-label="Primary Navigation">
 
-            <ul>
+            <ul class="s15x-nav-cluster">
 
-                <li>
+                <!--==============================
+                        HOME
+                ==============================-->
 
-                    <a href="#hero"
-                       class="s15-nav-link active">
+                <li class="s15x-nav-node">
+
+                    <a href="index.html"
+                       class="s15x-nav-link is-active">
 
                         Home
 
@@ -281,21 +297,405 @@ Shadow15
 
                 </li>
 
-                <li>
+                <!--==============================
+                    SOLUTIONS
+                ==============================-->
 
-                    <a href="#services"
-                       class="s15-nav-link">
+                <li class="s15x-nav-node s15x-has-panel">
 
-                        Solutions
+                    <button class="s15x-nav-trigger"
+                            type="button"
+                            aria-expanded="false"
+                            aria-haspopup="true">
 
-                    </a>
+                        <span>
+
+                            Solutions
+
+                        </span>
+                        
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </button>
+
+                    <!--==================================
+                            SOLUTIONS PANEL
+                    ===================================-->
+
+                    <div class="s15x-panel">
+
+                        <!-- Panel Header -->
+
+                        <div class="s15x-panel-header">
+
+                            <div>
+
+                                <span class="s15x-panel-label">
+
+                                    OUR SERVICES
+
+                                </span>
+
+                                <h3>
+
+                                    Digital Solutions
+
+                                </h3>
+
+                                <p>
+
+                                    Everything your business needs to build,
+                                    grow and scale online.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Panel Grid -->
+
+                        <div class="s15x-panel-grid">
+
+                            <!--==================================
+                                    DEVELOPMENT
+                            ===================================-->
+
+                            <div class="s15x-panel-group">
+
+                                <h4>
+
+                                    Development
+
+                                </h4>
+
+                                <a href="solutions.html#development"
+                                   class="s15x-service-card">
+
+                                    <div class="s15x-service-icon">
+
+                                        <i class="fa-solid fa-globe"></i>
+
+                                    </div>
+
+                                    <div class="s15x-service-copy">
+
+                                        <h5>
+
+                                            Website Development
+
+                                        </h5>
+
+                                        <p>
+
+                                            Premium business websites
+
+                                        </p>
+
+                                    </div>
+
+                                </a>
+
+                                <a href="solutions.html#app-development"
+                                   class="s15x-service-card">
+
+                                    <div class="s15x-service-icon">
+
+                                        <i class="fa-solid fa-laptop-code"></i>
+
+                                    </div>
+
+                                    <div class="s15x-service-copy">
+
+                                        <h5>
+
+                                            Web & App Development
+
+                                        </h5>
+
+                                        <p>
+
+                                            Custom software solutions
+
+                                        </p>
+
+                                    </div>
+
+                                </a>
+
+                                <a href="solutions.html#development"
+                                   class="s15x-service-card">
+
+                                    <div class="s15x-service-icon">
+
+                                        <i class="fa-solid fa-cart-shopping"></i>
+
+                                    </div>
+
+                                    <div class="s15x-service-copy">
+
+                                        <h5>
+
+                                            E-Commerce Solutions
+
+                                        </h5>
+
+                                        <p>
+
+                                            Sell products online
+
+                                        </p>
+
+                                    </div>
+
+                                </a>
+
+                            </div>
+
+                            <!--==================================
+                                    MARKETING
+                            ===================================-->
+
+                            <div class="s15x-panel-group">
+
+                                <h4>
+
+                                    Marketing
+
+                                </h4>
+
+                                <a href="solutions.html#seo"
+                                   class="s15x-service-card">
+
+                                    <div class="s15x-service-icon">
+
+                                        <i class="fa-solid fa-chart-line"></i>
+
+                                    </div>
+
+                                    <div class="s15x-service-copy">
+
+                                        <h5>
+
+                                            SEO & Local SEO
+
+                                        </h5>
+
+                                        <p>
+
+                                            Grow organic visibility
+
+                                        </p>
+
+                                    </div>
+
+                                </a>
+
+                                <a href="solutions.html#ads-promotion"
+                                   class="s15x-service-card">
+
+                                    <div class="s15x-service-icon">
+
+                                        <i class="fa-solid fa-bullhorn"></i>
+
+                                    </div>
+
+                                    <div class="s15x-service-copy">
+
+                                        <h5>
+
+                                            Ads Promotion
+
+                                        </h5>
+
+                                        <p>
+
+                                            Google & Meta campaigns
+
+                                        </p>
+
+                                    </div>
+
+                                </a>
+
+                                <a href="solutions.html#social-media"
+                                   class="s15x-service-card">
+
+                                    <div class="s15x-service-icon">
+
+                                        <i class="fa-solid fa-hashtag"></i>
+
+                                    </div>
+
+                                    <div class="s15x-service-copy">
+
+                                        <h5>
+
+                                            Social Media
+
+                                        </h5>
+
+                                        <p>
+
+                                            Build your online presence
+
+                                        </p>
+
+                                    </div>
+
+                                </a>
+
+                            </div>
+
+                            <!--==================================
+                                    CREATIVE
+                            ===================================-->
+
+                            <div class="s15x-panel-group">
+
+                                <h4>
+
+                                    Creative
+
+                                </h4>
+
+                                <a href="solutions.html#ui-ux-design"
+                                   class="s15x-service-card">
+
+                                    <div class="s15x-service-icon">
+
+                                        <i class="fa-solid fa-pen-ruler"></i>
+
+                                    </div>
+
+                                    <div class="s15x-service-copy">
+
+                                        <h5>
+
+                                            UI / UX Design
+
+                                        </h5>
+
+                                        <p>
+
+                                            Better user experiences
+
+                                        </p>
+
+                                    </div>
+
+                                </a>
+
+                                <a href="solutions.html#graphic-design"
+                                   class="s15x-service-card">
+
+                                    <div class="s15x-service-icon">
+
+                                        <i class="fa-solid fa-palette"></i>
+
+                                    </div>
+
+                                    <div class="s15x-service-copy">
+
+                                        <h5>
+
+                                            Graphic Design
+
+                                        </h5>
+
+                                        <p>
+
+                                            Branding & creatives
+
+                                        </p>
+
+                                    </div>
+
+                                </a>
+
+                            </div>
+
+                            <!--==================================
+                                    SUPPORT
+                            ===================================-->
+
+                            <div class="s15x-panel-group">
+
+                                <h4>
+
+                                    Support
+
+                                </h4>
+
+                                <a href="#"
+                                   class="s15x-service-card">
+
+                                    <div class="s15x-service-icon">
+
+                                        <i class="fa-solid fa-location-dot"></i>
+
+                                    </div>
+
+                                    <div class="s15x-service-copy">
+
+                                        <h5>
+
+                                            Google Business Profile
+
+                                        </h5>
+
+                                        <p>
+
+                                            Improve local reach
+
+                                        </p>
+
+                                    </div>
+
+                                </a>
+
+                                <a href="solutions.html#website-maintenance"
+                                   class="s15x-service-card">
+
+                                    <div class="s15x-service-icon">
+
+                                        <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                                    </div>
+
+                                    <div class="s15x-service-copy">
+
+                                        <h5>
+
+                                            Website Maintenance
+
+                                        </h5>
+
+                                        <p>
+
+                                            Secure & optimized websites
+
+                                        </p>
+
+                                    </div>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
 
                 </li>
+                                <!--==============================
+                        WORK
+                ==============================-->
 
-                <li>
+                <li class="s15x-nav-node">
 
-                    <a href="#work"
-                       class="s15-nav-link">
+                    <a href="work.html"
+                       class="s15x-nav-link">
 
                         Work
 
@@ -303,32 +703,324 @@ Shadow15
 
                 </li>
 
-                <li>
+                <!--==============================
+                    AI AUTOMATION
+                ==============================-->
 
-                    <a href="#ai"
-                       class="s15-nav-link">
+                <li class="s15x-nav-node s15x-has-panel">
 
-                        AI Automation
+                    <button class="s15x-nav-trigger"
+                            type="button"
+                            aria-expanded="false"
+                            aria-haspopup="true">
 
-                    </a>
+                        <span>
+
+                            AI Automation
+
+                        </span>
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </button>
+
+                    <!--==================================
+                            AI PANEL
+                    ===================================-->
+
+                    <div class="s15x-panel">
+
+                        <!-- Panel Header -->
+
+                        <div class="s15x-panel-header">
+
+                            <div>
+
+                                <span class="s15x-panel-label">
+
+                                    INTELLIGENT AUTOMATION
+
+                                </span>
+
+                                <h3>
+
+                                    AI Solutions
+
+                                </h3>
+
+                                <p>
+
+                                    Automate customer interactions,
+                                    sales and business operations.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Panel Grid -->
+
+                        <div class="s15x-panel-grid s15x-panel-grid-ai">
+
+                            <!--==================================
+                                    AUTOMATION
+                            ===================================-->
+
+                            <div class="s15x-panel-group">
+
+                                <h4>
+
+                                    Automation
+
+                                </h4>
+
+                                <a href="#"
+                                   class="s15x-service-card">
+
+                                    <div class="s15x-service-icon">
+
+                                        <i class="fa-solid fa-robot"></i>
+
+                                    </div>
+
+                                    <div class="s15x-service-copy">
+
+                                        <h5>
+
+                                            AI Chatbots
+
+                                        </h5>
+
+                                        <p>
+
+                                            24×7 customer assistance
+
+                                        </p>
+
+                                    </div>
+
+                                </a>
+
+                                <a href="#"
+                                   class="s15x-service-card">
+
+                                    <div class="s15x-service-icon">
+
+                                        <i class="fa-brands fa-whatsapp"></i>
+
+                                    </div>
+
+                                    <div class="s15x-service-copy">
+
+                                        <h5>
+
+                                            WhatsApp Automation
+
+                                        </h5>
+
+                                        <p>
+
+                                            Lead nurturing & support
+
+                                        </p>
+
+                                    </div>
+
+                                </a>
+
+                                <a href="#"
+                                   class="s15x-service-card">
+
+                                    <div class="s15x-service-icon">
+
+                                        <i class="fa-solid fa-headset"></i>
+
+                                    </div>
+
+                                    <div class="s15x-service-copy">
+
+                                        <h5>
+
+                                            AI Voice Agents
+
+                                        </h5>
+
+                                        <p>
+
+                                            AI-powered voice calling
+
+                                        </p>
+
+                                    </div>
+
+                                </a>
+
+                                <a href="#"
+                                   class="s15x-service-card">
+
+                                    <div class="s15x-service-icon">
+
+                                        <i class="fa-solid fa-gears"></i>
+
+                                    </div>
+
+                                    <div class="s15x-service-copy">
+
+                                        <h5>
+
+                                            Workflow Automation
+
+                                        </h5>
+
+                                        <p>
+
+                                            Automate repetitive tasks
+
+                                        </p>
+
+                                    </div>
+
+                                </a>
+
+                                <a href="#"
+                                   class="s15x-service-card">
+
+                                    <div class="s15x-service-icon">
+
+                                        <i class="fa-solid fa-calendar-check"></i>
+
+                                    </div>
+
+                                    <div class="s15x-service-copy">
+
+                                        <h5>
+
+                                            Appointment Automation
+
+                                        </h5>
+
+                                        <p>
+
+                                            Smart booking system
+
+                                        </p>
+
+                                    </div>
+
+                                </a>
+
+                            </div>
+
+                            <!--==================================
+                                    INTELLIGENCE
+                            ===================================-->
+
+                            <div class="s15x-panel-group">
+
+                                <h4>
+
+                                    Intelligence
+
+                                </h4>
+
+                                <a href="#"
+                                   class="s15x-service-card">
+
+                                    <div class="s15x-service-icon">
+
+                                        <i class="fa-solid fa-chart-network"></i>
+
+                                    </div>
+
+                                    <div class="s15x-service-copy">
+
+                                        <h5>
+
+                                            CRM Automation
+
+                                        </h5>
+
+                                        <p>
+
+                                            Intelligent lead management
+
+                                        </p>
+
+                                    </div>
+
+                                </a>
+
+                                <a href="#"
+                                   class="s15x-service-card">
+
+                                    <div class="s15x-service-icon">
+
+                                        <i class="fa-solid fa-link"></i>
+
+                                    </div>
+
+                                    <div class="s15x-service-copy">
+
+                                        <h5>
+
+                                            AI Integration
+
+                                        </h5>
+
+                                        <p>
+
+                                            Connect AI with your tools
+
+                                        </p>
+
+                                    </div>
+
+                                </a>
+
+                                <a href="#"
+                                   class="s15x-service-card">
+
+                                    <div class="s15x-service-icon">
+
+                                        <i class="fa-solid fa-sparkles"></i>
+
+                                    </div>
+
+                                    <div class="s15x-service-copy">
+
+                                        <h5>
+
+                                            Custom AI Solutions
+
+                                        </h5>
+
+                                        <p>
+
+                                            Tailored AI implementation
+
+                                        </p>
+
+                                    </div>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
 
                 </li>
 
-                <li>
+                <!--==============================
+                        ABOUT
+                ==============================-->
 
-                    <a href="#process"
-                       class="s15-nav-link">
+                <li class="s15x-nav-node">
 
-                        Process
-
-                    </a>
-
-                </li>
-
-                <li>
-
-                    <a href="#about"
-                       class="s15-nav-link">
+                    <a href="about.html"
+                       class="s15x-nav-link">
 
                         About
 
@@ -336,10 +1028,14 @@ Shadow15
 
                 </li>
 
-                <li>
+                <!--==============================
+                        CONTACT
+                ==============================-->
 
-                    <a href="#contact"
-                       class="s15-nav-link">
+                <li class="s15x-nav-node">
+
+                    <a href="contact.html"
+                       class="s15x-nav-link">
 
                         Contact
 
@@ -352,18 +1048,16 @@ Shadow15
         </nav>
 
         <!--==================================
-                    RIGHT SIDE
+                COMMAND ZONE
         ===================================-->
 
-        <div class="s15-navbar-right">
+        <div class="s15x-command-zone">
 
-            <!-- Status -->
+            <div class="s15x-live-badge">
 
-            <div class="s15-status s15-glass">
+                <span class="s15x-live-pulse"></span>
 
-                <span class="status-dot"></span>
-
-                <span class="status-text">
+                <span>
 
                     Building Global Brands
 
@@ -371,11 +1065,8 @@ Shadow15
 
             </div>
 
-            <!-- CTA -->
-
-            <a href="#contact"
-
-               class="s15-btn s15-btn-primary s15-cta">
+            <a href="contact.html"
+               class="s15x-command-button">
 
                 <span>
 
@@ -390,23 +1081,18 @@ Shadow15
         </div>
 
         <!--==================================
-                MOBILE MENU BUTTON
+                MOBILE TOGGLE
         ===================================-->
 
-        <button
-
-            class="s15-menu-toggle"
-
-            type="button"
-
-            aria-label="Toggle Navigation"
-
-            aria-expanded="false"
-
-            aria-controls="mobile-menu">
+        <button class="s15x-hamburger"
+                id="s15xHamburger"
+                type="button"
+                aria-label="Open Navigation"
+                aria-controls="s15xDrawer"
+                aria-expanded="false">
 
             <span></span>
-
+            <span></span>
             <span></span>
 
         </button>
@@ -415,7 +1101,252 @@ Shadow15
 
 </header>
 
+<!--==================================================
+                MOBILE NAVIGATION
+===================================================-->
 
+<!--==================================
+            BACKDROP
+===================================-->
+
+<div class="s15x-backdrop" id="s15xBackdrop"></div>
+
+<!--==================================
+            MOBILE DRAWER
+===================================-->
+
+<aside class="s15x-drawer"
+       id="s15xDrawer"
+       aria-hidden="true">
+
+    <!--==================================
+                DRAWER HEADER
+    ===================================-->
+
+    <div class="s15x-drawer-header">
+
+        <a href="index.html"
+           class="s15x-brandmark">
+
+            <div class="s15x-brandmark-orb">
+
+                <span></span>
+
+            </div>
+
+            <div class="s15x-brandmark-copy">
+
+                <h2 class="s15x-brand-title">
+
+                    SHADOW<span>15</span>
+
+                </h2>
+
+                <p class="s15x-brand-caption">
+
+                    <span>DIGITAL</span>
+
+                    <span class="s15x-dot"></span>
+
+                    <span>SOFTWARE</span>
+
+                    <span class="s15x-dot"></span>
+
+                    <span>GROWTH</span>
+
+                </p>
+
+            </div>
+
+        </a>
+
+        <button class="s15x-drawer-close"
+                id="s15xDrawerClose"
+                type="button"
+                aria-label="Close Navigation">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+    </div>
+
+    <!--==================================
+                MOBILE NAVIGATION
+    ===================================-->
+
+    <nav class="s15x-drawer-navigation">
+
+        <ul class="s15x-drawer-menu">
+
+            <!-- HOME -->
+
+            <li>
+
+                <a href="index.html">
+
+                    Home
+
+                </a>
+
+            </li>
+
+            <!-- SOLUTIONS -->
+
+            <li class="s15x-mobile-dropdown">
+
+                <button class="s15x-mobile-trigger"
+                        type="button">
+
+                    <span>
+
+                        Solutions
+
+                    </span>
+
+                    <i class="fa-solid fa-plus"></i>
+
+                </button>
+
+                <div class="s15x-mobile-panel">
+
+                    <a href="solutions.html#development">Website Development</a>
+
+                    <a href="solutions.html#app-development">Web & App Development</a>
+
+                    <a href="solutions.html#development">E-Commerce Solutions</a>
+
+                    <a href="solutions.html#ui-ux-design">UI / UX Design</a>
+
+                    <a href="solutions.html#graphic-design">Graphic Design</a>
+
+                    <a href="solutions.html#seo">SEO & Local SEO</a>
+
+                    <a href="solutions.html#ads-promotion">Ads Promotion</a>
+
+                    <a href="solutions.html#social-media">Social Media</a>
+
+                    <a href="#">Google Business Profile</a>
+
+                    <a href="solutions.html#website-maintenance">Website Maintenance</a>
+
+                </div>
+
+            </li>
+
+            <!-- WORK -->
+
+            <li>
+
+                <a href="work.html">
+
+                    Work
+
+                </a>
+
+            </li>
+
+            <!-- AI -->
+
+            <li class="s15x-mobile-dropdown">
+
+                <button class="s15x-mobile-trigger"
+                        type="button">
+
+                    <span>
+
+                        AI Automation
+
+                    </span>
+
+                    <i class="fa-solid fa-plus"></i>
+
+                </button>
+
+                <div class="s15x-mobile-panel">
+
+                    <a href="#">AI Chatbots</a>
+
+                    <a href="#">WhatsApp Automation</a>
+
+                    <a href="#">AI Voice Agents</a>
+
+                    <a href="#">Workflow Automation</a>
+
+                    <a href="#">Appointment Automation</a>
+
+                    <a href="#">CRM Automation</a>
+
+                    <a href="#">AI Integration</a>
+
+                    <a href="#">Custom AI Solutions</a>
+
+                </div>
+
+            </li>
+
+            <!-- ABOUT -->
+
+            <li>
+
+                <a href="about.html">
+
+                    About
+
+                </a>
+
+            </li>
+
+            <!-- CONTACT -->
+
+            <li>
+
+                <a href="contact.html">
+
+                    Contact
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <!--==================================
+                DRAWER ACTIONS
+    ===================================-->
+
+    <div class="s15x-drawer-actions">
+
+        <div class="s15x-live-badge">
+
+            <span class="s15x-live-pulse"></span>
+
+            <span>
+
+                Building Global Brands
+
+            </span>
+
+        </div>
+
+        <a href="contact.html"
+           class="s15x-command-button s15x-command-button-block">
+
+            <span>
+
+                Let's Build
+
+            </span>
+
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+        </a>
+
+    </div>
+
+</aside>
 <!--==========================================================
                     WORK HERO
 ===========================================================-->
