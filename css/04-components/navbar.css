@@ -2334,3 +2334,90 @@
 
 }
 
+
+
+/*==================================================
+    SHADOW15 BRAND LOGO
+===================================================*/
+
+.s15x-brandmark {
+
+    display: flex;
+
+    align-items: center;
+
+    flex-shrink: 0;
+
+    text-decoration: none;
+
+    width: auto;
+
+    height: 100%;
+
+}
+
+
+.s15x-brand-logo {
+
+    display: block;
+
+    width: 210px;
+
+    height: auto;
+
+    max-height: 74px;
+
+    object-fit: contain;
+
+    object-position: left center;
+
+}
+
+
+/*==================================================
+    TABLET
+===================================================*/
+
+@media (max-width: 1100px) {
+
+    .s15x-brand-logo {
+
+        width: 190px;
+
+    }
+
+}
+
+
+/*==================================================
+    MOBILE
+===================================================*/
+
+@media (max-width: 768px) {
+
+    .s15x-brand-logo {
+
+        width: 165px;
+
+        max-height: 52px;
+
+    }
+
+}
+
+
+/*==================================================
+    SMALL MOBILE
+===================================================*/
+
+@media (max-width: 480px) {
+
+    .s15x-brand-logo {
+
+        width: 145px;
+
+        max-height: 48px;
+
+    }
+
+}

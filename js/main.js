@@ -1,44 +1,63 @@
 /*==================================================
-    SHADOW15 — MASTER JAVASCRIPT LOADER
+    SHADOW15 — MASTER JAVASCRIPT
     File: js/main.js
 
-    PURPOSE:
+    PURPOSE
     --------------------------------------------------
     Single JavaScript entry point for Shadow15.
 
-    IMPORTANT:
+    RESPONSIBILITIES
     --------------------------------------------------
-    • Loads existing JS files in controlled order.
-    • Preserves classic-script global scope.
-    • Prevents execution-order problems.
-    • Uses only paths that actually exist.
-    • Empty JS files are intentionally included.
-    • Do NOT convert this file to type="module".
+    • Load all existing JS files
+    • Preserve classic global scope
+    • Maintain correct execution order
+    • Load loader before application initialization
+    • Load navbar before page interactions
+    • Load app.js LAST
+    • Initialize Shadow15 after all scripts are ready
+
+    IMPORTANT
+    --------------------------------------------------
+    This file is NOT a module.
+
+    HTML:
+    <script src="js/main.js"></script>
 ==================================================*/
 
 "use strict";
 
 
 /*==================================================
-    01 — JAVASCRIPT FILE MAP
+    01 — SHADOW15 JAVASCRIPT FILE ORDER
 ==================================================*/
 
-const SHADOW15_JS = [
+const SHADOW15_SCRIPTS = [
 
     /*================================================
-        CORE CONFIGURATION
+        01 — LOADER
+        HIGHEST PRIORITY
+    ================================================*/
+
+    "js/loader.js",
+
+
+    /*================================================
+        02 — GLOBAL CONFIGURATION
     ================================================*/
 
     "js/config.js",
 
 
     /*================================================
-        GLOBAL / FOUNDATION
+        03 — GLOBAL NAVIGATION
     ================================================*/
 
-    "js/loader.js",
-
     "js/navbar.js",
+
+
+    /*================================================
+        04 — GLOBAL INTERACTION
+    ================================================*/
 
     "js/cursor.js",
 
@@ -46,7 +65,7 @@ const SHADOW15_JS = [
 
 
     /*================================================
-        HOME — HERO
+        05 — HERO
     ================================================*/
 
     "js/hero.js",
@@ -55,14 +74,7 @@ const SHADOW15_JS = [
 
 
     /*================================================
-        HOME — CORE APPLICATION
-    ================================================*/
-
-    "js/app.js",
-
-
-    /*================================================
-        HOME — TRUST / STATS / INDUSTRIES
+        06 — TRUST / STATS / INDUSTRIES
     ================================================*/
 
     "js/trusted.js",
@@ -73,14 +85,14 @@ const SHADOW15_JS = [
 
 
     /*================================================
-        HOME — SERVICES
+        07 — SERVICES
     ================================================*/
 
     "js/services.js",
 
 
     /*================================================
-        HOME — PORTFOLIO
+        08 — PORTFOLIO
     ================================================*/
 
     "js/portfolio.js",
@@ -89,28 +101,28 @@ const SHADOW15_JS = [
 
 
     /*================================================
-        HOME — PROCESS
+        09 — PROCESS
     ================================================*/
 
     "js/process/process.js",
 
 
     /*================================================
-        HOME — METRICS
+        10 — METRICS
     ================================================*/
 
     "js/metrics/metrics.js",
 
 
     /*================================================
-        HOME — TESTIMONIALS
+        11 — TESTIMONIALS
     ================================================*/
 
     "js/testimonials/testimonials.js",
 
 
     /*================================================
-        HOME — FAQ
+        12 — FAQ
     ================================================*/
 
     "js/faq.js",
@@ -119,14 +131,7 @@ const SHADOW15_JS = [
 
 
     /*================================================
-        GLOBAL FOOTER
-    ================================================*/
-
-    "js/footer/footer.js",
-
-
-    /*================================================
-        SOLUTIONS PAGE
+        13 — SOLUTIONS
     ================================================*/
 
     "js/solutions.js",
@@ -141,7 +146,7 @@ const SHADOW15_JS = [
 
 
     /*================================================
-        WORK PAGE
+        14 — WORK PAGE
     ================================================*/
 
     "css/Work page/hero section/hero.js",
@@ -154,80 +159,53 @@ const SHADOW15_JS = [
 
 
     /*================================================
-        AI AUTOMATION — EXISTING JS
+        15 — FOOTER
     ================================================*/
 
-    /*
-        The ZIP does NOT contain:
-
-        css/ai-automation/hero/hero.js
-        css/ai-automation/capabilities/capabilities.js
-        css/ai-automation/automation-journey/journey.js
-
-        Therefore they are intentionally NOT imported.
-    */
+    "js/footer/footer.js",
 
 
     /*================================================
-        LEGACY / RESERVED FILES
+        16 — APPLICATION
+        ALWAYS LAST
     ================================================*/
 
-    "js/animations.js",
-
-    "js/contact.js",
-
-    "js/faq.js",
-
-    "js/loader.timeline.js",
-
-    "js/slider.js"
+    "js/app.js"
 
 ];
 
 
 /*==================================================
-    02 — DUPLICATE / RESERVED FILE NOTE
+    02 — SCRIPT LOADER
 ==================================================*/
 
-/*
-    These files physically exist but are currently empty:
-
-        js/animations.js
-        js/contact.js
-        js/cursor.js
-        js/faq.js
-        js/loader.timeline.js
-        js/services.js
-        js/slider.js
-        js/smooth-scroll.js
-        js/stats.js
-        js/three/hero-scene.js
-
-    Empty files are safe to load.
-
-    Some are already represented by active
-    implementations elsewhere in the repository.
-*/
-
-
-/*==================================================
-    03 — SCRIPT LOADER
-==================================================*/
+/**
+ * Loads one JavaScript file.
+ *
+ * Scripts are intentionally loaded sequentially.
+ * This preserves the existing global-script
+ * architecture and dependency order.
+ */
 
 function loadShadow15Script(src) {
 
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
 
         /*--------------------------------------------
             Prevent duplicate loading
         --------------------------------------------*/
 
-        const existing =
+        const alreadyLoaded =
             document.querySelector(
                 `script[data-shadow15-src="${src}"]`
             );
 
-        if (existing) {
+        if (alreadyLoaded) {
+
+            console.log(
+                `%cSHADOW15 ↻ Already loaded: ${src}`,
+                "color:#8FA6B8;"
+            );
 
             resolve();
 
@@ -237,7 +215,7 @@ function loadShadow15Script(src) {
 
 
         /*--------------------------------------------
-            Create script
+            Create script element
         --------------------------------------------*/
 
         const script =
@@ -247,6 +225,15 @@ function loadShadow15Script(src) {
         script.src = src;
 
 
+        /*
+            IMPORTANT
+
+            Keep async disabled.
+
+            This guarantees scripts execute
+            in the exact order defined above.
+        */
+
         script.async = false;
 
 
@@ -254,10 +241,15 @@ function loadShadow15Script(src) {
 
 
         /*--------------------------------------------
-            Success
+            SUCCESS
         --------------------------------------------*/
 
         script.onload = () => {
+
+            console.log(
+                `%cSHADOW15 ✓ ${src}`,
+                "color:#00E7D4;"
+            );
 
             resolve();
 
@@ -265,25 +257,33 @@ function loadShadow15Script(src) {
 
 
         /*--------------------------------------------
-            Failure
+            ERROR
         --------------------------------------------*/
 
         script.onerror = () => {
 
-            reject(
-                new Error(
-                    `SHADOW15 JS failed to load: ${src}`
-                )
+            console.error(
+                `%cSHADOW15 ✕ Failed to load: ${src}`,
+                "color:#ff5f56;font-weight:700;"
             );
+
+            /*
+                Do NOT stop the complete website
+                because one optional script failed.
+
+                Continue with the next script.
+            */
+
+            resolve();
 
         };
 
 
         /*--------------------------------------------
-            Append
+            Add script to document
         --------------------------------------------*/
 
-        document.body.appendChild(script);
+        document.head.appendChild(script);
 
     });
 
@@ -291,81 +291,233 @@ function loadShadow15Script(src) {
 
 
 /*==================================================
-    04 — SEQUENTIAL LOADING
+    03 — LOAD ALL SHADOW15 SCRIPTS
 ==================================================*/
 
 async function loadShadow15Scripts() {
 
+    console.log(
+        "%cSHADOW15",
+        "color:#00E7D4;font-size:20px;font-weight:800;"
+    );
+
+    console.log(
+        "%cStarting JavaScript system...",
+        "color:#8FA6B8;"
+    );
+
+
+    /*----------------------------------------------
+        Sequential loading
+    ----------------------------------------------*/
+
     for (
-        const src
-        of SHADOW15_JS
+        const src of SHADOW15_SCRIPTS
     ) {
 
-        try {
-
-            await loadShadow15Script(src);
-
-            console.log(
-                `%cSHADOW15 JS ✓ ${src}`,
-                "color:#00E7D4;"
-            );
-
-        }
-
-        catch (error) {
-
-            console.error(
-                error
-            );
-
-        }
+        await loadShadow15Script(src);
 
     }
 
 
-    /*--------------------------------------------
-        Complete
-    --------------------------------------------*/
+    /*----------------------------------------------
+        All scripts loaded
+    ----------------------------------------------*/
+
+    console.log(
+        "%cSHADOW15 ✓ All JavaScript files loaded",
+        "color:#00E7D4;font-weight:700;"
+    );
+
+
+    /*----------------------------------------------
+        Initialize application
+    ----------------------------------------------*/
+
+    initializeShadow15();
+
+}
+
+
+/*==================================================
+    04 — APPLICATION INITIALIZATION
+==================================================*/
+
+function initializeShadow15() {
+
+    /*
+        Prevent duplicate initialization.
+    */
+
+    if (
+        window.__SHADOW15_INITIALIZED__
+    ) {
+
+        console.log(
+            "%cSHADOW15 ↻ Application already initialized",
+            "color:#8FA6B8;"
+        );
+
+        return;
+
+    }
+
+
+    /*----------------------------------------------
+        Wait for DOM if necessary
+    ----------------------------------------------*/
+
+    if (
+        document.readyState === "loading"
+    ) {
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            runShadow15Application,
+            {
+                once: true
+            }
+        );
+
+        return;
+
+    }
+
+
+    /*----------------------------------------------
+        DOM already available
+    ----------------------------------------------*/
+
+    runShadow15Application();
+
+}
+
+
+/*==================================================
+    05 — RUN SHADOW15 APPLICATION
+==================================================*/
+
+function runShadow15Application() {
+
+    /*
+        Final safety guard.
+    */
+
+    if (
+        window.__SHADOW15_INITIALIZED__
+    ) {
+
+        return;
+
+    }
+
+
+    /*----------------------------------------------
+        Check Shadow15 application
+    ----------------------------------------------*/
+
+    if (
+        typeof window.Shadow15 === "undefined"
+    ) {
+
+        console.warn(
+            "SHADOW15: Shadow15 application object was not found."
+        );
+
+        return;
+
+    }
+
+
+    /*----------------------------------------------
+        Check init method
+    ----------------------------------------------*/
+
+    if (
+        typeof window.Shadow15.init !== "function"
+    ) {
+
+        console.warn(
+            "SHADOW15: Shadow15.init() was not found."
+        );
+
+        return;
+
+    }
+
+
+    /*----------------------------------------------
+        Initialize
+    ----------------------------------------------*/
+
+    try {
+
+        window.Shadow15.init();
+
+
+        window.__SHADOW15_INITIALIZED__ = true;
+
+
+        console.log(
+            "%cSHADOW15 ✓ Application initialized",
+            "color:#00E7D4;font-weight:800;"
+        );
+
+    }
+
+    catch (error) {
+
+        console.error(
+            "SHADOW15: Application initialization failed.",
+            error
+        );
+
+    }
+
+
+    /*----------------------------------------------
+        Dispatch custom ready event
+    ----------------------------------------------*/
 
     document.dispatchEvent(
         new CustomEvent(
-            "shadow15:js-ready"
+            "shadow15:ready"
         )
     );
 
 
     console.log(
-        "%cSHADOW15 — JavaScript System Ready",
-        "color:#00E7D4;font-weight:700;"
+        "%cSHADOW15 ✓ SYSTEM READY",
+        "color:#00E7D4;font-size:16px;font-weight:800;"
     );
 
 }
 
 
 /*==================================================
-    05 — START
+    06 — START MASTER SYSTEM
 ==================================================*/
 
 /*
-    main.js should be loaded at the bottom of
-    <body>, after the navbar HTML exists.
+    IMPORTANT:
+
+    Do NOT wrap the entire loader in another
+    DOMContentLoaded listener.
+
+    main.js is responsible for loading the
+    scripts first.
+
+    After loading:
+        initializeShadow15()
+            ↓
+        DOM ready check
+            ↓
+        Shadow15.init()
 */
 
-if (
-    document.readyState === "loading"
-) {
+loadShadow15Scripts();
 
-    document.addEventListener(
-        "DOMContentLoaded",
-        loadShadow15Scripts,
-        {
-            once: true
-        }
-    );
 
-}
-else {
-
-    loadShadow15Scripts();
-
-}
+/*==================================================
+    END OF SHADOW15 MASTER JAVASCRIPT
+==================================================*/
