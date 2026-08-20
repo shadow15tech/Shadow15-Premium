@@ -1,415 +1,584 @@
-/*==========================================
-        ABOUT HERO
-        BACKGROUND
-==========================================*/
+/*==================================================
+    SHADOW15 — ABOUT HERO
+    File: css/05-pages/about-us-page/04-background.css
+
+    RESPONSIBILITY
+    --------------------------------------------------
+    Background atmosphere only.
+
+    Controls:
+    • Base background
+    • Technical grid
+    • Aurora glow
+    • Noise layer
+    • Particle atmosphere
+    • Large S monogram
+
+    Layout → 01-layout.css
+    Content → 02-content.css
+    Visual → 03-visual.css
+    Animation → 05-animation.css
+    Responsive → 06-responsive.css
+==================================================*/
 
 
-/*==========================================
-        HERO BACKGROUND
-==========================================*/
+/*==================================================
+    01 — HERO BACKGROUND ROOT
+==================================================*/
 
-.s15-about-hero-background{
+.s15-about-hero-background {
 
-    position:absolute;
+    position: absolute;
 
-    inset:0;
+    inset: 0;
 
-    overflow:hidden;
+    z-index: 0;
 
-    z-index:1;
+    overflow: hidden;
+
+    pointer-events: none;
 
     background:
-
-    radial-gradient(circle at top,#183B8C22 0%,transparent 40%),
-
-    radial-gradient(circle at bottom right,#2563EB18 0%,transparent 35%),
-
-    linear-gradient(180deg,#050814 0%,#08111F 55%,#050814 100%);
+        radial-gradient(
+            circle at 72% 42%,
+            rgba(8, 80, 105, 0.14),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 18% 75%,
+            rgba(8, 54, 77, 0.12),
+            transparent 30%
+        ),
+        #050f1a;
 
 }
 
 
-/*==========================================
-        GRID
-==========================================*/
+/*==================================================
+    02 — TOP ATMOSPHERIC LIGHT
+==================================================*/
 
-.s15-about-hero-grid{
+.s15-about-hero-background::before {
 
-    position:absolute;
+    content: "";
 
-    inset:0;
+    position: absolute;
 
-    opacity:.08;
+    top: -18%;
+
+    left: 35%;
+
+    width: 60%;
+
+    height: 65%;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(16, 178, 214, 0.10),
+            transparent 68%
+        );
+
+    filter:
+        blur(45px);
+
+}
+
+
+/*==================================================
+    03 — BOTTOM ATMOSPHERIC LIGHT
+==================================================*/
+
+.s15-about-hero-background::after {
+
+    content: "";
+
+    position: absolute;
+
+    right: -15%;
+
+    bottom: -25%;
+
+    width: 55%;
+
+    height: 60%;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(16, 103, 143, 0.09),
+            transparent 68%
+        );
+
+    filter:
+        blur(55px);
+
+}
+
+
+/*==================================================
+    04 — TECHNICAL GRID
+==================================================*/
+
+.s15-about-hero-grid {
+
+    position: absolute;
+
+    inset: -2px;
+
+    opacity: 0.42;
 
     background-image:
 
-    linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),
+        linear-gradient(
+            rgba(104, 166, 193, 0.045) 1px,
+            transparent 1px
+        ),
 
-    linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);
+        linear-gradient(
+            90deg,
+            rgba(104, 166, 193, 0.045) 1px,
+            transparent 1px
+        );
 
-    background-size:70px 70px;
+    background-size:
+        64px 64px;
+
+    mask-image:
+        radial-gradient(
+            ellipse at center,
+            black 15%,
+            rgba(0,0,0,0.75) 50%,
+            transparent 88%
+        );
+
+    -webkit-mask-image:
+        radial-gradient(
+            ellipse at center,
+            black 15%,
+            rgba(0,0,0,0.75) 50%,
+            transparent 88%
+        );
 
 }
 
 
-/*==========================================
-        AURORA
-==========================================*/
+/*==================================================
+    05 — GRID INNER GLOW
+==================================================*/
 
-.s15-about-hero-aurora{
+.s15-about-hero-grid::after {
 
-    position:absolute;
+    content: "";
 
-    width:900px;
+    position: absolute;
 
-    height:900px;
-
-    left:50%;
-
-    top:-450px;
-
-    transform:translateX(-50%);
-
-    border-radius:50%;
+    inset: 0;
 
     background:
-
-    radial-gradient(circle,
-
-    rgba(77,124,255,.30),
-
-    rgba(97,218,251,.12),
-
-    transparent 70%);
-
-    filter:blur(120px);
+        radial-gradient(
+            circle at 70% 48%,
+            rgba(21, 212, 239, 0.06),
+            transparent 30%
+        );
 
 }
 
 
-/*==========================================
-        NOISE
-==========================================*/
+/*==================================================
+    06 — AURORA
+==================================================*/
 
-.s15-about-hero-noise{
+.s15-about-hero-aurora {
 
-    position:absolute;
+    position: absolute;
 
-    inset:0;
+    top: 8%;
 
-    opacity:.03;
+    left: 48%;
 
-    pointer-events:none;
+    width: 46%;
+
+    height: 72%;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(21, 208, 236, 0.08),
+            rgba(27, 115, 170, 0.035) 42%,
+            transparent 72%
+        );
+
+    filter:
+        blur(35px);
+
+    transform:
+        rotate(-18deg);
+
+}
+
+
+/*==================================================
+    07 — AURORA SECONDARY
+==================================================*/
+
+.s15-about-hero-aurora::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 12% 20%;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(39, 161, 221, 0.07),
+            transparent 70%
+        );
+
+    filter:
+        blur(30px);
+
+}
+
+
+/*==================================================
+    08 — NOISE
+==================================================*/
+
+.s15-about-hero-noise {
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: 0.035;
+
+    background-image:
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+
+    mix-blend-mode:
+        soft-light;
+
+}
+
+
+/*==================================================
+    09 — PARTICLE FIELD
+==================================================*/
+
+.s15-about-hero-particles {
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: 0.55;
 
     background-image:
 
-    radial-gradient(#ffffff 1px,transparent 1px);
+        radial-gradient(
+            circle,
+            rgba(91, 221, 239, 0.42) 0 1px,
+            transparent 1.5px
+        ),
 
-    background-size:10px 10px;
+        radial-gradient(
+            circle,
+            rgba(126, 190, 218, 0.22) 0 1px,
+            transparent 1.5px
+        );
 
-}
+    background-size:
+        120px 150px,
+        210px 190px;
 
+    background-position:
+        20px 40px,
+        80px 110px;
 
-/*==========================================
-        MONOGRAM
-==========================================*/
+    mask-image:
+        radial-gradient(
+            ellipse at center,
+            black 10%,
+            rgba(0,0,0,0.7) 50%,
+            transparent 90%
+        );
 
-.s15-about-hero-monogram{
-
-    position:absolute;
-
-    inset:0;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    pointer-events:none;
-
-}
-
-
-.s15-about-hero-monogram span{
-
-    font-size:34rem;
-
-    font-weight:900;
-
-    line-height:1;
-
-    color:rgba(255,255,255,.025);
-
-    user-select:none;
+    -webkit-mask-image:
+        radial-gradient(
+            ellipse at center,
+            black 10%,
+            rgba(0,0,0,0.7) 50%,
+            transparent 90%
+        );
 
 }
 
 
-/*==========================================
-        HERO CORE
-==========================================*/
+/*==================================================
+    10 — LARGE SHADOW15 MONOGRAM
+==================================================*/
 
-.s15-about-hero-core{
+.s15-about-hero-monogram {
 
-    background:
+    position: absolute;
 
-    linear-gradient(
+    right: -5%;
 
-    145deg,
+    top: 50%;
 
-    rgba(255,255,255,.08),
+    z-index: 1;
 
-    rgba(255,255,255,.02)
+    transform:
+        translateY(-50%);
 
-    );
+    user-select:
+        none;
 
-    border:1px solid rgba(255,255,255,.08);
+}
 
-    backdrop-filter:blur(30px);
+
+/*==================================================
+    11 — MONOGRAM LETTER
+==================================================*/
+
+.s15-about-hero-monogram span {
+
+    display: block;
+
+    color:
+        rgba(
+            42,
+            190,
+            219,
+            0.025
+        );
+
+    font-size:
+        clamp(
+            360px,
+            45vw,
+            760px
+        );
+
+    font-weight:
+        800;
+
+    line-height:
+        0.8;
+
+    letter-spacing:
+        -0.12em;
+
+    text-shadow:
+        0 0 80px
+        rgba(
+            16,
+            185,
+            218,
+            0.025
+        );
+
+}
+
+
+/*==================================================
+    12 — LEFT EDGE VIGNETTE
+==================================================*/
+
+.s15-about-hero-background {
 
     box-shadow:
-
-    0 0 80px rgba(37,99,235,.18),
-
-    inset 0 0 40px rgba(255,255,255,.05);
-
-}
-
-
-.s15-about-hero-core span{
-
-    color:#ffffff;
-
-    font-size:1.2rem;
-
-    font-weight:700;
-
-    letter-spacing:2px;
+        inset 90px 0 120px
+        rgba(0,0,0,0.10),
+        inset -100px 0 140px
+        rgba(0,0,0,0.12);
 
 }
 
 
-/*==========================================
-        ORBIT
-==========================================*/
+/*==================================================
+    13 — BOTTOM VIGNETTE
+==================================================*/
 
-.s15-about-hero-orbit{
-
-    border:1px dashed rgba(255,255,255,.10);
-
-}
-
-
-/*==========================================
-        SERVICE CARDS
-==========================================*/
-
-.s15-about-hero-service-card{
-
-    background:
-
-    rgba(255,255,255,.05);
-
-    border:1px solid rgba(255,255,255,.08);
-
-    backdrop-filter:blur(22px);
-
-    color:#EAF1FF;
+.s15-about-hero-background .s15-about-hero-grid {
 
     box-shadow:
-
-    0 18px 45px rgba(0,0,0,.28);
-
-    transition:.35s ease;
+        inset 0 -140px 140px
+        rgba(2, 9, 17, 0.42);
 
 }
 
 
-.s15-about-hero-service-card:hover{
+/*==================================================
+    14 — DESKTOP ATMOSPHERE
+==================================================*/
 
-    border-color:rgba(77,124,255,.45);
+@media (min-width: 1200px) {
 
-    box-shadow:
+    .s15-about-hero-grid {
 
-    0 25px 60px rgba(37,99,235,.22);
+        background-size:
+            72px 72px;
 
-}
+    }
 
 
-/*==========================================
-        HIGHLIGHT CARDS
-==========================================*/
+    .s15-about-hero-particles {
 
-.s15-about-hero-highlight-card{
+        background-size:
+            135px 165px,
+            240px 215px;
 
-    background:
-
-    rgba(255,255,255,.04);
-
-    border:1px solid rgba(255,255,255,.08);
-
-    backdrop-filter:blur(18px);
+    }
 
 }
 
 
-.s15-about-hero-highlight-card strong{
+/*==================================================
+    15 — TABLET
+==================================================*/
 
-    color:#ffffff;
+@media (max-width: 1024px) {
 
-}
+    .s15-about-hero-grid {
 
+        opacity:
+            0.30;
 
-.s15-about-hero-highlight-card span{
+        background-size:
+            58px 58px;
 
-    color:#9FB0C8;
-
-}
-
-
-/*==========================================
-        BADGE
-==========================================*/
-
-.s15-about-hero-badge{
-
-    background:
-
-    rgba(255,255,255,.05);
-
-    border:1px solid rgba(255,255,255,.08);
-
-    color:#C9D4E8;
-
-}
+    }
 
 
-.s15-about-hero-badge-dot{
+    .s15-about-hero-aurora {
 
-    background:#4D7CFF;
+        left: 20%;
 
-    box-shadow:
+        width: 70%;
 
-    0 0 18px rgba(77,124,255,.9);
-
-}
+    }
 
 
-/*==========================================
-        TYPOGRAPHY
-==========================================*/
+    .s15-about-hero-monogram {
 
-.s15-about-hero-title{
+        right: -12%;
 
-    color:#ffffff;
+    }
+
+
+    .s15-about-hero-monogram span {
+
+        font-size:
+            500px;
+
+    }
 
 }
 
 
-.s15-about-hero-title span{
+/*==================================================
+    16 — MOBILE
+==================================================*/
 
-    background:
+@media (max-width: 560px) {
 
-    linear-gradient(
+    .s15-about-hero-background {
 
-    90deg,
+        background:
+            radial-gradient(
+                circle at 50% 55%,
+                rgba(8, 80, 105, 0.13),
+                transparent 38%
+            ),
+            #050f1a;
 
-    #ffffff,
-
-    #61DAFB,
-
-    #4D7CFF
-
-    );
-
-    -webkit-background-clip:text;
-
-    -webkit-text-fill-color:transparent;
-
-}
+    }
 
 
-.s15-about-hero-description{
+    .s15-about-hero-grid {
 
-    color:#98A5BF;
+        opacity:
+            0.20;
 
-}
+        background-size:
+            44px 44px;
 
+        mask-image:
+            radial-gradient(
+                ellipse at center,
+                black 20%,
+                transparent 82%
+            );
 
-/*==========================================
-        BUTTONS
-==========================================*/
+        -webkit-mask-image:
+            radial-gradient(
+                ellipse at center,
+                black 20%,
+                transparent 82%
+            );
 
-.s15-about-hero-btn-primary{
-
-    background:
-
-    linear-gradient(
-
-    135deg,
-
-    #4D7CFF,
-
-    #2563EB
-
-    );
-
-    color:#ffffff;
-
-    box-shadow:
-
-    0 20px 45px rgba(37,99,235,.28);
-
-}
+    }
 
 
-.s15-about-hero-btn-secondary{
+    .s15-about-hero-aurora {
 
-    background:
+        top: 30%;
 
-    rgba(255,255,255,.05);
+        left: -10%;
 
-    border:1px solid rgba(255,255,255,.08);
+        width: 120%;
 
-    color:#ffffff;
+        height: 55%;
 
-    backdrop-filter:blur(18px);
+        filter:
+            blur(30px);
 
-}
-
-
-.s15-about-hero-btn-primary:hover{
-
-    box-shadow:
-
-    0 30px 70px rgba(37,99,235,.40);
-
-}
+    }
 
 
-.s15-about-hero-btn-secondary:hover{
+    .s15-about-hero-particles {
 
-    background:
+        opacity:
+            0.30;
 
-    rgba(255,255,255,.08);
+        background-size:
+            100px 130px,
+            160px 170px;
 
-}
+    }
 
 
-/*==========================================
-        SCROLL
-==========================================*/
+    .s15-about-hero-monogram {
 
-.s15-about-hero-scroll{
+        right: -20%;
 
-    color:#A7B7D2;
+        top: 62%;
+
+    }
+
+
+    .s15-about-hero-monogram span {
+
+        font-size:
+            330px;
+
+    }
 
 }
 
 
-.s15-about-hero-scroll i{
-
-    color:#61DAFB;
-
-}
+/*==================================================
+    END — 04 BACKGROUND
+==================================================*/

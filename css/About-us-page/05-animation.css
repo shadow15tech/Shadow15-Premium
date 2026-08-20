@@ -1,383 +1,845 @@
-/*==========================================
-        HERO REVEAL
-==========================================*/
+/*==================================================
+    SHADOW15 — ABOUT HERO
+    File: css/05-pages/about-us-page/05-animation.css
 
-.s15-about-hero-badge,
-.s15-about-hero-title,
-.s15-about-hero-description,
-.s15-about-hero-highlights,
-.s15-about-hero-actions,
-.s15-about-hero-visual,
-.s15-about-hero-scroll{
+    RESPONSIBILITY
+    --------------------------------------------------
+    Motion system only.
 
-    opacity:0;
+    Controls:
+    • Hero entrance
+    • Floating service cards
+    • Core pulse
+    • Orbit rotation
+    • Network breathing
+    • Background movement
+    • CTA / card micro-interactions
 
-    animation-fill-mode:forwards;
+    Layout → 01-layout.css
+    Content → 02-content.css
+    Visual → 03-visual.css
+    Background → 04-background.css
+    Responsive → 06-responsive.css
+==================================================*/
 
-}
 
+/*==================================================
+    01 — HERO CONTENT ENTRANCE
+==================================================*/
 
-/*==========================================
-        STAGGER
-==========================================*/
-
-.s15-about-hero-badge{
-
-    animation:
-    s15FadeUp .8s ease .15s forwards;
-
-}
-
-.s15-about-hero-title{
-
-    animation:
-    s15FadeUp .9s ease .35s forwards;
-
-}
-
-.s15-about-hero-description{
+.s15-about-hero-content {
 
     animation:
-    s15FadeUp .9s ease .55s forwards;
+        s15AboutContentReveal
+        0.9s
+        cubic-bezier(
+            0.22,
+            1,
+            0.36,
+            1
+        )
+        both;
 
 }
 
-.s15-about-hero-highlights{
+
+@keyframes s15AboutContentReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(28px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/*==================================================
+    02 — BADGE ENTRANCE
+==================================================*/
+
+.s15-about-hero-badge {
 
     animation:
-    s15FadeUp .9s ease .75s forwards;
+        s15AboutBadgeReveal
+        0.65s
+        ease-out
+        0.05s
+        both;
 
 }
 
-.s15-about-hero-actions{
+
+@keyframes s15AboutBadgeReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(12px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/*==================================================
+    03 — TITLE ENTRANCE
+==================================================*/
+
+.s15-about-hero-title {
 
     animation:
-    s15FadeUp .9s ease .95s forwards;
+        s15AboutTitleReveal
+        0.9s
+        cubic-bezier(
+            0.22,
+            1,
+            0.36,
+            1
+        )
+        0.12s
+        both;
 
 }
 
-.s15-about-hero-visual{
+
+@keyframes s15AboutTitleReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(35px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/*==================================================
+    04 — DESCRIPTION ENTRANCE
+==================================================*/
+
+.s15-about-hero-description {
 
     animation:
-    s15ScaleIn 1.2s ease .45s forwards;
+        s15AboutDescriptionReveal
+        0.8s
+        ease-out
+        0.25s
+        both;
 
 }
 
-.s15-about-hero-scroll{
+
+@keyframes s15AboutDescriptionReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/*==================================================
+    05 — HIGHLIGHTS ENTRANCE
+==================================================*/
+
+.s15-about-hero-highlight-card {
 
     animation:
-    s15FadeUp .8s ease 1.3s forwards;
+        s15AboutHighlightReveal
+        0.7s
+        cubic-bezier(
+            0.22,
+            1,
+            0.36,
+            1
+        )
+        both;
 
 }
 
 
-/*==========================================
-        FLOATING CARDS
-==========================================*/
+.s15-about-hero-highlight-card:nth-child(1) {
 
-.s15-about-hero-service-card{
+    animation-delay:
+        0.32s;
+
+}
+
+
+.s15-about-hero-highlight-card:nth-child(2) {
+
+    animation-delay:
+        0.40s;
+
+}
+
+
+.s15-about-hero-highlight-card:nth-child(3) {
+
+    animation-delay:
+        0.48s;
+
+}
+
+
+@keyframes s15AboutHighlightReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(22px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/*==================================================
+    06 — CTA ENTRANCE
+==================================================*/
+
+.s15-about-hero-actions {
 
     animation:
-
-    s15Floating 7s ease-in-out infinite;
-
-}
-
-.hero-card-web{
-
-    animation-delay:0s;
-
-}
-
-.hero-card-ai{
-
-    animation-delay:.5s;
-
-}
-
-.hero-card-ads{
-
-    animation-delay:1s;
-
-}
-
-.hero-card-seo{
-
-    animation-delay:1.5s;
-
-}
-
-.hero-card-gbp{
-
-    animation-delay:2s;
-
-}
-
-.hero-card-design{
-
-    animation-delay:2.5s;
-
-}
-
-.hero-card-app{
-
-    animation-delay:3s;
-
-}
-
-.hero-card-chatbot{
-
-    animation-delay:3.5s;
+        s15AboutActionsReveal
+        0.75s
+        ease-out
+        0.56s
+        both;
 
 }
 
 
-/*==========================================
-        ORBIT
-==========================================*/
+@keyframes s15AboutActionsReveal {
 
-.s15-about-hero-orbit{
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(18px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/*==================================================
+    07 — CORE ENTRANCE
+==================================================*/
+
+.s15-about-hero-core {
 
     animation:
-
-    s15Rotate 40s linear infinite;
+        s15AboutCoreReveal
+        1.1s
+        cubic-bezier(
+            0.16,
+            1,
+            0.3,
+            1
+        )
+        0.2s
+        both;
 
 }
 
 
-/*==========================================
-        CORE
-==========================================*/
+@keyframes s15AboutCoreReveal {
 
-.s15-about-hero-core{
+    from {
+
+        opacity: 0;
+
+        transform:
+            translate(
+                -50%,
+                -50%
+            )
+            scale(0.72);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translate(
+                -50%,
+                -50%
+            )
+            scale(1);
+
+    }
+
+}
+
+
+/*==================================================
+    08 — CORE BREATHING
+==================================================*/
+
+.s15-about-hero-core {
 
     animation:
-
-    s15Pulse 5s ease-in-out infinite;
+        s15AboutCoreReveal
+        1.1s
+        cubic-bezier(
+            0.16,
+            1,
+            0.3,
+            1
+        )
+        0.2s
+        both,
+        s15AboutCoreBreath
+        5.5s
+        ease-in-out
+        1.5s
+        infinite;
 
 }
 
 
-/*==========================================
-        BADGE DOT
-==========================================*/
+@keyframes s15AboutCoreBreath {
 
-.s15-about-hero-badge-dot{
+    0%,
+    100% {
+
+        box-shadow:
+            0 0 0 1px
+            rgba(25, 216, 239, 0.06),
+            0 0 55px
+            rgba(13, 184, 220, 0.14),
+            inset 0 1px 0
+            rgba(255,255,255,0.10),
+            inset 0 -25px 55px
+            rgba(0,0,0,0.28);
+
+    }
+
+    50% {
+
+        box-shadow:
+            0 0 0 1px
+            rgba(25, 216, 239, 0.10),
+            0 0 75px
+            rgba(13, 184, 220, 0.22),
+            inset 0 1px 0
+            rgba(255,255,255,0.13),
+            inset 0 -25px 55px
+            rgba(0,0,0,0.24);
+
+    }
+
+}
+
+
+/*==================================================
+    09 — ORBIT ROTATION
+==================================================*/
+
+.s15-about-hero-orbit {
 
     animation:
-
-    s15Blink 2s ease infinite;
+        s15AboutOrbit
+        28s
+        linear
+        infinite;
 
 }
 
 
-/*==========================================
-        SCROLL
-==========================================*/
+@keyframes s15AboutOrbit {
 
-.s15-about-hero-scroll i{
+    from {
+
+        transform:
+            translate(
+                -50%,
+                -50%
+            )
+            rotate(0deg);
+
+    }
+
+    to {
+
+        transform:
+            translate(
+                -50%,
+                -50%
+            )
+            rotate(360deg);
+
+    }
+
+}
+
+
+/*==================================================
+    10 — ORBIT NODE PULSE
+==================================================*/
+
+.s15-about-hero-orbit::after {
 
     animation:
-
-    s15Bounce 2s ease infinite;
-
-}
-
-
-/*==========================================
-        BUTTON HOVER
-==========================================*/
-
-.s15-about-hero-btn-primary:hover{
-
-    transform:
-
-    translateY(-6px)
-    scale(1.03);
-
-}
-
-.s15-about-hero-btn-secondary:hover{
-
-    transform:
-
-    translateY(-6px)
-    scale(1.03);
+        s15AboutOrbitNode
+        2.8s
+        ease-in-out
+        infinite;
 
 }
 
 
-/*==========================================
-        CARD HOVER
-==========================================*/
+@keyframes s15AboutOrbitNode {
 
-.s15-about-hero-service-card:hover{
+    0%,
+    100% {
 
-    transform:
+        opacity:
+            0.55;
 
-    translateY(-12px)
-    scale(1.05);
-
-}
-
-.s15-about-hero-highlight-card:hover{
-
-    transform:
-
-    translateY(-8px);
-
-}
-
-
-/*==========================================
-        KEYFRAMES
-==========================================*/
-
-@keyframes s15FadeUp{
-
-    from{
-
-        opacity:0;
-
-        transform:
-        translateY(60px);
+        box-shadow:
+            0 0 8px
+            rgba(
+                44,
+                225,
+                240,
+                0.65
+            ),
+            0 0 20px
+            rgba(
+                44,
+                225,
+                240,
+                0.25
+            );
 
     }
 
-    to{
+    50% {
 
-        opacity:1;
+        opacity:
+            1;
 
-        transform:
-        translateY(0);
+        box-shadow:
+            0 0 10px
+            rgba(
+                44,
+                225,
+                240,
+                0.95
+            ),
+            0 0 30px
+            rgba(
+                44,
+                225,
+                240,
+                0.5
+            );
 
     }
 
 }
 
 
-@keyframes s15ScaleIn{
+/*==================================================
+    11 — SERVICE CARD FLOAT
+==================================================*/
 
-    from{
+.s15-about-hero-service-card {
 
-        opacity:0;
+    animation:
+        s15AboutCardFloat
+        5.5s
+        ease-in-out
+        infinite;
 
-        transform:
-        scale(.85);
+}
+
+
+/*==================================================
+    12 — DIFFERENT FLOAT TIMINGS
+==================================================*/
+
+.hero-card-web {
+
+    animation-delay:
+        -0.4s;
+
+}
+
+
+.hero-card-ai {
+
+    animation-delay:
+        -1.7s;
+
+}
+
+
+.hero-card-ads {
+
+    animation-delay:
+        -2.5s;
+
+}
+
+
+.hero-card-seo {
+
+    animation-delay:
+        -3.6s;
+
+}
+
+
+.hero-card-gbp {
+
+    animation-delay:
+        -1.1s;
+
+}
+
+
+.hero-card-design {
+
+    animation-delay:
+        -4.2s;
+
+}
+
+
+.hero-card-app {
+
+    animation-delay:
+        -2.1s;
+
+}
+
+
+.hero-card-chatbot {
+
+    animation-delay:
+        -3s;
+
+}
+
+
+/*==================================================
+    13 — FLOAT KEYFRAME
+==================================================*/
+
+@keyframes s15AboutCardFloat {
+
+    0%,
+    100% {
+
+        margin-top:
+            0;
 
     }
 
-    to{
+    50% {
 
-        opacity:1;
-
-        transform:
-        scale(1);
+        margin-top:
+            -9px;
 
     }
 
 }
 
 
-@keyframes s15Floating{
+/*==================================================
+    14 — NETWORK BREATHING
+==================================================*/
 
-    0%{
+.s15-about-hero-network {
 
-        transform:
-        translateY(0);
+    animation:
+        s15AboutNetworkPulse
+        6s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes s15AboutNetworkPulse {
+
+    0%,
+    100% {
+
+        opacity:
+            0.25;
 
     }
 
-    50%{
+    50% {
 
-        transform:
-        translateY(-14px);
-
-    }
-
-    100%{
-
-        transform:
-        translateY(0);
+        opacity:
+            0.48;
 
     }
 
 }
 
 
-@keyframes s15Rotate{
+/*==================================================
+    15 — AURORA MOTION
+==================================================*/
 
-    from{
+.s15-about-hero-aurora {
+
+    animation:
+        s15AboutAurora
+        12s
+        ease-in-out
+        infinite alternate;
+
+}
+
+
+@keyframes s15AboutAurora {
+
+    0% {
 
         transform:
-        translate(-50%,-50%)
-        rotate(0deg);
+            translate3d(
+                -2%,
+                -1%,
+                0
+            )
+            rotate(-18deg)
+            scale(1);
 
     }
 
-    to{
+    50% {
 
         transform:
-        translate(-50%,-50%)
-        rotate(360deg);
+            translate3d(
+                2%,
+                2%,
+                0
+            )
+            rotate(-14deg)
+            scale(1.04);
+
+    }
+
+    100% {
+
+        transform:
+            translate3d(
+                -1%,
+                4%,
+                0
+            )
+            rotate(-20deg)
+            scale(1.02);
 
     }
 
 }
 
 
-@keyframes s15Pulse{
+/*==================================================
+    16 — PARTICLE MOVEMENT
+==================================================*/
 
-    0%,100%{
+.s15-about-hero-particles {
+
+    animation:
+        s15AboutParticles
+        22s
+        linear
+        infinite;
+
+}
+
+
+@keyframes s15AboutParticles {
+
+    from {
 
         transform:
-        translate(-50%,-50%)
-        scale(1);
+            translate3d(
+                0,
+                0,
+                0
+            );
 
     }
 
-    50%{
+    to {
 
         transform:
-        translate(-50%,-50%)
-        scale(1.04);
+            translate3d(
+                -25px,
+                -18px,
+                0
+            );
 
     }
 
 }
 
 
-@keyframes s15Blink{
+/*==================================================
+    17 — MONOGRAM BREATHING
+==================================================*/
 
-    0%,100%{
+.s15-about-hero-monogram span {
 
-        opacity:1;
+    animation:
+        s15AboutMonogram
+        8s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes s15AboutMonogram {
+
+    0%,
+    100% {
+
+        opacity:
+            0.7;
+
+        transform:
+            scale(1);
 
     }
 
-    50%{
+    50% {
 
-        opacity:.35;
+        opacity:
+            1;
+
+        transform:
+            scale(1.015);
 
     }
 
 }
 
 
-@keyframes s15Bounce{
+/*==================================================
+    18 — BUTTON MICRO MOTION
+==================================================*/
 
-    0%,100%{
+.s15-about-hero-btn-primary,
+.s15-about-hero-btn-secondary {
 
-        transform:
-        translateY(0);
+    will-change:
+        transform;
 
-    }
+}
 
-    50%{
 
-        transform:
-        translateY(10px);
+/*==================================================
+    19 — REDUCE MOTION
+==================================================*/
+
+@media (prefers-reduced-motion: reduce) {
+
+    .s15-about-hero-content,
+    .s15-about-hero-badge,
+    .s15-about-hero-title,
+    .s15-about-hero-description,
+    .s15-about-hero-highlight-card,
+    .s15-about-hero-actions,
+    .s15-about-hero-core,
+    .s15-about-hero-service-card,
+    .s15-about-hero-orbit,
+    .s15-about-hero-network,
+    .s15-about-hero-aurora,
+    .s15-about-hero-particles,
+    .s15-about-hero-monogram span {
+
+        animation:
+            none !important;
 
     }
 
 }
+
+
+/*==================================================
+    END — 05 ANIMATION
+==================================================*/

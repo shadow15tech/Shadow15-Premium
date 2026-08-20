@@ -1,0 +1,688 @@
+/*==================================================
+    SHADOW15
+    PEOPLE BEHIND SHADOW15
+
+    FILE:
+    05-animation.css
+
+    RESPONSIBILITY:
+    • Founder entrance
+    • Portrait motion
+    • Team reveal
+    • Card hover motion
+    • Ambient background motion
+==================================================*/
+
+
+/*==================================================
+    01 — SECTION HEADING REVEAL
+==================================================*/
+
+.s15-founder-heading{
+
+    animation:
+        s15PeopleHeadingReveal
+        0.9s
+        cubic-bezier(
+            0.22,
+            1,
+            0.36,
+            1
+        )
+        both;
+
+}
+
+
+@keyframes s15PeopleHeadingReveal{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(28px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/*==================================================
+    02 — FOUNDER CONTENT REVEAL
+==================================================*/
+
+.s15-founder-content{
+
+    animation:
+        s15FounderContentReveal
+        0.9s
+        cubic-bezier(
+            0.22,
+            1,
+            0.36,
+            1
+        )
+        0.15s
+        both;
+
+}
+
+
+@keyframes s15FounderContentReveal{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/*==================================================
+    03 — FOUNDER PORTRAIT REVEAL
+==================================================*/
+
+.s15-founder-portrait{
+
+    animation:
+        s15FounderPortraitReveal
+        1.1s
+        cubic-bezier(
+            0.16,
+            1,
+            0.3,
+            1
+        )
+        0.2s
+        both;
+
+}
+
+
+@keyframes s15FounderPortraitReveal{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(35px)
+            scale(0.94)
+            rotateY(5deg);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0)
+            scale(1)
+            rotateY(0);
+
+    }
+
+}
+
+
+/*==================================================
+    04 — FOUNDER PORTRAIT FLOAT
+==================================================*/
+
+.s15-founder-portrait{
+
+    animation:
+        s15FounderPortraitReveal
+        1.1s
+        cubic-bezier(
+            0.16,
+            1,
+            0.3,
+            1
+        )
+        0.2s
+        both,
+
+        s15FounderPortraitFloat
+        7s
+        ease-in-out
+        1.5s
+        infinite;
+
+}
+
+
+@keyframes s15FounderPortraitFloat{
+
+    0%,
+    100%{
+
+        margin-top:0;
+
+    }
+
+    50%{
+
+        margin-top:-7px;
+
+    }
+
+}
+
+
+/*==================================================
+    05 — FOUNDER TAG FLOAT
+==================================================*/
+
+.s15-founder-tag{
+
+    animation:
+        s15FounderTagFloat
+        5s
+        ease-in-out
+        1.4s
+        infinite;
+
+}
+
+
+@keyframes s15FounderTagFloat{
+
+    0%,
+    100%{
+
+        transform:
+            translateY(0);
+
+    }
+
+    50%{
+
+        transform:
+            translateY(-6px);
+
+    }
+
+}
+
+
+/*==================================================
+    06 — FOUNDER IMAGE MICRO MOTION
+==================================================*/
+
+.s15-founder-portrait img{
+
+    transition:
+        transform 0.8s
+        cubic-bezier(
+            0.22,
+            1,
+            0.36,
+            1
+        ),
+
+        filter 0.5s ease;
+
+}
+
+
+/*==================================================
+    07 — TEAM HEADING REVEAL
+==================================================*/
+
+.s15-team-heading{
+
+    animation:
+        s15TeamHeadingReveal
+        0.8s
+        cubic-bezier(
+            0.22,
+            1,
+            0.36,
+            1
+        )
+        0.35s
+        both;
+
+}
+
+
+@keyframes s15TeamHeadingReveal{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(24px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/*==================================================
+    08 — TEAM CARD REVEAL
+==================================================*/
+
+.s15-team-card{
+
+    opacity:0;
+
+    animation:
+        s15TeamCardReveal
+        0.7s
+        cubic-bezier(
+            0.22,
+            1,
+            0.36,
+            1
+        )
+        both;
+
+}
+
+
+.s15-team-card:nth-child(1){
+
+    animation-delay:
+        0.45s;
+
+}
+
+
+.s15-team-card:nth-child(2){
+
+    animation-delay:
+        0.52s;
+
+}
+
+
+.s15-team-card:nth-child(3){
+
+    animation-delay:
+        0.59s;
+
+}
+
+
+.s15-team-card:nth-child(4){
+
+    animation-delay:
+        0.66s;
+
+}
+
+
+@keyframes s15TeamCardReveal{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(28px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/*==================================================
+    09 — TEAM IMAGE MOTION
+==================================================*/
+
+.s15-team-image img{
+
+    transition:
+        transform 0.65s
+        cubic-bezier(
+            0.22,
+            1,
+            0.36,
+            1
+        ),
+
+        filter 0.5s ease;
+
+}
+
+
+/*==================================================
+    10 — TEAM CARD HOVER
+==================================================*/
+
+.s15-team-card{
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        background 0.35s ease,
+        box-shadow 0.35s ease;
+
+}
+
+
+.s15-team-card:hover{
+
+    box-shadow:
+        0 20px 45px
+        rgba(
+            0,
+            0,
+            0,
+            0.22
+        ),
+
+        0 0 25px
+        rgba(
+            20,
+            196,
+            225,
+            0.045
+        );
+
+}
+
+
+/*==================================================
+    11 — PHILOSOPHY PILL HOVER
+==================================================*/
+
+.s15-founder-philosophy span{
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease,
+        background 0.3s ease;
+
+}
+
+
+.s15-founder-philosophy span:hover{
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+/*==================================================
+    12 — BACKGROUND GLOW MOTION
+==================================================*/
+
+.s15-founder-glow{
+
+    animation:
+        s15FounderGlow
+        8s
+        ease-in-out
+        infinite
+        alternate;
+
+}
+
+
+@keyframes s15FounderGlow{
+
+    0%{
+
+        opacity:
+            0.55;
+
+        transform:
+            scale(0.96);
+
+    }
+
+    100%{
+
+        opacity:
+            1;
+
+        transform:
+            scale(1.06);
+
+    }
+
+}
+
+
+/*==================================================
+    13 — MONOGRAM MOTION
+==================================================*/
+
+.s15-founder-monogram{
+
+    animation:
+        s15FounderMonogram
+        11s
+        ease-in-out
+        infinite
+        alternate;
+
+}
+
+
+@keyframes s15FounderMonogram{
+
+    0%{
+
+        transform:
+            translateY(-50%)
+            translateX(0);
+
+    }
+
+    100%{
+
+        transform:
+            translateY(
+                calc(-50% - 10px)
+            )
+            translateX(-8px);
+
+    }
+
+}
+
+
+/*==================================================
+    14 — GRID MOVEMENT
+==================================================*/
+
+.s15-founder-grid{
+
+    animation:
+        s15FounderGrid
+        20s
+        linear
+        infinite;
+
+}
+
+
+@keyframes s15FounderGrid{
+
+    from{
+
+        background-position:
+            0 0,
+            0 0;
+
+    }
+
+    to{
+
+        background-position:
+            68px 68px,
+            68px 68px;
+
+    }
+
+}
+
+
+/*==================================================
+    15 — FOUNDER TAG ACCENT
+==================================================*/
+
+.s15-founder-tag::before{
+
+    animation:
+        s15FounderTagGlow
+        3s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes s15FounderTagGlow{
+
+    0%,
+    100%{
+
+        opacity:
+            0.55;
+
+    }
+
+    50%{
+
+        opacity:
+            1;
+
+        box-shadow:
+            0 0 14px
+            rgba(
+                36,
+                216,
+                239,
+                0.55
+            );
+
+    }
+
+}
+
+
+/*==================================================
+    16 — TEAM CORNER ACCENT
+==================================================*/
+
+.s15-team-card::before,
+.s15-team-card::after{
+
+    transition:
+        width 0.35s ease,
+        height 0.35s ease,
+        border-color 0.35s ease;
+
+}
+
+
+.s15-team-card:hover::before,
+.s15-team-card:hover::after{
+
+    width:
+        30px;
+
+    height:
+        30px;
+
+}
+
+
+/*==================================================
+    17 — TOUCH DEVICES
+==================================================*/
+
+@media (hover:none){
+
+    .s15-team-card:hover{
+
+        transform:
+            none;
+
+    }
+
+
+    .s15-founder-philosophy span:hover{
+
+        transform:
+            none;
+
+    }
+
+}
+
+
+/*==================================================
+    18 — REDUCED MOTION
+==================================================*/
+
+@media (prefers-reduced-motion:reduce){
+
+    .s15-founder-section *,
+    .s15-founder-section *::before,
+    .s15-founder-section *::after{
+
+        animation:
+            none !important;
+
+        transition:
+            none !important;
+
+    }
+
+}
+
+
+/*==================================================
+    END — 05 ANIMATION
+==================================================*/

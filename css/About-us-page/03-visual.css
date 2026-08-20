@@ -1,242 +1,800 @@
-/*==========================================
-        ABOUT HERO VISUAL
-==========================================*/
+/*==================================================
+    SHADOW15 — ABOUT HERO
+    File: css/05-pages/about-us-page/03-visual.css
 
-.s15-about-hero-visual{
+    RESPONSIBILITY
+    --------------------------------------------------
+    Right-side digital ecosystem visual.
 
-    position: relative;
+    Controls:
+    • Shadow15 central core
+    • Service nodes
+    • Orbit rings
+    • Network layer
+    • Depth / glass treatment
+    • Visual hierarchy
+
+    Layout → 01-layout.css
+    Content → 02-content.css
+    Background → 04-background.css
+    Animation → 05-animation.css
+    Responsive → 06-responsive.css
+==================================================*/
+
+
+/*==================================================
+    01 — VISUAL SYSTEM
+==================================================*/
+
+.s15-about-hero-visual {
 
     isolation: isolate;
 
 }
 
 
-/*==========================================
-        SHADOW15 CORE
-==========================================*/
+/*==================================================
+    02 — CENTRAL CORE
+==================================================*/
 
-.s15-about-hero-core{
+.s15-about-hero-core {
 
-    display: flex;
+    width:
+        clamp(
+            190px,
+            17vw,
+            260px
+        );
 
-    align-items: center;
+    aspect-ratio:
+        1;
 
-    justify-content: center;
+    border:
+        1px solid
+        rgba(
+            58,
+            216,
+            239,
+            0.38
+        );
 
-    border-radius: 50%;
+    border-radius:
+        50%;
 
-    z-index: 10;
+    background:
+        radial-gradient(
+            circle at 35% 28%,
+            rgba(35, 197, 235, 0.22),
+            rgba(8, 27, 42, 0.88) 48%,
+            rgba(4, 13, 25, 0.96) 100%
+        );
 
-}
+    box-shadow:
+        0 0 0 1px
+        rgba(25, 216, 239, 0.06),
+        0 0 55px
+        rgba(13, 184, 220, 0.14),
+        inset 0 1px 0
+        rgba(255,255,255,0.10),
+        inset 0 -25px 55px
+        rgba(0,0,0,0.28);
 
+    backdrop-filter:
+        blur(18px);
 
-.s15-about-hero-core span{
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    width: 100%;
-
-    height: 100%;
-
-}
-
-
-/*==========================================
-        ORBIT
-==========================================*/
-
-.s15-about-hero-orbit{
-
-    z-index: 2;
-
-}
-
-
-/*==========================================
-        NETWORK
-==========================================*/
-
-.s15-about-hero-network{
-
-    pointer-events: none;
-
-    z-index: 1;
+    -webkit-backdrop-filter:
+        blur(18px);
 
 }
 
 
-/*==========================================
-        SERVICE CARD
-==========================================*/
+/*==================================================
+    03 — CORE INNER RING
+==================================================*/
 
-.s15-about-hero-service-card{
+.s15-about-hero-core::before {
 
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    padding: 14px 22px;
-
-    border-radius: 14px;
-
-    white-space: nowrap;
-
-    z-index: 5;
-
-}
-
-
-/*==========================================
-        CARD POSITIONS
-==========================================*/
-
-.hero-card-web{
-
-    top: 5%;
-
-    left: 50%;
-
-    transform: translateX(-50%);
-
-}
-
-
-.hero-card-ai{
-
-    top: 22%;
-
-    right: 2%;
-
-}
-
-
-.hero-card-ads{
-
-    top: 50%;
-
-    right: -3%;
-
-    transform: translateY(-50%);
-
-}
-
-
-.hero-card-seo{
-
-    bottom: 18%;
-
-    right: 8%;
-
-}
-
-
-.hero-card-gbp{
-
-    bottom: 2%;
-
-    left: 50%;
-
-    transform: translateX(-50%);
-
-}
-
-
-.hero-card-design{
-
-    bottom: 18%;
-
-    left: 6%;
-
-}
-
-
-.hero-card-app{
-
-    top: 50%;
-
-    left: -3%;
-
-    transform: translateY(-50%);
-
-}
-
-
-.hero-card-chatbot{
-
-    top: 22%;
-
-    left: 2%;
-
-}
-
-
-/*==========================================
-        CARD CONTENT
-==========================================*/
-
-.s15-about-hero-service-card{
-
-    font-size: .95rem;
-
-    font-weight: 600;
-
-    letter-spacing: .4px;
-
-}
-
-
-/*==========================================
-        VISUAL DEPTH
-==========================================*/
-
-.s15-about-hero-visual>*{
+    content: "";
 
     position: absolute;
 
-}
+    inset: 13%;
 
+    border:
+        1px solid
+        rgba(
+            44,
+            215,
+            239,
+            0.18
+        );
 
-/*==========================================
-        CORE LAYER
-==========================================*/
+    border-radius:
+        50%;
 
-.s15-about-hero-core{
-
-    overflow: hidden;
-
-}
-
-
-/*==========================================
-        VISUAL STACK
-==========================================*/
-
-.s15-about-hero-core{
-
-    z-index: 20;
-
-}
-
-.s15-about-hero-service-card{
-
-    z-index: 15;
+    box-shadow:
+        inset 0 0 25px
+        rgba(
+            25,
+            210,
+            239,
+            0.07
+        );
 
 }
 
-.s15-about-hero-orbit{
 
-    z-index: 8;
+/*==================================================
+    04 — CORE LIGHT
+==================================================*/
+
+.s15-about-hero-core::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 34%;
+
+    height: 34%;
+
+    top: 18%;
+
+    left: 20%;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(63, 231, 248, 0.22),
+            transparent 72%
+        );
+
+    filter:
+        blur(12px);
+
+    pointer-events:
+        none;
 
 }
 
-.s15-about-hero-network{
 
-    z-index: 5;
+/*==================================================
+    05 — CORE TEXT
+==================================================*/
+
+.s15-about-hero-core span {
+
+    position: relative;
+
+    z-index: 3;
+
+    display: block;
+
+    color:
+        #f4f9fc;
+
+    font-size:
+        clamp(
+            17px,
+            1.45vw,
+            23px
+        );
+
+    font-weight:
+        750;
+
+    letter-spacing:
+        0.08em;
+
+    text-align:
+        center;
+
+    text-shadow:
+        0 0 22px
+        rgba(
+            36,
+            215,
+            239,
+            0.25
+        );
 
 }
+
+
+/*==================================================
+    06 — SERVICE CARDS
+==================================================*/
+
+.s15-about-hero-service-card {
+
+    min-width:
+        128px;
+
+    min-height:
+        48px;
+
+    padding:
+        10px 15px;
+
+    border:
+        1px solid
+        rgba(
+            125,
+            169,
+            198,
+            0.16
+        );
+
+    border-radius:
+        14px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(21, 39, 55, 0.86),
+            rgba(7, 19, 31, 0.78)
+        );
+
+    color:
+        rgba(
+            224,
+            238,
+            246,
+            0.86
+        );
+
+    font-size:
+        11px;
+
+    font-weight:
+        600;
+
+    line-height:
+        1.2;
+
+    letter-spacing:
+        -0.01em;
+
+    white-space:
+        nowrap;
+
+    box-shadow:
+        0 14px 35px
+        rgba(0,0,0,0.18),
+        inset 0 1px 0
+        rgba(255,255,255,0.045);
+
+    backdrop-filter:
+        blur(15px);
+
+    -webkit-backdrop-filter:
+        blur(15px);
+
+    transition:
+        border-color 0.35s ease,
+        background 0.35s ease,
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+
+}
+
+
+/*==================================================
+    07 — SERVICE CARD ACCENT
+==================================================*/
+
+.s15-about-hero-service-card::before {
+
+    content: "";
+
+    width:
+        6px;
+
+    height:
+        6px;
+
+    margin-right:
+        8px;
+
+    flex-shrink:
+        0;
+
+    border-radius:
+        50%;
+
+    background:
+        #20d9ef;
+
+    box-shadow:
+        0 0 10px
+        rgba(
+            32,
+            217,
+            239,
+            0.65
+        );
+
+}
+
+
+/*==================================================
+    08 — SERVICE HOVER
+==================================================*/
+
+.s15-about-hero-service-card:hover {
+
+    border-color:
+        rgba(
+            29,
+            215,
+            239,
+            0.34
+        );
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(22, 49, 66, 0.94),
+            rgba(7, 24, 38, 0.88)
+        );
+
+    box-shadow:
+        0 18px 42px
+        rgba(0,0,0,0.25),
+        0 0 24px
+        rgba(17, 202, 231, 0.08);
+
+}
+
+
+/*==================================================
+    09 — INDIVIDUAL CARD DEPTH
+==================================================*/
+
+.hero-card-web {
+
+    transform:
+        translateZ(30px);
+
+}
+
+.hero-card-ai {
+
+    transform:
+        translateZ(50px);
+
+}
+
+.hero-card-ads {
+
+    transform:
+        translateZ(20px);
+
+}
+
+.hero-card-seo {
+
+    transform:
+        translateZ(35px);
+
+}
+
+.hero-card-gbp {
+
+    transform:
+        translateZ(10px);
+
+}
+
+.hero-card-design {
+
+    transform:
+        translateZ(25px);
+
+}
+
+.hero-card-app {
+
+    transform:
+        translateZ(45px);
+
+}
+
+.hero-card-chatbot {
+
+    transform:
+        translateZ(55px);
+
+}
+
+
+/*==================================================
+    10 — ORBIT PRIMARY
+==================================================*/
+
+.s15-about-hero-orbit {
+
+    border:
+        1px solid
+        rgba(
+            38,
+            214,
+            239,
+            0.22
+        );
+
+    border-radius:
+        50%;
+
+    box-shadow:
+        0 0 25px
+        rgba(
+            15,
+            195,
+            226,
+            0.035
+        ),
+        inset 0 0 25px
+        rgba(
+            15,
+            195,
+            226,
+            0.025
+        );
+
+    pointer-events:
+        none;
+
+}
+
+
+/*==================================================
+    11 — ORBIT SECONDARY RING
+==================================================*/
+
+.s15-about-hero-orbit::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset:
+        11% -7%;
+
+    border:
+        1px solid
+        rgba(
+            91,
+            151,
+            184,
+            0.10
+        );
+
+    border-radius:
+        50%;
+
+    transform:
+        rotate(-22deg);
+
+}
+
+
+/*==================================================
+    12 — ORBIT GLOW NODE
+==================================================*/
+
+.s15-about-hero-orbit::after {
+
+    content: "";
+
+    position: absolute;
+
+    top:
+        7%;
+
+    left:
+        50%;
+
+    width:
+        7px;
+
+    height:
+        7px;
+
+    border-radius:
+        50%;
+
+    background:
+        #2ce1f0;
+
+    box-shadow:
+        0 0 8px
+        rgba(
+            44,
+            225,
+            240,
+            0.8
+        ),
+        0 0 24px
+        rgba(
+            44,
+            225,
+            240,
+            0.42
+        );
+
+    transform:
+        translateX(-50%);
+
+}
+
+
+/*==================================================
+    13 — NETWORK
+==================================================*/
+
+.s15-about-hero-network {
+
+    opacity:
+        0.42;
+
+}
+
+
+/*==================================================
+    14 — NETWORK CROSSHAIR
+==================================================*/
+
+.s15-about-hero-network::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 6%;
+
+    right: 6%;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(35, 209, 236, 0.12),
+            rgba(35, 209, 236, 0.28),
+            rgba(35, 209, 236, 0.12),
+            transparent
+        );
+
+}
+
+
+/*==================================================
+    15 — NETWORK VERTICAL
+==================================================*/
+
+.s15-about-hero-network::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 6%;
+
+    bottom: 6%;
+
+    left: 50%;
+
+    width: 1px;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent,
+            rgba(35, 209, 236, 0.10),
+            rgba(35, 209, 236, 0.24),
+            rgba(35, 209, 236, 0.10),
+            transparent
+        );
+
+}
+
+
+/*==================================================
+    16 — VISUAL DEPTH
+==================================================*/
+
+.s15-about-hero-visual {
+
+    perspective:
+        1200px;
+
+}
+
+
+/*==================================================
+    17 — CORE DEPTH
+==================================================*/
+
+.s15-about-hero-core {
+
+    transform-style:
+        preserve-3d;
+
+}
+
+
+/*==================================================
+    18 — SERVICE CARD DEPTH
+==================================================*/
+
+.s15-about-hero-service-card {
+
+    transform-style:
+        preserve-3d;
+
+}
+
+
+/*==================================================
+    19 — LARGE DESKTOP
+==================================================*/
+
+@media (min-width: 1400px) {
+
+    .s15-about-hero-service-card {
+
+        min-width:
+            142px;
+
+        min-height:
+            52px;
+
+        padding:
+            11px 17px;
+
+        font-size:
+            12px;
+
+    }
+
+
+    .s15-about-hero-core {
+
+        width:
+            270px;
+
+    }
+
+}
+
+
+/*==================================================
+    20 — TABLET VISUAL
+==================================================*/
+
+@media (max-width: 1024px) {
+
+    .s15-about-hero-core {
+
+        width:
+            220px;
+
+    }
+
+
+    .s15-about-hero-service-card {
+
+        min-width:
+            118px;
+
+        min-height:
+            44px;
+
+        padding:
+            9px 12px;
+
+        font-size:
+            10px;
+
+    }
+
+
+    .s15-about-hero-orbit {
+
+        width:
+            min(
+                75%,
+                500px
+            );
+
+    }
+
+}
+
+
+/*==================================================
+    21 — MOBILE VISUAL
+==================================================*/
+
+@media (max-width: 560px) {
+
+    .s15-about-hero-core {
+
+        width:
+            165px;
+
+    }
+
+
+    .s15-about-hero-core span {
+
+        font-size:
+            14px;
+
+    }
+
+
+    .s15-about-hero-service-card {
+
+        min-width:
+            auto;
+
+        min-height:
+            38px;
+
+        padding:
+            8px 10px;
+
+        border-radius:
+            11px;
+
+        font-size:
+            9px;
+
+    }
+
+
+    .s15-about-hero-service-card::before {
+
+        width:
+            5px;
+
+        height:
+            5px;
+
+        margin-right:
+            6px;
+
+    }
+
+
+    .s15-about-hero-orbit {
+
+        width:
+            78%;
+
+    }
+
+
+    .s15-about-hero-network {
+
+        inset:
+            8%;
+
+        opacity:
+            0.25;
+
+    }
+
+}
+
+
+/*==================================================
+    END — 03 VISUAL
+==================================================*/

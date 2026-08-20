@@ -1,0 +1,729 @@
+/*==================================================
+    SHADOW15
+    PEOPLE BEHIND SHADOW15
+
+    FILE:
+    03-visual.css
+
+    RESPONSIBILITY:
+    • Founder portrait
+    • Founder visual frame
+    • Founder tag
+    • Team image treatment
+    • Team visual depth
+==================================================*/
+
+
+/*==================================================
+    01 — FOUNDER VISUAL STAGE
+==================================================*/
+
+.s15-founder-visual{
+
+    position:relative;
+
+    isolation:isolate;
+
+    perspective:1200px;
+
+}
+
+
+/*==================================================
+    02 — FOUNDER PORTRAIT
+==================================================*/
+
+.s15-founder-portrait{
+
+    position:relative;
+
+    overflow:hidden;
+
+    width:min(
+        100%,
+        440px
+    );
+
+    aspect-ratio:
+        0.82;
+
+    border:
+        1px solid
+        rgba(
+            105,
+            179,
+            207,
+            0.22
+        );
+
+    border-radius:30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(20,42,58,0.92),
+            rgba(5,16,28,0.97)
+        );
+
+    box-shadow:
+        0 35px 85px
+        rgba(0,0,0,0.32),
+
+        0 0 50px
+        rgba(19,185,219,0.07),
+
+        inset 0 1px 0
+        rgba(255,255,255,0.07);
+
+    transform-style:
+        preserve-3d;
+
+}
+
+
+/*==================================================
+    03 — FOUNDER IMAGE
+==================================================*/
+
+.s15-founder-portrait img{
+
+    position:relative;
+
+    z-index:2;
+
+    display:block;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    object-position:center top;
+
+    filter:
+        saturate(0.92)
+        contrast(1.04)
+        brightness(0.94);
+
+    transform:scale(1.015);
+
+    transition:
+        transform 0.8s
+        cubic-bezier(
+            0.22,
+            1,
+            0.36,
+            1
+        ),
+
+        filter 0.5s ease;
+
+}
+
+
+/*==================================================
+    04 — IMAGE GRADIENT
+==================================================*/
+
+.s15-founder-portrait::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:3;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 42%,
+            rgba(3,12,21,0.12) 62%,
+            rgba(3,12,21,0.78) 100%
+        );
+
+    pointer-events:none;
+
+}
+
+
+/*==================================================
+    05 — PORTRAIT LIGHT
+==================================================*/
+
+.s15-founder-portrait::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:-20%;
+
+    right:-18%;
+
+    z-index:4;
+
+    width:65%;
+
+    height:55%;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(30,216,239,0.16),
+            transparent 70%
+        );
+
+    filter:blur(25px);
+
+    pointer-events:none;
+
+}
+
+
+/*==================================================
+    06 — FOUNDER FRAME
+==================================================*/
+
+.s15-founder-visual::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:5%;
+
+    left:7%;
+
+    width:86%;
+
+    height:90%;
+
+    z-index:1;
+
+    border:
+        1px solid
+        rgba(
+            35,
+            213,
+            237,
+            0.10
+        );
+
+    border-radius:36px;
+
+    transform:
+        translate(
+            15px,
+            15px
+        );
+
+    pointer-events:none;
+
+}
+
+
+/*==================================================
+    07 — SECONDARY FRAME
+==================================================*/
+
+.s15-founder-visual::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:8%;
+
+    left:4%;
+
+    width:92%;
+
+    height:84%;
+
+    z-index:0;
+
+    border:
+        1px dashed
+        rgba(
+            106,
+            164,
+            189,
+            0.08
+        );
+
+    border-radius:40px;
+
+    transform:
+        rotate(-2deg);
+
+    pointer-events:none;
+
+}
+
+
+/*==================================================
+    08 — FOUNDER TAG
+==================================================*/
+
+.s15-founder-tag{
+
+    position:absolute;
+
+    right:2%;
+
+    bottom:10%;
+
+    z-index:10;
+
+    min-width:128px;
+
+    padding:
+        13px 16px;
+
+    border:
+        1px solid
+        rgba(
+            37,
+            216,
+            239,
+            0.22
+        );
+
+    border-radius:14px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(18,42,56,0.92),
+            rgba(6,19,31,0.86)
+        );
+
+    box-shadow:
+        0 18px 38px
+        rgba(0,0,0,0.25),
+
+        inset 0 1px 0
+        rgba(255,255,255,0.06);
+
+    backdrop-filter:
+        blur(16px);
+
+    -webkit-backdrop-filter:
+        blur(16px);
+
+}
+
+
+/*==================================================
+    09 — TAG BRAND
+==================================================*/
+
+.s15-founder-tag span{
+
+    display:block;
+
+    color:#25d9ef;
+
+    font-size:11px;
+
+    font-weight:750;
+
+    line-height:1.2;
+
+    letter-spacing:0.12em;
+
+}
+
+
+/*==================================================
+    10 — TAG ROLE
+==================================================*/
+
+.s15-founder-tag small{
+
+    display:block;
+
+    margin-top:5px;
+
+    color:
+        rgba(
+            190,
+            211,
+            223,
+            0.62
+        );
+
+    font-size:8px;
+
+    font-weight:600;
+
+    line-height:1;
+
+    letter-spacing:0.15em;
+
+    text-transform:uppercase;
+
+}
+
+
+/*==================================================
+    11 — TAG ACCENT
+==================================================*/
+
+.s15-founder-tag::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:16px;
+
+    width:28px;
+
+    height:1px;
+
+    background:#24d8ef;
+
+    box-shadow:
+        0 0 10px
+        rgba(
+            36,
+            216,
+            239,
+            0.45
+        );
+
+}
+
+
+/*==================================================
+    12 — TEAM CARD VISUAL
+==================================================*/
+
+.s15-team-card{
+
+    position:relative;
+
+    isolation:isolate;
+
+}
+
+
+/*==================================================
+    13 — TEAM IMAGE
+==================================================*/
+
+.s15-team-image{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+        #091724;
+
+}
+
+
+/*==================================================
+    14 — TEAM IMAGE OVERLAY
+==================================================*/
+
+.s15-team-image::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:2;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 55%,
+            rgba(3,12,21,0.55) 100%
+        );
+
+    pointer-events:none;
+
+}
+
+
+/*==================================================
+    15 — TEAM IMAGE LIGHT
+==================================================*/
+
+.s15-team-image::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-20%;
+
+    right:-15%;
+
+    z-index:3;
+
+    width:50%;
+
+    height:50%;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(30,216,239,0.12),
+            transparent 70%
+        );
+
+    filter:blur(22px);
+
+    pointer-events:none;
+
+}
+
+
+/*==================================================
+    16 — TEAM CARD CORNER
+==================================================*/
+
+.s15-team-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:16px;
+
+    left:16px;
+
+    z-index:5;
+
+    width:22px;
+
+    height:22px;
+
+    border-top:
+        1px solid
+        rgba(
+            36,
+            216,
+            239,
+            0.55
+        );
+
+    border-left:
+        1px solid
+        rgba(
+            36,
+            216,
+            239,
+            0.55
+        );
+
+    pointer-events:none;
+
+}
+
+
+/*==================================================
+    17 — TEAM CARD BOTTOM ACCENT
+==================================================*/
+
+.s15-team-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:16px;
+
+    bottom:16px;
+
+    z-index:5;
+
+    width:22px;
+
+    height:22px;
+
+    border-right:
+        1px solid
+        rgba(
+            36,
+            216,
+            239,
+            0.30
+        );
+
+    border-bottom:
+        1px solid
+        rgba(
+            36,
+            216,
+            239,
+            0.30
+        );
+
+    pointer-events:none;
+
+}
+
+
+/*==================================================
+    18 — TEAM IMAGE HOVER
+==================================================*/
+
+.s15-team-card:hover
+.s15-team-image img{
+
+    transform:
+        scale(1.055);
+
+    filter:
+        saturate(1)
+        brightness(0.98);
+
+}
+
+
+/*==================================================
+    19 — TABLET
+==================================================*/
+
+@media (max-width:1024px){
+
+    .s15-founder-portrait{
+
+        width:
+            min(
+                430px,
+                68vw
+            );
+
+    }
+
+
+    .s15-founder-visual::before{
+
+        transform:
+            translate(
+                11px,
+                11px
+            );
+
+    }
+
+}
+
+
+/*==================================================
+    20 — MOBILE
+==================================================*/
+
+@media (max-width:560px){
+
+    .s15-founder-portrait{
+
+        width:
+            min(
+                82vw,
+                340px
+            );
+
+        border-radius:22px;
+
+    }
+
+
+    .s15-founder-visual::before{
+
+        top:4%;
+
+        left:7%;
+
+        width:86%;
+
+        height:90%;
+
+        border-radius:28px;
+
+        transform:
+            translate(
+                9px,
+                9px
+            );
+
+    }
+
+
+    .s15-founder-visual::after{
+
+        border-radius:32px;
+
+    }
+
+
+    .s15-founder-tag{
+
+        right:0;
+
+        bottom:7%;
+
+        min-width:108px;
+
+        padding:
+            11px 13px;
+
+        border-radius:12px;
+
+    }
+
+
+    .s15-founder-tag span{
+
+        font-size:9px;
+
+    }
+
+
+    .s15-founder-tag small{
+
+        font-size:7px;
+
+    }
+
+
+    .s15-team-card::before{
+
+        top:12px;
+
+        left:12px;
+
+    }
+
+
+    .s15-team-card::after{
+
+        right:12px;
+
+        bottom:12px;
+
+    }
+
+}
+
+
+/*==================================================
+    END — 03 VISUAL
+==================================================*/

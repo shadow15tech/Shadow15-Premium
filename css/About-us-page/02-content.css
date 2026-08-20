@@ -1,221 +1,735 @@
-/*==========================================
-        ABOUT HERO
-        CONTENT
-==========================================*/
+/*==================================================
+    SHADOW15 — ABOUT HERO
+    File: css/05-pages/about-us-page/02-content.css
+
+    RESPONSIBILITY
+    --------------------------------------------------
+    Content styling only.
+
+    Controls:
+    • Badge
+    • Typography
+    • Description
+    • Highlight cards
+    • CTA buttons
+    • Content hierarchy
+
+    Layout → 01-layout.css
+    Visual → 03-visual.css
+    Background → 04-background.css
+    Animation → 05-animation.css
+    Responsive → 06-responsive.css
+==================================================*/
 
 
-/*==========================================
-        BADGE
-==========================================*/
+/*==================================================
+    01 — BADGE
+==================================================*/
 
-.s15-about-hero-badge{
+.s15-about-hero-badge {
 
-    width: fit-content;
+    padding: 9px 15px;
 
-    display: inline-flex;
+    border: 1px solid
+        rgba(0, 218, 255, 0.24);
 
-    align-items: center;
+    border-radius: 999px;
 
-    gap: 12px;
+    background:
+        rgba(5, 22, 35, 0.58);
 
-    padding: 12px 22px;
+    color:
+        #20d9ef;
 
-    border-radius: 100px;
-
-    backdrop-filter: blur(20px);
-
-}
-
-
-.s15-about-hero-badge-dot{
-
-    width: 8px;
-
-    height: 8px;
-
-    border-radius: 50%;
-
-}
-
-
-/*==========================================
-        TITLE
-==========================================*/
-
-.s15-about-hero-title{
-
-    display: flex;
-
-    flex-direction: column;
-
-    margin-top: 35px;
-
-    font-weight: 800;
-
-    line-height: .92;
-
-    letter-spacing: -2px;
-
-    font-size: clamp(4rem,7vw,6.8rem);
-
-}
-
-
-.s15-about-hero-title span{
-
-    display: inline-block;
-
-}
-
-
-/*==========================================
-        DESCRIPTION
-==========================================*/
-
-.s15-about-hero-description{
-
-    max-width: 650px;
-
-    margin-top: 38px;
-
-    font-size: 1.08rem;
-
-    line-height: 1.9;
-
-}
-
-
-/*==========================================
-        HIGHLIGHTS
-==========================================*/
-
-.s15-about-hero-highlight-card{
-
-    padding: 22px;
-
-    border-radius: 18px;
-
-}
-
-
-.s15-about-hero-highlight-card strong{
-
-    display: block;
-
-    margin-bottom: 10px;
-
-    font-size: 2rem;
+    font-size: 11px;
 
     font-weight: 700;
 
+    line-height: 1;
+
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+
+    backdrop-filter: blur(12px);
+
+    -webkit-backdrop-filter: blur(12px);
+
 }
 
 
-.s15-about-hero-highlight-card span{
+/*==================================================
+    02 — BADGE DOT
+==================================================*/
+
+.s15-about-hero-badge-dot {
+
+    width: 6px;
+
+    height: 6px;
+
+    margin-right: 9px;
+
+    border-radius: 50%;
+
+    background:
+        #19d9ef;
+
+    box-shadow:
+        0 0 12px
+        rgba(25, 217, 239, 0.75);
+
+}
+
+
+/*==================================================
+    03 — HERO TITLE
+==================================================*/
+
+.s15-about-hero-title {
+
+    color:
+        #f4f8fc;
+
+    font-size:
+        clamp(
+            46px,
+            5vw,
+            76px
+        );
+
+    font-weight:
+        700;
+
+    line-height:
+        0.98;
+
+    letter-spacing:
+        -0.045em;
+
+}
+
+
+/*==================================================
+    04 — TITLE HIGHLIGHT
+==================================================*/
+
+.s15-about-hero-title span {
+
+    display: inline;
+
+    color:
+        #19d8ef;
+
+    background:
+        linear-gradient(
+            110deg,
+            #19d8ef 0%,
+            #28a9ff 52%,
+            #39d7c4 100%
+        );
+
+    -webkit-background-clip:
+        text;
+
+    background-clip:
+        text;
+
+    -webkit-text-fill-color:
+        transparent;
+
+}
+
+
+/*==================================================
+    05 — DESCRIPTION
+==================================================*/
+
+.s15-about-hero-description {
+
+    color:
+        rgba(
+            194,
+            210,
+            224,
+            0.78
+        );
+
+    font-size:
+        clamp(
+            16px,
+            1.25vw,
+            19px
+        );
+
+    font-weight:
+        400;
+
+    line-height:
+        1.75;
+
+    letter-spacing:
+        -0.01em;
+
+}
+
+
+/*==================================================
+    06 — HIGHLIGHT CARDS
+==================================================*/
+
+.s15-about-hero-highlight-card {
+
+    min-height:
+        92px;
+
+    padding:
+        18px 18px;
+
+    border:
+        1px solid
+        rgba(
+            126,
+            169,
+            198,
+            0.13
+        );
+
+    border-radius:
+        16px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(21, 37, 53, 0.78),
+            rgba(8, 20, 33, 0.62)
+        );
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255,255,255,0.035);
+
+    backdrop-filter:
+        blur(14px);
+
+    -webkit-backdrop-filter:
+        blur(14px);
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        background 0.35s ease;
+
+}
+
+
+/*==================================================
+    07 — HIGHLIGHT HOVER
+==================================================*/
+
+.s15-about-hero-highlight-card:hover {
+
+    transform:
+        translateY(-4px);
+
+    border-color:
+        rgba(
+            22,
+            215,
+            239,
+            0.28
+        );
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(24, 49, 67, 0.88),
+            rgba(8, 25, 39, 0.72)
+        );
+
+}
+
+
+/*==================================================
+    08 — HIGHLIGHT VALUE
+==================================================*/
+
+.s15-about-hero-highlight-card strong {
 
     display: block;
 
-    line-height: 1.6;
+    margin-bottom:
+        7px;
 
-    font-size: .95rem;
+    color:
+        #f4f8fc;
 
-}
+    font-size:
+        clamp(
+            21px,
+            1.8vw,
+            29px
+        );
 
+    font-weight:
+        700;
 
-/*==========================================
-        BUTTONS
-==========================================*/
+    line-height:
+        1;
 
-.s15-about-hero-btn-primary,
-
-.s15-about-hero-btn-secondary{
-
-    display: inline-flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    min-width: 210px;
-
-    height: 58px;
-
-    padding: 0 34px;
-
-    border-radius: 14px;
-
-    text-decoration: none;
-
-    font-weight: 600;
-
-    transition: .35s ease;
+    letter-spacing:
+        -0.035em;
 
 }
 
 
-/*==========================================
-        BUTTON ICON
-==========================================*/
+/*==================================================
+    09 — HIGHLIGHT LABEL
+==================================================*/
 
-.s15-about-hero-btn-primary i,
+.s15-about-hero-highlight-card span {
 
-.s15-about-hero-btn-secondary i{
+    display: block;
 
-    margin-left: 10px;
+    color:
+        rgba(
+            166,
+            188,
+            204,
+            0.72
+        );
 
-}
+    font-size:
+        11px;
 
+    font-weight:
+        500;
 
-/*==========================================
-        VALUE EMPHASIS
-==========================================*/
+    line-height:
+        1.45;
 
-.s15-about-hero-highlight-card strong,
-
-.s15-about-hero-title{
-
-    user-select: none;
-
-}
-
-
-/*==========================================
-        BUTTON HOVER
-==========================================*/
-
-.s15-about-hero-btn-primary:hover,
-
-.s15-about-hero-btn-secondary:hover{
-
-    transform: translateY(-6px);
+    letter-spacing:
+        0.01em;
 
 }
 
 
-/*==========================================
-        HIGHLIGHT HOVER
-==========================================*/
+/*==================================================
+    10 — PRIMARY CTA
+==================================================*/
 
-.s15-about-hero-highlight-card{
+.s15-about-hero-btn-primary {
 
-    transition: .35s ease;
+    min-height:
+        50px;
+
+    padding:
+        0 24px;
+
+    border:
+        1px solid
+        rgba(
+            53,
+            224,
+            246,
+            0.4
+        );
+
+    border-radius:
+        12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #19bff0,
+            #168eea
+        );
+
+    color:
+        #ffffff;
+
+    font-size:
+        14px;
+
+    font-weight:
+        700;
+
+    line-height:
+        1;
+
+    text-decoration:
+        none;
+
+    box-shadow:
+        0 12px 30px
+        rgba(
+            14,
+            169,
+            226,
+            0.18
+        );
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        filter 0.3s ease;
 
 }
 
 
-.s15-about-hero-highlight-card:hover{
+/*==================================================
+    11 — PRIMARY CTA HOVER
+==================================================*/
 
-    transform: translateY(-8px);
+.s15-about-hero-btn-primary:hover {
+
+    transform:
+        translateY(-2px);
+
+    filter:
+        brightness(1.08);
+
+    box-shadow:
+        0 16px 36px
+        rgba(
+            14,
+            190,
+            235,
+            0.26
+        );
 
 }
 
 
-/*==========================================
-        CONTENT SPACING
-==========================================*/
+/*==================================================
+    12 — SECONDARY CTA
+==================================================*/
 
-.s15-about-hero-content>*{
+.s15-about-hero-btn-secondary {
 
-    flex-shrink: 0;
+    min-height:
+        50px;
+
+    padding:
+        0 24px;
+
+    border:
+        1px solid
+        rgba(
+            126,
+            169,
+            198,
+            0.2
+        );
+
+    border-radius:
+        12px;
+
+    background:
+        rgba(
+            11,
+            25,
+            39,
+            0.68
+        );
+
+    color:
+        rgba(
+            226,
+            237,
+            245,
+            0.86
+        );
+
+    font-size:
+        14px;
+
+    font-weight:
+        600;
+
+    line-height:
+        1;
+
+    text-decoration:
+        none;
+
+    backdrop-filter:
+        blur(12px);
+
+    -webkit-backdrop-filter:
+        blur(12px);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease;
 
 }
+
+
+/*==================================================
+    13 — SECONDARY CTA HOVER
+==================================================*/
+
+.s15-about-hero-btn-secondary:hover {
+
+    transform:
+        translateY(-2px);
+
+    border-color:
+        rgba(
+            25,
+            216,
+            239,
+            0.3
+        );
+
+    background:
+        rgba(
+            18,
+            38,
+            55,
+            0.86
+        );
+
+    color:
+        #ffffff;
+
+}
+
+
+/*==================================================
+    14 — SCROLL INDICATOR
+==================================================*/
+
+.s15-about-hero-scroll {
+
+    padding:
+        9px 14px;
+
+    border:
+        1px solid
+        rgba(
+            126,
+            169,
+            198,
+            0.15
+        );
+
+    border-radius:
+        999px;
+
+    background:
+        rgba(
+            8,
+            22,
+            35,
+            0.58
+        );
+
+    color:
+        rgba(
+            181,
+            204,
+            219,
+            0.68
+        );
+
+    font-size:
+        10px;
+
+    font-weight:
+        600;
+
+    letter-spacing:
+        0.12em;
+
+    text-transform:
+        uppercase;
+
+    text-decoration:
+        none;
+
+    backdrop-filter:
+        blur(12px);
+
+    -webkit-backdrop-filter:
+        blur(12px);
+
+    transition:
+        color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+
+}
+
+
+/*==================================================
+    15 — SCROLL ARROW
+==================================================*/
+
+.s15-about-hero-scroll i {
+
+    color:
+        #1bd7ef;
+
+    font-size:
+        11px;
+
+    transition:
+        transform 0.3s ease;
+
+}
+
+
+/*==================================================
+    16 — SCROLL HOVER
+==================================================*/
+
+.s15-about-hero-scroll:hover {
+
+    color:
+        #ffffff;
+
+    border-color:
+        rgba(
+            25,
+            216,
+            239,
+            0.3
+        );
+
+    transform:
+        translate(
+            -50%,
+            -3px
+        );
+
+}
+
+
+.s15-about-hero-scroll:hover i {
+
+    transform:
+        translateY(3px);
+
+}
+
+
+/*==================================================
+    17 — TABLET CONTENT
+==================================================*/
+
+@media (max-width: 1024px) {
+
+    .s15-about-hero-title {
+
+        font-size:
+            clamp(
+                44px,
+                7vw,
+                68px
+            );
+
+    }
+
+}
+
+
+/*==================================================
+    18 — MOBILE CONTENT
+==================================================*/
+
+@media (max-width: 560px) {
+
+    .s15-about-hero-badge {
+
+        margin-bottom:
+            20px;
+
+        font-size:
+            9px;
+
+        letter-spacing:
+            0.13em;
+
+    }
+
+
+    .s15-about-hero-title {
+
+        font-size:
+            clamp(
+                38px,
+                11vw,
+                52px
+            );
+
+        line-height:
+            1.02;
+
+        letter-spacing:
+            -0.04em;
+
+    }
+
+
+    .s15-about-hero-description {
+
+        margin-top:
+            19px;
+
+        font-size:
+            15px;
+
+        line-height:
+            1.65;
+
+    }
+
+
+    .s15-about-hero-highlight-card {
+
+        min-height:
+            82px;
+
+        padding:
+            16px;
+
+    }
+
+
+    .s15-about-hero-highlight-card strong {
+
+        font-size:
+            23px;
+
+    }
+
+
+    .s15-about-hero-highlight-card span {
+
+        font-size:
+            11px;
+
+    }
+
+
+    .s15-about-hero-btn-primary,
+    .s15-about-hero-btn-secondary {
+
+        min-height:
+            48px;
+
+        font-size:
+            13px;
+
+    }
+
+}
+
+
+/*==================================================
+    END — 02 CONTENT
+==================================================*/
